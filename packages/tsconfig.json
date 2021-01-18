@@ -1,0 +1,4 @@
+{
+    "files": [],
+    "references": [{"path": "compoents"}, {"path": "main"}, {"path": "shared"}]
+}

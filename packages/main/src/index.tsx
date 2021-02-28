@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "@doar/shared/src/theme/utils";
-import { theme } from "@doar/shared/src/theme";
+import { ThemeProvider, theme } from "@doar/shared/styled";
+import { GlobalStyle } from "@doar/shared/css";
 import App from "./App";
 
 ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
+            <GlobalStyle />
             <App />
         </ThemeProvider>
     </React.StrictMode>,

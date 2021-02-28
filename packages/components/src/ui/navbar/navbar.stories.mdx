@@ -1,0 +1,52 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+import StoryRouter from "storybook-react-router";
+
+import { Navbar } from "./navbar";
+import { menuData } from "@doar/shared/data";
+
+<Meta title="UI/Navbar" component={Navbar} />
+
+# Navbar
+
+<p class="sbdocs-desc">
+    Provide contextual feedback messages for typical user actions.
+</p>
+
+## Menu data type
+
+```javascript
+interface ISubmenu {
+    id: number;
+    label: string;
+    url: string;
+    Icon?: string | undefined;
+}
+
+interface IMegamenu {
+    id: number;
+    title: string;
+    submenu: ISubmenu[];
+}
+
+interface IMenu {
+    id: number;
+    label: string;
+    url: string;
+    submenu?: ISubmenu[];
+    megamenu?: IMegamenu[];
+}
+```
+
+<Canvas>
+    <Story name="Navbar Controls">
+        <Navbar menus={menuData} />
+    </Story>
+</Canvas>
+
+<ArgsTable of={Navbar} story="Navbar Controls" />

@@ -13,6 +13,7 @@ export const theme = {
         text: "#001737",
         text2: "#1b2e4b",
         text3: "#8392a5",
+        text4: "#c0ccda",
         heading: "#001737",
         link: "#001737",
         background: "#ffffff",
@@ -31,6 +32,7 @@ export const theme = {
         gray700: "#596882",
         gray800: "#3b4863",
         gray900: "#1c273c",
+        gray950: "#637388",
     },
     fontSize: {
         body: "0.875rem",
@@ -44,6 +46,7 @@ export const theme = {
     fonts: {
         body: `'IBM Plex Sans', sans-serif`,
         heading: `'IBM Plex Sans', sans-serif`,
+        interUi: `-apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif`,
     },
     fontWeights: {
         body: 400,
@@ -54,11 +57,11 @@ export const theme = {
         heading: 1.25,
     },
     radii: {
-        default: "4px",
         sm: "3px",
         md: "6px",
         lg: "8px",
-        round: "50%",
+        rounded: "4px",
+        circle: "50%",
         pill: "500px",
     },
     shadows: {

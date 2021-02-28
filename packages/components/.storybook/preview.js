@@ -1,6 +1,10 @@
 import * as React from 'react';
+import { addDecorator } from '@storybook/react';
+import StoryRouter from 'storybook-react-router';
 import { ThemeProvider, theme } from '@doar/shared/styled';
 import {ResetCSS} from "./reset"
+
+addDecorator(StoryRouter());
 
 export const decorators = [
   (Story) => (

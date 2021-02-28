@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import { device, theme } from "../styled";
 
-// import { IbmFontSans } from "../fonts/ibm-plex-sans";
-// import { InterUi } from "../fonts/inter-ui";
+import { IbmFontSans } from "../fonts/ibm-plex-sans";
+import { InterUi } from "../fonts/inter-ui";
 
-export const GlobalStyle = createGlobalStyle`
-
+const GlobalStyle = createGlobalStyle`
+    ${IbmFontSans};
+    ${InterUi};
     * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -333,8 +334,6 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         text-indent: -99999px;
     }
-    hr{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
 `;
+
+export default GlobalStyle;

@@ -6,7 +6,10 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "noEmit": false,
   },
-  "include": [ "." ]
+  "include": [ "." ],
+  "exclude": ["dist", "*.js"]
 }
+ 

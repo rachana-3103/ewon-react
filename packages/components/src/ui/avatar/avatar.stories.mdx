@@ -1,0 +1,112 @@
+import {
+    Meta,
+    Story,
+    Canvas,
+    ArgsTable,
+    Preview,
+} from "@storybook/addon-docs/blocks";
+
+import { Avatar } from "./avatar";
+import image from "../../static/img1.png";
+
+<Meta title="UI/Avatar" component={Avatar} />
+
+# Overview
+
+Avatars are user's face image that you can use throughout the design from tables to dialog or menus with options for sizes and shapes.
+
+<Canvas>
+    <Story
+        name="Avatar Controls"
+        argTypes={{
+            size: {
+                control: {
+                    type: `select`,
+                },
+            },
+            shape: {
+                control: {
+                    type: `select`,
+                },
+            },
+            initialText: {
+                control: {
+                    type: `text`,
+                },
+            },
+            status: {
+                control: {
+                    type: `text`,
+                },
+            },
+        }}
+        args={{
+            size: `default`,
+            shape: `square`,
+            altText: `user avatar`,
+        }}
+    >
+        {(args) => {
+            const { imageUrl, ...restArgs } = args;
+            const img = imageUrl || image;
+            return <Avatar imageUrl={img} {...restArgs} />;
+        }}
+    </Story>
+</Canvas>
+
+<ArgsTable of={Avatar} story="Avatar Controls" />
+
+## Sizes
+
+An avatar can have different sizes like larger and smaller avatar.
+
+<Preview withToolbar>
+    <Story name="Sizes">
+        <Avatar imageUrl={image} size="xs" shape="circle" />
+        <Avatar imageUrl={image} size="sm" shape="circle" />
+        <Avatar imageUrl={image} shape="circle" />
+        <Avatar imageUrl={image} size="md" shape="circle" />
+        <Avatar imageUrl={image} size="lg" shape="circle" />
+        <Avatar imageUrl={image} size="xl" shape="circle" />
+        <Avatar imageUrl={image} size="xxl" shape="circle" />
+    </Story>
+</Preview>
+
+## Shapes
+
+An avatar can have different shapes like rounded and circle avatar.
+
+<Preview withToolbar>
+    <Story name="shapes">
+        <Avatar imageUrl={image} size="lg" shape="circle" />
+        <Avatar imageUrl={image} size="lg" shape="rounded" />
+        <Avatar imageUrl={image} size="lg" shape="square" />
+    </Story>
+</Preview>
+
+## Initials
+
+An avatar can have a temporary use of user's initial name while their photos are not yet available.
+
+<Preview withToolbar>
+    <Story name="Initials">
+        <Avatar initialText="df" size="xs" shape="circle" />
+        <Avatar initialText="df" size="sm" shape="circle" />
+        <Avatar initialText="df" shape="circle" />
+        <Avatar initialText="df" size="md" shape="circle" />
+        <Avatar initialText="df" size="lg" shape="circle" />
+        <Avatar initialText="df" size="xl" shape="circle" />
+        <Avatar initialText="df" size="xxl" shape="circle" />
+    </Story>
+</Preview>
+
+## Status Indicator
+
+An avatar can have a status indicator to indicate users availability.
+
+<Preview withToolbar>
+    <Story name="Status Indicator">
+        <Avatar imageUrl={image} size="lg" shape="circle" status="online" />
+        <Avatar initialText="df" size="lg" shape="circle" status="offline" />
+    </Story>
+</Preview>

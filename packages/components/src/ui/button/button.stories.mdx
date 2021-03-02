@@ -30,26 +30,76 @@ Buttons are clickable elements that are used to trigger actions. They communicat
             type: {
                 control: {
                     type: `select`,
+                    options: ["button", "submit", "reset"],
                 },
             },
             variant: {
                 control: {
                     type: `select`,
+                    options: ["contained", "outlined", "texted"],
                 },
             },
             color: {
                 control: {
                     type: `select`,
+                    options: [
+                        "primary",
+                        "secondary",
+                        "success",
+                        "danger",
+                        "warning",
+                        "info",
+                        "light",
+                        "dark",
+                        "white",
+                    ],
                 },
             },
             size: {
                 control: {
                     type: `select`,
+                    options: ["xs", "sm", "md", "lg"],
                 },
             },
             shape: {
                 control: {
                     type: `select`,
+                    options: ["rounded", "square", "ellipse"],
+                },
+            },
+            fullwidth: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            active: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            disabled: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            iconButton: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            hasIcon: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            label: {
+                control: {
+                    type: `text`,
+                },
+            },
+            className: {
+                control: {
+                    type: `text`,
                 },
             },
         }}

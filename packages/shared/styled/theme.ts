@@ -33,6 +33,7 @@ export const theme = {
         gray800: "#3b4863",
         gray900: "#1c273c",
         gray950: "#637388",
+        whisper: "#f5f6fa",
     },
     fontSize: {
         body: "0.875rem",

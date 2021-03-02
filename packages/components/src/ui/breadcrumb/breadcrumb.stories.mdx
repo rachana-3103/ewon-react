@@ -20,8 +20,14 @@ The example below is the basic styling of the breadcrumb
 <Preview withToolbar>
     <Story name="Basic Styling">
         <Breadcrumb>
-            <BreadcrumbItem path="/">dsaf</BreadcrumbItem>
-            <BreadcrumbItem active>dsaf</BreadcrumbItem>
+            <BreadcrumbItem active>Home</BreadcrumbItem>
+        </Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem path="/">Home</BreadcrumbItem>
+            <BreadcrumbItem path="/">Library</BreadcrumbItem>
+            <BreadcrumbItem active>Data</BreadcrumbItem>
         </Breadcrumb>
     </Story>
 </Preview>
+
+<ArgsTable of={Breadcrumb} story="Basic Styling" />

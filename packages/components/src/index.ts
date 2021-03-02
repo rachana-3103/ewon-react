@@ -1,5 +1,5 @@
 import { Button } from "./ui/button/button";
-import { Alert } from "./ui/alerts/alert";
+import { Alert } from "./ui/alert/alert";
 import { Anchor } from "./ui/anchor";
 import { Navbar } from "./ui/navbar/navbar";
 import { Avatar } from "./ui/avatar/avatar";
@@ -10,6 +10,7 @@ import {
     DropdownItem,
 } from "./ui/dropdown/dropdown";
 import { Media, MediaLeft, MediaBody } from "./ui/media-object/media";
+import { Breadcrumb, BreadcrumbItem } from "./ui/breadcrumb/breadcrumb";
 
 export {
     Button,
@@ -24,4 +25,6 @@ export {
     Media,
     MediaLeft,
     MediaBody,
+    Breadcrumb,
+    BreadcrumbItem,
 };

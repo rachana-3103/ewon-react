@@ -28,7 +28,9 @@
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "prettier/prettier": "error",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
     },
     "overrides": [
       // Override some TypeScript rules just for .js files

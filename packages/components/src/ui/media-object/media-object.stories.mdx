@@ -15,30 +15,6 @@ import image from "../../static/img2.jpg";
 
 Dropdowns are toggleable, contextual overlays for displaying lists of links and more.
 
-<Canvas>
-    <Story name="Media Controls">
-        {(args) => {
-            return (
-                <Media {...args}>
-                    <MediaLeft width={["200px"]} mr={["20px"]}>
-                        <img src={image} alt="media image" />
-                    </MediaLeft>
-                    <MediaBody>
-                        <h5>Media heading</h5>
-                        <p>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla
-                            vel metus scelerisque ante sollicitudin. Cras purus
-                            odio, vestibulum in vulputate at, tempus viverra
-                            turpis. Fusce condimentum nunc ac nisi vulputate
-                            fringilla. Donec lacinia congue felis in faucibus.
-                        </p>
-                    </MediaBody>
-                </Media>
-            );
-        }}
-    </Story>
-</Canvas>
-
 ## Basic Example
 
 Helps build complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. Plus, it does this with only two required classes thanks to flexbox.

@@ -1,4 +1,6 @@
-import styled, { css, themeGet } from "@doar/shared/styled";
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable react/react-in-jsx-scope */
+import styled, { css, space, themeGet } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 
 export type ButtonRef = HTMLButtonElement | HTMLAnchorElement;
@@ -13,17 +15,22 @@ interface IProps {
         | "warning"
         | "info"
         | "light"
-        | "dark";
+        | "dark"
+        | "white";
     $size?: "xs" | "sm" | "md" | "lg";
     $shape?: "rounded" | "square" | "ellipse";
     $fullwidth?: boolean;
     $active?: boolean;
     disabled?: boolean;
     $iconButton?: boolean;
+    $hasIcon?: boolean;
 }
 
-export const StyledButton = styled.button<IProps>`
-    display: inline-block;
+export const StyledButton = styled(({ mt, mb, ml, mr, ...props }) => (
+    <button type="button" {...props} />
+))<IProps>`
+    display: inline-flex;
+    align-items: center;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -38,7 +45,7 @@ export const StyledButton = styled.button<IProps>`
     &:focus {
         outline: none;
     }
-
+    ${space};
     ${(props) =>
         props.$variant === "contained" &&
         props.$color === "primary" &&
@@ -280,6 +287,30 @@ export const StyledButton = styled.button<IProps>`
                     ${tinycolor2(themeGet("colors.darkdark")(props))
                         .setAlpha(0.5)
                         .toRgbString()};
+            }
+        `}
+ 
+    ${(props) =>
+        props.$variant === "contained" &&
+        props.$color === "white" &&
+        css`
+            color: ${tinycolor2(themeGet("colors.text2")(props))
+                .setAlpha(0.7)
+                .toRgbString()};
+            background-color: ${themeGet("colors.white")};
+            border-color: ${themeGet("colors.text4")};
+
+            &:hover {
+                border-color: ${themeGet("colors.text3")};
+                color: ${themeGet("colors.text2")};
+            }
+
+            &:active,
+            &:focus {
+                background-color: ${themeGet("colors.whisper")};
+                border-color: ${themeGet("colors.text3")};
+                color: ${themeGet("colors.text2")};
+                box-shadow: none;
             }
         `}
 
@@ -703,5 +734,18 @@ export const StyledButton = styled.button<IProps>`
         $size === "md" &&
         css`
             padding: 5px 10px;
+        `}
+
+    ${({ $hasIcon, $size }) =>
+        $hasIcon &&
+        $size === "sm" &&
+        css`
+            svg {
+                width: 14px;
+                height: 14px;
+                stroke-width: 2.5px;
+                margin-top: -2px;
+                margin-right: 5px;
+            }
         `}
 `;

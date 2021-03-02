@@ -3,10 +3,12 @@ import { device, theme } from "../styled";
 
 import { IbmFontSans } from "../fonts/ibm-plex-sans";
 import { InterUi } from "../fonts/inter-ui";
+import { IonIcons } from "../fonts/ionicons";
 
 const GlobalStyle = createGlobalStyle`
     ${IbmFontSans};
     ${InterUi};
+    ${IonIcons};
     * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;

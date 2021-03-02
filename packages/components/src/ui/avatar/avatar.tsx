@@ -13,11 +13,11 @@ interface IProps {
     /**
      * Default size is `38x38`
      */
-    size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+    size: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     /**
      * Default size is `square`
      */
-    shape?: "circle" | "rounded" | "square";
+    shape: "circle" | "rounded" | "square";
     /**
      * user's initial name. Maximum length is 2.
      */
@@ -53,5 +53,5 @@ export const Avatar: React.FC<IProps> = ({
 
 Avatar.defaultProps = {
     size: "default",
-    shape: "square",
+    shape: "circle",
 };

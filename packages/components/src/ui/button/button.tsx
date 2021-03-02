@@ -39,7 +39,8 @@ export type ButtonProps = {
         | "warning"
         | "info"
         | "light"
-        | "dark";
+        | "dark"
+        | "white";
     /**
      * Optional. Default is `md`.
      */
@@ -65,6 +66,10 @@ export type ButtonProps = {
      */
     iconButton?: boolean;
     /**
+     * Pass hasIcon if button has icon with text
+     */
+    hasIcon?: boolean;
+    /**
      * Optional. Pass label if button does not contain any text
      */
     label?: string;
@@ -72,6 +77,10 @@ export type ButtonProps = {
      * Optional. onClick function
      */
     onClick?: () => void;
+    /**
+     * Optional. Extra Class Name
+     */
+    className?: string;
 };
 
 export const Button = React.forwardRef(
@@ -87,8 +96,11 @@ export const Button = React.forwardRef(
             active,
             disabled,
             iconButton,
+            hasIcon,
             label,
             onClick,
+            className,
+            ...restProps
         } = props;
 
         return (
@@ -102,9 +114,12 @@ export const Button = React.forwardRef(
                 $active={active}
                 disabled={disabled}
                 $iconButton={iconButton}
+                $hasIcon={hasIcon}
                 aria-label={label}
                 onClick={onClick}
+                className={className}
                 ref={ref}
+                {...restProps}
             >
                 {children}
             </StyledButton>

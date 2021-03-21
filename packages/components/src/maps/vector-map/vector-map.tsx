@@ -98,8 +98,8 @@ export const VectorMap: FC<IProps> = ({
     };
 
     const onMouseMove = (e: MouseEvent) => {
-        setTooltipY(e.clientY + 10);
-        setTooltipX(e.clientX + 10);
+        setTooltipY(e.clientY - 20);
+        setTooltipX(e.clientX - 10);
     };
 
     const onMouseOut = () => {
@@ -120,6 +120,7 @@ export const VectorMap: FC<IProps> = ({
             $bdc={borderColor}
             $color={color}
             $slColor={selectedColor}
+            className="vector-map"
         >
             <VectorMapComponent
                 {...data}

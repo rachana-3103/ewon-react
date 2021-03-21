@@ -35,6 +35,7 @@ import {
 } from "./charts/chart-js/chart";
 import { SparklinesBar, SparklinesLines } from "./charts/sparkline/sparkline";
 import { Container, Row, Col } from "./grid/grid";
+import { VectorMap } from "./maps/vector-map/vector-map";
 
 export {
     Button,
@@ -74,4 +75,5 @@ export {
     Container,
     Row,
     Col,
+    VectorMap,
 };

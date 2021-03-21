@@ -37,6 +37,10 @@ export const theme = {
         malibu: "#69b2f8",
         tropical: "#d1e6fa",
         pink: "#f10075",
+        bayoux: "#49597b",
+        athens: "#e9ecf1",
+        orange: "#fd7e14",
+        cyan: "#17a2b8",
     },
     fontSize: {
         body: "0.875rem",

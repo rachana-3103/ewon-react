@@ -12,9 +12,8 @@ export const StyledMap = styled(({ width, height, ...props }) => (
     <div {...props} />
 ))<IProps>`
     ${layout};
-    position: relative;
     .tooltip {
-        position: absolute;
+        position: fixed;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { SpaceProps, PositionProps } from "@doar/shared/styled";
+import { SpaceProps, PositionProps, LayoutProps } from "@doar/shared/styled";
 import {
     StyledCard,
     StyledCardImage,
@@ -20,7 +20,7 @@ interface ICardCommonProps {
     className?: string;
 }
 
-interface ICardProps {
+interface ICardProps extends LayoutProps, SpaceProps {
     className?: string;
     color?: "primary" | "secondary" | "success" | "warning" | "danger" | "info";
 }

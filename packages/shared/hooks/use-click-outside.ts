@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, RefObject } from "react";
 
-export default (onClose: () => void): RefObject<HTMLDivElement> => {
-    const ref = useRef<HTMLDivElement | null>(null);
+export default <T extends HTMLElement>(onClose: () => void): RefObject<T> => {
+    const ref = useRef<T>(null);
     const escapeListener = useCallback(
         (e: KeyboardEvent) => {
             if (e.key === "Escape") {

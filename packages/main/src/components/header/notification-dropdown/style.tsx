@@ -15,7 +15,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    margin-top: 17.5px;
+    margin-top: 19.5px;
     margin-right: -88px;
     ${device.small} {
         margin-right: -20px;

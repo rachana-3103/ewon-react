@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { SpaceProps, PositionProps } from "@doar/shared/styled";
 import {
     StyledCard,
     StyledCardImage,
@@ -71,7 +72,9 @@ export const CardImage: FC<ICardImageProps> = ({
     );
 };
 
-export const CardBody: FC<ICardCommonProps> = ({
+interface ICardBodyProps extends ICardCommonProps, SpaceProps, PositionProps {}
+
+export const CardBody: FC<ICardBodyProps> = ({
     children,
     className,
     ...restProps

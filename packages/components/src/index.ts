@@ -9,6 +9,21 @@ import {
     DropdownMenu,
     DropdownItem,
 } from "./ui/dropdown/dropdown";
+import {
+    Card,
+    CardImage,
+    CardBody,
+    CardTitle,
+    CardText,
+    CardSubtitle,
+    CardLink,
+    CardHeader,
+    CardFooter,
+    CardImageOverlay,
+    CardGroup,
+    CardDeck,
+    CardColumns,
+} from "./ui/card/card";
 import { Media, MediaLeft, MediaBody } from "./ui/media-object/media";
 import { Breadcrumb, BreadcrumbItem } from "./ui/breadcrumb/breadcrumb";
 import {
@@ -19,6 +34,7 @@ import {
     DonutChart,
 } from "./charts/chart-js/chart";
 import { SparklinesBar, SparklinesLines } from "./charts/sparkline/sparkline";
+import { Container, Row, Col } from "./grid/grid";
 
 export {
     Button,
@@ -30,6 +46,19 @@ export {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
+    Card,
+    CardImage,
+    CardBody,
+    CardTitle,
+    CardText,
+    CardSubtitle,
+    CardLink,
+    CardHeader,
+    CardFooter,
+    CardImageOverlay,
+    CardGroup,
+    CardDeck,
+    CardColumns,
     Media,
     MediaLeft,
     MediaBody,
@@ -42,4 +71,7 @@ export {
     DonutChart,
     SparklinesBar,
     SparklinesLines,
+    Container,
+    Row,
+    Col,
 };

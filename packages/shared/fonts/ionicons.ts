@@ -8,6 +8,7 @@ import IoniconsSvg from "./ionicons/ionicons.svg";
 export const IonIcons = css`
     @font-face {
         font-family: "Ionicons";
+        font-display: swap;
         src: url(${IoniconsEot});
         src: url(${IoniconsEot}) format("embedded-opentype"),
             url(${IoniconsWoff2}) format("woff2"),

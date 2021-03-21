@@ -6,6 +6,7 @@ import lineChartData from "./line-chart";
 import areaChartData from "./area-chart";
 import transparentChartData from "./transparent-chart";
 import pieChartData from "./pie-chart";
+import { MapKey, MapBoxAccessKey } from "./api-keys";
 
 export {
     menuData,
@@ -16,4 +17,6 @@ export {
     areaChartData,
     transparentChartData,
     pieChartData,
+    MapKey,
+    MapBoxAccessKey,
 };

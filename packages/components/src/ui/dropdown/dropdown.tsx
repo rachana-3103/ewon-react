@@ -1,29 +1,21 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, {
+import {
+    Children,
+    FC,
     ReactChild,
     ReactText,
     useState,
     useCallback,
     useEffect,
     useRef,
+    FunctionComponent,
 } from "react";
 import { useClickOutside } from "@doar/shared/hooks";
 import { Button, ButtonProps } from "../button/button";
 import { StyledDropMenu, StyledDropdown, StyledDropItem } from "./style";
 
 type IChild = Exclude<ReactChild, ReactText>;
-
-interface IBtnMeasure {
-    clientWidth: number;
-    clientHeight: number;
-    clientLeft: number;
-    clientTop: number;
-    offsetWidth: number;
-    offsetHeight: number;
-    offsetLeft: number;
-    offsetTop: number;
-}
 
 interface DropdownProps {
     /**
@@ -33,16 +25,14 @@ interface DropdownProps {
     className?: string;
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({
+export const Dropdown: FC<DropdownProps> = ({
     children,
     direction,
     className,
     ...restProps
 }) => {
     const [show, setShow] = useState(false);
-    const [btnMeasure, setBtnMeasure] = useState<
-        IBtnMeasure | Record<string, unknown>
-    >({});
+
     const handleClick = () => {
         setShow((prev) => !prev);
     };
@@ -50,45 +40,20 @@ export const Dropdown: React.FC<DropdownProps> = ({
         setShow(false);
     }, []);
 
-    const containerRef = useClickOutside(onClose);
-    const btnref: React.RefObject<HTMLButtonElement> = React.createRef();
+    const containerRef = useClickOutside<HTMLDivElement>(onClose);
 
-    useEffect(() => {
-        setBtnMeasure((prev) => {
-            return {
-                ...prev,
-                clientWidth: btnref?.current?.clientWidth,
-                clientHeight: btnref?.current?.clientHeight,
-                clientLeft: btnref?.current?.clientLeft,
-                clientTop: btnref?.current?.clientTop,
-                offsetWidth: btnref?.current?.offsetWidth,
-                offsetHeight: btnref?.current?.offsetHeight,
-                offsetLeft: btnref?.current?.offsetLeft,
-                offsetTop: btnref?.current?.offsetTop,
-            };
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const RenderChild = React.Children.map(children, (el) => {
+    const RenderChild = Children.map(children, (el) => {
         const child = el as IChild;
         if (child !== null) {
-            const childType = child.type as React.FunctionComponent;
+            const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;
             if (name === "DropdownToggle") {
-                return (
-                    <child.type
-                        ref={btnref}
-                        {...child.props}
-                        onClick={handleClick}
-                    />
-                );
+                return <child.type {...child.props} onClick={handleClick} />;
             }
             if (name === "DropdownMenu") {
                 return (
                     <child.type
                         {...child.props}
-                        btnMeasure={btnMeasure}
                         direction={direction}
                         show={show}
                     />
@@ -111,16 +76,10 @@ Dropdown.defaultProps = {
     direction: "down",
 };
 
-export const DropdownToggle = React.forwardRef(
-    (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-        const { children, ...restProps } = props;
-        return (
-            <Button ref={ref} {...restProps}>
-                {children}
-            </Button>
-        );
-    }
-);
+export const DropdownToggle: FC<ButtonProps> = (props) => {
+    const { children, ...restProps } = props;
+    return <Button {...restProps}>{children}</Button>;
+};
 
 DropdownToggle.defaultProps = {
     label: "DropdownToggle",
@@ -129,7 +88,6 @@ DropdownToggle.displayName = "DropdownToggle";
 
 interface IDropMenu {
     show?: boolean;
-    btnMeasure?: IBtnMeasure;
     direction?: "up" | "down" | "left" | "right";
     className?: string;
 }
@@ -145,10 +103,9 @@ interface IMenuMeasure {
     offsetTop: number;
 }
 
-export const DropdownMenu: React.FC<IDropMenu> = ({
+export const DropdownMenu: FC<IDropMenu> = ({
     children,
     show,
-    btnMeasure,
     direction,
     className,
     ...restProps
@@ -181,10 +138,9 @@ export const DropdownMenu: React.FC<IDropMenu> = ({
         });
     }, [show]);
     const classes = className ? `${className} dropdown-menu` : "dropdown-menu";
+
     return (
         <StyledDropMenu
-            $btnWidth={btnMeasure?.offsetWidth}
-            $btnHeight={btnMeasure?.clientHeight}
             $menuWidth={menuMeasure.offsetWidth}
             $show={show}
             $direction={direction}
@@ -205,7 +161,7 @@ interface IDropItem {
     active?: boolean;
 }
 
-export const DropdownItem: React.FC<IDropItem> = ({
+export const DropdownItem: FC<IDropItem> = ({
     children,
     path,
     className,

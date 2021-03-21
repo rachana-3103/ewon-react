@@ -1,14 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import { device, theme } from "../styled";
 
-import { IbmFontSans } from "../fonts/ibm-plex-sans";
-import { InterUi } from "../fonts/inter-ui";
-import { IonIcons } from "../fonts/ionicons";
+import { IbmFontSans, InterUi, IonIcons, Rubik } from "../fonts";
 
 const GlobalStyle = createGlobalStyle`
     ${IbmFontSans};
     ${InterUi};
     ${IonIcons};
+    ${Rubik};
     * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -187,7 +186,7 @@ const GlobalStyle = createGlobalStyle`
     }
     a {
         transition: ${theme.transition};
-        color: ${theme.colors.text};
+        color: ${theme.colors.primary};
         text-decoration: none;
         &:hover {
             text-decoration: none;

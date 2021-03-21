@@ -134,5 +134,9 @@ export const ResetCSS = createGlobalStyle`
         font-size: 80%;
         color: #7987a1;
     }
+    .st-bg{
+        background-color: #f5f6fa;    
+        padding: 10px 15px;
+    }
 `;
 

@@ -7,6 +7,9 @@ import styled, {
     device,
     typography,
     color as colorProps,
+    position as positionProps,
+    PositionProps as IPositionProps,
+    SpaceProps,
 } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
@@ -118,9 +121,13 @@ export const StyledCardImage = styled(
     ${space};
 `;
 
+interface IBodyProps extends IPositionProps, SpaceProps {}
+
 export const StyledCardBody = styled(
-    ({ ml, mr, mt, mb, pl, pr, pt, pb, p, ...props }) => <div {...props} />
-)`
+    ({ ml, mr, mt, mb, pl, pr, pt, pb, p, position, ...props }) => (
+        <div {...props} />
+    )
+)<IBodyProps>`
     flex: 1 1 auto;
     min-height: 1px;
     padding: 15px;
@@ -128,6 +135,7 @@ export const StyledCardBody = styled(
         padding: 20px;
     }
     ${space};
+    ${positionProps};
 `;
 
 export const StyledCardHeading = styled(

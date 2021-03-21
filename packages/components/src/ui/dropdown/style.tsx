@@ -6,8 +6,6 @@ import { Anchor } from "../anchor";
 interface IProps {
     $show?: boolean;
     $direction?: "up" | "down" | "left" | "right";
-    $btnWidth?: number;
-    $btnHeight?: number;
     $menuWidth?: number;
 }
 
@@ -62,12 +60,12 @@ export const StyledDropMenu = styled.div<IProps>`
             left: 0px;
             margin-right: 0.125rem;
         `}
-    ${({ $direction, $btnWidth }) =>
+    ${({ $direction, $menuWidth }) =>
         $direction === "right" &&
         css`
-            transform: translate3d(${$btnWidth}px, 0px, 0px);
+            transform: translate3d(${$menuWidth}px, 0px, 0px);
             top: 0px;
-            left: 0px;
+            right: 0px;
             margin-left: 0.125rem;
         `}
 `;

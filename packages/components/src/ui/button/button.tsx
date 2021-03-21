@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/button-has-type */
 /* eslint-disable @typescript-eslint/ban-types */
-import React from "react";
+import { FC } from "react";
 
 import { StyledButton } from "./style";
 
@@ -83,49 +83,46 @@ export type ButtonProps = {
     className?: string;
 };
 
-export const Button = React.forwardRef(
-    (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-        const {
-            children,
-            type,
-            variant,
-            color,
-            size,
-            shape,
-            fullwidth,
-            active,
-            disabled,
-            iconButton,
-            hasIcon,
-            label,
-            onClick,
-            className,
-            ...restProps
-        } = props;
+export const Button: FC<ButtonProps> = (props) => {
+    const {
+        children,
+        type,
+        variant,
+        color,
+        size,
+        shape,
+        fullwidth,
+        active,
+        disabled,
+        iconButton,
+        hasIcon,
+        label,
+        onClick,
+        className,
+        ...restProps
+    } = props;
 
-        return (
-            <StyledButton
-                $color={color}
-                $variant={variant}
-                $size={size}
-                $shape={shape}
-                $fullwidth={fullwidth}
-                type={type}
-                $active={active}
-                disabled={disabled}
-                $iconButton={iconButton}
-                $hasIcon={hasIcon}
-                aria-label={label}
-                onClick={onClick}
-                className={className}
-                ref={ref}
-                {...restProps}
-            >
-                {children}
-            </StyledButton>
-        );
-    }
-);
+    return (
+        <StyledButton
+            $color={color}
+            $variant={variant}
+            $size={size}
+            $shape={shape}
+            $fullwidth={fullwidth}
+            type={type}
+            $active={active}
+            disabled={disabled}
+            $iconButton={iconButton}
+            $hasIcon={hasIcon}
+            aria-label={label}
+            onClick={onClick}
+            className={className}
+            {...restProps}
+        >
+            {children}
+        </StyledButton>
+    );
+};
 
 Button.defaultProps = {
     type: "button",

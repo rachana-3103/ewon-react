@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { IMenu } from "@doar/shared/types";
 import { getSiblings } from "@doar/shared/methods";
+import { useClickOutside } from "@doar/shared/hooks";
 import {
     StyledNavbar,
     StyledNavitem,
@@ -31,8 +32,15 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
             });
         });
     };
+    const onClose = useCallback(() => {
+        const nav = document.querySelector(".navbar");
+        const submenu = nav?.querySelectorAll(".submenu");
+        submenu?.forEach((el) => el.classList.remove("open"));
+    }, []);
+
+    const containerRef = useClickOutside<HTMLUListElement>(onClose);
     return (
-        <StyledNavbar>
+        <StyledNavbar ref={containerRef} className="navbar">
             {menus &&
                 menus.map((nav: IMenu) => {
                     const hasSubmenu = !!nav.submenu?.length;

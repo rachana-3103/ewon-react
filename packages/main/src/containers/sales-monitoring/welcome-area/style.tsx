@@ -5,7 +5,7 @@ import { Button } from "@doar/components";
 export const StyledWelcomeArea = styled.div`
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     ${device.small} {
         display: flex;
     }

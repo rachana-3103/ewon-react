@@ -39,6 +39,7 @@ import interBlackItalicWoff from "./inter-ui/Inter-UI-BlackItalic.woff";
 export const InterUi = css`
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 100;
         src: url(${interThinBetaWoff2}) format("woff2"),
@@ -46,6 +47,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 100;
         src: url(${interThinItalicBetaWoff2}) format("woff2"),
@@ -54,6 +56,7 @@ export const InterUi = css`
 
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 200;
         src: url(${interExtraLightBetaWoff2}) format("woff2"),
@@ -61,6 +64,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 200;
         src: url(${interExtraLightItalicBetaWoff2}) format("woff2"),
@@ -68,6 +72,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 300;
         src: url(${interLightBetaWoff2}) format("woff2"),
@@ -75,6 +80,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 300;
         src: url(${interLightItalicBetaWoff2}) format("woff2"),
@@ -82,6 +88,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 400;
         src: url(${interRegularWoff2}) format("woff2"),
@@ -89,6 +96,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 400;
         src: url(${interItalicWoff2}) format("woff2"),
@@ -96,6 +104,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 500;
         src: url(${interMediumWoff2}) format("woff2"),
@@ -103,6 +112,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 500;
         src: url(${interMediumItalicWoff2}) format("woff2"),
@@ -110,6 +120,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 600;
         src: url(${interSemiBoldWoff2}) format("woff2"),
@@ -117,6 +128,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 600;
         src: url(${interSemiBoldItalicWoff2}) format("woff2"),
@@ -124,6 +136,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 700;
         src: url(${interBoldWoff2}) format("woff2"),
@@ -131,6 +144,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 700;
         src: url(${interBoldItalicWoff2}) format("woff2"),
@@ -138,6 +152,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 800;
         src: url(${interExtraBoldWoff2}) format("woff2"),
@@ -145,6 +160,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 800;
         src: url(${interExtraBoldItalicWoff2}) format("woff2"),
@@ -152,6 +168,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: normal;
         font-weight: 900;
         src: url(${interBlackWoff2}) format("woff2"),
@@ -159,6 +176,7 @@ export const InterUi = css`
     }
     @font-face {
         font-family: "Inter UI";
+        font-display: swap;
         font-style: italic;
         font-weight: 900;
         src: url(${interBlackItalicWoff2}) format("woff2"),

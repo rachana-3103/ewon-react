@@ -34,6 +34,9 @@ export const theme = {
         gray900: "#1c273c",
         gray950: "#637388",
         whisper: "#f5f6fa",
+        malibu: "#69b2f8",
+        tropical: "#d1e6fa",
+        pink: "#f10075",
     },
     fontSize: {
         body: "0.875rem",
@@ -48,6 +51,7 @@ export const theme = {
         body: `'IBM Plex Sans', sans-serif`,
         heading: `'IBM Plex Sans', sans-serif`,
         interUi: `-apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif`,
+        rubik: `'Rubik', sans-serif`,
     },
     fontWeights: {
         body: 400,

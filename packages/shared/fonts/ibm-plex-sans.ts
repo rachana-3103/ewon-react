@@ -117,6 +117,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmCompleteBoldWoff}) format("woff");
     }
@@ -124,6 +125,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSplitBoldCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -134,6 +136,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSlitBoldPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -147,6 +150,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSlitBoldLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -155,6 +159,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSlitBoldLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -164,6 +169,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSlitBoldLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -175,6 +181,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
             url(${ibmSlitBoldGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -183,6 +190,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmCompleteBoldItalickWoff}) format("woff");
     }
@@ -190,6 +198,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -200,6 +209,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -213,6 +223,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -221,6 +232,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -230,6 +242,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -241,6 +254,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 700;
+        font-display: swap;
         src: local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
             url(${ibmSplitBoldItalickGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -249,6 +263,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmCompleteExtraLightWoff}) format("woff");
     }
@@ -256,6 +271,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -266,6 +282,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -279,6 +296,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -287,6 +305,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -296,6 +315,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -307,6 +327,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight"), local("IBMPlexSans-ExtraLight"),
             url(${ibmSplitExtraLightGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -315,6 +336,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmCompleteExtraLightItalicWoff}) format("woff");
@@ -323,6 +345,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicCyrillicWoff2}) format("woff2");
@@ -334,6 +357,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicPiWoff2}) format("woff2");
@@ -348,6 +372,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicLatin3Woff2}) format("woff2");
@@ -357,6 +382,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicLatin2Woff2}) format("woff2");
@@ -367,6 +393,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicLatin1Woff2}) format("woff2");
@@ -379,6 +406,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 200;
+        font-display: swap;
         src: local("IBM Plex Sans ExtraLight Italic"),
             local("IBMPlexSans-ExtraLightItalic"),
             url(${ibmSplitExtraLightItalicGreekWoff2}) format("woff2");
@@ -388,6 +416,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmCompleteItalickWoff}) format("woff");
     }
@@ -395,6 +424,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -405,6 +435,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -418,6 +449,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -426,6 +458,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -435,6 +468,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -446,6 +480,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"),
             url(${ibmSplitItalickGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -454,6 +489,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmCompleteLightWoff}) format("woff");
     }
@@ -461,6 +497,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -471,6 +508,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -484,6 +522,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -492,6 +531,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -501,6 +541,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -512,6 +553,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
             url(${ibmSplitLightGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -520,6 +562,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmCompleteLightItalicWoff}) format("woff");
@@ -528,6 +571,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicCyrillicWoff2}) format("woff2");
@@ -539,6 +583,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicPiWoff2}) format("woff2");
@@ -553,6 +598,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicLatin3Woff2}) format("woff2");
@@ -562,6 +608,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicLatin2Woff2}) format("woff2");
@@ -572,6 +619,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicLatin1Woff2}) format("woff2");
@@ -584,6 +632,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 300;
+        font-display: swap;
         src: local("IBM Plex Sans Light Italic"),
             local("IBMPlexSans-LightItalic"),
             url(${ibmSplitLightItalicGreekWoff2}) format("woff2");
@@ -593,6 +642,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmCompleteMediumWoff}) format("woff");
     }
@@ -600,6 +650,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -610,6 +661,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -623,6 +675,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -631,6 +684,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -640,6 +694,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -651,6 +706,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
             url(${ibmSplitMediumGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -659,6 +715,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmCompleteMediumItalicWoff}) format("woff");
@@ -667,6 +724,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicCyrillicWoff2}) format("woff2");
@@ -678,6 +736,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicPiWoff2}) format("woff2");
@@ -692,6 +751,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicLatin3Woff2}) format("woff2");
@@ -701,6 +761,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicLatin2Woff2}) format("woff2");
@@ -711,6 +772,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicLatin1Woff2}) format("woff2");
@@ -723,6 +785,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 500;
+        font-display: swap;
         src: local("IBM Plex Sans Medium Italic"),
             local("IBMPlexSans-MediumItalic"),
             url(${ibmSplitMediumItalicGreekWoff2}) format("woff2");
@@ -732,6 +795,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmCompleteRegularWoff}) format("woff");
     }
@@ -739,6 +803,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -749,6 +814,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -762,6 +828,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -770,6 +837,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -779,6 +847,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -790,6 +859,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local("IBM Plex Sans"), local("IBMPlexSans"),
             url(${ibmSplitRegularGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -798,6 +868,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmCompleteSemiBoldWoff}) format("woff");
     }
@@ -805,6 +876,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -815,6 +887,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -828,6 +901,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -836,6 +910,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -845,6 +920,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -856,6 +932,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
             url(${ibmSplitSemiBoldGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -864,6 +941,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmCompleteSemiBoldItalicWoff}) format("woff");
@@ -872,6 +950,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicCyrillicWoff2}) format("woff2");
@@ -883,6 +962,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicPiWoff2}) format("woff2");
@@ -897,6 +977,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicLatin3Woff2}) format("woff2");
@@ -906,6 +987,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicLatin2Woff2}) format("woff2");
@@ -916,6 +998,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicLatin1Woff2}) format("woff2");
@@ -928,6 +1011,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 600;
+        font-display: swap;
         src: local("IBM Plex Sans SemiBold Italic"),
             local("IBMPlexSans-SemiBoldItalic"),
             url(${ibmSplitSemiBoldItalicGreekWoff2}) format("woff2");
@@ -937,6 +1021,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmCompleteTextWoff}) format("woff");
     }
@@ -944,6 +1029,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -954,6 +1040,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -967,6 +1054,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -975,6 +1063,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -984,6 +1073,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -995,6 +1085,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text"), local("IBMPlexSans-Text"),
             url(${ibmSplitTextGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -1003,6 +1094,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmCompleteTextItalicWoff}) format("woff");
     }
@@ -1010,6 +1102,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -1020,6 +1113,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -1033,6 +1127,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -1041,6 +1136,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -1050,6 +1146,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -1061,6 +1158,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 450;
+        font-display: swap;
         src: local("IBM Plex Sans Text Italic"), local("IBMPlexSans-TextItalic"),
             url(${ibmSplitTextItalicGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -1069,6 +1167,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmCompleteThinWoff}) format("woff");
     }
@@ -1076,6 +1175,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -1086,6 +1186,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -1099,6 +1200,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -1107,6 +1209,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -1116,6 +1219,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -1127,6 +1231,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: normal;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin"), local("IBMPlexSans-Thin"),
             url(${ibmSplitThinGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;
@@ -1135,6 +1240,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmCompleteThinItalicWoff}) format("woff");
     }
@@ -1142,6 +1248,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicCyrillicWoff2}) format("woff2");
         unicode-range: U+0400-045F, U+0472-0473, U+0490-049D, U+04A0-04A5,
@@ -1152,6 +1259,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicPiWoff2}) format("woff2");
         unicode-range: U+0E3F, U+2032-2033, U+2070, U+2075-2079, U+2080-2081,
@@ -1165,6 +1273,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicLatin3Woff2}) format("woff2");
         unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
@@ -1173,6 +1282,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicLatin2Woff2}) format("woff2");
         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB,
@@ -1182,6 +1292,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicLatin1Woff2}) format("woff2");
         unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF,
@@ -1193,6 +1304,7 @@ export const IbmFontSans = css`
         font-family: "IBM Plex Sans";
         font-style: italic;
         font-weight: 100;
+        font-display: swap;
         src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"),
             url(${ibmSplitThinItalicGreekWoff2}) format("woff2");
         unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE;

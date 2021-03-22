@@ -25,3 +25,15 @@ export interface IMenu {
     submenu?: ISubmenu[];
     megamenu?: IMegamenu[];
 }
+
+export interface IConversion {
+    id: number;
+    title: string;
+    rate: string;
+    change: {
+        percentage: string;
+        growth: "up" | "down";
+        time: string;
+    };
+    chart: number[];
+}

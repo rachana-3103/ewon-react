@@ -1,4 +1,6 @@
-export const conversions = [
+import { IConversion } from "../../types";
+
+export const conversions: IConversion[] = [
     {
         id: 1,
         title: "Conversion Rate",

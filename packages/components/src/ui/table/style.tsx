@@ -25,6 +25,7 @@ interface ITableProps extends SpaceProps {
     $hover?: boolean;
     $compact?: boolean;
     $color?: TColor;
+    $borderless?: boolean;
 }
 
 export const StyledTable = styled(
@@ -654,8 +655,6 @@ export const StyledTable = styled(
         `}
 
 
-
-
     ${(props) =>
         props.$color === "dark" &&
         css`
@@ -685,7 +684,7 @@ export const StyledTable = styled(
             }
         `}
                     
-        ${(props) =>
+    ${(props) =>
         props.$color === "dark" &&
         props.$striped === true &&
         css`
@@ -701,7 +700,7 @@ export const StyledTable = styled(
                 }
             }
         `}
-        ${(props) =>
+    ${(props) =>
         props.$color === "dark" &&
         props.$hover === true &&
         css`
@@ -717,39 +716,15 @@ export const StyledTable = styled(
                 }
             }
         `}
-`;
 
-// ${(props) =>
-//     props.$color === "primary" &&
-//     props.$striped === true &&
-//     css`
-//         tbody {
-//             tr {
-//                 &:nth-of-type(2n + 1) {
-//                     background-color: ${tinycolor2(
-//                         themeGet("colors.primary")(props)
-//                     )
-//                         .lighten(48)
-//                         .darken(3)
-//                         .toString()};
-//                 }
-//             }
-//         }
-//     `}
-//     ${(props) =>
-//     props.$color === "primary" &&
-//     props.$hover === true &&
-//     css`
-//         tbody {
-//             tr {
-//                 &:hover {
-//                     background-color: ${tinycolor2(
-//                         themeGet("colors.primary")(props)
-//                     )
-//                         .lighten(48)
-//                         .darken(6)
-//                         .toString()};
-//                 }
-//             }
-//         }
-//     `}
+    ${(props) =>
+        props.$borderless === true &&
+        css`
+            th,
+            td,
+            thead th,
+            tbody + tbody {
+                border: 0;
+            }
+        `}
+`;

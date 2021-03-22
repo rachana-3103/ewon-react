@@ -20,6 +20,7 @@ interface IProps {
     hover?: boolean;
     compact?: boolean;
     color?: TColor;
+    borderless?: boolean;
 }
 
 export const Table: FC<IProps> = ({
@@ -31,6 +32,7 @@ export const Table: FC<IProps> = ({
     hover,
     compact,
     color,
+    borderless,
 }) => {
     return (
         <StyledTableResponsive>
@@ -42,6 +44,7 @@ export const Table: FC<IProps> = ({
                 $hover={hover}
                 $compact={compact}
                 $color={color}
+                $borderless={borderless}
             >
                 {children}
             </StyledTable>

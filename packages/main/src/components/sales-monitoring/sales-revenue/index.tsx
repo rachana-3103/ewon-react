@@ -8,6 +8,9 @@ import {
     StyledHeaderRightText,
     StyledHeaderRightIcon,
     StyeldMap,
+    StyledTable,
+    StyledTH,
+    StyledTD,
 } from "./style";
 
 const SalesRevenue: FC = () => {
@@ -40,6 +43,42 @@ const SalesRevenue: FC = () => {
                         tooltip
                     />
                 </StyeldMap>
+                <StyledTable borderless>
+                    <thead>
+                        <tr>
+                            <StyledTH>States</StyledTH>
+                            <StyledTH>Orders</StyledTH>
+                            <StyledTH>Earnings</StyledTH>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <StyledTD>California</StyledTD>
+                            <StyledTD>12,201</StyledTD>
+                            <StyledTD>$150,200.80</StyledTD>
+                        </tr>
+                        <tr>
+                            <StyledTD>Texas</StyledTD>
+                            <StyledTD>11,950</StyledTD>
+                            <StyledTD>$138,910.20</StyledTD>
+                        </tr>
+                        <tr>
+                            <StyledTD>Wyoming</StyledTD>
+                            <StyledTD>11,198</StyledTD>
+                            <StyledTD>$132,050.00</StyledTD>
+                        </tr>
+                        <tr>
+                            <StyledTD>Florida</StyledTD>
+                            <StyledTD>12,201</StyledTD>
+                            <StyledTD>$150,200.80</StyledTD>
+                        </tr>
+                        <tr>
+                            <StyledTD>New York</StyledTD>
+                            <StyledTD>8,560</StyledTD>
+                            <StyledTD>$117,087.50</StyledTD>
+                        </tr>
+                    </tbody>
+                </StyledTable>
             </CardBody>
         </Card>
     );

@@ -36,6 +36,8 @@ import {
 import { SparklinesBar, SparklinesLines } from "./charts/sparkline/sparkline";
 import { Container, Row, Col } from "./grid/grid";
 import { VectorMap } from "./maps/vector-map/vector-map";
+import { Table } from "./ui/table/table";
+import { ButtonGroup, ButtonToolbar } from "./ui/button-group/button-group";
 
 export {
     Button,
@@ -76,4 +78,7 @@ export {
     Row,
     Col,
     VectorMap,
+    Table,
+    ButtonGroup,
+    ButtonToolbar,
 };

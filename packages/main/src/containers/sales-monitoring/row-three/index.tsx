@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Row, Col } from "@doar/components";
 import SalesRevenue from "../../../components/sales-monitoring/sales-revenue";
+import RecentEarnings from "../../../components/sales-monitoring/recent-earnings";
 
 const RowThree: FC = () => {
     return (
@@ -9,7 +10,7 @@ const RowThree: FC = () => {
                 <SalesRevenue />
             </Col>
             <Col xl={8} lg={12} mt="10px">
-                dfsad
+                <RecentEarnings />
             </Col>
         </Row>
     );

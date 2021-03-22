@@ -335,6 +335,12 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         text-indent: -99999px;
     }
+    table{
+        border-collapse: collapse;
+    }
+    th {
+        text-align: inherit;
+    }
 `;
 
 export default GlobalStyle;

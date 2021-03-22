@@ -34,12 +34,9 @@ export const StyledTable = styled(
     width: 100%;
     margin-bottom: 1rem;
     color: #001737;
-    border-collapse: collapse;
+
     ${space};
 
-    th {
-        text-align: inherit;
-    }
     th,
     td {
         white-space: nowrap;

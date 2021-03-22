@@ -1,5 +1,5 @@
-import styled from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import styled, { themeGet } from "@doar/shared/styled";
+import { CardHeader, Table } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -34,4 +34,49 @@ export const StyledHeaderRightIcon = styled.span`
 
 export const StyeldMap = styled.div`
     padding: 25px 20px;
+`;
+
+export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
+    font-size: 13px;
+    thead th,
+    tbody td {
+        border-color: #e5e9f2;
+    }
+    tbody td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+`;
+
+export const StyledTH = styled.th`
+    font-family: ${themeGet("fonts.interUi")};
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8392a5;
+    &:first-child {
+        padding-left: 20px;
+        width: 40px;
+    }
+    &:not(:first-child) {
+        width: 25px;
+        text-align: right;
+    }
+    &:last-child {
+        padding-right: 20px;
+    }
+`;
+
+export const StyledTD = styled.td`
+    &:first-child {
+        padding-left: 20px;
+        font-weight: 500;
+    }
+    &:not(:first-child) {
+        text-align: right;
+    }
+    &:last-child {
+        padding-right: 20px;
+    }
 `;

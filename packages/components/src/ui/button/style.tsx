@@ -87,6 +87,16 @@ export const StyledButton = styled(({ mt, mb, ml, mr, ...props }) => (
             color: ${themeGet("colors.white")};
             background-color: ${themeGet("colors.secondary")};
             border-color: ${themeGet("colors.secondary")};
+            &:hover {
+                background-color: ${tinycolor2(
+                    themeGet("colors.secondary")(props)
+                )
+                    .darken(10)
+                    .toString()};
+                border-color: ${tinycolor2(themeGet("colors.secondary")(props))
+                    .darken(14)
+                    .toString()};
+            }
             &:active,
             &:focus {
                 box-shadow: 0 0 0 0.2rem

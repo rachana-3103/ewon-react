@@ -1,8 +1,7 @@
-/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/button-has-type */
 /* eslint-disable @typescript-eslint/ban-types */
 import { FC } from "react";
-
+import classnames from "classnames";
 import { StyledButton } from "./style";
 
 export type RenderComponent = React.ComponentType | "a" | "button";
@@ -116,7 +115,7 @@ export const Button: FC<ButtonProps> = (props) => {
             $hasIcon={hasIcon}
             aria-label={label}
             onClick={onClick}
-            className={className}
+            className={classnames(className, "btn")}
             {...restProps}
         >
             {children}

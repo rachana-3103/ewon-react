@@ -45,6 +45,7 @@ import {
     LeafletPopup,
 } from "./src/maps/leaflet-map/leaflet-map";
 import { VectorMap } from "./src/maps/vector-map/vector-map";
+import { Table } from "./src/ui/table/table";
 
 export {
     Button,
@@ -90,4 +91,5 @@ export {
     LeafletMarker,
     LeafletPopup,
     VectorMap,
+    Table,
 };

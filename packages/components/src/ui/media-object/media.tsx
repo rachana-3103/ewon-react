@@ -1,7 +1,9 @@
 import React from "react";
+import classnames from "classnames";
+import { SpaceProps } from "@doar/shared/styled";
 import { StyledMedia, StyledMediaBody, StyledMediaLeft } from "./style";
 
-interface IMediaProps {
+interface IMediaProps extends SpaceProps {
     as?: React.ElementType;
     className?: string;
 }
@@ -12,9 +14,12 @@ export const Media: React.FC<IMediaProps> = ({
     className,
     ...restProps
 }) => {
-    const classes = className || "";
     return (
-        <StyledMedia className={classes} as={as} {...restProps}>
+        <StyledMedia
+            className={classnames(className, "media")}
+            as={as}
+            {...restProps}
+        >
             {children}
         </StyledMedia>
     );
@@ -36,14 +41,21 @@ export const MediaLeft: React.FC<IImgProps> = ({
     );
 };
 
-interface IMediaBodyProps {
+interface IMediaBodyProps extends SpaceProps {
     className?: string;
 }
 
 export const MediaBody: React.FC<IMediaBodyProps> = ({
     children,
     className,
+    ...restProps
 }) => {
-    const classes = className || "";
-    return <StyledMediaBody className={classes}>{children}</StyledMediaBody>;
+    return (
+        <StyledMediaBody
+            className={classnames(className, "media-body")}
+            {...restProps}
+        >
+            {children}
+        </StyledMediaBody>
+    );
 };

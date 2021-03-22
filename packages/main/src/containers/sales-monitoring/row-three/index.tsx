@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Row, Col } from "@doar/components";
 import SalesRevenue from "../../../components/sales-monitoring/sales-revenue";
 import RecentEarnings from "../../../components/sales-monitoring/recent-earnings";
+import CSVDownload from "../../../components/sales-monitoring/csv-download";
 
 const RowThree: FC = () => {
     return (
@@ -11,6 +12,7 @@ const RowThree: FC = () => {
             </Col>
             <Col xl={8} lg={12} mt="10px">
                 <RecentEarnings />
+                <CSVDownload />
             </Col>
         </Row>
     );

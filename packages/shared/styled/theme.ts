@@ -41,6 +41,7 @@ export const theme = {
         athens: "#e9ecf1",
         orange: "#fd7e14",
         cyan: "#17a2b8",
+        teal: "#00cccc",
     },
     fontSize: {
         body: "0.875rem",

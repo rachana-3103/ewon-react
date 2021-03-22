@@ -1,15 +1,24 @@
-/* eslint-disable react/react-in-jsx-scope */
-import styled, { layout, space, css } from "@doar/shared/styled";
+import styled, {
+    layout,
+    space,
+    css,
+    SpaceProps,
+    LayoutProps,
+} from "@doar/shared/styled";
 
-export const StyledMedia = styled(({ mb, ...props }) => <div {...props} />)`
+export const StyledMedia = styled(({ m, ml, mr, mt, mb, ...props }) => (
+    <div {...props} />
+))<SpaceProps>`
     ${space};
     display: flex;
     align-items: flex-start;
 `;
 
+interface IMediaLeft extends SpaceProps, LayoutProps {}
+
 export const StyledMediaLeft = styled(({ width, mr, ml, ...props }) => (
     <div {...props} />
-))`
+))<IMediaLeft>`
     ${layout};
     ${space};
     ${(props) =>
@@ -27,6 +36,9 @@ export const StyledMediaLeft = styled(({ width, mr, ml, ...props }) => (
     }
 `;
 
-export const StyledMediaBody = styled.div`
+export const StyledMediaBody = styled(
+    ({ width, m, mr, ml, mt, mb, ...props }) => <div {...props} />
+)<SpaceProps>`
+    ${space};
     flex: 1;
 `;

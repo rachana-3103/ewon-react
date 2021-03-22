@@ -124,7 +124,7 @@ export const StyledCardImage = styled(
 interface IBodyProps extends IPositionProps, SpaceProps {}
 
 export const StyledCardBody = styled(
-    ({ ml, mr, mt, mb, pl, pr, pt, pb, p, position, ...props }) => (
+    ({ ml, mr, mt, mb, pl, pr, pt, pb, p, py, px, position, ...props }) => (
         <div {...props} />
     )
 )<IBodyProps>`

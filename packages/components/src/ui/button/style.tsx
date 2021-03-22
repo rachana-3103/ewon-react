@@ -666,6 +666,12 @@ export const StyledButton = styled(({ mt, mb, ml, mr, ...props }) => (
                 .darken(10)
                 .toString()}; ;
         `}
+    ${(props) =>
+        props.$active &&
+        props.$color === "white" &&
+        css`
+            background-color: ${themeGet("colors.whisper")};
+        `}
     ${({ disabled }) =>
         disabled &&
         css`

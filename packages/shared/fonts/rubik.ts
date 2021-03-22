@@ -49,13 +49,11 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 300;
         src: url(${rubikLatin300Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin300Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin300Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin300Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin300Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin300Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin300Svg}"+#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin300Svg}) format("svg"); /* Legacy iOS */
     }
     /* rubik-regular - latin */
     @font-face {
@@ -64,14 +62,13 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 400;
         src: url(${rubikLatinRegularEot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatinRegularEot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatinRegularEot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatinRegularWoff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatinRegularWoff})
                 format("woff"),
             /* Modern Browsers */ url(${rubikLatinRegularTtf})
                 format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatinRegularSvg}+"#Rubik")
+            /* Safari, Android, iOS */ url(${rubikLatinRegularSvg})
                 format("svg"); /* Legacy iOS */
     }
     /* rubik-500 - latin */
@@ -81,13 +78,11 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 500;
         src: url(${rubikLatin500Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin500Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin500Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin500Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin500Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin500Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin500Svg}+"#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin500Svg}) format("svg"); /* Legacy iOS */
     }
     /* rubik-600 - latin */
     @font-face {
@@ -96,13 +91,11 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 600;
         src: url(${rubikLatin600Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin600Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin600Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin600Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin600Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin600Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin600Svg}+"#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin600Svg}) format("svg"); /* Legacy iOS */
     }
     /* rubik-700 - latin */
     @font-face {
@@ -111,13 +104,11 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 700;
         src: url(${rubikLatin700Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin700Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin700Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin700Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin700Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin700Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin700Svg}+"#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin700Svg}) format("svg"); /* Legacy iOS */
     }
     /* rubik-800 - latin */
     @font-face {
@@ -126,13 +117,11 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 800;
         src: url(${rubikLatin800Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin800Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin800Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin800Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin800Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin800Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin800Svg}+"#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin800Svg}) format("svg"); /* Legacy iOS */
     }
     /* rubik-900 - latin */
     @font-face {
@@ -141,12 +130,10 @@ export const Rubik = css`
         font-style: normal;
         font-weight: 900;
         src: url(${rubikLatin900Eot}); /* IE9 Compat Modes */
-        src: local(""),
-            url(${rubikLatin900Eot}+"?#iefix") format("embedded-opentype"),
+        src: local(""), url(${rubikLatin900Eot}) format("embedded-opentype"),
             /* IE6-IE8 */ url(${rubikLatin900Woff2}) format("woff2"),
             /* Super Modern Browsers */ url(${rubikLatin900Woff}) format("woff"),
             /* Modern Browsers */ url(${rubikLatin900Ttf}) format("truetype"),
-            /* Safari, Android, iOS */ url(${rubikLatin900Svg}+"#Rubik")
-                format("svg"); /* Legacy iOS */
+            /* Safari, Android, iOS */ url(${rubikLatin900Svg}) format("svg"); /* Legacy iOS */
     }
 `;

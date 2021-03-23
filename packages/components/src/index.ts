@@ -2,7 +2,7 @@ import { Button } from "./ui/button/button";
 import { Alert } from "./ui/alert/alert";
 import { Anchor } from "./ui/anchor";
 import { Navbar } from "./ui/navbar/navbar";
-import { Avatar } from "./ui/avatar/avatar";
+import { Avatar, AvatarInitial } from "./ui/avatar/avatar";
 import {
     Dropdown,
     DropdownToggle,
@@ -46,6 +46,7 @@ export {
     Anchor,
     Navbar,
     Avatar,
+    AvatarInitial,
     Dropdown,
     DropdownToggle,
     DropdownMenu,

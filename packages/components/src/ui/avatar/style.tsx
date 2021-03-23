@@ -3,6 +3,8 @@ import styled, {
     themeGet,
     layout,
     LayoutProps,
+    color as colorStyles,
+    ColorProps,
 } from "@doar/shared/styled";
 
 interface IProps extends LayoutProps {
@@ -11,22 +13,6 @@ interface IProps extends LayoutProps {
     $initialText?: boolean;
     $status?: "online" | "offline";
 }
-
-export const StyledInitialText = styled.span`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #8392a5;
-    color: #fff;
-    font-weight: 700;
-    font-size: 15px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
 
 export const StyledAvatar = styled(({ display, ...rest }) => (
     <div {...rest} />
@@ -83,10 +69,8 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
     ${({ $shape }) =>
         $shape === "square" &&
         css`
+            border-radius: 0;
             img {
-                border-radius: 0;
-            }
-            ${StyledInitialText} {
                 border-radius: 0;
             }
         `}
@@ -94,10 +78,8 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
     ${({ $shape }) =>
         $shape === "circle" &&
         css`
+            border-radius: ${themeGet("radii.circle")};
             img {
-                border-radius: ${themeGet("radii.circle")};
-            }
-            ${StyledInitialText} {
                 border-radius: ${themeGet("radii.circle")};
             }
         `}
@@ -105,66 +87,11 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
     ${({ $shape }) =>
         $shape === "rounded" &&
         css`
+            border-radius: ${themeGet("radii.rounded")};
             img {
                 border-radius: ${themeGet("radii.rounded")};
             }
-            ${StyledInitialText} {
-                border-radius: ${themeGet("radii.rounded")};
-            }
         `}
-    ${({ $size, $initialText }) =>
-        $size === "xs" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 10px;
-            }
-        `}
-
-    ${({ $size, $initialText }) =>
-        $size === "sm" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 13px;
-            }
-        `}
-
-    ${({ $size, $initialText }) =>
-        $size === "md" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 18px;
-            }
-        `}
-
-    ${({ $size, $initialText }) =>
-        $size === "lg" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 24px;
-            }
-        `}
-    ${({ $size, $initialText }) =>
-        $size === "xl" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 30px;
-            }
-        `}
-
-    ${({ $size, $initialText }) =>
-        $size === "xxl" &&
-        Boolean($initialText) &&
-        css`
-            ${StyledInitialText} {
-                font-size: 45px;
-            }
-        `}
-
     ${({ $status }) =>
         ($status === "online" || $status === "offline") &&
         css`
@@ -245,4 +172,81 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
         object-fit: cover;
     }
     ${layout};
+`;
+
+interface IAvatarText extends ColorProps {
+    $size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+}
+
+export const StyledInitialText = styled(({ color, bg, ...rest }) => (
+    <span {...rest} />
+))<IAvatarText>`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8392a5;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    ${({ $size }) =>
+        $size === "xs" &&
+        css`
+            font-size: 10px;
+        `}
+
+    ${({ $size }) =>
+        $size === "sm" &&
+        css`
+            font-size: 13px;
+        `}
+
+    ${({ $size }) =>
+        $size === "md" &&
+        css`
+            font-size: 18px;
+        `}
+
+    ${({ $size }) =>
+        $size === "lg" &&
+        css`
+            font-size: 24px;
+        `}
+    ${({ $size }) =>
+        $size === "xl" &&
+        css`
+            font-size: 30px;
+        `}
+
+    ${({ $size }) =>
+        $size === "xxl" &&
+        css`
+            font-size: 45px;
+        `}
+
+    ${({ $shape }) =>
+        $shape === "square" &&
+        css`
+            border-radius: 0;
+        `}
+
+    ${({ $shape }) =>
+        $shape === "circle" &&
+        css`
+            border-radius: ${themeGet("radii.circle")};
+        `}
+    
+    ${({ $shape }) =>
+        $shape === "rounded" &&
+        css`
+            border-radius: ${themeGet("radii.rounded")};
+        `}
+    ${colorStyles};
 `;

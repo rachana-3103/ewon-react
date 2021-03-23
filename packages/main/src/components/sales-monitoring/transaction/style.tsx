@@ -1,6 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import styled, { themeGet, space, SpaceProps } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import styled, {
+    themeGet,
+    space,
+    SpaceProps,
+    device,
+} from "@doar/shared/styled";
+import { CardHeader, ListGroupItem } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -23,4 +28,14 @@ export const StyledIcon = styled(({ m, ml, mr, mt, mb, ...rest }) => (
     color: ${themeGet("colors.text3")};
     line-height: 0;
     ${space};
+`;
+
+export const StyledGroupItem = styled(({ ...rest }) => (
+    <ListGroupItem {...rest} />
+))`
+    display: flex;
+    ${device.small} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 `;

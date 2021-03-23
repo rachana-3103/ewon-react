@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Card } from "@doar/components";
+import { Card, ListGroup, ListGroupItem, Avatar } from "@doar/components";
 import {
     StyledHeader,
     StyledTitle,
@@ -21,6 +21,11 @@ const Transaction: FC = () => {
                     </StyledIcon>
                 </StyledHeaderRight>
             </StyledHeader>
+            <ListGroup flush>
+                <ListGroupItem>
+                    <Avatar />
+                </ListGroupItem>
+            </ListGroup>
         </Card>
     );
 };

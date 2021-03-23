@@ -1,62 +1,63 @@
-import React from "react";
+import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
 import { LayoutProps } from "@doar/shared/styled";
 import { StyledAvatar, StyledInitialText } from "./style";
 
-interface IProps extends LayoutProps {
+interface IProps {
     /**
-     * Demo url `https://via.placeholder.com/150`
+     * Pass extra classes
      */
-    imageUrl?: string;
-    /**
-     * Image alt text
-     */
-    altText?: string;
+    className?: string;
+}
+
+interface IAvatar extends LayoutProps, IProps {
     /**
      * Default size is `38x38`
      */
-    size: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+    size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     /**
      * Default size is `square`
      */
-    shape: "circle" | "rounded" | "square";
-    /**
-     * user's initial name. Maximum length is 2.
-     */
-    initialText?: string;
+    shape?: "circle" | "rounded" | "square";
     /**
      * An avatar can have a status indicator to indicate users availability.
      */
     status?: "online" | "offline";
-    /**
-     * Pass extra classes
-     */
-    clasName?: string;
 }
 
-export const Avatar: React.FC<IProps> = ({
-    imageUrl,
-    altText,
+type IChild = Exclude<ReactChild, ReactText>;
+
+export const Avatar: FC<IAvatar> = ({
     size,
     shape,
-    initialText,
     status,
-    clasName,
+    className,
+    children,
     ...restProps
 }) => {
-    const isInitialText = Boolean(initialText);
-    const iniT = initialText?.substring(0, 2);
+    const RenderChild = Children.map(children, (el) => {
+        const child = el as IChild;
+        if (child !== null) {
+            const childType = child.type as FunctionComponent;
+            const name = childType.displayName || childType.name;
+            if (name === "AvatarInitial") {
+                return (
+                    <child.type size={size} shape={shape} {...child.props} />
+                );
+            }
+            return <child.type {...child.props} />;
+        }
+        return null;
+    });
     return (
         <StyledAvatar
             $size={size}
             $shape={shape}
-            $initialText={isInitialText}
             $status={status}
-            className={classnames(clasName, "avatar")}
+            className={classnames(className, "avatar")}
             {...restProps}
         >
-            {isInitialText && <StyledInitialText>{iniT}</StyledInitialText>}
-            {!isInitialText && <img src={imageUrl} alt={altText} />}
+            {RenderChild}
         </StyledAvatar>
     );
 };
@@ -64,4 +65,28 @@ export const Avatar: React.FC<IProps> = ({
 Avatar.defaultProps = {
     size: "default",
     shape: "circle",
+};
+
+interface IAvatarText extends IProps {
+    size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+    shape?: "circle" | "rounded" | "square";
+}
+
+export const AvatarInitial: FC<IAvatarText> = ({
+    children,
+    size,
+    shape,
+    className,
+    ...restProps
+}) => {
+    return (
+        <StyledInitialText
+            $size={size}
+            $shape={shape}
+            className={classnames(className, "avatar-initial")}
+            {...restProps}
+        >
+            {children}
+        </StyledInitialText>
+    );
 };

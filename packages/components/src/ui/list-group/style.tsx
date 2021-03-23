@@ -1,11 +1,21 @@
-import styled, { themeGet, css } from "@doar/shared/styled";
+import styled, {
+    themeGet,
+    css,
+    space,
+    SpaceProps,
+    flexbox,
+    FlexboxProps,
+} from "@doar/shared/styled";
 
-interface IListGroup {
+interface IListGroup extends SpaceProps {
     $horizontal?: boolean;
 }
 
-export const StyledListGroup = styled.ul<IListGroup>`
+export const StyledListGroup = styled(
+    ({ p, px, py, pl, pr, pt, pb, ...rest }) => <ul {...rest} />
+)<IListGroup>`
     display: flex;
+    ${space}
     ${({ $horizontal }) =>
         ($horizontal !== true || !$horizontal) &&
         css`
@@ -18,7 +28,7 @@ export const StyledListGroup = styled.ul<IListGroup>`
         `}
 `;
 
-interface IListGroupItem {
+interface IListGroupItem extends SpaceProps, FlexboxProps {
     $active?: boolean;
     $disabled?: boolean;
     $action?: boolean;
@@ -96,4 +106,6 @@ export const StyledListGroupItem = styled.li<IListGroupItem>`
                 border-bottom-left-radius: 0;
             }
         `}
+    ${space};
+    ${flexbox}
 `;

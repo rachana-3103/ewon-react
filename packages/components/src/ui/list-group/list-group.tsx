@@ -1,5 +1,6 @@
 import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
+import { SpaceProps, FlexboxProps } from "@doar/shared/styled";
 import { StyledListGroup, StyledListGroupItem } from "./style";
 
 interface IProps {
@@ -7,7 +8,7 @@ interface IProps {
     className?: string;
 }
 
-interface IListGroup extends IProps {
+interface IListGroup extends IProps, SpaceProps {
     flush?: boolean;
     horizontal?: boolean;
 }
@@ -20,6 +21,7 @@ export const ListGroup: FC<IListGroup> = ({
     children,
     flush,
     horizontal,
+    ...restProps
 }) => {
     const RenderChild = Children.map(children, (el) => {
         const child = el as IChild;
@@ -43,13 +45,14 @@ export const ListGroup: FC<IListGroup> = ({
             as={as}
             className={classnames(className, "list-group")}
             $horizontal={horizontal}
+            {...restProps}
         >
             {RenderChild}
         </StyledListGroup>
     );
 };
 
-interface IListGroupItem extends IProps {
+interface IListGroupItem extends IProps, SpaceProps, FlexboxProps {
     active?: boolean;
     disabled?: boolean;
     action?: boolean;
@@ -68,6 +71,7 @@ export const ListGroupItem: FC<IListGroupItem> = ({
     href,
     flush,
     horizontal,
+    ...restProps
 }) => {
     return (
         <StyledListGroupItem
@@ -79,6 +83,7 @@ export const ListGroupItem: FC<IListGroupItem> = ({
             href={href}
             $flush={flush}
             $horizontal={horizontal}
+            {...restProps}
         >
             {children}
         </StyledListGroupItem>

@@ -1,7 +1,9 @@
 import React from "react";
+import classnames from "classnames";
+import { LayoutProps } from "@doar/shared/styled";
 import { StyledAvatar, StyledInitialText } from "./style";
 
-interface IProps {
+interface IProps extends LayoutProps {
     /**
      * Demo url `https://via.placeholder.com/150`
      */
@@ -26,6 +28,10 @@ interface IProps {
      * An avatar can have a status indicator to indicate users availability.
      */
     status?: "online" | "offline";
+    /**
+     * Pass extra classes
+     */
+    clasName?: string;
 }
 
 export const Avatar: React.FC<IProps> = ({
@@ -35,6 +41,8 @@ export const Avatar: React.FC<IProps> = ({
     shape,
     initialText,
     status,
+    clasName,
+    ...restProps
 }) => {
     const isInitialText = Boolean(initialText);
     const iniT = initialText?.substring(0, 2);
@@ -44,6 +52,8 @@ export const Avatar: React.FC<IProps> = ({
             $shape={shape}
             $initialText={isInitialText}
             $status={status}
+            className={classnames(clasName, "avatar")}
+            {...restProps}
         >
             {isInitialText && <StyledInitialText>{iniT}</StyledInitialText>}
             {!isInitialText && <img src={imageUrl} alt={altText} />}

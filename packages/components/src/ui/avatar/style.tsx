@@ -1,6 +1,11 @@
-import styled, { css, themeGet } from "@doar/shared/styled";
+import styled, {
+    css,
+    themeGet,
+    layout,
+    LayoutProps,
+} from "@doar/shared/styled";
 
-interface IProps {
+interface IProps extends LayoutProps {
     $size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     $shape?: "circle" | "rounded" | "square";
     $initialText?: boolean;
@@ -23,7 +28,9 @@ export const StyledInitialText = styled.span`
     justify-content: center;
 `;
 
-export const StyledAvatar = styled.div<IProps>`
+export const StyledAvatar = styled(({ display, ...rest }) => (
+    <div {...rest} />
+))<IProps>`
     position: relative;
     ${({ $size }) =>
         ($size === "default" || !$size) &&
@@ -107,7 +114,7 @@ export const StyledAvatar = styled.div<IProps>`
         `}
     ${({ $size, $initialText }) =>
         $size === "xs" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 10px;
@@ -116,7 +123,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $initialText }) =>
         $size === "sm" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 13px;
@@ -125,7 +132,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $initialText }) =>
         $size === "md" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 18px;
@@ -134,7 +141,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $initialText }) =>
         $size === "lg" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 24px;
@@ -142,7 +149,7 @@ export const StyledAvatar = styled.div<IProps>`
         `}
     ${({ $size, $initialText }) =>
         $size === "xl" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 30px;
@@ -151,7 +158,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $initialText }) =>
         $size === "xxl" &&
-        $initialText &&
+        Boolean($initialText) &&
         css`
             ${StyledInitialText} {
                 font-size: 45px;
@@ -189,7 +196,7 @@ export const StyledAvatar = styled.div<IProps>`
     
     ${({ $size, $status }) =>
         $size === "xs" &&
-        $status &&
+        Boolean($status) &&
         css`
             &:after {
                 width: 5px;
@@ -199,7 +206,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $status }) =>
         $size === "sm" &&
-        $status &&
+        Boolean($status) &&
         css`
             &:after {
                 width: 7px;
@@ -209,7 +216,7 @@ export const StyledAvatar = styled.div<IProps>`
     
     ${({ $size, $status }) =>
         $size === "lg" &&
-        $status &&
+        Boolean($status) &&
         css`
             &:after {
                 width: 10px;
@@ -221,7 +228,7 @@ export const StyledAvatar = styled.div<IProps>`
 
     ${({ $size, $status }) =>
         $size === "xl" &&
-        $status &&
+        Boolean($status) &&
         css`
             &:after {
                 width: 11px;
@@ -237,4 +244,5 @@ export const StyledAvatar = styled.div<IProps>`
         height: 100%;
         object-fit: cover;
     }
+    ${layout};
 `;

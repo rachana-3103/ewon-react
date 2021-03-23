@@ -38,6 +38,7 @@ import { Container, Row, Col } from "./grid/grid";
 import { VectorMap } from "./maps/vector-map/vector-map";
 import { Table } from "./ui/table/table";
 import { ButtonGroup, ButtonToolbar } from "./ui/button-group/button-group";
+import { ListGroup, ListGroupItem } from "./ui/list-group/list-group";
 
 export {
     Button,
@@ -81,4 +82,6 @@ export {
     Table,
     ButtonGroup,
     ButtonToolbar,
+    ListGroup,
+    ListGroupItem,
 };

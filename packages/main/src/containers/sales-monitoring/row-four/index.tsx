@@ -1,7 +1,23 @@
 import { FC } from "react";
+import { Row, Col } from "@doar/components";
+import Transaction from "../../../components/sales-monitoring/transaction";
 
 const RowFour: FC = () => {
-    return <div>dfas</div>;
+    return (
+        <Row>
+            <Col md={6} xl={4} mt="10px">
+                <Transaction />
+            </Col>
+            <Col md={6} xl={4} mt="10px">
+                {" "}
+                dfads
+            </Col>
+            <Col md={6} xl={4} mt="10px">
+                {" "}
+                dfads
+            </Col>
+        </Row>
+    );
 };
 
 export default RowFour;

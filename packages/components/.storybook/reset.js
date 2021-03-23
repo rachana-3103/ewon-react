@@ -138,5 +138,10 @@ export const ResetCSS = createGlobalStyle`
         background-color: #f5f6fa;    
         padding: 10px 15px;
     }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+    }
 `;
 

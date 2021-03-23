@@ -29,7 +29,7 @@ const Conversion: FC<IProps> = ({ title, rate, change, chart }) => {
                                 <i className="icon ion-md-arrow-down" />
                             )}{" "}
                         </StyledCardChangePercent>
-                        {change?.time && "than last week"}
+                        {change?.time && <>{change?.time}</>}
                     </StyledCardText>
                 </StyledCardBottom>
                 <StyledChart>

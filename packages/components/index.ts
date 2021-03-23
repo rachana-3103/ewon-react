@@ -47,6 +47,7 @@ import {
 import { VectorMap } from "./src/maps/vector-map/vector-map";
 import { Table } from "./src/ui/table/table";
 import { ButtonGroup, ButtonToolbar } from "./src/ui/button-group/button-group";
+import { ListGroup, ListGroupItem } from "./src/ui/list-group/list-group";
 
 export {
     Button,
@@ -95,4 +96,6 @@ export {
     Table,
     ButtonGroup,
     ButtonToolbar,
+    ListGroup,
+    ListGroupItem,
 };

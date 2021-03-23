@@ -19,7 +19,7 @@ export const StyledIcon = styled.span`
     }
 `;
 
-export const StyledTitle = styled.h4`
+export const StyledTitle = styled.h6`
     margin-bottom: 10px;
 `;
 

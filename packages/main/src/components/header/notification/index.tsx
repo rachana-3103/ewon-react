@@ -1,17 +1,14 @@
 import React from "react";
-import { Media, MediaLeft, Avatar } from "@doar/components";
+import { Media, MediaLeft, Avatar, AvatarInitial } from "@doar/components";
 import { StyledMediaBody, StyledStrong, StyledText, StyledSpan } from "./style";
 
 const Notification: React.FC = () => {
     return (
         <Media>
             <MediaLeft>
-                <Avatar
-                    size="sm"
-                    shape="circle"
-                    initialText="df"
-                    status="online"
-                />
+                <Avatar size="sm" shape="circle" status="online">
+                    <AvatarInitial>df</AvatarInitial>
+                </Avatar>
             </MediaLeft>
             <StyledMediaBody>
                 <StyledStrong>Socrates Itumay</StyledStrong>

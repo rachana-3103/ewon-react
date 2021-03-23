@@ -1,5 +1,11 @@
 import { FC } from "react";
-import { Card, ListGroup, ListGroupItem, Avatar } from "@doar/components";
+import {
+    Card,
+    ListGroup,
+    ListGroupItem,
+    Avatar,
+    AvatarInitial,
+} from "@doar/components";
 import {
     StyledHeader,
     StyledTitle,
@@ -23,7 +29,9 @@ const Transaction: FC = () => {
             </StyledHeader>
             <ListGroup flush>
                 <ListGroupItem>
-                    <Avatar />
+                    <Avatar>
+                        <AvatarInitial>dd</AvatarInitial>
+                    </Avatar>
                 </ListGroupItem>
             </ListGroup>
         </Card>

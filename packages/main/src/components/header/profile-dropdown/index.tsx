@@ -7,7 +7,12 @@ import {
     Settings,
     LogOut,
 } from "react-feather";
-import { DropdownToggle, Dropdown, Avatar } from "@doar/components";
+import {
+    DropdownToggle,
+    Dropdown,
+    Avatar,
+    AvatarInitial,
+} from "@doar/components";
 import {
     StyledDropMenu,
     StyledAuthorName,
@@ -20,10 +25,14 @@ const ProfileDropdown: React.FC = () => {
     return (
         <Dropdown direction="down">
             <DropdownToggle variant="texted">
-                <Avatar size="sm" shape="circle" initialText="df" />
+                <Avatar size="sm" shape="circle">
+                    <AvatarInitial>df</AvatarInitial>
+                </Avatar>
             </DropdownToggle>
             <StyledDropMenu>
-                <Avatar size="lg" shape="circle" initialText="df" />
+                <Avatar size="lg" shape="circle">
+                    <AvatarInitial>df</AvatarInitial>
+                </Avatar>
                 <StyledAuthorName>Katherine Pechon</StyledAuthorName>
                 <StyledAuthorRole>Administrator</StyledAuthorRole>
                 <StyledDropItem path="/">

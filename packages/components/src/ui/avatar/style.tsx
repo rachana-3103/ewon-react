@@ -197,57 +197,51 @@ export const StyledInitialText = styled(({ color, bg, opacity, ...rest }) => (
     width: 100%;
     height: 100%;
     line-height: 100%;
+    font-family: ${themeGet("fonts.interUi")};
     ${({ $size }) =>
         $size === "xs" &&
         css`
             font-size: 10px;
         `}
-
     ${({ $size }) =>
         $size === "sm" &&
         css`
             font-size: 13px;
         `}
-
-    ${({ $size }) =>
+        ${({ $size }) =>
         $size === "md" &&
         css`
             font-size: 18px;
         `}
-
-    ${({ $size }) =>
+        ${({ $size }) =>
         $size === "lg" &&
         css`
             font-size: 24px;
         `}
-    ${({ $size }) =>
+        ${({ $size }) =>
         $size === "xl" &&
         css`
             font-size: 30px;
         `}
-
-    ${({ $size }) =>
+        ${({ $size }) =>
         $size === "xxl" &&
         css`
             font-size: 45px;
         `}
-
-    ${({ $shape }) =>
+        ${({ $shape }) =>
         $shape === "square" &&
         css`
             border-radius: 0;
         `}
-
-    ${({ $shape }) =>
+        ${({ $shape }) =>
         $shape === "circle" &&
         css`
             border-radius: ${themeGet("radii.circle")};
         `}
-    
-    ${({ $shape }) =>
+        ${({ $shape }) =>
         $shape === "rounded" &&
         css`
             border-radius: ${themeGet("radii.rounded")};
         `}
-    ${colorStyles};
+        ${colorStyles};
 `;

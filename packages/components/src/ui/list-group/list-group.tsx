@@ -1,6 +1,6 @@
 import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
-import { SpaceProps, FlexboxProps } from "@doar/shared/styled";
+import { SpaceProps, FlexboxProps, LayoutProps } from "@doar/shared/styled";
 import { StyledListGroup, StyledListGroupItem } from "./style";
 
 interface IProps {
@@ -52,7 +52,7 @@ export const ListGroup: FC<IListGroup> = ({
     );
 };
 
-interface IListGroupItem extends IProps, SpaceProps, FlexboxProps {
+interface IListGroupItem extends IProps, SpaceProps, FlexboxProps, LayoutProps {
     active?: boolean;
     disabled?: boolean;
     action?: boolean;

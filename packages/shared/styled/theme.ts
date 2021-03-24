@@ -42,6 +42,7 @@ export const theme = {
         orange: "#fd7e14",
         cyan: "#17a2b8",
         teal: "#00cccc",
+        indigo: "#5b47fb",
     },
     fontSize: {
         body: "0.875rem",

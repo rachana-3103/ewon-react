@@ -5,6 +5,8 @@ import styled, {
     SpaceProps,
     flexbox,
     FlexboxProps,
+    LayoutProps,
+    layout,
 } from "@doar/shared/styled";
 
 interface IListGroup extends SpaceProps {
@@ -28,7 +30,7 @@ export const StyledListGroup = styled(
         `}
 `;
 
-interface IListGroupItem extends SpaceProps, FlexboxProps {
+interface IListGroupItem extends SpaceProps, FlexboxProps, LayoutProps {
     $active?: boolean;
     $disabled?: boolean;
     $action?: boolean;
@@ -36,7 +38,9 @@ interface IListGroupItem extends SpaceProps, FlexboxProps {
     $horizontal?: boolean;
 }
 
-export const StyledListGroupItem = styled.li<IListGroupItem>`
+export const StyledListGroupItem = styled(
+    ({ display, p, px, py, pl, pr, pt, pb, ...rest }) => <li {...rest} />
+)<IListGroupItem>`
     padding: 10px 15px;
     position: relative;
     display: block;
@@ -107,5 +111,6 @@ export const StyledListGroupItem = styled.li<IListGroupItem>`
             }
         `}
     ${space};
-    ${flexbox}
+    ${flexbox};
+    ${layout}
 `;

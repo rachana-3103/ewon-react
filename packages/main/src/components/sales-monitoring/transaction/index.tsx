@@ -11,6 +11,14 @@ import {
     StyledTitle,
     StyledHeaderRight,
     StyledIcon,
+    StyledListMiddle,
+    StyledListTitle,
+    StyledListText,
+    StyledListEnd,
+    StyledListTrans,
+    StyledListStatus,
+    StyledFooter,
+    StyledFooterLink,
 } from "./style";
 
 const Transaction: FC = () => {
@@ -28,12 +36,104 @@ const Transaction: FC = () => {
                 </StyledHeaderRight>
             </StyledHeader>
             <ListGroup flush>
-                <ListGroupItem>
-                    <Avatar>
-                        <AvatarInitial>dd</AvatarInitial>
+                <ListGroupItem display="flex" px={[null, "20px"]}>
+                    <Avatar display={["none", "block"]}>
+                        <AvatarInitial bg="teal">
+                            <i className="icon ion-md-checkmark" />
+                        </AvatarInitial>
                     </Avatar>
+                    <StyledListMiddle>
+                        <StyledListTitle>Payment from #10322</StyledListTitle>
+                        <StyledListText>Mar 21, 2019, 3:30pm</StyledListText>
+                    </StyledListMiddle>
+                    <StyledListEnd>
+                        <StyledListTrans>+ $250.00</StyledListTrans>
+                        <StyledListStatus $status="complete">
+                            Completed
+                        </StyledListStatus>
+                    </StyledListEnd>
+                </ListGroupItem>
+                <ListGroupItem display="flex" px={[null, "20px"]}>
+                    <Avatar display={["none", "block"]}>
+                        <AvatarInitial bg="indigo" opacity="0.5">
+                            <i className="icon ion-md-return-left" />
+                        </AvatarInitial>
+                    </Avatar>
+                    <StyledListMiddle>
+                        <StyledListTitle>
+                            Process refund to #00910
+                        </StyledListTitle>
+                        <StyledListText>Mar 21, 2019, 1:00pm</StyledListText>
+                    </StyledListMiddle>
+                    <StyledListEnd>
+                        <StyledListTrans>-$16.50</StyledListTrans>
+                        <StyledListStatus $status="complete">
+                            Completed
+                        </StyledListStatus>
+                    </StyledListEnd>
+                </ListGroupItem>
+                <ListGroupItem display="flex" px={[null, "20px"]}>
+                    <Avatar display={["none", "block"]}>
+                        <AvatarInitial bg="orange" opacity="0.5">
+                            <i className="icon ion-md-bus" />
+                        </AvatarInitial>
+                    </Avatar>
+                    <StyledListMiddle>
+                        <StyledListTitle>
+                            Process delivery to #44333
+                        </StyledListTitle>
+                        <StyledListText>Mar 20, 2019, 11:40am</StyledListText>
+                    </StyledListMiddle>
+                    <StyledListEnd>
+                        <StyledListTrans>3 Items</StyledListTrans>
+                        <StyledListStatus $status="pickup">
+                            For pickup
+                        </StyledListStatus>
+                    </StyledListEnd>
+                </ListGroupItem>
+                <ListGroupItem display="flex" px={[null, "20px"]}>
+                    <Avatar display={["none", "block"]}>
+                        <AvatarInitial bg="teal">
+                            <i className="icon ion-md-checkmark" />
+                        </AvatarInitial>
+                    </Avatar>
+                    <StyledListMiddle>
+                        <StyledListTitle>Payment from #10322</StyledListTitle>
+                        <StyledListText>Mar 21, 2019, 3:30pm</StyledListText>
+                    </StyledListMiddle>
+                    <StyledListEnd>
+                        <StyledListTrans>+ $129.50</StyledListTrans>
+                        <StyledListStatus $status="complete">
+                            Completed
+                        </StyledListStatus>
+                    </StyledListEnd>
+                </ListGroupItem>
+                <ListGroupItem display="flex" px={[null, "20px"]}>
+                    <Avatar display={["none", "block"]}>
+                        <AvatarInitial bg="orange" opacity="0.5">
+                            <i className="icon ion-md-close" />
+                        </AvatarInitial>
+                    </Avatar>
+                    <StyledListMiddle>
+                        <StyledListTitle>
+                            Payment failed from #087651
+                        </StyledListTitle>
+                        <StyledListText>Mar 19, 2019, 12:54pm</StyledListText>
+                    </StyledListMiddle>
+                    <StyledListEnd>
+                        <StyledListTrans>$150.00</StyledListTrans>
+                        <StyledListStatus $status="cancel">
+                            Declined
+                        </StyledListStatus>
+                    </StyledListEnd>
                 </ListGroupItem>
             </ListGroup>
+            <StyledFooter>
+                <StyledFooterLink href="#">
+                    View All Transactions{" "}
+                    <i className="icon ion-md-arrow-down mg-l-5" />
+                </StyledFooterLink>
+            </StyledFooter>
         </Card>
     );
 };

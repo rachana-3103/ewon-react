@@ -178,7 +178,7 @@ interface IAvatarText extends ColorProps {
     $size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 }
 
-export const StyledInitialText = styled(({ color, bg, ...rest }) => (
+export const StyledInitialText = styled(({ color, bg, opacity, ...rest }) => (
     <span {...rest} />
 ))<IAvatarText>`
     position: absolute;
@@ -196,6 +196,7 @@ export const StyledInitialText = styled(({ color, bg, ...rest }) => (
     justify-content: center;
     width: 100%;
     height: 100%;
+    line-height: 100%;
     ${({ $size }) =>
         $size === "xs" &&
         css`

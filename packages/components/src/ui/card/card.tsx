@@ -1,4 +1,5 @@
 import { FC } from "react";
+import classnames from "classnames";
 import { SpaceProps, PositionProps, LayoutProps } from "@doar/shared/styled";
 import {
     StyledCard,
@@ -20,6 +21,10 @@ interface ICardCommonProps {
     className?: string;
 }
 
+/**
+ * Card Component
+ */
+
 interface ICardProps extends LayoutProps, SpaceProps {
     className?: string;
     color?: "primary" | "secondary" | "success" | "warning" | "danger" | "info";
@@ -31,9 +36,12 @@ export const Card: FC<ICardProps> = ({
     color,
     ...restProps
 }) => {
-    const classes = className ? `card ${className}` : "card";
     return (
-        <StyledCard className={classes} {...restProps} $color={color}>
+        <StyledCard
+            className={classnames(className, "card")}
+            {...restProps}
+            $color={color}
+        >
             {children}
         </StyledCard>
     );
@@ -47,6 +55,10 @@ interface ICardImageProps {
     isBottom?: boolean;
 }
 
+/**
+ * Card Image Component
+ */
+
 export const CardImage: FC<ICardImageProps> = ({
     src,
     alt,
@@ -57,20 +69,26 @@ export const CardImage: FC<ICardImageProps> = ({
 }) => {
     const topClass = isTop ? "card-img-top" : "";
     const bottomClass = isBottom ? "card-img-bottom" : "";
-    const classes = className
-        ? `card-image ${className} ${topClass} ${bottomClass}`
-        : `card-image ${topClass} ${bottomClass}`;
     return (
         <StyledCardImage
             src={src}
             alt={alt}
-            className={classes}
+            className={classnames(
+                className,
+                "card-image",
+                topClass,
+                bottomClass
+            )}
             $isTop={isTop}
             $isBottom={isBottom}
             {...restProps}
         />
     );
 };
+
+/**
+ * Card Body Component
+ */
 
 interface ICardBodyProps extends ICardCommonProps, SpaceProps, PositionProps {}
 
@@ -79,13 +97,19 @@ export const CardBody: FC<ICardBodyProps> = ({
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-body ${className}` : "card-body";
     return (
-        <StyledCardBody className={classes} {...restProps}>
+        <StyledCardBody
+            className={classnames(className, "card-body")}
+            {...restProps}
+        >
             {children}
         </StyledCardBody>
     );
 };
+
+/**
+ * Card Title Component
+ */
 
 interface ICardTitleProps {
     className?: string;
@@ -98,39 +122,58 @@ export const CardTitle: FC<ICardTitleProps> = ({
     as,
     ...restProps
 }) => {
-    const classes = className ? `card-title ${className}` : "card-title";
     return (
-        <StyledCardHeading as={as} className={classes} {...restProps}>
+        <StyledCardHeading
+            as={as}
+            className={classnames(className, "card-title")}
+            {...restProps}
+        >
             {children}
         </StyledCardHeading>
     );
 };
+
+/**
+ * Card Text Component
+ */
 
 export const CardText: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-text ${className}` : "card-text";
     return (
-        <StyledCardText className={classes} {...restProps}>
+        <StyledCardText
+            className={classnames(className, "card-text")}
+            {...restProps}
+        >
             {children}
         </StyledCardText>
     );
 };
+
+/**
+ * Card Subtitle Component
+ */
 
 export const CardSubtitle: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-subtitle ${className}` : "card-subtitle";
     return (
-        <StyledCardSubtitle className={classes} {...restProps}>
+        <StyledCardSubtitle
+            className={classnames(className, "card-subtitle")}
+            {...restProps}
+        >
             {children}
         </StyledCardSubtitle>
     );
 };
+
+/**
+ * Card Link Component
+ */
 
 interface ICardLinkProps {
     className?: string;
@@ -143,76 +186,107 @@ export const CardLink: FC<ICardLinkProps> = ({
     path,
     ...restProps
 }) => {
-    const classes = className ? `card-link ${className}` : "card-link";
     return (
-        <StyledCardLink path={path} className={classes} {...restProps}>
+        <StyledCardLink
+            path={path}
+            className={classnames(className, "card-link")}
+            {...restProps}
+        >
             {children}
         </StyledCardLink>
     );
 };
+
+/**
+ * Card Header Component
+ */
 
 export const CardHeader: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-header ${className}` : "card-header";
     return (
-        <StyledCardHeader className={classes} {...restProps}>
+        <StyledCardHeader
+            className={classnames(className, "card-header")}
+            {...restProps}
+        >
             {children}
         </StyledCardHeader>
     );
 };
+
+/**
+ * Card Footer Component
+ */
 
 export const CardFooter: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-footer ${className}` : "card-footer";
     return (
-        <StyledCardFooter className={classes} {...restProps}>
+        <StyledCardFooter
+            className={classnames(className, "card-footer")}
+            {...restProps}
+        >
             {children}
         </StyledCardFooter>
     );
 };
+
+/**
+ * Card Image Overlay Component
+ */
 
 export const CardImageOverlay: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className
-        ? `card-img-overlay ${className}`
-        : "card-img-overlay";
     return (
-        <StyledCardImgOverlay className={classes} {...restProps}>
+        <StyledCardImgOverlay
+            className={classnames(className, "card-img-overlay")}
+            {...restProps}
+        >
             {children}
         </StyledCardImgOverlay>
     );
 };
+
+/**
+ * Card Group Component
+ */
 
 export const CardGroup: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-group ${className}` : "card-group";
     return (
-        <StyledCardGroup className={classes} {...restProps}>
+        <StyledCardGroup
+            className={classnames(className, "card-group")}
+            {...restProps}
+        >
             {children}
         </StyledCardGroup>
     );
 };
+
+/**
+ * Card Deck Component
+ */
 
 export const CardDeck: FC<ICardCommonProps> = ({
     children,
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-deck ${className}` : "card-deck";
     return (
-        <StyledCardDeck className={classes} {...restProps}>
+        <StyledCardDeck
+            className={classnames(className, "card-deck")}
+            {...restProps}
+        >
             {children}
         </StyledCardDeck>
     );
@@ -223,9 +297,11 @@ export const CardColumns: FC<ICardCommonProps> = ({
     className,
     ...restProps
 }) => {
-    const classes = className ? `card-columns ${className}` : "card-columns";
     return (
-        <StyledCardColumns className={classes} {...restProps}>
+        <StyledCardColumns
+            className={classnames(className, "card-columns")}
+            {...restProps}
+        >
             {children}
         </StyledCardColumns>
     );

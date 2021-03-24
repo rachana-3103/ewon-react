@@ -4,8 +4,9 @@ import styled, {
     space,
     SpaceProps,
     device,
+    css,
 } from "@doar/shared/styled";
-import { CardHeader, ListGroupItem } from "@doar/components";
+import { CardHeader, CardFooter } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -30,12 +31,66 @@ export const StyledIcon = styled(({ m, ml, mr, mt, mb, ...rest }) => (
     ${space};
 `;
 
-export const StyledGroupItem = styled(({ ...rest }) => (
-    <ListGroupItem {...rest} />
-))`
-    display: flex;
+export const StyledListMiddle = styled.div`
     ${device.small} {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+    }
+`;
+
+export const StyledListTitle = styled.p`
+    font-weight: 500;
+    margin-bottom: 0px;
+    font-size: 13px;
+`;
+
+export const StyledListText = styled.small`
+    color: ${themeGet("colors.text3")};
+    font-size: 12px;
+    margin-bottom: 0px;
+`;
+
+export const StyledListEnd = styled.div`
+    margin-left: auto;
+    text-align: right;
+`;
+
+export const StyledListTrans = styled.p`
+    font-weight: 500;
+    margin-bottom: 0px;
+    font-size: 13px;
+`;
+
+interface ITransStatus {
+    $status: "complete" | "pickup" | "cancel";
+}
+
+export const StyledListStatus = styled.small<ITransStatus>`
+    font-size: 12px;
+    ${({ $status }) =>
+        $status === "complete" &&
+        css`
+            color: ${themeGet("colors.success")};
+        `}
+    ${({ $status }) =>
+        $status === "pickup" &&
+        css`
+            color: ${themeGet("colors.info")};
+        `}
+    ${({ $status }) =>
+        $status === "cancel" &&
+        css`
+            color: ${themeGet("colors.danger")};
+        `}
+`;
+
+export const StyledFooter = styled(({ ...props }) => <CardFooter {...props} />)`
+    text-align: center;
+    font-size: 13px;
+`;
+
+export const StyledFooterLink = styled.a`
+    color: ${themeGet("colors.text3")};
+    i {
+        margin-left: 5px;
     }
 `;

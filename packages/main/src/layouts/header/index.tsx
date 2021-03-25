@@ -5,6 +5,7 @@ import { menuData } from "@doar/shared/data";
 import MessageDropdown from "../../components/header/message-dropdown";
 import NotificationDropdown from "../../components/header/notification-dropdown";
 import ProfileDropdown from "../../components/header/profile-dropdown";
+import NavSearch from "../../components/header/nav-search";
 import {
     StyledHeader,
     StyledLogo,
@@ -41,6 +42,7 @@ const Header: React.FC = () => {
                     <ProfileDropdown />
                 </StyledNavbarElement>
             </StyleNavbarRight>
+            <NavSearch />
         </StyledHeader>
     );
 };

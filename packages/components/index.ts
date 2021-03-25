@@ -48,6 +48,13 @@ import { VectorMap } from "./src/maps/vector-map/vector-map";
 import { Table } from "./src/ui/table/table";
 import { ButtonGroup, ButtonToolbar } from "./src/ui/button-group/button-group";
 import { ListGroup, ListGroupItem } from "./src/ui/list-group/list-group";
+import {
+    Input,
+    Checkbox,
+    FileUpload,
+    Radio,
+    Select,
+} from "./src/forms/form-elements";
 
 export {
     Button,
@@ -99,4 +106,9 @@ export {
     ButtonToolbar,
     ListGroup,
     ListGroupItem,
+    Input,
+    Checkbox,
+    FileUpload,
+    Radio,
+    Select,
 };

@@ -143,5 +143,22 @@ export const ResetCSS = createGlobalStyle`
         padding: 0;
         list-style: none; 
     }
+    input[type="radio"], 
+    input[type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    button, input {
+        overflow: visible;
+    }
+    input, button, select, optgroup, textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+    select {
+        word-wrap: normal;
+    }
 `;
 

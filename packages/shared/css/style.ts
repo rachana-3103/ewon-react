@@ -341,6 +341,17 @@ const GlobalStyle = createGlobalStyle`
     th {
         text-align: inherit;
     }
+    hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
 `;
 
 export default GlobalStyle;

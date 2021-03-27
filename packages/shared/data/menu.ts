@@ -11,15 +11,19 @@ import {
     ShieldOff,
     User,
     File,
+    PieChart,
+    Package,
+    Layers,
+    Box,
+    Archive,
 } from "react-feather";
-
-// export { Camera };
 
 const menus = [
     {
         id: 1,
         label: "Dashboard",
         url: "/",
+        Icon: PieChart,
         submenu: [
             {
                 id: 11,
@@ -51,6 +55,7 @@ const menus = [
         id: 2,
         label: "Apps",
         url: "/",
+        Icon: Package,
         submenu: [
             {
                 id: 21,
@@ -88,6 +93,7 @@ const menus = [
         id: 3,
         label: "Pages",
         url: "/",
+        Icon: Layers,
         megamenu: [
             {
                 id: 31,
@@ -215,11 +221,13 @@ const menus = [
         id: 4,
         label: "Components",
         url: "/",
+        Icon: Box,
     },
     {
         id: 5,
         label: "Collections",
         url: "/",
+        Icon: Archive,
     },
 ];
 

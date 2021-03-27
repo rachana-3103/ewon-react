@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SpaceProps } from "@doar/shared/styled";
 import { StyledNav, StyledBreadcrumb, StyledBreadcrumbItem } from "./style";
 
-interface IBreadcrumb {
+interface IBreadcrumb extends SpaceProps {
     /**
      * Extra class name
      */

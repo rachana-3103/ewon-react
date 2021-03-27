@@ -22,6 +22,7 @@ export interface IMenu {
     id: number;
     label: string;
     url: string;
+    Icon?: FC<IconProps> | undefined;
     submenu?: ISubmenu[];
     megamenu?: IMegamenu[];
 }

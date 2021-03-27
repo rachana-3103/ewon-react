@@ -1,5 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
-import styled, { device, themeGet, layout, space } from "@doar/shared/styled";
+import styled, {
+    device,
+    themeGet,
+    layout,
+    space,
+    css,
+} from "@doar/shared/styled";
 
 export const StyledHeader = styled.header`
     position: relative;
@@ -42,18 +48,31 @@ export const StyledLogo = styled.div`
     }
 `;
 
-export const StyledNavbarWrap = styled.div`
+interface INavbar {
+    $isOpen?: boolean;
+}
+
+export const StyledNavbarWrap = styled.div<INavbar>`
     order: 3;
-    width: 260px;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 21, 32, 0.7);
     overflow: hidden;
     z-index: 1060;
-    transform: translateX(-260px);
+    visibility: hidden;
+    opacity: 0;
     transition: all 0.4s;
+    will-change: visibility, opacity;
+    ${({ $isOpen }) =>
+        $isOpen === true &&
+        css`
+            visibility: visible;
+            opacity: 1;
+        `}
     ${device.xlarge} {
         padding: 0 30px;
     }
@@ -64,7 +83,6 @@ export const StyledNavbarWrap = styled.div`
         top: auto;
         left: auto;
         bottom: auto;
-        background-color: transparent;
         overflow: visible;
         display: flex;
         justify-content: center;
@@ -75,16 +93,58 @@ export const StyledNavbarWrap = styled.div`
     }
 `;
 
-export const StyledNavbarMenu = styled.nav`
-    display: flex;
-    flex-wrap: wrap;
+export const StyledNavbarMenu = styled.nav<INavbar>`
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.4s;
+    will-change: transform;
+    transform: translateX(-260px);
+    z-index: 99999;
+    position: relative;
+    ${({ $isOpen }) =>
+        $isOpen === true &&
+        css`
+            transform: translateX(0);
+        `}
     ${device.large} {
+        background-color: transparent;
         width: 100%;
         max-width: 780px;
         margin-top: -3px;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         flex-direction: row;
     }
+`;
+
+export const StyledNavbarHeader = styled.div`
+    height: 55px;
+    padding: 0 15px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid ${themeGet("colors.border")};
+`;
+
+export const StyledNavbarBody = styled.div`
+    padding: 25px 0;
+    ${device.large} {
+        padding: 0;
+    }
+`;
+
+export const StyledNavbarTitle = styled.h6`
+    font-size: 10px;
+    font-weight: 600;
+    font-family: ${themeGet("fonts.interUi")};
+    letter-spacing: 0.7px;
+    color: ${themeGet("colors.text3")};
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 20px;
 `;
 
 export const StyleNavbarRight = styled.div`

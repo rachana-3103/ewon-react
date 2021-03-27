@@ -1,15 +1,15 @@
-/* eslint-disable react/react-in-jsx-scope */
-import styled, { space, css, themeGet } from "@doar/shared/styled";
+import styled, { space, css, themeGet, SpaceProps } from "@doar/shared/styled";
 
 export const StyledNav = styled.nav``;
 
 export const StyledBreadcrumb = styled(({ mr, ml, mb, mt, ...props }) => (
     <ol {...props} />
-))`
+))<SpaceProps>`
     display: flex;
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
+    margin-top: 0;
     list-style: none;
     background-color: #e3e7ed;
     border-radius: 0.25rem;

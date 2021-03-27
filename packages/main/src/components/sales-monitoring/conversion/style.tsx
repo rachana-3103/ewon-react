@@ -19,6 +19,7 @@ export const StyledCardRate = styled.h3`
     margin-right: 5px;
     margin-bottom: 0px;
     font-family: ${themeGet("fonts.rubik")};
+    font-weight: 400;
 `;
 
 export const StyledCardText = styled.p`

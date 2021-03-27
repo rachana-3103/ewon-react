@@ -27,6 +27,13 @@ import {
 import { Media, MediaLeft, MediaBody } from "./ui/media-object/media";
 import { Breadcrumb, BreadcrumbItem } from "./ui/breadcrumb/breadcrumb";
 import {
+    ApexBarChart,
+    ApexLineChart,
+    ApexAreaChart,
+    ApexPieChart,
+    ApexDonutChart,
+} from "./charts/apexchart/apexchart";
+import {
     BarChart,
     HorizontalBarChart,
     LineChart,
@@ -76,6 +83,11 @@ export {
     MediaBody,
     Breadcrumb,
     BreadcrumbItem,
+    ApexBarChart,
+    ApexLineChart,
+    ApexAreaChart,
+    ApexPieChart,
+    ApexDonutChart,
     BarChart,
     HorizontalBarChart,
     LineChart,

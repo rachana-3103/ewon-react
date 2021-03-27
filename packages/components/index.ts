@@ -28,6 +28,13 @@ import { Media, MediaLeft, MediaBody } from "./src/ui/media-object/media";
 import { Breadcrumb, BreadcrumbItem } from "./src/ui/breadcrumb/breadcrumb";
 import { Container, Row, Col } from "./src/grid/grid";
 import {
+    ApexBarChart,
+    ApexLineChart,
+    ApexAreaChart,
+    ApexPieChart,
+    ApexDonutChart,
+} from "./src/charts/apexchart/apexchart";
+import {
     SparklinesBar,
     SparklinesLines,
 } from "./src/charts/sparkline/sparkline";
@@ -88,6 +95,11 @@ export {
     Container,
     Row,
     Col,
+    ApexBarChart,
+    ApexLineChart,
+    ApexAreaChart,
+    ApexPieChart,
+    ApexDonutChart,
     SparklinesBar,
     SparklinesLines,
     BarChart,

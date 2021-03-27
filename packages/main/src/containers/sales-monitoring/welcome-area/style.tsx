@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import styled, { device } from "@doar/shared/styled";
 import { Button } from "@doar/components";
 
@@ -19,7 +18,12 @@ export const StyledWelcomeArea = styled.div`
 
 export const StyledWelcomeLeft = styled.div``;
 
-export const StyledWelcomeRight = styled.div``;
+export const StyledWelcomeRight = styled.div`
+    display: none;
+    ${device.medium} {
+        display: block;
+    }
+`;
 
 export const StyledButton = styled((props) => <Button {...props} />)`
     text-transform: uppercase;

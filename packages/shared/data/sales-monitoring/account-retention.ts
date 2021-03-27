@@ -47,7 +47,7 @@ export const RetentionChart = {
                     },
                     barPercentage: 0.6,
                     ticks: {
-                        beginAtZero: true,
+                        beginAtZero: false,
                         fontSize: 11,
                         fontFamily: "'Rubik', sans-serif",
                         color: "rgba(255,255,255,.2)",

@@ -1,20 +1,10 @@
 /* eslint-disable react/button-has-type */
-/* eslint-disable @typescript-eslint/ban-types */
 import { FC } from "react";
 import classnames from "classnames";
+import { SpaceProps, LayoutProps } from "@doar/shared/styled";
 import { StyledButton } from "./style";
 
-export type RenderComponent = React.ComponentType | "a" | "button";
-
-export type GetRenderComponentProps<T> = T extends React.ComponentType
-    ? React.ComponentProps<T>
-    : T extends "a"
-    ? React.HTMLProps<T>
-    : {};
-
-export type ButtonRef = HTMLButtonElement | HTMLAnchorElement;
-
-export type ButtonProps = {
+export interface ButtonProps extends SpaceProps, LayoutProps {
     /**
      * Required.
      */
@@ -80,7 +70,7 @@ export type ButtonProps = {
      * Optional. Extra Class Name
      */
     className?: string;
-};
+}
 
 export const Button: FC<ButtonProps> = (props) => {
     const {

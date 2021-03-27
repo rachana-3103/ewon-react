@@ -45,11 +45,17 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
                 menus.map((nav: IMenu) => {
                     const hasSubmenu = !!nav.submenu?.length;
                     const hasMegamenu = !!nav.megamenu?.length;
-                    const { submenu, megamenu } = nav;
+                    const {
+                        submenu,
+                        megamenu,
+                        id: navId,
+                        Icon: NavIcon,
+                        label: navLabel,
+                    } = nav;
                     return (
                         <StyledNavitem
                             $hasSubmenu={hasSubmenu || hasMegamenu}
-                            key={nav.id}
+                            key={navId}
                             onClick={
                                 hasSubmenu || hasMegamenu
                                     ? clickHandler
@@ -57,7 +63,8 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
                             }
                         >
                             <StyledNavlink path={nav.url}>
-                                {nav.label}
+                                {NavIcon && <NavIcon />}
+                                {navLabel}
                             </StyledNavlink>
                             {hasSubmenu && (
                                 <StyledSubmenu className="submenu">
@@ -80,32 +87,34 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
                                             <StyledMegamenuList
                                                 key={megaNav.id}
                                             >
-                                                {megaNav?.title && (
-                                                    <StyledMegamenuLabel>
-                                                        {megaNav?.title}
-                                                    </StyledMegamenuLabel>
-                                                )}
-                                                {megaNav?.submenu?.map(
-                                                    ({
-                                                        id,
-                                                        label,
-                                                        url,
-                                                        Icon,
-                                                    }) => (
-                                                        <StyledSubNavItem
-                                                            key={id}
-                                                        >
-                                                            <StyledSubNavlink
-                                                                path={url}
+                                                <>
+                                                    {megaNav?.title && (
+                                                        <StyledMegamenuLabel>
+                                                            {megaNav?.title}
+                                                        </StyledMegamenuLabel>
+                                                    )}
+                                                    {megaNav?.submenu?.map(
+                                                        ({
+                                                            id,
+                                                            label,
+                                                            url,
+                                                            Icon,
+                                                        }) => (
+                                                            <StyledSubNavItem
+                                                                key={id}
                                                             >
-                                                                {Icon && (
-                                                                    <Icon />
-                                                                )}
-                                                                {label}
-                                                            </StyledSubNavlink>
-                                                        </StyledSubNavItem>
-                                                    )
-                                                )}
+                                                                <StyledSubNavlink
+                                                                    path={url}
+                                                                >
+                                                                    {Icon && (
+                                                                        <Icon />
+                                                                    )}
+                                                                    {label}
+                                                                </StyledSubNavlink>
+                                                            </StyledSubNavItem>
+                                                        )
+                                                    )}
+                                                </>
                                             </StyledMegamenuList>
                                         ))}
                                     </StyledMegaMenuInner>

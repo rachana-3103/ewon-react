@@ -1,5 +1,5 @@
 import { FC, useState, useCallback } from "react";
-import { Search } from "react-feather";
+import { Search, Menu, X } from "react-feather";
 import { Anchor, Navbar, Button } from "@doar/components";
 import { menuData } from "@doar/shared/data";
 import MessageDropdown from "../../components/header/message-dropdown";
@@ -13,23 +13,58 @@ import {
     StyledNavbarMenu,
     StyleNavbarRight,
     StyledNavbarElement,
+    StyledNavbarHeader,
+    StyledNavbarBody,
+    StyledNavbarTitle,
 } from "./style";
 
 const Header: FC = () => {
-    const [open, setOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
     const searchHandler = useCallback(() => {
-        setOpen((prev) => !prev);
+        setSearchOpen((prev) => !prev);
+    }, []);
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const menuHandler = useCallback(() => {
+        setMenuOpen((prev) => !prev);
     }, []);
 
     return (
         <>
             <StyledHeader>
+                <Button
+                    variant="texted"
+                    ml="18px"
+                    display={[null, null, null, "none"]}
+                    onClick={menuHandler}
+                >
+                    <Menu color="#8392a5" size={20} strokeWidth="2.5px" />
+                </Button>
                 <StyledLogo>
                     <Anchor path="/">Header</Anchor>
                 </StyledLogo>
-                <StyledNavbarWrap>
-                    <StyledNavbarMenu>
-                        <Navbar menus={menuData} />
+                <StyledNavbarWrap $isOpen={menuOpen} onClick={menuHandler}>
+                    <StyledNavbarMenu
+                        $isOpen={menuOpen}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <StyledNavbarHeader>
+                            <Anchor path="/">Header</Anchor>
+                            <Button variant="texted" onClick={menuHandler}>
+                                <X
+                                    color="#7987a1"
+                                    width={20}
+                                    strokeWidth="2.5px"
+                                />
+                            </Button>
+                        </StyledNavbarHeader>
+                        <StyledNavbarBody>
+                            <StyledNavbarTitle>
+                                MAIN NAVIGATION
+                            </StyledNavbarTitle>
+                            <Navbar menus={menuData} />
+                        </StyledNavbarBody>
                     </StyledNavbarMenu>
                 </StyledNavbarWrap>
                 <StyleNavbarRight>
@@ -49,7 +84,7 @@ const Header: FC = () => {
                     </StyledNavbarElement>
                 </StyleNavbarRight>
             </StyledHeader>
-            <NavSearch isOpen={open} onClose={searchHandler} />
+            <NavSearch isOpen={searchOpen} onClose={searchHandler} />
         </>
     );
 };

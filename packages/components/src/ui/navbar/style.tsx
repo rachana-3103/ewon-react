@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/react-in-jsx-scope */
 import styled, { themeGet, device, css } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
@@ -7,9 +5,6 @@ export const StyledNavbar = styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 `;
 
 type NavItemProps = {
@@ -22,9 +17,11 @@ export const StyledNavitem = styled.li<NavItemProps>`
         css`
             position: relative;
             & > a {
-                padding-right: 14px;
+                ${device.large} {
+                    padding-right: 14px;
+                }
                 &:after {
-                    position: absolute;
+                    display: inline-block;
                     top: 3px;
                     content: "";
                     width: 4px;
@@ -40,6 +37,9 @@ export const StyledNavitem = styled.li<NavItemProps>`
                 }
             }
         `}
+    &:not(:first-of-type) {
+        margin-top: 10px;
+    }
     ${device.xlarge} {
         margin-left: 30px;
         &:first-child {
@@ -49,12 +49,35 @@ export const StyledNavitem = styled.li<NavItemProps>`
 `;
 
 export const StyledNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
+    display: flex;
+    align-items: center;
     font-weight: 500;
-    padding: 0;
     color: ${themeGet("colors.text")};
     transition: all 0.2s ease-in-out;
     position: relative;
     font-size: ${themeGet("fontSize.body")};
+    padding: 0 20px;
+    ${device.large} {
+        padding: 0;
+    }
+    svg {
+        width: 18px;
+        height: 18px;
+        stroke-width: 2.2px;
+        fill: rgba(27, 46, 75, 0.1);
+        margin-right: 15px;
+        color: #7987a1;
+        transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+        color: ${themeGet("colors.primary")};
+        svg {
+            color: ${themeGet("colors.primary")};
+        }
+    }
+    &:focus {
+        outline: none;
+    }
 `;
 
 export const StyledSubmenu = styled.ul`
@@ -110,11 +133,18 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     display: flex;
     align-items: center;
     transition: all 0.2s ease-in-out;
+    &:hover {
+        color: ${themeGet("colors.primary")};
+    }
     svg {
         width: 16px;
         height: 16px;
         margin-right: 15px;
         fill: rgba(0, 23, 55, 0.08);
+        display: none;
+        ${device.large} {
+            display: block;
+        }
     }
 `;
 
@@ -161,22 +191,32 @@ export const StyledMegaMenuInner = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-width: 425px;
+    min-width: 100%;
+    ${device.large} {
+        min-width: 425px;
+    }
 `;
 
 export const StyledMegamenuList = styled.ul`
-    flex-basis: 47%;
-    max-width: 47%;
+    flex-basis: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-    &:nth-of-type(even) {
-        margin-left: 25px;
-        padding-left: 25px;
-        border-left: 1px solid ${themeGet("colors.border")};
+    &:not(:first-of-type) {
+        margin-top: 20px;
     }
-    &:not(:nth-of-type(-n + 2)) {
-        padding-top: 20px;
+    ${device.large} {
+        flex-basis: 47%;
+        max-width: 47%;
+        &:nth-of-type(even) {
+            margin-left: 25px;
+            padding-left: 25px;
+            border-left: 1px solid ${themeGet("colors.border")};
+        }
+        &:not(:nth-of-type(-n + 2)) {
+            padding-top: 20px;
+        }
     }
 `;
 
@@ -185,6 +225,7 @@ export const StyledMegamenuLabel = styled.li`
     font-weight: 600;
     letter-spacing: 0.7px;
     color: ${themeGet("colors.text3")};
+    font-family: ${themeGet("fonts.interUi")};
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;

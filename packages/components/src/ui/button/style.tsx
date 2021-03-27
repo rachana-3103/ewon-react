@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable react/react-in-jsx-scope */
-import styled, { css, space, themeGet } from "@doar/shared/styled";
+import styled, {
+    css,
+    space,
+    layout,
+    themeGet,
+    SpaceProps,
+    LayoutProps,
+} from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 
-export type ButtonRef = HTMLButtonElement | HTMLAnchorElement;
-
-interface IProps {
+interface IProps extends SpaceProps, LayoutProps {
     $variant?: "contained" | "outlined" | "texted";
     $color?:
         | "primary"
@@ -26,7 +30,7 @@ interface IProps {
     $hasIcon?: boolean;
 }
 
-export const StyledButton = styled(({ mt, mb, ml, mr, ...props }) => (
+export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
     <button type="button" {...props} />
 ))<IProps>`
     display: inline-flex;
@@ -46,6 +50,7 @@ export const StyledButton = styled(({ mt, mb, ml, mr, ...props }) => (
         outline: none;
     }
     ${space};
+    ${layout};
     ${(props) =>
         props.$variant === "contained" &&
         props.$color === "primary" &&

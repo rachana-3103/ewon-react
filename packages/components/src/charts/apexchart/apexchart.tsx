@@ -7,7 +7,7 @@ interface IProps {
         [x: string]: unknown;
     };
     series: Array<{
-        name: string;
+        name?: string;
         data: any[];
     }>;
     width?: string | number;

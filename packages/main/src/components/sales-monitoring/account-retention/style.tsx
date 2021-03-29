@@ -1,5 +1,5 @@
 import styled, { themeGet, color as colorProps } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import { CardHeader, CardBody } from "@doar/components";
 
 export const StyledCardHeader = styled(({ ...props }) => (
     <CardHeader {...props} />
@@ -7,6 +7,10 @@ export const StyledCardHeader = styled(({ ...props }) => (
     padding-top: 20px;
     padding-bottom: 0px;
     border-bottom: 0;
+`;
+
+export const StyledCardBody = styled(({ ...props }) => <CardBody {...props} />)`
+    padding-top: 0;
 `;
 
 export const StyledTitle = styled.h6`
@@ -17,6 +21,7 @@ export const StyledDesc = styled.p`
     font-size: 12px;
     margin-bottom: 0px;
     color: ${themeGet("colors.text3")};
+    font-weight: 400;
 `;
 
 export const StyledCardBodyTitle = styled.h4`
@@ -46,5 +51,6 @@ export const StyledCardBodyText = styled.p`
 `;
 
 export const StyledChart = styled.div`
-    margin-bottom: 20px;
+    margin-left: -17px;
+    margin-right: -17px;
 `;

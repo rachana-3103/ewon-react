@@ -1,59 +1,114 @@
 export const RetentionChart = {
-    data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [
-            {
-                data: [55, 70, 30, 55, 32, 36],
-                backgroundColor: "#69b2f8",
+    options: {
+        chart: {
+            stacked: true,
+            toolbar: {
+                show: false,
             },
-            {
-                data: [38, 50, 50, 60, 17, 53],
-                backgroundColor: "#69b2f8",
+            zoom: {
+                enabled: false,
             },
+        },
+        dataLabels: {
+            enabled: false,
+        },
+        responsive: [
             {
-                data: [20, 15, 40, 40, 28, 66],
-                backgroundColor: "#69b2f8",
+                breakpoint: 480,
+                options: {
+                    legend: {
+                        position: "bottom",
+                        offsetX: -10,
+                        offsetY: 0,
+                    },
+                },
             },
         ],
-    },
-    options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-            display: false,
-            labels: {
-                display: false,
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: "50%",
+                endingShape: "rounded",
             },
         },
-        scales: {
-            yAxes: [
-                {
-                    gridLines: {
-                        color: "#e5e9f2",
-                    },
-                    ticks: {
-                        beginAtZero: true,
-                        fontSize: 11,
-                        fontFamily: "'Rubik', sans-serif",
-                        color: "rgba(255,255,255,.2)",
-                        max: 80,
-                    },
+        xaxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+            tooltip: {
+                enabled: false,
+            },
+            axisTicks: {
+                show: false,
+            },
+            axisBorder: {
+                show: false,
+            },
+        },
+        yaxis: {
+            show: false,
+        },
+        legend: {
+            show: false,
+        },
+        grid: {
+            borderColor: "#ffffff",
+            xaxis: {
+                lines: {
+                    show: false,
                 },
-            ],
-            xAxes: [
-                {
-                    gridLines: {
-                        display: false,
-                    },
-                    barPercentage: 0.6,
-                    ticks: {
-                        beginAtZero: false,
-                        fontSize: 11,
-                        fontFamily: "'Rubik', sans-serif",
-                        color: "rgba(255,255,255,.2)",
-                    },
+            },
+            yaxis: {
+                lines: {
+                    show: false,
                 },
+            },
+        },
+        fill: {
+            opacity: 1,
+        },
+        colors: ["#69b2f8", "#f0f1f5"],
+    },
+    series: [
+        {
+            data: [
+                44,
+                55,
+                57,
+                56,
+                61,
+                58,
+                63,
+                60,
+                66,
+                70,
+                75,
+                61,
+                95,
+                80,
+                52,
+                55,
+                68,
             ],
         },
-    },
+        {
+            data: [
+                76,
+                85,
+                99,
+                98,
+                87,
+                95,
+                91,
+                84,
+                94,
+                60,
+                50,
+                61,
+                89,
+                65,
+                92,
+                41,
+                77,
+            ],
+        },
+    ],
 };

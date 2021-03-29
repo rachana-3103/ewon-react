@@ -1,8 +1,9 @@
 import { FC } from "react";
-import { Card, CardBody, Row, Col, BarChart } from "@doar/components";
+import { Card, Row, Col, ApexBarChart } from "@doar/components";
 import { RetentionChart } from "@doar/shared/data/sales-monitoring";
 import {
     StyledCardHeader,
+    StyledCardBody,
     StyledTitle,
     StyledDesc,
     StyledCardBodyTitle,
@@ -20,13 +21,13 @@ const AccountRetention: FC = () => {
                     Number of customers who have active subscription with you.
                 </StyledDesc>
             </StyledCardHeader>
-            <CardBody>
+            <StyledCardBody>
                 <StyledChart>
-                    <BarChart
-                        data={RetentionChart.data}
+                    <ApexBarChart
+                        series={RetentionChart.series}
                         options={RetentionChart.options}
-                        width={350}
-                        height={180}
+                        width="100%"
+                        height={282}
                     />
                 </StyledChart>
                 <Row>
@@ -55,7 +56,7 @@ const AccountRetention: FC = () => {
                         </StyledCardBodyText>
                     </Col>
                 </Row>
-            </CardBody>
+            </StyledCardBody>
         </Card>
     );
 };

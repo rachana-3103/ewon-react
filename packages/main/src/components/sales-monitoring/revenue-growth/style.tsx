@@ -63,13 +63,8 @@ export const StyledListText = styled.span`
 `;
 
 export const StyledCardBodyWrap = styled.div`
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    ${device.xlarge} {
-        width: 100%;
-    }
+    padding-left: 20px;
+    padding-top: 20px;
 `;
 
 export const StyledCardBodyTitle = styled.h3`
@@ -97,13 +92,5 @@ export const StyledCardBodyText = styled.p`
 export const StyledChart = styled.div`
     position: relative;
     overflow: hidden;
-    margin: 0 15px 15px;
-    padding-top: 80px;
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-    ${device.small} {
-        margin: 0 20px 15px;
-        padding-top: 0;
-        overflow: visible;
-    }
+    margin: 0 10px 0;
 `;

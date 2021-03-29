@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Card, CardBody, Row, Col, LineChart } from "@doar/components";
+import { Card, CardBody, Row, Col, ApexAreaChart } from "@doar/components";
 import { RevenueChart } from "@doar/shared/data/sales-monitoring";
 import {
     StyledHeader,
@@ -63,11 +63,11 @@ const RevenueGrowth: FC = () => {
                     </Row>
                 </StyledCardBodyWrap>
                 <StyledChart>
-                    <LineChart
-                        data={RevenueChart.data}
+                    <ApexAreaChart
                         options={RevenueChart.options}
-                        width={615}
-                        height={315}
+                        series={RevenueChart.series}
+                        width="100%"
+                        height={280}
                     />
                 </StyledChart>
             </CardBody>

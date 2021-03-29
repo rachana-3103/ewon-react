@@ -186,7 +186,7 @@ export const StyledInitialText = styled(({ color, bg, opacity, ...rest }) => (
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #8392a5;
+    background-color: ${themeGet("colors.text3")};
     color: #fff;
     font-weight: 700;
     font-size: 15px;

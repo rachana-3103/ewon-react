@@ -15,10 +15,15 @@ export const StyledFooter = styled.footer`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row-reverse;
     }
 `;
 
 export const StyledFooterLeft = styled.div`
+    margin-top: 10px;
+    ${device.medium} {
+        margin-top: 0;
+    }
     a {
         padding: 0;
         color: ${themeGet("colors.text2")};
@@ -37,12 +42,7 @@ export const StyledFooterLeft = styled.div`
     }
 `;
 
-export const StyledFooterRight = styled.div`
-    margin-top: 15px;
-    ${device.small} {
-        margin-top: 0;
-    }
-`;
+export const StyledFooterRight = styled.div``;
 
 export const StyledFooterNav = styled.nav`
     display: flex;

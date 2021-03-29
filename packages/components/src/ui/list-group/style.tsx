@@ -82,9 +82,9 @@ export const StyledListGroupItem = styled(
             &:hover,
             &:focus {
                 z-index: 1;
-                color: #596882;
+                color: ${themeGet("colors.gray700")};
                 text-decoration: none;
-                background-color: #f4f5f8;
+                background-color: ${themeGet("colors.gray100")};
             }
         `}
 

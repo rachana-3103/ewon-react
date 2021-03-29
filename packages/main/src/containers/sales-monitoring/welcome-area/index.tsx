@@ -19,11 +19,11 @@ const WelcomeArea: React.FC = () => {
                     <Mail />
                     Email
                 </StyledButton>
-                <StyledButton size="sm" color="white" hasIcon ml="5px">
+                <StyledButton size="sm" color="white" hasIcon ml="10px">
                     <Printer />
                     Print
                 </StyledButton>
-                <StyledButton size="sm" ml="5px" hasIcon>
+                <StyledButton size="sm" ml="10px" hasIcon>
                     <File />
                     Generate Report
                 </StyledButton>

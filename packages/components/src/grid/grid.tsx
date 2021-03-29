@@ -1,4 +1,5 @@
 import { FC } from "react";
+import classNames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledContainer, StyledRow, StyledCol } from "./style";
 import { ColProps } from "./types";
@@ -35,5 +36,7 @@ export const Row: FC<IRowProps> = ({
 interface IColProps extends IProps, ColProps {}
 
 export const Col: FC<IColProps> = ({ className, ...props }) => {
-    return <StyledCol className={className} {...props} />;
+    const { xlOrder } = props;
+    const orderXl = xlOrder !== undefined ? `order-xl-${xlOrder}` : "";
+    return <StyledCol className={classNames(className, orderXl)} {...props} />;
 };

@@ -14,12 +14,18 @@ export const RetentionChart = {
         },
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 575,
                 options: {
-                    legend: {
-                        position: "bottom",
-                        offsetX: -10,
-                        offsetY: 0,
+                    chart: {
+                        height: 220,
+                    },
+                },
+            },
+            {
+                breakpoint: 1199,
+                options: {
+                    chart: {
+                        height: 228,
                     },
                 },
             },

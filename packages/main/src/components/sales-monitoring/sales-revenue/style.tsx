@@ -24,7 +24,7 @@ export const StyledHeaderRightText = styled.span`
 export const StyledHeaderRightIcon = styled.span`
     cursor: pointer;
     line-height: 0;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     display: flex;
     align-items: center;
     i {
@@ -40,7 +40,7 @@ export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
     font-size: 13px;
     thead th,
     tbody td {
-        border-color: #e5e9f2;
+        border-color: ${themeGet("colors.light")};
     }
     tbody td {
         padding-top: 5px;
@@ -54,7 +54,7 @@ export const StyledTH = styled.th`
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     &:first-child {
         padding-left: 20px;
         width: 40px;

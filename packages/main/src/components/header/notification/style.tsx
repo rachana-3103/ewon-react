@@ -18,7 +18,7 @@ export const StyledText = styled.p`
 `;
 
 export const StyledSpan = styled.span`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     font-size: 11px;
     font-family: ${themeGet("fonts.interUi")};
 `;

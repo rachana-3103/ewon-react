@@ -1,5 +1,6 @@
 import styled, { css, device, themeGet } from "@doar/shared/styled";
 import { Button, Input } from "@doar/components";
+import { hexTorgb } from "@doar/shared/methods";
 
 interface INavSearch {
     $isOpen: boolean;
@@ -10,9 +11,9 @@ export const StyledSearch = styled.div<INavSearch>`
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
-    background-color: rgba(15, 21, 32, 0.7);
+    background-color: ${(props) => hexTorgb(props.theme.colors.vulcan, 0.7)};
     z-index: 99999;
     visibility: hidden;
     opacity: 0;
@@ -87,6 +88,9 @@ export const StyledSearchBtn = styled(({ ...rest }) => <Button {...rest} />)`
 export const StyledSearchClose = styled(({ ...rest }) => <Button {...rest} />)`
     color: ${themeGet("colors.text3")};
     margin-left: 5px;
+    &:hover {
+        color: ${themeGet("colors.text")};
+    }
     ${device.large} {
         margin-left: 10px;
     }

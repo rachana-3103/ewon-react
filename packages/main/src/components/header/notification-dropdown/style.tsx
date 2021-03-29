@@ -15,10 +15,13 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    margin-top: 19.5px;
-    margin-right: -88px;
+    margin-top: 17.5px;
+    margin-right: -55px;
     ${device.small} {
         margin-right: -20px;
+    }
+    ${device.large} {
+        margin-top: 19.5px;
     }
     &:before {
         content: "";
@@ -29,7 +32,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         left: auto;
-        right: 20px;
+        right: 51px;
         ${device.small} {
             right: 20px;
         }
@@ -43,7 +46,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
         left: auto;
-        right: 21px;
+        right: 52px;
         ${device.small} {
             right: 21px;
         }
@@ -60,7 +63,7 @@ export const StyledDropHeader = styled.div`
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     border-bottom: 1px solid ${themeGet("colors.border")};
     margin-bottom: 5px;
 `;

@@ -15,21 +15,24 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    margin-top: 19.5px;
-    margin-right: -88px;
+    margin-top: 17.5px;
+    margin-right: -75px;
     ${device.small} {
         margin-right: -20px;
+    }
+    ${device.large} {
+        margin-top: 19.5px;
     }
     &:before {
         content: "";
         position: absolute;
         top: -10px;
         left: 25px;
-        border-bottom: 10px solid rgba(72, 94, 144, 0.16);
+        border-bottom: 10px solid ${themeGet("colors.border")};
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         left: auto;
-        right: 20px;
+        right: 72px;
         ${device.small} {
             right: 20px;
         }
@@ -43,7 +46,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
         left: auto;
-        right: 21px;
+        right: 73px;
         ${device.small} {
             right: 21px;
         }

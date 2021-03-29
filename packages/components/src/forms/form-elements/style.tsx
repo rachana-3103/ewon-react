@@ -218,7 +218,7 @@ export const StyledCheckboxLabel = styled.label`
         pointer-events: none;
         content: "";
         background-color: #fff;
-        border: #97a3b9 solid 1px;
+        border: 1px solid ${themeGet("colors.gray500")};
         border-radius: 0.25rem;
     }
     &:after {
@@ -244,8 +244,8 @@ export const StyledCheckbox = styled.input`
     &:checked {
         & ~ label:before {
             color: #fff;
-            border-color: #0168fa;
-            background-color: #0168fa;
+            border-color: ${themeGet("colors.primary")};
+            background-color: ${themeGet("colors.primary")};
         }
         & ~ label:after {
             background-image: url(${check});
@@ -253,27 +253,42 @@ export const StyledCheckbox = styled.input`
     }
     &:disabled {
         & ~ label {
-            color: #7987a1;
+            color: ${themeGet("colors.gray600")};
         }
         &:checked ~ label:before {
-            border-color: rgba(1, 104, 250, 0.2);
-            background-color: rgba(1, 104, 250, 0.5);
+            border-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary)
+                    .setAlpha(0.2)
+                    .toString()};
+            background-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary)
+                    .setAlpha(0.5)
+                    .toString()};
         }
     }
     &:active {
         & ~ label:before {
             color: #fff;
-            background-color: #afd0ff;
-            border-color: #afd0ff;
+            background-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
+            border-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
         }
     }
     &:focus {
         & ~ label:before {
-            box-shadow: 0 0 0 0.2rem rgb(1 104 250 / 25%);
+            box-shadow: 0 0 0 0.2rem
+                ${(props) =>
+                    tinycolor2(props.theme.colors.primary)
+                        .setAlpha(0.25)
+                        .toString()};
         }
         &:not(:checked) {
             & ~ label:before {
-                border-color: #7cb2fe;
+                border-color: ${(props) =>
+                    tinycolor2(props.theme.colors.primary)
+                        .lighten(25)
+                        .toString()};
             }
         }
     }
@@ -289,36 +304,60 @@ export const StyledRadio = styled.input`
     &:checked {
         & ~ label:before {
             color: #fff;
-            border-color: #0168fa;
-            background-color: #0168fa;
+            border-color: ${themeGet("colors.primary")};
+            background-color: ${themeGet("colors.primary")};
         }
         & ~ label:after {
             background-image: url(${circle});
         }
     }
+    &:disabled {
+        & ~ label {
+            color: ${themeGet("colors.gray600")};
+        }
+        &:checked ~ label:before {
+            border-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary)
+                    .setAlpha(0.2)
+                    .toString()};
+            background-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary)
+                    .setAlpha(0.5)
+                    .toString()};
+        }
+    }
     &:not(:disabled):active {
         & ~ label:before {
             color: #fff;
-            background-color: #afd0ff;
-            border-color: #afd0ff;
+            background-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
+            border-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
+        }
+    }
+    &:active {
+        & ~ label:before {
+            color: #fff;
+            background-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
+            border-color: ${(props) =>
+                tinycolor2(props.theme.colors.primary).lighten(35).toString()};
         }
     }
     &:focus {
-        &:before {
-            box-shadow: 0 0 0 0.2rem rgb(1 104 250 / 25%);
+        & ~ label:before {
+            box-shadow: 0 0 0 0.2rem
+                ${(props) =>
+                    tinycolor2(props.theme.colors.primary)
+                        .setAlpha(0.25)
+                        .toString()};
         }
-    }
-    &:disabled {
-        &:checked {
+        &:not(:checked) {
             & ~ label:before {
-                background-color: rgba(1, 104, 250, 0.5);
-                border-color: rgba(1, 104, 250, 0.2);
-            }
-        }
-        & ~ label {
-            color: #7987a1;
-            &:before {
-                background-color: #e3e7ed;
+                border-color: ${(props) =>
+                    tinycolor2(props.theme.colors.primary)
+                        .lighten(25)
+                        .toString()};
             }
         }
     }
@@ -343,7 +382,7 @@ export const StyledRadioLabel = styled.label`
         pointer-events: none;
         content: "";
         background-color: #fff;
-        border: 1px solid #97a3b9;
+        border: 1px solid ${themeGet("colors.gray500")};
     }
     &:after {
         position: absolute;
@@ -381,7 +420,7 @@ export const StyledSelect = styled(
     }) => <select {...rest} />
 )<IInput>`
     height: 38px;
-    border-color: #c0ccda;
+    border-color: ${themeGet("colors.text4")};
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

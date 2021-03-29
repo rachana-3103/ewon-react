@@ -31,11 +31,6 @@ export const ApexBarChart: FC<IProps> = ({
     );
 };
 
-ApexBarChart.defaultProps = {
-    width: "100%",
-    height: "350px",
-};
-
 export const ApexLineChart: FC<IProps> = ({
     options,
     series,
@@ -51,11 +46,6 @@ export const ApexLineChart: FC<IProps> = ({
             width={width}
         />
     );
-};
-
-ApexLineChart.defaultProps = {
-    width: "100%",
-    height: "350px",
 };
 
 export const ApexAreaChart: FC<IProps> = ({
@@ -75,11 +65,6 @@ export const ApexAreaChart: FC<IProps> = ({
     );
 };
 
-ApexAreaChart.defaultProps = {
-    width: "100%",
-    height: "350px",
-};
-
 export const ApexPieChart: FC<IProps> = ({
     options,
     series,
@@ -97,11 +82,6 @@ export const ApexPieChart: FC<IProps> = ({
     );
 };
 
-ApexPieChart.defaultProps = {
-    width: 510,
-    height: 350,
-};
-
 export const ApexDonutChart: FC<IProps> = ({
     options,
     series,
@@ -117,9 +97,4 @@ export const ApexDonutChart: FC<IProps> = ({
             width={width}
         />
     );
-};
-
-ApexDonutChart.defaultProps = {
-    width: 510,
-    height: 350,
 };

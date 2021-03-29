@@ -33,7 +33,7 @@ export const StyledTable = styled(
 )<ITableProps>`
     width: 100%;
     margin-bottom: 1rem;
-    color: #001737;
+    color: ${themeGet("colors.text")};
 
     ${space};
 

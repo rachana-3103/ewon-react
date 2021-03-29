@@ -1,6 +1,6 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, { css, themeGet } from "@doar/shared";
+import tinycolor2 from "tinycolor2";
 import { Anchor } from "../anchor";
 
 interface IProps {
@@ -21,11 +21,13 @@ export const StyledDropMenu = styled.div<IProps>`
     float: left;
     min-width: 10rem;
     font-size: 0.875rem;
-    color: #001737;
+    color: ${themeGet("colors.text")};
     text-align: left;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(131, 146, 165, 0.27);
+    border: 1px solid
+        ${(props) =>
+            tinycolor2(props.theme.colors.text3).setAlpha(0.27).toString()};
     border-radius: 0.25rem;
     box-shadow: 0 0 8px 2px rgb(28 39 60 / 4%);
     padding: 5px;
@@ -80,7 +82,7 @@ export const StyledDropItem = styled(({ active, ...rest }) => (
     padding: 6px 15px;
     clear: both;
     font-weight: 400;
-    color: #1c273c;
+    color: ${themeGet("colors.gray900")};
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;

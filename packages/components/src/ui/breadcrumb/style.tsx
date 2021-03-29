@@ -11,7 +11,7 @@ export const StyledBreadcrumb = styled(({ mr, ml, mb, mt, ...props }) => (
     margin-bottom: 1rem;
     margin-top: 0;
     list-style: none;
-    background-color: #e3e7ed;
+    background-color: ${themeGet("colors.gray200")};
     border-radius: 0.25rem;
     ${space};
 `;

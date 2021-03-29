@@ -1,4 +1,5 @@
 import React from "react";
+import { Row } from "@doar/components";
 import Layout from "../layouts";
 import WelcomeArea from "../containers/sales-monitoring/welcome-area";
 import RowOne from "../containers/sales-monitoring/row-one";
@@ -10,10 +11,12 @@ const HomePage: React.FC = () => {
     return (
         <Layout>
             <WelcomeArea />
-            <RowOne />
-            <RowTwo />
-            <RowThree />
-            <RowFour />
+            <Row gutters={10}>
+                <RowOne />
+                <RowTwo />
+                <RowThree />
+                <RowFour />
+            </Row>
         </Layout>
     );
 };

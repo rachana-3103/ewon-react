@@ -29,6 +29,8 @@ export const StyledMap = styled(({ width, height, ...props }) => (
     }
     background-color: ${(props) => props.$bg};
     svg {
+        width: 100%;
+        height: 100%;
         touch-action: none;
         stroke: ${(props) => props.$bdc};
         path {

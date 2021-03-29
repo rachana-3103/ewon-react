@@ -43,6 +43,7 @@ export const theme = {
         cyan: "#17a2b8",
         teal: "#00cccc",
         indigo: "#5b47fb",
+        vulcan: "#0f1520",
     },
     fontSize: {
         body: "0.875rem",

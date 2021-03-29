@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import styled, { device, themeGet, space } from "@doar/shared/styled";
 import { DropdownMenu, Anchor } from "@doar/components";
 
@@ -11,13 +10,16 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     border-color: rgba(72, 94, 144, 0.16);
     width: 230px;
     padding: 25px;
-    margin-top: 14.5px;
+    margin-top: 11.5px;
     box-shadow: none;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
     margin-right: -10px;
     right: 0;
     left: auto;
+    ${device.large} {
+        margin-top: 14.5px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -66,7 +68,7 @@ export const StyledDropItem = styled(({ mt, ...rest }) => <Anchor {...rest} />)`
     padding: 0;
     display: flex;
     align-items: center;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     border-radius: 0.25rem;
     transition: all 0.2s ease-in-out;
     white-space: nowrap;

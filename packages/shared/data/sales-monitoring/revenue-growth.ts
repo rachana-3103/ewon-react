@@ -62,7 +62,6 @@ export const RevenueChart = {
     options: {
         chart: {
             type: "area",
-            height: 350,
             stacked: true,
             zoom: {
                 enabled: false,
@@ -121,5 +120,18 @@ export const RevenueChart = {
         tooltip: {
             fillSeriesColor: "#ffffff",
         },
+        responsive: [
+            {
+                breakpoint: 575,
+                options: {
+                    chart: {
+                        height: 200,
+                    },
+                    xaxis: {
+                        show: false,
+                    },
+                },
+            },
+        ],
     },
 };

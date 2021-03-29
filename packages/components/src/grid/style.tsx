@@ -1,4 +1,4 @@
-import styled, { space, css } from "@doar/shared/styled";
+import styled, { space, css, device } from "@doar/shared/styled";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 
 export const StyledContainer = styled(
@@ -38,5 +38,10 @@ export const StyledRow = styled(
 export const StyledCol = styled(
     ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => <Col {...props} />
 )`
+    ${device.xlarge} {
+        &.order-xl-0 {
+            order: 0;
+        }
+    }
     ${space};
 `;

@@ -56,7 +56,7 @@ const Customers: FC = () => {
                             <StyledNavLink href="#" display={["none", "block"]}>
                                 <User size="24" />
                             </StyledNavLink>
-                            <StyledNavLink href="#" display={[null, "none"]}>
+                            <StyledNavLink href="#" display={["block", "none"]}>
                                 <MoreVertical size="24" />
                             </StyledNavLink>
                         </StyledNavIcon>
@@ -83,7 +83,7 @@ const Customers: FC = () => {
                             <StyledNavLink href="#" display={["none", "block"]}>
                                 <User size="24" />
                             </StyledNavLink>
-                            <StyledNavLink href="#" display={[null, "none"]}>
+                            <StyledNavLink href="#" display={["block", "none"]}>
                                 <MoreVertical size="24" />
                             </StyledNavLink>
                         </StyledNavIcon>
@@ -110,7 +110,7 @@ const Customers: FC = () => {
                             <StyledNavLink href="#" display={["none", "block"]}>
                                 <User size="24" />
                             </StyledNavLink>
-                            <StyledNavLink href="#" display={[null, "none"]}>
+                            <StyledNavLink href="#" display={["block", "none"]}>
                                 <MoreVertical size="24" />
                             </StyledNavLink>
                         </StyledNavIcon>
@@ -137,7 +137,7 @@ const Customers: FC = () => {
                             <StyledNavLink href="#" display={["none", "block"]}>
                                 <User size="24" />
                             </StyledNavLink>
-                            <StyledNavLink href="#" display={[null, "none"]}>
+                            <StyledNavLink href="#" display={["block", "none"]}>
                                 <MoreVertical size="24" />
                             </StyledNavLink>
                         </StyledNavIcon>
@@ -164,7 +164,7 @@ const Customers: FC = () => {
                             <StyledNavLink href="#" display={["none", "block"]}>
                                 <User size="24" />
                             </StyledNavLink>
-                            <StyledNavLink href="#" display={[null, "none"]}>
+                            <StyledNavLink href="#" display={["block", "none"]}>
                                 <MoreVertical size="24" />
                             </StyledNavLink>
                         </StyledNavIcon>

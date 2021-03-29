@@ -86,7 +86,7 @@ export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
     margin-bottom: 0;
     thead th,
     tbody td {
-        border-color: #e5e9f2;
+        border-color: ${themeGet("colors.light")};
     }
 `;
 
@@ -96,7 +96,7 @@ export const StyledTH = styled.th`
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     &:first-child {
         padding-left: 20px;
     }

@@ -35,6 +35,7 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
 ))<IProps>`
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -766,7 +767,7 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
                 height: 14px;
                 stroke-width: 2.5px;
                 margin-top: -2px;
-                margin-right: 5px;
+                margin-right: 7px;
             }
         `}
 `;

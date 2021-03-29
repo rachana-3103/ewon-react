@@ -31,7 +31,7 @@ const AccountRetention: FC = () => {
                     />
                 </StyledChart>
                 <Row>
-                    <Col col>
+                    <Col col={12} sm>
                         <StyledCardBodyTitle>
                             $1,680<small>.50</small>
                         </StyledCardBodyTitle>
@@ -43,7 +43,7 @@ const AccountRetention: FC = () => {
                             products or service.
                         </StyledCardBodyText>
                     </Col>
-                    <Col col mt={["20px", "0px"]}>
+                    <Col col={12} sm mt={["20px", "0px"]}>
                         <StyledCardBodyTitle>
                             $1,520<small>.00</small>
                         </StyledCardBodyTitle>

@@ -12,6 +12,12 @@ export const StyledCardTitle = styled.h6`
 export const StyledCardBottom = styled.div`
     display: flex;
     align-items: flex-end;
+    ${device.large} {
+        display: block;
+    }
+    ${device.xlarge} {
+        display: flex;
+    }
 `;
 
 export const StyledCardRate = styled.h3`

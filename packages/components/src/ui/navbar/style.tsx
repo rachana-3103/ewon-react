@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, { themeGet, device, css } from "@doar/shared/styled";
+import tinycolor2 from "tinycolor2";
 import { Anchor } from "../anchor";
 
 export const StyledNavbar = styled.ul`
@@ -21,18 +23,19 @@ export const StyledNavitem = styled.li<NavItemProps>`
                     padding-right: 14px;
                 }
                 &:after {
-                    display: inline-block;
-                    top: 3px;
+                    position: absolute;
+                    right: 20px;
+                    top: 5px;
                     content: "";
                     width: 4px;
                     height: 4px;
-                    border-right: 1.5px solid #8392a5;
-                    border-bottom: 1.5px solid #8392a5;
+                    border-right: 1.5px solid ${themeGet("colors.text3")};
+                    border-bottom: 1.5px solid ${themeGet("colors.text3")};
                     transform: rotate(45deg);
-                    margin-left: auto;
                     transition: all 0.2s ease-in-out;
                     ${device.large} {
                         margin-left: 6px;
+                        right: 0;
                     }
                 }
             }
@@ -40,11 +43,15 @@ export const StyledNavitem = styled.li<NavItemProps>`
     &:not(:first-of-type) {
         margin-top: 10px;
     }
-    ${device.xlarge} {
-        margin-left: 30px;
+    ${device.large} {
+        display: inline-block;
+        margin-left: 25px;
         &:first-child {
             margin-left: 0;
         }
+    }
+    ${device.xlarge} {
+        margin-left: 30px;
     }
 `;
 
@@ -59,14 +66,18 @@ export const StyledNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     padding: 0 20px;
     ${device.large} {
         padding: 0;
+        & > svg {
+            display: none;
+        }
     }
     svg {
         width: 18px;
         height: 18px;
         stroke-width: 2.2px;
-        fill: rgba(27, 46, 75, 0.1);
+        fill: ${(props) =>
+            tinycolor2(props.theme.colors.text2).setAlpha(0.1).toString()};
         margin-right: 15px;
-        color: #7987a1;
+        color: ${themeGet("colors.gray600")};
         transition: all 0.2s ease-in-out;
     }
     &:hover {
@@ -85,7 +96,7 @@ export const StyledSubmenu = styled.ul`
     min-width: 200px;
     list-style: none;
     padding: 0 15px 3px 24px;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     margin-top: 10px;
     margin-left: 28px;
     z-index: 1000;
@@ -99,7 +110,9 @@ export const StyledSubmenu = styled.ul`
         left: -25px;
         background-color: #fff;
         padding: 20px 25px;
-        border: 1px solid rgba(192, 204, 218, 0.53);
+        border: 1px solid
+            ${(props) =>
+                tinycolor2(props.theme.colors.text4).setAlpha(0.53).toString()};
         margin-top: 0;
         margin-left: 0;
         border-bottom-right-radius: 0.25rem;
@@ -111,8 +124,16 @@ export const StyledSubmenu = styled.ul`
             height: 12px;
             top: -7px;
             left: 25px;
-            border-bottom: 1.5px solid rgba(192, 204, 218, 0.53);
-            border-right: 1.5px solid rgba(192, 204, 218, 0.53);
+            border-bottom: 1.5px solid
+                ${(props) =>
+                    tinycolor2(props.theme.colors.text4)
+                        .setAlpha(0.53)
+                        .toString()};
+            border-right: 1.5px solid
+                ${(props) =>
+                    tinycolor2(props.theme.colors.text4)
+                        .setAlpha(0.53)
+                        .toString()};
             transform: rotate(-135deg);
             background: #fff;
         }
@@ -127,7 +148,7 @@ export const StyledSubNavItem = styled.li`
 `;
 
 export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     white-space: nowrap;
     font-size: 13px;
     display: flex;
@@ -140,7 +161,7 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
         width: 16px;
         height: 16px;
         margin-right: 15px;
-        fill: rgba(0, 23, 55, 0.08);
+        fill: ${themeGet("colors.text")};
         display: none;
         ${device.large} {
             display: block;
@@ -153,7 +174,7 @@ export const StyledMegaMenu = styled.div`
     min-width: 200px;
     list-style: none;
     padding: 0 15px 3px 24px;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     margin-top: 10px;
     margin-left: 28px;
     z-index: 1000;
@@ -167,7 +188,9 @@ export const StyledMegaMenu = styled.div`
         left: -25px;
         background-color: #fff;
         padding: 20px 25px;
-        border: 1px solid rgba(192, 204, 218, 0.53);
+        border: 1px solid
+            ${(props) =>
+                tinycolor2(props.theme.colors.text4).setAlpha(0.53).toString()};
         margin-top: 0;
         margin-left: 0;
         border-bottom-right-radius: 0.25rem;
@@ -179,8 +202,16 @@ export const StyledMegaMenu = styled.div`
             height: 12px;
             top: -7px;
             left: 25px;
-            border-bottom: 1.5px solid rgba(192, 204, 218, 0.53);
-            border-right: 1.5px solid rgba(192, 204, 218, 0.53);
+            border-bottom: 1.5px solid
+                ${(props) =>
+                    tinycolor2(props.theme.colors.text4)
+                        .setAlpha(0.53)
+                        .toString()};
+            border-right: 1.5px solid
+                ${(props) =>
+                    tinycolor2(props.theme.colors.text4)
+                        .setAlpha(0.53)
+                        .toString()};
             transform: rotate(-135deg);
             background: #fff;
         }

@@ -90,6 +90,9 @@ export const StyledNavbarWrap = styled.div<INavbar>`
         transform: none;
         z-index: auto;
         flex: 1;
+        visibility: visible;
+        opacity: 1;
+        background: transparent;
     }
 `;
 
@@ -116,6 +119,7 @@ export const StyledNavbarMenu = styled.nav<INavbar>`
         flex-wrap: wrap;
         align-items: center;
         flex-direction: row;
+        transform: translateX(0);
     }
 `;
 
@@ -126,12 +130,16 @@ export const StyledNavbarHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid ${themeGet("colors.border")};
+    ${device.large} {
+        display: none;
+    }
 `;
 
 export const StyledNavbarBody = styled.div`
     padding: 25px 0;
     ${device.large} {
         padding: 0;
+        width: 100%;
     }
 `;
 
@@ -145,6 +153,9 @@ export const StyledNavbarTitle = styled.h6`
     display: block;
     margin-bottom: 15px;
     padding-left: 20px;
+    ${device.large} {
+        display: none;
+    }
 `;
 
 export const StyleNavbarRight = styled.div`

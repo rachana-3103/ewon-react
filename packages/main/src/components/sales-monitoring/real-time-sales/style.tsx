@@ -1,7 +1,6 @@
 import styled, {
     color as colorStyles,
     ColorProps,
-    device,
     themeGet,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
@@ -21,13 +20,6 @@ export const StyledList = styled.ul`
     list-style: none;
     display: flex;
     margin-bottom: 0px;
-    margin-top: 20px;
-    ${device.small} {
-        margin-top: 10px;
-    }
-    ${device.medium} {
-        margin-top: 0px;
-    }
 `;
 
 export const StyledListItem = styled.li`

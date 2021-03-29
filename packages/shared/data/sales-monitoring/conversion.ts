@@ -1,4 +1,10 @@
 import { IConversion } from "../../types";
+import {
+    conversionChart1,
+    conversionChart2,
+    conversionChart3,
+    conversionChart4,
+} from "./conversion-chart";
 
 export const conversions: IConversion[] = [
     {
@@ -10,7 +16,7 @@ export const conversions: IConversion[] = [
             growth: "up",
             time: "than last week",
         },
-        chart: [5, 10, 5, 20, 8, 15, 25, 12, 5, 18, 14, 10, 20, 18],
+        chart: conversionChart1,
     },
     {
         id: 2,
@@ -21,7 +27,7 @@ export const conversions: IConversion[] = [
             growth: "down",
             time: "than last week",
         },
-        chart: [2, 4, 7, 10, 9, 15, 20, 17, 5, 16, 13, 11, 22, 19],
+        chart: conversionChart2,
     },
     {
         id: 3,
@@ -32,7 +38,7 @@ export const conversions: IConversion[] = [
             growth: "down",
             time: "than last week",
         },
-        chart: [10, 10, 10, 10, 10, 11, 12, 11, 12, 11, 9, 11, 12, 10],
+        chart: conversionChart3,
     },
     {
         id: 4,
@@ -43,6 +49,6 @@ export const conversions: IConversion[] = [
             growth: "up",
             time: "than last week",
         },
-        chart: [2, 4, 7, 10, 9, 15, 16, 17, 17, 17, 13, 20, 21, 21],
+        chart: conversionChart4,
     },
 ];

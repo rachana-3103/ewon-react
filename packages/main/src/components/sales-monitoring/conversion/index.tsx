@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Card, CardBody, SparklinesLines } from "@doar/components";
+import { Card, CardBody, ApexAreaChart } from "@doar/components";
 import { IConversion } from "@doar/shared/types";
 import {
     StyledCardTitle,
@@ -33,20 +33,13 @@ const Conversion: FC<IProps> = ({ title, rate, change, chart }) => {
                     </StyledCardText>
                 </StyledCardBottom>
                 <StyledChart>
-                    <SparklinesLines
-                        data={[...chart]}
-                        width={200}
-                        height={30}
-                        color="#9db2c6"
-                        lineStyle={{
-                            fill: "none",
-                        }}
-                        hasSpot
-                        spotSize={2}
-                        spotStyle={{
-                            fill: "#9db2c6",
-                        }}
-                    />
+                    {chart && (
+                        <ApexAreaChart
+                            options={chart?.options}
+                            series={chart?.series}
+                            height={70}
+                        />
+                    )}
                 </StyledChart>
             </CardBody>
         </Card>

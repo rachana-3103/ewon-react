@@ -1,4 +1,4 @@
-import styled, { themeGet, css } from "@doar/shared/styled";
+import styled, { themeGet, css, device } from "@doar/shared/styled";
 
 export const StyledCardTitle = styled.h6`
     font-size: 11px;
@@ -43,4 +43,14 @@ export const StyledCardChangePercent = styled.span<{ $growth: string }>`
         `}
 `;
 
-export const StyledChart = styled.div``;
+export const StyledChart = styled.div`
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    ${device.small} {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -20px;
+    }
+`;

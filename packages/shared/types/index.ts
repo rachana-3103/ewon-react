@@ -36,5 +36,11 @@ export interface IConversion {
         growth: "up" | "down";
         time: string;
     };
-    chart: number[];
+    chart?: {
+        options: {
+            [x: string]: unknown;
+        };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        series: any[];
+    };
 }

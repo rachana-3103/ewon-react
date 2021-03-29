@@ -1,6 +1,9 @@
 export const ApexPieData = {
     options: {
         labels: ["Series A", "Series B", "Series C", "Series D", "Series E"],
+        dataLabels: {
+            enabled: false,
+        },
         responsive: [
             {
                 breakpoint: 480,

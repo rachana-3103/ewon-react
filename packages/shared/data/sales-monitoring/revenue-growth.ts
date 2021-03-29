@@ -3,7 +3,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-param-reassign */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
-import { df1, df2, df3 } from "../chart";
 
 function generateDayWiseTimeSeries(
     baseval: number,

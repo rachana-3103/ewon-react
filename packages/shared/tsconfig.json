@@ -8,6 +8,7 @@
     "outDir": "dist",
     "rootDir": ".",
     "noEmit": false,
+    "downlevelIteration": true
   },
   "include": [ "." ],
   "exclude": ["dist", "*.js"]

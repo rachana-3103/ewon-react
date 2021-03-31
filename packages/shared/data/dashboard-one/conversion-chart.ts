@@ -49,7 +49,6 @@ export const conversionChart1 = {
     options: {
         chart: {
             id: "sparkline1",
-            group: "sparklines",
             sparkline: {
                 enabled: true,
             },
@@ -87,7 +86,6 @@ export const conversionChart2 = {
     options: {
         chart: {
             id: "sparkline2",
-            group: "sparklines",
             sparkline: {
                 enabled: true,
             },
@@ -125,7 +123,6 @@ export const conversionChart3 = {
     options: {
         chart: {
             id: "sparkline3",
-            group: "sparklines",
             sparkline: {
                 enabled: true,
             },
@@ -163,7 +160,6 @@ export const conversionChart4 = {
     options: {
         chart: {
             id: "sparkline4",
-            group: "sparklines",
             sparkline: {
                 enabled: true,
             },

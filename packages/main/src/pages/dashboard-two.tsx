@@ -8,7 +8,7 @@ const DashboardTwo: React.FC = () => {
     return (
         <Layout>
             <WelcomeArea />
-            <Row>
+            <Row gutters={10}>
                 <RowOne />
             </Row>
         </Layout>

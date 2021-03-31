@@ -2,7 +2,7 @@ import { FC } from "react";
 import classNames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledContainer, StyledRow, StyledCol } from "./style";
-import { ColProps } from "./types";
+import { ColProps, RowProps } from "./types";
 
 interface IProps extends SpaceProps {
     className?: string;
@@ -12,7 +12,7 @@ export const Container: FC<IProps> = ({ className, ...props }) => {
     return <StyledContainer className={className} {...props} />;
 };
 
-interface IRowProps extends IProps {
+interface IRowProps extends IProps, RowProps {
     gutters?: number;
     noGutter?: boolean;
 }

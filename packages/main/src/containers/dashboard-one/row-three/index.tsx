@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Col } from "@doar/components";
-import SalesRevenue from "../../../components/sales-monitoring/sales-revenue";
-import RecentEarnings from "../../../components/sales-monitoring/recent-earnings";
-import CSVDownload from "../../../components/sales-monitoring/csv-download";
+import SalesRevenue from "../../../components/dashboard-one/sales-revenue";
+import RecentEarnings from "../../../components/dashboard-one/recent-earnings";
+import CSVDownload from "../../../components/dashboard-one/csv-download";
 
 const RowThree: FC = () => {
     return (

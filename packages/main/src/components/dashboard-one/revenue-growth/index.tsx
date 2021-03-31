@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Card, CardBody, Row, Col, ApexAreaChart } from "@doar/components";
-import { RevenueChart } from "@doar/shared/data/sales-monitoring";
+import { RevenueChart } from "@doar/shared/data/dashboard-one";
 import {
     StyledHeader,
     StyledTitle,

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Card, Row, Col, ApexBarChart } from "@doar/components";
-import { RetentionChart } from "@doar/shared/data/sales-monitoring";
+import { RetentionChart } from "@doar/shared/data/dashboard-one";
 import {
     StyledCardHeader,
     StyledCardBody,

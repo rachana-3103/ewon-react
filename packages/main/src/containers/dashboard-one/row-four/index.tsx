@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Col } from "@doar/components";
-import Transaction from "../../../components/sales-monitoring/transaction";
-import Customers from "../../../components/sales-monitoring/customers";
-import RealTimeSales from "../../../components/sales-monitoring/real-time-sales";
+import Transaction from "../../../components/dashboard-one/transaction";
+import Customers from "../../../components/dashboard-one/customers";
+import RealTimeSales from "../../../components/dashboard-one/real-time-sales";
 
 const RowFour: FC = () => {
     return (

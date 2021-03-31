@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Col } from "@doar/components";
-import { conversions } from "@doar/shared/data/sales-monitoring";
-import Conversion from "../../../components/sales-monitoring/conversion";
+import { conversions } from "@doar/shared/data/dashboard-one";
+import Conversion from "../../../components/dashboard-one/conversion";
 
 const RowOne: FC = () => {
     return (

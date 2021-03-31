@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Card, CardBody, Row, Col, HorizontalBarChart } from "@doar/components";
-import { RealTimeSalesData } from "@doar/shared/data/sales-monitoring";
+import { RealTimeSalesData } from "@doar/shared/data/dashboard-one";
 import {
     StyledBodyTitle,
     StyledBullet,

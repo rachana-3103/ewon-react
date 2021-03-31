@@ -53,6 +53,7 @@ import {
     Radio,
     Select,
 } from "./forms/form-elements";
+import { Progress } from "./ui/progress/progress";
 
 export {
     Button,
@@ -109,4 +110,5 @@ export {
     FileUpload,
     Radio,
     Select,
+    Progress,
 };

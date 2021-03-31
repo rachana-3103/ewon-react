@@ -39,6 +39,10 @@ export interface IProps {
      * Animate's the stripes from right to left
      */
     animated?: boolean;
+    /**
+     * Pass opacity of progress bar
+     */
+    opacity?: number;
 }
 
 export const Progress: FC<IProps> = ({
@@ -51,9 +55,14 @@ export const Progress: FC<IProps> = ({
     height,
     striped,
     animated,
+    opacity,
 }) => {
     return (
-        <StyledProgress className={classnames(className)} $height={height}>
+        <StyledProgress
+            className={classnames(className)}
+            $height={height}
+            $opacity={opacity}
+        >
             <StyledProgressBar
                 role="progressbar"
                 aria-valuenow={now}

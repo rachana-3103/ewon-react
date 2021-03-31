@@ -37,7 +37,7 @@ export const StyledButton = styled(({ ...props }) => <Button {...props} />)`
 `;
 
 export const StyledChart = styled.div`
-    margin-left: -5px;
+    margin-left: -17px;
     height: 150px;
     ${device.small} {
         height: 200px;
@@ -48,4 +48,46 @@ export const StyledChart = styled.div`
     ${device.large} {
         height: 300px;
     }
+`;
+
+export const StyledProgress = styled.div`
+    &:not(:first-of-type) {
+        margin-top: 30px;
+    }
+`;
+
+export const StyledProgressDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+`;
+
+export const StyledProgressTitle = styled.h6`
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: ${themeGet("colors.text2")};
+    margin-bottom: 0px;
+`;
+
+export const StyledProgressGoalText = styled.span`
+    color: ${themeGet("colors.text4")};
+    font-size: 10px;
+`;
+
+export const StyledProgressNumb = styled.h5`
+    line-height: 1.2;
+    font-family: ${themeGet("fonts.rubik")};
+    font-weight: 400;
+    margin-bottom: 0px;
+`;
+
+export const StyledProgressGoal = styled.h6`
+    line-height: 1.2;
+    font-family: ${themeGet("fonts.rubik")};
+    font-weight: 400;
+    color: ${themeGet("colors.text3")};
+    margin-bottom: 0px;
 `;

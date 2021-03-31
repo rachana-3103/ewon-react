@@ -10,6 +10,7 @@ import styled, {
 
 interface IProgress {
     $height?: string;
+    $opacity?: number;
 }
 
 export const StyledProgress = styled.div<IProgress>`
@@ -19,6 +20,7 @@ export const StyledProgress = styled.div<IProgress>`
     font-size: 0.65625rem;
     background-color: #e3e7ed;
     border-radius: ${themeGet("radii.rounded")};
+    opacity: ${(props) => props.$opacity};
 `;
 
 interface IProgressBar extends ColorProps {

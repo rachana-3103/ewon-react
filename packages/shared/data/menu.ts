@@ -34,7 +34,7 @@ const menus = [
             {
                 id: 12,
                 label: "Website Analytics",
-                url: "/",
+                url: "/dashboard-two",
                 Icon: BarChart2,
             },
             {

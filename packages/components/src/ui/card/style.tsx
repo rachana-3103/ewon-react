@@ -10,6 +10,9 @@ import styled, {
     position as positionProps,
     PositionProps as IPositionProps,
     SpaceProps,
+    TypographyProps,
+    border as borderStyles,
+    BorderProps,
 } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
@@ -121,12 +124,25 @@ export const StyledCardImage = styled(
     ${space};
 `;
 
-interface IBodyProps extends IPositionProps, SpaceProps {}
+interface IBodyProps extends IPositionProps, SpaceProps, TypographyProps {}
 
 export const StyledCardBody = styled(
-    ({ ml, mr, mt, mb, pl, pr, pt, pb, p, py, px, position, ...props }) => (
-        <div {...props} />
-    )
+    ({
+        textAlign,
+        ml,
+        mr,
+        mt,
+        mb,
+        pl,
+        pr,
+        pt,
+        pb,
+        p,
+        py,
+        px,
+        position,
+        ...props
+    }) => <div {...props} />
 )<IBodyProps>`
     flex: 1 1 auto;
     min-height: 1px;
@@ -136,6 +152,7 @@ export const StyledCardBody = styled(
     }
     ${space};
     ${positionProps};
+    ${typography};
 `;
 
 export const StyledCardHeading = styled(
@@ -287,12 +304,27 @@ export const StyledCardHeader = styled(
     ${colorProps};
 `;
 
-type IFooterProps = SpaceProps;
+interface IFooterProps extends BorderProps, SpaceProps {}
 
 export const StyledCardFooter = styled(
-    ({ m, mx, my, ml, mr, mt, mb, p, px, py, pl, pr, pt, pb, ...props }) => (
-        <footer {...props} />
-    )
+    ({
+        border,
+        m,
+        mx,
+        my,
+        ml,
+        mr,
+        mt,
+        mb,
+        p,
+        px,
+        py,
+        pl,
+        pr,
+        pt,
+        pb,
+        ...props
+    }) => <footer {...props} />
 )<IFooterProps>`
     border-top: 1px solid ${themeGet("colors.border")};
     background-color: transparent;
@@ -301,6 +333,7 @@ export const StyledCardFooter = styled(
         border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
     }
     ${space};
+    ${borderStyles};
 `;
 
 export const StyledCardImgOverlay = styled(

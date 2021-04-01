@@ -1,6 +1,12 @@
 import { FC } from "react";
 import classnames from "classnames";
-import { SpaceProps, PositionProps, LayoutProps } from "@doar/shared/styled";
+import {
+    SpaceProps,
+    PositionProps,
+    LayoutProps,
+    TypographyProps,
+    BorderProps,
+} from "@doar/shared/styled";
 import {
     StyledCard,
     StyledCardImage,
@@ -90,7 +96,11 @@ export const CardImage: FC<ICardImageProps> = ({
  * Card Body Component
  */
 
-interface ICardBodyProps extends ICardCommonProps, SpaceProps, PositionProps {}
+interface ICardBodyProps
+    extends ICardCommonProps,
+        SpaceProps,
+        PositionProps,
+        TypographyProps {}
 
 export const CardBody: FC<ICardBodyProps> = ({
     children,
@@ -220,7 +230,7 @@ export const CardHeader: FC<ICardCommonProps> = ({
  * Card Footer Component
  */
 
-interface ICardFooterProps extends ICardCommonProps, SpaceProps {}
+interface ICardFooterProps extends ICardCommonProps, SpaceProps, BorderProps {}
 
 export const CardFooter: FC<ICardFooterProps> = ({
     children,

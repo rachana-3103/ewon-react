@@ -220,7 +220,9 @@ export const CardHeader: FC<ICardCommonProps> = ({
  * Card Footer Component
  */
 
-export const CardFooter: FC<ICardCommonProps> = ({
+interface ICardFooterProps extends ICardCommonProps, SpaceProps {}
+
+export const CardFooter: FC<ICardFooterProps> = ({
     children,
     className,
     ...restProps

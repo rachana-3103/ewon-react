@@ -287,9 +287,13 @@ export const StyledCardHeader = styled(
     ${colorProps};
 `;
 
+type IFooterProps = SpaceProps;
+
 export const StyledCardFooter = styled(
-    ({ ml, mr, mt, mb, pl, pr, pt, pb, ...props }) => <footer {...props} />
-)`
+    ({ m, mx, my, ml, mr, mt, mb, p, px, py, pl, pr, pt, pb, ...props }) => (
+        <footer {...props} />
+    )
+)<IFooterProps>`
     border-top: 1px solid ${themeGet("colors.border")};
     background-color: transparent;
     padding: 0.75rem 1.25rem;
@@ -300,7 +304,9 @@ export const StyledCardFooter = styled(
 `;
 
 export const StyledCardImgOverlay = styled(
-    ({ ml, mr, mt, mb, pl, pr, pt, pb, ...props }) => <div {...props} />
+    ({ m, mx, my, ml, mr, mt, mb, p, px, py, pl, pr, pt, pb, ...props }) => (
+        <div {...props} />
+    )
 )`
     position: absolute;
     top: 0;

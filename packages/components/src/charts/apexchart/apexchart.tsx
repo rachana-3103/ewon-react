@@ -6,10 +6,12 @@ interface IProps {
     options: {
         [x: string]: unknown;
     };
-    series: Array<{
-        name?: string;
-        data: any[];
-    }>;
+    series:
+        | Array<{
+              name?: string;
+              data: any[];
+          }>
+        | number[];
     width?: string | number;
     height?: string | number;
 }

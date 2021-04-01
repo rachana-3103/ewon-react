@@ -10,7 +10,7 @@ const RowTwo: FC = () => {
             <Col md={6} lg={5} mt="10px">
                 <Acquisition />
             </Col>
-            <Col sm={7} md={8} lg={4} xl mt="10px">
+            <Col sm={7} md={8} lg={4} mt="10px">
                 <DeviceSessions />
             </Col>
             <Col sm={5} md={4} lg={3} mt="10px">

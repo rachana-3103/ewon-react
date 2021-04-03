@@ -1,6 +1,12 @@
 import { FC } from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@doar/components";
-import { StyledTitle, StyledNumber, StyledSubtitle, StyledDesc } from "./style";
+import {
+    StyledTitle,
+    StyledNumber,
+    StyledSubtitle,
+    StyledDesc,
+    StyledButton,
+} from "./style";
 
 const TrafficSource: FC = () => {
     return (
@@ -17,7 +23,9 @@ const TrafficSource: FC = () => {
                 </StyledDesc>
             </CardBody>
             <CardFooter borderTopWidth={0} pt="0px">
-                ddd
+                <StyledButton size="sm" variant="outlined" fullwidth>
+                    Learn More
+                </StyledButton>
             </CardFooter>
         </Card>
     );

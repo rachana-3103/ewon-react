@@ -309,6 +309,7 @@ interface IFooterProps extends BorderProps, SpaceProps {}
 export const StyledCardFooter = styled(
     ({
         border,
+        borderTopWidth,
         m,
         mx,
         my,

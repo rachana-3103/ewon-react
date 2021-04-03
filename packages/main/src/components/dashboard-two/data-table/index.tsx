@@ -8,7 +8,7 @@ const DataTable: FC = () => {
             <Table bordered>
                 <thead>
                     <StyledTheadTR>
-                        <th>&nbsp;</th>
+                        <th> </th>
                         <th colSpan={3}>Acquisition</th>
                         <th colSpan={3}>Behavior</th>
                         <th colSpan={3}>Conversions</th>

@@ -38,6 +38,8 @@ export const StyledButton = styled(({ ...props }) => <Button {...props} />)`
 
 export const StyledChart = styled.div`
     margin-left: -17px;
+    margin-top: -24px;
+    margin-bottom: -17px;
     height: 180px;
     ${device.small} {
         height: 200px;
@@ -47,12 +49,6 @@ export const StyledChart = styled.div`
     }
     ${device.large} {
         height: 300px;
-    }
-`;
-
-export const StyledProgress = styled.div`
-    &:not(:first-of-type) {
-        margin-top: 30px;
     }
 `;
 

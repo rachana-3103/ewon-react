@@ -24,7 +24,7 @@ const DeviceSessions: FC = () => {
                 <StyledTitle>Device Sessions</StyledTitle>
             </CardHeader>
             <CardBody>
-                <Row>
+                <Row gutters={10}>
                     <Col col={4} lg>
                         <StyledDiv>
                             <StyledBullet bg="primary" />

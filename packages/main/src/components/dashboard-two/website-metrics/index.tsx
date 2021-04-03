@@ -52,37 +52,45 @@ const WebsiteMetrics: FC = () => {
                             />
                         </StyledChart>
                     </Col>
-                    <Col lg={5} xl={4} mt={["20px", null, null, "0px"]}>
-                        <>
-                            <MetricsProgress
-                                title="New Users"
-                                goalText="65% goal reached"
-                                number="13,596"
-                                goal="20,000"
-                                progress={{ bg: "teal", now: 65 }}
-                            />
-                            <MetricsProgress
-                                title="Page Views"
-                                goalText="45% goal reached"
-                                number="83,123"
-                                goal="250,000"
-                                progress={{ bg: "orange", now: 45 }}
-                            />
-                            <MetricsProgress
-                                title="Page Sessions"
-                                goalText="20% goal reached"
-                                number="16,869"
-                                goal="85,000"
-                                progress={{ bg: "pink", now: 20 }}
-                            />
-                            <MetricsProgress
-                                title="Bounce Rate"
-                                goalText="85% goal reached"
-                                number="28.50%"
-                                goal="30.50%"
-                                progress={{ bg: "primary", now: 85 }}
-                            />
-                        </>
+                    <Col lg={5} xl={4}>
+                        <Row>
+                            <Col sm={6} lg={12} mt="30px">
+                                <MetricsProgress
+                                    title="New Users"
+                                    goalText="65% goal reached"
+                                    number="13,596"
+                                    goal="20,000"
+                                    progress={{ bg: "teal", now: 65 }}
+                                />
+                            </Col>
+                            <Col sm={6} lg={12} mt="30px">
+                                <MetricsProgress
+                                    title="Page Views"
+                                    goalText="45% goal reached"
+                                    number="83,123"
+                                    goal="250,000"
+                                    progress={{ bg: "orange", now: 45 }}
+                                />
+                            </Col>
+                            <Col sm={6} lg={12} mt="30px">
+                                <MetricsProgress
+                                    title="Page Sessions"
+                                    goalText="20% goal reached"
+                                    number="16,869"
+                                    goal="85,000"
+                                    progress={{ bg: "pink", now: 20 }}
+                                />
+                            </Col>
+                            <Col sm={6} lg={12} mt="30px">
+                                <MetricsProgress
+                                    title="Bounce Rate"
+                                    goalText="85% goal reached"
+                                    number="28.50%"
+                                    goal="30.50%"
+                                    progress={{ bg: "primary", now: 85 }}
+                                />
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </CardBody>

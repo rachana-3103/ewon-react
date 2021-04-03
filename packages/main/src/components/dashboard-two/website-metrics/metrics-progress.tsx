@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Progress } from "@doar/components";
 import {
-    StyledProgress,
     StyledProgressDiv,
     StyledProgressGoal,
     StyledProgressGoalText,
@@ -28,7 +27,7 @@ const MetricsProgress: FC<IProps> = ({
     progress: { bg, now },
 }) => {
     return (
-        <StyledProgress>
+        <>
             <StyledProgressDiv>
                 <StyledProgressTitle>{title}</StyledProgressTitle>
                 <StyledProgressGoalText>{goalText}</StyledProgressGoalText>
@@ -40,7 +39,7 @@ const MetricsProgress: FC<IProps> = ({
                 </StyledProgressGoal>
             </StyledProgressDiv>
             <Progress bg={bg} now={now} height="4px" opacity={0.5} />
-        </StyledProgress>
+        </>
     );
 };
 

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import classNames from "classnames";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledTableResponsive, StyledTable } from "./style";
 
 type TColor =
@@ -13,8 +13,8 @@ type TColor =
     | "light"
     | "dark";
 
-interface IProps extends SpaceProps {
-    className: string;
+interface IProps extends SpaceProps, BorderProps {
+    className?: string;
     theadColor?: TColor;
     striped?: boolean;
     bordered?: boolean;

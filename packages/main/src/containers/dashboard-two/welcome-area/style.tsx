@@ -19,23 +19,22 @@ export const StyledWelcomeArea = styled.div`
 export const StyledWelcomeLeft = styled.div``;
 
 export const StyledWelcomeRight = styled.div`
-    margin-top: 10px;
-    ${device.medium} {
-        margin: 0;
-    }
+    display: flex;
+    flex-wrap: wrap;
 `;
 
 export const StyledButton = styled((props) => <Button {...props} />)`
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.773;
-    padding-left: 5px;
-    padding-right: 5px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    max-width: 48%;
+    flex-basis: 48%;
+    padding-left: 15px;
+    padding-right: 15px;
     ${device.small} {
-        font-size: 11px;
-        padding-left: 15px;
-        padding-right: 15px;
+        max-width: auto;
+        flex-basis: auto;
     }
 `;

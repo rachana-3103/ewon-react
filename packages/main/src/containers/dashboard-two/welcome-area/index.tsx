@@ -15,19 +15,31 @@ const WelcomeArea: React.FC = () => {
                 <PageHeader />
             </StyledWelcomeLeft>
             <StyledWelcomeRight>
-                <StyledButton size="sm" color="white" hasIcon>
+                <StyledButton size="sm" color="white" hasIcon mt="10px">
                     <Save />
                     Save
                 </StyledButton>
-                <StyledButton size="sm" color="white" hasIcon ml="8px">
+                <StyledButton
+                    size="sm"
+                    color="white"
+                    hasIcon
+                    mt="10px"
+                    ml="8px"
+                >
                     <Upload />
                     Export
                 </StyledButton>
-                <StyledButton size="sm" color="white" ml="8px" hasIcon>
+                <StyledButton
+                    size="sm"
+                    color="white"
+                    hasIcon
+                    mt="10px"
+                    ml={[null, "8px"]}
+                >
                     <Share2 />
                     Share
                 </StyledButton>
-                <StyledButton size="sm" ml="8px" hasIcon>
+                <StyledButton size="sm" hasIcon mt="10px" ml="8px">
                     <Sliders />
                     Settings
                 </StyledButton>

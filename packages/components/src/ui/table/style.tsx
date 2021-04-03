@@ -1,4 +1,11 @@
-import styled, { space, SpaceProps, css, themeGet } from "@doar/shared/styled";
+import styled, {
+    space,
+    SpaceProps,
+    css,
+    themeGet,
+    border as borderStyles,
+    BorderProps,
+} from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 
 type TColor =
@@ -18,7 +25,7 @@ export const StyledTableResponsive = styled.div`
     -webkit-overflow-scrolling: touch;
 `;
 
-interface ITableProps extends SpaceProps {
+interface ITableProps extends SpaceProps, BorderProps {
     $theadColor?: TColor;
     $striped?: boolean;
     $bordered?: boolean;
@@ -29,13 +36,16 @@ interface ITableProps extends SpaceProps {
 }
 
 export const StyledTable = styled(
-    ({ m, ml, mr, mt, mb, p, pl, pr, pt, pb, ...props }) => <table {...props} />
+    ({ border, m, ml, mr, mt, mb, p, pl, pr, pt, pb, ...props }) => (
+        <table {...props} />
+    )
 )<ITableProps>`
     width: 100%;
     margin-bottom: 1rem;
     color: ${themeGet("colors.text")};
 
     ${space};
+    ${borderStyles};
 
     th,
     td {

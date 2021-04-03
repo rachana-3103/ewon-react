@@ -81,6 +81,9 @@ export const StyledChart = styled.div`
         margin-left: -20px;
         margin-right: -8px;
     }
+    ${device.medium} {
+        height: 200px;
+    }
     ${device.large} {
         height: 160px;
     }

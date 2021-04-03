@@ -1,5 +1,6 @@
 import { FC } from "react";
 import classNames from "classnames";
+import { SpaceProps } from "@doar/shared/styled";
 import { StyledTableResponsive, StyledTable } from "./style";
 
 type TColor =
@@ -12,7 +13,7 @@ type TColor =
     | "light"
     | "dark";
 
-interface IProps {
+interface IProps extends SpaceProps {
     className: string;
     theadColor?: TColor;
     striped?: boolean;
@@ -33,6 +34,7 @@ export const Table: FC<IProps> = ({
     compact,
     color,
     borderless,
+    ...restProps
 }) => {
     return (
         <StyledTableResponsive>
@@ -45,6 +47,7 @@ export const Table: FC<IProps> = ({
                 $compact={compact}
                 $color={color}
                 $borderless={borderless}
+                {...restProps}
             >
                 {children}
             </StyledTable>

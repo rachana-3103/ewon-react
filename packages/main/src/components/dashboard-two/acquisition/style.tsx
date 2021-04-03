@@ -73,15 +73,15 @@ export const StyledMediaDesc = styled.p`
 `;
 
 export const StyledChart = styled.div`
-    height: 126px;
+    height: 150px;
     width: 100%;
+    margin-bottom: -20px;
+    margin-top: -44px;
+    & > div {
+        margin-left: -20px;
+        margin-right: -8px;
+    }
     ${device.large} {
         height: 160px;
-        margin-bottom: -20px;
-        margin-top: -44px;
-        & > div {
-            margin-left: -20px;
-            margin-right: -8px;
-        }
     }
 `;

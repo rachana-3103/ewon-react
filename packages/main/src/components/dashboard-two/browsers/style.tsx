@@ -6,13 +6,16 @@ import styled, {
     TypographyProps,
     color as colorStyles,
     ColorProps,
+    device,
 } from "@doar/shared/styled";
 import { CardHeader, Table } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    ${device.small} {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 `;
 
 export const StyledTitle = styled.h6`

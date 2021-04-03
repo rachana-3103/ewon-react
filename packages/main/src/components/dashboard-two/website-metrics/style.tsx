@@ -38,7 +38,7 @@ export const StyledButton = styled(({ ...props }) => <Button {...props} />)`
 
 export const StyledChart = styled.div`
     margin-left: -17px;
-    height: 150px;
+    height: 180px;
     ${device.small} {
         height: 200px;
     }

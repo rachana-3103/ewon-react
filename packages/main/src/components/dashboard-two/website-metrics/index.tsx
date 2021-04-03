@@ -52,7 +52,7 @@ const WebsiteMetrics: FC = () => {
                             />
                         </StyledChart>
                     </Col>
-                    <Col lg={5} xl={4}>
+                    <Col lg={5} xl={4} mt={["20px", null, null, "0px"]}>
                         <>
                             <MetricsProgress
                                 title="New Users"

@@ -50,6 +50,16 @@ const data = {
             opacity: 1,
         },
         colors: ["#66a4fb", "#65e0e0"],
+        responsive: [
+            {
+                breakpoint: 575,
+                options: {
+                    stroke: {
+                        width: 3,
+                    },
+                },
+            },
+        ],
     },
     series: [
         {

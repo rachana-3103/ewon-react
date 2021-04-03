@@ -10,7 +10,7 @@ export const StyledTitle = styled.h6`
 `;
 
 export const StyledChart = styled.div`
-    height: 150px;
+    height: 180px;
     margin-bottom: -33px;
     ${device.large} {
         height: 205px;

@@ -1,15 +1,9 @@
 import { FC } from "react";
-import {
-    Card,
-    CardBody,
-    ButtonGroup,
-    Row,
-    Col,
-    ApexBarChart,
-} from "@doar/components";
+import { Card, ButtonGroup, Row, Col, ApexBarChart } from "@doar/components";
 import { webMetricsChart } from "@doar/shared/data/dashboard-two";
 import {
     StyledHeader,
+    StyledBody,
     StyledTitle,
     StyledDesc,
     StyledButton,
@@ -40,7 +34,7 @@ const WebsiteMetrics: FC = () => {
                     </StyledButton>
                 </ButtonGroup>
             </StyledHeader>
-            <CardBody p={[null, null, "25px"]}>
+            <StyledBody>
                 <Row smAlignItems="end">
                     <Col lg={7} xl={8}>
                         <StyledChart>
@@ -54,7 +48,11 @@ const WebsiteMetrics: FC = () => {
                     </Col>
                     <Col lg={5} xl={4}>
                         <Row>
-                            <Col sm={6} lg={12} mt="30px">
+                            <Col
+                                sm={6}
+                                lg={12}
+                                mt={["30px", null, null, "0px"]}
+                            >
                                 <MetricsProgress
                                     title="New Users"
                                     goalText="65% goal reached"
@@ -93,7 +91,7 @@ const WebsiteMetrics: FC = () => {
                         </Row>
                     </Col>
                 </Row>
-            </CardBody>
+            </StyledBody>
         </Card>
     );
 };

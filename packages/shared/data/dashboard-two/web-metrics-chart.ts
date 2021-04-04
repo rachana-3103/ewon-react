@@ -52,6 +52,14 @@ const data = {
         colors: ["#66a4fb", "#65e0e0"],
         responsive: [
             {
+                breakpoint: 1199,
+                options: {
+                    stroke: {
+                        width: 3,
+                    },
+                },
+            },
+            {
                 breakpoint: 575,
                 options: {
                     stroke: {

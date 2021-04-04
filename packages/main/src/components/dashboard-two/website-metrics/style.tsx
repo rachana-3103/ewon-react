@@ -1,5 +1,5 @@
 import styled, { device, themeGet } from "@doar/shared/styled";
-import { CardHeader, Button } from "@doar/components";
+import { CardHeader, CardBody, Button } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -15,6 +15,21 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     ${device.large} {
         padding-left: 25px;
         padding-top: 25px;
+    }
+`;
+
+export const StyledBody = styled(({ ...props }) => <CardBody {...props} />)`
+    ${device.large} {
+        padding-left: 25px;
+        padding-top: 0px;
+        padding-bottom: 25px;
+        padding-right: 25px;
+    }
+    @media screen and (min-width: 1002px) {
+        padding-top: 18px;
+    }
+    ${device.xlarge} {
+        padding-top: 32px;
     }
 `;
 
@@ -37,10 +52,12 @@ export const StyledButton = styled(({ ...props }) => <Button {...props} />)`
 `;
 
 export const StyledChart = styled.div`
-    margin-left: -17px;
     margin-top: -24px;
-    margin-bottom: -17px;
+    margin-bottom: -14px;
     height: 180px;
+    & > div {
+        margin-left: -17px;
+    }
     ${device.small} {
         height: 200px;
     }

@@ -28,10 +28,10 @@ const Transaction: FC = () => {
                 <StyledTitle>Transaction History</StyledTitle>
                 <StyledHeaderRight>
                     <StyledIcon href="#" aria-label="refesh">
-                        <i className="icon ion-md-refresh" />
+                        <i className="fa fa-redo" />
                     </StyledIcon>
                     <StyledIcon href="#" ml="10px" aria-label="more options">
-                        <i className="icon ion-md-more" />
+                        <i className="fa fa-ellipsis-v" />
                     </StyledIcon>
                 </StyledHeaderRight>
             </StyledHeader>
@@ -39,7 +39,7 @@ const Transaction: FC = () => {
                 <ListGroupItem display="flex" px={[null, "20px"]}>
                     <Avatar display={["none", "block"]}>
                         <AvatarInitial bg="teal">
-                            <i className="icon ion-md-checkmark" />
+                            <i className="fa fa-check" />
                         </AvatarInitial>
                     </Avatar>
                     <StyledListMiddle>
@@ -56,7 +56,7 @@ const Transaction: FC = () => {
                 <ListGroupItem display="flex" px={[null, "20px"]}>
                     <Avatar display={["none", "block"]}>
                         <AvatarInitial bg="indigo" opacity="0.5">
-                            <i className="icon ion-md-return-left" />
+                            <i className="fa fa-exchange-alt" />
                         </AvatarInitial>
                     </Avatar>
                     <StyledListMiddle>
@@ -75,7 +75,7 @@ const Transaction: FC = () => {
                 <ListGroupItem display="flex" px={[null, "20px"]}>
                     <Avatar display={["none", "block"]}>
                         <AvatarInitial bg="orange" opacity="0.5">
-                            <i className="icon ion-md-bus" />
+                            <i className="fa fa-bus-alt" />
                         </AvatarInitial>
                     </Avatar>
                     <StyledListMiddle>
@@ -94,7 +94,7 @@ const Transaction: FC = () => {
                 <ListGroupItem display="flex" px={[null, "20px"]}>
                     <Avatar display={["none", "block"]}>
                         <AvatarInitial bg="teal">
-                            <i className="icon ion-md-checkmark" />
+                            <i className="fa fa-check" />
                         </AvatarInitial>
                     </Avatar>
                     <StyledListMiddle>
@@ -111,7 +111,7 @@ const Transaction: FC = () => {
                 <ListGroupItem display="flex" px={[null, "20px"]}>
                     <Avatar display={["none", "block"]}>
                         <AvatarInitial bg="orange" opacity="0.5">
-                            <i className="icon ion-md-close" />
+                            <i className="fa fa-times" />
                         </AvatarInitial>
                     </Avatar>
                     <StyledListMiddle>

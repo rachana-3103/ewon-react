@@ -17,15 +17,14 @@ const Browsers: FC = () => {
             <StyledHeader>
                 <StyledTitle>Browser Used By Users</StyledTitle>
                 <StyledRange>
-                    Mar 01 - Mar 20, 2019{" "}
-                    <i className="icon ion-ios-arrow-down" />
+                    Mar 01 - Mar 20, 2019 <i className="fa fa-arrow-down" />
                 </StyledRange>
             </StyledHeader>
             <CardBody py={["15px", "15px"]} px={["10px", "10px"]}>
                 <StyledTable borderless compact mb="0px">
                     <thead>
                         <StyledHeadTR>
-                            <StyledTH width="5%">&npsp;</StyledTH>
+                            <StyledTH width="5%"> </StyledTH>
                             <StyledTH>Browser</StyledTH>
                             <StyledTH textAlign="right">Sessions</StyledTH>
                             <StyledTH textAlign="right">Bounce Rate</StyledTH>

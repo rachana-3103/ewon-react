@@ -23,10 +23,10 @@ const Conversion: FC<IProps> = ({ title, rate, change, chart }) => {
                         <StyledCardChangePercent $growth={change.growth}>
                             {change?.percentage}{" "}
                             {change?.growth === "up" && (
-                                <i className="icon ion-md-arrow-up" />
+                                <i className="fa fa-arrow-up" />
                             )}
                             {change?.growth === "down" && (
-                                <i className="icon ion-md-arrow-down" />
+                                <i className="fa fa-arrow-down" />
                             )}{" "}
                         </StyledCardChangePercent>
                         {change?.time && <>{change?.time}</>}

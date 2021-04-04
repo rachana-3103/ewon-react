@@ -21,7 +21,7 @@ const SalesRevenue: FC = () => {
                 <StyledHeaderRight>
                     <StyledHeaderRightText>Country</StyledHeaderRightText>
                     <StyledHeaderRightIcon>
-                        USA <i className="icon ion-ios-arrow-down" />
+                        USA <i className="fa fa-arrow-down" />
                     </StyledHeaderRightIcon>
                 </StyledHeaderRight>
             </StyledHeader>

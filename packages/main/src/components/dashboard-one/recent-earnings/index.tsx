@@ -95,7 +95,7 @@ const RecentEarnings: FC = () => {
                         <StyledTD fontWeight="500">
                             $28,670.90{" "}
                             <StyledTDRate color="success">
-                                <i className="icon ion-md-arrow-up" /> 4.5%
+                                <i className="fa fa-arrow-up" /> 4.5%
                             </StyledTDRate>
                         </StyledTD>
                     </tr>
@@ -107,7 +107,7 @@ const RecentEarnings: FC = () => {
                         <StyledTD fontWeight="500">
                             $26,930.40{" "}
                             <StyledTDRate color="danger">
-                                <i className="icon ion-md-arrow-down" /> 0.8%
+                                <i className="fa fa-arrow-down" /> 0.8%
                             </StyledTDRate>
                         </StyledTD>
                     </tr>
@@ -119,7 +119,7 @@ const RecentEarnings: FC = () => {
                         <StyledTD fontWeight="500">
                             $26,930.40{" "}
                             <StyledTDRate color="danger">
-                                <i className="icon ion-md-arrow-down" /> 0.8%
+                                <i className="fa fa-arrow-down" /> 0.8%
                             </StyledTDRate>
                         </StyledTD>
                     </tr>
@@ -131,7 +131,7 @@ const RecentEarnings: FC = () => {
                         <StyledTD fontWeight="500">
                             $26,930.40{" "}
                             <StyledTDRate color="danger">
-                                <i className="icon ion-md-arrow-down" /> 0.8%
+                                <i className="fa fa-arrow-down" /> 0.8%
                             </StyledTDRate>
                         </StyledTD>
                     </tr>
@@ -143,7 +143,7 @@ const RecentEarnings: FC = () => {
                         <StyledTD fontWeight="500">
                             $26,930.40{" "}
                             <StyledTDRate color="danger">
-                                <i className="icon ion-md-arrow-down" /> 0.8%
+                                <i className="fa fa-arrow-down" /> 0.8%
                             </StyledTDRate>
                         </StyledTD>
                     </tr>

@@ -36,7 +36,7 @@ const RealTimeSales: FC = () => {
                         <StyledBodyTitle>
                             $150,200{" "}
                             <StyledBodyStatus color="success">
-                                <i className="icon ion-md-arrow-up" /> 0.20%
+                                <i className="fa fa-arrow-up" /> 0.20%
                             </StyledBodyStatus>
                         </StyledBodyTitle>
                         <StyledBodyText>Total Sales</StyledBodyText>
@@ -45,7 +45,7 @@ const RealTimeSales: FC = () => {
                         <StyledBodyTitle>
                             $21,880{" "}
                             <StyledBodyStatus color="danger">
-                                <i className="icon ion-md-arrow-down" /> 1.04%
+                                <i className="fa fa-arrow-down" /> 1.04%
                             </StyledBodyStatus>
                         </StyledBodyTitle>
                         <StyledBodyText>Avg. Sales Per Day</StyledBodyText>

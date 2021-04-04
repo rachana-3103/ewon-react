@@ -29,10 +29,10 @@ const Customers: FC = () => {
                 <StyledTitle>New Customers</StyledTitle>
                 <StyledHeaderRight>
                     <StyledIcon href="#" aria-label="refresh">
-                        <i className="icon ion-md-refresh" />
+                        <i className="fa fa-redo" />
                     </StyledIcon>
                     <StyledIcon href="#" ml="10px" aria-label="more options">
-                        <i className="icon ion-md-more" />
+                        <i className="fa fa-ellipsis-v" />
                     </StyledIcon>
                 </StyledHeaderRight>
             </StyledHeader>

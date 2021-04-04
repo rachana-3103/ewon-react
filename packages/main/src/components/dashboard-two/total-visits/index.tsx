@@ -18,8 +18,7 @@ const TotalVisits: FC = () => {
             <StyledHeader>
                 <StyledTitle>Total Visits</StyledTitle>
                 <StyledRange>
-                    Mar 01 - Mar 20, 2019{" "}
-                    <i className="icon ion-ios-arrow-down" />
+                    Mar 01 - Mar 20, 2019 <i className="fa fa-arrow-down" />
                 </StyledRange>
             </StyledHeader>
             <CardBody py={["15px", "15px"]} px={["10px", "10px"]}>

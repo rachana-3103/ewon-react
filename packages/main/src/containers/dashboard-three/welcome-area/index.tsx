@@ -1,5 +1,5 @@
 import React from "react";
-import { Save, Upload, Share2, Sliders } from "react-feather";
+import { MoreVertical } from "react-feather";
 import PageHeader from "../../../components/page-header";
 import {
     StyledWelcomeArea,
@@ -12,36 +12,47 @@ const WelcomeArea: React.FC = () => {
     return (
         <StyledWelcomeArea>
             <StyledWelcomeLeft>
-                <PageHeader title="Website Analytics" />
+                <PageHeader title="Cryptocurrency" />
             </StyledWelcomeLeft>
             <StyledWelcomeRight>
-                <StyledButton size="sm" color="white" hasIcon mt="10px">
-                    <Save />
-                    Save
+                <StyledButton size="sm" hasIcon mt="10px">
+                    Btc
                 </StyledButton>
                 <StyledButton
                     size="sm"
                     color="white"
                     hasIcon
                     mt="10px"
-                    ml="8px"
+                    ml="5px"
                 >
-                    <Upload />
-                    Export
+                    Eth
                 </StyledButton>
                 <StyledButton
                     size="sm"
                     color="white"
                     hasIcon
                     mt="10px"
-                    ml={[null, "8px"]}
+                    ml={[null, "5px"]}
                 >
-                    <Share2 />
-                    Share
+                    Ltc
                 </StyledButton>
-                <StyledButton size="sm" hasIcon mt="10px" ml="8px">
-                    <Sliders />
-                    Settings
+                <StyledButton
+                    size="sm"
+                    color="white"
+                    hasIcon
+                    mt="10px"
+                    ml="5px"
+                >
+                    Btg
+                </StyledButton>
+                <StyledButton
+                    size="sm"
+                    color="white"
+                    mt="10px"
+                    ml="5px"
+                    className="btn-icon"
+                >
+                    <MoreVertical size="19" strokeWidth="2.5px" />
                 </StyledButton>
             </StyledWelcomeRight>
         </StyledWelcomeArea>

@@ -1,12 +1,16 @@
 import React from "react";
 import { StyledBreadItem, StyledBreadWrap, PageHeading } from "./style";
 
-const PageHeader: React.FC = () => {
+interface IProps {
+    title: string;
+}
+
+const PageHeader: React.FC<IProps> = ({ title }) => {
     return (
         <>
             <StyledBreadWrap>
                 <StyledBreadItem path="/">Dashboard</StyledBreadItem>
-                <StyledBreadItem active>Sales Monitoring</StyledBreadItem>
+                <StyledBreadItem active>{title}</StyledBreadItem>
             </StyledBreadWrap>
             <PageHeading>Welcome to Dashboard</PageHeading>
         </>

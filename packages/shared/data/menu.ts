@@ -40,7 +40,7 @@ const menus = [
             {
                 id: 13,
                 label: "Cryptocurrency",
-                url: "/",
+                url: "/dashboard-three",
                 Icon: BarChart2,
             },
             {

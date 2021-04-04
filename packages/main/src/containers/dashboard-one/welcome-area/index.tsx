@@ -12,7 +12,7 @@ const WelcomeArea: React.FC = () => {
     return (
         <StyledWelcomeArea>
             <StyledWelcomeLeft>
-                <PageHeader />
+                <PageHeader title="Sales Monitoring" />
             </StyledWelcomeLeft>
             <StyledWelcomeRight>
                 <StyledButton size="sm" color="white" hasIcon>

@@ -63,6 +63,8 @@ import {
     Select,
 } from "./src/forms/form-elements";
 import { Progress } from "./src/ui/progress/progress";
+import SectionTitle from "./src/ui/section-title";
+import Text from "./src/ui/text";
 
 export {
     Button,
@@ -125,4 +127,6 @@ export {
     Radio,
     Select,
     Progress,
+    SectionTitle,
+    Text,
 };

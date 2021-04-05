@@ -1,7 +1,12 @@
 import { FC } from "react";
-import { Card, CardHeader, CardBody, Table } from "@doar/components";
-import SectionTitle from "../../section-title";
-import Text from "../../text";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    Table,
+    SectionTitle,
+    Text,
+} from "@doar/components";
 import { StyledTheadTR, StyledTH, StyledTR, StyledTD } from "./style";
 
 const Cryptcurrencies: FC = () => {

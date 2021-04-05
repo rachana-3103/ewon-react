@@ -1,5 +1,12 @@
 import { FC } from "react";
-import { Card, CardBody, ApexAreaChart } from "@doar/components";
+import {
+    Card,
+    CardBody,
+    ApexAreaChart,
+    CardFooter,
+    Row,
+    Col,
+} from "@doar/components";
 import { cryptoChart } from "@doar/shared/data/dashboard-three";
 import NavLine from "./nav-line";
 import {
@@ -8,6 +15,8 @@ import {
     StyledHeaderText,
     StyledText,
     StyledChart,
+    StyledFooterTitle,
+    StyledFooterSub,
 } from "./style";
 
 const CryptoChart: FC = () => {
@@ -37,6 +46,34 @@ const CryptoChart: FC = () => {
                     />
                 </StyledChart>
             </CardBody>
+            <CardFooter p="20px">
+                <Row gutters={20}>
+                    <Col col={6} sm={4} md>
+                        <StyledFooterTitle>Market Cap</StyledFooterTitle>
+                        <StyledFooterSub>$14.5B</StyledFooterSub>
+                    </Col>
+                    <Col col={6} sm={4} md>
+                        <StyledFooterTitle>Volume (24h)</StyledFooterTitle>
+                        <StyledFooterSub>$4.6B</StyledFooterSub>
+                    </Col>
+                    <Col col={6} sm={4} md>
+                        <StyledFooterTitle>Change</StyledFooterTitle>
+                        <StyledFooterSub>
+                            -$7.98 <i className="danger fa fa-arrow-down" />
+                        </StyledFooterSub>
+                    </Col>
+                    <Col col={6} sm={4} md>
+                        <StyledFooterTitle>
+                            Circulating Supply
+                        </StyledFooterTitle>
+                        <StyledFooterSub>17.59M</StyledFooterSub>
+                    </Col>
+                    <Col col={6} sm={4} md>
+                        <StyledFooterTitle>All Time High</StyledFooterTitle>
+                        <StyledFooterSub>$18.4K</StyledFooterSub>
+                    </Col>
+                </Row>
+            </CardFooter>
         </Card>
     );
 };

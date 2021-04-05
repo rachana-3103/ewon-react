@@ -67,7 +67,31 @@ export const StyledText = styled.span`
 export const StyledChart = styled.div`
     width: 100%;
     height: 284px;
-    .apexcharts-label {
-        background-color: red;
+    & > div {
+        margin-left: -20px;
+        margin-right: -10px;
+    }
+`;
+
+export const StyledFooterTitle = styled.h6`
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: ${themeGet("colors.text3")};
+    margin-bottom: 10px;
+`;
+
+export const StyledFooterSub = styled.h5`
+    font-family: ${themeGet("fonts.rubik")};
+    line-height: 1.1;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    .danger {
+        color: ${themeGet("colors.danger")};
+    }
+    i {
+        font-weight: 600;
+        font-size: 10px;
     }
 `;

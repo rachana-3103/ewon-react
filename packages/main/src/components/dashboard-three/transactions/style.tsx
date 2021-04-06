@@ -4,6 +4,7 @@ import { CardHeader } from "@doar/components";
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 export const StyledHeaderText = styled.span`
@@ -93,16 +94,17 @@ export const StyledSubtitle = styled.p`
 
 export const StyledRight = styled.div`
     text-align: right;
-    font-family: ${themeGet("fonts.rubik")};
 `;
 
 export const StyledCoin = styled.p`
     margin-bottom: 0px;
+    font-family: ${themeGet("fonts.rubik")};
 `;
 
 export const StyledRate = styled.p<IStatus>`
     font-size: 12px;
     margin-bottom: 0px;
+    font-family: ${themeGet("fonts.rubik")};
     ${({ $status }) =>
         ($status === "received" || $status === "bought") &&
         css`

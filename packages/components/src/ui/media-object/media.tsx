@@ -1,9 +1,9 @@
 import React from "react";
 import classnames from "classnames";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, FlexboxProps } from "@doar/shared/styled";
 import { StyledMedia, StyledMediaBody, StyledMediaLeft } from "./style";
 
-interface IMediaProps extends SpaceProps {
+interface IMediaProps extends SpaceProps, FlexboxProps {
     as?: React.ElementType;
     className?: string;
 }

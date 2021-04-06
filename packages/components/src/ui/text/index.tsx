@@ -3,7 +3,7 @@ import { SpaceProps, ColorProps, TypographyProps } from "@doar/shared/styled";
 import { StyledText } from "./style";
 
 interface IProps extends SpaceProps, ColorProps, TypographyProps {
-    as: ElementType;
+    as?: ElementType;
     className?: string;
 }
 

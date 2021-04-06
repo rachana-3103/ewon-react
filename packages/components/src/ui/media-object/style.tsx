@@ -4,11 +4,14 @@ import styled, {
     css,
     SpaceProps,
     LayoutProps,
+    FlexboxProps,
 } from "@doar/shared/styled";
 
-export const StyledMedia = styled(({ m, ml, mr, mt, mb, ...props }) => (
-    <div {...props} />
-))<SpaceProps>`
+interface IMedia extends SpaceProps, FlexboxProps {}
+
+export const StyledMedia = styled(
+    ({ m, ml, mr, mt, mb, alignItems, ...props }) => <div {...props} />
+)<IMedia>`
     ${space};
     display: flex;
     align-items: flex-start;

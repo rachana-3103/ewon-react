@@ -6,6 +6,9 @@ export const Chart1 = {
             toolbar: {
                 show: false,
             },
+            sparkline: {
+                enabled: true,
+            },
         },
         dataLabels: {
             enabled: false,
@@ -39,12 +42,17 @@ export const Chart1 = {
             show: false,
         },
         fill: {
-            opacity: [0.2, 0],
-            type: "solid",
+            type: "gradient",
+            gradient: {
+                type: "vertical",
+                gradientToColors: ["#a0aabc", "#c0ccda"],
+                opacityFrom: 0.4,
+                opacityTo: 0,
+            },
         },
         colors: ["#a0aabc", "#c0ccda"],
         tooltip: {
-            enabled: true,
+            enabled: false,
         },
     },
     series: [
@@ -62,6 +70,9 @@ export const Chart2 = {
         chart: {
             toolbar: {
                 show: false,
+            },
+            sparkline: {
+                enabled: true,
             },
         },
         dataLabels: {
@@ -96,12 +107,17 @@ export const Chart2 = {
             show: false,
         },
         fill: {
-            opacity: [0.2, 0],
-            type: "solid",
+            type: "gradient",
+            gradient: {
+                type: "vertical",
+                gradientToColors: ["#58cd8b", "#b8eace"],
+                opacityFrom: 0.4,
+                opacityTo: 0,
+            },
         },
         colors: ["#58cd8b", "#b8eace"],
         tooltip: {
-            enabled: true,
+            enabled: false,
         },
     },
     series: [
@@ -119,6 +135,9 @@ export const Chart3 = {
         chart: {
             toolbar: {
                 show: false,
+            },
+            sparkline: {
+                enabled: true,
             },
         },
         dataLabels: {
@@ -153,12 +172,17 @@ export const Chart3 = {
             show: false,
         },
         fill: {
-            opacity: [0.2, 0],
-            type: "solid",
+            type: "gradient",
+            gradient: {
+                type: "vertical",
+                gradientToColors: ["#6e8ab6", "#c0ccdf"],
+                opacityFrom: 0.4,
+                opacityTo: 0,
+            },
         },
         colors: ["#6e8ab6", "#c0ccdf"],
         tooltip: {
-            enabled: true,
+            enabled: false,
         },
     },
     series: [
@@ -176,6 +200,9 @@ export const Chart4 = {
         chart: {
             toolbar: {
                 show: false,
+            },
+            sparkline: {
+                enabled: true,
             },
         },
         dataLabels: {
@@ -210,11 +237,17 @@ export const Chart4 = {
             show: false,
         },
         fill: {
-            opacity: [0.2, 0],
+            type: "gradient",
+            gradient: {
+                type: "vertical",
+                gradientToColors: ["#4c94fb", "#b1d0fd"],
+                opacityFrom: 0.4,
+                opacityTo: 0,
+            },
         },
         colors: ["#4c94fb", "#b1d0fd"],
         tooltip: {
-            enabled: true,
+            enabled: false,
         },
     },
     series: [

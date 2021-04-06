@@ -58,12 +58,10 @@ export const StyledRate = styled.p<IRate>`
 
 export const StyledChart = styled.div`
     width: 100%;
-    height: 100px;
-    margin-bottom: -22px;
-    margin-top: -20px;
+    height: 80px;
     & > div {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 `;
 

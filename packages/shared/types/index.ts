@@ -44,3 +44,22 @@ export interface IConversion {
         series: any[];
     };
 }
+
+export interface IWatchlist {
+    id: number;
+    icon: string;
+    title: string;
+    subtitle?: string;
+    coin: string;
+    coinRate: string;
+    coinStatus: "up" | "down";
+    color?: string;
+    markets?: number[];
+    chart?: {
+        options: {
+            [x: string]: unknown;
+        };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        series: any[];
+    };
+}

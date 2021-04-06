@@ -1,17 +1,26 @@
-import styled, { space, css, device } from "@doar/shared/styled";
+import styled, {
+    space,
+    css,
+    device,
+    SpaceProps,
+    border,
+    BorderProps,
+} from "@doar/shared/styled";
 import { Container, Row, Col } from "styled-bootstrap-grid";
+
+type IProps = SpaceProps;
 
 export const StyledContainer = styled(
     ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => (
         <Container {...props} />
     )
-)`
+)<IProps>`
     ${space};
 `;
 
 export const StyledRow = styled(
     ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => <Row {...props} />
-)`
+)<IProps>`
     ${space};
     ${({ $gutters }) =>
         !!$gutters &&
@@ -35,13 +44,16 @@ export const StyledRow = styled(
         `}
 `;
 
+interface ICol extends IProps, BorderProps {}
+
 export const StyledCol = styled(
     ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => <Col {...props} />
-)`
+)<ICol>`
     ${device.xlarge} {
         &.order-xl-0 {
             order: 0;
         }
     }
     ${space};
+    ${border};
 `;

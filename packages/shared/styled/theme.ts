@@ -44,6 +44,7 @@ export const theme = {
         teal: "#00cccc",
         indigo: "#5b47fb",
         vulcan: "#0f1520",
+        litecoin: "#325a98",
     },
     fontSize: {
         body: "0.875rem",

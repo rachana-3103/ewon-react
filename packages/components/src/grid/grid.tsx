@@ -1,6 +1,6 @@
 import { FC } from "react";
 import classNames from "classnames";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledContainer, StyledRow, StyledCol } from "./style";
 import { ColProps, RowProps } from "./types";
 
@@ -33,7 +33,7 @@ export const Row: FC<IRowProps> = ({
     );
 };
 
-interface IColProps extends IProps, ColProps {}
+interface IColProps extends IProps, ColProps, BorderProps {}
 
 export const Col: FC<IColProps> = ({ className, ...props }) => {
     const { xlOrder } = props;

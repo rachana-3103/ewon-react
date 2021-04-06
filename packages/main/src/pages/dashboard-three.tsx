@@ -6,6 +6,7 @@ import WelcomeArea from "../containers/dashboard-three/welcome-area";
 import RowOne from "../containers/dashboard-three/row-one";
 import RowTwo from "../containers/dashboard-three/row-two";
 import RowThree from "../containers/dashboard-three/row-three";
+import RowFour from "../containers/dashboard-three/row-four";
 
 const DashboardThree: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const DashboardThree: React.FC = () => {
                 <RowOne />
                 <RowTwo />
                 <RowThree />
+                <RowFour />
             </Row>
         </Layout>
     );

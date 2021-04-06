@@ -14,7 +14,9 @@ interface IListGroup extends SpaceProps {
 }
 
 export const StyledListGroup = styled(
-    ({ p, px, py, pl, pr, pt, pb, ...rest }) => <ul {...rest} />
+    ({ p, px, py, pl, pr, pt, pb, m, mx, my, ml, mr, mt, mb, ...rest }) => (
+        <ul {...rest} />
+    )
 )<IListGroup>`
     display: flex;
     ${space}
@@ -93,6 +95,13 @@ export const StyledListGroupItem = styled(
         css`
             border-width: 0 0 1px;
             border-radius: 0;
+            &:first-child,
+            &:last-child {
+                border-radius: 0;
+            }
+            &:last-child {
+                border-bottom-width: 0;
+            }
         `}
     ${({ $horizontal }) =>
         $horizontal === true &&

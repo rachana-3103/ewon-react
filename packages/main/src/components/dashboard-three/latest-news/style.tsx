@@ -4,6 +4,7 @@ import { CardHeader } from "@doar/components";
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 export const StyledList = styled.div``;

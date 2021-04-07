@@ -36,7 +36,32 @@ export const Row: FC<IRowProps> = ({
 interface IColProps extends IProps, ColProps, BorderProps {}
 
 export const Col: FC<IColProps> = ({ className, ...props }) => {
-    const { xlOrder } = props;
-    const orderXl = xlOrder !== undefined ? `order-xl-${xlOrder}` : "";
-    return <StyledCol className={classNames(className, orderXl)} {...props} />;
+    const { smOrder, xlOrder, mdOrder, lgOrder, ...rest } = props;
+    let restProps;
+    let orderSm;
+    let orderMd;
+    let orderlg;
+    let orderXl;
+    if (smOrder === 0 || mdOrder === 0 || lgOrder === 0 || xlOrder === 0) {
+        restProps = rest;
+        orderSm = smOrder !== undefined ? `order-sm-${smOrder}` : "";
+        orderMd = mdOrder !== undefined ? `order-md-${mdOrder}` : "";
+        orderlg = lgOrder !== undefined ? `order-lg-${lgOrder}` : "";
+        orderXl = xlOrder !== undefined ? `order-xl-${xlOrder}` : "";
+    } else {
+        restProps = props;
+    }
+
+    return (
+        <StyledCol
+            className={classNames(
+                className,
+                orderSm,
+                orderMd,
+                orderlg,
+                orderXl
+            )}
+            {...restProps}
+        />
+    );
 };

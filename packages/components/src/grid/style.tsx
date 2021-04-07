@@ -49,6 +49,16 @@ interface ICol extends IProps, BorderProps {}
 export const StyledCol = styled(
     ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => <Col {...props} />
 )<ICol>`
+    ${device.medium} {
+        &.order-md-0 {
+            order: 0;
+        }
+    }
+    ${device.large} {
+        &.order-lg-0 {
+            order: 0;
+        }
+    }
     ${device.xlarge} {
         &.order-xl-0 {
             order: 0;

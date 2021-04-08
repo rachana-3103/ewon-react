@@ -4,16 +4,20 @@ import styled, {
     themeGet,
     color as colorStyles,
     ColorProps,
+    space,
+    SpaceProps,
     css,
     keyframes,
 } from "@doar/shared/styled";
 
-interface IProgress {
+interface IProgress extends SpaceProps {
     $height?: string;
     $opacity?: number;
 }
 
-export const StyledProgress = styled.div<IProgress>`
+export const StyledProgress = styled(({ m, mb, mt, ml, mr, ...rest }) => (
+    <div {...rest} />
+))<IProgress>`
     display: flex;
     height: ${(props) => props.$height};
     overflow: hidden;
@@ -21,6 +25,7 @@ export const StyledProgress = styled.div<IProgress>`
     background-color: #e3e7ed;
     border-radius: ${themeGet("radii.rounded")};
     opacity: ${(props) => props.$opacity};
+    ${space};
 `;
 
 interface IProgressBar extends ColorProps {

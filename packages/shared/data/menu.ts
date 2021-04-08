@@ -46,7 +46,7 @@ const menus = [
             {
                 id: 14,
                 label: "Helpdesk Management",
-                url: "/",
+                url: "/dashboard-four",
                 Icon: BarChart2,
             },
         ],

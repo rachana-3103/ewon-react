@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
+const DashboardFour = lazy(() => import("./pages/dashboard-four"));
 
 const App: React.FC = () => {
     return (
@@ -20,6 +21,11 @@ const App: React.FC = () => {
                         exact
                         path="/dashboard-three"
                         component={DashboardThree}
+                    />
+                    <Route
+                        exact
+                        path="/dashboard-four"
+                        component={DashboardFour}
                     />
                 </Switch>
             </Suspense>

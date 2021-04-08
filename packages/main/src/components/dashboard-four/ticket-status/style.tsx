@@ -77,7 +77,7 @@ export const StyledChart = styled.div`
 `;
 
 export const StyledNumb = styled.h4`
-    font-family: "Rubik", sans-serif;
+    font-family: ${themeGet("fonts.rubik")};
     font-weight: 400;
     margin-bottom: 10px;
 `;
@@ -87,13 +87,13 @@ export const StyleTitle = styled.h6`
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
-    color: #1b2e4b;
+    color: ${themeGet("color.text2")};
     margin-bottom: 2px;
 `;
 
 export const StyledText = styled.p`
     font-size: 10px;
-    color: #8392a5;
+    color: ${themeGet("color.text3")};
     margin-bottom: 0px;
     span {
         font-weight: 500;

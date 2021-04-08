@@ -6,6 +6,7 @@ export const StyledBody = styled(({ ...rest }) => <CardBody {...rest} />)`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 `;
 

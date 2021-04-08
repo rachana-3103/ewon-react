@@ -36,7 +36,7 @@ const Item: FC<IProps> = ({
                 <StyledIcon bg={color} opacity={opacity}>
                     <i className={icon} />
                 </StyledIcon>
-                <MediaBody ml={[null, "15px"]}>
+                <MediaBody ml="15px">
                     <StyledTitle>{title}</StyledTitle>
                     <StyledSubtitle>{subtitle}</StyledSubtitle>
                 </MediaBody>

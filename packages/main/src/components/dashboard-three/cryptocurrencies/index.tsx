@@ -3,11 +3,16 @@ import {
     Card,
     CardHeader,
     CardBody,
-    Table,
     SectionTitle,
     Text,
 } from "@doar/components";
-import { StyledTheadTR, StyledTH, StyledTR, StyledTD } from "./style";
+import {
+    StyledTheadTR,
+    StyledTH,
+    StyledTR,
+    StyledTD,
+    StyledTable,
+} from "./style";
 
 const Cryptcurrencies: FC = () => {
     return (
@@ -16,7 +21,7 @@ const Cryptcurrencies: FC = () => {
                 <SectionTitle title="Cryptocurrencies" />
             </CardHeader>
             <CardBody p={["10px", "10px"]}>
-                <Table borderless mb="0">
+                <StyledTable borderless mb="0">
                     <thead>
                         <StyledTheadTR>
                             <StyledTH>Asset</StyledTH>
@@ -136,7 +141,7 @@ const Cryptcurrencies: FC = () => {
                             </StyledTD>
                         </StyledTR>
                     </tbody>
-                </Table>
+                </StyledTable>
             </CardBody>
         </Card>
     );

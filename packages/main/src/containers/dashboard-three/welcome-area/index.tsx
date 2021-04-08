@@ -32,7 +32,7 @@ const WelcomeArea: React.FC = () => {
                     color="white"
                     hasIcon
                     mt="10px"
-                    ml={[null, "5px"]}
+                    ml="5px"
                 >
                     Ltc
                 </StyledButton>

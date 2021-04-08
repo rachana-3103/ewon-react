@@ -5,6 +5,10 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${device.small} {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 export const StyledHeaderText = styled.span`
@@ -13,6 +17,9 @@ export const StyledHeaderText = styled.span`
     display: flex;
     align-items: center;
     line-height: 1;
+    ${device.small} {
+        margin-top: 5px;
+    }
     svg {
         margin-left: 2px;
     }
@@ -56,6 +63,7 @@ export const StyledIcon = styled.div<IStatus>`
     border-width: 2px;
     border-style: solid;
     border-radius: 50%;
+    display: none;
     ${({ $status }) =>
         $status === "sent" &&
         css`
@@ -74,7 +82,7 @@ export const StyledIcon = styled.div<IStatus>`
             color: ${themeGet("colors.success")};
             border-color: ${themeGet("colors.success")};
         `}		
-    ${device.small} {
+    ${device.medium} {
         display: flex;
         align-items: center;
         justify-content: center;

@@ -33,7 +33,7 @@ const Item: FC<IProps> = ({
                 <StyledIcon $status={status}>
                     <Icon width="20px" height="20px" />
                 </StyledIcon>
-                <MediaBody ml={[null, "15px"]}>
+                <MediaBody ml={[null, null, "15px"]}>
                     <StyledTitle>{title}</StyledTitle>
                     <StyledSubtitle>{subtitle}</StyledSubtitle>
                 </MediaBody>

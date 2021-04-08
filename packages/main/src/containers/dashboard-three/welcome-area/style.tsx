@@ -27,14 +27,13 @@ export const StyledWelcomeRight = styled.div`
 
 export const StyledButton = styled((props) => <Button {...props} />)`
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.773;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-weight: 600;
     letter-spacing: 0.5px;
     ${device.small} {
-        font-size: 11px;
         padding-left: 20px;
         padding-right: 20px;
     }

@@ -12,13 +12,19 @@ import { Watchlists } from "@doar/shared/data/dashboard-three";
 import Watchlist from "../../../components/dashboard-three/watchlist";
 
 interface IBorderProps {
-    borderLeft: any[];
-    borderColor: any[];
-    borderTop: any[];
+    borderStyle?: string | any[];
+    borderLeftWidth?: any[];
+    borderColor?: string | any[];
+    borderTopWidth?: any[];
+    borderWidth?: any[];
 }
 
 const RowThree: FC = () => {
-    let borderProps: IBorderProps;
+    let borderProps: IBorderProps = {
+        borderStyle: "solid",
+        borderWidth: ["0px"],
+        borderColor: "border",
+    };
 
     return (
         <Col col={12} mt="10px">
@@ -31,32 +37,24 @@ const RowThree: FC = () => {
                         {Watchlists &&
                             Watchlists.map((item, i) => {
                                 if (i !== 0) {
-                                    if (i % 2 === 0) {
+                                    const index = i + 1;
+                                    if (index % 2 === 0) {
                                         borderProps = {
-                                            borderLeft: [null, `1px solid`],
-                                            borderColor: ["border", "gray300"],
-                                            borderTop: ["1px solid", "0px"],
+                                            ...borderProps,
+                                            borderLeftWidth: [null, null, 1, 1],
+                                            borderTopWidth: [1, null, null, 0],
                                         };
                                     } else {
                                         borderProps = {
-                                            borderLeft: [
-                                                null,
-                                                null,
-                                                null,
-                                                `1px solid`,
-                                            ],
-                                            borderColor: [
-                                                "border",
-                                                null,
-                                                null,
-                                                "gray300",
-                                            ],
-                                            borderTop: [
-                                                "1px solid",
-                                                null,
-                                                null,
-                                                "0px",
-                                            ],
+                                            ...borderProps,
+                                            borderLeftWidth: [null, 1, 0, 1],
+                                            borderTopWidth: [1, null, null, 0],
+                                        };
+                                    }
+                                    if (i === 1) {
+                                        borderProps = {
+                                            ...borderProps,
+                                            borderTopWidth: [1, 0],
                                         };
                                     }
                                 }

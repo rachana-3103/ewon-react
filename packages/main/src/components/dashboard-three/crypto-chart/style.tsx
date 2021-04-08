@@ -3,12 +3,12 @@ import { CardHeader } from "@doar/components";
 import NavLine, { NavLineLink } from "../../nav-link";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
+    padding-top: 8px;
+    padding-bottom: 8px;
     ${device.small} {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 8px;
-        padding-bottom: 8px;
     }
 `;
 
@@ -66,7 +66,11 @@ export const StyledText = styled.span`
 
 export const StyledChart = styled.div`
     width: 100%;
-    height: 284px;
+    height: 200px;
+    margin-top: -15px;
+    ${device.large} {
+        height: 284px;
+    }
     & > div {
         margin-left: -20px;
         margin-right: -10px;
@@ -74,11 +78,14 @@ export const StyledChart = styled.div`
 `;
 
 export const StyledFooterTitle = styled.h6`
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: ${themeGet("colors.text3")};
     margin-bottom: 10px;
+    ${device.small} {
+        font-size: 11px;
+    }
 `;
 
 export const StyledFooterSub = styled.h5`

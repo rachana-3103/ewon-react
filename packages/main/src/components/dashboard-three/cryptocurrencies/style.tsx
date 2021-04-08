@@ -2,7 +2,21 @@ import styled, {
     themeGet,
     typography,
     TypographyProps,
+    device,
 } from "@doar/shared/styled";
+import { Table } from "@doar/components";
+
+export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
+    th,
+    td {
+        ${device.large} {
+            padding: 8px 8px;
+        }
+        ${device.xlarge} {
+            padding: 8px 10px;
+        }
+    }
+`;
 
 export const StyledTheadTR = styled.tr`
     font-size: 10px;

@@ -15,14 +15,14 @@ export const StyleHr = styled.hr`
 
 export const StyledItem = styled.div`
     padding: 20px;
-    ${device.small} {
+    ${device.medium} {
         display: flex;
     }
 `;
 
 export const StyledThumb = styled.figure`
-    width: 100px;
-    height: 60px;
+    width: 100%;
+    height: auto;
     ${device.medium} {
         width: 50px;
         height: 60px;
@@ -44,7 +44,7 @@ export const StyledThumb = styled.figure`
 export const StyledBody = styled.div`
     flex: 1;
     margin-top: 20px;
-    ${device.small} {
+    ${device.medium} {
         margin-top: 0px;
         margin-left: 20px;
     }

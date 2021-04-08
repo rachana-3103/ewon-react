@@ -3,6 +3,7 @@ import styled, {
     css,
     color as colorStyles,
     ColorProps,
+    device,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
 
@@ -11,6 +12,10 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     justify-content: space-between;
     align-items: center;
     border-bottom-width: 0px;
+    ${device.small} {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 export const StyledHeaderText = styled.span`
@@ -19,6 +24,9 @@ export const StyledHeaderText = styled.span`
     display: flex;
     align-items: center;
     line-height: 1;
+    ${device.small} {
+        margin-top: 5px;
+    }
     i {
         margin-left: 2px;
         font-size: 10px;

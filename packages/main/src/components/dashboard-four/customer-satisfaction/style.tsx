@@ -96,7 +96,9 @@ export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
 
 interface ITD extends ColorProps, TypographyProps {}
 
-export const StyledTD = styled.td<ITD>`
+export const StyledTD = styled(
+    ({ fontWeight, fontFamily, textAlign, color, ...rest }) => <td {...rest} />
+)<ITD>`
     line-height: 1 !important;
     padding: 8px 0 7px !important;
     &:first-of-type {

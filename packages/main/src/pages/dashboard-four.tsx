@@ -5,6 +5,8 @@ import WelcomeArea from "../containers/dashboard-four/welcome-area";
 import LeftRowOne from "../containers/dashboard-four/left-row-one";
 import LeftRowTwo from "../containers/dashboard-four/left-row-two";
 import LeftRowThree from "../containers/dashboard-four/left-row-three";
+import RightRowOne from "../containers/dashboard-four/right-row-one";
+import RightRowFour from "../containers/dashboard-four/right-row-four";
 
 const DashboardFour: React.FC = () => {
     return (
@@ -19,7 +21,10 @@ const DashboardFour: React.FC = () => {
                     </Row>
                 </Col>
                 <Col lg={4} mt={["10px", null, null, 0]}>
-                    fasd
+                    <Row gutters={10}>
+                        <RightRowOne />
+                        <RightRowFour />
+                    </Row>
                 </Col>
             </Row>
         </Layout>

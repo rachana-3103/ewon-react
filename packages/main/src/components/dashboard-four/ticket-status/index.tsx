@@ -8,7 +8,6 @@ import {
     Row,
     Col,
     Progress,
-    Text,
 } from "@doar/components";
 import { ticketChart } from "@doar/shared/data/dashboard-four";
 import {

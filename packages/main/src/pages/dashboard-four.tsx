@@ -4,6 +4,7 @@ import Layout from "../layouts";
 import WelcomeArea from "../containers/dashboard-four/welcome-area";
 import LeftRowOne from "../containers/dashboard-four/left-row-one";
 import LeftRowTwo from "../containers/dashboard-four/left-row-two";
+import LeftRowThree from "../containers/dashboard-four/left-row-three";
 
 const DashboardFour: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const DashboardFour: React.FC = () => {
                     <Row gutters={10}>
                         <LeftRowOne />
                         <LeftRowTwo />
+                        <LeftRowThree />
                     </Row>
                 </Col>
                 <Col lg={4} mt={["10px", null, null, 0]}>

@@ -47,6 +47,7 @@ export const theme = {
         litecoin: "#325a98",
         lightblue: "#a5d7fd",
         brand2: "#042893",
+        shuttle: "#5c6c7f",
     },
     fontSize: {
         body: "0.875rem",

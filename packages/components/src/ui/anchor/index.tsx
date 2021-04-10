@@ -1,8 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
-import { Link } from "react-router-dom";
+import { SpaceProps, ColorProps, TypographyProps } from "@doar/shared/styled";
+import { StyledLink, StyledAnchor } from "./style";
 
-interface IProps {
+interface IProps extends SpaceProps, ColorProps, TypographyProps {
     path: string;
     className?: string | undefined;
     rel?: string | undefined;
@@ -24,7 +24,7 @@ export const Anchor: React.FC<IProps> = ({
     const internal = /^\/(?!\/)/.test(path);
     if (internal) {
         return (
-            <Link
+            <StyledLink
                 aria-label={label}
                 rel="preload"
                 className={className}
@@ -33,11 +33,11 @@ export const Anchor: React.FC<IProps> = ({
                 {...rest}
             >
                 {children}
-            </Link>
+            </StyledLink>
         );
     }
     return (
-        <a
+        <StyledAnchor
             aria-label={label}
             rel={rel}
             className={className}
@@ -47,7 +47,7 @@ export const Anchor: React.FC<IProps> = ({
             {...rest}
         >
             {children}
-        </a>
+        </StyledAnchor>
     );
 };
 

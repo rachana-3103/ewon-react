@@ -271,6 +271,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0 0 15px;
         font-family: ${theme.fonts.body};
         color: ${theme.colors.text};
+		font-weight: 400;
         &:last-child {
             margin-bottom: 0;
         }

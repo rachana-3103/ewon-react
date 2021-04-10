@@ -65,6 +65,7 @@ import {
 import { Progress } from "./src/ui/progress/progress";
 import SectionTitle from "./src/ui/section-title";
 import Text from "./src/ui/text";
+import Heading from "./src/ui/heading";
 
 export {
     Button,
@@ -129,4 +130,5 @@ export {
     Progress,
     SectionTitle,
     Text,
+    Heading,
 };

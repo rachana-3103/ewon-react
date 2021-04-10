@@ -22,6 +22,7 @@ import {
     StyledNumb,
     StyleTitle,
     StyledText,
+    StyledRate,
 } from "./style";
 
 const TicketStatus: FC = () => {
@@ -71,9 +72,9 @@ const TicketStatus: FC = () => {
                         />
                         <StyleTitle>New Tickets</StyleTitle>
                         <StyledText>
-                            <Text as="span" color="success">
+                            <StyledRate color="success">
                                 1.2% <i className="fa fa-arrow-up" />
-                            </Text>{" "}
+                            </StyledRate>{" "}
                             than yesterday
                         </StyledText>
                     </Col>
@@ -82,9 +83,9 @@ const TicketStatus: FC = () => {
                         <Progress bg="malibu" height="2px" now={85} mb="10px" />
                         <StyleTitle>Solved Tickets</StyleTitle>
                         <StyledText>
-                            <Text as="span" color="danger">
+                            <StyledRate color="danger">
                                 -0.6% <i className="fa fa-arrow-down" />
-                            </Text>{" "}
+                            </StyledRate>{" "}
                             than yesterday
                         </StyledText>
                     </Col>
@@ -93,9 +94,9 @@ const TicketStatus: FC = () => {
                         <Progress bg="malibu" height="2px" now={25} mb="10px" />
                         <StyleTitle>Unresolved Tickets</StyleTitle>
                         <StyledText>
-                            <Text as="span" color="success">
+                            <StyledRate color="success">
                                 0.3% <i className="fa fa-arrow-up" />
-                            </Text>{" "}
+                            </StyledRate>{" "}
                             than yesterday
                         </StyledText>
                     </Col>
@@ -104,9 +105,9 @@ const TicketStatus: FC = () => {
                         <Progress bg="malibu" height="2px" now={45} mb="10px" />
                         <StyleTitle>Open Tickets</StyleTitle>
                         <StyledText>
-                            <Text as="span" color="success">
+                            <StyledRate color="success">
                                 0.3% <i className="fa fa-arrow-up" />
-                            </Text>{" "}
+                            </StyledRate>{" "}
                             than yesterday
                         </StyledText>
                     </Col>
@@ -115,9 +116,9 @@ const TicketStatus: FC = () => {
                         <Progress bg="malibu" height="2px" now={30} mb="10px" />
                         <StyleTitle>Unassigned</StyleTitle>
                         <StyledText>
-                            <Text as="span" color="success">
+                            <StyledRate color="success">
                                 0.3% <i className="fa fa-arrow-up" />
-                            </Text>{" "}
+                            </StyledRate>{" "}
                             than yesterday
                         </StyledText>
                     </Col>

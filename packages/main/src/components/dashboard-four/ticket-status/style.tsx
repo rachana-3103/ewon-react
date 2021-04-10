@@ -1,7 +1,7 @@
 import styled, {
     device,
     ColorProps,
-    color,
+    color as colorStyle,
     themeGet,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
@@ -48,7 +48,7 @@ export const StyledBullet = styled(({ bg, ...rest }) => (
     height: 7px;
     margin-right: 5px;
     width: 7px;
-    ${color};
+    ${colorStyle};
 `;
 
 export const StyledListText = styled.span`
@@ -87,13 +87,13 @@ export const StyleTitle = styled.h6`
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
-    color: ${themeGet("color.text2")};
+    color: ${themeGet("colors.text2")};
     margin-bottom: 2px;
 `;
 
 export const StyledText = styled.p`
     font-size: 10px;
-    color: ${themeGet("color.text3")};
+    color: ${themeGet("colors.text3")};
     margin-bottom: 0px;
     span {
         font-weight: 500;
@@ -101,4 +101,10 @@ export const StyledText = styled.p`
     i {
         font-size: 8px;
     }
+`;
+
+export const StyledRate = styled(({ ...rest }) => (
+    <span {...rest} />
+))<ColorProps>`
+    ${colorStyle}
 `;

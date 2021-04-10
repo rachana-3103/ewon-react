@@ -7,11 +7,16 @@ import {
     MediaBody,
     Avatar,
     AvatarInitial,
-    Heading,
-    Text,
     Progress,
 } from "@doar/components";
-import { StyledHeader, StyledDiv } from "./style";
+import {
+    StyledHeader,
+    StyledDiv,
+    StyledTitle,
+    StyledRole,
+    StyledDivLeft,
+    StyledDivRight,
+} from "./style";
 
 const AgentPoints: FC = () => {
     return (
@@ -25,12 +30,8 @@ const AgentPoints: FC = () => {
                         <AvatarInitial>D</AvatarInitial>
                     </Avatar>
                     <MediaBody ml="15px">
-                        <Heading fontSize="13px" mb="2px">
-                            Katherine Lumaad
-                        </Heading>
-                        <Text color="text3" mb="10px" fontSize="12px">
-                            Technical Support
-                        </Text>
+                        <StyledTitle>Katherine Lumaad</StyledTitle>
+                        <StyledRole>Technical Support</StyledRole>
                         <Progress
                             now={85}
                             bg="primary"
@@ -39,12 +40,8 @@ const AgentPoints: FC = () => {
                             mb="4px"
                         />
                         <StyledDiv>
-                            <Text as="span" color="text3">
-                                Executive Level
-                            </Text>
-                            <Text as="span" fontWeight="500">
-                                12,312 points
-                            </Text>
+                            <StyledDivLeft>Executive Level</StyledDivLeft>
+                            <StyledDivRight>12,312 points</StyledDivRight>
                         </StyledDiv>
                     </MediaBody>
                 </Media>
@@ -53,12 +50,8 @@ const AgentPoints: FC = () => {
                         <AvatarInitial>D</AvatarInitial>
                     </Avatar>
                     <MediaBody ml="15px">
-                        <Heading fontSize="13px" mb="2px">
-                            Adrian Monino
-                        </Heading>
-                        <Text color="text3" mb="10px" fontSize="12px">
-                            Sales Representative
-                        </Text>
+                        <StyledTitle>Adrian Monino</StyledTitle>
+                        <StyledRole>Sales Representative</StyledRole>
                         <Progress
                             now={60}
                             bg="success"
@@ -67,12 +60,8 @@ const AgentPoints: FC = () => {
                             mb="4px"
                         />
                         <StyledDiv>
-                            <Text as="span" color="text3">
-                                Master Level
-                            </Text>
-                            <Text as="span" fontWeight="500">
-                                10,044 points
-                            </Text>
+                            <StyledDivLeft>Master Level</StyledDivLeft>
+                            <StyledDivRight>10,044 points</StyledDivRight>
                         </StyledDiv>
                     </MediaBody>
                 </Media>
@@ -81,12 +70,8 @@ const AgentPoints: FC = () => {
                         <AvatarInitial>D</AvatarInitial>
                     </Avatar>
                     <MediaBody ml="15px">
-                        <Heading fontSize="13px" mb="2px">
-                            Rolando Paloso
-                        </Heading>
-                        <Text color="text3" mb="10px" fontSize="12px">
-                            Software Support
-                        </Text>
+                        <StyledTitle>Rolando Paloso</StyledTitle>
+                        <StyledRole>Software Support</StyledRole>
                         <Progress
                             now={45}
                             bg="indigo"
@@ -95,12 +80,8 @@ const AgentPoints: FC = () => {
                             mb="4px"
                         />
                         <StyledDiv>
-                            <Text as="span" color="text3">
-                                Super Elite Level
-                            </Text>
-                            <Text as="span" fontWeight="500">
-                                7,500 points
-                            </Text>
+                            <StyledDivLeft>Super Elite Level</StyledDivLeft>
+                            <StyledDivRight>7,500 points</StyledDivRight>
                         </StyledDiv>
                     </MediaBody>
                 </Media>
@@ -109,12 +90,8 @@ const AgentPoints: FC = () => {
                         <AvatarInitial>D</AvatarInitial>
                     </Avatar>
                     <MediaBody ml="15px">
-                        <Heading fontSize="13px" mb="2px">
-                            Dyanne Rose Aceron
-                        </Heading>
-                        <Text color="text3" mb="10px" fontSize="12px">
-                            Sales Representative
-                        </Text>
+                        <StyledTitle>Dyanne Rose Aceron</StyledTitle>
+                        <StyledRole>Sales Representative</StyledRole>
                         <Progress
                             now={40}
                             bg="pink"
@@ -123,12 +100,8 @@ const AgentPoints: FC = () => {
                             mb="4px"
                         />
                         <StyledDiv>
-                            <Text as="span" color="text3">
-                                Elite Level
-                            </Text>
-                            <Text as="span" fontWeight="500">
-                                6,870 points
-                            </Text>
+                            <StyledDivLeft>Elite Level</StyledDivLeft>
+                            <StyledDivRight>6,870 points</StyledDivRight>
                         </StyledDiv>
                     </MediaBody>
                 </Media>

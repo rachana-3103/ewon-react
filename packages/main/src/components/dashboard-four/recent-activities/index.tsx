@@ -7,6 +7,7 @@ import {
     StyledListItem,
     StyledIcon,
     StyledBody,
+    StyledDate,
 } from "./style";
 
 const RecentActivities: FC = () => {
@@ -32,7 +33,7 @@ const RecentActivities: FC = () => {
                                     <strong>Sales Revenue</strong>
                                 </Anchor>
                             </Text>
-                            <Text as="small">2 hours ago</Text>
+                            <StyledDate>2 hours ago</StyledDate>
                         </StyledBody>
                     </StyledListItem>
                     <StyledListItem>
@@ -47,7 +48,7 @@ const RecentActivities: FC = () => {
                                     <strong>Software Bug Reporting</strong>
                                 </Anchor>
                             </Text>
-                            <Text as="small">5 hours ago</Text>
+                            <StyledDate>5 hours ago</StyledDate>
                         </StyledBody>
                     </StyledListItem>
                     <StyledListItem>
@@ -62,7 +63,7 @@ const RecentActivities: FC = () => {
                                 </Anchor>
                                 to <strong>Katherine</strong>
                             </Text>
-                            <Text as="small">8 hours ago</Text>
+                            <StyledDate>8 hours ago</StyledDate>
                         </StyledBody>
                     </StyledListItem>
                     <StyledListItem>
@@ -76,7 +77,7 @@ const RecentActivities: FC = () => {
                                     <strong>Payment Method</strong>
                                 </Anchor>
                             </Text>
-                            <Text as="small">Yesterday</Text>
+                            <StyledDate>Yesterday</StyledDate>
                         </StyledBody>
                     </StyledListItem>
                     <StyledListItem>
@@ -91,7 +92,7 @@ const RecentActivities: FC = () => {
                                     <strong>Payment &amp; Invoice</strong>
                                 </Anchor>
                             </Text>
-                            <Text as="small">2 days ago</Text>
+                            <StyledDate>2 days ago</StyledDate>
                         </StyledBody>
                     </StyledListItem>
                 </StyledList>

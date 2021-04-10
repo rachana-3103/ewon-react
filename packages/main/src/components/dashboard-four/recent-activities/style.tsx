@@ -68,3 +68,7 @@ export const StyledBody = styled.div`
         font-weight: 500;
     }
 `;
+
+export const StyledDate = styled.small`
+    color: ${themeGet("colors.text3")};
+`;

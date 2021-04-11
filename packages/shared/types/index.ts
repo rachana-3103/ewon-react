@@ -27,6 +27,14 @@ export interface IMenu {
     megamenu?: IMegamenu[];
 }
 
+export interface IChart {
+    options: {
+        [x: string]: unknown;
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    series: any[];
+}
+
 export interface IConversion {
     id: number;
     title: string;
@@ -36,13 +44,7 @@ export interface IConversion {
         growth: "up" | "down";
         time: string;
     };
-    chart?: {
-        options: {
-            [x: string]: unknown;
-        };
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        series: any[];
-    };
+    chart?: IChart;
 }
 
 export interface IWatchlist {
@@ -55,11 +57,14 @@ export interface IWatchlist {
     coinStatus: "up" | "down";
     color?: string;
     markets?: number[];
-    chart?: {
-        options: {
-            [x: string]: unknown;
-        };
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        series: any[];
-    };
+    chart?: IChart;
+}
+
+export interface IRadial {
+    id: number;
+    title: string;
+    desc: string;
+    min: string;
+    sec: string;
+    chart: IChart;
 }

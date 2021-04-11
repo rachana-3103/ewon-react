@@ -11,6 +11,7 @@ import {
     ApexAreaChart,
     ApexPieChart,
     ApexDonutChart,
+    ApexRadialChart,
 } from "./apexchart";
 import ApexChart from "react-apexcharts";
 import {
@@ -20,6 +21,7 @@ import {
     ApexAreaData,
     ApexThresholdsData,
     ApexPieData,
+    ApexRadialData,
 } from "@doar/shared/data/apexcharts";
 
 <Meta title="Charts/ApexCharts" />
@@ -130,6 +132,21 @@ The default donut chart.
         <ApexDonutChart
             options={ApexPieData.options}
             series={ApexPieData.series}
+            width={510}
+            height={300}
+        />
+    </Story>
+</Preview>
+
+## Radial Chart
+
+The default Radial chart.
+
+<Preview withToolbar>
+    <Story name="Radial Chart">
+        <ApexRadialChart
+            options={ApexRadialData.options}
+            series={ApexRadialData.series}
             width={510}
             height={300}
         />

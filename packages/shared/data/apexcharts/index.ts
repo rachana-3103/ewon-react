@@ -4,6 +4,7 @@ import { ApexLineData } from "./line-chart";
 import { ApexAreaData } from "./area-chart";
 import { ApexThresholdsData } from "./thresholds";
 import { ApexPieData } from "./pie-chart";
+import { ApexRadialData } from "./radial-chart";
 
 export {
     ApexBarData,
@@ -12,4 +13,5 @@ export {
     ApexAreaData,
     ApexThresholdsData,
     ApexPieData,
+    ApexRadialData,
 };

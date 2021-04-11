@@ -100,3 +100,20 @@ export const ApexDonutChart: FC<IProps> = ({
         />
     );
 };
+
+export const ApexRadialChart: FC<IProps> = ({
+    options,
+    series,
+    width,
+    height,
+}) => {
+    return (
+        <ApexChart
+            type="radialBar"
+            options={options}
+            series={series}
+            height={height}
+            width={width}
+        />
+    );
+};

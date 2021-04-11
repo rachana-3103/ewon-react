@@ -2,16 +2,13 @@ import styled, { device } from "@doar/shared/styled";
 import { Button } from "@doar/components";
 
 export const StyledWelcomeArea = styled.div`
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     ${device.medium} {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     ${device.large} {
-        margin-bottom: 25px;
-    }
-    ${device.xlarge} {
         margin-bottom: 30px;
     }
 `;

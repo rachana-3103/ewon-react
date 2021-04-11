@@ -20,7 +20,7 @@ type IProps = Omit<IRadial, "id">;
 const RadialPercentage: FC<IProps> = ({ title, desc, min, sec, chart }) => {
     return (
         <Card>
-            <CardBody>
+            <CardBody position="relative">
                 <Media display={["block", "flex"]} alignItems="center">
                     <StyledChart>
                         <ApexRadialChart
@@ -30,7 +30,7 @@ const RadialPercentage: FC<IProps> = ({ title, desc, min, sec, chart }) => {
                             height={140}
                         />
                     </StyledChart>
-                    <MediaBody>
+                    <MediaBody mt={["20px", 0]}>
                         <StyledTitle>{title}</StyledTitle>
                         <StyledDesc>{desc}</StyledDesc>
                         <StyledMinutes>

@@ -54,14 +54,20 @@ export const StyledBullet = styled(({ bg, ...rest }) => (
 export const StyledListText = styled.span`
     font-size: 10px;
     text-transform: uppercase;
-    font-family: ${themeGet("fonts.interUi")};
     font-weight: 500;
     color: ${themeGet("colors.text3")};
+    span {
+        display: none;
+        ${device.medium} {
+            display: inline-block;
+        }
+    }
 `;
 
 export const StyledChart = styled.div`
     width: 100%;
     height: 219px;
+    margin-top: -4px;
     & > div {
         margin-left: -14px;
         margin-right: -11px;

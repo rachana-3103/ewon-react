@@ -2,6 +2,7 @@ import styled, {
     themeGet,
     color as colorStyles,
     ColorProps,
+    device,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
 
@@ -17,7 +18,7 @@ export const StyledSpan = styled.span`
     font-size: 13px;
     color: ${themeGet("colors.text3")};
     i {
-        font-size: 12px;
+        font-size: 10px;
     }
 `;
 
@@ -66,6 +67,15 @@ export const StyledChart = styled.div`
     & > div {
         margin-left: -9px;
         margin-right: -7px;
+    }
+    ${device.medium} {
+        height: 283px;
+    }
+    ${device.large} {
+        height: 180px;
+    }
+    ${device.xlarge} {
+        height: 205px;
     }
     .apexcharts-xaxis {
         &-label {

@@ -6,6 +6,7 @@ import styled, {
     TypographyProps,
     border,
     BorderProps,
+    themeGet,
 } from "@doar/shared/styled";
 import { CardHeader, Table } from "@doar/components";
 
@@ -32,7 +33,7 @@ export const StyledNumb = styled.h1`
 
 export const StyledRate = styled.p`
     font-size: 11px;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 0px;
     span {
         font-weight: 500;
@@ -47,7 +48,7 @@ export const StyledTitle = styled.h6`
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     margin-bottom: 15px;
 `;
 
@@ -85,6 +86,7 @@ export const StyledProgressBar = styled(({ ...rest }) => (
 `;
 
 export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
+    font-size: 13px;
     tbody {
         tr:first-of-type {
             td {
@@ -100,7 +102,7 @@ export const StyledTD = styled(
     ({ fontWeight, fontFamily, textAlign, color, ...rest }) => <td {...rest} />
 )<ITD>`
     line-height: 1 !important;
-    padding: 8px 0 7px !important;
+    padding: 8px 0 !important;
     &:first-of-type {
         padding-left: 0 !important;
     }

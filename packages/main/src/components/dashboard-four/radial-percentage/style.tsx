@@ -1,4 +1,4 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, device } from "@doar/shared/styled";
 
 export const StyledChart = styled.div`
     margin-top: -13px;
@@ -14,9 +14,9 @@ export const StyledChart = styled.div`
         font-weight: 500;
         text-transform: uppercase;
     }
-    & > div {
-        margin-left: -94px;
+    ${device.small} {
         margin-right: -75px;
+        margin-left: -94px;
     }
 `;
 

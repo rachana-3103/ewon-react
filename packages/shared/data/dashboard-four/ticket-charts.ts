@@ -28,6 +28,13 @@ const data = {
                 show: false,
             },
         },
+        states: {
+            hover: {
+                filter: {
+                    type: "none",
+                },
+            },
+        },
         dataLabels: {
             enabled: false,
         },

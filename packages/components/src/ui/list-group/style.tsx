@@ -46,7 +46,7 @@ export const StyledListGroupItem = styled(
     padding: 10px 15px;
     position: relative;
     display: block;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid ${themeGet("colors.light")};
     &:first-child {
         border-top-left-radius: 0.25rem;

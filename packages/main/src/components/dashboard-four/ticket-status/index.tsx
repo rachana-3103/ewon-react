@@ -37,15 +37,21 @@ const TicketStatus: FC = () => {
                 <StyledList>
                     <StyledListItem>
                         <StyledBullet bg="gray400" />
-                        <StyledListText>New Tickets</StyledListText>
+                        <StyledListText>
+                            New <span>Tickets</span>
+                        </StyledListText>
                     </StyledListItem>
                     <StyledListItem>
                         <StyledBullet bg="malibu" />
-                        <StyledListText>Solved Tickets</StyledListText>
+                        <StyledListText>
+                            Solved <span>Tickets</span>
+                        </StyledListText>
                     </StyledListItem>
                     <StyledListItem>
                         <StyledBullet bg="primary" />
-                        <StyledListText>Open Tickets</StyledListText>
+                        <StyledListText>
+                            Open <span>Tickets</span>
+                        </StyledListText>
                     </StyledListItem>
                 </StyledList>
             </StyledHeader>

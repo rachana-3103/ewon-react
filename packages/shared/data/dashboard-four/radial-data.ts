@@ -1,37 +1,57 @@
 import { IRadial } from "../../types";
 
+const chartOptions = {
+    chart: {
+        sparkline: {
+            enabled: true,
+        },
+    },
+    states: {
+        hover: {
+            filter: {
+                type: "none",
+            },
+        },
+    },
+    plotOptions: {
+        radialBar: {
+            hollow: {
+                size: "65%",
+            },
+            dataLabels: {
+                showOn: "always",
+                name: {
+                    offsetY: 20,
+                    show: true,
+                    color: "#8392a5",
+                    fontSize: "9px",
+                },
+                value: {
+                    offsetY: -10,
+                    color: "#001737",
+                    fontSize: "1.53125rem",
+                    show: true,
+                },
+            },
+        },
+    },
+    labels: ["Reached"],
+    responsive: [
+        {
+            breakpoint: "576px",
+            options: {
+                chart: {
+                    offsetX: -78,
+                },
+            },
+        },
+    ],
+};
+
 const chart1 = {
     series: [86],
     options: {
-        chart: {
-            sparkline: {
-                enabled: true,
-            },
-        },
-        plotOptions: {
-            radialBar: {
-                hollow: {
-                    size: "65%",
-                },
-
-                dataLabels: {
-                    showOn: "always",
-                    label: "Reached",
-                    name: {
-                        offsetY: 20,
-                        show: true,
-                        color: "#8392a5",
-                        fontSize: "9px",
-                    },
-                    value: {
-                        offsetY: -10,
-                        color: "#001737",
-                        fontSize: "1.53125rem",
-                        show: true,
-                    },
-                },
-            },
-        },
+        ...chartOptions,
         colors: ["#65e0e0"],
     },
 };
@@ -39,35 +59,7 @@ const chart1 = {
 const chart2 = {
     series: [69],
     options: {
-        chart: {
-            sparkline: {
-                enabled: true,
-            },
-        },
-        plotOptions: {
-            radialBar: {
-                hollow: {
-                    size: "65%",
-                },
-
-                dataLabels: {
-                    showOn: "always",
-                    label: "Reached",
-                    name: {
-                        offsetY: 20,
-                        show: true,
-                        color: "#8392a5",
-                        fontSize: "9px",
-                    },
-                    value: {
-                        offsetY: -10,
-                        color: "#001737",
-                        fontSize: "1.53125rem",
-                        show: true,
-                    },
-                },
-            },
-        },
+        ...chartOptions,
         colors: ["#69b2f8"],
     },
 };
@@ -78,7 +70,7 @@ const RadialData: IRadial[] = [
         title: "Time to Resolved Complaint",
         desc: "The average time taken to resolve complaints.",
         min: "7m:32s",
-        sec: "8m:0s",
+        sec: "Goal: 8m:0s",
         chart: chart1,
     },
     {

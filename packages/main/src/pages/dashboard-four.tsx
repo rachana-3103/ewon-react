@@ -7,6 +7,7 @@ import LeftRowTwo from "../containers/dashboard-four/left-row-two";
 import LeftRowThree from "../containers/dashboard-four/left-row-three";
 import RightRowOne from "../containers/dashboard-four/right-row-one";
 import RightRowTwo from "../containers/dashboard-four/right-row-two";
+import RightRowhree from "../containers/dashboard-four/right-row-three";
 import RightRowFour from "../containers/dashboard-four/right-row-four";
 
 const DashboardFour: React.FC = () => {
@@ -25,6 +26,7 @@ const DashboardFour: React.FC = () => {
                     <Row gutters={10}>
                         <RightRowOne />
                         <RightRowTwo />
+                        <RightRowhree />
                         <RightRowFour />
                     </Row>
                 </Col>

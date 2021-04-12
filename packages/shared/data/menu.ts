@@ -108,7 +108,7 @@ const menus = [
                     {
                         id: 312,
                         label: "Sign Up",
-                        url: "/",
+                        url: "/signup",
                         Icon: UserPlus,
                     },
                     {

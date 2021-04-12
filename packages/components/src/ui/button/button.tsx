@@ -104,6 +104,17 @@ export const Button: FC<ButtonProps> = ({
         if (internal) {
             return (
                 <StyledLink
+                    $color={color}
+                    $variant={variant}
+                    $size={size}
+                    $shape={shape}
+                    $fullwidth={fullwidth}
+                    $active={active}
+                    disabled={disabled}
+                    $iconButton={iconButton}
+                    $hasIcon={hasIcon}
+                    aria-label={label}
+                    onClick={onClick}
                     className={classnames(className, "btn")}
                     to={path}
                     {...restProps}

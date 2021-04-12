@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     height: 100%;
@@ -24,7 +24,7 @@ export const StyledTitle = styled.h4`
 `;
 
 export const StyledDesc = styled.p`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 40px;
 `;
 
@@ -37,6 +37,6 @@ export const StyledBtnWrap = styled.div`
 `;
 
 export const StyledNote = styled.span`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     font-size: 12px;
 `;

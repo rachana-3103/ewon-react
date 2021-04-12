@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../layouts";
-import VerifyContainer from "../containers/verify";
+import VerifyContainer from "../containers/verify-account";
 
-const Verify: React.FC = () => {
+const VerifyAccount: React.FC = () => {
     return (
         <Layout className="auth-content-alt">
             <VerifyContainer />
@@ -10,4 +10,4 @@ const Verify: React.FC = () => {
     );
 };
 
-export default Verify;
+export default VerifyAccount;

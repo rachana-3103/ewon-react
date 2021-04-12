@@ -114,13 +114,13 @@ const menus = [
                     {
                         id: 313,
                         label: "Verify Account",
-                        url: "/verify",
+                        url: "/verify-account",
                         Icon: UserCheck,
                     },
                     {
                         id: 314,
                         label: "Forgot Password",
-                        url: "/",
+                        url: "/forgot-password",
                         Icon: ShieldOff,
                     },
                 ],

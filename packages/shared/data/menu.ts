@@ -132,7 +132,7 @@ const menus = [
                     {
                         id: 321,
                         label: "404 Page Not Found",
-                        url: "/",
+                        url: "/error-404",
                         Icon: File,
                     },
                     {

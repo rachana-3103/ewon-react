@@ -922,19 +922,19 @@ const buttonStyles = css<IProps>`
         `}
 `;
 
-export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
+export const StyledButton = styled(({ mt, mb, ml, mr, px, py, display, ...props }) => (
     <button type="button" {...props} />
 ))<IProps>`
     ${buttonStyles}
 `;
 
-export const StyledLink = styled(({ mt, mb, ml, mr, display, ...props }) => (
+export const StyledLink = styled(({ mt, mb, ml, mr, px, py, display, ...props }) => (
     <Link {...props} />
 ))<IProps>`
     ${buttonStyles}
 `;
 
-export const StyledAnchor = styled(({ mt, mb, ml, mr, display, ...props }) => (
+export const StyledAnchor = styled(({ mt, mb, ml, mr, px, py, display, ...props }) => (
     <a {...props} />
 ))<IProps>`
     ${buttonStyles}

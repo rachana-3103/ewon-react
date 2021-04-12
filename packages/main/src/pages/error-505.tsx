@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../layouts";
-import ErrorContainer from "../containers/error-503";
+import ErrorContainer from "../containers/error-505";
 
-const Error505: React.FC = () => {
+const Error503: React.FC = () => {
     return (
         <Layout className="auth-content-alt">
             <ErrorContainer />
@@ -10,4 +10,4 @@ const Error505: React.FC = () => {
     );
 };
 
-export default Error505;
+export default Error503;

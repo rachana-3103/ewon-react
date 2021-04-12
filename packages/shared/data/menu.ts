@@ -150,7 +150,7 @@ const menus = [
                     {
                         id: 324,
                         label: "505 Forbidden",
-                        url: "/",
+                        url: "/error-505",
                         Icon: File,
                     },
                 ],

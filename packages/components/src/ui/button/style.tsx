@@ -4,14 +4,16 @@ import styled, {
     css,
     space,
     layout,
+    border as borderStyle,
     themeGet,
     SpaceProps,
     LayoutProps,
+    BorderProps,
 } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 import { Link } from "react-router-dom";
 
-interface IProps extends SpaceProps, LayoutProps {
+interface IProps extends SpaceProps, LayoutProps, BorderProps {
     $variant?: "contained" | "outlined" | "texted";
     $color?:
         | "primary"
@@ -53,8 +55,6 @@ const buttonStyles = css<IProps>`
     &:focus {
         outline: none;
     }
-    ${space};
-    ${layout};
     ${(props) =>
         props.$variant === "contained" &&
         props.$color === "primary" &&
@@ -920,10 +920,13 @@ const buttonStyles = css<IProps>`
                 margin-right: 7px;
             }
         `}
+	${space};
+    ${layout};
+    ${borderStyle};
 `;
 
 export const StyledButton = styled(
-    ({ mt, mb, ml, mr, px, py, display, ...props }) => (
+    ({ mt, mb, ml, mr, px, py, display, borderWidth, ...props }) => (
         <button type="button" {...props} />
     )
 )<IProps>`
@@ -931,13 +934,17 @@ export const StyledButton = styled(
 `;
 
 export const StyledLink = styled(
-    ({ mt, mb, ml, mr, px, py, display, ...props }) => <Link {...props} />
+    ({ mt, mb, ml, mr, px, py, display, borderWidth, ...props }) => (
+        <Link {...props} />
+    )
 )<IProps>`
     ${buttonStyles}
 `;
 
 export const StyledAnchor = styled(
-    ({ mt, mb, ml, mr, px, py, display, ...props }) => <a {...props} />
+    ({ mt, mb, ml, mr, px, py, display, borderWidth, ...props }) => (
+        <a {...props} />
+    )
 )<IProps>`
     ${buttonStyles}
 `;

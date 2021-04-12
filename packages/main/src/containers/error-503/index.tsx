@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button } from "@doar/components";
-import image from "../../images/img20.png";
+import image from "../../images/img21.png";
 import {
     StyledWrap,
     StyledImg,
@@ -17,16 +17,16 @@ const ErrorContainer: FC = () => {
             <StyledImg>
                 <img src={image} alt="500" />
             </StyledImg>
-            <StyledTitle>500 Internal Server Error</StyledTitle>
+            <StyledTitle>503 Service Unavailable</StyledTitle>
             <StyledSubTitle>
-                Oopps. There was an error, please try again later.
+                Oopps. The service is temporarily unavailable.
             </StyledSubTitle>
             <StyledDesc>
-                The server encountered an internal server error and was unable
-                to complete your request.
+                The server is unable to service your request due to maintenance
+                downtime or capacity problems.
             </StyledDesc>
             <StyledBtnWrap>
-                <Button path="/" color="white" px="30px">
+                <Button path="/" color="white" px="30px" borderWidth="2px">
                     Back to Home
                 </Button>
             </StyledBtnWrap>

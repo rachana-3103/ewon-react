@@ -144,7 +144,7 @@ const menus = [
                     {
                         id: 323,
                         label: "503 Service Unavailable",
-                        url: "/",
+                        url: "/error-503",
                         Icon: File,
                     },
                     {

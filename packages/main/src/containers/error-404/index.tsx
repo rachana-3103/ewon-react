@@ -11,7 +11,7 @@ import {
     StyledNote,
 } from "./style";
 
-const PasswordContainer: FC = () => {
+const ErrorContainer: FC = () => {
     return (
         <StyledWrap>
             <StyledImg>
@@ -56,4 +56,4 @@ const PasswordContainer: FC = () => {
     );
 };
 
-export default PasswordContainer;
+export default ErrorContainer;

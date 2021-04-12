@@ -1,10 +1,10 @@
 /* eslint-disable react/button-has-type */
 import { FC } from "react";
 import classnames from "classnames";
-import { SpaceProps, LayoutProps } from "@doar/shared/styled";
+import { SpaceProps, LayoutProps, BorderProps } from "@doar/shared/styled";
 import { StyledButton, StyledAnchor, StyledLink } from "./style";
 
-export interface ButtonProps extends SpaceProps, LayoutProps {
+export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps {
     /**
      * Required.
      */

@@ -280,27 +280,23 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
             background-color: ${themeGet("colors.dark")};
             border-color: ${themeGet("colors.dark")};
             &:hover {
-                background-color: ${tinycolor2(
-                    themeGet("colors.darkdark")(props)
-                )
+                background-color: ${tinycolor2(themeGet("colors.dark")(props))
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.darkdark")(props))
+                border-color: ${tinycolor2(themeGet("colors.dark")(props))
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
-                background-color: ${tinycolor2(
-                    themeGet("colors.darkdark")(props)
-                )
+                background-color: ${tinycolor2(themeGet("colors.dark")(props))
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.darkdark")(props))
+                border-color: ${tinycolor2(themeGet("colors.dark")(props))
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.darkdark")(props))
+                    ${tinycolor2(themeGet("colors.dark")(props))
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -327,6 +323,94 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
                 border-color: ${themeGet("colors.text3")};
                 color: ${themeGet("colors.text2")};
                 box-shadow: none;
+            }
+        `}
+
+	${(props) =>
+        props.$variant === "contained" &&
+        props.$color === "brand2" &&
+        css`
+            color: #fff;
+            background-color: ${themeGet("colors.brand2")};
+            border-color: ${themeGet("colors.brand2")};
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: ${themeGet("colors.science")};
+                background-color: ${themeGet("colors.science")};
+                color: #fff;
+                box-shadow: none;
+            }
+        `}
+	${(props) =>
+        props.$variant === "contained" &&
+        props.$color === "facebook" &&
+        css`
+            background-color: ${themeGet("colors.facebook")};
+            border-color: ${themeGet("colors.facebook")};
+            color: #fff;
+            &:hover {
+                background-color: ${tinycolor2(
+                    themeGet("colors.facebook")(props)
+                )
+                    .darken(10)
+                    .toString()};
+                border-color: ${tinycolor2(themeGet("colors.facebook")(props))
+                    .darken(14)
+                    .toString()};
+                color: #fff;
+            }
+            &:active,
+            &:focus {
+                color: #fff;
+                background-color: ${tinycolor2(
+                    themeGet("colors.facebook")(props)
+                )
+                    .darken(10)
+                    .toString()};
+                border-color: ${tinycolor2(themeGet("colors.facebook")(props))
+                    .darken(14)
+                    .toString()};
+                box-shadow: 0 0 0 0.2rem
+                    ${tinycolor2(themeGet("colors.facebook")(props))
+                        .setAlpha(0.5)
+                        .toRgbString()};
+            }
+        `}
+	${(props) =>
+        props.$variant === "contained" &&
+        props.$color === "twitter" &&
+        css`
+            background-color: ${themeGet("colors.twitter")};
+            border-color: ${themeGet("colors.twitter")};
+            color: #fff;
+            &:hover {
+                background-color: ${tinycolor2(
+                    themeGet("colors.twitter")(props)
+                )
+                    .darken(10)
+                    .toString()};
+                border-color: ${tinycolor2(themeGet("colors.twitter")(props))
+                    .darken(14)
+                    .toString()};
+                color: #fff;
+            }
+            &:active,
+            &:focus {
+                color: #fff;
+                background-color: ${tinycolor2(
+                    themeGet("colors.twitter")(props)
+                )
+                    .darken(10)
+                    .toString()};
+                border-color: ${tinycolor2(themeGet("colors.twitter")(props))
+                    .darken(14)
+                    .toString()};
+                box-shadow: 0 0 0 0.2rem
+                    ${tinycolor2(themeGet("colors.twitter")(props))
+                        .setAlpha(0.5)
+                        .toRgbString()};
             }
         `}
 
@@ -521,6 +605,69 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
             }
         `}
 
+	${(props) =>
+        props.$variant === "outlined" &&
+        props.$color === "barnd2" &&
+        css`
+            color: ${themeGet("colors.barnd2")};
+            border-color: ${themeGet("colors.barnd2")};
+            &:hover {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.barnd2")};
+                background-color: ${themeGet("colors.barnd2")};
+            }
+            &:active,
+            &:focus {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.barnd2")};
+                background-color: ${themeGet("colors.barnd2")};
+                box-shadow: 0 0 0 0.2rem
+                    ${tinycolor2(themeGet("colors.barnd2")(props))
+                        .setAlpha(0.5)
+                        .toRgbString()};
+            }
+        `}
+
+	${(props) =>
+        props.$variant === "outlined" &&
+        props.$color === "facebook" &&
+        css`
+            color: ${themeGet("colors.facebook")};
+            border-color: ${themeGet("colors.facebook")};
+            &:hover {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.facebook")};
+                background-color: ${themeGet("colors.facebook")};
+            }
+            &:active,
+            &:focus {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.facebook")};
+                background-color: ${themeGet("colors.facebook")};
+                box-shadow: none;
+            }
+        `}
+
+	
+	${(props) =>
+        props.$variant === "outlined" &&
+        props.$color === "twitter" &&
+        css`
+            color: ${themeGet("colors.twitter")};
+            border-color: ${themeGet("colors.twitter")};
+            &:hover {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.twitter")};
+                background-color: ${themeGet("colors.twitter")};
+            }
+            &:active,
+            &:focus {
+                color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.twitter")};
+                background-color: ${themeGet("colors.twitter")};
+                box-shadow: none;
+            }
+        `}
 
     ${({ $size }) =>
         $size === "xs" &&

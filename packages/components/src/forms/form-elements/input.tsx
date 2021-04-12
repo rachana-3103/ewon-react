@@ -9,6 +9,7 @@ interface IProps {
     feedbackText?: string;
     id: string;
     name: string;
+    placeholder?: string;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 

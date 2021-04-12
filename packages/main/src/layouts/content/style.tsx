@@ -10,4 +10,13 @@ export const StyledContent = styled.div`
     ${device.xlarge} {
         padding: 30px;
     }
+    &.auth-content {
+        min-height: calc(100vh - 107px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & > .container {
+            flex: 1;
+        }
+    }
 `;

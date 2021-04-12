@@ -29,7 +29,10 @@ export interface ButtonProps extends SpaceProps, LayoutProps {
         | "info"
         | "light"
         | "dark"
-        | "white";
+        | "white"
+        | "brand2"
+        | "facebook"
+        | "twitter";
     /**
      * Optional. Default is `md`.
      */

@@ -48,6 +48,9 @@ export const theme = {
         lightblue: "#a5d7fd",
         brand2: "#042893",
         shuttle: "#5c6c7f",
+        science: "#063cdd",
+        facebook: "#4064ac",
+        twitter: "#00a7e6",
     },
     fontSize: {
         body: "0.875rem",

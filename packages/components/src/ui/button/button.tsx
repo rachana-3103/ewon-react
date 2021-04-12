@@ -2,7 +2,7 @@
 import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps, LayoutProps } from "@doar/shared/styled";
-import { StyledButton } from "./style";
+import { StyledButton, StyledAnchor, StyledLink } from "./style";
 
 export interface ButtonProps extends SpaceProps, LayoutProps {
     /**
@@ -73,26 +73,89 @@ export interface ButtonProps extends SpaceProps, LayoutProps {
      * Optional. Extra Class Name
      */
     className?: string;
+    /**
+     * Pass `path` to make link button
+     */
+    path?: string;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
-    const {
-        children,
-        type,
-        variant,
-        color,
-        size,
-        shape,
-        fullwidth,
-        active,
-        disabled,
-        iconButton,
-        hasIcon,
-        label,
-        onClick,
-        className,
-        ...restProps
-    } = props;
+export const Button: FC<ButtonProps> = ({
+    children,
+    type,
+    variant,
+    color,
+    size,
+    shape,
+    fullwidth,
+    active,
+    disabled,
+    iconButton,
+    hasIcon,
+    label,
+    onClick,
+    className,
+    path,
+    ...restProps
+}) => {
+    if (path) {
+        const internal: boolean = /^\/(?!\/)/.test(path);
+        const isHash: boolean = path?.startsWith("#");
+
+        if (internal) {
+            return (
+                <StyledLink
+                    className={classnames(className, "btn")}
+                    to={path}
+                    {...restProps}
+                >
+                    {label && <span className="sr-only">{label}</span>}
+                    <span>{children}</span>
+                </StyledLink>
+            );
+        }
+        if (isHash) {
+            return (
+                <StyledAnchor
+                    $color={color}
+                    $variant={variant}
+                    $size={size}
+                    $shape={shape}
+                    $fullwidth={fullwidth}
+                    $active={active}
+                    disabled={disabled}
+                    $iconButton={iconButton}
+                    $hasIcon={hasIcon}
+                    aria-label={label}
+                    onClick={onClick}
+                    className={classnames(className, "btn")}
+                    href={path}
+                    {...restProps}
+                >
+                    {children}
+                </StyledAnchor>
+            );
+        }
+        return (
+            <StyledAnchor
+                $color={color}
+                $variant={variant}
+                $size={size}
+                $shape={shape}
+                $fullwidth={fullwidth}
+                $active={active}
+                disabled={disabled}
+                $iconButton={iconButton}
+                $hasIcon={hasIcon}
+                aria-label={label}
+                onClick={onClick}
+                className={classnames(className, "btn")}
+                href={path}
+                {...restProps}
+            >
+                {children}
+            </StyledAnchor>
+        );
+    }
 
     return (
         <StyledButton

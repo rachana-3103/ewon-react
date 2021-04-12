@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, {
     css,
@@ -8,6 +9,7 @@ import styled, {
     LayoutProps,
 } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
+import { Link } from "react-router-dom";
 
 interface IProps extends SpaceProps, LayoutProps {
     $variant?: "contained" | "outlined" | "texted";
@@ -20,7 +22,10 @@ interface IProps extends SpaceProps, LayoutProps {
         | "info"
         | "light"
         | "dark"
-        | "white";
+        | "white"
+        | "brand2"
+        | "facebook"
+        | "twitter";
     $size?: "xs" | "sm" | "md" | "lg";
     $shape?: "rounded" | "square" | "ellipse";
     $fullwidth?: boolean;
@@ -30,9 +35,7 @@ interface IProps extends SpaceProps, LayoutProps {
     $hasIcon?: boolean;
 }
 
-export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
-    <button type="button" {...props} />
-))<IProps>`
+const buttonStyles = css<IProps>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -607,22 +610,22 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
 
 	${(props) =>
         props.$variant === "outlined" &&
-        props.$color === "barnd2" &&
+        props.$color === "brand2" &&
         css`
-            color: ${themeGet("colors.barnd2")};
-            border-color: ${themeGet("colors.barnd2")};
+            color: ${themeGet("colors.brand2")};
+            border-color: ${themeGet("colors.brand2")};
             &:hover {
                 color: ${themeGet("colors.white")};
-                border-color: ${themeGet("colors.barnd2")};
-                background-color: ${themeGet("colors.barnd2")};
+                border-color: ${themeGet("colors.brand2")};
+                background-color: ${themeGet("colors.brand2")};
             }
             &:active,
             &:focus {
                 color: ${themeGet("colors.white")};
-                border-color: ${themeGet("colors.barnd2")};
-                background-color: ${themeGet("colors.barnd2")};
+                border-color: ${themeGet("colors.brand2")};
+                background-color: ${themeGet("colors.brand2")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.barnd2")(props))
+                    ${tinycolor2(themeGet("colors.brand2")(props))
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -917,4 +920,22 @@ export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
                 margin-right: 7px;
             }
         `}
+`;
+
+export const StyledButton = styled(({ mt, mb, ml, mr, display, ...props }) => (
+    <button type="button" {...props} />
+))<IProps>`
+    ${buttonStyles}
+`;
+
+export const StyledLink = styled(({ mt, mb, ml, mr, display, ...props }) => (
+    <Link {...props} />
+))<IProps>`
+    ${buttonStyles}
+`;
+
+export const StyledAnchor = styled(({ mt, mb, ml, mr, display, ...props }) => (
+    <a {...props} />
+))<IProps>`
+    ${buttonStyles}
 `;

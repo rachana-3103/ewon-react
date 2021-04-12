@@ -5,6 +5,7 @@ const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
 const DashboardFour = lazy(() => import("./pages/dashboard-four"));
+const SignIn = lazy(() => import("./pages/signin"));
 
 const App: React.FC = () => {
     return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
                         path="/dashboard-four"
                         component={DashboardFour}
                     />
+                    <Route exact path="/signin" component={SignIn} />
                 </Switch>
             </Suspense>
         </Router>

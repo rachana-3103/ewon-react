@@ -20,17 +20,23 @@ interface IProps {
 }
 
 export const Navbar: React.FC<IProps> = ({ menus }) => {
-    const clickHandler = (e: React.MouseEvent) => {
-        const target = e.currentTarget as HTMLElement;
-        const submenu = target.querySelector(".submenu");
-        const siblings = getSiblings(target);
-        submenu?.classList.toggle("open");
-        siblings.forEach((sib) => {
-            sib.childNodes.forEach((child) => {
-                const childHT = child as HTMLElement;
-                childHT?.classList?.remove("open");
+    const clickHandler = (e: React.MouseEvent, hasChildren: boolean) => {
+        if (hasChildren) {
+            e.preventDefault();
+            let target = e.currentTarget as HTMLElement;
+            if (target.nodeName === "A") {
+                target = target.parentElement as HTMLElement;
+            }
+            const submenu = target.querySelector(".submenu");
+            const siblings = getSiblings(target);
+            submenu?.classList.toggle("open");
+            siblings.forEach((sib) => {
+                sib.childNodes.forEach((child) => {
+                    const childHT = child as HTMLElement;
+                    childHT?.classList?.remove("open");
+                });
             });
-        });
+        }
     };
     const onClose = useCallback(() => {
         const nav = document.querySelector(".navbar");
@@ -43,8 +49,6 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
         <StyledNavbar ref={containerRef} className="navbar">
             {menus &&
                 menus.map((nav: IMenu) => {
-                    const hasSubmenu = !!nav.submenu?.length;
-                    const hasMegamenu = !!nav.megamenu?.length;
                     const {
                         submenu,
                         megamenu,
@@ -52,17 +56,16 @@ export const Navbar: React.FC<IProps> = ({ menus }) => {
                         Icon: NavIcon,
                         label: navLabel,
                     } = nav;
+                    const hasSubmenu = !!submenu?.length;
+                    const hasMegamenu = !!megamenu?.length;
+                    const hasChildren = hasSubmenu || hasMegamenu;
                     return (
                         <StyledNavitem
-                            $hasSubmenu={hasSubmenu || hasMegamenu}
+                            $hasSubmenu={hasChildren}
                             key={navId}
-                            onClick={
-                                hasSubmenu || hasMegamenu
-                                    ? clickHandler
-                                    : () => {}
-                            }
+                            onClick={(e) => clickHandler(e, hasChildren)}
                         >
-                            <StyledNavlink path={nav.url}>
+                            <StyledNavlink path={hasChildren ? "#!" : nav.url}>
                                 {NavIcon && <NavIcon />}
                                 {navLabel}
                             </StyledNavlink>

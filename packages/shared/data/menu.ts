@@ -102,7 +102,7 @@ const menus = [
                     {
                         id: 311,
                         label: "Sign In",
-                        url: "/",
+                        url: "/signin",
                         Icon: LogIn,
                     },
                     {

@@ -106,7 +106,7 @@ export const StyledSubmenu = styled.ul`
     }
     ${device.large} {
         position: absolute;
-        top: 41.5px;
+        top: 37.5px;
         left: -25px;
         background-color: #fff;
         padding: 20px 25px;
@@ -161,7 +161,6 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
         width: 16px;
         height: 16px;
         margin-right: 15px;
-        fill: ${themeGet("colors.text")};
         display: none;
         ${device.large} {
             display: block;
@@ -184,7 +183,7 @@ export const StyledMegaMenu = styled.div`
     }
     ${device.large} {
         position: absolute;
-        top: 41.5px;
+        top: 37.5px;
         left: -25px;
         background-color: #fff;
         padding: 20px 25px;

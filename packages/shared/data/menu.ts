@@ -114,7 +114,7 @@ const menus = [
                     {
                         id: 313,
                         label: "Verify Account",
-                        url: "/",
+                        url: "/verify",
                         Icon: UserCheck,
                     },
                     {

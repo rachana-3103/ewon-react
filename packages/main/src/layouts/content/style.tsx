@@ -19,4 +19,10 @@ export const StyledContent = styled.div`
             flex: 1;
         }
     }
+    &.auth-content-alt {
+        min-height: calc(100vh - 107px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;

@@ -10,6 +10,7 @@ const SignUp = lazy(() => import("./pages/signup"));
 const VerifyAccount = lazy(() => import("./pages/verify-account"));
 const ForgotPassword = lazy(() => import("./pages/forgot-password"));
 const ErrorNotFound = lazy(() => import("./pages/error-404"));
+const Error500 = lazy(() => import("./pages/error-500"));
 
 const App: React.FC = () => {
     return (
@@ -44,7 +45,8 @@ const App: React.FC = () => {
                         path="/forgot-password"
                         component={ForgotPassword}
                     />
-                    <Route exact path="*" component={ErrorNotFound} />
+                    <Route exact path="/error-500" component={Error500} />
+                    <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>
         </Router>

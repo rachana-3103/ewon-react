@@ -138,7 +138,7 @@ const menus = [
                     {
                         id: 322,
                         label: "500 Internal Server",
-                        url: "/",
+                        url: "/error-500",
                         Icon: File,
                     },
                     {

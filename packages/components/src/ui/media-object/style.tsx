@@ -43,7 +43,7 @@ export const StyledMediaLeft = styled(({ width, mr, ml, ...props }) => (
 `;
 
 export const StyledMediaBody = styled(
-    ({ width, m, mr, ml, mt, mb, ...props }) => <div {...props} />
+    ({ width, m, mr, ml, mt, mb, px, ...props }) => <div {...props} />
 )<SpaceProps>`
     ${space};
     flex: 1;

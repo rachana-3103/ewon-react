@@ -162,7 +162,7 @@ const menus = [
                     {
                         id: 331,
                         label: "View Profile",
-                        url: "/",
+                        url: "/profile-view",
                         Icon: User,
                     },
                     {

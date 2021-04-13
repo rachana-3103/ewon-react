@@ -4,7 +4,7 @@ import VerifyContainer from "../containers/verify-account";
 
 const VerifyAccount: React.FC = () => {
     return (
-        <Layout className="auth-content-alt">
+        <Layout fullHeight align="center">
             <VerifyContainer />
         </Layout>
     );

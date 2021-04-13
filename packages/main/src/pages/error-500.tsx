@@ -4,7 +4,7 @@ import ErrorContainer from "../containers/error-500";
 
 const Error500: React.FC = () => {
     return (
-        <Layout className="auth-content-alt">
+        <Layout fullHeight align="center">
             <ErrorContainer />
         </Layout>
     );

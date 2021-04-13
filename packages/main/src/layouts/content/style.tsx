@@ -1,7 +1,11 @@
-/* eslint-disable react/react-in-jsx-scope */
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, space, SpaceProps, css } from "@doar/shared/styled";
 
-export const StyledContent = styled.div`
+interface IProps extends SpaceProps {
+    $fullHeight?: boolean;
+    $align: "top" | "center" | "bottom";
+}
+
+const conentCSS = css<IProps>`
     padding: 20px;
     ${device.large} {
         padding: 25px;
@@ -10,19 +14,29 @@ export const StyledContent = styled.div`
     ${device.xlarge} {
         padding: 30px;
     }
-    &.auth-content {
-        min-height: calc(100vh - 107px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        & > .container {
-            flex: 1;
-        }
-    }
-    &.auth-content-alt {
-        min-height: calc(100vh - 107px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    ${({ $fullHeight }) =>
+        $fullHeight &&
+        css`
+            min-height: calc(100vh - 107px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        `}
+
+    ${({ $align }) =>
+        $align !== "center" &&
+        css`
+            & > .container {
+                flex: 1;
+            }
+        `}
+    ${space};
+`;
+
+export const StyledContent = styled(
+    ({ p, px, py, m, mx, my, $fullHeight, $align, ...rest }) => (
+        <div {...rest} />
+    )
+)<IProps>`
+    ${conentCSS}
 `;

@@ -4,7 +4,7 @@ import PasswordContainer from "../containers/forgot-password";
 
 const ForgotPassword: React.FC = () => {
     return (
-        <Layout className="auth-content-alt">
+        <Layout fullHeight align="center">
             <PasswordContainer />
         </Layout>
     );

@@ -4,7 +4,7 @@ import AuthContainer from "../containers/signin";
 
 const SignIn: React.FC = () => {
     return (
-        <Layout className="auth-content">
+        <Layout fullHeight>
             <AuthContainer />
         </Layout>
     );

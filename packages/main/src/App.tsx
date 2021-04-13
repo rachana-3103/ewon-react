@@ -13,6 +13,7 @@ const ErrorNotFound = lazy(() => import("./pages/error-404"));
 const Error500 = lazy(() => import("./pages/error-500"));
 const Error503 = lazy(() => import("./pages/error-503"));
 const Error505 = lazy(() => import("./pages/error-505"));
+const ProfileView = lazy(() => import("./pages/profile-view"));
 
 const App: React.FC = () => {
     return (
@@ -50,6 +51,7 @@ const App: React.FC = () => {
                     <Route exact path="/error-500" component={Error500} />
                     <Route exact path="/error-503" component={Error503} />
                     <Route exact path="/error-505" component={Error505} />
+                    <Route exact path="/profile-view" component={ProfileView} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>

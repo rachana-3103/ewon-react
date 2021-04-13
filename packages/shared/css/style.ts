@@ -353,6 +353,7 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
         border-top: 1px solid ${theme.colors.border};
     }
+	
 `;
 
 export default GlobalStyle;

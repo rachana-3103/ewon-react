@@ -51,6 +51,7 @@ export const theme = {
         science: "#063cdd",
         facebook: "#4064ac",
         twitter: "#00a7e6",
+        shuttle2: "#566476",
     },
     fontSize: {
         body: "0.875rem",

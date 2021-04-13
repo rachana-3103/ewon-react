@@ -98,8 +98,6 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
             &:after {
                 content: "";
                 position: absolute;
-                width: 9px;
-                height: 9px;
                 right: 2px;
                 bottom: 2px;
                 border-radius: 100%;
@@ -140,7 +138,28 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
                 height: 7px;
             }
         `}
-    
+
+	${({ $size, $status }) =>
+        ($size === "default" || !$size) &&
+        Boolean($status) &&
+        css`
+            &:after {
+                width: 7px;
+                height: 7px;
+            }
+        `}
+
+	${({ $size, $status }) =>
+        $size === "md" &&
+        Boolean($status) &&
+        css`
+            &:after {
+                width: 9px;
+                height: 9px;
+            }
+        `}
+		
+
     ${({ $size, $status }) =>
         $size === "lg" &&
         Boolean($status) &&
@@ -148,6 +167,15 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
             &:after {
                 width: 10px;
                 height: 10px;
+            }
+        `}
+
+	${({ $size, $status, $shape }) =>
+        $size === "lg" &&
+        Boolean($status) &&
+        $shape === "circle" &&
+        css`
+            &:after {
                 bottom: 3px;
                 right: 4px;
             }
@@ -160,9 +188,40 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
             &:after {
                 width: 11px;
                 height: 11px;
+                box-shadow: 0 0 0 2.5px #fff;
+            }
+        `}
+
+	${({ $size, $status, $shape }) =>
+        $size === "xl" &&
+        Boolean($status) &&
+        $shape === "circle" &&
+        css`
+            &:after {
                 bottom: 4px;
                 right: 5px;
+            }
+        `}
+
+	${({ $size, $status }) =>
+        $size === "xxl" &&
+        Boolean($status) &&
+        css`
+            &:after {
+                width: 13px;
+                height: 13px;
                 box-shadow: 0 0 0 2.5px #fff;
+            }
+        `}
+
+	${({ $size, $status, $shape }) =>
+        $size === "xxl" &&
+        Boolean($status) &&
+        $shape === "circle" &&
+        css`
+            &:after {
+                bottom: 6px;
+                right: 7px;
             }
         `}
 

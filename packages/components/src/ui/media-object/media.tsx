@@ -18,6 +18,7 @@ export const Media: React.FC<IMediaProps> = ({
         <StyledMedia
             className={classnames(className, "media")}
             as={as}
+            $el={as}
             {...restProps}
         >
             {children}

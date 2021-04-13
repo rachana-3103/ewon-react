@@ -121,6 +121,10 @@ export const ResetCSS = createGlobalStyle`
         align-items: center;
         flex-wrap: wrap;
     }
+	#story--ui-images--image-controls{
+		overflow: hidden;
+		clear: both;
+	}
     input,
     select{
         box-sizing: border-box;
@@ -170,5 +174,11 @@ export const ResetCSS = createGlobalStyle`
         position: absolute;
         width: 1px;
     }
+	.clearfix{
+		clear: both;
+	}
+	.ov-hidden{
+		overflow: hidden;
+	}
 `;
 

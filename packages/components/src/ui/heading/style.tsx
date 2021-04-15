@@ -6,36 +6,46 @@ import styled, {
     SpaceProps,
     ColorProps,
     TypographyProps,
+    css,
 } from "@doar/shared/styled";
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps {}
+interface IProps extends SpaceProps, ColorProps, TypographyProps {
+    $tt?: string;
+}
 
-export const StyledHeading = styled(
-    ({
-        p,
-        px,
-        py,
-        pt,
-        pb,
-        pl,
-        pr,
-        m,
-        mx,
-        my,
-        mt,
-        mb,
-        ml,
-        mr,
-        color,
-        fontFamily,
-        fontSize,
-        fontWeight,
-        lineHeight,
-        letterSpacing,
-        textAlign,
-        ...rest
-    }) => <h6 {...rest} />
-)<IProps>`
+const props = [
+    "p",
+    "px",
+    "py",
+    "pt",
+    "pb",
+    "pl",
+    "pr",
+    "m",
+    "mx",
+    "my",
+    "mt",
+    "mb",
+    "ml",
+    "mr",
+    "color",
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "lineHeight",
+    "letterSpacing",
+    "textAlign",
+];
+
+export const StyledHeading = styled("h6").withConfig({
+    shouldForwardProp: (prop, defaultValidatorFn) =>
+        ![...props].includes(prop) && defaultValidatorFn(prop),
+})<IProps>`
+    ${({ $tt }) =>
+        $tt &&
+        css`
+            text-transform: ${$tt};
+        `}
     ${space};
     ${colorStyles};
     ${typography};

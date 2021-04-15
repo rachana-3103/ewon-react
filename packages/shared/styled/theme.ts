@@ -92,4 +92,10 @@ export const theme = {
     },
     breakpoints: [...breakpoints],
     transition: "all 0.4s ease 0s",
+    anchor: {
+        primary: {
+            color: "white",
+            bg: "red",
+        },
+    },
 };

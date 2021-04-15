@@ -9,12 +9,24 @@ import styled, {
     TypographyProps,
     LayoutProps,
     css,
+    themeGet,
 } from "@doar/shared/styled";
 import { Link } from "react-router-dom";
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {}
+interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
+    $variant?: "link3";
+}
 
-const anchorStyle = css`
+const anchorStyle = css<IProps>`
+    ${({ $variant }) =>
+        $variant === "link3" &&
+        css`
+            color: ${themeGet("colors.text3")};
+            &:hover {
+                color: ${themeGet("colors.text2")};
+            }
+        `}
+
     ${space};
     ${colorStyles};
     ${typography};

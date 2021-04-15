@@ -6,6 +6,7 @@ import {
     LayoutProps,
     TypographyProps,
     BorderProps,
+    ColorProps,
 } from "@doar/shared/styled";
 import {
     StyledCard,
@@ -211,14 +212,24 @@ export const CardLink: FC<ICardLinkProps> = ({
  * Card Header Component
  */
 
-export const CardHeader: FC<ICardCommonProps> = ({
+interface ICardHeaderProps
+    extends ICardCommonProps,
+        SpaceProps,
+        ColorProps,
+        TypographyProps {
+    variant?: "flexbcenter";
+}
+
+export const CardHeader: FC<ICardHeaderProps> = ({
     children,
     className,
+    variant,
     ...restProps
 }) => {
     return (
         <StyledCardHeader
             className={classnames(className, "card-header")}
+            $variant={variant}
             {...restProps}
         >
             {children}

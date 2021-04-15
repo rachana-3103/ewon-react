@@ -14,6 +14,7 @@ interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     label?: string | undefined;
     target?: "_blank" | "_self" | "_parent" | "_top";
     onClick?: (e: React.MouseEvent) => void;
+    variant?: "link3";
 }
 
 export const Anchor: React.FC<IProps> = ({
@@ -24,6 +25,7 @@ export const Anchor: React.FC<IProps> = ({
     label,
     target,
     onClick,
+    variant,
     ...rest
 }) => {
     const internal = /^\/(?!\/)/.test(path);
@@ -35,6 +37,7 @@ export const Anchor: React.FC<IProps> = ({
                 className={className}
                 to={path}
                 onClick={onClick}
+                $variant={variant}
                 {...rest}
             >
                 {children}
@@ -49,6 +52,7 @@ export const Anchor: React.FC<IProps> = ({
             href={path}
             target={target}
             onClick={onClick}
+            $variant={variant}
             {...rest}
         >
             {children}

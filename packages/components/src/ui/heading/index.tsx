@@ -5,14 +5,16 @@ import { StyledHeading } from "./style";
 interface IProps extends SpaceProps, ColorProps, TypographyProps {
     as?: ElementType;
     className?: string;
+    tt?: string;
 }
 
 const Heading: FC<IProps> = forwardRef(
-    ({ as, className, children, ...restProps }, ref) => {
+    ({ as, className, tt, children, ...restProps }, ref) => {
         return (
             <StyledHeading
                 as={as}
                 className={className}
+                $tt={tt}
                 ref={ref}
                 {...restProps}
             >

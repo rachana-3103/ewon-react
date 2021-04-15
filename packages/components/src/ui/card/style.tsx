@@ -6,9 +6,10 @@ import styled, {
     css,
     device,
     typography,
-    color as colorProps,
+    color as colorStyles,
     position as positionProps,
     PositionProps as IPositionProps,
+    ColorProps,
     SpaceProps,
     TypographyProps,
     border as borderStyles,
@@ -179,7 +180,7 @@ export const StyledCardHeading = styled(
     margin-bottom: 0.75rem;
     ${space};
     ${typography};
-    ${colorProps};
+    ${colorStyles};
 `;
 
 export const StyledCardText = styled(
@@ -205,7 +206,7 @@ export const StyledCardText = styled(
 )`
     ${space};
     ${typography};
-    ${colorProps};
+    ${colorStyles};
 `;
 
 export const StyledCardSubtitle = styled(
@@ -234,7 +235,7 @@ export const StyledCardSubtitle = styled(
     color: ${themeGet("colors.gray600")};
     ${space};
     ${typography};
-    ${colorProps};
+    ${colorStyles};
 `;
 
 export const StyledCardLink = styled(
@@ -264,8 +265,12 @@ export const StyledCardLink = styled(
     }
     ${space};
     ${typography};
-    ${colorProps};
+    ${colorStyles};
 `;
+
+interface ICardHeaderProps extends SpaceProps, ColorProps, TypographyProps {
+    $variant?: "flexbcenter";
+}
 
 export const StyledCardHeader = styled(
     ({
@@ -273,6 +278,9 @@ export const StyledCardHeader = styled(
         mr,
         mt,
         mb,
+        p,
+        px,
+        py,
         pl,
         pr,
         pt,
@@ -287,7 +295,7 @@ export const StyledCardHeader = styled(
         bg,
         ...props
     }) => <header {...props} />
-)`
+)<ICardHeaderProps>`
     margin-bottom: 0;
     border-bottom: 1px solid ${themeGet("colors.border")};
     background-color: transparent;
@@ -299,9 +307,16 @@ export const StyledCardHeader = styled(
     &:first-of-type {
         border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
     }
+    ${({ $variant }) =>
+        $variant === "flexbcenter" &&
+        css`
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        `}
     ${space};
     ${typography};
-    ${colorProps};
+    ${colorStyles};
 `;
 
 interface IFooterProps extends BorderProps, SpaceProps {}

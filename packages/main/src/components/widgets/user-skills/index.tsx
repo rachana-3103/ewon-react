@@ -1,5 +1,5 @@
 import { FC } from "react";
-import WidgetTitle from "../widget-title";
+import WidgetTitle from "../widget-title-2";
 import { StyledList, StyledItem, StyledSkill } from "./style";
 
 const UserSkills: FC = () => {

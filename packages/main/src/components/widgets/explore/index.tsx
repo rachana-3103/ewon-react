@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Users, Calendar, Briefcase, Globe, ShoppingBag } from "react-feather";
-import WidgetTitle from "../widget-title";
+import WidgetTitle from "../widget-title-2";
 import { StyledNav, StyledLink, StyledSpan } from "./style";
 
 const Explore: FC = () => {

@@ -1,7 +1,8 @@
 import { FC } from "react";
 import { Briefcase, Home, Smartphone, Phone, Mail } from "react-feather";
-import WidgetTitle from "../widget-title";
-import { StyledItem, StyledLink, StyledSpan } from "./style";
+import { Anchor } from "@doar/components";
+import WidgetTitle from "../widget-title-2";
+import { StyledItem, StyledSpan } from "./style";
 
 const UserContactInfo: FC = () => {
     return (
@@ -18,15 +19,21 @@ const UserContactInfo: FC = () => {
                 </StyledItem>
                 <StyledItem>
                     <Smartphone width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">(+1) 012 345 6789</StyledLink>
+                    <Anchor color="text3" path="#!">
+                        (+1) 012 345 6789
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Phone width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">(+1) 987 654 3201</StyledLink>
+                    <Anchor color="text3" path="#!">
+                        (+1) 987 654 3201
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Mail width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">me@fenchiumao.me</StyledLink>
+                    <Anchor color="text3" path="#!">
+                        me@fenchiumao.me
+                    </Anchor>
                 </StyledItem>
             </ul>
         </>

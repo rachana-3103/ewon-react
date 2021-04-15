@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { Row, Col } from "@doar/components";
-import UserAvatar from "../../../components/profile-view/user-avatar";
-import UserDetails from "../../../components/profile-view/user-details";
-import UserSkill from "../../../components/profile-view/user-skills";
-import UserWebsites from "../../../components/profile-view/user-websites";
-import UserContactInfo from "../../../components/profile-view/user-contact-info";
-import Explore from "../../../components/profile-view/explore";
+import UserAvatar from "../../../components/widgets/user-avatar";
+import UserDetails from "../../../components/widgets/user-details";
+import UserSkill from "../../../components/widgets/user-skills";
+import UserWebsites from "../../../components/widgets/user-websites";
+import UserContactInfo from "../../../components/widgets/user-contact-info";
+import Explore from "../../../components/widgets/explore";
 import { StyledWrap } from "./style";
 
 const LeftSidebar: FC = () => {

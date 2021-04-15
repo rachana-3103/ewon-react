@@ -1,7 +1,8 @@
 import { FC } from "react";
 import { Globe, GitHub, Twitter, Instagram, Facebook } from "react-feather";
-import WidgetTitle from "../widget-title";
-import { StyledItem, StyledLink } from "./style";
+import { Anchor } from "@doar/components";
+import WidgetTitle from "../widget-title-2";
+import { StyledItem } from "./style";
 
 const UserWebsites: FC = () => {
     return (
@@ -10,23 +11,33 @@ const UserWebsites: FC = () => {
             <ul>
                 <StyledItem>
                     <Globe width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">http://fenchiumao.me/</StyledLink>
+                    <Anchor color="text2" path="#!">
+                        http://fenchiumao.me/
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <GitHub width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">@fenchiumao</StyledLink>
+                    <Anchor color="text2" path="#!">
+                        @fenchiumao
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Twitter width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">@fenmao</StyledLink>
+                    <Anchor color="text2" path="#!">
+                        @fenmao
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Instagram width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">@fenchiumao</StyledLink>
+                    <Anchor color="text2" path="#!">
+                        @fenchiumao
+                    </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Facebook width={18} height={18} strokeWidth="2.3px" />
-                    <StyledLink path="#!">@fenchiumao</StyledLink>
+                    <Anchor color="text2" path="#!">
+                        @fenchiumao
+                    </Anchor>
                 </StyledItem>
             </ul>
         </>

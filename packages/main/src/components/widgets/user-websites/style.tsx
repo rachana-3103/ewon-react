@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, { themeGet, tinycolor } from "@doar/shared/styled";
-import { Anchor } from "@doar/components";
 
 export const StyledItem = styled.li`
     display: flex;
@@ -16,13 +15,4 @@ export const StyledItem = styled.li`
                 .toRgbString()};
         margin-right: 15px;
     }
-`;
-
-export const StyledSpan = styled.span`
-    color: ${themeGet("colors.text3")};
-`;
-
-export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
-    color: ${themeGet("colors.text2")};
-    transition: all 0.2s ease-in-out;
 `;

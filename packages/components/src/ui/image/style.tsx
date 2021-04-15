@@ -100,7 +100,9 @@ const groupCss = css<FlexboxProps>`
     img {
         position: relative;
         background-color: #fff;
-        margin-left: -15px;
+        &:not(:first-of-type) {
+            margin-left: -15px;
+        }
         ${device.small} {
             &:not(:first-of-type) {
                 margin-left: -25px;

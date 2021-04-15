@@ -62,6 +62,8 @@ interface IGroupProps extends FlexboxProps {
     className?: string;
 }
 
-export const ImageGroup: FC<IGroupProps> = ({ children }) => {
-    return <StyledGroup>{children}</StyledGroup>;
+export const ImageGroup: FC<IGroupProps> = ({ children, className }) => {
+    return (
+        <StyledGroup className={classnames(className)}>{children}</StyledGroup>
+    );
 };

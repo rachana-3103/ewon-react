@@ -1,8 +1,13 @@
 import React from "react";
-import { SpaceProps, ColorProps, TypographyProps } from "@doar/shared/styled";
+import {
+    SpaceProps,
+    ColorProps,
+    TypographyProps,
+    LayoutProps,
+} from "@doar/shared/styled";
 import { StyledLink, StyledAnchor } from "./style";
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps {
+interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     path: string;
     className?: string | undefined;
     rel?: string | undefined;

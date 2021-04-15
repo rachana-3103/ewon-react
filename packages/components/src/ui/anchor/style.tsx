@@ -3,13 +3,23 @@ import styled, {
     space,
     color as colorStyles,
     typography,
+    layout,
     SpaceProps,
     ColorProps,
     TypographyProps,
+    LayoutProps,
+    css,
 } from "@doar/shared/styled";
 import { Link } from "react-router-dom";
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps {}
+interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {}
+
+const anchorStyle = css`
+    ${space};
+    ${colorStyles};
+    ${typography};
+    ${layout};
+`;
 
 export const StyledLink = styled(
     ({
@@ -34,12 +44,13 @@ export const StyledLink = styled(
         lineHeight,
         letterSpacing,
         textAlign,
+        width,
+        height,
+        display,
         ...rest
     }) => <Link {...rest} />
 )<IProps>`
-    ${space};
-    ${colorStyles};
-    ${typography};
+    ${anchorStyle};
 `;
 
 export const StyledAnchor = styled(
@@ -65,10 +76,11 @@ export const StyledAnchor = styled(
         lineHeight,
         letterSpacing,
         textAlign,
+        width,
+        height,
+        display,
         ...rest
     }) => <a {...rest} />
 )<IProps>`
-    ${space};
-    ${colorStyles};
-    ${typography};
+    ${anchorStyle};
 `;

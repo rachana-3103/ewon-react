@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Printer, File } from "react-feather";
-import PageHeader from "../../../components/page-header";
+import Breadcrumb from "../../../components/breadcrumb";
 import {
     StyledWelcomeArea,
     StyledWelcomeLeft,
@@ -12,7 +12,11 @@ const WelcomeArea: React.FC = () => {
     return (
         <StyledWelcomeArea>
             <StyledWelcomeLeft>
-                <PageHeader title="Sales Monitoring" />
+                <Breadcrumb
+                    prev={{ text: "Dashboard", link: "/" }}
+                    title="Sales Monitoring"
+                    wcText="Welcome To Dashboard"
+                />
             </StyledWelcomeLeft>
             <StyledWelcomeRight>
                 <StyledButton size="sm" color="white" hasIcon>

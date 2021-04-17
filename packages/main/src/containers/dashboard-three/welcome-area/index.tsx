@@ -1,6 +1,6 @@
 import React from "react";
 import { MoreVertical } from "react-feather";
-import PageHeader from "../../../components/page-header";
+import Breadcrumb from "../../../components/breadcrumb";
 import {
     StyledWelcomeArea,
     StyledWelcomeLeft,
@@ -12,7 +12,11 @@ const WelcomeArea: React.FC = () => {
     return (
         <StyledWelcomeArea>
             <StyledWelcomeLeft>
-                <PageHeader title="Cryptocurrency" />
+                <Breadcrumb
+                    prev={{ text: "Dashboard", link: "/" }}
+                    title="Cryptocurrency"
+                    wcText="Welcome To Dashboard"
+                />
             </StyledWelcomeLeft>
             <StyledWelcomeRight>
                 <StyledButton size="sm" hasIcon mt="10px">

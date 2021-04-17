@@ -1,19 +1,20 @@
-import React from "react";
-import { StyledBreadItem, StyledBreadWrap, PageHeading } from "./style";
+import { FC } from "react";
+import Breadcrumb from "../breadcrumb";
+import SearchForm from "../search-form";
+import { StyledWrap } from "./style";
 
-interface IProps {
-    title: string;
-}
-
-const PageHeader: React.FC<IProps> = ({ title }) => {
+const PageHeader: FC = () => {
     return (
-        <>
-            <StyledBreadWrap>
-                <StyledBreadItem path="/">Dashboard</StyledBreadItem>
-                <StyledBreadItem active>{title}</StyledBreadItem>
-            </StyledBreadWrap>
-            <PageHeading>Welcome to Dashboard</PageHeading>
-        </>
+        <StyledWrap>
+            <div>
+                <Breadcrumb
+                    prev={{ text: "Your Profile", link: "/profile-view" }}
+                    title="Connections"
+                    wcText="Connections"
+                />
+            </div>
+            <SearchForm />
+        </StyledWrap>
     );
 };
 

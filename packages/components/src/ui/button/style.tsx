@@ -908,6 +908,17 @@ const buttonStyles = css<IProps>`
             padding: 5px 10px;
         `}
 
+	${({ $iconButton, $size }) =>
+        $iconButton &&
+        $size === "md" &&
+        css`
+            svg {
+                width: 18px;
+                height: 18px;
+                stroke-width: 2.5px;
+                margin-top: -2px;
+            }
+        `}
     ${({ $hasIcon, $size }) =>
         $hasIcon &&
         $size === "sm" &&

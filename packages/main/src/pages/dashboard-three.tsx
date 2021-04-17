@@ -2,6 +2,7 @@ import React from "react";
 import { Row } from "@doar/components";
 import { CryptoFontCSS } from "@doar/shared/css";
 import Layout from "../layouts";
+import Content from "../layouts/content";
 import WelcomeArea from "../containers/dashboard-three/welcome-area";
 import RowOne from "../containers/dashboard-three/row-one";
 import RowTwo from "../containers/dashboard-three/row-two";
@@ -13,14 +14,16 @@ const DashboardThree: React.FC = () => {
     return (
         <Layout>
             <CryptoFontCSS />
-            <WelcomeArea />
-            <Row gutters={10}>
-                <RowOne />
-                <RowTwo />
-                <RowThree />
-                <RowFour />
-                <RowFive />
-            </Row>
+            <Content>
+                <WelcomeArea />
+                <Row gutters={10}>
+                    <RowOne />
+                    <RowTwo />
+                    <RowThree />
+                    <RowFour />
+                    <RowFive />
+                </Row>
+            </Content>
         </Layout>
     );
 };

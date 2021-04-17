@@ -1,11 +1,14 @@
 import React from "react";
 import Layout from "../layouts";
+import Content from "../layouts/content";
 import VerifyContainer from "../containers/verify-account";
 
 const VerifyAccount: React.FC = () => {
     return (
-        <Layout fullHeight align="center">
-            <VerifyContainer />
+        <Layout>
+            <Content fullHeight align="center">
+                <VerifyContainer />
+            </Content>
         </Layout>
     );
 };

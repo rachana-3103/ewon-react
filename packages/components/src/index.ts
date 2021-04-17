@@ -59,6 +59,7 @@ import SectionTitle from "./ui/section-title";
 import Text from "./ui/text";
 import Heading from "./ui/heading";
 import { Image, ImageGroup } from "./ui/image/image";
+import { Badge } from "./ui/badge/badge";
 
 export {
     Button,
@@ -122,4 +123,5 @@ export {
     Heading,
     Image,
     ImageGroup,
+    Badge,
 };

@@ -168,7 +168,7 @@ const menus = [
                     {
                         id: 332,
                         label: "Connections",
-                        url: "/",
+                        url: "/connections",
                         Icon: Users,
                     },
                     {

@@ -14,7 +14,7 @@ interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     label?: string | undefined;
     target?: "_blank" | "_self" | "_parent" | "_top";
     onClick?: (e: React.MouseEvent) => void;
-    variant?: "link3";
+    variant?: "link2" | "link3";
 }
 
 export const Anchor: React.FC<IProps> = ({

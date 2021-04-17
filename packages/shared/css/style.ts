@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     input,
     select,
     textarea {
-        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-family: ${theme.fonts.body};
     }
     a:focus {
         outline: thin dotted;
@@ -305,18 +305,6 @@ const GlobalStyle = createGlobalStyle`
     }
     .wrapper {
         position: relative;
-    }
-    .container {
-        max-width: 100%;
-        ${device.medium}{
-            max-width: 720px;
-        }
-        ${device.large}{
-            max-width: 960px;
-        }
-        ${device.xlarge} {
-            max-width: 1200px;
-        }
     }
     .sr-only {
         border: 0;

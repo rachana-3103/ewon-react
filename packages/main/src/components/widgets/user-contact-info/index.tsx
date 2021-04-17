@@ -19,19 +19,19 @@ const UserContactInfo: FC = () => {
                 </StyledItem>
                 <StyledItem>
                     <Smartphone width={18} height={18} strokeWidth="2.3px" />
-                    <Anchor color="text3" path="#!">
+                    <Anchor variant="link2" path="#!">
                         (+1) 012 345 6789
                     </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Phone width={18} height={18} strokeWidth="2.3px" />
-                    <Anchor color="text3" path="#!">
+                    <Anchor variant="link2" path="#!">
                         (+1) 987 654 3201
                     </Anchor>
                 </StyledItem>
                 <StyledItem>
                     <Mail width={18} height={18} strokeWidth="2.3px" />
-                    <Anchor color="text3" path="#!">
+                    <Anchor variant="link2" path="#!">
                         me@fenchiumao.me
                     </Anchor>
                 </StyledItem>

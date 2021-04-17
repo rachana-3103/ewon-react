@@ -3,10 +3,30 @@ import { StyledNav, StyledLink } from "./style";
 
 interface IProps {
     className?: string;
+    iconPosition?: "left" | "right";
+    iconDistance?: string;
 }
 
-const NavWithIcon: FC<IProps> = ({ children, className }) => {
-    return <StyledNav className={className}>{children}</StyledNav>;
+const NavWithIcon: FC<IProps> = ({
+    children,
+    className,
+    iconPosition,
+    iconDistance,
+}) => {
+    return (
+        <StyledNav
+            className={className}
+            $iconPosition={iconPosition}
+            $iconDistance={iconDistance}
+        >
+            {children}
+        </StyledNav>
+    );
+};
+
+NavWithIcon.defaultProps = {
+    iconPosition: "left",
+    iconDistance: "7px",
 };
 
 export default NavWithIcon;

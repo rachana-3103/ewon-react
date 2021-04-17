@@ -7,5 +7,5 @@ export const StyledTitle = styled.h5`
     font-family: ${themeGet("fonts.interUi")};
     font-weight: 600;
     color: ${themeGet("colors.text2")};
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 `;

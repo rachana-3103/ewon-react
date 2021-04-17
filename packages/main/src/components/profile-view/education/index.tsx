@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Plus, ChevronDown, Briefcase } from "react-feather";
+import { Plus, ChevronDown, BookOpen } from "react-feather";
 import {
     Card,
     CardBody,
@@ -11,14 +11,14 @@ import {
 import Header from "../header";
 import Footer from "../footer";
 import NavWithIcon, { NavLink } from "../../nav-with-icon";
-import { StyledTime, StyledIcon, StyledName, StyledList } from "./style";
+import { StyledTime, StyledIcon, StyledName } from "./style";
 
-const WorkExperience: FC = () => {
+const Education: FC = () => {
     return (
         <Card mb={["20px", null, null, "25px"]}>
             <Header>
                 <Heading tt="uppercase" fontWeight="600" mb="0px">
-                    Work Experience
+                    Education
                 </Heading>
                 <NavWithIcon iconPosition="left" iconDistance="7px">
                     <NavLink path="#!">
@@ -30,31 +30,17 @@ const WorkExperience: FC = () => {
             <CardBody p={["25px", "25px"]}>
                 <Media display={["block", "flex"]}>
                     <StyledIcon>
-                        <Briefcase width={40} height={40} />
+                        <BookOpen width={40} height={40} />
                     </StyledIcon>
                     <MediaBody ml={[null, "25px"]} mt={["25px", 0]}>
                         <Heading as="h5" mb="5px">
-                            Area Sales Manager
+                            BS in Computer Science
                         </Heading>
-                        <Text color="text2" mb="3px">
-                            <StyledName>Company, Inc.</StyledName>, Bay Area,
-                            San Francisco, CA
+                        <Text mb="3px">
+                            <StyledName>Holy Name University</StyledName>,
+                            Tagbilaran City, Bohol
                         </Text>
-                        <StyledTime>December 2016 - Present</StyledTime>
-                        <StyledList>
-                            <li>
-                                Reaching the targets and goals set for my area.
-                            </li>
-                            <li>
-                                Servicing the needs of my existing customers.
-                            </li>
-                            <li>
-                                Maintaining the relationships with existing
-                                customers for repeat business.
-                            </li>
-                            <li>Reporting to top managers.</li>
-                            <li>Keeping up to date with the products.</li>
-                        </StyledList>
+                        <StyledTime>2002-2006</StyledTime>
                     </MediaBody>
                 </Media>
             </CardBody>
@@ -70,4 +56,4 @@ const WorkExperience: FC = () => {
     );
 };
 
-export default WorkExperience;
+export default Education;

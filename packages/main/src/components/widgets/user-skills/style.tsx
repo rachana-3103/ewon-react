@@ -13,9 +13,6 @@ export const StyledItem = styled.li`
     margin-right: 5px;
     margin-bottom: 5px;
     display: inline-block;
-    &:not(:last-of-type) {
-        margin-right: 0.5rem;
-    }
 `;
 
 export const StyledSkill = styled(({ ...rest }) => <Anchor {...rest} />)`

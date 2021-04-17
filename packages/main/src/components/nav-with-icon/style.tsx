@@ -1,14 +1,5 @@
-import styled, { themeGet, device } from "@doar/shared/styled";
+import styled, { themeGet, device, css } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
-
-export const StyledNav = styled.nav`
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    font-size: 13px;
-`;
 
 export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
     padding: 0;
@@ -28,8 +19,35 @@ export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
         width: 16px;
         height: 16px;
         stroke-width: 2.5px;
-        margin-right: 7px;
         position: relative;
         top: -1px;
+    }
+`;
+
+interface INav {
+    $iconPosition?: "left" | "right";
+    $iconDistance?: string;
+}
+
+export const StyledNav = styled.nav<INav>`
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 13px;
+    ${StyledLink} {
+        svg {
+            ${({ $iconPosition, $iconDistance }) =>
+                $iconPosition === "left" &&
+                css`
+                    margin-right: ${$iconDistance};
+                `}
+            ${({ $iconPosition, $iconDistance }) =>
+                $iconPosition === "right" &&
+                css`
+                    margin-left: ${$iconDistance};
+                `}
+        }
     }
 `;

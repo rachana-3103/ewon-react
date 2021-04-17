@@ -21,11 +21,11 @@ const RightSidebar: FC = () => {
                 <Col sm={6} md={5} lg={12} mt="40px">
                     <PeopleMayKnow />
                 </Col>
-                <Col sm={6} md={5} lg={12} mt="40px">
-                    <Gallery />
-                </Col>
                 <Col sm={6} md={5} lg={12} mt="40px" smOrder={1}>
                     <MutualConnections />
+                </Col>
+                <Col sm={6} md={5} lg={12} mt="40px">
+                    <Gallery />
                 </Col>
             </Row>
         </StyledWrap>

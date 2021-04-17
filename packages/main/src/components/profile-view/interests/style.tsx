@@ -1,4 +1,8 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, {
+    themeGet,
+    ColorProps,
+    color as colorStyle,
+} from "@doar/shared/styled";
 
 export const StyledTime = styled.span`
     font-size: 13px;
@@ -6,14 +10,16 @@ export const StyledTime = styled.span`
     display: block;
 `;
 
-export const StyledIcon = styled.div`
-    width: 80px;
-    height: 80px;
-    background-color: ${themeGet("colors.text3")};
+export const StyledIcon = styled(({ ...rest }) => (
+    <div {...rest} />
+))<ColorProps>`
+    width: 45px;
+    height: 45px;
     align-items: center;
     justify-content: center;
     display: flex;
     border-radius: ${themeGet("radii.rounded")};
+    ${colorStyle};
     svg {
         color: rgba(255, 255, 255, 0.7);
     }

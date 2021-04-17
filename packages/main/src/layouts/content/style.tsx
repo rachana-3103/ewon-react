@@ -24,6 +24,7 @@ const conentCSS = css<IProps>`
         `}
 
     ${({ $align }) =>
+        $align &&
         $align !== "center" &&
         css`
             & > .container {

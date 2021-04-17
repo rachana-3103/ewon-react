@@ -59,7 +59,7 @@ const LatestActivity: FC = () => {
                 </StyledGrayBox>
             </CardBody>
             <Footer>
-                <NavWithIcon>
+                <NavWithIcon iconDistance="7px">
                     <NavLink path="#!">
                         <ThumbsUp /> Like
                     </NavLink>

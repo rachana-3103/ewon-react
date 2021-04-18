@@ -36,6 +36,22 @@ import { Badge } from "./badge";
                     ],
                 },
             },
+            variant: {
+                control: {
+                    type: `select`,
+                    options: ["contained", "texted"],
+                },
+            },
+            pill: {
+                control: {
+                    type: `boolean`,
+                },
+            },
+            className: {
+                control: {
+                    type: `string`,
+                },
+            },
         }}
         args={{
             children: `Badge`,

@@ -1,9 +1,9 @@
 import React from "react";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { Container } from "@doar/components";
 import { StyledContent } from "./style";
 
-interface IProps extends SpaceProps {
+interface IProps extends SpaceProps, BorderProps {
     className?: string;
     fullHeight?: boolean;
     align?: "top" | "center" | "bootom";

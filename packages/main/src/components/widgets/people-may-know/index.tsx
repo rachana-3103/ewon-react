@@ -7,7 +7,7 @@ import image4 from "../../../images/img24.jpg";
 import WidgetTitle from "../widget-title";
 import { StyledName, StyledRole } from "./style";
 
-const PeopleViewd: FC = () => {
+const PeopleMayKnow: FC = () => {
     return (
         <>
             <WidgetTitle title="People You May Know" />
@@ -92,4 +92,4 @@ const PeopleViewd: FC = () => {
     );
 };
 
-export default PeopleViewd;
+export default PeopleMayKnow;

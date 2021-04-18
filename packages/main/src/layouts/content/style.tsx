@@ -1,6 +1,14 @@
-import styled, { device, space, SpaceProps, css } from "@doar/shared/styled";
+import styled, {
+    device,
+    space,
+    border as borderStyle,
+    SpaceProps,
+    BorderProps,
+    css,
+    themeGet,
+} from "@doar/shared/styled";
 
-interface IProps extends SpaceProps {
+interface IProps extends SpaceProps, BorderProps {
     $fullHeight?: boolean;
     $align: "top" | "center" | "bottom";
 }
@@ -31,13 +39,30 @@ const conentCSS = css<IProps>`
                 flex: 1;
             }
         `}
+	${({ borderBottom, borderBottomWidth }) =>
+        (borderBottom || borderBottomWidth) &&
+        css`
+            border-bottom-style: solid;
+            border-bottom-color: ${themeGet("colors.border")};
+        `}
     ${space};
+    ${borderStyle};
 `;
 
 export const StyledContent = styled(
-    ({ p, px, py, m, mx, my, $fullHeight, $align, ...rest }) => (
-        <div {...rest} />
-    )
+    ({
+        p,
+        px,
+        py,
+        m,
+        mx,
+        my,
+        mt,
+        borderBottomWidth,
+        $fullHeight,
+        $align,
+        ...rest
+    }) => <div {...rest} />
 )<IProps>`
     ${conentCSS}
 `;

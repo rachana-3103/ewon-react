@@ -10,6 +10,7 @@ interface BadgeProps {
         | "info"
         | "light"
         | "dark";
+    $variant?: "contained" | "texted";
     $pill?: boolean;
 }
 
@@ -26,50 +27,58 @@ const badgeCss = css<BadgeProps>`
     vertical-align: baseline;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    ${({ $color }) =>
+    ${({ $color, $variant }) =>
         $color === "primary" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.primary")};
         `}
-    ${({ $color }) =>
+    ${({ $color, $variant }) =>
         $color === "secondary" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.gray600")};
         `}
-    ${({ $color }) =>
+    ${({ $color, $variant }) =>
         $color === "success" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.success")};
         `}
-	${({ $color }) =>
+	${({ $color, $variant }) =>
         $color === "danger" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.danger")};
         `}
-	${({ $color }) =>
+	${({ $color, $variant }) =>
         $color === "warning" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.warning")};
         `}
-	${({ $color }) =>
+	${({ $color, $variant }) =>
         $color === "info" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.info")};
         `}
-	${({ $color }) =>
+	${({ $color, $variant }) =>
         $color === "light" &&
+        $variant === "contained" &&
         css`
             color: ${themeGet("colors.gray900")};
             background-color: ${themeGet("colors.gray300")};
         `}
-	${({ $color }) =>
+	${({ $color, $variant }) =>
         $color === "dark" &&
+        $variant === "contained" &&
         css`
             color: #fff;
             background-color: ${themeGet("colors.dark")};
@@ -79,6 +88,13 @@ const badgeCss = css<BadgeProps>`
         css`
             padding-left: 8px;
             padding-right: 8px;
+        `}
+	${({ $variant }) =>
+        $variant === "texted" &&
+        css`
+            color: ${themeGet("colors.dark")};
+            background-color: transparent;
+            padding: 0;
         `}
 `;
 

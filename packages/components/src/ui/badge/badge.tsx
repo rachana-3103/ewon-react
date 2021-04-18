@@ -1,4 +1,5 @@
 import React from "react";
+import classnames from "classnames";
 import { StyledBadge } from "./style";
 
 export interface BadgeProps {
@@ -15,14 +16,33 @@ export interface BadgeProps {
         | "light"
         | "dark";
     /**
+     *  Optional. Default is `contained`.
+     */
+    variant?: "contained" | "texted";
+    /**
      * Pass the `pill` props to make badges more rounded with some additional horizontal padding
      */
     pill?: boolean;
+    /**
+     * Optional. Extra Class Name
+     */
+    className?: string;
 }
 
-export const Badge: React.FC<BadgeProps> = ({ color, pill, children }) => {
+export const Badge: React.FC<BadgeProps> = ({
+    color,
+    variant,
+    pill,
+    children,
+    className,
+}) => {
     return (
-        <StyledBadge $color={color} $pill={pill}>
+        <StyledBadge
+            $color={color}
+            $variant={variant}
+            $pill={pill}
+            className={classnames(className, "badge")}
+        >
             {children}
         </StyledBadge>
     );
@@ -30,4 +50,5 @@ export const Badge: React.FC<BadgeProps> = ({ color, pill, children }) => {
 
 Badge.defaultProps = {
     color: "primary",
+    variant: "contained",
 };

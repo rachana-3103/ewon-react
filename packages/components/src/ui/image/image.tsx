@@ -16,6 +16,7 @@ export interface ImageProps extends SpaceProps, LayoutProps {
      * image's shapes
      */
     shape?: "rounded" | "circle" | "thumbnail";
+
     /**
      *Use the `fluid` to scale image nicely to the parent element.
      */
@@ -37,6 +38,7 @@ export interface ImageProps extends SpaceProps, LayoutProps {
 export const Image: FC<ImageProps> = ({
     src,
     alt,
+    size,
     shape,
     fluid,
     align,
@@ -49,6 +51,7 @@ export const Image: FC<ImageProps> = ({
             src={src}
             alt={alt}
             $shape={shape}
+            $size={size}
             $fluid={fluid}
             $align={align}
             $fit={fit}
@@ -58,12 +61,24 @@ export const Image: FC<ImageProps> = ({
     );
 };
 
-interface IGroupProps extends FlexboxProps {
+interface IGroupProps extends FlexboxProps, SpaceProps {
     className?: string;
+    size?: "sm";
 }
 
-export const ImageGroup: FC<IGroupProps> = ({ children, className }) => {
+export const ImageGroup: FC<IGroupProps> = ({
+    children,
+    className,
+    size,
+    ...restProps
+}) => {
     return (
-        <StyledGroup className={classnames(className)}>{children}</StyledGroup>
+        <StyledGroup
+            className={classnames(className)}
+            $size={size}
+            {...restProps}
+        >
+            {children}
+        </StyledGroup>
     );
 };

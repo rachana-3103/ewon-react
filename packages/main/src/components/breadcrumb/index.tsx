@@ -19,7 +19,7 @@ interface IProps {
     wcText?: string;
 }
 
-const PageHeader: React.FC<IProps> = ({ prev, title, wcText }) => {
+const Breadcrumb: React.FC<IProps> = ({ prev, title, wcText }) => {
     return (
         <>
             <StyledBreadWrap>
@@ -31,4 +31,4 @@ const PageHeader: React.FC<IProps> = ({ prev, title, wcText }) => {
     );
 };
 
-export default PageHeader;
+export default Breadcrumb;

@@ -3,17 +3,17 @@ import { Row } from "@doar/components";
 import Layout from "../layouts";
 import Content from "../layouts/content";
 import PageHeader from "../components/page-header";
-import MainContent from "../containers/connections/main";
-import Sidebar from "../containers/connections/sidebar";
+import MainContent from "../containers/groups/main";
+import Sidebar from "../containers/groups/sidebar";
 
-const Connections: React.FC = () => {
+const Groups: React.FC = () => {
     return (
         <Layout>
             <Content borderBottomWidth="1px">
                 <PageHeader
-                    prev={{ text: "Your Profile", link: "/profile-view" }}
-                    title="Connections"
-                    wcText="Connections"
+                    prev={{ text: "Profile", link: "/profile-view" }}
+                    title="Groups"
+                    wcText="Discover Groups"
                 />
             </Content>
             <Content mt={[null, null, null, "0px"]}>
@@ -26,4 +26,4 @@ const Connections: React.FC = () => {
     );
 };
 
-export default Connections;
+export default Groups;

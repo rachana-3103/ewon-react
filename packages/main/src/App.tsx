@@ -15,6 +15,8 @@ const Error503 = lazy(() => import("./pages/error-503"));
 const Error505 = lazy(() => import("./pages/error-505"));
 const ProfileView = lazy(() => import("./pages/profile-view"));
 const Connections = lazy(() => import("./pages/connections"));
+const Groups = lazy(() => import("./pages/groups"));
+const Events = lazy(() => import("./pages/events"));
 
 const App: React.FC = () => {
     return (
@@ -54,6 +56,8 @@ const App: React.FC = () => {
                     <Route exact path="/error-505" component={Error505} />
                     <Route exact path="/profile-view" component={ProfileView} />
                     <Route exact path="/connections" component={Connections} />
+                    <Route exact path="/groups" component={Groups} />
+                    <Route exact path="/events" component={Events} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>

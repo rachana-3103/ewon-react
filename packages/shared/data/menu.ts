@@ -174,13 +174,13 @@ const menus = [
                     {
                         id: 333,
                         label: "Groups",
-                        url: "/",
+                        url: "/groups",
                         Icon: Users,
                     },
                     {
                         id: 334,
                         label: "Events",
-                        url: "/",
+                        url: "/events",
                         Icon: Calendar,
                     },
                 ],

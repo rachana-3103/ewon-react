@@ -93,28 +93,50 @@ export const StyledImage = styled(
     ${imageCss}
 `;
 
-const groupCss = css<FlexboxProps>`
+interface IGroup extends FlexboxProps, SpaceProps {
+    $size?: "sm";
+}
+
+const groupCss = css<IGroup>`
     display: flex;
     align-items: center;
     justify-content: center;
     img {
         position: relative;
         background-color: #fff;
-        &:not(:first-of-type) {
-            margin-left: -15px;
-        }
         ${device.small} {
-            &:not(:first-of-type) {
-                margin-left: -25px;
-            }
             padding: 3px;
         }
     }
+    ${({ $size }) =>
+        (!$size || $size !== "sm") &&
+        css`
+            img {
+                &:not(:first-of-type) {
+                    margin-left: -15px;
+                }
+                ${device.small} {
+                    &:not(:first-of-type) {
+                        margin-left: -25px;
+                    }
+                }
+            }
+        `}
+    ${({ $size }) =>
+        $size === "sm" &&
+        css`
+            img {
+                &:not(:first-of-type) {
+                    margin-left: -15px;
+                }
+            }
+        `}
     ${flexbox};
+    ${space};
 `;
 
-export const StyledGroup = styled(({ alignItems, justifyContent, ...rest }) => (
-    <div {...rest} />
-))<FlexboxProps>`
+export const StyledGroup = styled(
+    ({ mb, alignItems, justifyContent, ...rest }) => <div {...rest} />
+)<IGroup>`
     ${groupCss};
 `;

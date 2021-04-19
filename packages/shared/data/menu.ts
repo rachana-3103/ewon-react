@@ -192,7 +192,7 @@ const menus = [
                     {
                         id: 341,
                         label: "Timeline",
-                        url: "/",
+                        url: "/timeline",
                         Icon: FileText,
                     },
                     {

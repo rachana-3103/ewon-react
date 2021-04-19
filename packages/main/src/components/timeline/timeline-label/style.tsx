@@ -1,11 +1,11 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 
 export const StyledLabel = styled.div`
     margin-left: 10px;
     padding-left: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
@@ -22,7 +22,7 @@ export const StyledLabel = styled.div`
         position: absolute;
         top: 29px;
         left: -6px;
-        background-color: #3b4863;
+        background-color: ${themeGet("colors.dark")};
         width: 11px;
         height: 11px;
         border-radius: 100%;

@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledNav = styled.nav`
     display: flex;
@@ -8,7 +8,7 @@ export const StyledNav = styled.nav`
     list-style: none;
     margin-top: 15px;
     & > a {
-        color: #596882;
+        color: ${themeGet("colors.gray700")};
         &:not(:first-of-type) {
             margin-left: 15px;
         }

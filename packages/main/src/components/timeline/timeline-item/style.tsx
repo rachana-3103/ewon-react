@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 
 export const StyledItem = styled.div`
     ${device.small} {
@@ -15,7 +15,7 @@ export const StyledItem = styled.div`
             left: 10px;
             width: 1px;
             height: 20px;
-            background-color: rgba(72, 94, 144, 0.16);
+            background-color: ${themeGet("colors.border")};
             ${device.small} {
                 left: 120px;
             }

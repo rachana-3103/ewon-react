@@ -198,7 +198,7 @@ const menus = [
                     {
                         id: 342,
                         label: "Pricing",
-                        url: "/",
+                        url: "/pricing",
                         Icon: FileText,
                     },
                     {

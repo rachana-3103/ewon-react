@@ -5,10 +5,10 @@ interface IProps {
     /**
      * Pass previous page's text and link
      */
-    prev: {
+    prev: Array<{
         text: string;
         link: string;
-    };
+    }>;
     /**
      * Write page's title
      */
@@ -23,7 +23,11 @@ const Breadcrumb: React.FC<IProps> = ({ prev, title, wcText }) => {
     return (
         <>
             <StyledBreadWrap>
-                <StyledBreadItem path={prev.link}>{prev.text}</StyledBreadItem>
+                {prev.map((item) => (
+                    <StyledBreadItem key={item.text} path={item.link}>
+                        {item.text}
+                    </StyledBreadItem>
+                ))}
                 <StyledBreadItem active>{title}</StyledBreadItem>
             </StyledBreadWrap>
             {wcText && <PageHeading>{wcText}</PageHeading>}

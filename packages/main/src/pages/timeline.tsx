@@ -11,7 +11,7 @@ const Timeline: React.FC = () => {
         <Layout>
             <Content borderBottomWidth="1px">
                 <PageHeader
-                    prev={{ text: "Profile", link: "/profile-view" }}
+                    prev={[{ text: "Profile", link: "/profile-view" }]}
                     title="Timeline"
                     wcText="My Timeline"
                 />

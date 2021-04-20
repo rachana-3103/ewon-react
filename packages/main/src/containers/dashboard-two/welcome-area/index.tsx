@@ -13,7 +13,7 @@ const WelcomeArea: React.FC = () => {
         <StyledWelcomeArea>
             <StyledWelcomeLeft>
                 <Breadcrumb
-                    prev={{ text: "Dashboard", link: "/" }}
+                    prev={[{ text: "Dashboard", link: "/" }]}
                     title="Website Analytics"
                     wcText="Welcome To Dashboard"
                 />

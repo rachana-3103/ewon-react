@@ -67,6 +67,7 @@ import { Progress } from "./src/ui/progress/progress";
 import SectionTitle from "./src/ui/section-title";
 import Text from "./src/ui/text";
 import Heading from "./src/ui/heading";
+import HRLine from "./src/ui/hr-line";
 import { Image, ImageGroup } from "./src/ui/image/image";
 import { Badge } from "./src/ui/badge/badge";
 
@@ -138,4 +139,5 @@ export {
     Image,
     ImageGroup,
     Badge,
+    HRLine,
 };

@@ -14,10 +14,18 @@ import styled, {
 import { Link } from "react-router-dom";
 
 interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
-    $variant?: "link2" | "link3";
+    $variant?: "link1" | "link2" | "link3";
 }
 
 const anchorStyle = css<IProps>`
+    ${({ $variant }) =>
+        $variant === "link1" &&
+        css`
+            color: ${themeGet("colors.text")};
+            &:hover {
+                color: ${themeGet("colors.primary")};
+            }
+        `}
     ${({ $variant }) =>
         $variant === "link2" &&
         css`

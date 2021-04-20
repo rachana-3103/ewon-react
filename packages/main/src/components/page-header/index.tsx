@@ -7,10 +7,10 @@ interface IProps {
     /**
      * Pass previous page's text and link
      */
-    prev: {
+    prev: Array<{
         text: string;
         link: string;
-    };
+    }>;
     /**
      * Write page's title
      */

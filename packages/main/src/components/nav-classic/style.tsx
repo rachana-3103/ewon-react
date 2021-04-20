@@ -4,6 +4,7 @@ import styled, {
     typography,
     SpaceProps,
     TypographyProps,
+    css,
 } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
@@ -44,5 +45,10 @@ export const StyledLink = styled(({ ...rest }) => (
         font-weight: 400;
         font-size: 11px;
     }
+    ${({ $active }) =>
+        $active === true &&
+        css`
+            color: ${themeGet("colors.primary")};
+        `}
     ${space};
 `;

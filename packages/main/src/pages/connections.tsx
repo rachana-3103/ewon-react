@@ -11,7 +11,7 @@ const Connections: React.FC = () => {
         <Layout>
             <Content borderBottomWidth="1px">
                 <PageHeader
-                    prev={{ text: "Your Profile", link: "/profile-view" }}
+                    prev={[{ text: "Your Profile", link: "/profile-view" }]}
                     title="Connections"
                     wcText="Connections"
                 />

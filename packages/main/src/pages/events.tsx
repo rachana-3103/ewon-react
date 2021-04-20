@@ -11,7 +11,10 @@ const Events: React.FC = () => {
         <Layout>
             <Content borderBottomWidth="1px">
                 <PageHeader
-                    prev={{ text: "Profile", link: "/profile-view" }}
+                    prev={[
+                        { text: "Profile", link: "/profile-view" },
+                        { text: "Discover", link: "/" },
+                    ]}
                     title="Events"
                     wcText="Discover Events"
                 />

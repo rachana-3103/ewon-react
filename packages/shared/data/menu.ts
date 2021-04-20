@@ -204,7 +204,7 @@ const menus = [
                     {
                         id: 343,
                         label: "Help Center",
-                        url: "/",
+                        url: "/help-center",
                         Icon: FileText,
                     },
                     {

@@ -5,6 +5,8 @@ import styled, {
     SpaceProps,
     border,
     BorderProps,
+    typography,
+    TypographyProps,
 } from "@doar/shared/styled";
 import { Container, Row, Col } from "styled-bootstrap-grid";
 
@@ -44,11 +46,18 @@ export const StyledRow = styled(
         `}
 `;
 
-interface ICol extends IProps, BorderProps {}
+interface ICol extends IProps, BorderProps, TypographyProps {}
 
 export const StyledCol = styled(
-    ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }) => <Col {...props} />
+    ({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, textAlign, ...props }) => (
+        <Col {...props} />
+    )
 )<ICol>`
+    ${device.small} {
+        &.order-sm-0 {
+            order: 0;
+        }
+    }
     ${device.medium} {
         &.order-md-0 {
             order: 0;
@@ -66,4 +75,5 @@ export const StyledCol = styled(
     }
     ${space};
     ${border};
+    ${typography};
 `;

@@ -35,6 +35,9 @@ interface IProps extends SpaceProps, LayoutProps, BorderProps {
     disabled?: boolean;
     $iconButton?: boolean;
     $hasIcon?: boolean;
+    $iconPosition?: "left" | "right";
+    $iconSize?: "sm" | "md";
+    $iconSpace?: string;
 }
 
 const buttonStyles = css<IProps>`
@@ -929,6 +932,32 @@ const buttonStyles = css<IProps>`
                 stroke-width: 2.5px;
                 margin-top: -2px;
                 margin-right: 7px;
+            }
+        `}
+	${({ $iconSize }) =>
+        $iconSize === "sm" &&
+        css`
+            svg {
+                width: 14px;
+                height: 14px;
+                stroke-width: 2.5px;
+                margin-top: -2px;
+            }
+        `}
+	${({ $iconPosition, $iconSpace }) =>
+        $iconPosition === "left" &&
+        !$iconSpace &&
+        css`
+            svg {
+                margin-right: 7px;
+            }
+        `}
+	${({ $iconPosition, $iconSpace }) =>
+        $iconPosition === "left" &&
+        $iconSpace &&
+        css`
+            svg {
+                margin-right: ${$iconSpace};
             }
         `}
 	${space};

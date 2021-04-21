@@ -36,14 +36,31 @@ interface ITableProps extends SpaceProps, BorderProps {
 }
 
 export const StyledTable = styled(
-    ({ border, m, ml, mr, mt, mb, p, pl, pr, pt, pb, ...props }) => (
-        <table {...props} />
-    )
+    ({
+        border,
+        borderBottomWidth,
+        m,
+        ml,
+        mr,
+        mt,
+        mb,
+        p,
+        pl,
+        pr,
+        pt,
+        pb,
+        ...props
+    }) => <table {...props} />
 )<ITableProps>`
     width: 100%;
     margin-bottom: 1rem;
     color: ${themeGet("colors.text")};
-
+    ${({ borderBottomWidth }) =>
+        Boolean(borderBottomWidth) &&
+        css`
+            border-bottom-style: solid;
+            border-bottom-color: ${themeGet("colors.border")};
+        `}
     ${space};
     ${borderStyles};
 

@@ -77,6 +77,18 @@ export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps {
      * Pass `path` to make link button
      */
     path?: string;
+    /**
+     * Set icon's position either left or right
+     */
+    iconPosition?: "left" | "right";
+    /**
+     * Set icon's size
+     */
+    iconSize?: "sm" | "md";
+    /**
+     * Set distance between icon and text
+     */
+    iconSpace?: string;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -95,6 +107,9 @@ export const Button: FC<ButtonProps> = ({
     onClick,
     className,
     path,
+    iconPosition,
+    iconSize,
+    iconSpace,
     ...restProps
 }) => {
     if (path) {
@@ -113,13 +128,15 @@ export const Button: FC<ButtonProps> = ({
                     disabled={disabled}
                     $iconButton={iconButton}
                     $hasIcon={hasIcon}
+                    $iconPosition={iconPosition}
+                    $iconSize={iconSize}
+                    $iconSpace={iconSpace}
                     aria-label={label}
                     onClick={onClick}
                     className={classnames(className, "btn")}
                     to={path}
                     {...restProps}
                 >
-                    {label && <span className="sr-only">{label}</span>}
                     <span>{children}</span>
                 </StyledLink>
             );
@@ -136,6 +153,9 @@ export const Button: FC<ButtonProps> = ({
                     disabled={disabled}
                     $iconButton={iconButton}
                     $hasIcon={hasIcon}
+                    $iconPosition={iconPosition}
+                    $iconSize={iconSize}
+                    $iconSpace={iconSpace}
                     aria-label={label}
                     onClick={onClick}
                     className={classnames(className, "btn")}
@@ -157,6 +177,9 @@ export const Button: FC<ButtonProps> = ({
                 disabled={disabled}
                 $iconButton={iconButton}
                 $hasIcon={hasIcon}
+                $iconPosition={iconPosition}
+                $iconSize={iconSize}
+                $iconSpace={iconSpace}
                 aria-label={label}
                 onClick={onClick}
                 className={classnames(className, "btn")}
@@ -180,6 +203,9 @@ export const Button: FC<ButtonProps> = ({
             disabled={disabled}
             $iconButton={iconButton}
             $hasIcon={hasIcon}
+            $iconPosition={iconPosition}
+            $iconSize={iconSize}
+            $iconSpace={iconSpace}
             aria-label={label}
             onClick={onClick}
             className={classnames(className, "btn")}
@@ -200,6 +226,8 @@ Button.defaultProps = {
     active: false,
     disabled: false,
     iconButton: false,
+    iconPosition: "left",
+    iconSize: "sm",
 };
 
 Button.displayName = "Button";

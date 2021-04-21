@@ -210,7 +210,7 @@ const menus = [
                     {
                         id: 344,
                         label: "Invoice",
-                        url: "/",
+                        url: "/invoice",
                         Icon: FileText,
                     },
                 ],

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import classNames from "classnames";
-import { SpaceProps, BorderProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps, TypographyProps } from "@doar/shared/styled";
 import { StyledContainer, StyledRow, StyledCol } from "./style";
 import { ColProps, RowProps } from "./types";
 
@@ -33,7 +33,7 @@ export const Row: FC<IRowProps> = ({
     );
 };
 
-interface IColProps extends IProps, ColProps, BorderProps {}
+interface IColProps extends IProps, ColProps, BorderProps, TypographyProps {}
 
 export const Col: FC<IColProps> = ({ className, ...props }) => {
     const { smOrder, mdOrder, lgOrder, xlOrder } = props;
@@ -43,7 +43,7 @@ export const Col: FC<IColProps> = ({ className, ...props }) => {
     let orderlg;
     let orderXl;
 
-    if (smOrder || mdOrder || lgOrder || xlOrder) {
+    if (smOrder === 0 || mdOrder === 0 || lgOrder === 0 || xlOrder === 0) {
         if (smOrder === 0) {
             orderSm = `order-sm-${smOrder}`;
             delete restProps.smOrder;

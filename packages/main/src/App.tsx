@@ -21,6 +21,7 @@ const Timeline = lazy(() => import("./pages/timeline"));
 const Pricing = lazy(() => import("./pages/pricing"));
 const HelpCenter = lazy(() => import("./pages/help-center"));
 const Invoice = lazy(() => import("./pages/invoice"));
+const Calendar = lazy(() => import("./pages/apps/calendar"));
 
 const App: React.FC = () => {
     return (
@@ -66,6 +67,7 @@ const App: React.FC = () => {
                     <Route exact path="/pricing" component={Pricing} />
                     <Route exact path="/help-center" component={HelpCenter} />
                     <Route exact path="/invoice" component={Invoice} />
+                    <Route exact path="/apps/calendar" component={Calendar} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>

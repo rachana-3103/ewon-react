@@ -60,7 +60,7 @@ const menus = [
             {
                 id: 21,
                 label: "Calendar",
-                url: "/",
+                url: "/apps/calendar",
                 Icon: Calendar,
             },
             {

@@ -5,11 +5,13 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "esModuleInterop": true 
+    "esModuleInterop": true,
   },
   "include": [
     "src",
     "src/*",
     "src/**/*",
-    "config-overrides.js"  ]
+    "config-overrides.js"
+  ]
 }
+ 

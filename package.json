@@ -34,6 +34,7 @@
     "lint:fix": "lerna run lint:fix --parallel",
     "start:main": "lerna exec --scope=\"@doar/main\" yarn start",
     "build:main": "lerna run build --scope=\"@doar/main\" ",
+    "serve:main": "lerna run serve --scope=\"@doar/main\" ",
     "test:main": "CI=true lerna run test --scope=\"@doar/main\" ",
     "lint:main": "lerna run lint --scope=\"@doar/main\" ",
     "lint:fix:main": "lerna run lint:fix --scope=\"@doar/main\" ",

@@ -904,17 +904,24 @@ const buttonStyles = css<IProps>`
         css`
             padding: 3px 6px;
         `}
+	${({ $iconButton, $size }) =>
+        $iconButton &&
+        $size === "sm" &&
+        css`
+            padding-left: 8px;
+            padding-right: 8px;
+            svg {
+                width: 14px;
+                height: 14px;
+                stroke-width: 2.5px;
+                margin-top: -2px;
+            }
+        `}
     ${({ $iconButton, $size }) =>
         $iconButton &&
         $size === "md" &&
         css`
             padding: 5px 10px;
-        `}
-
-	${({ $iconButton, $size }) =>
-        $iconButton &&
-        $size === "md" &&
-        css`
             svg {
                 width: 18px;
                 height: 18px;
@@ -922,19 +929,10 @@ const buttonStyles = css<IProps>`
                 margin-top: -2px;
             }
         `}
-    ${({ $hasIcon, $size }) =>
+
+
+	${({ $hasIcon, $iconSize }) =>
         $hasIcon &&
-        $size === "sm" &&
-        css`
-            svg {
-                width: 14px;
-                height: 14px;
-                stroke-width: 2.5px;
-                margin-top: -2px;
-                margin-right: 7px;
-            }
-        `}
-	${({ $iconSize }) =>
         $iconSize === "sm" &&
         css`
             svg {
@@ -944,7 +942,8 @@ const buttonStyles = css<IProps>`
                 margin-top: -2px;
             }
         `}
-	${({ $iconPosition, $iconSpace }) =>
+	${({ $hasIcon, $iconPosition, $iconSpace }) =>
+        $hasIcon &&
         $iconPosition === "left" &&
         !$iconSpace &&
         css`
@@ -952,7 +951,8 @@ const buttonStyles = css<IProps>`
                 margin-right: 7px;
             }
         `}
-	${({ $iconPosition, $iconSpace }) =>
+	${({ $hasIcon, $iconPosition, $iconSpace }) =>
+        $hasIcon &&
         $iconPosition === "left" &&
         $iconSpace &&
         css`

@@ -1,0 +1,64 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import {
+    Modal,
+    ModalHeader,
+    ModalTitle,
+    ModalClose,
+    ModalBody,
+    ModalFooter,
+} from "./modal";
+import { Button } from "../button/button";
+import DemoModal from "./demo-modal";
+
+<Meta title="UI/Modal" component={Modal} />
+
+# Modal
+
+<p class="sbdocs-desc">
+    Add dialogs to your site for lightboxes, user notifications, or completely
+    custom content.
+</p>
+
+## Basic Example
+
+Below is the static example of the basic modal.
+
+<Preview withToolbar>
+    <Story name="Color">
+        <>
+            <DemoModal />
+        </>
+    </Story>
+</Preview>
+
+```Javascript
+    const [show, setShow] = useState(false);
+    const clickHandler = () => {
+        setShow((prev) => !prev);
+    };
+    return (
+        <>
+            <Modal show={show}>
+                <ModalHeader>
+                    <ModalTitle>Modal Title</ModalTitle>
+                    <ModalClose>x</ModalClose>
+                </ModalHeader>
+                <ModalBody>
+                    <p>
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of
+                        letters, as opposed to using &apos;Content here, content
+                        here&apos;, making it look like readable English.
+                    </p>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="secondary">Close</Button>
+                    <Button color="primary">Save changes</Button>
+                </ModalFooter>
+            </Modal>
+            <Button onClick={clickHandler}>Open Modal</Button>
+        </>
+    );
+```

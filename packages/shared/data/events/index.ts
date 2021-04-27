@@ -1,9 +1,11 @@
 import moment from "moment";
+import { IEvent } from "../../types";
 
 const curYear: string = moment().format("YYYY");
 const curMonth: string = moment().format("MM");
 
-export const calendarEvents = {
+export const calendarEvents: IEvent = {
+    label: "calendar",
     backgroundColor: "#d9e8ff",
     borderColor: "#0168fa",
     events: [
@@ -58,7 +60,8 @@ export const calendarEvents = {
     ],
 };
 
-export const birthdayEvents = {
+export const birthdayEvents: IEvent = {
+    label: "birthday",
     backgroundColor: "#c3edd5",
     borderColor: "#10b759",
     events: [
@@ -89,7 +92,8 @@ export const birthdayEvents = {
     ],
 };
 
-export const holidayEvents = {
+export const holidayEvents: IEvent = {
+    label: "holiday",
     backgroundColor: "#fcbfdc",
     borderColor: "#f10075",
     events: [
@@ -114,7 +118,8 @@ export const holidayEvents = {
     ],
 };
 
-export const discoveredEvents = {
+export const discoveredEvents: IEvent = {
+    label: "discover",
     backgroundColor: "#bff2f2",
     borderColor: "#00cccc",
     events: [
@@ -127,7 +132,8 @@ export const discoveredEvents = {
     ],
 };
 
-export const meetupEvents = {
+export const meetupEvents: IEvent = {
+    label: "meetup",
     backgroundColor: "#dedafe",
     borderColor: "#5b47fb",
     events: [
@@ -146,7 +152,8 @@ export const meetupEvents = {
     ],
 };
 
-export const otherEvents = {
+export const otherEvents: IEvent = {
+    label: "other",
     backgroundColor: "#ffdec4",
     borderColor: "#fd7e14",
     events: [

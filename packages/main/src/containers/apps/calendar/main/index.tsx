@@ -7,17 +7,15 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import moment from "moment";
-import {
-    calendarEvents,
-    birthdayEvents,
-    holidayEvents,
-    discoveredEvents,
-    meetupEvents,
-    otherEvents,
-} from "./data";
+import { IEvent } from "@doar/shared/types";
+import { useAppSelector } from "../../../../redux/hooks";
 import { StyledWrap } from "./style";
 
 const Wrapper: FC = () => {
+    const events: IEvent[] = useAppSelector(
+        (state) => state.events.eventSources
+    );
+
     const calendarRef = useRef({} as any);
     useEffect(() => {
         // change view to week when in tablet
@@ -100,6 +98,18 @@ const Wrapper: FC = () => {
         }
     };
 
+    const handleEventClick = (info: any): void => {
+        console.log("click", info);
+    };
+
+    const handleEventAdd = (info: any): void => {
+        console.log("add", info);
+    };
+
+    const handleDateSelect = (info: any): void => {
+        console.log("select", info);
+    };
+
     return (
         <StyledWrap>
             <FullCalendar
@@ -143,17 +153,13 @@ const Wrapper: FC = () => {
                     },
                 }}
                 eventDisplay="block"
-                eventSources={[
-                    calendarEvents,
-                    birthdayEvents,
-                    holidayEvents,
-                    discoveredEvents,
-                    meetupEvents,
-                    otherEvents,
-                ]}
+                eventSources={events}
                 eventDidMount={eventRender}
                 ref={calendarRef}
                 windowResize={handleSize}
+                eventClick={handleEventClick}
+                eventAdd={handleEventAdd}
+                select={handleDateSelect}
             />
         </StyledWrap>
     );

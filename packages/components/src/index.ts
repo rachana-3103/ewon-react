@@ -61,6 +61,14 @@ import Heading from "./ui/heading";
 import HRLine from "./ui/hr-line";
 import { Image, ImageGroup } from "./ui/image/image";
 import { Badge } from "./ui/badge/badge";
+import {
+    Modal,
+    ModalHeader,
+    ModalTitle,
+    ModalClose,
+    ModalBody,
+    ModalFooter,
+} from "./ui/modal/modal";
 
 export {
     Button,
@@ -126,4 +134,10 @@ export {
     ImageGroup,
     Badge,
     HRLine,
+    Modal,
+    ModalHeader,
+    ModalTitle,
+    ModalClose,
+    ModalBody,
+    ModalFooter,
 };

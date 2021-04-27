@@ -125,6 +125,14 @@ export const ResetCSS = createGlobalStyle`
 		overflow: hidden;
 		clear: both;
 	}
+	#story--ui-modal--modal-controls,
+	#story--ui-modal--basic-example{
+		background-color: #97a3b9;
+		.modal{
+			display: block;
+			position: static
+		}
+	}
     input,
     select{
         box-sizing: border-box;

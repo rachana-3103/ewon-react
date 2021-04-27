@@ -68,3 +68,22 @@ export interface IRadial {
     sec: string;
     chart: IChart;
 }
+
+export interface IEvent {
+    label:
+        | "calendar"
+        | "birthday"
+        | "holiday"
+        | "discover"
+        | "meetup"
+        | "other";
+    backgroundColor: string;
+    borderColor: string;
+    events: Array<{
+        id: string;
+        start: string;
+        end: string;
+        title: string;
+        description?: string;
+    }>;
+}

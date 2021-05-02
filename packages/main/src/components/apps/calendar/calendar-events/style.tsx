@@ -31,6 +31,7 @@ export const StyledItem = styled.button<IItemProps>`
     padding: 6px 10px;
     border: none;
     background: transparent;
+    text-transform: capitalize;
     &:hover {
         background-color: #f5f6fa;
     }

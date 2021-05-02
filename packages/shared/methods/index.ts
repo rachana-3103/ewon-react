@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const getSiblings = (elem: HTMLElement): HTMLElement[] => {
     const siblings = [];
     let sibling = elem?.parentNode?.firstChild as HTMLElement;
@@ -23,4 +25,14 @@ export const hexTorgb = (hex: string, opacity: number): string | undefined => {
 
     // eslint-disable-next-line consistent-return
     return `rgba(${rgba.join(",")})`;
+};
+
+export const flatDeep = (arr: any[], d = 1): any[] => {
+    return d > 0
+        ? arr.reduce((acc, val) => {
+              return acc.concat(
+                  Array.isArray(val) ? flatDeep(val, d - 1) : val
+              ) as any[];
+          }, [])
+        : arr.slice();
 };

@@ -1,4 +1,4 @@
-import styled, { themeGet, css } from "@doar/shared/styled";
+import styled from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-left: 15px;
@@ -21,6 +21,7 @@ interface IItemProps {
         | "discover"
         | "meetup"
         | "other";
+    $color: string;
 }
 
 export const StyledItem = styled.button<IItemProps>`
@@ -37,66 +38,12 @@ export const StyledItem = styled.button<IItemProps>`
     &:active {
         outline: none;
     }
-    ${({ $type }) =>
-        $type === "calendar" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.primary")};
-                &:before {
-                    background-color: ${themeGet("colors.primary")};
-                }
-            }
-        `}
-    ${({ $type }) =>
-        $type === "birthday" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.success")};
-                &:before {
-                    background-color: ${themeGet("colors.success")};
-                }
-            }
-        `}
-	${({ $type }) =>
-        $type === "holiday" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.pink")};
-                &:before {
-                    background-color: ${themeGet("colors.pink")};
-                }
-            }
-        `}
-	${({ $type }) =>
-        $type === "discover" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.teal")};
-                &:before {
-                    background-color: ${themeGet("colors.teal")};
-                }
-            }
-        `}
-	${({ $type }) =>
-        $type === "meetup" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.indigo")};
-                &:before {
-                    background-color: ${themeGet("colors.indigo")};
-                }
-            }
-        `}
-	${({ $type }) =>
-        $type === "other" &&
-        css`
-            span {
-                border-color: ${themeGet("colors.orange")};
-                &:before {
-                    background-color: ${themeGet("colors.orange")};
-                }
-            }
-        `}
+    span {
+        border-color: ${(props) => props.$color};
+        &:before {
+            background-color: ${(props) => props.$color};
+        }
+    }
 `;
 
 export const StyledBullet = styled.span`

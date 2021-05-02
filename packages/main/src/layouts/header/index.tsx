@@ -1,11 +1,13 @@
 import { FC, useState, useCallback } from "react";
-import { Search, Menu, X } from "react-feather";
+import { Search, Menu, X, ArrowLeft } from "react-feather";
 import { Anchor, Navbar, Button } from "@doar/components";
 import { menuData } from "@doar/shared/data";
 import MessageDropdown from "../../components/header/message-dropdown";
 import NotificationDropdown from "../../components/header/notification-dropdown";
 import ProfileDropdown from "../../components/header/profile-dropdown";
 import NavSearch from "../../components/header/nav-search";
+import { useAppDispatch } from "../../redux/hooks";
+import { toggleCalendarSidebar } from "../../redux/slices/ui";
 import {
     StyledHeader,
     StyledLogo,
@@ -16,31 +18,60 @@ import {
     StyledNavbarHeader,
     StyledNavbarBody,
     StyledNavbarTitle,
+    StyledMenuBtn,
+    StyledSidebarBtn,
 } from "./style";
 
-const Header: FC = () => {
+interface IProps {
+    hasSidebar?: boolean;
+    sidebar?: "calendar";
+}
+
+const Header: FC<IProps> = ({ hasSidebar, sidebar }) => {
+    const dispatch = useAppDispatch();
     const [searchOpen, setSearchOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
     const searchHandler = useCallback(() => {
         setSearchOpen((prev) => !prev);
     }, []);
 
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const calendarHandler = useCallback(() => {
+        dispatch(toggleCalendarSidebar());
+        setSidebarOpen((prev) => !prev);
+    }, [dispatch]);
+
     const menuHandler = useCallback(() => {
         setMenuOpen((prev) => !prev);
-    }, []);
+        if (menuOpen) {
+            if (sidebar === "calendar") {
+                calendarHandler();
+            }
+        }
+    }, [calendarHandler, menuOpen, sidebar]);
 
     return (
         <>
             <StyledHeader>
-                <Button
+                <StyledMenuBtn
                     variant="texted"
-                    ml="18px"
-                    display={[null, null, null, "none"]}
                     onClick={menuHandler}
+                    $hasSidebar={hasSidebar}
+                    $sidebarOpen={sidebarOpen}
                 >
-                    <Menu color="#8392a5" size={20} strokeWidth="2.5px" />
-                </Button>
+                    <Menu size={20} strokeWidth="2.5px" />
+                </StyledMenuBtn>
+                {hasSidebar && sidebar === "calendar" && (
+                    <StyledSidebarBtn
+                        variant="texted"
+                        onClick={calendarHandler}
+                        $hasSidebar={hasSidebar}
+                        $sidebarOpen={sidebarOpen}
+                    >
+                        <ArrowLeft size={20} strokeWidth="2.5px" />
+                    </StyledSidebarBtn>
+                )}
                 <StyledLogo>
                     <Anchor path="/">Header</Anchor>
                 </StyledLogo>

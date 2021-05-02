@@ -62,6 +62,7 @@ import {
     FileUpload,
     Radio,
     Select,
+    Textarea,
 } from "./src/forms/form-elements";
 import { Progress } from "./src/ui/progress/progress";
 import SectionTitle from "./src/ui/section-title";
@@ -140,6 +141,7 @@ export {
     FileUpload,
     Radio,
     Select,
+    Textarea,
     Progress,
     SectionTitle,
     Text,

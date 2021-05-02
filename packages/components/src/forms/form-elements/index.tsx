@@ -3,5 +3,6 @@ import { Checkbox } from "./checkbox";
 import { FileUpload } from "./file-upload";
 import { Radio } from "./radio";
 import { Select } from "./select";
+import { Textarea } from "./textarea";
 
-export { Input, Checkbox, FileUpload, Radio, Select };
+export { Input, Checkbox, FileUpload, Radio, Select, Textarea };

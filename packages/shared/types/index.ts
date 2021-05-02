@@ -70,7 +70,7 @@ export interface IRadial {
 }
 
 export interface IEvent {
-    label:
+    category:
         | "calendar"
         | "birthday"
         | "holiday"

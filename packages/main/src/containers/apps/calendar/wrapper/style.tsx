@@ -10,13 +10,4 @@ export const StyledWrap = styled.div`
     ${device.large} {
         top: 60px;
     }
-    /* position: relative;
-    margin-top: 55px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    ${device.large} {
-        margin-top: 60px;
-    } */
 `;

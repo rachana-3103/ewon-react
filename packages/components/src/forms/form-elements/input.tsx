@@ -1,4 +1,4 @@
-import { FC, ChangeEvent } from "react";
+import { FC, ChangeEvent, MouseEvent, FocusEvent } from "react";
 import classnames from "classnames";
 import { SpaceProps, ColorProps, LayoutProps } from "@doar/shared/styled";
 import { StyledInput, StyledFeedback } from "./style";
@@ -10,7 +10,12 @@ interface IProps {
     id: string;
     name: string;
     placeholder?: string;
+    value?: string;
+    showState?: boolean;
+    showErrorOnly?: boolean;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    onClick?: (e: MouseEvent<HTMLInputElement>) => void;
+    onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
 }
 
 interface IInputProps extends IProps, SpaceProps, ColorProps, LayoutProps {
@@ -27,6 +32,9 @@ export const Input: FC<IInputProps> = ({
     id,
     name,
     onChange,
+    value,
+    showState,
+    showErrorOnly,
     ...restProps
 }) => {
     return (
@@ -35,14 +43,23 @@ export const Input: FC<IInputProps> = ({
                 type={type}
                 disabled={disabled}
                 $state={state}
+                $showState={showState}
+                $showErrorOnly={showErrorOnly}
                 className={classnames(className, "form-control")}
                 id={id}
                 name={name}
                 onChange={onChange}
+                value={value}
                 {...restProps}
             />
-            {feedbackText && (
-                <StyledFeedback $state={state}>{feedbackText}</StyledFeedback>
+            {feedbackText && showState && (
+                <StyledFeedback
+                    $state={state}
+                    $showState={showState}
+                    $showErrorOnly={showErrorOnly}
+                >
+                    {feedbackText}
+                </StyledFeedback>
             )}
         </>
     );
@@ -50,4 +67,5 @@ export const Input: FC<IInputProps> = ({
 
 Input.defaultProps = {
     type: "text",
+    showErrorOnly: true,
 };

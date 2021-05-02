@@ -16,6 +16,8 @@ import selectIcon from "../../static/select.svg";
 
 interface IInput extends SpaceProps, ColorProps, LayoutProps {
     $state?: "success" | "warning" | "error";
+    $showState?: boolean;
+    $showErrorOnly?: boolean;
 }
 
 const InputStyles = css`
@@ -122,9 +124,18 @@ export const StyledInput = styled(
 )<IInput>`
     height: 38px;
     ${InputStyles};
-    ${(props) => props.$state === "success" && SuccessInputStyles};
-    ${(props) => props.$state === "warning" && WarningInputStyles};
-    ${(props) => props.$state === "error" && ErrorInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "success" &&
+        $showState &&
+        !$showErrorOnly &&
+        SuccessInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "warning" &&
+        $showState &&
+        !$showErrorOnly &&
+        WarningInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "error" && $showState && $showErrorOnly && ErrorInputStyles};
     ${space};
     ${layout};
     ${colorStyles};
@@ -155,9 +166,18 @@ export const StyledTextarea = styled(
     height: auto;
     min-height: 38px;
     ${InputStyles};
-    ${(props) => props.$state === "success" && SuccessInputStyles};
-    ${(props) => props.$state === "warning" && WarningInputStyles};
-    ${(props) => props.$state === "error" && ErrorInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "success" &&
+        $showState &&
+        !$showErrorOnly &&
+        SuccessInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "warning" &&
+        $showState &&
+        !$showErrorOnly &&
+        WarningInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "error" && $showState && $showErrorOnly && ErrorInputStyles};
     ${space};
     ${layout};
     ${colorStyles};
@@ -165,24 +185,39 @@ export const StyledTextarea = styled(
 
 interface IFeedback {
     $state?: "success" | "warning" | "error";
+    $showState?: boolean;
+    $showErrorOnly?: boolean;
 }
 
 export const StyledFeedback = styled.div<IFeedback>`
     width: 100%;
     margin-top: 0.25rem;
     font-size: 80%;
-    ${({ $state }) =>
+    ${({ $state, $showErrorOnly }) =>
+        $state !== "error" &&
+        $showErrorOnly &&
+        css`
+            display: none;
+        `}
+    ${({ $state, $showState, $showErrorOnly }) =>
         $state === "success" &&
+        $showState &&
+        !$showErrorOnly &&
         css`
             color: ${themeGet("colors.success")};
         `};
-    ${({ $state }) =>
+    ${({ $state, $showState, $showErrorOnly }) =>
         $state === "warning" &&
+        $showState &&
+        !$showErrorOnly &&
         css`
             color: ${themeGet("colors.warning")};
         `};
-    ${({ $state }) =>
+
+    ${({ $state, $showState, $showErrorOnly }) =>
         $state === "error" &&
+        $showState &&
+        $showErrorOnly &&
         css`
             color: ${themeGet("colors.danger")};
         `};
@@ -426,9 +461,18 @@ export const StyledSelect = styled(
     appearance: none;
     background: #fff url(${selectIcon}) no-repeat right 0.625rem center/8px 10px;
     ${InputStyles};
-    ${(props) => props.$state === "success" && SuccessInputStyles};
-    ${(props) => props.$state === "warning" && WarningInputStyles};
-    ${(props) => props.$state === "error" && ErrorInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "success" &&
+        $showState &&
+        !$showErrorOnly &&
+        SuccessInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "warning" &&
+        $showState &&
+        !$showErrorOnly &&
+        WarningInputStyles};
+    ${({ $state, $showState, $showErrorOnly }) =>
+        $state === "error" && $showState && $showErrorOnly && ErrorInputStyles};
     ${space};
     ${layout};
     ${colorStyles};

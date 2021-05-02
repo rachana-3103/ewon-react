@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Search, Plus } from "react-feather";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -8,27 +8,41 @@ import SearchForm from "../../../../components/apps/calendar/search";
 import InlineCalendar from "../../../../components/apps/calendar/inline-calendar";
 import CalendarEvents from "../../../../components/apps/calendar/calendar-events";
 import UpcomingEvents from "../../../../components/apps/calendar/upcoming-events";
+import CreateEvent from "../../../../components/apps/calendar/create-event";
+import { useAppSelector } from "../../../../redux/hooks";
 
 const Sidebar: FC = () => {
+    const { calendarSidebar } = useAppSelector((state) => state.ui);
+    const [showModal, setShowModal] = useState(false);
+    const handleModal = () => {
+        setShowModal((prev) => !prev);
+    };
     return (
-        <StyledWrap>
-            <StyledHeader>
-                <Search className="search" />
-                <SearchForm />
-                <Button size="sm" iconButton>
-                    <div>
-                        <Plus className="plus" />
-                    </div>
-                </Button>
-            </StyledHeader>
-            <PerfectScrollbar>
-                <StyledBody>
-                    <InlineCalendar />
-                    <CalendarEvents />
-                    <UpcomingEvents />
-                </StyledBody>
-            </PerfectScrollbar>
-        </StyledWrap>
+        <>
+            <StyledWrap $show={calendarSidebar}>
+                <StyledHeader>
+                    <Search className="search" />
+                    <SearchForm />
+                    <Button size="sm" iconButton onClick={handleModal}>
+                        <div>
+                            <Plus className="plus" />
+                        </div>
+                    </Button>
+                </StyledHeader>
+                <PerfectScrollbar>
+                    <StyledBody>
+                        <InlineCalendar />
+                        <CalendarEvents />
+                        <UpcomingEvents />
+                    </StyledBody>
+                </PerfectScrollbar>
+            </StyledWrap>
+            <CreateEvent
+                show={showModal}
+                onClose={handleModal}
+                currentDate={{ start: new Date(), end: new Date() }}
+            />
+        </>
     );
 };
 

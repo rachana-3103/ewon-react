@@ -6,6 +6,7 @@ import styled, {
     space,
     css,
 } from "@doar/shared/styled";
+import { Button } from "@doar/components";
 
 export const StyledHeader = styled.header`
     position: relative;
@@ -190,4 +191,51 @@ export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
             stroke-width: 2.25px;
         }
     }
+`;
+
+interface IMenuBtn {
+    $hasSidebar: boolean;
+    $sidebarOpen: boolean;
+}
+
+export const StyledMenuBtn = styled(({ ...rest }) => (
+    <Button {...rest} />
+))<IMenuBtn>`
+    margin-left: 18px;
+    svg {
+        color: ${themeGet("colors.text3")};
+    }
+    ${({ $hasSidebar }) =>
+        $hasSidebar === true &&
+        css`
+            display: none;
+        `}
+    ${({ $sidebarOpen }) =>
+        $sidebarOpen === true &&
+        css`
+            display: block;
+        `}
+	${device.large} {
+        display: none;
+    }
+`;
+
+export const StyledSidebarBtn = styled(({ ...rest }) => (
+    <Button {...rest} />
+))<IMenuBtn>`
+    margin-left: 18px;
+    svg {
+        color: ${themeGet("colors.text3")};
+    }
+    ${device.small} {
+        margin-left: 20px;
+    }
+    ${device.large} {
+        display: none;
+    }
+    ${({ $sidebarOpen }) =>
+        $sidebarOpen === true &&
+        css`
+            display: none;
+        `}
 `;

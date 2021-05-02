@@ -1,4 +1,4 @@
-import { FC, ChangeEvent } from "react";
+import { FC, ChangeEvent, FocusEvent } from "react";
 import classnames from "classnames";
 import { SpaceProps, ColorProps, LayoutProps } from "@doar/shared/styled";
 import { StyledSelect, StyledFeedback } from "./style";
@@ -10,7 +10,11 @@ interface IProps {
     id: string;
     name: string;
     state?: "success" | "warning" | "error";
-    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    value?: string | number;
+    showState?: boolean;
+    showErrorOnly?: boolean;
+    onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
+    onBlur?: (e: FocusEvent<HTMLSelectElement>) => void;
 }
 
 interface IInputProps extends IProps, SpaceProps, ColorProps, LayoutProps {}
@@ -22,23 +26,43 @@ export const Select: FC<IInputProps> = ({
     feedbackText,
     id,
     name,
+    value,
     onChange,
+    onBlur,
     children,
+    showState,
+    showErrorOnly,
     ...restProps
 }) => {
     return (
         <>
             <StyledSelect
                 className={classnames(className, "custom-select")}
+                $state={state}
+                $showState={showState}
+                $showErrorOnly={showErrorOnly}
                 id={id}
                 name={name}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
                 {...restProps}
             >
                 {children}
             </StyledSelect>
-            {feedbackText && (
-                <StyledFeedback $state={state}>{feedbackText}</StyledFeedback>
+            {feedbackText && showState && (
+                <StyledFeedback
+                    $state={state}
+                    $showState={showState}
+                    $showErrorOnly={showErrorOnly}
+                >
+                    {feedbackText}
+                </StyledFeedback>
             )}
         </>
     );
+};
+
+Select.defaultProps = {
+    showErrorOnly: true,
 };

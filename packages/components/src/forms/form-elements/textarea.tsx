@@ -9,6 +9,10 @@ interface IProps {
     feedbackText?: string;
     id: string;
     name: string;
+    placeholder?: string;
+    value?: string;
+    showState?: boolean;
+    showErrorOnly?: boolean;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -25,6 +29,10 @@ export const Textarea: FC<ITextareaProps> = ({
     feedbackText,
     id,
     name,
+    placeholder,
+    value,
+    showState,
+    showErrorOnly,
     onChange,
     ...restProps
 }) => {
@@ -34,14 +42,24 @@ export const Textarea: FC<ITextareaProps> = ({
                 disabled={disabled}
                 className={classnames(className, "form-control")}
                 $state={state}
+                $showState={showState}
+                $showErrorOnly={showErrorOnly}
                 rows={rows}
                 id={id}
                 name={name}
+                placeholder={placeholder}
+                value={value}
                 onChange={onChange}
                 {...restProps}
             />
-            {feedbackText && (
-                <StyledFeedback $state={state}>{feedbackText}</StyledFeedback>
+            {feedbackText && showState && (
+                <StyledFeedback
+                    $state={state}
+                    $showState={showState}
+                    $showErrorOnly={showErrorOnly}
+                >
+                    {feedbackText}
+                </StyledFeedback>
             )}
         </>
     );
@@ -49,4 +67,5 @@ export const Textarea: FC<ITextareaProps> = ({
 
 Textarea.defaultProps = {
     rows: 2,
+    showErrorOnly: true,
 };

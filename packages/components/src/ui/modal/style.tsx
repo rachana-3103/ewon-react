@@ -1,4 +1,10 @@
-import styled, { css, device, themeGet } from "@doar/shared/styled";
+import styled, {
+    css,
+    device,
+    themeGet,
+    space,
+    SpaceProps,
+} from "@doar/shared/styled";
 
 interface IModal {
     $show: boolean;
@@ -173,10 +179,13 @@ export const StyledClose = styled.button`
     cursor: pointer;
 `;
 
-export const StyledBody = styled.div`
+export const StyledBody = styled(({ px, py, p, pt, pb, pl, pr, ...rest }) => (
+    <div {...rest} />
+))<SpaceProps>`
     position: relative;
     flex: 1 1 auto;
     padding: 1rem;
+    ${space};
 `;
 
 export const StyledFooter = styled.div`

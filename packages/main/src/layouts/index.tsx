@@ -2,10 +2,15 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 
-const Layout: React.FC = ({ children }) => {
+interface IProps {
+    hasSidebar?: boolean;
+    sidebar?: "calendar";
+}
+
+const Layout: React.FC<IProps> = ({ children, hasSidebar, sidebar }) => {
     return (
         <>
-            <Header />
+            <Header hasSidebar={hasSidebar} sidebar={sidebar} />
             {children}
             <Footer />
         </>

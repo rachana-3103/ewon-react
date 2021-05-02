@@ -1,9 +1,5 @@
 /* eslint-disable react/button-has-type */
-import styled, {
-    themeGet,
-    borderColor as borderStyle,
-    BorderColorProps,
-} from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding: 20px;
@@ -12,9 +8,7 @@ export const StyledWrap = styled.div`
 
 export const StyledGroup = styled.div``;
 
-export const StyledItem = styled(({ borderColor, ...rest }) => (
-    <button {...rest} />
-))<BorderColorProps>`
+export const StyledItem = styled.div<{ $color: string }>`
     display: block;
     padding: 0 10px;
     color: ${themeGet("colors.text2")};
@@ -25,7 +19,7 @@ export const StyledItem = styled(({ borderColor, ...rest }) => (
     border-left-style: solid;
     background: transparent;
     text-align: left;
-    ${borderStyle};
+    border-color: ${(props) => props.$color};
     &:focus,
     &:active {
         outline: none;

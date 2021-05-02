@@ -1,32 +1,30 @@
 import { FC } from "react";
+import { IEvent } from "@doar/shared/types";
 import Label from "../label";
 import { StyledWrap, StyledNav, StyledItem, StyledBullet } from "./style";
+import { useAppSelector } from "../../../../redux/hooks";
 
 const CalendarEvents: FC = () => {
+    const events: IEvent[] = useAppSelector(
+        (state) => state?.events.eventSources
+    );
+
     return (
         <StyledWrap>
             <Label mb="10px" pl="10px">
                 My Calendar
             </Label>
             <StyledNav>
-                <StyledItem $type="calendar" $show>
-                    <StyledBullet /> Calendar Events
-                </StyledItem>
-                <StyledItem $type="birthday" $show>
-                    <StyledBullet /> Birthday Events
-                </StyledItem>
-                <StyledItem $type="holiday" $show>
-                    <StyledBullet /> Holiday Events
-                </StyledItem>
-                <StyledItem $type="discover" $show>
-                    <StyledBullet /> Discovered Events
-                </StyledItem>
-                <StyledItem $type="meetup" $show>
-                    <StyledBullet /> Meetup Events
-                </StyledItem>
-                <StyledItem $type="other" $show>
-                    <StyledBullet /> Other Events
-                </StyledItem>
+                {events.map((ev) => (
+                    <StyledItem
+                        key={ev.category}
+                        $color={ev.borderColor}
+                        $type="calendar"
+                        $show
+                    >
+                        <StyledBullet /> {ev.category} Events
+                    </StyledItem>
+                ))}
             </StyledNav>
         </StyledWrap>
     );

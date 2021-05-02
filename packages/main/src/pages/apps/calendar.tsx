@@ -6,7 +6,7 @@ import Main from "../../containers/apps/calendar/main";
 
 const Calendar: React.FC = () => {
     return (
-        <Layout>
+        <Layout hasSidebar sidebar="calendar">
             <Wrapper>
                 <Sidebar />
                 <Main />

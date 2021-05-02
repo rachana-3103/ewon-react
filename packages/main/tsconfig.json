@@ -5,8 +5,7 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-	"declaration": false
+    "esModuleInterop": true
   },
   "include": [
     "src",

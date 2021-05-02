@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-underscore-dangle */
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import FullCalendar, { ViewContentArg } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -9,12 +9,25 @@ import listPlugin from "@fullcalendar/list";
 import moment from "moment";
 import { IEvent } from "@doar/shared/types";
 import { useAppSelector } from "../../../../redux/hooks";
+import CreateEvent from "../../../../components/apps/calendar/create-event";
+import EventDetails, {
+    IEventDetails,
+} from "../../../../components/apps/calendar/event-details";
 import { StyledWrap } from "./style";
 
 const Wrapper: FC = () => {
     const events: IEvent[] = useAppSelector(
         (state) => state.events.eventSources
     );
+    const { calendarSidebar } = useAppSelector((state) => state.ui);
+
+    const [showCreateModal, setShowCreateModal] = useState(false);
+    const [showDetailsModal, setShowDetailsModal] = useState(false);
+    const [eventDetails, setEventDetails] = useState({} as IEventDetails);
+    const [selectDate, setSelectDate] = useState<{ start: Date; end: Date }>({
+        start: new Date(),
+        end: new Date(),
+    });
 
     const calendarRef = useRef({} as any);
     useEffect(() => {
@@ -79,7 +92,7 @@ const Wrapper: FC = () => {
             view: { type },
         } = info;
         if (type === "timeGridWeek") {
-            const day: string = moment(date).format("ddd");
+            const day: string = moment(date).format("DDD");
             const dayDate: string = moment(date).format("DD");
             const mainEl = el.querySelector(".fc-col-header-cell-cushion");
             mainEl.innerHTML = `<span>${day}</span><span>${dayDate}</span>`;
@@ -98,70 +111,101 @@ const Wrapper: FC = () => {
         }
     };
 
-    const handleEventClick = (info: any): void => {
-        console.log("click", info);
+    const handleCreateModal = () => {
+        setShowCreateModal((prev) => !prev);
     };
 
-    const handleEventAdd = (info: any): void => {
-        console.log("add", info);
+    const handleDetailsModal = () => {
+        setShowDetailsModal((prev) => !prev);
+    };
+
+    const handleEventClick = (info: any): void => {
+        const { id } = info.event;
+        const {
+            category,
+        } = info.event.source.internalEventSource.extendedProps;
+        const bg = info.event.source.internalEventSource.ui.borderColor;
+        const { meta } = info.event.source.internalEventSource;
+        const selectedEvent = meta.find(
+            (item: { id: string }) => item.id === id
+        );
+
+        setEventDetails({
+            category,
+            bg,
+            event: selectedEvent,
+        });
+        handleDetailsModal();
     };
 
     const handleDateSelect = (info: any): void => {
-        console.log("select", info);
+        setSelectDate({ start: info.start, end: info.end });
+        handleCreateModal();
     };
 
     return (
-        <StyledWrap>
-            <FullCalendar
-                plugins={[
-                    dayGridPlugin,
-                    timeGridPlugin,
-                    interactionPlugin,
-                    listPlugin,
-                ]}
-                headerToolbar={{
-                    left: "prev,next today",
-                    center: "title",
-                    right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-                }}
-                initialView="dayGridMonth"
-                navLinks
-                selectable
-                selectLongPressDelay={100}
-                editable
-                nowIndicator
-                views={{
-                    timeGridWeek: {
-                        dayHeaderDidMount: dayHeaderFormat,
-                    },
-                    timeGridDay: {
-                        dayHeaders: false,
-                    },
-                    listWeek: {
-                        listDaySideFormat: false,
-                        listDayFormat: {
-                            day: "2-digit",
-                            weekday: "short",
+        <>
+            <StyledWrap $showSidebar={calendarSidebar}>
+                <FullCalendar
+                    plugins={[
+                        dayGridPlugin,
+                        timeGridPlugin,
+                        interactionPlugin,
+                        listPlugin,
+                    ]}
+                    headerToolbar={{
+                        left: "prev,next today",
+                        center: "title",
+                        right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+                    }}
+                    initialView="dayGridMonth"
+                    navLinks
+                    selectable
+                    selectLongPressDelay={100}
+                    editable
+                    nowIndicator
+                    views={{
+                        timeGridWeek: {
+                            dayHeaderDidMount: dayHeaderFormat,
                         },
-                    },
-                    listMonth: {
-                        listDaySideFormat: false,
-                        listDayFormat: {
-                            day: "2-digit",
-                            weekday: "short",
+                        timeGridDay: {
+                            dayHeaders: false,
                         },
-                    },
-                }}
-                eventDisplay="block"
-                eventSources={events}
-                eventDidMount={eventRender}
-                ref={calendarRef}
-                windowResize={handleSize}
-                eventClick={handleEventClick}
-                eventAdd={handleEventAdd}
-                select={handleDateSelect}
+                        listWeek: {
+                            listDaySideFormat: false,
+                            listDayFormat: {
+                                day: "2-digit",
+                                weekday: "short",
+                            },
+                        },
+                        listMonth: {
+                            listDaySideFormat: false,
+                            listDayFormat: {
+                                day: "2-digit",
+                                weekday: "short",
+                            },
+                        },
+                    }}
+                    eventDisplay="block"
+                    eventSources={events}
+                    eventDidMount={eventRender}
+                    ref={calendarRef}
+                    windowResize={handleSize}
+                    eventClick={handleEventClick}
+                    select={handleDateSelect}
+                />
+            </StyledWrap>
+            <CreateEvent
+                show={showCreateModal}
+                onClose={handleCreateModal}
+                currentDate={selectDate}
             />
-        </StyledWrap>
+            <EventDetails
+                show={showDetailsModal}
+                onClose={handleDetailsModal}
+                details={eventDetails}
+            />
+        </>
     );
 };
 

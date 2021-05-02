@@ -1,6 +1,10 @@
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 
-export const StyledMain = styled.div`
+interface IProps {
+    $showSidebar: boolean;
+}
+
+export const StyledWrap = styled.div<IProps>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -11,18 +15,12 @@ export const StyledMain = styled.div`
     ${device.large} {
         left: 280px;
     }
-`;
-
-export const StyledWrap = styled.div`
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: all 0.3s;
-    ${device.large} {
-        left: 280px;
+    @media (max-width: 991.98px) {
+        ${({ $showSidebar }) =>
+            $showSidebar &&
+            css`
+                transform: translateX(280px);
+            `}
     }
     .fc {
         height: 100%;
@@ -481,7 +479,7 @@ export const StyledWrap = styled.div`
                                     margin-left: 10%;
                                 }
                                 ${device.xlarge} {
-                                    margin-left: 8%;
+                                    margin-left: 10%;
                                 }
                             }
                             &:hover {

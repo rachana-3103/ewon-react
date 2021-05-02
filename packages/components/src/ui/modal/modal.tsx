@@ -1,6 +1,8 @@
 import { FC } from "react";
+import { Portal } from "react-portal";
 import classnames from "classnames";
 import { CSSTransition } from "react-transition-group";
+import { SpaceProps } from "@doar/shared/styled";
 import {
     StyledBackdrop,
     StyledModal,
@@ -47,29 +49,39 @@ export const Modal: FC<IModal> = ({
     ...restProps
 }) => {
     return (
-        <>
-            <StyledBackdrop $show={show} />
-            <StyledModal
-                $show={show}
-                $size={size}
-                $centered={centered}
-                className={classnames(className)}
-                {...restProps}
-            >
-                <CSSTransition
-                    in={show}
-                    timeout={400}
-                    unmountOnExit
-                    classNames="modal"
+        <Portal>
+            <>
+                <StyledBackdrop $show={show} />
+                <StyledModal
+                    $show={show}
+                    $size={size}
+                    $centered={centered}
+                    className={classnames(className)}
+                    onClick={onClose}
+                    {...restProps}
                 >
-                    {() => (
-                        <div className="modal-dialog">
-                            <div className="modal-content">{children}</div>
-                        </div>
-                    )}
-                </CSSTransition>
-            </StyledModal>
-        </>
+                    <CSSTransition
+                        in={show}
+                        timeout={400}
+                        unmountOnExit
+                        classNames="modal"
+                    >
+                        {() => (
+                            <div className="modal-dialog">
+                                <div
+                                    className="modal-content"
+                                    onClick={(e) => e.stopPropagation()}
+                                    role="button"
+                                    tabIndex={0}
+                                >
+                                    {children}
+                                </div>
+                            </div>
+                        )}
+                    </CSSTransition>
+                </StyledModal>
+            </>
+        </Portal>
     );
 };
 
@@ -134,11 +146,9 @@ export const ModalClose: FC<IClose> = ({
 
 ModalClose.displayName = "ModalClose";
 
-export const ModalBody: FC<IProps> = ({
-    className,
-    children,
-    ...restProps
-}) => {
+interface IBody extends IProps, SpaceProps {}
+
+export const ModalBody: FC<IBody> = ({ className, children, ...restProps }) => {
     return (
         <StyledBody
             className={classnames(className, "modal-body")}

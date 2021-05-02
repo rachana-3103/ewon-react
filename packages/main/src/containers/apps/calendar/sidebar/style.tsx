@@ -1,6 +1,10 @@
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 
-export const StyledWrap = styled.div`
+interface ISidebar {
+    $show: boolean;
+}
+
+export const StyledWrap = styled.div<ISidebar>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -14,16 +18,19 @@ export const StyledWrap = styled.div`
         width: 280px;
         left: -281px;
     }
+    @media (max-width: 991.98px) {
+        ${({ $show }) =>
+            $show &&
+            css`
+                left: 0;
+                visibility: visible;
+            `}
+    }
+
     ${device.large} {
         left: 0;
         visibility: visible;
     }
-
-    /* max-width: 280px;
-    flex-basis: 280px;
-    height: 100%;
-    position: relative;
-    border-right: 1px solid ${themeGet("colors.border")}; */
     .scrollbar-container {
         position: absolute;
         top: 55px;

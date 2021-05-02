@@ -1,16 +1,17 @@
 import moment from "moment";
+import { v4 as uuidv4 } from "uuid";
 import { IEvent } from "../../types";
 
 const curYear: string = moment().format("YYYY");
 const curMonth: string = moment().format("MM");
 
 export const calendarEvents: IEvent = {
-    label: "calendar",
+    category: "calendar",
     backgroundColor: "#d9e8ff",
     borderColor: "#0168fa",
     events: [
         {
-            id: "1",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-08T08:30:00`,
             end: `${curYear}-${curMonth}-08T13:00:00`,
             title: "ThemeForest Meetup",
@@ -18,7 +19,7 @@ export const calendarEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "2",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-10T09:00:00`,
             end: `${curYear}-${curMonth}-10T17:00:00`,
             title: "Design Review",
@@ -26,7 +27,7 @@ export const calendarEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "3",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-13T12:00:00`,
             end: `${curYear}-${curMonth}-13T18:00:00`,
             title: "Lifestyle Conference",
@@ -34,7 +35,7 @@ export const calendarEvents: IEvent = {
                 "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi...",
         },
         {
-            id: "4",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-15T07:30:00`,
             end: `${curYear}-${curMonth}-15T15:30:00`,
             title: "Team Weekly Brownbag",
@@ -42,7 +43,7 @@ export const calendarEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "5",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-17T10:00:00`,
             end: `${curYear}-${curMonth}-19T15:00:00`,
             title: "Music Festival",
@@ -50,7 +51,7 @@ export const calendarEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "6",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-08T13:00:00`,
             end: `${curYear}-${curMonth}-08T18:30:00`,
             title: "Attend Lea's Wedding",
@@ -61,12 +62,12 @@ export const calendarEvents: IEvent = {
 };
 
 export const birthdayEvents: IEvent = {
-    label: "birthday",
+    category: "birthday",
     backgroundColor: "#c3edd5",
     borderColor: "#10b759",
     events: [
         {
-            id: "7",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-01T18:00:00`,
             end: `${curYear}-${curMonth}-01T23:30:00`,
             title: "Socrates Birthday",
@@ -74,7 +75,7 @@ export const birthdayEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "8",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-21T15:00:00`,
             end: `${curYear}-${curMonth}-21T21:00:00`,
             title: "Reynante's Birthday",
@@ -82,7 +83,7 @@ export const birthdayEvents: IEvent = {
                 "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis az pede mollis...",
         },
         {
-            id: "9",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-23T15:00:00`,
             end: `${curYear}-${curMonth}-23T21:00:00`,
             title: "Pauline's Birthday",
@@ -93,24 +94,24 @@ export const birthdayEvents: IEvent = {
 };
 
 export const holidayEvents: IEvent = {
-    label: "holiday",
+    category: "holiday",
     backgroundColor: "#fcbfdc",
     borderColor: "#f10075",
     events: [
         {
-            id: "10",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-04`,
             end: `${curYear}-${curMonth}-06`,
             title: "Feast Day",
         },
         {
-            id: "11",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-26`,
             end: `${curYear}-${curMonth}-27`,
             title: "Memorial Day",
         },
         {
-            id: "12",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-28`,
             end: `${curYear}-${curMonth}-29`,
             title: "Veteran's Day",
@@ -119,12 +120,12 @@ export const holidayEvents: IEvent = {
 };
 
 export const discoveredEvents: IEvent = {
-    label: "discover",
+    category: "discover",
     backgroundColor: "#bff2f2",
     borderColor: "#00cccc",
     events: [
         {
-            id: "13",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-17T08:00:00`,
             end: `${curYear}-${curMonth}-18T11:00:00`,
             title: "Web Design Workshop Seminar",
@@ -133,7 +134,7 @@ export const discoveredEvents: IEvent = {
 };
 
 export const meetupEvents: IEvent = {
-    label: "meetup",
+    category: "meetup",
     backgroundColor: "#dedafe",
     borderColor: "#5b47fb",
     events: [
@@ -153,18 +154,18 @@ export const meetupEvents: IEvent = {
 };
 
 export const otherEvents: IEvent = {
-    label: "other",
+    category: "other",
     backgroundColor: "#ffdec4",
     borderColor: "#fd7e14",
     events: [
         {
-            id: "16",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-06`,
             end: `${curYear}-${curMonth}-08`,
             title: "My Rest Day",
         },
         {
-            id: "17",
+            id: uuidv4(),
             start: `${curYear}-${curMonth}-29`,
             end: `${curYear}-${curMonth}-31`,
             title: "My Rest Day",

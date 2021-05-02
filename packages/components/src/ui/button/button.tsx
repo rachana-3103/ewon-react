@@ -84,7 +84,7 @@ export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps {
     /**
      * Set icon's size
      */
-    iconSize?: "sm" | "md";
+    iconSize?: "xs" | "sm" | "md";
     /**
      * Set distance between icon and text
      */

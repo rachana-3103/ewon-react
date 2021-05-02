@@ -1,4 +1,9 @@
-import styled, { device, color, ColorProps } from "@doar/shared/styled";
+import styled, {
+    device,
+    color,
+    ColorProps,
+    themeGet,
+} from "@doar/shared/styled";
 import { ModalHeader } from "@doar/components";
 
 export const StyledHeader = styled(({ bg, ...rest }) => (
@@ -75,21 +80,20 @@ export const StyledLabel = styled.h6`
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
-        sans-serif;
+    font-family: ${themeGet("fonts.interUi")};
     font-weight: 500;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 0.5rem;
 `;
 
 export const StyledDate = styled.p`
-    color: #1c273c;
+    color: ${themeGet("colors.gray900")};
     font-weight: 500;
 `;
 
 export const StyledDesc = styled.p`
     margin-top: 5px;
-    color: #1c273c;
+    color: ${themeGet("colors.gray900")};
 `;
 
 export const StyledDescWrap = styled.div`

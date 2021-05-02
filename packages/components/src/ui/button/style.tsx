@@ -36,14 +36,11 @@ interface IProps extends SpaceProps, LayoutProps, BorderProps {
     $iconButton?: boolean;
     $hasIcon?: boolean;
     $iconPosition?: "left" | "right";
-    $iconSize?: "sm" | "md";
+    $iconSize?: "xs" | "sm" | "md";
     $iconSpace?: string;
 }
 
 const buttonStyles = css<IProps>`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -929,7 +926,32 @@ const buttonStyles = css<IProps>`
                 margin-top: -2px;
             }
         `}
+	
+	${({ $hasIcon }) =>
+        $hasIcon &&
+        css`
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        `}
+	${({ $hasIcon, $fullwidth }) =>
+        $hasIcon &&
+        $fullwidth &&
+        css`
+            display: flex;
+        `}
 
+	${({ $hasIcon, $iconSize }) =>
+        $hasIcon &&
+        $iconSize === "xs" &&
+        css`
+            svg {
+                width: 12px;
+                height: 12px;
+                stroke-width: 2.5px;
+                margin-top: -1px;
+            }
+        `}
 
 	${({ $hasIcon, $iconSize }) =>
         $hasIcon &&
@@ -958,6 +980,25 @@ const buttonStyles = css<IProps>`
         css`
             svg {
                 margin-right: ${$iconSpace};
+            }
+        `}
+
+	${({ $hasIcon, $iconPosition, $iconSpace }) =>
+        $hasIcon &&
+        $iconPosition === "right" &&
+        !$iconSpace &&
+        css`
+            svg {
+                margin-left: 7px;
+            }
+        `}
+	${({ $hasIcon, $iconPosition, $iconSpace }) =>
+        $hasIcon &&
+        $iconPosition === "right" &&
+        $iconSpace &&
+        css`
+            svg {
+                margin-left: ${$iconSpace};
             }
         `}
 	${space};

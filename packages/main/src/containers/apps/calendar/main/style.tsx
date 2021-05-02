@@ -1,4 +1,5 @@
-import styled, { device, themeGet, css } from "@doar/shared/styled";
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 
 interface IProps {
     $showSidebar: boolean;
@@ -31,15 +32,18 @@ export const StyledWrap = styled.div<IProps>`
                     margin-bottom: 0 !important;
                     display: flex;
                     justify-content: space-between;
-                    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+                    border-bottom: 1px solid ${themeGet("colors.border")};
                     padding: 0 15px;
                 }
                 button {
                     height: 32px;
                     background-color: #fff;
                     background-image: none;
-                    border: 1px solid rgba(72, 94, 144, 0.16);
-                    color: rgba(27, 46, 75, 0.7);
+                    border: 1px solid ${themeGet("colors.border")};
+                    color: ${(props) =>
+                        tinycolor(themeGet("colors.text2")(props))
+                            .setAlpha(0.7)
+                            .toRgbString()};
                     box-shadow: none;
                     padding: 0 15px;
                     display: flex;
@@ -52,17 +56,17 @@ export const StyledWrap = styled.div<IProps>`
                     transition: all 0.2s ease-in-out;
                     &:hover,
                     &:focus {
-                        border-color: #8392a5;
-                        color: #1b2e4b;
+                        border-color: ${themeGet("colors.text3")};
+                        color: ${themeGet("colors.text2")};
                         position: relative;
                         z-index: 5;
                         background-color: #fff;
                     }
                     &:not(:disabled) {
                         &.fc-button-active {
-                            background-color: #f5f6fa;
-                            border-color: #c0ccda;
-                            color: #1b2e4b;
+                            background-color: ${themeGet("colors.whisper")};
+                            border-color: ${themeGet("colors.text4")};
+                            color: ${themeGet("colors.text2")};
                         }
                     }
                 }
@@ -94,7 +98,7 @@ export const StyledWrap = styled.div<IProps>`
                                         text-indent: 0;
                                         font-size: 12px;
                                         font-weight: 700;
-                                        color: #1b2e4b;
+                                        color: ${themeGet("colors.text2")};
                                     }
                                     &.fc-dayGridMonth-button {
                                         &:before {
@@ -122,12 +126,20 @@ export const StyledWrap = styled.div<IProps>`
                     }
                     &-button-group {
                         button:first-child {
-                            border-top-left-radius: 0.25rem;
-                            border-bottom-left-radius: 0.25rem;
+                            border-top-left-radius: ${themeGet(
+                                "radii.rounded"
+                            )};
+                            border-bottom-left-radius: ${themeGet(
+                                "radii.rounded"
+                            )};
                         }
                         button:last-child {
-                            border-top-right-radius: 0.25rem;
-                            border-bottom-right-radius: 0.25rem;
+                            border-top-right-radius: ${themeGet(
+                                "radii.rounded"
+                            )};
+                            border-bottom-right-radius: ${themeGet(
+                                "radii.rounded"
+                            )};
                         }
                     }
                     &-prev-button,
@@ -144,17 +156,20 @@ export const StyledWrap = styled.div<IProps>`
                         top: 0;
                     }
                     &-today-button {
-                        border-radius: 0.25rem;
-                        color: rgba(27, 46, 75, 0.7);
+                        border-radius: ${themeGet("radii.rounded")};
+                        color: ${(props) =>
+                            tinycolor(themeGet("colors.text2")(props))
+                                .setAlpha(0.7)
+                                .toRgbString()};
                         background-color: #fff;
                         display: none;
                         ${device.medium} {
                             display: block;
                         }
                         &:disabled {
-                            border-color: rgba(72, 94, 144, 0.16);
-                            background-color: #f5f6fa;
-                            color: #8392a5;
+                            border-color: ${themeGet("colors.border")};
+                            background-color: ${themeGet("colors.whisper")};
+                            color: ${themeGet("colors.text3")};
                             font-weight: 400;
                             cursor: default;
                         }
@@ -178,7 +193,7 @@ export const StyledWrap = styled.div<IProps>`
             &-view {
                 th,
                 td {
-                    border-color: rgba(72, 94, 144, 0.16);
+                    border-color: ${themeGet("colors.border")};
                 }
             }
             &-scrollgrid {
@@ -196,11 +211,11 @@ export const StyledWrap = styled.div<IProps>`
             &-col {
                 &-header-cell {
                     padding: 5px 0;
-                    border-color: rgba(72, 94, 144, 0.16);
+                    border-color: ${themeGet("colors.border")};
                     text-transform: uppercase;
                     font-size: 12px;
                     font-weight: 500;
-                    color: #1b2e4b;
+                    color: ${themeGet("colors.text2")};
                     font-weight: 600;
                     ${device.small} {
                         font-size: 12px;
@@ -214,15 +229,14 @@ export const StyledWrap = styled.div<IProps>`
             &-daygrid {
                 &-body {
                     border-left-width: 0;
-                    font-family: -apple-system, BlinkMacSystemFont, "Inter UI",
-                        Roboto, sans-serif;
+                    font-family: ${themeGet("fonts.interUi")};
                     width: 100% !important;
                 }
                 &-day {
                     &.fc-day {
                         &-other,
                         &-today {
-                            background-color: #f8f9fc;
+                            background-color: ${themeGet("colors.lilac")};
                         }
                         &-other {
                             .fc-daygrid-day-top {
@@ -231,7 +245,7 @@ export const StyledWrap = styled.div<IProps>`
                         }
                         &-today {
                             .fc-daygrid-day-number {
-                                background-color: #0168fa;
+                                background-color: ${themeGet("colors.primary")};
                                 color: #fff;
                                 border-radius: 1px;
                             }
@@ -240,9 +254,8 @@ export const StyledWrap = styled.div<IProps>`
                     &-number {
                         font-size: 14px;
                         font-weight: 400;
-                        font-family: -apple-system, BlinkMacSystemFont,
-                            "Inter UI", Roboto, sans-serif;
-                        color: #596882;
+                        font-family: ${themeGet("fonts.interUi")};
+                        color: ${themeGet("colors.gray700")};
                         display: inline-block;
                         padding: 5px 8px;
                         position: relative;
@@ -252,8 +265,8 @@ export const StyledWrap = styled.div<IProps>`
                         text-align: center;
                         &:hover,
                         &:focus {
-                            color: #1b2e4b;
-                            background-color: #f5f6fa;
+                            color: ${themeGet("colors.text2")};
+                            background-color: ${themeGet("colors.whisper")};
                             text-decoration: none;
                         }
                     }
@@ -272,7 +285,7 @@ export const StyledWrap = styled.div<IProps>`
                     }
                     .fc-event {
                         &-main {
-                            color: #001737;
+                            color: ${themeGet("colors.text")};
                             display: none;
                             ${device.small} {
                                 display: block;
@@ -298,7 +311,7 @@ export const StyledWrap = styled.div<IProps>`
                         font-weight: 600;
                         text-transform: uppercase;
                         padding: 5px 0;
-                        color: #1b2e4b;
+                        color: ${themeGet("colors.text2")};
                         ${device.small} {
                             font-size: 12px;
                         }
@@ -309,7 +322,7 @@ export const StyledWrap = styled.div<IProps>`
                             span {
                                 display: block;
                                 &:first-child {
-                                    color: #8392a5;
+                                    color: ${themeGet("colors.text3")};
                                     font-size: 8px;
                                     font-weight: 400;
                                     line-height: 1.2;
@@ -332,7 +345,7 @@ export const StyledWrap = styled.div<IProps>`
                         .fc-day-today {
                             .fc-col-header-cell-cushion {
                                 span:last-child {
-                                    color: #0168fa;
+                                    color: ${themeGet("colors.primary")};
                                 }
                             }
                         }
@@ -346,7 +359,7 @@ export const StyledWrap = styled.div<IProps>`
                             &-title {
                                 font-size: 14px;
                                 font-weight: 700;
-                                color: #1c273c;
+                                color: ${themeGet("colors.gray900")};
                                 margin-bottom: 10px;
                                 &-container {
                                     flex-grow: 0;
@@ -354,12 +367,15 @@ export const StyledWrap = styled.div<IProps>`
                             }
                             &-time {
                                 font-size: 11px;
-                                color: #1c273c;
+                                color: ${themeGet("colors.gray900")};
                             }
                             &-desc {
                                 display: none;
                                 line-height: 1.3;
-                                color: rgba(28, 39, 60, 0.8);
+                                color: ${(props) =>
+                                    tinycolor(themeGet("colors.gray900")(props))
+                                        .setAlpha(0.8)
+                                        .toRgbString()};
                                 ${device.large} {
                                     display: block;
                                 }
@@ -368,7 +384,10 @@ export const StyledWrap = styled.div<IProps>`
                     }
                     &-timegrid-col {
                         &.fc-day-today {
-                            background-color: rgba(244, 245, 248, 0.7);
+                            background-color: ${(props) =>
+                                tinycolor(themeGet("colors.gray100")(props))
+                                    .setAlpha(0.7)
+                                    .toRgbString()};
                         }
                     }
                 }
@@ -426,7 +445,7 @@ export const StyledWrap = styled.div<IProps>`
                                     display: block;
                                     font-size: 11px;
                                     text-transform: uppercase;
-                                    color: #8392a5;
+                                    color: ${themeGet("colors.text3")};
                                     font-weight: 500;
                                     padding: 5px;
                                     text-align: center;
@@ -446,7 +465,7 @@ export const StyledWrap = styled.div<IProps>`
                                         font-size: 28px;
                                         font-weight: 400;
                                         letter-spacing: -1.5px;
-                                        color: #001737;
+                                        color: ${themeGet("colors.text")};
                                         line-height: 1;
                                         ${device.small} {
                                             font-size: 32px;
@@ -517,15 +536,19 @@ export const StyledWrap = styled.div<IProps>`
                                     font-size: 11px;
                                     font-weight: 600;
                                     letter-spacing: 0.5px;
-                                    border-top: 1px solid #e5e9f2;
-                                    border-right: 1px solid #e5e9f2;
+                                    border-top: 1px solid
+                                        ${themeGet("colors.light")};
+                                    border-right: 1px solid
+                                        ${themeGet("colors.light")};
                                     box-sizing: border-box;
                                     border-bottom: none;
                                 }
                                 &-title {
                                     padding: 0 15px 12px;
-                                    border-bottom: 1px solid #e5e9f2;
-                                    border-right: 1px solid #e5e9f2;
+                                    border-bottom: 1px solid
+                                        ${themeGet("colors.light")};
+                                    border-right: 1px solid
+                                        ${themeGet("colors.light")};
                                     box-sizing: border-box;
                                     border-top: none;
                                     a {
@@ -533,7 +556,7 @@ export const StyledWrap = styled.div<IProps>`
                                         font-weight: 500;
                                         font-size: 16px;
                                         margin-bottom: 2px;
-                                        color: #001737;
+                                        color: ${themeGet("colors.text")};
                                         ${device.small} {
                                             font-size: 18px;
                                         }
@@ -543,7 +566,7 @@ export const StyledWrap = styled.div<IProps>`
                                     font-size: 12px;
                                     line-height: 1.375;
                                     display: block;
-                                    color: #8392a5;
+                                    color: ${themeGet("colors.text3")};
                                     ${device.large} {
                                         font-size: 13px;
                                     }

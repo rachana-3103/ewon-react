@@ -11,9 +11,15 @@ import {
     useRef,
     FunctionComponent,
 } from "react";
+import classnames from "classnames";
 import { useClickOutside } from "@doar/shared/hooks";
 import { Button, ButtonProps } from "../button/button";
-import { StyledDropMenu, StyledDropdown, StyledDropItem } from "./style";
+import {
+    StyledDropMenu,
+    StyledDropdown,
+    StyledDropItem,
+    StyledDropDivider,
+} from "./style";
 
 type IChild = Exclude<ReactChild, ReactText>;
 
@@ -63,10 +69,12 @@ export const Dropdown: FC<DropdownProps> = ({
         return null;
     });
 
-    const classes = className ? `${className} dropdown` : "dropdown";
-
     return (
-        <StyledDropdown {...restProps} className={classes} ref={containerRef}>
+        <StyledDropdown
+            {...restProps}
+            className={classnames(className, "dropdown")}
+            ref={containerRef}
+        >
             {RenderChild}
         </StyledDropdown>
     );
@@ -137,7 +145,6 @@ export const DropdownMenu: FC<IDropMenu> = ({
             };
         });
     }, [show]);
-    const classes = className ? `${className} dropdown-menu` : "dropdown-menu";
 
     return (
         <StyledDropMenu
@@ -145,7 +152,7 @@ export const DropdownMenu: FC<IDropMenu> = ({
             $show={show}
             $direction={direction}
             ref={menuRef}
-            className={classes}
+            className={classnames(className, "dropdown-menu")}
             {...restProps}
         >
             {children}
@@ -167,7 +174,19 @@ export const DropdownItem: FC<IDropItem> = ({
     className,
     active,
 }) => (
-    <StyledDropItem active={active} path={path} className={className}>
+    <StyledDropItem
+        active={active}
+        path={path}
+        className={classnames(className, "dropdown-item")}
+    >
         {children}
     </StyledDropItem>
+);
+
+interface IDropDivider {
+    className?: string;
+}
+
+export const DropdownDivider: FC<IDropDivider> = ({ className }) => (
+    <StyledDropDivider className={classnames(className, "dropdown-divider")} />
 );

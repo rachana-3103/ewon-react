@@ -52,6 +52,7 @@ export const theme = {
         facebook: "#4064ac",
         twitter: "#00a7e6",
         shuttle2: "#566476",
+        lilac: "#f8f9fc",
     },
     fontSize: {
         body: "0.875rem",

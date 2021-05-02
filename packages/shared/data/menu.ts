@@ -78,7 +78,7 @@ const menus = [
             {
                 id: 25,
                 label: "File Manager",
-                url: "/",
+                url: "/apps/file-manager",
                 Icon: FileText,
             },
             {

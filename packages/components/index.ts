@@ -8,6 +8,7 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
+    DropdownDivider,
 } from "./src/ui/dropdown/dropdown";
 import {
     Card,
@@ -91,6 +92,7 @@ export {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
+    DropdownDivider,
     Card,
     CardImage,
     CardBody,

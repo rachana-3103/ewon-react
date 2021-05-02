@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-left: 15px;
@@ -27,13 +27,13 @@ interface IItemProps {
 export const StyledItem = styled.button<IItemProps>`
     display: flex;
     align-items: center;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     padding: 6px 10px;
     border: none;
     background: transparent;
     text-transform: capitalize;
     &:hover {
-        background-color: #f5f6fa;
+        background-color: ${themeGet("colors.whisper")};
     }
     &:focus,
     &:active {

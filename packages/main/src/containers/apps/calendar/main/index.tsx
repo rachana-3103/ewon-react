@@ -19,7 +19,7 @@ const Wrapper: FC = () => {
     const events: IEvent[] = useAppSelector(
         (state) => state.events.eventSources
     );
-    const { calendarSidebar } = useAppSelector((state) => state.ui);
+    const { sidebar } = useAppSelector((state) => state.ui);
 
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [showDetailsModal, setShowDetailsModal] = useState(false);
@@ -145,7 +145,7 @@ const Wrapper: FC = () => {
 
     return (
         <>
-            <StyledWrap $showSidebar={calendarSidebar}>
+            <StyledWrap $showSidebar={sidebar}>
                 <FullCalendar
                     plugins={[
                         dayGridPlugin,

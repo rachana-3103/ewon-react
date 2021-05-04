@@ -1,4 +1,4 @@
-import { FC, useState, useCallback } from "react";
+import { FC, useState, useCallback, useEffect } from "react";
 import { Search, Menu, X, ArrowLeft } from "react-feather";
 import { Anchor, Navbar, Button } from "@doar/components";
 import { menuData } from "@doar/shared/data";
@@ -7,7 +7,7 @@ import NotificationDropdown from "../../components/header/notification-dropdown"
 import ProfileDropdown from "../../components/header/profile-dropdown";
 import NavSearch from "../../components/header/nav-search";
 import { useAppDispatch } from "../../redux/hooks";
-import { toggleCalendarSidebar } from "../../redux/slices/ui";
+import { toggleSidebar } from "../../redux/slices/ui";
 import {
     StyledHeader,
     StyledLogo,
@@ -24,10 +24,9 @@ import {
 
 interface IProps {
     hasSidebar?: boolean;
-    sidebar?: "calendar";
 }
 
-const Header: FC<IProps> = ({ hasSidebar, sidebar }) => {
+const Header: FC<IProps> = ({ hasSidebar }) => {
     const dispatch = useAppDispatch();
     const [searchOpen, setSearchOpen] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -37,19 +36,30 @@ const Header: FC<IProps> = ({ hasSidebar, sidebar }) => {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const calendarHandler = useCallback(() => {
-        dispatch(toggleCalendarSidebar());
-        setSidebarOpen((prev) => !prev);
-    }, [dispatch]);
+    const sidebarHandler = useCallback(
+        (_, isOpen?: "open") => {
+            if (isOpen) {
+                dispatch(toggleSidebar(false));
+            } else {
+                dispatch(toggleSidebar(true));
+            }
+            setSidebarOpen((prev) => !prev);
+        },
+        [dispatch]
+    );
 
     const menuHandler = useCallback(() => {
         setMenuOpen((prev) => !prev);
         if (menuOpen) {
-            if (sidebar === "calendar") {
-                calendarHandler();
-            }
+            sidebarHandler(undefined, "open");
         }
-    }, [calendarHandler, menuOpen, sidebar]);
+    }, [menuOpen, sidebarHandler]);
+
+    useEffect(() => {
+        return () => {
+            sidebarHandler(undefined, "open");
+        };
+    }, [sidebarHandler]);
 
     return (
         <>
@@ -62,10 +72,10 @@ const Header: FC<IProps> = ({ hasSidebar, sidebar }) => {
                 >
                     <Menu size={20} strokeWidth="2.5px" />
                 </StyledMenuBtn>
-                {hasSidebar && sidebar === "calendar" && (
+                {hasSidebar && (
                     <StyledSidebarBtn
                         variant="texted"
-                        onClick={calendarHandler}
+                        onClick={sidebarHandler}
                         $hasSidebar={hasSidebar}
                         $sidebarOpen={sidebarOpen}
                     >

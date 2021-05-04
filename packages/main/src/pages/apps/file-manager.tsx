@@ -6,7 +6,7 @@ import MainContent from "../../containers/apps/file-manager/main";
 
 const FileManager: React.FC = () => {
     return (
-        <Layout hasSidebar>
+        <Layout hasSidebar hideFooter>
             <Wrapper>
                 <Sidebar />
                 <MainContent />

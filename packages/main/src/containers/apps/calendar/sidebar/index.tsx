@@ -12,14 +12,14 @@ import CreateEvent from "../../../../components/apps/calendar/create-event";
 import { useAppSelector } from "../../../../redux/hooks";
 
 const Sidebar: FC = () => {
-    const { calendarSidebar } = useAppSelector((state) => state.ui);
+    const { sidebar } = useAppSelector((state) => state.ui);
     const [showModal, setShowModal] = useState(false);
     const handleModal = () => {
         setShowModal((prev) => !prev);
     };
     return (
         <>
-            <StyledWrap $show={calendarSidebar}>
+            <StyledWrap $show={sidebar}>
                 <StyledHeader>
                     <Search className="search" />
                     <SearchForm />

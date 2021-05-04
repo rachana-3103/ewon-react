@@ -53,6 +53,7 @@ export const theme = {
         twitter: "#00a7e6",
         shuttle2: "#566476",
         lilac: "#f8f9fc",
+        catskill: "#eef0f7",
     },
     fontSize: {
         body: "0.875rem",

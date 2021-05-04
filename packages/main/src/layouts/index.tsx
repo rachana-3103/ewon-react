@@ -4,17 +4,21 @@ import Footer from "./footer";
 
 interface IProps {
     hasSidebar?: boolean;
-    sidebar?: "calendar";
+    hideFooter?: boolean;
 }
 
-const Layout: React.FC<IProps> = ({ children, hasSidebar, sidebar }) => {
+const Layout: React.FC<IProps> = ({ children, hasSidebar, hideFooter }) => {
     return (
         <>
-            <Header hasSidebar={hasSidebar} sidebar={sidebar} />
+            <Header hasSidebar={hasSidebar} />
             {children}
-            <Footer />
+            {!hideFooter && <Footer />}
         </>
     );
+};
+
+Layout.defaultProps = {
+    hideFooter: false,
 };
 
 export default Layout;

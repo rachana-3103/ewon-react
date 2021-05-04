@@ -1,9 +1,9 @@
 import { FC } from "react";
 import classnames from "classnames";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledHr } from "./style";
 
-interface IProps extends SpaceProps {
+interface IProps extends SpaceProps, BorderProps {
     className?: string;
 }
 

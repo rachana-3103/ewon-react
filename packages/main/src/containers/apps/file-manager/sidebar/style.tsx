@@ -1,6 +1,10 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css } from "@doar/shared/styled";
 
-export const StyledSidebar = styled.div`
+interface ISidebar {
+    $show: boolean;
+}
+
+export const StyledSidebar = styled.div<ISidebar>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -16,6 +20,15 @@ export const StyledSidebar = styled.div`
         opacity: 1;
         visibility: visible;
     }
+    @media (max-width: 991.98px) {
+        ${({ $show }) =>
+            $show &&
+            css`
+                left: 0;
+                visibility: visible;
+                opacity: 1;
+            `}
+    }
 `;
 
 export const StyledHeader = styled.div`
@@ -28,6 +41,8 @@ export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     padding: 0 20px;
+    z-index: 9;
+    background: #fff;
     button {
         text-transform: uppercase;
         font-weight: 500;
@@ -70,7 +85,7 @@ export const StyledHeader = styled.div`
 
 export const StyledBody = styled.div`
     position: absolute;
-    top: 55px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;

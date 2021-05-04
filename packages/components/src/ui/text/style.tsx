@@ -2,13 +2,15 @@ import styled, {
     space,
     color as colorStyles,
     typography,
+    layout,
     SpaceProps,
     ColorProps,
     TypographyProps,
+    LayoutProps,
     css,
 } from "@doar/shared/styled";
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps {
+interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     $tt?: string;
 }
 
@@ -34,6 +36,7 @@ const props = [
     "lineHeight",
     "letterSpacing",
     "textAlign",
+    "display",
 ];
 
 export const StyledText = styled("p").withConfig({
@@ -48,4 +51,5 @@ export const StyledText = styled("p").withConfig({
     ${space};
     ${colorStyles};
     ${typography};
+    ${layout};
 `;

@@ -82,14 +82,6 @@ export const StyledWrap = styled.div<ISidebar>`
     .scrollbar-lg > .ps__rail-y > .ps__thumb-y {
         width: 6px;
     }
-
-    .scrollbar-primary > .ps__rail-y > .ps__thumb-y {
-        background-color: #0168fa;
-    }
-
-    .scrollbar-dark > .ps__rail-y > .ps__thumb-y {
-        background-color: #1c273c;
-    }
 `;
 
 export const StyledHeader = styled.div`

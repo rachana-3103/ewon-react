@@ -1,7 +1,15 @@
-import styled, { space, SpaceProps } from "@doar/shared/styled";
+import styled, {
+    space,
+    border,
+    SpaceProps,
+    BorderProps,
+} from "@doar/shared/styled";
 
-export const StyledHr = styled(({ my, mt, mb, py, pt, pb, ...rest }) => (
-    <hr {...rest} />
-))<SpaceProps>`
-    ${space}
+interface IProps extends SpaceProps, BorderProps {}
+
+export const StyledHr = styled(
+    ({ my, mt, mb, py, pt, pb, borderWidth, ...rest }) => <hr {...rest} />
+)<IProps>`
+    ${space};
+    ${border};
 `;

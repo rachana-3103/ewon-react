@@ -1,24 +1,25 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface UIState {
-    calendarSidebar: boolean;
+    sidebar: boolean;
 }
 
 const initialState: UIState = {
-    calendarSidebar: false,
+    sidebar: false,
 };
 
 const uiSlice = createSlice({
     name: "ui",
     initialState,
     reducers: {
-        toggleCalendarSidebar(state) {
-            state.calendarSidebar = !state?.calendarSidebar;
+        toggleSidebar(state, action: PayloadAction<boolean>) {
+            const { payload } = action;
+            state.sidebar = payload;
         },
     },
 });
 
-export const { toggleCalendarSidebar } = uiSlice.actions;
+export const { toggleSidebar } = uiSlice.actions;
 export default uiSlice.reducer;

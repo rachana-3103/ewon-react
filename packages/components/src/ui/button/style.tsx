@@ -41,6 +41,9 @@ interface IProps extends SpaceProps, LayoutProps, BorderProps {
 }
 
 const buttonStyles = css<IProps>`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -927,13 +930,6 @@ const buttonStyles = css<IProps>`
             }
         `}
 	
-	${({ $hasIcon }) =>
-        $hasIcon &&
-        css`
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        `}
 	${({ $hasIcon, $fullwidth }) =>
         $hasIcon &&
         $fullwidth &&

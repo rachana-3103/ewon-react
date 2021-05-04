@@ -9,14 +9,25 @@ import {
 } from "./modal";
 import { Button } from "../button/button";
 
-const DemoModal: FC = () => {
+interface IProps {
+    centered?: boolean;
+    size?: "xl" | "lg" | "md" | "sm";
+}
+
+const DemoModal: FC<IProps> = ({ size, centered }) => {
     const [show, setShow] = useState(false);
     const clickHandler = () => {
         setShow((prev) => !prev);
     };
+
     return (
         <>
-            <Modal show={show} onClose={clickHandler}>
+            <Modal
+                show={show}
+                onClose={clickHandler}
+                size={size}
+                centered={centered}
+            >
                 <ModalHeader>
                     <ModalTitle>Modal Title</ModalTitle>
                     <ModalClose onClose={clickHandler}>x</ModalClose>

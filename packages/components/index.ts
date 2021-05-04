@@ -80,6 +80,7 @@ import {
     ModalBody,
     ModalFooter,
 } from "./src/ui/modal/modal";
+import { TabWrap, TabContent, Tab, TabPanel, TabList } from "./src/ui/tab/tab";
 
 export {
     Button,
@@ -158,4 +159,9 @@ export {
     ModalClose,
     ModalBody,
     ModalFooter,
+    TabWrap,
+    TabContent,
+    Tab,
+    TabPanel,
+    TabList,
 };

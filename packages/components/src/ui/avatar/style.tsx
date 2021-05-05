@@ -5,6 +5,8 @@ import styled, {
     LayoutProps,
     color as colorStyles,
     ColorProps,
+    typography,
+    TypographyProps,
 } from "@doar/shared/styled";
 
 interface IProps extends LayoutProps {
@@ -233,13 +235,13 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
     ${layout};
 `;
 
-interface IAvatarText extends ColorProps {
+interface IAvatarText extends ColorProps, TypographyProps {
     $size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 }
 
-export const StyledInitialText = styled(({ color, bg, opacity, ...rest }) => (
-    <span {...rest} />
-))<IAvatarText>`
+export const StyledInitialText = styled(
+    ({ color, bg, opacity, fontWeight, ...rest }) => <span {...rest} />
+)<IAvatarText>`
     position: absolute;
     top: 0;
     left: 0;
@@ -303,4 +305,5 @@ export const StyledInitialText = styled(({ color, bg, opacity, ...rest }) => (
             border-radius: ${themeGet("radii.rounded")};
         `}
         ${colorStyles};
+    ${typography};
 `;

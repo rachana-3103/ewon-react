@@ -15,7 +15,7 @@ import EventDetails, {
 } from "../../../../components/apps/calendar/event-details";
 import { StyledWrap } from "./style";
 
-const Wrapper: FC = () => {
+const Main: FC = () => {
     const events: IEvent[] = useAppSelector(
         (state) => state.events.eventSources
     );
@@ -209,4 +209,4 @@ const Wrapper: FC = () => {
     );
 };
 
-export default Wrapper;
+export default Main;

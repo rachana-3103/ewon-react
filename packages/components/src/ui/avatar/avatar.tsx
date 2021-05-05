@@ -1,6 +1,6 @@
 import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
-import { LayoutProps, ColorProps } from "@doar/shared/styled";
+import { LayoutProps, ColorProps, TypographyProps } from "@doar/shared/styled";
 
 import { StyledAvatar, StyledInitialText } from "./style";
 
@@ -68,7 +68,7 @@ Avatar.defaultProps = {
     shape: "circle",
 };
 
-interface IAvatarText extends IProps, ColorProps {
+interface IAvatarText extends IProps, ColorProps, TypographyProps {
     size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     shape?: "circle" | "rounded" | "square";
 }

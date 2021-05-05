@@ -72,7 +72,7 @@ const menus = [
             {
                 id: 23,
                 label: "Contacts",
-                url: "/",
+                url: "/apps/contacts",
                 Icon: Users,
             },
             {

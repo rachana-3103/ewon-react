@@ -194,8 +194,8 @@ export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
 `;
 
 interface IMenuBtn {
-    $hasSidebar: boolean;
-    $sidebarOpen: boolean;
+    $hasSidebar?: boolean;
+    $sidebarOpen?: boolean;
 }
 
 export const StyledMenuBtn = styled(({ ...rest }) => (

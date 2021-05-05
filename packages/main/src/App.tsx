@@ -23,6 +23,7 @@ const HelpCenter = lazy(() => import("./pages/help-center"));
 const Invoice = lazy(() => import("./pages/invoice"));
 const Calendar = lazy(() => import("./pages/apps/calendar"));
 const FileManager = lazy(() => import("./pages/apps/file-manager"));
+const Contacts = lazy(() => import("./pages/apps/contacts"));
 
 const App: React.FC = () => {
     return (
@@ -74,6 +75,7 @@ const App: React.FC = () => {
                         path="/apps/file-manager"
                         component={FileManager}
                     />
+                    <Route exact path="/apps/contacts" component={Contacts} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>

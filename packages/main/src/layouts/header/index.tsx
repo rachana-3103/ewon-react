@@ -6,7 +6,7 @@ import MessageDropdown from "../../components/header/message-dropdown";
 import NotificationDropdown from "../../components/header/notification-dropdown";
 import ProfileDropdown from "../../components/header/profile-dropdown";
 import NavSearch from "../../components/header/nav-search";
-import { useAppDispatch } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { toggleSidebar } from "../../redux/slices/ui";
 import {
     StyledHeader,
@@ -24,26 +24,21 @@ import {
 
 interface IProps {
     hasSidebar?: boolean;
+    sidebarLayout?: 1 | 2;
 }
 
-const Header: FC<IProps> = ({ hasSidebar }) => {
+const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
     const dispatch = useAppDispatch();
+    const { sidebar } = useAppSelector((state) => state.ui);
     const [searchOpen, setSearchOpen] = useState(false);
-    const [sidebarOpen, setSidebarOpen] = useState(false);
     const searchHandler = useCallback(() => {
         setSearchOpen((prev) => !prev);
     }, []);
 
     const [menuOpen, setMenuOpen] = useState(false);
-
     const sidebarHandler = useCallback(
         (_, isOpen?: "open") => {
-            if (isOpen) {
-                dispatch(toggleSidebar(false));
-            } else {
-                dispatch(toggleSidebar(true));
-            }
-            setSidebarOpen((prev) => !prev);
+            dispatch(toggleSidebar({ isOpen }));
         },
         [dispatch]
     );
@@ -64,23 +59,43 @@ const Header: FC<IProps> = ({ hasSidebar }) => {
     return (
         <>
             <StyledHeader>
-                <StyledMenuBtn
-                    variant="texted"
-                    onClick={menuHandler}
-                    $hasSidebar={hasSidebar}
-                    $sidebarOpen={sidebarOpen}
-                >
-                    <Menu size={20} strokeWidth="2.5px" />
-                </StyledMenuBtn>
-                {hasSidebar && (
-                    <StyledSidebarBtn
-                        variant="texted"
-                        onClick={sidebarHandler}
-                        $hasSidebar={hasSidebar}
-                        $sidebarOpen={sidebarOpen}
-                    >
-                        <ArrowLeft size={20} strokeWidth="2.5px" />
-                    </StyledSidebarBtn>
+                {hasSidebar && sidebarLayout === 1 && (
+                    <>
+                        <StyledMenuBtn
+                            variant="texted"
+                            onClick={menuHandler}
+                            $hasSidebar={hasSidebar}
+                            $sidebarOpen={sidebar}
+                        >
+                            <Menu size={20} strokeWidth="2.5px" />
+                        </StyledMenuBtn>
+                        <StyledSidebarBtn
+                            variant="texted"
+                            onClick={sidebarHandler}
+                            $sidebarOpen={sidebar}
+                        >
+                            <ArrowLeft size={20} strokeWidth="2.5px" />
+                        </StyledSidebarBtn>
+                    </>
+                )}
+                {hasSidebar && sidebarLayout === 2 && (
+                    <>
+                        <StyledMenuBtn
+                            variant="texted"
+                            onClick={menuHandler}
+                            $hasSidebar={hasSidebar}
+                            $sidebarOpen={!sidebar}
+                        >
+                            <Menu size={20} strokeWidth="2.5px" />
+                        </StyledMenuBtn>
+                        <StyledSidebarBtn
+                            variant="texted"
+                            onClick={sidebarHandler}
+                            $sidebarOpen={!sidebar}
+                        >
+                            <ArrowLeft size={20} strokeWidth="2.5px" />
+                        </StyledSidebarBtn>
+                    </>
                 )}
                 <StyledLogo>
                     <Anchor path="/">Header</Anchor>
@@ -128,6 +143,10 @@ const Header: FC<IProps> = ({ hasSidebar }) => {
             <NavSearch isOpen={searchOpen} onClose={searchHandler} />
         </>
     );
+};
+
+Header.defaultProps = {
+    sidebarLayout: 1,
 };
 
 export default Header;

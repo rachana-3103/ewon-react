@@ -24,6 +24,7 @@ const Invoice = lazy(() => import("./pages/invoice"));
 const Calendar = lazy(() => import("./pages/apps/calendar"));
 const FileManager = lazy(() => import("./pages/apps/file-manager"));
 const Contacts = lazy(() => import("./pages/apps/contacts"));
+const Mail = lazy(() => import("./pages/apps/mail"));
 
 const App: React.FC = () => {
     return (
@@ -76,6 +77,7 @@ const App: React.FC = () => {
                         component={FileManager}
                     />
                     <Route exact path="/apps/contacts" component={Contacts} />
+                    <Route exact path="/apps/mail" component={Mail} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>
             </Suspense>

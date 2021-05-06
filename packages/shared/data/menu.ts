@@ -84,7 +84,7 @@ const menus = [
             {
                 id: 26,
                 label: "Mail",
-                url: "/",
+                url: "/apps/mail",
                 Icon: Mail,
             },
         ],

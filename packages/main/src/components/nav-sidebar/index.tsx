@@ -1,9 +1,9 @@
 import { FC } from "react";
 import classnames from "classnames";
-import { SpaceProps } from "@doar/shared/styled";
+import { SpaceProps, TypographyProps } from "@doar/shared/styled";
 import { StyledNav, StyledLink } from "./style";
 
-interface IProps extends SpaceProps {
+interface IProps extends SpaceProps, TypographyProps {
     className?: string;
 }
 

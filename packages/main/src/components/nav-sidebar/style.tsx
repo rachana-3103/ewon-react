@@ -21,6 +21,13 @@ export const StyledNav = styled(({ mb, fontSize, ...rest }) => (
     margin-bottom: 0;
     ${space};
     ${typography};
+    .badge {
+        margin-left: auto;
+        color: ${themeGet("colors.text4")};
+        font-weight: 400;
+        font-size: 11px;
+        background: transparent;
+    }
 `;
 
 interface INavLink extends SpaceProps {

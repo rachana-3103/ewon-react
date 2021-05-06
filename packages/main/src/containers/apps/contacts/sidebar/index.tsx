@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Users, PhoneCall, Star, Tag, Upload, Settings } from "react-feather";
 import {
     TabWrap,
@@ -8,8 +8,10 @@ import {
     TabPanel,
     Anchor,
 } from "@doar/components";
+import { useWindowSize } from "@doar/shared/hooks";
 import Scrollbar from "../../../../components/scrollbar";
-import { useAppSelector } from "../../../../redux/hooks";
+import { useAppSelector, useAppDispatch } from "../../../../redux/hooks";
+import { toggleSidebar } from "../../../../redux/slices/ui";
 import SidebarHeader from "../../../../components/apps/contacts/sidebar-header";
 import AllContacts from "../../../../components/apps/contacts/all-contacts";
 import RecentlyContacted from "../../../../components/apps/contacts/recently-contacted";
@@ -20,6 +22,15 @@ import { StyledSidebar, StyledContactList } from "./style";
 
 const Wrapper: FC = () => {
     const { sidebar } = useAppSelector((state) => state.ui);
+    const dispatch = useAppDispatch();
+    const { width } = useWindowSize();
+
+    useEffect(() => {
+        if (width && width > 991.98) {
+            dispatch(toggleSidebar({ isOpen: "open" }));
+        }
+    }, [width, dispatch]);
+
     return (
         <StyledSidebar $show={!sidebar}>
             <SidebarHeader />

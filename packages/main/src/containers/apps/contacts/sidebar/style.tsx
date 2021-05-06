@@ -11,15 +11,15 @@ export const StyledSidebar = styled.div<ISidebar>`
     bottom: 0;
     width: 100%;
     left: 0;
-    visibility: visible;
-    opacity: 1;
     transition: all 0.3s;
-    ${device.large} {
-        left: 0;
-        opacity: 1;
-        visibility: visible;
-        width: 325px;
+    @media (min-width: 480px) {
+        right: auto;
+        width: 304px;
         border-right: 1px solid rgba(72, 94, 144, 0.16);
+    }
+
+    ${device.large} {
+        width: 325px;
     }
     ${device.xlarge} {
         width: 340px;
@@ -27,9 +27,12 @@ export const StyledSidebar = styled.div<ISidebar>`
     ${({ $show }) =>
         !$show &&
         css`
-            left: -100vw;
-            visibility: hidden;
-            opacity: 0;
+            @media (max-width: 991.98px) {
+                transform: translateX(-350px);
+            }
+            @media (min-width: 992px) and (max-width: 1199.98px) {
+                transform: translateX(-260px);
+            }
         `}
     .react-tabs {
         height: 100%;

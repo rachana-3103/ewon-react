@@ -1,8 +1,6 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import { Star, Edit2 } from "react-feather";
 import { Avatar, AvatarInitial, MediaBody } from "@doar/components";
-import { useAppDispatch } from "../../../../redux/hooks";
-import { toggleSidebar } from "../../../../redux/slices/ui";
 import {
     StyledMedia,
     StyledName,
@@ -12,20 +10,26 @@ import {
 } from "./style";
 
 interface IProps {
+    id: string;
     image?: string;
     color?: string;
     name: string;
     phone: string;
-    active?: boolean;
+    activeId: string;
+    onClick: (e: MouseEvent<HTMLDivElement>) => void;
 }
 
-const ContactItem: FC<IProps> = ({ image, color, name, phone, active }) => {
-    const dispatch = useAppDispatch();
-    const clickHandler = () => {
-        dispatch(toggleSidebar({ isOpen: undefined }));
-    };
+const ContactItem: FC<IProps> = ({
+    id,
+    image,
+    color,
+    name,
+    phone,
+    activeId,
+    onClick,
+}) => {
     return (
-        <StyledMedia $active={active} onClick={clickHandler}>
+        <StyledMedia id={id} $active={activeId === id} onClick={onClick}>
             <Avatar size="sm" status="online">
                 {image && <img src={image} alt={name} />}
                 {!image && (

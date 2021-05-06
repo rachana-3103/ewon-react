@@ -15,6 +15,7 @@ export const StyledMain = styled.div<IProps>`
     transition: all 0.3s;
     ${device.large} {
         left: 325px;
+        transform: none;
     }
     ${device.xlarge} {
         left: 340px;
@@ -23,11 +24,17 @@ export const StyledMain = styled.div<IProps>`
         $showSidebar &&
         css`
             transform: translateX(100vw);
+            @media (max-width: 991.98px) {
+                transform: translateX(304px);
+            }
         `}
     ${({ $rightSidebar }) =>
         $rightSidebar &&
         css`
             transform: translateX(-260px);
+            @media (max-width: 1199.98px) {
+                transform: translateX(-260px);
+            }
         `}
 `;
 

@@ -8,7 +8,9 @@ import {
     TabPanel,
     Text,
 } from "@doar/components";
-import { useAppSelector } from "../../../../redux/hooks";
+import { useWindowSize } from "@doar/shared/hooks";
+import { useAppSelector, useAppDispatch } from "../../../../redux/hooks";
+import { toggleSidebar } from "../../../../redux/slices/ui";
 import PersonalDetails from "../../../../components/apps/contacts/personal-details";
 import CallLogs from "../../../../components/apps/contacts/call-logs";
 import Scrollbar from "../../../../components/scrollbar";
@@ -22,16 +24,20 @@ import {
 
 const Wrapper: FC = () => {
     const { sidebar } = useAppSelector((state) => state.ui);
+    const dispatch = useAppDispatch();
+    const { width } = useWindowSize();
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const sidebarHandler = () => {
         setSidebarOpen((prev) => !prev);
+        if (width && width > 992 && width < 1199.98) {
+            dispatch(toggleSidebar({ isOpen: undefined }));
+        }
     };
     useEffect(() => {
         if (!sidebar) {
             setSidebarOpen(false);
         }
     }, [sidebar]);
-    // console.log(sidebarOpen);
     return (
         <StyledMain
             className="main-content"

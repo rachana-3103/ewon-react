@@ -16,6 +16,7 @@ interface IProps {
     title: string;
     excerpt: string;
     status?: "read" | "unread";
+    onClick?: () => void;
 }
 
 const GroupItem: FC<IProps> = ({
@@ -26,9 +27,10 @@ const GroupItem: FC<IProps> = ({
     title,
     excerpt,
     status,
+    onClick,
 }) => {
     return (
-        <StyledMedia className={status}>
+        <StyledMedia className={status} onClick={onClick}>
             <Avatar>
                 {!image && (
                     <AvatarInitial bg={color}>

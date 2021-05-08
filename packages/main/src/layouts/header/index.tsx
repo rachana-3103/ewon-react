@@ -7,7 +7,7 @@ import NotificationDropdown from "../../components/header/notification-dropdown"
 import ProfileDropdown from "../../components/header/profile-dropdown";
 import NavSearch from "../../components/header/nav-search";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { toggleSidebar } from "../../redux/slices/ui";
+import { toggleSidebar, toggleBody } from "../../redux/slices/ui";
 import {
     StyledHeader,
     StyledLogo,
@@ -29,7 +29,7 @@ interface IProps {
 
 const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
     const dispatch = useAppDispatch();
-    const { sidebar } = useAppSelector((state) => state.ui);
+    const { sidebar, isBody } = useAppSelector((state) => state.ui);
     const [searchOpen, setSearchOpen] = useState(false);
     const searchHandler = useCallback(() => {
         setSearchOpen((prev) => !prev);
@@ -43,6 +43,11 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
         [dispatch]
     );
 
+    const bodyHandler = useCallback(() => {
+        dispatch(toggleBody());
+        dispatch(toggleSidebar({ isOpen: "open" }));
+    }, [dispatch]);
+
     const menuHandler = useCallback(() => {
         setMenuOpen((prev) => !prev);
         if (menuOpen) {
@@ -53,8 +58,9 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
     useEffect(() => {
         return () => {
             sidebarHandler(undefined, "open");
+            bodyHandler();
         };
-    }, [sidebarHandler]);
+    }, [sidebarHandler, bodyHandler]);
 
     return (
         <>
@@ -66,13 +72,17 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                             onClick={menuHandler}
                             $hasSidebar={hasSidebar}
                             $sidebarOpen={sidebar}
+                            $bodyOpen={isBody}
+                            className="menu-btn"
                         >
                             <Menu size={20} strokeWidth="2.5px" />
                         </StyledMenuBtn>
                         <StyledSidebarBtn
                             variant="texted"
-                            onClick={sidebarHandler}
+                            onClick={!isBody ? sidebarHandler : bodyHandler}
                             $sidebarOpen={sidebar}
+                            $bodyOpen={isBody}
+                            className="sidebar-btn"
                         >
                             <ArrowLeft size={20} strokeWidth="2.5px" />
                         </StyledSidebarBtn>

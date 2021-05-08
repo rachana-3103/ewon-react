@@ -4,6 +4,8 @@ import { Heading, Text, Anchor, Button } from "@doar/components";
 import ScrollBar from "../../../../components/scrollbar";
 import SearchForm from "../../../../components/apps/mail/search-form";
 import GroupItem from "../../../../components/apps/mail/group-item";
+import { useAppDispatch } from "../../../../redux/hooks";
+import { toggleBody } from "../../../../redux/slices/ui";
 import {
     StyledGroup,
     StyledHeader,
@@ -15,6 +17,10 @@ import {
 } from "./style";
 
 const Group: FC = () => {
+    const dispatch = useAppDispatch();
+    const handleBody = () => {
+        dispatch(toggleBody());
+    };
     return (
         <StyledGroup>
             <StyledHeader>
@@ -42,6 +48,7 @@ const Group: FC = () => {
                             title="Just asking questions"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
                             status="unread"
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="teal"
@@ -49,6 +56,7 @@ const Group: FC = () => {
                             time="11:40am"
                             title="30 Seconds Survey to Your Next Job"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="gray800"
@@ -56,6 +64,7 @@ const Group: FC = () => {
                             time="10:54am"
                             title="Watch, Listen and Play Longer"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="pink"
@@ -63,6 +72,7 @@ const Group: FC = () => {
                             time="09:50am"
                             title="Pre-Order Sale: Mastering CSS"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque"
+                            onClick={handleBody}
                         />
                     </StyledList>
                     <StyledLabel>Yesterday</StyledLabel>
@@ -73,6 +83,7 @@ const Group: FC = () => {
                             time="8:20pm"
                             title="Envato Contributor Payment"
                             excerpt="Commodo ligula eget dolor. Aenean massa cum sociis natoqu "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="teal"
@@ -80,6 +91,7 @@ const Group: FC = () => {
                             time="06:42pm"
                             title="America's Best Dance Cruise"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
+                            onClick={handleBody}
                         />
                     </StyledList>
                     <StyledLabel>January 20</StyledLabel>
@@ -90,6 +102,7 @@ const Group: FC = () => {
                             time="4:18pm"
                             title="A Flaming Pile of Garbage"
                             excerpt="Commodo ligula eget dolor. Aenean massa cum sociis natoqu "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="primary"
@@ -97,6 +110,7 @@ const Group: FC = () => {
                             time="06:42pm"
                             title="Watch, Listen and Play Longer"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
+                            onClick={handleBody}
                         />
                     </StyledList>
                     <StyledLabel>January 18</StyledLabel>
@@ -107,6 +121,7 @@ const Group: FC = () => {
                             time="7:26pm"
                             title="Just asking questions"
                             excerpt="Commodo ligula eget dolor. Aenean massa cum sociis natoqu "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="primary"
@@ -114,6 +129,7 @@ const Group: FC = () => {
                             time="06:42pm"
                             title="Watch, Listen and Play Longer"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque "
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="gray700"
@@ -121,6 +137,7 @@ const Group: FC = () => {
                             time="12:01pm"
                             title="Envato Contributor Payment"
                             excerpt="Commodo ligula eget dolor. Aenean massa cum sociis natoqu"
+                            onClick={handleBody}
                         />
                         <GroupItem
                             color="purple"
@@ -128,6 +145,7 @@ const Group: FC = () => {
                             time="11:13am"
                             title="Sale: Javascript Beginners"
                             excerpt="Aenean commodo ligula eget dolor. Ae nean massa. Cum sociis natoque"
+                            onClick={handleBody}
                         />
                     </StyledList>
                     <StyledReadMore>

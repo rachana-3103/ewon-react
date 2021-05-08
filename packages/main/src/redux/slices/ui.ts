@@ -4,10 +4,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface UIState {
     sidebar: boolean;
+    isBody: boolean;
 }
 
 const initialState: UIState = {
     sidebar: false,
+    isBody: false,
 };
 
 const uiSlice = createSlice({
@@ -24,8 +26,11 @@ const uiSlice = createSlice({
                 state.sidebar = !state.sidebar;
             }
         },
+        toggleBody(state) {
+            state.isBody = !state.isBody;
+        },
     },
 });
 
-export const { toggleSidebar } = uiSlice.actions;
+export const { toggleSidebar, toggleBody } = uiSlice.actions;
 export default uiSlice.reducer;

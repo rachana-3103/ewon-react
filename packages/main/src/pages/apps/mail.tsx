@@ -7,7 +7,7 @@ import Main from "../../containers/apps/mail/main";
 
 const Mail: React.FC = () => {
     return (
-        <Layout hasSidebar hideFooter sidebarLayout={2}>
+        <Layout hasSidebar hideFooter>
             <Wrapper>
                 <Sidebar />
                 <Group />

@@ -8,7 +8,7 @@ import { StyledSidebar, StyledBody } from "./style";
 
 const Sidebar: FC = () => {
     return (
-        <StyledSidebar>
+        <StyledSidebar className="sidebar">
             <Scrollbar top="0px">
                 <StyledBody>
                     <ComposeBtn />

@@ -5,16 +5,18 @@ import styled, {
     space,
     layout,
     color as colorStyles,
+    border as borderStyles,
     SpaceProps,
     ColorProps,
     LayoutProps,
+    BorderProps,
 } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 import check from "../../static/check.svg";
 import circle from "../../static/circle.svg";
 import selectIcon from "../../static/select.svg";
 
-interface IInput extends SpaceProps, ColorProps, LayoutProps {
+interface IInput extends SpaceProps, ColorProps, LayoutProps, BorderProps {
     $state?: "success" | "warning" | "error";
     $showState?: boolean;
     $showErrorOnly?: boolean;
@@ -119,6 +121,8 @@ export const StyledInput = styled(
         mt,
         mb,
         color,
+        border,
+        borderWidth,
         ...rest
     }) => <input {...rest} />
 )<IInput>`
@@ -139,6 +143,7 @@ export const StyledInput = styled(
     ${space};
     ${layout};
     ${colorStyles};
+    ${borderStyles};
 `;
 
 export const StyledTextarea = styled(

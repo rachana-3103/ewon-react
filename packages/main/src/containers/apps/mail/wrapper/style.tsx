@@ -1,6 +1,11 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css } from "@doar/shared/styled";
 
-export const StyledWrapper = styled.div`
+interface IProps {
+    $showSidebar: boolean;
+    $showBody: boolean;
+}
+
+export const StyledWrapper = styled.div<IProps>`
     position: fixed;
     top: 55px;
     bottom: 0;
@@ -12,9 +17,21 @@ export const StyledWrapper = styled.div`
         transform: translateX(-220px);
     }
     ${device.medium} {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
     ${device.large} {
         top: 60px;
     }
+    ${({ $showSidebar }) =>
+        $showSidebar &&
+        css`
+            transform: translateX(0) !important;
+        `}
+    ${({ $showBody }) =>
+        $showBody &&
+        css`
+            @media (max-width: 1199.98px) {
+                transform: translateX(-200vw) !important;
+            }
+        `}
 `;

@@ -1,6 +1,11 @@
 import { FC, ChangeEvent, MouseEvent, FocusEvent } from "react";
 import classnames from "classnames";
-import { SpaceProps, ColorProps, LayoutProps } from "@doar/shared/styled";
+import {
+    SpaceProps,
+    ColorProps,
+    LayoutProps,
+    BorderProps,
+} from "@doar/shared/styled";
 import { StyledInput, StyledFeedback } from "./style";
 
 interface IProps {
@@ -18,7 +23,12 @@ interface IProps {
     onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
 }
 
-interface IInputProps extends IProps, SpaceProps, ColorProps, LayoutProps {
+interface IInputProps
+    extends IProps,
+        SpaceProps,
+        ColorProps,
+        LayoutProps,
+        BorderProps {
     type?: string;
     state?: "success" | "warning" | "error";
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import styled, {
     device,
     themeGet,
@@ -196,6 +195,7 @@ export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
 interface IMenuBtn {
     $hasSidebar?: boolean;
     $sidebarOpen?: boolean;
+    $bodyOpen?: boolean;
 }
 
 export const StyledMenuBtn = styled(({ ...rest }) => (
@@ -210,10 +210,17 @@ export const StyledMenuBtn = styled(({ ...rest }) => (
         css`
             display: none;
         `}
-    ${({ $sidebarOpen }) =>
+    ${({ $sidebarOpen, $bodyOpen }) =>
         $sidebarOpen === true &&
+        !$bodyOpen &&
         css`
             display: block;
+        `}
+	${({ $bodyOpen, $sidebarOpen }) =>
+        $bodyOpen === true &&
+        $sidebarOpen === true &&
+        css`
+            display: none;
         `}
 	${device.large} {
         display: none;
@@ -233,9 +240,16 @@ export const StyledSidebarBtn = styled(({ ...rest }) => (
     ${device.large} {
         display: none;
     }
-    ${({ $sidebarOpen }) =>
+    ${({ $sidebarOpen, $bodyOpen }) =>
         $sidebarOpen === true &&
+        !$bodyOpen &&
         css`
             display: none;
+        `}
+    ${({ $bodyOpen, $sidebarOpen }) =>
+        $bodyOpen === true &&
+        $sidebarOpen === true &&
+        css`
+            display: block;
         `}
 `;

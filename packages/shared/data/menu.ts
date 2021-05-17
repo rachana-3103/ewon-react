@@ -66,7 +66,7 @@ const menus = [
             {
                 id: 22,
                 label: "Chat",
-                url: "/",
+                url: "/apps/chat",
                 Icon: MessageSquare,
             },
             {

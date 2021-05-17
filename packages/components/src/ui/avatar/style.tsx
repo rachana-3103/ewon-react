@@ -2,21 +2,23 @@ import styled, {
     css,
     themeGet,
     layout,
+    space,
     LayoutProps,
     color as colorStyles,
     ColorProps,
     typography,
     TypographyProps,
+    SpaceProps,
 } from "@doar/shared/styled";
 
-interface IProps extends LayoutProps {
+interface IProps extends LayoutProps, SpaceProps {
     $size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     $shape?: "circle" | "rounded" | "square";
     $initialText?: boolean;
     $status?: "online" | "offline";
 }
 
-export const StyledAvatar = styled(({ display, ...rest }) => (
+export const StyledAvatar = styled(({ display, mr, ...rest }) => (
     <div {...rest} />
 ))<IProps>`
     position: relative;
@@ -233,6 +235,7 @@ export const StyledAvatar = styled(({ display, ...rest }) => (
         object-fit: cover;
     }
     ${layout};
+    ${space};
 `;
 
 interface IAvatarText extends ColorProps, TypographyProps {

@@ -1,6 +1,6 @@
-import styled, { css, themeGet } from "@doar/shared/styled";
+import styled, { css, themeGet, space, SpaceProps } from "@doar/shared/styled";
 
-interface BadgeProps {
+interface BadgeProps extends SpaceProps {
     $color?:
         | "primary"
         | "secondary"
@@ -11,15 +11,32 @@ interface BadgeProps {
         | "light"
         | "dark";
     $variant?: "contained" | "texted";
+    $shape?: "rounded" | "square" | "circle";
     $pill?: boolean;
 }
+
+const props = [
+    "p",
+    "px",
+    "py",
+    "pt",
+    "pb",
+    "pl",
+    "pr",
+    "m",
+    "mx",
+    "my",
+    "mt",
+    "mb",
+    "ml",
+    "mr",
+];
 
 const badgeCss = css<BadgeProps>`
     font-size: 10px;
     font-weight: 500;
     font-family: ${themeGet("fonts.interUi")};
     padding: 3px 5px 4px;
-    border-radius: 3px;
     display: inline-block;
     line-height: 1;
     text-align: center;
@@ -96,8 +113,27 @@ const badgeCss = css<BadgeProps>`
             background-color: transparent;
             padding: 0;
         `}
+	${({ $shape }) =>
+        $shape === "rounded" &&
+        css`
+            border-radius: 3px;
+        `}
+	${({ $shape }) =>
+        $shape === "square" &&
+        css`
+            border-radius: 0;
+        `}
+	${({ $shape }) =>
+        $shape === "circle" &&
+        css`
+            border-radius: 100%;
+        `}
 `;
 
-export const StyledBadge = styled.span<BadgeProps>`
+export const StyledBadge = styled("span").withConfig({
+    shouldForwardProp: (prop, defaultValidatorFn) =>
+        ![...props].includes(prop) && defaultValidatorFn(prop),
+})<BadgeProps>`
     ${badgeCss};
+    ${space};
 `;

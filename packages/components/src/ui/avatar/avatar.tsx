@@ -1,6 +1,11 @@
 import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
-import { LayoutProps, ColorProps, TypographyProps } from "@doar/shared/styled";
+import {
+    LayoutProps,
+    ColorProps,
+    TypographyProps,
+    SpaceProps,
+} from "@doar/shared/styled";
 
 import { StyledAvatar, StyledInitialText } from "./style";
 
@@ -11,7 +16,7 @@ interface IProps {
     className?: string;
 }
 
-interface IAvatar extends LayoutProps, IProps {
+interface IAvatar extends LayoutProps, SpaceProps, IProps {
     /**
      * Default size is `38x38`
      */

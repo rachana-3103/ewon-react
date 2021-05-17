@@ -22,8 +22,9 @@ const Pricing = lazy(() => import("./pages/pricing"));
 const HelpCenter = lazy(() => import("./pages/help-center"));
 const Invoice = lazy(() => import("./pages/invoice"));
 const Calendar = lazy(() => import("./pages/apps/calendar"));
-const FileManager = lazy(() => import("./pages/apps/file-manager"));
+const Chat = lazy(() => import("./pages/apps/chat"));
 const Contacts = lazy(() => import("./pages/apps/contacts"));
+const FileManager = lazy(() => import("./pages/apps/file-manager"));
 const Mail = lazy(() => import("./pages/apps/mail"));
 
 const App: React.FC = () => {
@@ -71,12 +72,13 @@ const App: React.FC = () => {
                     <Route exact path="/help-center" component={HelpCenter} />
                     <Route exact path="/invoice" component={Invoice} />
                     <Route exact path="/apps/calendar" component={Calendar} />
+                    <Route exact path="/apps/chat" component={Chat} />
+                    <Route exact path="/apps/contacts" component={Contacts} />
                     <Route
                         exact
                         path="/apps/file-manager"
                         component={FileManager}
                     />
-                    <Route exact path="/apps/contacts" component={Contacts} />
                     <Route exact path="/apps/mail" component={Mail} />
                     <Route path="*" component={ErrorNotFound} />
                 </Switch>

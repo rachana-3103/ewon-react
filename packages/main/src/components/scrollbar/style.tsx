@@ -1,10 +1,15 @@
-import styled, { PositionProps, position } from "@doar/shared/styled";
+import styled, { PositionProps, position, css } from "@doar/shared/styled";
 
-export const StyledWrap = styled(({ top, ...rest }) => (
+export const StyledWrap = styled(({ top, bottom, ...rest }) => (
     <div {...rest} />
 ))<PositionProps>`
     height: 100%;
     position: relative;
+    ${({ bottom }) =>
+        !!bottom &&
+        css`
+            height: calc(100% - ${bottom});
+        `}
     .ps {
         overflow: hidden;
     }
@@ -51,6 +56,7 @@ export const StyledWrap = styled(({ top, ...rest }) => (
     }
     .scrollbar-container {
         position: absolute;
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;

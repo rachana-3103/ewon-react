@@ -10,5 +10,6 @@ export const StyledLabel = styled(({ mb, pl, ...rest }) => (
     font-family: ${themeGet("fonts.interUi")};
     font-weight: 500;
     color: ${themeGet("colors.text3")};
+    margin-bottom: 0;
     ${space}
 `;

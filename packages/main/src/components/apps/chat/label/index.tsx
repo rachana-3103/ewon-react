@@ -4,8 +4,8 @@ import { StyledLabel } from "./style";
 
 type IProps = SpaceProps;
 
-const Label: FC<IProps> = ({ children }) => {
-    return <StyledLabel>{children}</StyledLabel>;
+const Label: FC<IProps> = ({ children, ...rest }) => {
+    return <StyledLabel {...rest}>{children}</StyledLabel>;
 };
 
 export default Label;

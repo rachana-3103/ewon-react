@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Card, ButtonGroup, Row, Col, ApexBarChart } from "@doar/components";
-import { webMetricsChart } from "@doar/shared/data/dashboard-two";
 import {
-    StyledHeader,
-    StyledBody,
-    StyledTitle,
-    StyledDesc,
-    StyledButton,
-    StyledChart,
-} from "./style";
+    Card,
+    ButtonGroup,
+    Row,
+    Col,
+    ApexBarChart,
+    SectionTitle,
+} from "@doar/components";
+import { webMetricsChart } from "@doar/shared/data/dashboard-two";
+import { StyledHeader, StyledBody, StyledButton, StyledChart } from "./style";
 import MetricsProgress from "./metrics-progress";
 
 const WebsiteMetrics: FC = () => {
@@ -16,11 +16,12 @@ const WebsiteMetrics: FC = () => {
         <Card>
             <StyledHeader>
                 <div>
-                    <StyledTitle>Website Audience Metrics</StyledTitle>
-                    <StyledDesc>
-                        Audience to which the users belonged while on the
-                        current date range.
-                    </StyledDesc>
+                    <SectionTitle
+                        title="Website Audience Metrics"
+                        desc="Audience to which the users belonged while on the
+                        current date range."
+                        descProps={{ fontSize: "12px" }}
+                    />
                 </div>
                 <ButtonGroup mt={["20px", "0px"]}>
                     <StyledButton size="xs" color="white">

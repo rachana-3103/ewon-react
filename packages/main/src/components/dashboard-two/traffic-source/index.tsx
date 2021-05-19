@@ -1,7 +1,12 @@
 import { FC } from "react";
-import { Card, CardHeader, CardBody, CardFooter } from "@doar/components";
 import {
-    StyledTitle,
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    SectionTitle,
+} from "@doar/components";
+import {
     StyledNumber,
     StyledSubtitle,
     StyledDesc,
@@ -12,7 +17,7 @@ const TrafficSource: FC = () => {
     return (
         <Card>
             <CardHeader>
-                <StyledTitle>Top Traffic Source</StyledTitle>
+                <SectionTitle title="Top Traffic Source" />
             </CardHeader>
             <CardBody textAlign="center">
                 <StyledNumber>29,931</StyledNumber>

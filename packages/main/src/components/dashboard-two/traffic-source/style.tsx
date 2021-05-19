@@ -1,10 +1,6 @@
 import styled, { themeGet } from "@doar/shared/styled";
 import { Button } from "@doar/components";
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0;
-`;
-
 export const StyledNumber = styled.h4`
     font-size: 40px;
     letter-spacing: -0.5px;

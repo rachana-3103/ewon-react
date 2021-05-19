@@ -12,16 +12,6 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 5px;
-`;
-
-export const StyledDesc = styled.p`
-    font-size: 12px;
-    color: #8392a5;
-    margin-bottom: 0px;
-`;
-
 interface IMediaIcon {
     $variant: "primary" | "light";
 }

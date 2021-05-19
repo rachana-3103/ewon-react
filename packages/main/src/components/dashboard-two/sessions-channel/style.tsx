@@ -5,10 +5,6 @@ import styled, {
     ColorProps,
 } from "@doar/shared/styled";
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0;
-`;
-
 export const StyledChart = styled.div`
     height: 180px;
     margin-bottom: -33px;

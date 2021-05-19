@@ -1,8 +1,7 @@
 import { FC } from "react";
-import { Card, CardBody } from "@doar/components";
+import { Card, CardBody, SectionTitle } from "@doar/components";
 import {
     StyledHeader,
-    StyledTitle,
     StyledRange,
     StyledTable,
     StyledHeadTR,
@@ -15,9 +14,12 @@ const Browsers: FC = () => {
     return (
         <Card>
             <StyledHeader>
-                <StyledTitle>Browser Used By Users</StyledTitle>
+                <SectionTitle
+                    title="Browser Used By Users"
+                    titleProps={{ lineHeight: 1.5 }}
+                />
                 <StyledRange>
-                    Mar 01 - Mar 20, 2019 <i className="fa fa-arrow-down" />
+                    Mar 01 - Mar 20, 2019 <i className="fa fa-chevron-down" />
                 </StyledRange>
             </StyledHeader>
             <CardBody py={["15px", "15px"]} px={["10px", "10px"]}>

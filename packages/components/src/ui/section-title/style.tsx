@@ -5,7 +5,7 @@ import styled, {
     typography,
 } from "@doar/shared/styled";
 
-interface ITitle {
+interface ITitle extends TypographyProps {
     $hasDesc?: boolean;
 }
 
@@ -20,6 +20,7 @@ export const StyledTitle = styled.h6<ITitle>`
         css`
             margin-bottom: 5px;
         `}
+	${typography}
 `;
 
 export const StyledDesc = styled(({ fontSize, ...rest }) => (

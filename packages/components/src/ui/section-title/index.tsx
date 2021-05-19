@@ -6,13 +6,21 @@ interface IProps {
     title: string;
     desc?: string;
     descProps?: TypographyProps;
+    titleProps?: TypographyProps;
 }
 
-const SectionTitle: FC<IProps> = ({ title, desc, descProps }) => {
+const SectionTitle: FC<IProps> = ({ title, desc, descProps, titleProps }) => {
     return (
         <>
-            <StyledTitle $hasDesc={Boolean(desc)}>{title}</StyledTitle>
-            {desc && <StyledDesc {...descProps}>{desc}</StyledDesc>}
+            <StyledTitle $hasDesc={Boolean(desc)} {...titleProps}>
+                {title}
+            </StyledTitle>
+            {desc && (
+                <StyledDesc
+                    {...descProps}
+                    dangerouslySetInnerHTML={{ __html: desc }}
+                />
+            )}
         </>
     );
 };

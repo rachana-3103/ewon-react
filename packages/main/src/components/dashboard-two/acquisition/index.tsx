@@ -8,12 +8,11 @@ import {
     Media,
     MediaBody,
     ApexAreaChart,
+    SectionTitle,
 } from "@doar/components";
 import { acquisitionChart } from "@doar/shared/data/dashboard-two";
 import {
     StyledHeader,
-    StyledTitle,
-    StyledDesc,
     StyledMediaIcon,
     StyledMediaTitle,
     StyledMediaDesc,
@@ -24,12 +23,13 @@ const Acquisition: FC = () => {
     return (
         <Card>
             <StyledHeader>
-                <StyledTitle>Acquisition</StyledTitle>
-                <StyledDesc>
-                    Tells you where your visitors originated from, such as
-                    search engines, social networks or website referrals.{" "}
-                    <a href="/">Learn more</a>
-                </StyledDesc>
+                <SectionTitle
+                    title="Acquisition"
+                    desc="Tells you where your visitors originated from, such as
+                    search engines, social networks or website referrals. 
+                    <a href='/'>Learn more</a>"
+                    descProps={{ fontSize: "12px" }}
+                />
             </StyledHeader>
             <CardBody p={[null, "20px", null, "25px"]}>
                 <Row gutters={20}>

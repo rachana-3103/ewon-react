@@ -36,3 +36,7 @@ export const flatDeep = (arr: any[], d = 1): any[] => {
           }, [])
         : arr.slice();
 };
+
+export const formatNumber = (x: number): string => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};

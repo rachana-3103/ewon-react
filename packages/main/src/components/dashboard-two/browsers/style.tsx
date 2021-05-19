@@ -18,11 +18,6 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0px;
-    line-height: 1.5;
-`;
-
 export const StyledRange = styled.span`
     font-size: 13px;
     color: ${themeGet("colors.text3")};

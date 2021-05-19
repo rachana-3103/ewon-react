@@ -25,6 +25,7 @@ export const StyledDiv = styled.div`
 
 export const StyledDivLeft = styled.span`
     color: ${themeGet("colors.text3")};
+    text-transform: capitalize;
 `;
 
 export const StyledDivRight = styled.span`

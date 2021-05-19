@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { MoreHorizontal } from "react-feather";
 import { Card, CardBody, SectionTitle, Text } from "@doar/components";
-import image1 from "../../../images/img37.jpg";
-import image2 from "../../../images/img38.jpg";
-import image3 from "../../../images/img39.jpg";
+import image1 from "@doar/shared/data/images/img37.jpg";
+import image2 from "@doar/shared/data/images/img38.jpg";
+import image3 from "@doar/shared/data/images/img39.jpg";
 import Item from "./item";
 import { StyledHeader, StyledList, StyleHr } from "./style";
 

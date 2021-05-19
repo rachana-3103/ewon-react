@@ -1,9 +1,5 @@
 import styled, { color, ColorProps, themeGet } from "@doar/shared/styled";
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0;
-`;
-
 export const StyledDiv = styled.div`
     display: flex;
     align-items: baseline;

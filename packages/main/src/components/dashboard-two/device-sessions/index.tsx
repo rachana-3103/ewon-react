@@ -6,10 +6,10 @@ import {
     Row,
     Col,
     ApexAreaChart,
+    SectionTitle,
 } from "@doar/components";
 import { deviceSessionsChart } from "@doar/shared/data/dashboard-two";
 import {
-    StyledTitle,
     StyledDiv,
     StyledBullet,
     StyledText,
@@ -21,7 +21,7 @@ const DeviceSessions: FC = () => {
     return (
         <Card>
             <CardHeader>
-                <StyledTitle>Device Sessions</StyledTitle>
+                <SectionTitle title="Device Sessions" />
             </CardHeader>
             <CardBody>
                 <Row gutters={10}>

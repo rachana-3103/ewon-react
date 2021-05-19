@@ -7,10 +7,10 @@ import {
     Row,
     Col,
     ApexDonutChart,
+    SectionTitle,
 } from "@doar/components";
 import { sessionsChart } from "@doar/shared/data/dashboard-two";
 import {
-    StyledTitle,
     StyledChart,
     StyledFooterText,
     StyledFooterDiv,
@@ -22,7 +22,7 @@ const SessoionsChannel: FC = () => {
     return (
         <Card>
             <CardHeader>
-                <StyledTitle>Sessions By Channel</StyledTitle>
+                <SectionTitle title="Sessions By Channel" />
             </CardHeader>
             <CardBody p={[null, null, null, "25px"]}>
                 <StyledChart>

@@ -33,16 +33,6 @@ export const StyledBody = styled(({ ...props }) => <CardBody {...props} />)`
     }
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 5px;
-`;
-
-export const StyledDesc = styled.p`
-    margin-bottom: 0px;
-    color: ${themeGet("colors.text3")};
-    font-size: 12px;
-`;
-
 export const StyledButton = styled(({ ...props }) => <Button {...props} />)`
     font-size: 10px;
     text-transform: uppercase;

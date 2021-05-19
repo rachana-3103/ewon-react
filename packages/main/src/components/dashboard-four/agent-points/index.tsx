@@ -1,22 +1,11 @@
 import { FC } from "react";
-import {
-    Card,
-    CardBody,
-    SectionTitle,
-    Media,
-    MediaBody,
-    Avatar,
-    AvatarInitial,
-    Progress,
-} from "@doar/components";
-import {
-    StyledHeader,
-    StyledDiv,
-    StyledTitle,
-    StyledRole,
-    StyledDivLeft,
-    StyledDivRight,
-} from "./style";
+import { Card, CardBody, SectionTitle } from "@doar/components";
+import img1 from "@doar/shared/data/images/img15.jpg";
+import img2 from "@doar/shared/data/images/img14.jpg";
+import img3 from "@doar/shared/data/images/img23.jpg";
+import img4 from "@doar/shared/data/images/img22.jpg";
+import Item from "./item";
+import { StyledHeader } from "./style";
 
 const AgentPoints: FC = () => {
     return (
@@ -25,86 +14,33 @@ const AgentPoints: FC = () => {
                 <SectionTitle title="Agent Performance Points" />
             </StyledHeader>
             <CardBody pt="25px">
-                <Media>
-                    <Avatar>
-                        <AvatarInitial>D</AvatarInitial>
-                    </Avatar>
-                    <MediaBody ml="15px">
-                        <StyledTitle>Katherine Lumaad</StyledTitle>
-                        <StyledRole>Technical Support</StyledRole>
-                        <Progress
-                            now={85}
-                            bg="primary"
-                            height="4px"
-                            opacity={0.7}
-                            mb="4px"
-                        />
-                        <StyledDiv>
-                            <StyledDivLeft>Executive Level</StyledDivLeft>
-                            <StyledDivRight>12,312 points</StyledDivRight>
-                        </StyledDiv>
-                    </MediaBody>
-                </Media>
-                <Media mt="25px">
-                    <Avatar>
-                        <AvatarInitial>D</AvatarInitial>
-                    </Avatar>
-                    <MediaBody ml="15px">
-                        <StyledTitle>Adrian Monino</StyledTitle>
-                        <StyledRole>Sales Representative</StyledRole>
-                        <Progress
-                            now={60}
-                            bg="success"
-                            height="4px"
-                            opacity={0.7}
-                            mb="4px"
-                        />
-                        <StyledDiv>
-                            <StyledDivLeft>Master Level</StyledDivLeft>
-                            <StyledDivRight>10,044 points</StyledDivRight>
-                        </StyledDiv>
-                    </MediaBody>
-                </Media>
-                <Media mt="25px">
-                    <Avatar>
-                        <AvatarInitial>D</AvatarInitial>
-                    </Avatar>
-                    <MediaBody ml="15px">
-                        <StyledTitle>Rolando Paloso</StyledTitle>
-                        <StyledRole>Software Support</StyledRole>
-                        <Progress
-                            now={45}
-                            bg="indigo"
-                            height="4px"
-                            opacity={0.7}
-                            mb="4px"
-                        />
-                        <StyledDiv>
-                            <StyledDivLeft>Super Elite Level</StyledDivLeft>
-                            <StyledDivRight>7,500 points</StyledDivRight>
-                        </StyledDiv>
-                    </MediaBody>
-                </Media>
-                <Media mt="25px">
-                    <Avatar>
-                        <AvatarInitial>D</AvatarInitial>
-                    </Avatar>
-                    <MediaBody ml="15px">
-                        <StyledTitle>Dyanne Rose Aceron</StyledTitle>
-                        <StyledRole>Sales Representative</StyledRole>
-                        <Progress
-                            now={40}
-                            bg="pink"
-                            height="4px"
-                            opacity={0.7}
-                            mb="4px"
-                        />
-                        <StyledDiv>
-                            <StyledDivLeft>Elite Level</StyledDivLeft>
-                            <StyledDivRight>6,870 points</StyledDivRight>
-                        </StyledDiv>
-                    </MediaBody>
-                </Media>
+                <Item
+                    image={img1}
+                    name="Katherine Lumaad"
+                    designation="Technical Support"
+                    points={12312}
+                />
+                <Item
+                    mt="25px"
+                    image={img2}
+                    name="Adrian Monino"
+                    designation="Sales Representative"
+                    points={10044}
+                />
+                <Item
+                    mt="25px"
+                    image={img3}
+                    name="Rolando Paloso"
+                    designation="Software Support"
+                    points={7500}
+                />
+                <Item
+                    mt="25px"
+                    image={img4}
+                    name="Dyanne Rose Aceron"
+                    designation="Sales Representative"
+                    points={6870}
+                />
             </CardBody>
         </Card>
     );

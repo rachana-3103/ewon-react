@@ -1,5 +1,12 @@
 import { FC } from "react";
-import { Card, CardBody, Row, Col, HorizontalBarChart } from "@doar/components";
+import {
+    Card,
+    CardBody,
+    Row,
+    Col,
+    HorizontalBarChart,
+    SectionTitle,
+} from "@doar/components";
 import { RealTimeSalesData } from "@doar/shared/data/dashboard-one";
 import {
     StyledBodyTitle,
@@ -8,7 +15,6 @@ import {
     StyledList,
     StyledListItem,
     StyledListText,
-    StyledTitle,
     StyledBodyStatus,
     StyledBodyText,
     StyledChart,
@@ -18,7 +24,7 @@ const RealTimeSales: FC = () => {
     return (
         <Card height="100%">
             <StyledHeader>
-                <StyledTitle>Real-Time Sales</StyledTitle>
+                <SectionTitle title="Real-Time Sales" />
                 <StyledList>
                     <StyledListItem>
                         <StyledBullet bg="malibu" />

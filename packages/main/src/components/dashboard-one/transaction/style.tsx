@@ -14,10 +14,6 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     align-items: center;
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0px;
-`;
-
 export const StyledHeaderRight = styled.div`
     font-size: 18px;
     display: flex;
@@ -61,23 +57,23 @@ export const StyledListTrans = styled.p`
 `;
 
 interface ITransStatus {
-    $status: "complete" | "pickup" | "cancel";
+    $status: "success" | "declined" | "pending";
 }
 
 export const StyledListStatus = styled.small<ITransStatus>`
     font-size: 12px;
     ${({ $status }) =>
-        $status === "complete" &&
+        $status === "success" &&
         css`
             color: ${themeGet("colors.success")};
         `}
     ${({ $status }) =>
-        $status === "pickup" &&
+        $status === "pending" &&
         css`
             color: ${themeGet("colors.info")};
         `}
     ${({ $status }) =>
-        $status === "cancel" &&
+        $status === "declined" &&
         css`
             color: ${themeGet("colors.danger")};
         `}

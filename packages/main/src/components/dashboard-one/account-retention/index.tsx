@@ -1,11 +1,9 @@
 import { FC } from "react";
-import { Card, Row, Col, ApexBarChart } from "@doar/components";
+import { Card, Row, Col, ApexBarChart, SectionTitle } from "@doar/components";
 import { RetentionChart } from "@doar/shared/data/dashboard-one";
 import {
     StyledCardHeader,
     StyledCardBody,
-    StyledTitle,
-    StyledDesc,
     StyledCardBodyTitle,
     StyledCardBodySubtitle,
     StyledCardBodyText,
@@ -16,10 +14,11 @@ const AccountRetention: FC = () => {
     return (
         <Card>
             <StyledCardHeader>
-                <StyledTitle>Account Retention</StyledTitle>
-                <StyledDesc>
-                    Number of customers who have active subscription with you.
-                </StyledDesc>
+                <SectionTitle
+                    title="Account Retention"
+                    desc="Number of customers who have active subscription with you."
+                    descProps={{ fontSize: "12px" }}
+                />
             </StyledCardHeader>
             <StyledCardBody>
                 <StyledChart>

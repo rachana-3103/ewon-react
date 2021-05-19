@@ -15,10 +15,6 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     align-items: center;
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0px;
-`;
-
 export const StyledHeaderRight = styled.div`
     font-size: 18px;
     display: flex;

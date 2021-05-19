@@ -1,9 +1,15 @@
 import { FC } from "react";
-import { Card, CardBody, Row, Col, ApexAreaChart } from "@doar/components";
+import {
+    Card,
+    CardBody,
+    Row,
+    Col,
+    ApexAreaChart,
+    SectionTitle,
+} from "@doar/components";
 import { RevenueChart } from "@doar/shared/data/dashboard-one";
 import {
     StyledHeader,
-    StyledTitle,
     StyledList,
     StyledListItem,
     StyledBullet,
@@ -19,9 +25,7 @@ const RevenueGrowth: FC = () => {
     return (
         <Card>
             <StyledHeader>
-                <StyledTitle>
-                    Account &amp; Monthly Recurring Revenue Growth
-                </StyledTitle>
+                <SectionTitle title="Account &amp; Monthly Recurring Revenue Growth" />
                 <StyledList>
                     <StyledListItem>
                         <StyledBullet bg="primary" />

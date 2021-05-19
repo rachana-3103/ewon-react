@@ -19,16 +19,6 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 5px;
-`;
-
-export const StyeldSubtitle = styled.p`
-    font-size: 13px;
-    color: ${themeGet("colors.text3")};
-    margin-bottom: 0px;
-`;
-
 export const StyledMediaWrap = styled.div`
     ${device.small} {
         display: flex;

@@ -6,7 +6,8 @@
     "jsx": "react-jsx",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+	"downlevelIteration": true
   },
   "include": [
     "src",

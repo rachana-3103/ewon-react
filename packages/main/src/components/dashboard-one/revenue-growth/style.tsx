@@ -16,10 +16,6 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     }
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0px;
-`;
-
 export const StyledList = styled.ul`
     padding-left: 0;
     list-style: none;

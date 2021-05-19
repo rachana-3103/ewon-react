@@ -87,3 +87,37 @@ export interface IEvent {
         description?: string;
     }>;
 }
+
+export interface ITransaction {
+    id: string;
+    title: string;
+    date: string;
+    count: string;
+    status: "success" | "declined" | "pending";
+    state: "completed" | "refund" | "deilvered" | "failed";
+}
+
+export interface ICustomer {
+    id: string;
+    name: string;
+    image?: string;
+    bg?: string;
+}
+
+export interface ISalesRevenue {
+    state: string;
+    order: string;
+    earning: string;
+}
+
+export interface IRecentEarning {
+    date: string;
+    sales_count: string;
+    gross_earnings: string;
+    tax_withheld: string;
+    net_earinings: {
+        earning: string;
+        growth: string;
+        status: "up" | "down";
+    };
+}

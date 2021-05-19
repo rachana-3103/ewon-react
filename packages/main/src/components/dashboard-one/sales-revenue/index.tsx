@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { Card, CardBody, VectorMap } from "@doar/components";
+import { Card, CardBody, VectorMap, SectionTitle } from "@doar/components";
 import usajson from "@doar/shared/data/maps/usa.json";
+import { salesRevenues } from "@doar/shared/data/dashboard-one";
+import { flatDeep } from "@doar/shared/methods";
 import {
     StyledHeader,
-    StyledTitle,
     StyledHeaderRight,
     StyledHeaderRightText,
     StyledHeaderRightIcon,
@@ -14,14 +15,18 @@ import {
 } from "./style";
 
 const SalesRevenue: FC = () => {
+    const keys = [
+        ...new Set(flatDeep(salesRevenues.map((sale) => Object.keys(sale)))),
+    ];
+
     return (
         <Card height={[null, null, null, "100%"]}>
             <StyledHeader>
-                <StyledTitle>Sales Revenue</StyledTitle>
+                <SectionTitle title="Sales Revenue" />
                 <StyledHeaderRight>
                     <StyledHeaderRightText>Country</StyledHeaderRightText>
                     <StyledHeaderRightIcon>
-                        USA <i className="fa fa-arrow-down" />
+                        USA <i className="fa fa-chevron-down" />
                     </StyledHeaderRightIcon>
                 </StyledHeaderRight>
             </StyledHeader>
@@ -46,37 +51,19 @@ const SalesRevenue: FC = () => {
                 <StyledTable borderless>
                     <thead>
                         <tr>
-                            <StyledTH>States</StyledTH>
-                            <StyledTH>Orders</StyledTH>
-                            <StyledTH>Earnings</StyledTH>
+                            {keys.map((key) => (
+                                <StyledTH key={key}>{key}s</StyledTH>
+                            ))}
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <StyledTD>California</StyledTD>
-                            <StyledTD>12,201</StyledTD>
-                            <StyledTD>$150,200.80</StyledTD>
-                        </tr>
-                        <tr>
-                            <StyledTD>Texas</StyledTD>
-                            <StyledTD>11,950</StyledTD>
-                            <StyledTD>$138,910.20</StyledTD>
-                        </tr>
-                        <tr>
-                            <StyledTD>Wyoming</StyledTD>
-                            <StyledTD>11,198</StyledTD>
-                            <StyledTD>$132,050.00</StyledTD>
-                        </tr>
-                        <tr>
-                            <StyledTD>Florida</StyledTD>
-                            <StyledTD>12,201</StyledTD>
-                            <StyledTD>$150,200.80</StyledTD>
-                        </tr>
-                        <tr>
-                            <StyledTD>New York</StyledTD>
-                            <StyledTD>8,560</StyledTD>
-                            <StyledTD>$117,087.50</StyledTD>
-                        </tr>
+                        {salesRevenues.map((rev) => (
+                            <tr key={rev.state}>
+                                <StyledTD>{rev.state}</StyledTD>
+                                <StyledTD>{rev.order}</StyledTD>
+                                <StyledTD>{rev.earning}</StyledTD>
+                            </tr>
+                        ))}
                     </tbody>
                 </StyledTable>
             </CardBody>

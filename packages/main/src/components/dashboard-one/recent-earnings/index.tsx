@@ -7,11 +7,12 @@ import {
     Button,
     Media,
     MediaBody,
+    SectionTitle,
 } from "@doar/components";
+import { recentEarnings } from "@doar/shared/data/dashboard-one";
+import { flatDeep } from "@doar/shared/methods";
 import {
     StyledHeader,
-    StyledTitle,
-    StyeldSubtitle,
     StyledMediaWrap,
     StyledMedaLeft,
     StyledMediaTitle,
@@ -23,14 +24,18 @@ import {
 } from "./style";
 
 const RecentEarnings: FC = () => {
+    const keys = [
+        ...new Set(flatDeep(recentEarnings.map((sale) => Object.keys(sale)))),
+    ];
+
     return (
         <Card mb="10px">
             <StyledHeader>
                 <div>
-                    <StyledTitle>Your Most Recent Earnings</StyledTitle>
-                    <StyeldSubtitle>
-                        Your sales and referral earnings over the last 30 days
-                    </StyeldSubtitle>
+                    <SectionTitle
+                        title="Your Most Recent Earnings"
+                        desc="Your sales and referral earnings over the last 30 days"
+                    />
                 </div>
                 <ButtonGroup mt={["20px", "0px"]}>
                     <Button size="xs" color="white" active>
@@ -79,74 +84,46 @@ const RecentEarnings: FC = () => {
             <StyledTable>
                 <thead>
                     <tr>
-                        <StyledTH>Date</StyledTH>
-                        <StyledTH>Sales Count</StyledTH>
-                        <StyledTH>Gross Earnings</StyledTH>
-                        <StyledTH>Tax Withheld</StyledTH>
-                        <StyledTH>Net Earnings</StyledTH>
+                        {keys.map((key) => (
+                            <StyledTH key={key}>
+                                {key.replace(/_/g, " ")}
+                            </StyledTH>
+                        ))}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <StyledTD color="text3">03/05/2018</StyledTD>
-                        <StyledTD fontWeight="500">1,050</StyledTD>
-                        <StyledTD color="teal">+ $32,580.00</StyledTD>
-                        <StyledTD color="pink">- $3,023.10</StyledTD>
-                        <StyledTD fontWeight="500">
-                            $28,670.90{" "}
-                            <StyledTDRate color="success">
-                                <i className="fa fa-arrow-up" /> 4.5%
-                            </StyledTDRate>
-                        </StyledTD>
-                    </tr>
-                    <tr>
-                        <StyledTD color="text3">03/04/2018</StyledTD>
-                        <StyledTD fontWeight="500">980</StyledTD>
-                        <StyledTD color="teal">+ $30,065.10</StyledTD>
-                        <StyledTD color="pink">- $2,780.00</StyledTD>
-                        <StyledTD fontWeight="500">
-                            $26,930.40{" "}
-                            <StyledTDRate color="danger">
-                                <i className="fa fa-arrow-down" /> 0.8%
-                            </StyledTDRate>
-                        </StyledTD>
-                    </tr>
-                    <tr>
-                        <StyledTD color="text3">03/04/2018</StyledTD>
-                        <StyledTD fontWeight="500">980</StyledTD>
-                        <StyledTD color="teal">+ $30,065.10</StyledTD>
-                        <StyledTD color="pink">- $2,780.00</StyledTD>
-                        <StyledTD fontWeight="500">
-                            $26,930.40{" "}
-                            <StyledTDRate color="danger">
-                                <i className="fa fa-arrow-down" /> 0.8%
-                            </StyledTDRate>
-                        </StyledTD>
-                    </tr>
-                    <tr>
-                        <StyledTD color="text3">03/04/2018</StyledTD>
-                        <StyledTD fontWeight="500">980</StyledTD>
-                        <StyledTD color="teal">+ $30,065.10</StyledTD>
-                        <StyledTD color="pink">- $2,780.00</StyledTD>
-                        <StyledTD fontWeight="500">
-                            $26,930.40{" "}
-                            <StyledTDRate color="danger">
-                                <i className="fa fa-arrow-down" /> 0.8%
-                            </StyledTDRate>
-                        </StyledTD>
-                    </tr>
-                    <tr>
-                        <StyledTD color="text3">03/04/2018</StyledTD>
-                        <StyledTD fontWeight="500">980</StyledTD>
-                        <StyledTD color="teal">+ $30,065.10</StyledTD>
-                        <StyledTD color="pink">- $2,780.00</StyledTD>
-                        <StyledTD fontWeight="500">
-                            $26,930.40{" "}
-                            <StyledTDRate color="danger">
-                                <i className="fa fa-arrow-down" /> 0.8%
-                            </StyledTDRate>
-                        </StyledTD>
-                    </tr>
+                    {recentEarnings.map((ear) => (
+                        <tr key={ear.date}>
+                            <StyledTD color="text3">{ear.date}</StyledTD>
+                            <StyledTD fontWeight="500">
+                                {ear.sales_count}
+                            </StyledTD>
+                            <StyledTD color="teal">
+                                + {ear.gross_earnings}
+                            </StyledTD>
+                            <StyledTD color="pink">
+                                - {ear.tax_withheld}
+                            </StyledTD>
+                            <StyledTD fontWeight="500">
+                                {ear.net_earinings.earning}{" "}
+                                <StyledTDRate
+                                    color={
+                                        ear.net_earinings.status === "up"
+                                            ? "success"
+                                            : "danger"
+                                    }
+                                >
+                                    {ear.net_earinings.status === "up" && (
+                                        <i className="fa fa-arrow-up" />
+                                    )}
+                                    {ear.net_earinings.status === "down" && (
+                                        <i className="fa fa-arrow-down" />
+                                    )}{" "}
+                                    {ear.net_earinings.growth}
+                                </StyledTDRate>
+                            </StyledTD>
+                        </tr>
+                    ))}
                 </tbody>
             </StyledTable>
         </Card>

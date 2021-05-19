@@ -13,17 +13,6 @@ export const StyledCardBody = styled(({ ...props }) => <CardBody {...props} />)`
     padding-top: 0;
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 5px;
-`;
-
-export const StyledDesc = styled.p`
-    font-size: 12px;
-    margin-bottom: 0px;
-    color: ${themeGet("colors.text3")};
-    font-weight: 400;
-`;
-
 export const StyledCardBodyTitle = styled.h4`
     margin-bottom: 5px;
     font-weight: 400;

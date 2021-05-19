@@ -1,4 +1,9 @@
-import styled, { themeGet, css } from "@doar/shared/styled";
+import styled, {
+    themeGet,
+    css,
+    TypographyProps,
+    typography,
+} from "@doar/shared/styled";
 
 interface ITitle {
     $hasDesc?: boolean;
@@ -17,8 +22,11 @@ export const StyledTitle = styled.h6<ITitle>`
         `}
 `;
 
-export const StyledDesc = styled.p`
+export const StyledDesc = styled(({ fontSize, ...rest }) => (
+    <p {...rest} />
+))<TypographyProps>`
     color: ${themeGet("colors.text3")};
     font-size: 13px;
     margin-bottom: 0px;
+    ${typography}
 `;

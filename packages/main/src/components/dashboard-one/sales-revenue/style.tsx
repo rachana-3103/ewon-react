@@ -7,10 +7,6 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     justify-content: space-between;
 `;
 
-export const StyledTitle = styled.h6`
-    margin-bottom: 0px;
-`;
-
 export const StyledHeaderRight = styled.div`
     font-size: 13px;
     align-items: center;

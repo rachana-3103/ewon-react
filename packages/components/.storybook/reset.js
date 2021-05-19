@@ -188,5 +188,11 @@ export const ResetCSS = createGlobalStyle`
 	.ov-hidden{
 		overflow: hidden;
 	}
+	.text-center{
+		text-align: center;
+	}
+	.text-right{
+		text-align: right;
+	}
 `;
 

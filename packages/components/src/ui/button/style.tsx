@@ -973,7 +973,8 @@ const buttonStyles = css<IProps>`
         $iconPosition === "left" &&
         !$iconSpace &&
         css`
-            svg {
+            svg,
+            .spinner {
                 margin-right: 7px;
             }
         `}
@@ -982,7 +983,8 @@ const buttonStyles = css<IProps>`
         $iconPosition === "left" &&
         $iconSpace &&
         css`
-            svg {
+            svg,
+            .spinner {
                 margin-right: ${$iconSpace};
             }
         `}
@@ -992,7 +994,8 @@ const buttonStyles = css<IProps>`
         $iconPosition === "right" &&
         !$iconSpace &&
         css`
-            svg {
+            svg,
+            .spinner {
                 margin-left: 7px;
             }
         `}
@@ -1001,7 +1004,8 @@ const buttonStyles = css<IProps>`
         $iconPosition === "right" &&
         $iconSpace &&
         css`
-            svg {
+            svg,
+            .spinner {
                 margin-left: ${$iconSpace};
             }
         `}

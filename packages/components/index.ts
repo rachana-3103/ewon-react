@@ -86,6 +86,7 @@ import {
     ModalFooter,
 } from "./src/ui/modal/modal";
 import { TabWrap, TabContent, Tab, TabPanel, TabList } from "./src/ui/tab/tab";
+import { Spinner } from "./src/ui/spinner/spinner";
 
 export {
     Button,
@@ -172,4 +173,5 @@ export {
     Tab,
     TabPanel,
     TabList,
+    Spinner,
 };

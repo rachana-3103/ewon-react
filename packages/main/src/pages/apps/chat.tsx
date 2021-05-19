@@ -7,7 +7,7 @@ import Main from "../../containers/apps/chat/main";
 
 const Chat: FC = () => {
     return (
-        <Layout hasSidebar hideFooter>
+        <Layout hasSidebar hideFooter sidebarLayout={2}>
             <Wrapper>
                 <NavLeft />
                 <Sidebar />

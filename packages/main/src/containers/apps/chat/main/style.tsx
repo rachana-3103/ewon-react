@@ -1,6 +1,6 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css } from "@doar/shared/styled";
 
-export const StyledMain = styled.div`
+export const StyledMain = styled.div<{ $sidebar?: boolean }>`
     position: absolute;
     top: 0;
     left: 0;
@@ -19,6 +19,15 @@ export const StyledMain = styled.div`
         transform: none;
         visibility: visible;
     }
+    ${({ $sidebar }) =>
+        $sidebar &&
+        css`
+            @media (max-width: 991.98px) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        `}
 `;
 
 export const StyledHeader = styled.div`
@@ -39,15 +48,19 @@ export const StyledHeaderRight = styled.div`
     display: flex;
 `;
 
-export const StyledBody = styled.div`
+export const StyledBody = styled.div<{ $showSidebar?: boolean }>`
     position: absolute;
     left: 0;
     right: 0;
     top: 60px;
     bottom: 60px;
-    ${device.medium} {
-        margin-right: 230px;
-    }
+    ${({ $showSidebar }) =>
+        !!$showSidebar &&
+        css`
+            ${device.medium} {
+                margin-right: 230px;
+            }
+        `}
 `;
 
 export const StyledBodyInner = styled.div`
@@ -65,12 +78,18 @@ export const StyledFooter = styled.div`
     height: 60px;
 `;
 
-export const StyledSidebar = styled.div`
+export const StyledSidebar = styled.div<{ $showSidebar?: boolean }>`
     background-color: #fff;
     width: 230px;
     position: absolute;
     top: 60px;
     bottom: 60px;
     right: 0;
+    display: none;
     border-left: 1px solid rgba(72, 94, 144, 0.16);
+    ${({ $showSidebar }) =>
+        !!$showSidebar &&
+        css`
+            display: block;
+        `}
 `;

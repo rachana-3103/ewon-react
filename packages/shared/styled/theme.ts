@@ -54,6 +54,7 @@ export const theme = {
         shuttle2: "#566476",
         lilac: "#f8f9fc",
         catskill: "#eef0f7",
+        gulf: "#031a61",
     },
     fontSize: {
         body: "0.875rem",

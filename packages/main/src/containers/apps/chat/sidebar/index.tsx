@@ -5,10 +5,12 @@ import SidebarHeader from "../../../../components/apps/chat/sidebar-header";
 import SidebarChannels from "../../../../components/apps/chat/sidebar-channels";
 import SidebarMessages from "../../../../components/apps/chat/sidebar-messages";
 import SidebarFooter from "../../../../components/apps/chat/sidebar-footer";
+import { useAppSelector } from "../../../../redux/hooks";
 
 const Sidebar: FC = () => {
+    const { sidebar } = useAppSelector((state) => state.ui);
     return (
-        <StyledSidebar className="sidebar">
+        <StyledSidebar className="sidebar" $sidebar={sidebar}>
             <StyledHeader>
                 <SidebarHeader />
             </StyledHeader>

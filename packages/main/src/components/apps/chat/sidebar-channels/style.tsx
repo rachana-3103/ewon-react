@@ -1,5 +1,4 @@
 import styled, { css, device } from "@doar/shared/styled";
-import { Anchor } from "@doar/components";
 
 export const StyledWrap = styled.div`
     padding-left: 10px;
@@ -37,7 +36,7 @@ interface ILinkProps {
 }
 
 export const StyledLink = styled(({ ...rest }) => (
-    <Anchor {...rest} />
+    <button type="button" {...rest} />
 ))<ILinkProps>`
     display: flex;
     align-items: center;
@@ -46,6 +45,8 @@ export const StyledLink = styled(({ ...rest }) => (
     font-weight: 500;
     color: #1b2e4b;
     border-radius: 0.25rem;
+    background-color: transparent;
+    border: none;
     &:not(:first-of-type) {
         margin-top: 2px;
     }

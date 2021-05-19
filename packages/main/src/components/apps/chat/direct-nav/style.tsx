@@ -4,7 +4,6 @@ import { Anchor } from "@doar/components";
 export const StyledNav = styled.nav`
     display: flex;
     align-items: center;
-    display: none;
 `;
 
 interface ILinkProps {

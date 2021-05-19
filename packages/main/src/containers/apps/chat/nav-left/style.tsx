@@ -1,7 +1,7 @@
 import styled, { css } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
-export const StyledNavLeft = styled.div`
+export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -10,6 +10,13 @@ export const StyledNavLeft = styled.div`
     width: 60px;
     padding: 15px 10px;
     transition: all 0.3s;
+    ${({ $sidebar }) =>
+        $sidebar &&
+        css`
+            @media (max-width: 479px) {
+                transform: translateX(-100vw);
+            }
+        `}
 `;
 
 export const StyledNav = styled.div`

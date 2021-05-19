@@ -56,6 +56,11 @@ import {
     Select,
     Textarea,
 } from "./forms/form-elements";
+import {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
+} from "./forms/form-elements/input-group";
 import { Progress } from "./ui/progress/progress";
 import SectionTitle from "./ui/section-title";
 import Text from "./ui/text";
@@ -131,6 +136,9 @@ export {
     Radio,
     Select,
     Textarea,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
     Progress,
     SectionTitle,
     Text,

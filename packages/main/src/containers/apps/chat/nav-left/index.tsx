@@ -1,10 +1,12 @@
 import { FC } from "react";
 import { Users, MessageSquare, Phone, AtSign, HelpCircle } from "react-feather";
+import { useAppSelector } from "../../../../redux/hooks";
 import { StyledNavLeft, StyledNav, StyledNavLink } from "./style";
 
 const NavLeft: FC = () => {
+    const { sidebar } = useAppSelector((state) => state.ui);
     return (
-        <StyledNavLeft className="nav-left">
+        <StyledNavLeft className="nav-left" $sidebar={sidebar}>
             <StyledNav>
                 <StyledNavLink path="#!">
                     <Users />

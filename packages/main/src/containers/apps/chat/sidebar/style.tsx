@@ -1,6 +1,6 @@
-import styled from "@doar/shared/styled";
+import styled, { css } from "@doar/shared/styled";
 
-export const StyledSidebar = styled.div`
+export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -12,6 +12,13 @@ export const StyledSidebar = styled.div`
         width: 250px;
         border-right: 1px solid rgba(72, 94, 144, 0.16);
     }
+    ${({ $sidebar }) =>
+        $sidebar &&
+        css`
+            @media (max-width: 479px) {
+                transform: translateX(-100vw);
+            }
+        `}
 `;
 
 export const StyledHeader = styled.div`

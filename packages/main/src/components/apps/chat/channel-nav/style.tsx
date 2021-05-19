@@ -10,9 +10,7 @@ interface ILinkProps {
     $active?: boolean;
 }
 
-export const StyledLink = styled(({ ...rest }) => (
-    <Anchor {...rest} />
-))<ILinkProps>`
+const linkCss = css<ILinkProps>`
     color: #8392a5;
     padding: 2px;
     border-radius: 0.25rem;
@@ -36,4 +34,18 @@ export const StyledLink = styled(({ ...rest }) => (
     svg {
         width: 20px;
     }
+`;
+
+export const StyledLink = styled(({ ...rest }) => (
+    <Anchor {...rest} />
+))<ILinkProps>`
+    ${linkCss};
+`;
+
+export const StyledButton = styled(({ ...rest }) => (
+    <button type="button" {...rest} />
+))<ILinkProps>`
+    border: none;
+    background: transparent;
+    ${linkCss};
 `;

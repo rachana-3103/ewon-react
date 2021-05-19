@@ -2,20 +2,24 @@ import styled, { themeGet, device } from "@doar/shared/styled";
 import { Input, Button } from "@doar/components";
 
 export const StyledForm = styled.form`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    height: 34px;
+    display: none;
     ${device.small} {
         margin-right: 10px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        height: 34px;
     }
     input {
         &:hover,
         &:focus,
         &:active {
-            border: none;
             box-shadow: none;
+            border-color: ${themeGet("colors.primary")};
+            & + button {
+                border-color: ${themeGet("colors.primary")};
+            }
         }
     }
 `;

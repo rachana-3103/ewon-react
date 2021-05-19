@@ -11,6 +11,7 @@ import { StyledInput, StyledFeedback } from "./style";
 interface IProps {
     className?: string;
     disabled?: boolean;
+    readonly?: boolean;
     feedbackText?: string;
     id: string;
     name: string;
@@ -43,6 +44,7 @@ export const Input: FC<IInputProps> = ({
     name,
     onChange,
     value,
+    readonly,
     showState,
     showErrorOnly,
     ...restProps
@@ -60,6 +62,7 @@ export const Input: FC<IInputProps> = ({
                 name={name}
                 onChange={onChange}
                 value={value}
+                readOnly={readonly}
                 {...restProps}
             />
             {feedbackText && showState && (

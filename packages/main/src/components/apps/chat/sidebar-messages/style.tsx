@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { css } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 export const StyledWrap = styled.div`
@@ -12,7 +12,11 @@ export const StyledWrap = styled.div`
 
 export const StyledList = styled.div``;
 
-export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)`
+interface IProps {
+    $active: boolean;
+}
+
+export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
     padding: 8px 10px;
     color: #1b2e4b;
     border-radius: 0.25rem;
@@ -22,4 +26,9 @@ export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)`
     &:focus {
         background-color: #f5f6fa;
     }
+    ${({ $active }) =>
+        !!$active &&
+        css`
+            background-color: #e5e9f2;
+        `}
 `;

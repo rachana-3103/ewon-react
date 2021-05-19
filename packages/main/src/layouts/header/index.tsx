@@ -1,11 +1,12 @@
 import { FC, useState, useCallback, useEffect } from "react";
 import { Search, Menu, X, ArrowLeft } from "react-feather";
-import { Anchor, Navbar, Button } from "@doar/components";
+import { Navbar, Button } from "@doar/components";
 import { menuData } from "@doar/shared/data";
 import MessageDropdown from "../../components/header/message-dropdown";
 import NotificationDropdown from "../../components/header/notification-dropdown";
 import ProfileDropdown from "../../components/header/profile-dropdown";
 import NavSearch from "../../components/header/nav-search";
+import Logo from "../../components/logo";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { toggleSidebar, toggleBody } from "../../redux/slices/ui";
 import {
@@ -107,8 +108,18 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                         </StyledSidebarBtn>
                     </>
                 )}
+                {!hasSidebar && (
+                    <StyledMenuBtn
+                        variant="texted"
+                        onClick={menuHandler}
+                        $hasSidebar={hasSidebar}
+                        $sidebarOpen={!sidebar}
+                    >
+                        <Menu size={20} strokeWidth="2.5px" />
+                    </StyledMenuBtn>
+                )}
                 <StyledLogo>
-                    <Anchor path="/">Header</Anchor>
+                    <Logo />
                 </StyledLogo>
                 <StyledNavbarWrap $isOpen={menuOpen} onClick={menuHandler}>
                     <StyledNavbarMenu
@@ -116,7 +127,7 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                         onClick={(e) => e.stopPropagation()}
                     >
                         <StyledNavbarHeader>
-                            <Anchor path="/">Header</Anchor>
+                            <Logo />
                             <Button variant="texted" onClick={menuHandler}>
                                 <X
                                     color="#7987a1"

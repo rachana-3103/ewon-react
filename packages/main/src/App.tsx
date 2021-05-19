@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Preloader from "./components/preloader";
 
 const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
@@ -30,7 +31,7 @@ const Mail = lazy(() => import("./pages/apps/mail"));
 const App: React.FC = () => {
     return (
         <Router>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Preloader />}>
                 <Switch>
                     <Route exact path="/" component={DashboardOne} />
                     <Route

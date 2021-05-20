@@ -78,6 +78,7 @@ import {
 } from "./ui/modal/modal";
 import { TabWrap, TabContent, Tab, TabPanel, TabList } from "./ui/tab/tab";
 import { Spinner } from "./ui/spinner/spinner";
+import { Nav, NavLink, NavDivider } from "./ui/nav/nav";
 
 export {
     Button,
@@ -160,4 +161,7 @@ export {
     TabPanel,
     TabList,
     Spinner,
+    Nav,
+    NavLink,
+    NavDivider,
 };

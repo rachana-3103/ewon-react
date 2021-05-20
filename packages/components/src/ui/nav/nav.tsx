@@ -1,0 +1,115 @@
+import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
+import classnames from "classnames";
+import { FlexboxProps } from "@doar/shared/styled";
+import { StyledNav, StyledNavLink, StyledDivider } from "./style";
+
+type IChild = Exclude<ReactChild, ReactText>;
+
+export interface IProps {
+    /**
+     * Pass extra classes
+     */
+    className?: string;
+}
+
+type CustomStyle =
+    | "classic"
+    | "icon"
+    | "line"
+    | "sidebar"
+    | "social"
+    | "with-icon";
+
+interface INav extends IProps, FlexboxProps {
+    pills?: boolean;
+    align?: "left" | "right" | "center";
+    vertical?: boolean;
+    fill?: boolean;
+    customStyle?: CustomStyle;
+}
+
+export const Nav: FC<INav> = ({
+    children,
+    className,
+    pills,
+    align,
+    vertical,
+    fill,
+    customStyle,
+    ...rest
+}) => {
+    const RenderChild = Children.map(children, (el) => {
+        const child = el as IChild;
+        if (child !== null) {
+            const childType = child.type as FunctionComponent;
+            const name = childType.displayName || childType.name;
+            if (name === "NavLink") {
+                return (
+                    <child.type {...child.props} customStyle={customStyle} />
+                );
+            }
+        }
+        return null;
+    });
+
+    return (
+        <StyledNav
+            className={classnames(className, "nav")}
+            $pills={pills}
+            $align={align}
+            $vertical={vertical}
+            $fill={fill}
+            $customStyle={customStyle}
+            {...rest}
+        >
+            {RenderChild}
+        </StyledNav>
+    );
+};
+
+interface ILink extends IProps {
+    path: string;
+    active?: boolean;
+    onClick?: (e: HTMLAnchorElement) => void;
+    customStyle?: CustomStyle;
+    iconPosition?: "left" | "right";
+    iconDistance?: string;
+}
+
+export const NavLink: FC<ILink> = ({
+    children,
+    className,
+    path,
+    active,
+    onClick,
+    customStyle,
+    iconPosition,
+    iconDistance,
+    ...rest
+}) => {
+    return (
+        <StyledNavLink
+            className={classnames(className, "nav-link", active && "active")}
+            path={path}
+            $active={active}
+            onClick={onClick}
+            $customStyle={customStyle}
+            $iconPosition={iconPosition}
+            $iconDistance={iconDistance}
+            {...rest}
+        >
+            {children}
+        </StyledNavLink>
+    );
+};
+
+NavLink.defaultProps = {
+    iconPosition: "left",
+    iconDistance: "7px",
+};
+
+NavLink.displayName = "NavLink";
+
+export const NavDivider: FC = () => {
+    return <StyledDivider />;
+};

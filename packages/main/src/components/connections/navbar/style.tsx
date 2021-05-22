@@ -1,5 +1,5 @@
 import styled, { themeGet } from "@doar/shared/styled";
-import { NavLink } from "../../nav-line";
+import { NavLink } from "@doar/components";
 
 export const StyledNavLink = styled(({ ...rest }) => <NavLink {...rest} />)`
     align-items: center;

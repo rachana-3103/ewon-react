@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { File, Image, Video, Music, Package } from "react-feather";
+import { Nav, NavLink } from "@doar/components";
 import Label from "../label";
-import NavSidebar, { NavLink } from "../../../nav-sidebar";
 import { StyledWrap } from "./style";
 
 const FileLibrary: FC = () => {
@@ -9,7 +9,7 @@ const FileLibrary: FC = () => {
         <>
             <StyledWrap>
                 <Label pl={10}>File Library</Label>
-                <NavSidebar>
+                <Nav customStyle="sidebar">
                     <NavLink path="#!">
                         <File />
                         <span>Documents</span>
@@ -30,7 +30,7 @@ const FileLibrary: FC = () => {
                         <Package />
                         <span>Zip Files</span>
                     </NavLink>
-                </NavSidebar>
+                </Nav>
             </StyledWrap>
         </>
     );

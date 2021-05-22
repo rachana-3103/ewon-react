@@ -10,9 +10,10 @@ import {
     Row,
     Col,
     Anchor,
+    Nav,
+    NavLink,
 } from "@doar/components";
 import Header from "../header";
-import NavWithIcon, { NavLink } from "../../nav-with-icon";
 import { StyledIcon } from "./style";
 
 const Interests: FC = () => {
@@ -22,12 +23,12 @@ const Interests: FC = () => {
                 <Heading tt="uppercase" fontWeight="600" mb="0px">
                     Interests
                 </Heading>
-                <NavWithIcon iconPosition="right" iconDistance="5px">
-                    <NavLink path="#!">
+                <Nav customStyle="with-icon">
+                    <NavLink path="#!" iconPosition="right" iconDistance="5px">
                         Browse Interests
                         <ArrowRight />
                     </NavLink>
-                </NavWithIcon>
+                </Nav>
             </Header>
             <CardBody p={["20px", "20px", null, "25px"]}>
                 <Row>

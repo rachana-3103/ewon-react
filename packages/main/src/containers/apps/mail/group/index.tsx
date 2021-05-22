@@ -33,7 +33,8 @@ const Group: FC = () => {
                         <Heading tt="uppercase" fontWeight={600} mb="0px">
                             Inbox
                         </Heading>
-                        <Text color="text3">
+                        <Text color="text3" fontSize="12px">
+                            Sort:
                             <Anchor path="#!" variant="link2">
                                 Date
                             </Anchor>

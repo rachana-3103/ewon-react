@@ -1,7 +1,11 @@
 import { FC } from "react";
 import classname from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
-import { StyledInputGroup, StyledInputGroupWrap } from "./style";
+import {
+    StyledInputGroup,
+    StyledInputGroupWrap,
+    StyledInputGroupText,
+} from "./style";
 
 interface IProps extends SpaceProps {
     className?: string;
@@ -45,11 +49,11 @@ export const InputGroupText: FC<IProps> = ({
     ...rest
 }) => {
     return (
-        <StyledInputGroup
+        <StyledInputGroupText
             className={classname(className, `input-group-text`)}
             {...rest}
         >
             {children}
-        </StyledInputGroup>
+        </StyledInputGroupText>
     );
 };

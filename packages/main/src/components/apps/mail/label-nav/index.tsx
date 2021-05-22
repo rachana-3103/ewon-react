@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Folder } from "react-feather";
-import NavSidebar, { NavLink } from "../../../nav-sidebar";
+import { Nav, NavLink } from "@doar/components";
 import Label from "../label";
 import { StyledWrap } from "./style";
 
@@ -8,28 +8,28 @@ const LabelNav: FC = () => {
     return (
         <StyledWrap>
             <Label pl="10px">Label</Label>
-            <NavSidebar fontSize="13px">
-                <NavLink>
+            <Nav customStyle="sidebar" fontSize="13px">
+                <NavLink path="#!">
                     <Folder />
                     <span>Social</span>
                 </NavLink>
-                <NavLink>
+                <NavLink path="#!">
                     <Folder />
                     <span>Promotions</span>
                 </NavLink>
-                <NavLink>
+                <NavLink path="#!">
                     <Folder />
                     <span>Updates</span>
                 </NavLink>
-                <NavLink>
+                <NavLink path="#!">
                     <Folder />
                     <span>Business</span>
                 </NavLink>
-                <NavLink>
+                <NavLink path="#!">
                     <Folder />
                     <span>Finance</span>
                 </NavLink>
-            </NavSidebar>
+            </Nav>
         </StyledWrap>
     );
 };

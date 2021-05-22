@@ -33,6 +33,7 @@ export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     padding: 0 20px;
+    z-index: 99;
     .search {
         color: #8392a5;
         align-self: center;

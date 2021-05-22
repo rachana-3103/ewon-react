@@ -7,8 +7,15 @@ import {
     Instagram,
     GitHub,
 } from "react-feather";
-import { Heading, Text, Button, Row, Col } from "@doar/components";
-import NavSocial, { NavLink } from "../../../nav-social";
+import {
+    Heading,
+    Text,
+    Button,
+    Row,
+    Col,
+    Nav,
+    NavLink,
+} from "@doar/components";
 import ModalEdit from "../modal-edit";
 import ModalDelete from "../modal-delete";
 import Label from "../label-2";
@@ -123,20 +130,36 @@ const PersonalDetails: FC = () => {
                 </Col>
                 <Col sm={6} mt={["20px", "30px"]}>
                     <Label>Social Profiles</Label>
-                    <NavSocial>
-                        <NavLink path="https://facebook.com">
+                    <Nav customStyle="social">
+                        <NavLink
+                            path="https://facebook.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <Facebook />
                         </NavLink>
-                        <NavLink path="https://twitter.com">
+                        <NavLink
+                            path="https://twitter.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <Twitter />
                         </NavLink>
-                        <NavLink path="https://instagram.com">
+                        <NavLink
+                            path="https://instagram.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <Instagram />
                         </NavLink>
-                        <NavLink path="https://github.com">
+                        <NavLink
+                            path="https://github.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <GitHub />
                         </NavLink>
-                    </NavSocial>
+                    </Nav>
                 </Col>
                 <Col sm mt={["20px", "30px"]}>
                     <Label>Notes</Label>

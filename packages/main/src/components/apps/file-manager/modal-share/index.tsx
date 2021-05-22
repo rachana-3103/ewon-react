@@ -9,8 +9,9 @@ import {
     Text,
     Anchor,
     HRLine,
+    Nav,
+    NavLink,
 } from "@doar/components";
-import NavSocial, { NavLink } from "../../../nav-social";
 import { StyledClose, StyledTitle, StyledWrap, StyledLabel } from "./style";
 
 interface IProps {
@@ -36,14 +37,22 @@ const ShareModal: FC<IProps> = ({ show, onClose }) => {
                     </Text>
                     <HRLine />
                     <StyledLabel>More:</StyledLabel>
-                    <NavSocial>
-                        <NavLink path="https://facebook.com">
+                    <Nav customStyle="social">
+                        <NavLink
+                            path="https://facebook.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <Facebook />
                         </NavLink>
-                        <NavLink path="https://twitter.com">
+                        <NavLink
+                            path="https://twitter.com"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <Twitter />
                         </NavLink>
-                    </NavSocial>
+                    </Nav>
                 </StyledWrap>
             </ModalBody>
             <ModalFooter>

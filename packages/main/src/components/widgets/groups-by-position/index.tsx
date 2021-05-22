@@ -1,13 +1,12 @@
 import { FC } from "react";
-import { Badge } from "@doar/components";
+import { Badge, Nav, NavLink } from "@doar/components";
 import WidgetTitle from "../widget-title";
-import NavClassic, { NavLink } from "../../nav-classic";
 
 const GroupsByPosition: FC = () => {
     return (
         <>
             <WidgetTitle title="Groups By Position" />
-            <NavClassic>
+            <Nav customStyle="classic">
                 <NavLink path="#!">
                     <span>Software Engineer</span>
                     <Badge variant="texted">20</Badge>
@@ -28,7 +27,7 @@ const GroupsByPosition: FC = () => {
                     <span>Full-Stack Developer</span>
                     <Badge variant="texted">10</Badge>
                 </NavLink>
-            </NavClassic>
+            </Nav>
         </>
     );
 };

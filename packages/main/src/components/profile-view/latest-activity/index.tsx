@@ -9,11 +9,12 @@ import {
     Media,
     Avatar,
     MediaBody,
+    Nav,
+    NavLink,
 } from "@doar/components";
 import image from "../../../images/img15.jpg";
 import Header from "../header";
 import Footer from "../footer";
-import NavWithIcon, { NavLink } from "../../nav-with-icon";
 import { StyledRole, StyledTime, StyledGrayBox } from "./style";
 
 const LatestActivity: FC = () => {
@@ -59,7 +60,7 @@ const LatestActivity: FC = () => {
                 </StyledGrayBox>
             </CardBody>
             <Footer>
-                <NavWithIcon iconDistance="7px">
+                <Nav customStyle="with-icon">
                     <NavLink path="#!">
                         <ThumbsUp /> Like
                     </NavLink>
@@ -69,7 +70,7 @@ const LatestActivity: FC = () => {
                     <NavLink path="#!">
                         <Share /> Share
                     </NavLink>
-                </NavWithIcon>
+                </Nav>
             </Footer>
         </Card>
     );

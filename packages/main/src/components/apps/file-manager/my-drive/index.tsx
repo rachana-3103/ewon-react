@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Folder, Monitor, Clock, Star, Trash } from "react-feather";
+import { Nav, NavLink } from "@doar/components";
 import Label from "../label";
-import NavSidebar, { NavLink } from "../../../nav-sidebar";
 import { StyledWrap } from "./style";
 
 const MyDrive: FC = () => {
     return (
         <StyledWrap>
             <Label pl={10}>My Drive</Label>
-            <NavSidebar>
+            <Nav customStyle="sidebar">
                 <NavLink path="#!" active>
                     <Folder />
                     <span>All Files</span>
@@ -29,7 +29,7 @@ const MyDrive: FC = () => {
                     <Trash />
                     <span>Deleted Files</span>
                 </NavLink>
-            </NavSidebar>
+            </Nav>
         </StyledWrap>
     );
 };

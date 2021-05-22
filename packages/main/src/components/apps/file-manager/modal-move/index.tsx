@@ -1,7 +1,13 @@
 import { FC } from "react";
 import { Folder } from "react-feather";
-import { Modal, ModalBody, ModalFooter, Button } from "@doar/components";
-import NavSidebar, { NavLink } from "../../../nav-sidebar";
+import {
+    Modal,
+    ModalBody,
+    ModalFooter,
+    Button,
+    Nav,
+    NavLink,
+} from "@doar/components";
 import { StyledClose, StyledTitle, StyledText, StyledWrap } from "./style";
 
 interface IProps {
@@ -17,23 +23,23 @@ const MoveModal: FC<IProps> = ({ show, onClose }) => {
                 <StyledTitle>Move Item to</StyledTitle>
                 <StyledText>Please select a folder</StyledText>
                 <StyledWrap>
-                    <NavSidebar>
-                        <NavLink>
+                    <Nav customStyle="sidebar">
+                        <NavLink path="#!">
                             <Folder /> Downloads
                         </NavLink>
-                        <NavLink>
+                        <NavLink path="#!">
                             <Folder /> Personal Stuff
                         </NavLink>
-                        <NavLink>
+                        <NavLink path="#!">
                             <Folder /> 3d Objects
                         </NavLink>
-                        <NavLink>
+                        <NavLink path="#!">
                             <Folder /> Recordings
                         </NavLink>
-                        <NavLink>
+                        <NavLink path="#!">
                             <Folder /> Support
                         </NavLink>
-                    </NavSidebar>
+                    </Nav>
                 </StyledWrap>
             </ModalBody>
             <ModalFooter>

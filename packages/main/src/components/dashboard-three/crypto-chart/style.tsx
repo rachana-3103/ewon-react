@@ -1,6 +1,5 @@
 import styled, { device, themeGet } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
-import NavLine, { NavLineLink } from "../../nav-link";
+import { CardHeader, Nav, NavLink } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     padding-top: 8px;
@@ -12,7 +11,7 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledNavLine = styled(({ ...rest }) => <NavLine {...rest} />)`
+export const StyledNavLine = styled(({ ...rest }) => <Nav {...rest} />)`
     border-bottom-width: 0 !important;
     text-transform: uppercase;
     font-weight: 500;
@@ -20,7 +19,7 @@ export const StyledNavLine = styled(({ ...rest }) => <NavLine {...rest} />)`
     letter-spacing: 0.5px;
 `;
 
-export const StyledNavLink = styled(({ ...rest }) => <NavLineLink {...rest} />)`
+export const StyledNavLink = styled(({ ...rest }) => <NavLink {...rest} />)`
     &:not(:first-of-type) {
         margin-left: 10px;
     }

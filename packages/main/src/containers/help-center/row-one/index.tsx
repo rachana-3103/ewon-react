@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Row, Col, Heading } from "@doar/components";
-import NavClassic, { NavLink } from "../../../components/nav-classic";
+import { Row, Col, Heading, Nav, NavLink } from "@doar/components";
 import Breadcrumb from "../../../components/breadcrumb";
 import InstallBox from "../../../components/help-center/install-box";
 import { StyleLabel } from "./style";
@@ -10,14 +9,14 @@ const RowOne: FC = () => {
         <Row>
             <Col lg={3} xl={2} mb={["20px", null, null, 0]}>
                 <StyleLabel>Getting Started</StyleLabel>
-                <NavClassic>
+                <Nav customStyle="classic">
                     <NavLink path="#!">Download</NavLink>
                     <NavLink path="#!" active>
                         Installation
                     </NavLink>
                     <NavLink path="#!">Accessibility</NavLink>
                     <NavLink path="#!">Supported Devices</NavLink>
-                </NavClassic>
+                </Nav>
             </Col>
             <Col lg={9} xl={10}>
                 <Breadcrumb

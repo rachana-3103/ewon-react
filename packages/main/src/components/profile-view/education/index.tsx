@@ -7,10 +7,12 @@ import {
     Text,
     Media,
     MediaBody,
+    Nav,
+    NavLink,
 } from "@doar/components";
 import Header from "../header";
 import Footer from "../footer";
-import NavWithIcon, { NavLink } from "../../nav-with-icon";
+
 import { StyledTime, StyledIcon, StyledName } from "./style";
 
 const Education: FC = () => {
@@ -20,12 +22,12 @@ const Education: FC = () => {
                 <Heading tt="uppercase" fontWeight="600" mb="0px">
                     Education
                 </Heading>
-                <NavWithIcon iconPosition="left" iconDistance="7px">
-                    <NavLink path="#!">
+                <Nav customStyle="with-icon">
+                    <NavLink path="#!" iconPosition="left" iconDistance="7px">
                         <Plus />
                         Add New
                     </NavLink>
-                </NavWithIcon>
+                </Nav>
             </Header>
             <CardBody p={["25px", "25px"]}>
                 <Media display={["block", "flex"]}>
@@ -45,12 +47,12 @@ const Education: FC = () => {
                 </Media>
             </CardBody>
             <Footer>
-                <NavWithIcon iconPosition="right" iconDistance="2px">
-                    <NavLink path="#!">
+                <Nav customStyle="with-icon">
+                    <NavLink path="#!" iconPosition="right" iconDistance="2px">
                         Show More Experiences (4)
                         <ChevronDown />
                     </NavLink>
-                </NavWithIcon>
+                </Nav>
             </Footer>
         </Card>
     );

@@ -6,6 +6,8 @@ import styled, {
     space,
     SpaceProps,
     device,
+    typography,
+    TypographyProps,
 } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
@@ -17,7 +19,7 @@ type CustomStyle =
     | "social"
     | "with-icon";
 
-interface INav extends FlexboxProps, SpaceProps {
+interface INav extends FlexboxProps, SpaceProps, TypographyProps {
     $pills?: boolean;
     $align?: "left" | "right" | "center";
     $vertical?: boolean;
@@ -27,6 +29,9 @@ interface INav extends FlexboxProps, SpaceProps {
 
 export const StyledNav = styled(
     ({
+        fontSize,
+        fontWeight,
+        fontFamily,
         justifyContent,
         alignItems,
         flexDirection,
@@ -146,18 +151,21 @@ export const StyledNav = styled(
 
     ${flexbox};
     ${space};
+    ${typography};
 `;
 
-interface ILink extends SpaceProps {
+interface ILink extends SpaceProps, TypographyProps {
     $active?: boolean;
     $customStyle?: CustomStyle;
     $iconPosition?: "left" | "right";
     $iconDistance?: string;
 }
 
-export const StyledNavLink = styled(({ mb, mt, mx, my, ml, mr, ...rest }) => (
-    <Anchor {...rest} />
-))<ILink>`
+export const StyledNavLink = styled(
+    ({ fontSize, fontWeight, fontFamily, mb, mt, mx, my, ml, mr, ...rest }) => (
+        <Anchor {...rest} />
+    )
+)<ILink>`
     padding: 0.5rem 1rem;
     color: ${themeGet("colors.text3")};
     ${({ $active }) =>
@@ -198,7 +206,7 @@ export const StyledNavLink = styled(({ mb, mt, mx, my, ml, mr, ...rest }) => (
         css`
             padding: 0;
             line-height: 100%;
-            & + .nav-link {
+            &:not(:first-of-type) {
                 margin-left: 10px;
             }
             svg {
@@ -336,6 +344,7 @@ export const StyledNavLink = styled(({ mb, mt, mx, my, ml, mr, ...rest }) => (
             `}
     }
     ${space};
+    ${typography};
 `;
 
 export const StyledDivider = styled.span`

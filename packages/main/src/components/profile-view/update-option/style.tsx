@@ -49,4 +49,5 @@ export const RightBtn = styled.div`
 
 export const RightBtnLink = styled.a`
     ${link3}
+    line-height: 1;
 `;

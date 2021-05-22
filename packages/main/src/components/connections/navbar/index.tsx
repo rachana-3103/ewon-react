@@ -1,11 +1,10 @@
 import { FC } from "react";
-import { Badge } from "@doar/components";
-import NavLine from "../../nav-line";
+import { Badge, Nav } from "@doar/components";
 import { StyledNavLink } from "./style";
 
 const Navbar: FC = () => {
     return (
-        <NavLine mb="30px">
+        <Nav customStyle="line" mb="30px">
             <StyledNavLink active path="#!">
                 Followers
                 <Badge>340</Badge>
@@ -16,7 +15,7 @@ const Navbar: FC = () => {
             <StyledNavLink path="#!">
                 Request <Badge>19</Badge>
             </StyledNavLink>
-        </NavLine>
+        </Nav>
     );
 };
 

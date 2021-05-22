@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Input, Anchor, Button } from "@doar/components";
+import { useForm } from "react-hook-form";
 import {
     StyledWrap,
     StyledTitle,
@@ -12,18 +13,27 @@ import {
 } from "./style";
 
 const SigninForm: FC = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+    const onSubmit = (data: any) => {
+        console.log(errors);
+        alert(JSON.stringify(data, null));
+    };
     return (
         <StyledWrap>
             <StyledTitle>Sign In</StyledTitle>
             <StyledDesc>Welcome back! Please signin to continue.</StyledDesc>
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit(onSubmit)}>
                 <StyledFormGroup>
                     <StyledLabel htmlFor="email">Email address</StyledLabel>
                     <Input
-                        id="email"
-                        name="email"
                         type="email"
+                        id="email"
                         placeholder="yourname@yourmail.com"
+                        {...register("email")}
                     />
                 </StyledFormGroup>
                 <StyledFormGroup>

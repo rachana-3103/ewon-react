@@ -10,7 +10,8 @@ import {
     Printer,
     MoreVertical,
 } from "react-feather";
-import NavIcon, { NavLink, NavDivider } from "../../../nav-icon";
+import ReactTooltip from "react-tooltip";
+import { Nav, NavLink, NavDivider } from "@doar/components";
 import { StyledToolbar } from "./style";
 
 const ToolbarIcons: FC = () => {
@@ -20,33 +21,89 @@ const ToolbarIcons: FC = () => {
     };
     return (
         <StyledToolbar $show={show}>
-            <NavIcon>
-                <NavLink path="#!">
+            <Nav customStyle="icon">
+                <NavLink
+                    path="#!"
+                    data-for="tooltip-marchive"
+                    data-tip="Archive"
+                >
                     <Archive />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-marchive"
+                />
+                <NavLink
+                    path="#!"
+                    data-for="tooltip-mspam"
+                    data-tip="Report Spam"
+                >
                     <Slash />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-mspam"
+                />
+                <NavLink
+                    path="#!"
+                    data-for="tooltip-munread"
+                    data-tip="Mark Unread"
+                >
                     <Mail />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-munread"
+                />
+                <NavLink
+                    path="#!"
+                    data-for="tooltip-mlabel"
+                    data-tip="Add Label"
+                >
                     <Folder />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-mlabel"
+                />
+                <NavLink path="#!" data-for="tooltip-mtag" data-tip="Add Tag">
                     <Tag />
                 </NavLink>
+                <ReactTooltip place="bottom" effect="solid" id="tooltip-mtag" />
                 <NavDivider />
-                <NavLink path="#!">
+                <NavLink
+                    path="#!"
+                    data-for="tooltip-mimportant"
+                    data-tip="Make Important"
+                >
                     <Star />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-mimportant"
+                />
+                <NavLink path="#!" data-for="tooltip-mtrash" data-tip="Trash">
                     <Trash />
                 </NavLink>
-                <NavLink path="#!">
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-mtrash"
+                />
+                <NavLink path="#!" data-for="tooltip-mprint" data-tip="Print">
                     <Printer />
                 </NavLink>
-            </NavIcon>
+                <ReactTooltip
+                    place="bottom"
+                    effect="solid"
+                    id="tooltip-mprint"
+                />
+            </Nav>
             <button type="button" className="option-btn" onClick={handleNav}>
                 <MoreVertical />
             </button>

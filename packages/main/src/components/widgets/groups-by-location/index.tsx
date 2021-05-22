@@ -1,13 +1,12 @@
 import { FC } from "react";
-import { Badge } from "@doar/components";
+import { Badge, Nav, NavLink } from "@doar/components";
 import WidgetTitle from "../widget-title";
-import NavClassic, { NavLink } from "../../nav-classic";
 
 const GroupsByLocation: FC = () => {
     return (
         <>
             <WidgetTitle title="Groups By Location" />
-            <NavClassic>
+            <Nav customStyle="classic">
                 <NavLink path="#!">
                     <span>San Francisco, California</span>
                     <Badge variant="texted">20</Badge>
@@ -28,7 +27,7 @@ const GroupsByLocation: FC = () => {
                     <span>Arlington, Nebraska</span>
                     <Badge variant="texted">10</Badge>
                 </NavLink>
-            </NavClassic>
+            </Nav>
         </>
     );
 };

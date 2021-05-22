@@ -1,6 +1,6 @@
 import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
 import classnames from "classnames";
-import { FlexboxProps } from "@doar/shared/styled";
+import { FlexboxProps, SpaceProps, TypographyProps } from "@doar/shared/styled";
 import { StyledNav, StyledNavLink, StyledDivider } from "./style";
 
 type IChild = Exclude<ReactChild, ReactText>;
@@ -20,7 +20,7 @@ type CustomStyle =
     | "social"
     | "with-icon";
 
-interface INav extends IProps, FlexboxProps {
+interface INav extends IProps, FlexboxProps, SpaceProps, TypographyProps {
     pills?: boolean;
     align?: "left" | "right" | "center";
     vertical?: boolean;
@@ -49,7 +49,7 @@ export const Nav: FC<INav> = ({
                 );
             }
         }
-        return null;
+        return <child.type {...child.props} />;
     });
 
     return (
@@ -74,6 +74,9 @@ interface ILink extends IProps {
     customStyle?: CustomStyle;
     iconPosition?: "left" | "right";
     iconDistance?: string;
+    rel?: string;
+    label?: string | undefined;
+    target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
 export const NavLink: FC<ILink> = ({
@@ -85,6 +88,9 @@ export const NavLink: FC<ILink> = ({
     customStyle,
     iconPosition,
     iconDistance,
+    rel,
+    label,
+    target,
     ...rest
 }) => {
     return (
@@ -96,6 +102,9 @@ export const NavLink: FC<ILink> = ({
             $customStyle={customStyle}
             $iconPosition={iconPosition}
             $iconDistance={iconDistance}
+            rel={rel}
+            target={target}
+            aria-label={label}
             {...rest}
         >
             {children}

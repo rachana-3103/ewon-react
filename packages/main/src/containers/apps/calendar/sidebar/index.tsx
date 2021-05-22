@@ -3,6 +3,7 @@ import { Search, Plus } from "react-feather";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { Button } from "@doar/components";
+import ReactTooltip from "react-tooltip";
 import { StyledWrap, StyledHeader, StyledBody } from "./style";
 import SearchForm from "../../../../components/apps/calendar/search";
 import InlineCalendar from "../../../../components/apps/calendar/inline-calendar";
@@ -23,11 +24,17 @@ const Sidebar: FC = () => {
                 <StyledHeader>
                     <Search className="search" />
                     <SearchForm />
-                    <Button size="sm" iconButton onClick={handleModal}>
+                    <Button
+                        size="sm"
+                        iconButton
+                        onClick={handleModal}
+                        data-tip="Create new event"
+                    >
                         <div>
                             <Plus className="plus" />
                         </div>
                     </Button>
+                    <ReactTooltip place="bottom" effect="solid" />
                 </StyledHeader>
                 <PerfectScrollbar>
                     <StyledBody>

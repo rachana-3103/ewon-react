@@ -1,7 +1,15 @@
 import { FC } from "react";
 import { X } from "react-feather";
-import { Modal, ModalBody, Row, Col, Input, HRLine } from "@doar/components";
-import NavIcon, { NavLink } from "../../../nav-icon";
+import {
+    Modal,
+    ModalBody,
+    Row,
+    Col,
+    Input,
+    HRLine,
+    Nav,
+    NavLink,
+} from "@doar/components";
 import Editor from "./editor";
 import "react-quill/dist/quill.snow.css";
 import { StyledHeader, StyledTitle } from "./style";
@@ -16,11 +24,11 @@ const ComposeMail: FC<IProps> = ({ show, onClose }) => {
         <Modal show={show} onClose={onClose} size="lg">
             <StyledHeader>
                 <StyledTitle>New Message</StyledTitle>
-                <NavIcon>
-                    <NavLink onClick={onClose}>
+                <Nav customStyle="icon">
+                    <NavLink path="#!" onClick={onClose}>
                         <X />
                     </NavLink>
-                </NavIcon>
+                </Nav>
             </StyledHeader>
             <ModalBody>
                 <form>

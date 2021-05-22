@@ -51,7 +51,6 @@ import { ListGroup, ListGroupItem } from "./ui/list-group/list-group";
 import {
     Input,
     Checkbox,
-    FileUpload,
     Radio,
     Select,
     Textarea,
@@ -60,7 +59,7 @@ import {
     InputGroup,
     InputGroupAddon,
     InputGroupText,
-} from "./forms/form-elements/input-group";
+} from "./forms/input-group/input-group";
 import { Progress } from "./ui/progress/progress";
 import SectionTitle from "./ui/section-title";
 import Text from "./ui/text";
@@ -134,7 +133,6 @@ export {
     ListGroupItem,
     Input,
     Checkbox,
-    FileUpload,
     Radio,
     Select,
     Textarea,

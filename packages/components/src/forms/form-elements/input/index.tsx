@@ -25,6 +25,9 @@ export const Input = forwardRef<HTMLInputElement, IProps>(
             readonly,
             showState,
             showErrorOnly,
+            width,
+            height,
+            customStyle,
             ...restProps
         },
         ref
@@ -46,6 +49,9 @@ export const Input = forwardRef<HTMLInputElement, IProps>(
                     $state={state}
                     $showState={showState}
                     $showErrorOnly={showErrorOnly}
+                    $width={width}
+                    $height={height}
+                    $customStyle={customStyle}
                     {...restProps}
                 />
                 {feedbackText && showState && (

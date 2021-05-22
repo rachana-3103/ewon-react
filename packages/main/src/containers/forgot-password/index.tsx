@@ -27,6 +27,7 @@ const PasswordContainer: FC = () => {
                     id="email"
                     name="email"
                     placeholder="Enter username or email address"
+                    width={[null, "250px"]}
                 />
                 <Button
                     type="submit"

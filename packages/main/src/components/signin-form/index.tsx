@@ -1,16 +1,20 @@
 import { FC } from "react";
-import { Input, Anchor, Button } from "@doar/components";
+import { FormGroup, Label, Input, Anchor, Button } from "@doar/components";
 import { useForm } from "react-hook-form";
+import { hasKey } from "@doar/shared/methods";
 import {
     StyledWrap,
     StyledTitle,
     StyledDesc,
-    StyledFormGroup,
-    StyledLabel,
     StyledLabelWrap,
     StyledDivider,
     StyledBottomText,
 } from "./style";
+
+interface IFormValues {
+    email: string;
+    password: string;
+}
 
 const SigninForm: FC = () => {
     const {
@@ -18,38 +22,64 @@ const SigninForm: FC = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data: any) => {
-        console.log(errors);
+
+    const onSubmit = (data: IFormValues) => {
         alert(JSON.stringify(data, null));
     };
     return (
         <StyledWrap>
             <StyledTitle>Sign In</StyledTitle>
             <StyledDesc>Welcome back! Please signin to continue.</StyledDesc>
-            <form action="#" onSubmit={handleSubmit(onSubmit)}>
-                <StyledFormGroup>
-                    <StyledLabel htmlFor="email">Email address</StyledLabel>
+            <form action="#" onSubmit={handleSubmit(onSubmit)} noValidate>
+                <FormGroup mb="20px">
+                    <Label display="block" mb="5px" htmlFor="email">
+                        Email address
+                    </Label>
                     <Input
                         type="email"
                         id="email"
                         placeholder="yourname@yourmail.com"
-                        {...register("email")}
+                        feedbackText={errors?.email?.message}
+                        state={hasKey(errors, "email") ? "error" : "success"}
+                        showState={!!hasKey(errors, "email")}
+                        {...register("email", {
+                            required: "Email is required",
+                            pattern: {
+                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                message: "invalid email address",
+                            },
+                        })}
                     />
-                </StyledFormGroup>
-                <StyledFormGroup>
+                </FormGroup>
+                <FormGroup mb="20px">
                     <StyledLabelWrap>
-                        <StyledLabel htmlFor="password">Password</StyledLabel>
+                        <Label display="block" mb="5px" htmlFor="password">
+                            Password
+                        </Label>
                         <Anchor path="/forgot-password" fontSize="13px">
                             Forgot password?
                         </Anchor>
                     </StyledLabelWrap>
                     <Input
                         id="password"
-                        name="password"
                         type="password"
                         placeholder="Enter your password"
+                        feedbackText={errors?.password?.message}
+                        state={hasKey(errors, "password") ? "error" : "success"}
+                        showState={!!hasKey(errors, "password")}
+                        {...register("password", {
+                            required: "Password is required",
+                            minLength: {
+                                value: 6,
+                                message: "Minimum length is 6",
+                            },
+                            maxLength: {
+                                value: 10,
+                                message: "Minimum length is 10",
+                            },
+                        })}
                     />
-                </StyledFormGroup>
+                </FormGroup>
                 <Button type="submit" color="brand2" fullwidth>
                     Sign In
                 </Button>

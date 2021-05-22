@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Search, X } from "react-feather";
+import { Input } from "@doar/components";
 import {
     StyledSearch,
     StyledSearchHeader,
-    StyledSearchInput,
     StyledSearchBtn,
     StyledSearchClose,
     StyledSearchBody,
@@ -23,9 +23,13 @@ const NavSearch: FC<IProps> = ({ isOpen, onClose }) => {
     return (
         <StyledSearch $isOpen={isOpen}>
             <StyledSearchHeader>
-                <StyledSearchInput
+                <Input
                     type="search"
+                    id="nav-search"
+                    name="nav-search"
                     placeholder="Type and hit enter to search..."
+                    customStyle="noborder"
+                    fontSize={["14px", null, null, "16px"]}
                 />
                 <StyledSearchBtn variant="texted" color="light">
                     <Search />

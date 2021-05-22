@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import styled, { space, SpaceProps, themeGet } from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     width: 100%;
@@ -15,18 +15,6 @@ export const StyledDesc = styled.p`
     font-size: 16px;
     color: ${themeGet("colors.text3")};
     margin-bottom: 40px;
-`;
-
-export const StyledFormGroup = styled.div`
-    margin-bottom: 20px;
-`;
-
-export const StyledLabel = styled(({ ...rest }) => (
-    <label {...rest} />
-))<SpaceProps>`
-    display: block;
-    margin-bottom: 5px;
-    ${space};
 `;
 
 export const StyledLabelWrap = styled.div`

@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, MouseEvent, FocusEvent } from "react";
-import { SpaceProps, BorderProps } from "@doar/shared/styled";
+import { SpaceProps, BorderProps, TypographyProps } from "@doar/shared/styled";
 
 export interface IFeedback {
     $state?: "success" | "warning" | "error";
@@ -9,7 +10,8 @@ export interface IFeedback {
 
 type TInput = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 
-export interface IInputProps extends SpaceProps, BorderProps {
+export type TCustomStyle = "noborder" | "nofocus";
+export interface IInputProps extends SpaceProps, BorderProps, TypographyProps {
     className?: string;
     disabled?: boolean;
     readonly?: boolean;
@@ -24,4 +26,7 @@ export interface IInputProps extends SpaceProps, BorderProps {
     onChange?: (e: ChangeEvent<TInput>) => void;
     onClick?: (e: MouseEvent<TInput>) => void;
     onBlur?: (e: FocusEvent<TInput>) => void;
+    width?: string | any[];
+    height?: string | any[];
+    customStyle?: TCustomStyle;
 }

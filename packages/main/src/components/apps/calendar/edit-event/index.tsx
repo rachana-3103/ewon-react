@@ -60,7 +60,9 @@ const EditEventForm: FC<IProps> = ({
     }, [title, startDate, endDate, description]);
 
     const changeHandler = (
-        e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+        e: ChangeEvent<
+            HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+        >
     ) => {
         setValues((prev) => {
             return {

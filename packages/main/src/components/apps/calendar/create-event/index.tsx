@@ -69,7 +69,9 @@ const CreateEvent: FC<IProps> = ({ show, onClose, currentDate }) => {
     }, [currentDate]);
 
     const changeHandler = (
-        e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+        e: ChangeEvent<
+            HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+        >
     ) => {
         setValues((prev) => {
             return {

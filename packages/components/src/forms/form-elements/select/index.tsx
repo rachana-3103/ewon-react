@@ -1,10 +1,12 @@
-import { forwardRef } from "react";
+import { forwardRef, ReactNode } from "react";
 import classnames from "classnames";
 import { StyledSelect } from "./style";
 import Feedback from "../feedback";
 import { IInputProps } from "../types";
 
-type IProps = IInputProps;
+interface IProps extends IInputProps {
+    children: Element | Element[] | ReactNode;
+}
 
 export const Select = forwardRef<HTMLSelectElement, IProps>(
     (
@@ -22,6 +24,9 @@ export const Select = forwardRef<HTMLSelectElement, IProps>(
             children,
             showState,
             showErrorOnly,
+            width,
+            height,
+            customStyle,
             ...restProps
         },
         ref
@@ -40,6 +45,9 @@ export const Select = forwardRef<HTMLSelectElement, IProps>(
                     $state={state}
                     $showState={showState}
                     $showErrorOnly={showErrorOnly}
+                    $width={width}
+                    $height={height}
+                    $customStyle={customStyle}
                     {...restProps}
                 >
                     {children}

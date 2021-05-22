@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { themeGet, SpaceProps, BorderProps } from "@doar/shared/styled";
 import {
     InputStyles,
@@ -7,9 +8,13 @@ import {
     allowedProps,
 } from "../style";
 import selectIcon from "../../../static/select.svg";
-import { IFeedback } from "../types";
+import { IFeedback, TCustomStyle } from "../types";
 
-interface IInput extends IFeedback, SpaceProps, BorderProps {}
+interface IInput extends IFeedback, SpaceProps, BorderProps {
+    $width?: string | any[];
+    $height?: string | any[];
+    $customStyle?: TCustomStyle;
+}
 
 export const StyledSelect = styled("select").withConfig({
     shouldForwardProp: (prop, defaultValidatorFn) =>

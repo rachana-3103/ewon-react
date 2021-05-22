@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const getSiblings = (elem: HTMLElement): HTMLElement[] => {
@@ -39,4 +40,8 @@ export const flatDeep = (arr: any[], d = 1): any[] => {
 
 export const formatNumber = (x: number): string => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+export const hasKey = (obj: any, key: string): boolean => {
+    return !!Object.prototype.hasOwnProperty.call(obj, key);
 };

@@ -7,12 +7,10 @@ interface IProps extends SpaceProps {
     className?: string;
 }
 
-const FormGroup: FC<IProps> = ({ children, className, ...rest }) => {
+export const FormGroup: FC<IProps> = ({ children, className, ...rest }) => {
     return (
         <StyledGroup className={classnames(className, "form-group")} {...rest}>
             {children}
         </StyledGroup>
     );
 };
-
-export default FormGroup;

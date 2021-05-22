@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { SpaceProps, BorderProps } from "@doar/shared/styled";
 import {
     InputStyles,
@@ -6,9 +7,13 @@ import {
     ErrorInputStyles,
     allowedProps,
 } from "../style";
-import { IFeedback } from "../types";
+import { IFeedback, TCustomStyle } from "../types";
 
-interface IInput extends IFeedback, SpaceProps, BorderProps {}
+interface IInput extends IFeedback, SpaceProps, BorderProps {
+    $width?: string | any[];
+    $height?: string | any[];
+    $customStyle?: TCustomStyle;
+}
 
 export const StyledTextarea = styled("textarea").withConfig({
     shouldForwardProp: (prop, defaultValidatorFn) =>

@@ -54,6 +54,8 @@ import {
     Radio,
     Select,
     Textarea,
+    Label,
+    FormGroup,
 } from "./forms/form-elements";
 import {
     InputGroup,
@@ -136,6 +138,8 @@ export {
     Radio,
     Select,
     Textarea,
+    Label,
+    FormGroup,
     InputGroup,
     InputGroupAddon,
     InputGroupText,

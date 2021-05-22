@@ -8,7 +8,12 @@ interface IProps extends SpaceProps, TypographyProps, LayoutProps {
     className?: string;
 }
 
-const Label: FC<IProps> = ({ children, htmlFor, className, ...rest }) => {
+export const Label: FC<IProps> = ({
+    children,
+    htmlFor,
+    className,
+    ...rest
+}) => {
     return (
         <StyledLabel
             htmlFor={htmlFor}
@@ -19,5 +24,3 @@ const Label: FC<IProps> = ({ children, htmlFor, className, ...rest }) => {
         </StyledLabel>
     );
 };
-
-export default Label;

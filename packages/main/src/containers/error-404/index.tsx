@@ -31,6 +31,7 @@ const ErrorContainer: FC = () => {
                     id="search"
                     name="search"
                     placeholder="Search"
+                    width={["200px", "250px"]}
                 />
                 <Button
                     type="submit"

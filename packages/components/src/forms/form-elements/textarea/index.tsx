@@ -25,6 +25,9 @@ export const Textarea = forwardRef<HTMLTextAreaElement, IProps>(
             onChange,
             onClick,
             onBlur,
+            width,
+            height,
+            customStyle,
             ...restProps
         },
         ref
@@ -46,6 +49,9 @@ export const Textarea = forwardRef<HTMLTextAreaElement, IProps>(
                     $state={state}
                     $showState={showState}
                     $showErrorOnly={showErrorOnly}
+                    $width={width}
+                    $height={height}
+                    $customStyle={customStyle}
                     {...restProps}
                 />
                 {feedbackText && showState && (

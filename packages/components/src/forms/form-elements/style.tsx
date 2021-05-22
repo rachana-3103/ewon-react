@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, {
     themeGet,
@@ -6,11 +7,17 @@ import styled, {
     border as borderStyles,
     SpaceProps,
     BorderProps,
+    LayoutProps,
+    device,
 } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
-import { IFeedback } from "./types";
+import { IFeedback, TCustomStyle } from "./types";
 
-interface IInput extends IFeedback, SpaceProps, BorderProps {}
+interface IInput extends IFeedback, SpaceProps, BorderProps, LayoutProps {
+    $width?: string | any[];
+    $height?: string | any[];
+    $customStyle?: TCustomStyle;
+}
 
 export const InputStyles = css<IInput>`
     display: block;
@@ -27,6 +34,56 @@ export const InputStyles = css<IInput>`
     border: 1px solid ${themeGet("colors.text4")};
     border-radius: ${themeGet("radii.rounded")};
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    ${({ $width }) =>
+        !!$width &&
+        css`
+            ${!Array.isArray($width) &&
+            css`
+                width: ${$width};
+            `}
+            ${Array.isArray($width) &&
+            css`
+                width: ${$width[0]};
+                ${device.small} {
+                    width: ${$width[1]};
+                }
+                ${device.medium} {
+                    width: ${$width[2]};
+                }
+                ${device.large} {
+                    width: ${$width[3]};
+                }
+                ${device.xlarge} {
+                    width: ${$width[4]};
+                }
+            `}
+        `}
+
+    ${({ $height }) =>
+        !!$height &&
+        css`
+            ${!Array.isArray($height) &&
+            css`
+                height: ${$height};
+            `}
+            ${Array.isArray($height) &&
+            css`
+                height: ${$height[0]};
+                ${device.small} {
+                    height: ${$height[1]};
+                }
+                ${device.medium} {
+                    height: ${$height[2]};
+                }
+                ${device.large} {
+                    height: ${$height[3]};
+                }
+                ${device.xlarge} {
+                    height: ${$height[4]};
+                }
+            `}
+        `}
 
     &::placeholder {
         color: ${themeGet("colors.text4")};
@@ -55,6 +112,28 @@ export const InputStyles = css<IInput>`
         outline: 0;
         box-shadow: ${themeGet("shadows.input")};
     }
+
+    ${({ $customStyle }) =>
+        $customStyle === "noborder" &&
+        css`
+            padding: 0;
+            color: ${themeGet("colors.text")};
+            border-width: 0;
+            background-color: transparent;
+            &:focus {
+                box-shadow: none;
+                color: ${themeGet("colors.text")};
+            }
+        `}
+
+    ${({ $customStyle }) =>
+        $customStyle === "nofocus" &&
+        css`
+            &:focus {
+                box-shadow: none;
+            }
+        `}
+
     ${space};
     ${borderStyles};
 `;
@@ -115,6 +194,8 @@ export const allowedProps = [
     "color",
     "border",
     "borderWidth",
+    "fontSize",
+    "fontWeight",
 ];
 
 interface IProps extends BorderProps, SpaceProps {}

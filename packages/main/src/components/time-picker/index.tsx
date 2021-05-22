@@ -5,7 +5,11 @@ interface IProps {
     id: string;
     name: string;
     value?: string;
-    onChange?: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+    onChange?: (
+        e: ChangeEvent<
+            HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+        >
+    ) => void;
 }
 
 const TimePicker: FC<IProps> = ({ id, name, value, onChange }) => {

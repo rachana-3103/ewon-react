@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "@doar/shared/src/theme/utils";
-import { theme } from "@doar/shared/src/theme";
+import { Provider } from "react-redux";
+import { ThemeProvider, theme } from "@doar/shared/styled";
+import { GlobalStyle } from "@doar/shared/css";
+import { store } from "./redux/store";
 import App from "./App";
 
 ReactDOM.render(
-    <React.StrictMode>
+    <Provider store={store}>
         <ThemeProvider theme={theme}>
+            <GlobalStyle />
             <App />
         </ThemeProvider>
-    </React.StrictMode>,
+    </Provider>,
     document.getElementById("root")
 );

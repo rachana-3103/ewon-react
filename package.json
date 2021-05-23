@@ -7,6 +7,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-config-prettier": "^7.1.0",
@@ -33,6 +34,7 @@
     "lint:fix": "lerna run lint:fix --parallel",
     "start:main": "lerna exec --scope=\"@doar/main\" yarn start",
     "build:main": "lerna run build --scope=\"@doar/main\" ",
+    "serve:main": "lerna run serve --scope=\"@doar/main\" ",
     "test:main": "CI=true lerna run test --scope=\"@doar/main\" ",
     "lint:main": "lerna run lint --scope=\"@doar/main\" ",
     "lint:fix:main": "lerna run lint:fix --scope=\"@doar/main\" ",
@@ -53,6 +55,6 @@
     "yarn": "1.22.10"
   },
   "resolutions": {
-      "webpack": "4.44.2"
+    "webpack": "4.44.2"
   }
 }

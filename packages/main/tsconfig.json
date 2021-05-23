@@ -4,12 +4,15 @@
     "composite": true,
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
-    "outDir": "dist",
-    "rootDir": "."
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+	"downlevelIteration": true
   },
   "include": [
     "src",
     "src/*",
+    "src/**/*",
     "config-overrides.js"
   ]
 }

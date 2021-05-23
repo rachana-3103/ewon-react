@@ -1,11 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import { device, theme } from "../styled";
 
-// import { IbmFontSans } from "../fonts/ibm-plex-sans";
-// import { InterUi } from "../fonts/inter-ui";
+import { IbmFontSans, InterUi, Rubik, FontAwesome } from "../fonts";
 
-export const GlobalStyle = createGlobalStyle`
-
+const GlobalStyle = createGlobalStyle`
+    ${IbmFontSans};
+    ${InterUi};
+    ${Rubik};
+	${FontAwesome};
     * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -46,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
     input,
     select,
     textarea {
-        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-family: ${theme.fonts.body};
     }
     a:focus {
         outline: thin dotted;
@@ -184,7 +186,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     a {
         transition: ${theme.transition};
-        color: ${theme.colors.text};
+        color: ${theme.colors.primary};
         text-decoration: none;
         &:hover {
             text-decoration: none;
@@ -269,6 +271,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0 0 15px;
         font-family: ${theme.fonts.body};
         color: ${theme.colors.text};
+		font-weight: 400;
         &:last-child {
             margin-bottom: 0;
         }
@@ -303,18 +306,6 @@ export const GlobalStyle = createGlobalStyle`
     .wrapper {
         position: relative;
     }
-    .container {
-        max-width: 100%;
-        ${device.medium}{
-            max-width: 720px;
-        }
-        ${device.large}{
-            max-width: 960px;
-        }
-        ${device.xlarge} {
-            max-width: 1200px;
-        }
-    }
     .sr-only {
         border: 0;
         clip: rect(0, 0, 0, 0);
@@ -333,8 +324,24 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         text-indent: -99999px;
     }
-    hr{
+    table{
+        border-collapse: collapse;
+    }
+    th {
+        text-align: inherit;
+    }
+    hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+    hr {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid ${theme.colors.border};
     }
+	
 `;
+
+export default GlobalStyle;

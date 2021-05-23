@@ -16,10 +16,12 @@
         "react",
         "react-hooks"
     ],
+    "ignorePatterns": ["/dist", "**/*.js"],
     "rules": {
         "react/require-default-props": 0,
         "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-props-no-spreading": "off"
     }
 }

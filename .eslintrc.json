@@ -28,7 +28,12 @@
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "prettier/prettier": "error",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+	  "no-alert": "off",
+	  "no-restricted-globals": "off",
+	  "jsx-a11y/click-events-have-key-events": "off"
     },
     "overrides": [
       // Override some TypeScript rules just for .js files

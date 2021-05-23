@@ -9,10 +9,12 @@ import RowTwo from "../containers/dashboard-three/row-two";
 import RowThree from "../containers/dashboard-three/row-three";
 import RowFour from "../containers/dashboard-three/row-four";
 import RowFive from "../containers/dashboard-three/row-five";
+import SEO from "../components/seo";
 
 const DashboardThree: React.FC = () => {
     return (
         <Layout>
+            <SEO />
             <CryptoFontCSS />
             <Content>
                 <WelcomeArea />

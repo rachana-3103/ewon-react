@@ -10,7 +10,9 @@
 
 # production
 /build
-/public
+/packages/components/public
+/components/public
+/dist
 
 # misc
 .DS_Store

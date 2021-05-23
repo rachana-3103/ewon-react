@@ -10,10 +10,12 @@ import RightRowOne from "../containers/dashboard-four/right-row-one";
 import RightRowTwo from "../containers/dashboard-four/right-row-two";
 import RightRowhree from "../containers/dashboard-four/right-row-three";
 import RightRowFour from "../containers/dashboard-four/right-row-four";
+import SEO from "../components/seo";
 
 const DashboardFour: React.FC = () => {
     return (
         <Layout>
+            <SEO />
             <Content>
                 <WelcomeArea />
                 <Row gutters={10}>

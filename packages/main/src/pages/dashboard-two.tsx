@@ -8,10 +8,12 @@ import RowTwo from "../containers/dashboard-two/row-two";
 import RowThree from "../containers/dashboard-two/row-three";
 import RowFour from "../containers/dashboard-two/row-four";
 import RowFive from "../containers/dashboard-two/row-five";
+import SEO from "../components/seo";
 
 const DashboardTwo: React.FC = () => {
     return (
         <Layout>
+            <SEO />
             <Content>
                 <WelcomeArea />
                 <Row gutters={10}>

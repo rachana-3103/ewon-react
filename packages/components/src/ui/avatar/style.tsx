@@ -74,7 +74,8 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         $shape === "square" &&
         css`
             border-radius: 0;
-            img {
+            img,
+            .avatar-initial {
                 border-radius: 0;
             }
         `}
@@ -83,7 +84,8 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         $shape === "circle" &&
         css`
             border-radius: ${themeGet("radii.circle")};
-            img {
+            img,
+            .avatar-initial {
                 border-radius: ${themeGet("radii.circle")};
             }
         `}
@@ -92,7 +94,8 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         $shape === "rounded" &&
         css`
             border-radius: ${themeGet("radii.rounded")};
-            img {
+            img,
+            .avatar-initial {
                 border-radius: ${themeGet("radii.rounded")};
             }
         `}

@@ -38,7 +38,7 @@ export const ListGroup: FC<IListGroup> = ({
                 );
             }
         }
-        return null;
+        return child;
     });
     return (
         <StyledListGroup
@@ -89,3 +89,5 @@ export const ListGroupItem: FC<IListGroupItem> = ({
         </StyledListGroupItem>
     );
 };
+
+ListGroupItem.displayName = "ListGroupItem";

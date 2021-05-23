@@ -5,10 +5,12 @@ import Content from "../layouts/content";
 import PageHeader from "../components/page-header";
 import MainContent from "../containers/events/main";
 import Sidebar from "../containers/events/sidebar";
+import SEO from "../components/seo";
 
 const Events: React.FC = () => {
     return (
         <Layout>
+            <SEO />
             <Content borderBottomWidth="1px">
                 <PageHeader
                     prev={[

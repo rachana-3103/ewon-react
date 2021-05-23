@@ -1,0 +1,11 @@
+export declare const df1: number[][];
+export declare const df2: number[][];
+export declare const df3: number[][];
+export declare const df4: number[][];
+export declare const df5: number[][];
+export declare const df6: number[][];
+export declare const df7: number[][];
+export declare const df3data1: number[];
+export declare const df3data2: number[];
+export declare const df3data3: number[];
+export declare const df3data4: number[];

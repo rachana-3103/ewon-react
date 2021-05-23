@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { Image, Text } from "@doar/components";
+import image1 from "@doar/shared/images/img10.jpg";
+import image2 from "@doar/shared/images/img11.jpg";
+import image3 from "@doar/shared/images/img12.jpg";
+import image4 from "@doar/shared/images/img13.jpg";
+import image5 from "@doar/shared/images/img9.jpg";
 import WidgetTitle from "../widget-title";
-import image1 from "../../../images/img10.jpg";
-import image2 from "../../../images/img11.jpg";
-import image3 from "../../../images/img12.jpg";
-import image4 from "../../../images/img13.jpg";
-import image5 from "../../../images/img9.jpg";
 import { StyledImgGroup } from "./style";
 
 const MutualConnections: FC = () => {

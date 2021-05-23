@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button, Input } from "@doar/components";
-import image from "../../images/img18.png";
+import image from "@doar/shared/images/img18.png";
 import {
     StyledWrap,
     StyledImg,

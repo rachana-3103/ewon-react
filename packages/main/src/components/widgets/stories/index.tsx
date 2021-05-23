@@ -6,7 +6,7 @@ import {
     Avatar,
     AvatarInitial,
 } from "@doar/components";
-import image1 from "../../../images/img8.jpg";
+import image1 from "@doar/shared/images/img8.jpg";
 import WidgetTitle from "../widget-title";
 import { StyledName, StyledTime } from "./style";
 

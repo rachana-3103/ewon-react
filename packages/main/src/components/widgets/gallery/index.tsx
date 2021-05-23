@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Row, Col, Anchor, Image } from "@doar/components";
-import image1 from "../../../images/img2.jpg";
-import image2 from "../../../images/img3.jpg";
-import image3 from "../../../images/img4.jpg";
-import image4 from "../../../images/img5.jpg";
-import image5 from "../../../images/img6.jpg";
-import image6 from "../../../images/img7.jpg";
-import image7 from "../../../images/img18.jpg";
-import image8 from "../../../images/img19.jpg";
-import image9 from "../../../images/img20.jpg";
+import image1 from "@doar/shared/images/img2.jpg";
+import image2 from "@doar/shared/images/img3.jpg";
+import image3 from "@doar/shared/images/img4.jpg";
+import image4 from "@doar/shared/images/img5.jpg";
+import image5 from "@doar/shared/images/img6.jpg";
+import image6 from "@doar/shared/images/img7.jpg";
+import image7 from "@doar/shared/images/img18.jpg";
+import image8 from "@doar/shared/images/img19.jpg";
+import image9 from "@doar/shared/images/img20.jpg";
 import WidgetTitle from "../widget-title";
 
 const Gallery: FC = () => {

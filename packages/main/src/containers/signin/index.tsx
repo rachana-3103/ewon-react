@@ -1,5 +1,5 @@
 import { FC } from "react";
-import loginImage from "../../images/img15.png";
+import loginImage from "@doar/shared/images/img15.png";
 import SigninForm from "../../components/signin-form";
 import {
     StyledMedia,

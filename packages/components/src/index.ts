@@ -25,7 +25,7 @@ import {
     CardDeck,
     CardColumns,
 } from "./ui/card/card";
-import { Media, MediaLeft, MediaBody } from "./ui/media-object/media";
+import { Media, MediaLeft, MediaBody } from "./ui/media/media";
 import { Breadcrumb, BreadcrumbItem } from "./ui/breadcrumb/breadcrumb";
 import {
     ApexBarChart,
@@ -41,7 +41,7 @@ import {
     LineChart,
     PieChart,
     DonutChart,
-} from "./charts/chart-js/chart";
+} from "./charts/chart-js/chart-js";
 import { SparklinesBar, SparklinesLines } from "./charts/sparkline/sparkline";
 import { Container, Row, Col } from "./grid/grid";
 import { VectorMap } from "./maps/vector-map/vector-map";

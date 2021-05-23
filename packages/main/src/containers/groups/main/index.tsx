@@ -1,20 +1,20 @@
 import { FC } from "react";
 import { Row, Col } from "@doar/components";
-import cover1 from "../../../images/img26.jpg";
-import cover2 from "../../../images/img28.jpg";
-import cover3 from "../../../images/img31.jpg";
-import cover4 from "../../../images/img34.jpg";
-import cover5 from "../../../images/img5.jpg";
-import groupimg1 from "../../../images/img11.jpg";
-import groupimg2 from "../../../images/img12.jpg";
-import groupimg3 from "../../../images/img13.jpg";
-import groupimg4 from "../../../images/img14.jpg";
-import groupimg5 from "../../../images/img15.jpg";
-import groupimg6 from "../../../images/img6.jpg";
-import groupimg7 from "../../../images/img20.jpg";
-import groupimg8 from "../../../images/img21.jpg";
-import groupimg9 from "../../../images/img23.jpg";
-import groupimg10 from "../../../images/img24.jpg";
+import cover1 from "@doar/shared/images/img26.jpg";
+import cover2 from "@doar/shared/images/img28.jpg";
+import cover3 from "@doar/shared/images/img31.jpg";
+import cover4 from "@doar/shared/images/img34.jpg";
+import cover5 from "@doar/shared/images/img5.jpg";
+import groupimg1 from "@doar/shared/images/img11.jpg";
+import groupimg2 from "@doar/shared/images/img12.jpg";
+import groupimg3 from "@doar/shared/images/img13.jpg";
+import groupimg4 from "@doar/shared/images/img14.jpg";
+import groupimg5 from "@doar/shared/images/img15.jpg";
+import groupimg6 from "@doar/shared/images/img6.jpg";
+import groupimg7 from "@doar/shared/images/img20.jpg";
+import groupimg8 from "@doar/shared/images/img21.jpg";
+import groupimg9 from "@doar/shared/images/img23.jpg";
+import groupimg10 from "@doar/shared/images/img24.jpg";
 import GroupCard from "../../../components/group-card";
 
 const MainContent: FC = () => {

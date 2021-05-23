@@ -25,7 +25,7 @@ import {
     CardDeck,
     CardColumns,
 } from "./src/ui/card/card";
-import { Media, MediaLeft, MediaBody } from "./src/ui/media-object/media";
+import { Media, MediaLeft, MediaBody } from "./src/ui/media/media";
 import { Breadcrumb, BreadcrumbItem } from "./src/ui/breadcrumb/breadcrumb";
 import { Container, Row, Col } from "./src/grid/grid";
 import {
@@ -46,7 +46,7 @@ import {
     LineChart,
     PieChart,
     DonutChart,
-} from "./src/charts/chart-js/chart";
+} from "./src/charts/chart-js/chart-js";
 import { GoogleMap, GoogleMapMarker } from "./src/maps/google-map/google-map";
 import {
     LeafletMap,

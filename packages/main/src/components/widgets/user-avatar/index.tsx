@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Avatar } from "@doar/components";
-import image from "../../../images/img16.jpg";
+import image from "@doar/shared/images/img16.jpg";
 
 const UserAvatar: FC = () => {
     return (

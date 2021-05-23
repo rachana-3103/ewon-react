@@ -12,7 +12,7 @@ import {
     Nav,
     NavLink,
 } from "@doar/components";
-import image from "../../../images/img15.jpg";
+import image from "@doar/shared/images/img15.jpg";
 import Header from "../header";
 import Footer from "../footer";
 import { StyledRole, StyledTime, StyledGrayBox } from "./style";

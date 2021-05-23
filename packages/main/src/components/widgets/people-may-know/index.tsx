@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Media, MediaBody, Anchor, Avatar } from "@doar/components";
-import image1 from "../../../images/img21.jpg";
-import image2 from "../../../images/img22.jpg";
-import image3 from "../../../images/img23.jpg";
-import image4 from "../../../images/img24.jpg";
+import image1 from "@doar/shared/images/img21.jpg";
+import image2 from "@doar/shared/images/img22.jpg";
+import image3 from "@doar/shared/images/img23.jpg";
+import image4 from "@doar/shared/images/img24.jpg";
 import WidgetTitle from "../widget-title";
 import { StyledName, StyledRole } from "./style";
 

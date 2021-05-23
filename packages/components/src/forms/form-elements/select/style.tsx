@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { themeGet, SpaceProps, BorderProps } from "@doar/shared/styled";
+import selectIcon from "../../../static/select.svg";
 import {
     InputStyles,
     SuccessInputStyles,
@@ -7,7 +8,6 @@ import {
     ErrorInputStyles,
     allowedProps,
 } from "../style";
-import selectIcon from "../../../static/select.svg";
 import { IFeedback, TCustomStyle } from "../types";
 
 interface IInput extends IFeedback, SpaceProps, BorderProps {

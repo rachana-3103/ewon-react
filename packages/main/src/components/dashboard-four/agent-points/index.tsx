@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Card, CardBody, SectionTitle } from "@doar/components";
-import img1 from "@doar/shared/data/images/img15.jpg";
-import img2 from "@doar/shared/data/images/img14.jpg";
-import img3 from "@doar/shared/data/images/img23.jpg";
-import img4 from "@doar/shared/data/images/img22.jpg";
+import img1 from "@doar/shared/images/img15.jpg";
+import img2 from "@doar/shared/images/img14.jpg";
+import img3 from "@doar/shared/images/img23.jpg";
+import img4 from "@doar/shared/images/img22.jpg";
 import Item from "./item";
 import { StyledHeader } from "./style";
 

@@ -5,7 +5,7 @@ import { StyledLoader } from "./style";
 const Preloader: FC = () => {
     return (
         <StyledLoader>
-            <Spinner color="primary" />
+            <Spinner size="lg" color="primary" />
         </StyledLoader>
     );
 };

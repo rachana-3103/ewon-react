@@ -29,35 +29,57 @@ export const Anchor: React.FC<IProps> = ({
     ...rest
 }) => {
     const internal = /^\/(?!\/)/.test(path);
-    if (internal) {
+    if (!internal) {
+        const isHash = path.startsWith("#");
+        if (isHash) {
+            return (
+                <StyledAnchor
+                    aria-label={label}
+                    rel={rel}
+                    className={className}
+                    href={path}
+                    onClick={onClick}
+                    $variant={variant}
+                    {...rest}
+                >
+                    {children}
+                </StyledAnchor>
+            );
+        }
         return (
-            <StyledLink
+            <StyledAnchor
                 aria-label={label}
-                rel="preload"
+                rel={rel}
                 className={className}
-                to={path}
+                href={path}
+                target={target}
                 onClick={onClick}
                 $variant={variant}
                 {...rest}
             >
                 {children}
-            </StyledLink>
+            </StyledAnchor>
         );
     }
+
     return (
-        <StyledAnchor
+        <StyledLink
             aria-label={label}
-            rel={rel}
+            rel="preload"
             className={className}
-            href={path}
-            target={target}
+            to={path}
             onClick={onClick}
             $variant={variant}
             {...rest}
         >
             {children}
-        </StyledAnchor>
+        </StyledLink>
     );
+};
+
+Anchor.defaultProps = {
+    target: "_blank",
+    rel: "noopener noreferrer",
 };
 
 Anchor.displayName = "Anchor";

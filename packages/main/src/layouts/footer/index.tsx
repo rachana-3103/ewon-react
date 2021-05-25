@@ -19,19 +19,21 @@ const Footer: React.FC = () => {
                     <StyledFotterNavLink path="/">
                         Change Log
                     </StyledFotterNavLink>
-                    <StyledFotterNavLink path="/">Get Help</StyledFotterNavLink>
+                    <StyledFotterNavLink path="https://hasthemes.com/contact-us/">
+                        Get Help
+                    </StyledFotterNavLink>
                 </StyledFooterNav>
             </StyledFooterRight>
             <StyledFooterLeft>
                 <span>&copy; Doar {new Date().getFullYear()} </span>
                 <span className="copright-link">
-                    Made with <Heart size="24" /> by{"  "}
+                    MADE WITH <Heart size="24" /> BY{"  "}
                     <a
-                        href="https://hasthemes.com"
+                        href="https://themeforest.net/user/bootxperts/portfolio"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        HasThemes
+                        BootXperts
                     </a>
                 </span>
             </StyledFooterLeft>

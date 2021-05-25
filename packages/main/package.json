@@ -42,7 +42,7 @@
     "serve": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rimraf dist *.tsbuildinfo node_modules",
+    "clean": "rimraf dist *.tsbuildinfo node_modules build",
     "typecheck": "tsc -p tsconfig.json",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix"

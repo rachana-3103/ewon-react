@@ -1,3 +1,4 @@
+import ApexCharts from "apexcharts";
 import { Button } from "./ui/button/button";
 import { Alert } from "./ui/alert/alert";
 import { Anchor } from "./ui/anchor";
@@ -111,6 +112,7 @@ export {
     MediaBody,
     Breadcrumb,
     BreadcrumbItem,
+    ApexCharts,
     ApexBarChart,
     ApexLineChart,
     ApexAreaChart,

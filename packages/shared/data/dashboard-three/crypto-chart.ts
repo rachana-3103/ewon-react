@@ -1,27 +1,4 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/restrict-plus-operands */
-
-function generateDayWiseTimeSeries(
-    baseval: number,
-    count: number,
-    yrange: { min: any; max: any }
-) {
-    let i = 0;
-    const series = [];
-    while (i < count) {
-        const y =
-            Math.floor(Math.random() * (yrange.max - yrange.min + 1)) +
-            yrange.min;
-
-        series.push([baseval, y]);
-        baseval += 86400000;
-        i++;
-    }
-    return series;
-}
+import { generateDayWiseTimeSeries } from "../../methods";
 
 const data = {
     series: [

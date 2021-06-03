@@ -1,9 +1,15 @@
 import { FC } from "react";
-import { Card, SectionTitle, CardBody } from "@doar/components";
+import {
+    Card,
+    SectionTitle,
+    CardBody,
+    DropdownToggle,
+    DropdownMenu,
+} from "@doar/components";
 import Item from "./item";
 import {
     StyledHeader,
-    StyledHeaderText,
+    StyledDropdown,
     StyledList,
     StyledListIitem,
 } from "./style";
@@ -13,9 +19,19 @@ const PriceIndexes: FC = () => {
         <Card height={[null, null, "100%"]}>
             <StyledHeader>
                 <SectionTitle title="Price Indexes" />
-                <StyledHeaderText>
-                    USD <i className="fa fa-chevron-down" />
-                </StyledHeaderText>
+                <StyledDropdown>
+                    <DropdownToggle variant="texted">
+                        USD <i className="fa fa-chevron-down" />
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <button type="button" className="item">
+                            USD
+                        </button>
+                        <button type="button" className="item">
+                            EUR
+                        </button>
+                    </DropdownMenu>
+                </StyledDropdown>
             </StyledHeader>
             <CardBody p={["0px", "0px"]}>
                 <StyledList>

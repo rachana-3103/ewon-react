@@ -102,6 +102,8 @@ export interface ICustomer {
     name: string;
     image?: string;
     bg?: string;
+    chat_link: string;
+    profile_link: string;
 }
 
 export interface ISalesRevenue {

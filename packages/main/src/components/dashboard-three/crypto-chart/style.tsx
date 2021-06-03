@@ -1,5 +1,5 @@
 import styled, { device, themeGet } from "@doar/shared/styled";
-import { CardHeader, Nav, NavLink } from "@doar/components";
+import { CardHeader, Nav, NavLink, Dropdown } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     padding-top: 8px;
@@ -55,6 +55,28 @@ export const StyledHeaderText = styled.span`
         margin-left: 2px;
         font-weight: 600;
         color: ${themeGet("colors.text2")};
+    }
+`;
+
+export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
+    .btn {
+        letter-spacing: 0.5px;
+        font-family: ${themeGet("fonts.rubik")};
+        color: ${themeGet("colors.text")};
+        font-weight: 400;
+        i {
+            margin-left: 2px;
+            font-weight: 600;
+            color: ${themeGet("colors.text2")};
+        }
+    }
+    .item {
+        margin: 0;
+        padding: 5px 8px;
+        font-family: ${themeGet("fonts.rubik")};
+        color: ${themeGet("colors.text")};
+        background: transparent;
+        border: none;
     }
 `;
 

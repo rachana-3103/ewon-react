@@ -1,26 +1,9 @@
-function generateDayWiseTimeSeries(
-    baseval: number,
-    count: number,
-    yrange: { min: number; max: number }
-) {
-    let base = baseval;
-    let i = 0;
-    const series = [];
-    while (i < count) {
-        const y =
-            Math.floor(Math.random() * (yrange.max - yrange.min + 1)) +
-            yrange.min;
-
-        series.push([base, y]);
-        base += 86400000;
-        i += 1;
-    }
-    return series;
-}
+import { generateDayWiseTimeSeries } from "../../methods";
 
 const data = {
     options: {
         chart: {
+            id: "ticket-chart",
             height: 480,
             type: "line",
             stacked: true,
@@ -115,6 +98,7 @@ const data = {
     },
     series: [
         {
+            name: "New Tickets",
             type: "column",
             data: generateDayWiseTimeSeries(
                 new Date("11 Feb 2017 GMT").getTime(),
@@ -126,6 +110,7 @@ const data = {
             ),
         },
         {
+            name: "Solved Tickets",
             type: "column",
             data: generateDayWiseTimeSeries(
                 new Date("11 Feb 2017 GMT").getTime(),
@@ -137,6 +122,7 @@ const data = {
             ),
         },
         {
+            name: "Open Tickets",
             type: "line",
             data: generateDayWiseTimeSeries(
                 new Date("11 Feb 2017 GMT").getTime(),

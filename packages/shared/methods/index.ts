@@ -45,3 +45,24 @@ export const formatNumber = (x: number): string => {
 export const hasKey = (obj: any, key: string): boolean => {
     return !!Object.prototype.hasOwnProperty.call(obj, key);
 };
+
+export const generateDayWiseTimeSeries = (
+    baseval: number,
+    count: number,
+    yrange: { min: any; max: any }
+) => {
+    let i = 0;
+    let value = baseval;
+    const series = [];
+    while (i < count) {
+        const y =
+            // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+            Math.floor(Math.random() * (yrange.max - yrange.min + 1)) +
+            yrange.min;
+
+        series.push([value, y]);
+        value += 86400000;
+        i += 1;
+    }
+    return series;
+};

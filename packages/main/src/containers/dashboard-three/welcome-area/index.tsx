@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { MoreVertical } from "react-feather";
 import Breadcrumb from "../../../components/breadcrumb";
 import {
@@ -8,7 +8,7 @@ import {
     StyledButton,
 } from "./style";
 
-const WelcomeArea: React.FC = () => {
+const WelcomeArea: FC = () => {
     return (
         <StyledWelcomeArea>
             <StyledWelcomeLeft>

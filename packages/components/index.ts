@@ -1,3 +1,4 @@
+import ApexCharts from "apexcharts";
 import { Button } from "./src/ui/button/button";
 import { Alert } from "./src/ui/alert/alert";
 import { Anchor } from "./src/ui/anchor";
@@ -123,6 +124,7 @@ export {
     Container,
     Row,
     Col,
+    ApexCharts,
     ApexBarChart,
     ApexLineChart,
     ApexAreaChart,

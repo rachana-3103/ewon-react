@@ -8,7 +8,7 @@ import styled, {
     ColorProps,
     device,
 } from "@doar/shared/styled";
-import { CardHeader, Table } from "@doar/components";
+import { CardHeader, Table, Dropdown } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     ${device.small} {
@@ -18,9 +18,22 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledRange = styled.span`
-    font-size: 13px;
-    color: ${themeGet("colors.text3")};
+export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
+    .btn {
+        font-size: 13px;
+        color: ${themeGet("colors.text3")};
+        i {
+            margin-left: 4px;
+        }
+    }
+    .item {
+        margin: 0;
+        padding: 5px 8px;
+        font-size: 13px;
+        color: ${themeGet("colors.text3")};
+        background: transparent;
+        border: none;
+    }
 `;
 
 export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`

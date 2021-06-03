@@ -1,9 +1,10 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import {
     Card,
     CardBody,
     Row,
     Col,
+    ApexCharts,
     ApexAreaChart,
     SectionTitle,
 } from "@doar/components";
@@ -22,23 +23,30 @@ import {
 } from "./style";
 
 const RevenueGrowth: FC = () => {
+    const { series, options } = RevenueChart;
+    const chartToggle = (e: MouseEvent<HTMLButtonElement>) => {
+        ApexCharts.exec(
+            options.chart.id,
+            "toggleSeries",
+            e.currentTarget.value
+        );
+    };
+
     return (
         <Card>
             <StyledHeader>
                 <SectionTitle title="Account &amp; Monthly Recurring Revenue Growth" />
                 <StyledList>
-                    <StyledListItem>
-                        <StyledBullet bg="primary" />
-                        <StyledListText>Growth Actual</StyledListText>
-                    </StyledListItem>
-                    <StyledListItem>
-                        <StyledBullet bg="malibu" />
-                        <StyledListText>Actual</StyledListText>
-                    </StyledListItem>
-                    <StyledListItem>
-                        <StyledBullet bg="tropical" />
-                        <StyledListText>Plan</StyledListText>
-                    </StyledListItem>
+                    {series.map((sr, i) => (
+                        <StyledListItem
+                            key={sr.name}
+                            value={sr.name}
+                            onClick={chartToggle}
+                        >
+                            <StyledBullet bg={options.colors[i]} />
+                            <StyledListText>{sr.name}</StyledListText>
+                        </StyledListItem>
+                    ))}
                 </StyledList>
             </StyledHeader>
             <CardBody p={["0px", "0px"]} position="relative">
@@ -68,8 +76,8 @@ const RevenueGrowth: FC = () => {
                 </StyledCardBodyWrap>
                 <StyledChart>
                     <ApexAreaChart
-                        options={RevenueChart.options}
-                        series={RevenueChart.series}
+                        options={options}
+                        series={series}
                         width="100%"
                         height={280}
                     />

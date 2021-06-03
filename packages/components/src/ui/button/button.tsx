@@ -146,7 +146,7 @@ export const Button: FC<ButtonProps> = ({
                     to={path}
                     {...restProps}
                 >
-                    <span>{children}</span>
+                    {children}
                 </StyledLink>
             );
         }

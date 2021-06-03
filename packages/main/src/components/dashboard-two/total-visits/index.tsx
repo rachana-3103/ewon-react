@@ -1,9 +1,16 @@
 import { FC } from "react";
 import { ExternalLink } from "react-feather";
-import { Card, CardBody, Progress, SectionTitle } from "@doar/components";
+import {
+    Card,
+    CardBody,
+    Progress,
+    SectionTitle,
+    DropdownToggle,
+    DropdownMenu,
+} from "@doar/components";
 import {
     StyledHeader,
-    StyledRange,
+    StyledDropdown,
     StyledTable,
     StyledHeadTR,
     StyledTH,
@@ -19,9 +26,29 @@ const TotalVisits: FC = () => {
                     title="Total Visits"
                     titleProps={{ lineHeight: 1.5 }}
                 />
-                <StyledRange>
-                    Mar 01 - Mar 20, 2019 <i className="fa fa-chevron-down" />
-                </StyledRange>
+                <StyledDropdown>
+                    <DropdownToggle variant="texted">
+                        Mar 01 - Mar 20, 2019{" "}
+                        <i className="fa fa-chevron-down" />
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <button type="button" className="item">
+                            Mar 01 - Mar 20, 2019
+                        </button>
+                        <button type="button" className="item">
+                            Mar 02 - Mar 20, 2019
+                        </button>
+                        <button type="button" className="item">
+                            Mar 03 - Mar 20, 2019
+                        </button>
+                        <button type="button" className="item">
+                            Mar 04 - Mar 20, 2019
+                        </button>
+                        <button type="button" className="item">
+                            Mar 05 - Mar 20, 2019
+                        </button>
+                    </DropdownMenu>
+                </StyledDropdown>
             </StyledHeader>
             <CardBody py={["15px", "15px"]} px={["10px", "10px"]}>
                 <StyledTable borderless compact mb="0px">

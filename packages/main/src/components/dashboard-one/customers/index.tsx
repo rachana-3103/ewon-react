@@ -36,6 +36,8 @@ const Customers: FC = () => {
                             name={cst.name}
                             image={cst.image}
                             bg={cst.bg}
+                            chat_link={cst.chat_link}
+                            profile_link={cst.profile_link}
                         />
                     </ListGroupItem>
                 ))}

@@ -23,15 +23,20 @@ export const StyledHeaderLeft = styled.div`
     }
 `;
 
-export const StyledList = styled.ul`
+export const StyledList = styled.div`
     letter-spacing: 0.5px;
     margin-bottom: 0px;
     padding-left: 0;
     list-style: none;
+    position: relative;
+    z-index: 9;
 `;
 
-export const StyledListItem = styled.li`
+export const StyledListItem = styled.button`
     display: inline-block;
+    padding: 0;
+    background: transparent;
+    border: none;
     &:not(:last-child) {
         margin-right: 0.5rem;
     }

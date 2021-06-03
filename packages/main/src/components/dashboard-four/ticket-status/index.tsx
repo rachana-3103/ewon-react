@@ -1,9 +1,10 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import {
     Card,
     CardBody,
     CardFooter,
     SectionTitle,
+    ApexCharts,
     ApexLineChart,
     Row,
     Col,
@@ -25,6 +26,14 @@ import {
 } from "./style";
 
 const TicketStatus: FC = () => {
+    const { series, options } = ticketChart;
+    const chartToggle = (e: MouseEvent<HTMLButtonElement>) => {
+        ApexCharts.exec(
+            options.chart.id,
+            "toggleSeries",
+            e.currentTarget.value
+        );
+    };
     return (
         <Card>
             <StyledHeader>
@@ -35,24 +44,21 @@ const TicketStatus: FC = () => {
                     />
                 </StyledHeaderLeft>
                 <StyledList>
-                    <StyledListItem>
-                        <StyledBullet bg="gray400" />
-                        <StyledListText>
-                            New <span>Tickets</span>
-                        </StyledListText>
-                    </StyledListItem>
-                    <StyledListItem>
-                        <StyledBullet bg="malibu" />
-                        <StyledListText>
-                            Solved <span>Tickets</span>
-                        </StyledListText>
-                    </StyledListItem>
-                    <StyledListItem>
-                        <StyledBullet bg="primary" />
-                        <StyledListText>
-                            Open <span>Tickets</span>
-                        </StyledListText>
-                    </StyledListItem>
+                    {series.map((sr, i) => {
+                        const name = sr.name.split(" ");
+                        return (
+                            <StyledListItem
+                                key={sr.name}
+                                value={sr.name}
+                                onClick={chartToggle}
+                            >
+                                <StyledBullet bg={options.colors[i]} />
+                                <StyledListText>
+                                    {name[0]} <span>{name[1]}</span>
+                                </StyledListText>
+                            </StyledListItem>
+                        );
+                    })}
                 </StyledList>
             </StyledHeader>
             <CardBody pt={[0, 0]}>

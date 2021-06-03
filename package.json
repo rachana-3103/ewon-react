@@ -46,7 +46,7 @@
     "storybook": "lerna exec --scope=\"@doar/components\" yarn storybook ",
     "build-storybook": "lerna exec --scope=\"@doar/components\" yarn build-storybook ",
     "serve-storybook": "lerna exec --scope=\"@doar/components\" yarn serve-storybook ",
-    "clean": "lerna clean & rimraf node_modules",
+    "clean": "lerna run clean && rimraf node_modules",
     "clean:update": "lerna clean && lerna bootstrap",
     "clean-root": "rimraf node_modules"
   },

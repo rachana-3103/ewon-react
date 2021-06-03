@@ -6,13 +6,15 @@ import {
     CardFooter,
     Row,
     Col,
+    DropdownToggle,
+    DropdownMenu,
 } from "@doar/components";
 import { cryptoChart } from "@doar/shared/data/dashboard-three";
 import NavLine from "./nav-line";
 import {
     StyledHeader,
     StyledHeaderRight,
-    StyledHeaderText,
+    StyledDropdown,
     StyledText,
     StyledChart,
     StyledFooterTitle,
@@ -25,15 +27,52 @@ const CryptoChart: FC = () => {
             <StyledHeader>
                 <NavLine />
                 <StyledHeaderRight>
-                    <StyledHeaderText>
-                        03/01/2019
-                        <i className="fa fa-chevron-down" />
-                    </StyledHeaderText>
+                    <StyledDropdown>
+                        <DropdownToggle variant="texted">
+                            03/01/2019 <i className="fa fa-chevron-down" />
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <button type="button" className="item">
+                                04/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                05/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                06/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                07/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                08/01/2019
+                            </button>
+                        </DropdownMenu>
+                    </StyledDropdown>
                     <StyledText>To</StyledText>
-                    <StyledHeaderText>
-                        03/02/2019
-                        <i className="fa fa-chevron-down" />
-                    </StyledHeaderText>
+                    <StyledDropdown>
+                        <DropdownToggle variant="texted">
+                            03/01/2019
+                            <i className="fa fa-chevron-down" />
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <button type="button" className="item">
+                                04/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                05/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                06/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                07/01/2019
+                            </button>
+                            <button type="button" className="item">
+                                08/01/2019
+                            </button>
+                        </DropdownMenu>
+                    </StyledDropdown>
                 </StyledHeaderRight>
             </StyledHeader>
             <CardBody p={["10px", "20px"]}>

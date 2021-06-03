@@ -7,7 +7,7 @@ import styled, {
     layout,
     LayoutProps,
 } from "@doar/shared/styled";
-import { CardHeader, CardFooter } from "@doar/components";
+import { CardHeader, CardFooter, Dropdown } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -86,5 +86,21 @@ export const StyledFooterLink = styled.a`
     color: ${themeGet("colors.text3")};
     i {
         margin-left: 5px;
+    }
+`;
+
+export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
+    ${device.small} {
+        display: none;
+    }
+    button {
+        color: ${themeGet("colors.text3")};
+    }
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 4px;
+        }
     }
 `;

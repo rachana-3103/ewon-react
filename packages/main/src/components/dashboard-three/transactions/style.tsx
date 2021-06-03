@@ -9,6 +9,10 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
         flex-direction: column;
         align-items: flex-start;
     }
+    ${device.medium} {
+        flex-direction: row;
+        align-items: center;
+    }
 `;
 
 export const StyledHeaderText = styled.span`
@@ -19,6 +23,9 @@ export const StyledHeaderText = styled.span`
     line-height: 1;
     ${device.small} {
         margin-top: 5px;
+    }
+    ${device.medium} {
+        margin-top: 0;
     }
     svg {
         margin-left: 2px;

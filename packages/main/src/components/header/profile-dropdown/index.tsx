@@ -35,16 +35,19 @@ const ProfileDropdown: React.FC = () => {
                 </Avatar>
                 <StyledAuthorName>Katherine Pechon</StyledAuthorName>
                 <StyledAuthorRole>Administrator</StyledAuthorRole>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/profile-view">
                     <Edit3 size="24" />
                     Edit Profile
                 </StyledDropItem>
-                <StyledDropItem path="/" mt="10px">
+                <StyledDropItem path="/profile-view" mt="10px">
                     <User size="24" />
                     View Profile
                 </StyledDropItem>
                 <StyledDivider />
-                <StyledDropItem path="/" mt="10px">
+                <StyledDropItem
+                    path="https://hasthemes.com/contact-us/"
+                    mt="10px"
+                >
                     <HelpCircle size="24" />
                     Help Center
                 </StyledDropItem>
@@ -60,7 +63,7 @@ const ProfileDropdown: React.FC = () => {
                     <Settings size="24" />
                     Privacy Settings
                 </StyledDropItem>
-                <StyledDropItem path="/" mt="10px">
+                <StyledDropItem path="/signin" mt="10px">
                     <LogOut size="24" />
                     Sign Out
                 </StyledDropItem>

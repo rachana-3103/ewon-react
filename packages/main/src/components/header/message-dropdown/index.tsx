@@ -33,7 +33,7 @@ const MessageDropdown: React.FC = () => {
                     <Notification />
                 </StyledDropItem>
                 <StyledDropFooter>
-                    <Link to="/">View all Messages</Link>
+                    <Link to="/apps/chat">View all Messages</Link>
                 </StyledDropFooter>
             </StyledDropMenu>
         </Dropdown>

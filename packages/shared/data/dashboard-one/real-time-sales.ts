@@ -5,10 +5,12 @@ const data = {
             {
                 data: [20, 60, 50, 45, 50, 60],
                 backgroundColor: "#69b2f8",
+                lebel: "today",
             },
             {
                 data: [10, 40, 30, 40, 55, 25],
                 backgroundColor: "#d1e6fa",
+                lebel: "yesterday",
             },
         ],
     },

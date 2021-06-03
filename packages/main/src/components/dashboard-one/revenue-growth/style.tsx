@@ -16,7 +16,7 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     }
 `;
 
-export const StyledList = styled.ul`
+export const StyledList = styled.div`
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -30,9 +30,13 @@ export const StyledList = styled.ul`
     }
 `;
 
-export const StyledListItem = styled.li`
+export const StyledListItem = styled.button`
     display: flex;
     align-items: center;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
     &:not(:last-child) {
         margin-right: 0.5rem;
     }

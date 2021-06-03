@@ -1,9 +1,16 @@
 import { FC } from "react";
-import { Card, CardBody, SectionTitle, ApexAreaChart } from "@doar/components";
+import {
+    Card,
+    CardBody,
+    SectionTitle,
+    ApexAreaChart,
+    DropdownToggle,
+    DropdownMenu,
+} from "@doar/components";
 import { complaintsData } from "@doar/shared/data/dashboard-four";
 import {
     StyledHeader,
-    StyledSpan,
+    StyledDropdown,
     StyledChart,
     StyledDiv,
     StyledDivTop,
@@ -18,9 +25,19 @@ const Complaints: FC = () => {
         <Card>
             <StyledHeader>
                 <SectionTitle title="Complaints Received" />
-                <StyledSpan>
-                    This Month <i className="fa fa-chevron-down" />
-                </StyledSpan>
+                <StyledDropdown>
+                    <DropdownToggle variant="texted">
+                        This Month <i className="fa fa-chevron-down" />
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <button type="button" className="item">
+                            January
+                        </button>
+                        <button type="button" className="item">
+                            February
+                        </button>
+                    </DropdownMenu>
+                </StyledDropdown>
             </StyledHeader>
             <CardBody p={["0px", "0px"]} position="relative">
                 <StyledDiv>

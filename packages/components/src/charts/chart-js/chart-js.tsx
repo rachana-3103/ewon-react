@@ -1,4 +1,5 @@
-import { FC } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { FC, forwardRef } from "react";
 import { Bar, HorizontalBar, Line, Pie, Doughnut } from "react-chartjs-2";
 
 export interface IBarProps {
@@ -16,6 +17,7 @@ export interface IBarProps {
     };
     width?: number;
     height?: number;
+    plugins?: any[];
 }
 
 export const BarChart: FC<IBarProps> = ({ data, options, width, height }) => {
@@ -33,25 +35,26 @@ export const BarChart: FC<IBarProps> = ({ data, options, width, height }) => {
     );
 };
 
-export const HorizontalBarChart: FC<IBarProps> = ({
-    data,
-    options,
-    width,
-    height,
-}) => {
-    const datasetKeyProvider = () => {
-        return Math.random().toString();
-    };
-    return (
-        <HorizontalBar
-            data={data}
-            options={options}
-            width={width}
-            height={height}
-            datasetKeyProvider={datasetKeyProvider}
-        />
-    );
-};
+export const HorizontalBarChart = forwardRef<any, IBarProps>(
+    ({ data, options, width, height, plugins }, ref) => {
+        const datasetKeyProvider = () => {
+            return Math.random().toString();
+        };
+        return (
+            <HorizontalBar
+                data={data}
+                options={options}
+                width={width}
+                height={height}
+                datasetKeyProvider={datasetKeyProvider}
+                ref={ref}
+                plugins={plugins}
+            />
+        );
+    }
+);
+
+HorizontalBarChart.displayName = "HorizontalBarChart";
 
 export const LineChart: FC<IBarProps> = ({ data, options, width, height }) => {
     const datasetKeyProvider = () => {

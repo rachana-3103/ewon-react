@@ -5,7 +5,7 @@ import styled, {
     ColorProps,
     device,
 } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import { CardHeader, Dropdown } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     display: flex;
@@ -15,6 +15,10 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     ${device.small} {
         flex-direction: column;
         align-items: flex-start;
+    }
+    ${device.medium} {
+        flex-direction: row;
+        align-items: center;
     }
 `;
 
@@ -27,9 +31,45 @@ export const StyledHeaderText = styled.span`
     ${device.small} {
         margin-top: 5px;
     }
+    ${device.medium} {
+        margin-top: 0;
+    }
     i {
         margin-left: 2px;
         font-size: 10px;
+    }
+`;
+
+export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
+    ${device.small} {
+        margin-top: 5px;
+    }
+    ${device.medium} {
+        margin-top: 0;
+    }
+    .btn {
+        font-size: 12px;
+        color: ${themeGet("colors.text3")};
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        i {
+            margin-left: 2px;
+            font-size: 10px;
+        }
+    }
+    .item {
+        margin: 0;
+        padding: 5px 8px;
+        font-size: 13px;
+        color: ${themeGet("colors.text3")};
+        background: transparent;
+        border: none;
+        display: block;
+    }
+    .dropdown-menu {
+        left: auto;
+        right: 0px;
     }
 `;
 

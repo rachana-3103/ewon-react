@@ -28,11 +28,9 @@ import {
 const TicketStatus: FC = () => {
     const { series, options } = ticketChart;
     const chartToggle = (e: MouseEvent<HTMLButtonElement>) => {
-        ApexCharts.exec(
-            options.chart.id,
-            "toggleSeries",
-            e.currentTarget.value
-        );
+        const target = e.currentTarget;
+        target.classList.toggle("hidden");
+        ApexCharts.exec(options.chart.id, "toggleSeries", target.value);
     };
     return (
         <Card>

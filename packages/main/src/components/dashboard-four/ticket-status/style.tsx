@@ -37,6 +37,9 @@ export const StyledListItem = styled.button`
     padding: 0;
     background: transparent;
     border: none;
+    &.hidden {
+        text-decoration: line-through;
+    }
     &:not(:last-child) {
         margin-right: 0.5rem;
     }
@@ -64,7 +67,7 @@ export const StyledListText = styled.span`
     span {
         display: none;
         ${device.medium} {
-            display: inline-block;
+            display: inherit;
         }
     }
 `;

@@ -37,6 +37,9 @@ export const StyledListItem = styled.button`
     padding: 0;
     background: transparent;
     border: none;
+    &.hidden {
+        text-decoration: line-through;
+    }
     &:not(:last-child) {
         margin-right: 0.5rem;
     }

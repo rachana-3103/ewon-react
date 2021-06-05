@@ -56,11 +56,14 @@ const RealTimeSales: FC = () => {
                     <StyledList>
                         {inputEl.current.chartInstance.legend.legendItems.map(
                             (tick: any) => {
+                                const chart = inputEl.current.chartInstance;
                                 const bgColor: string =
                                     typeof tick.fillStyle === "string"
                                         ? tick.fillStyle // lines
                                         : "linear-gradient(to bottom, #13B080, rgba(23,172,126,0.4))"; // canvas gradient
-
+                                const isHidden = chart.getDatasetMeta(
+                                    tick.datasetIndex
+                                ).hidden;
                                 return (
                                     <StyledListItem
                                         type="button"
@@ -68,6 +71,7 @@ const RealTimeSales: FC = () => {
                                         onClick={() =>
                                             handleLegendClick(tick.datasetIndex)
                                         }
+                                        className={isHidden ? "hidden" : ""}
                                     >
                                         <StyledBullet bg={bgColor} />
                                         <div style={{ background: bgColor }} />

@@ -15,7 +15,7 @@ const Transactions: FC = () => {
         <Card height={[null, null, "100%"]}>
             <StyledHeader>
                 <SectionTitle title="Transactions" />
-                <StyledHeaderText>
+                <StyledHeaderText path="/invoice">
                     View All Transactions{" "}
                     <ArrowRight width="15px" height="15px" />
                 </StyledHeaderText>

@@ -20,16 +20,16 @@ const MessageDropdown: React.FC = () => {
             </DropdownToggle>
             <StyledDropMenu>
                 <StyledDropHeader>View all Messages</StyledDropHeader>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/apps/chat">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/apps/chat">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/apps/chat">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/apps/chat">
                     <Notification />
                 </StyledDropItem>
                 <StyledDropFooter>

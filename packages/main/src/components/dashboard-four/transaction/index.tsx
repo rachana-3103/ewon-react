@@ -112,7 +112,7 @@ const Transaction: FC = () => {
                 </ListGroupItem>
             </ListGroup>
             <StyledFooter>
-                <StyledFooterLink href="#">
+                <StyledFooterLink href="/invoice">
                     View All Transactions{" "}
                     <i className="icon ion-md-arrow-down mg-l-5" />
                 </StyledFooterLink>

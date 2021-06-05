@@ -55,11 +55,11 @@ const ProfileDropdown: React.FC = () => {
                     <LifeBuoy size="24" />
                     Forum
                 </StyledDropItem>
-                <StyledDropItem path="/" mt="10px">
+                <StyledDropItem path="/profile-view" mt="10px">
                     <Settings size="24" />
                     Account Settings
                 </StyledDropItem>
-                <StyledDropItem path="/" mt="10px">
+                <StyledDropItem path="/profile-view" mt="10px">
                     <Settings size="24" />
                     Privacy Settings
                 </StyledDropItem>

@@ -1,5 +1,5 @@
 import styled, { themeGet, device, css } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import { CardHeader, Anchor } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     display: flex;
@@ -15,7 +15,7 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     }
 `;
 
-export const StyledHeaderText = styled.span`
+export const StyledHeaderText = styled(({ ...rest }) => <Anchor {...rest} />)`
     font-size: 12px;
     color: ${themeGet("colors.text3")};
     display: flex;

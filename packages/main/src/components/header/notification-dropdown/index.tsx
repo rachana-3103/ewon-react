@@ -20,20 +20,20 @@ const NotificationDropdown: React.FC = () => {
             </DropdownToggle>
             <StyledDropMenu>
                 <StyledDropHeader>NOTIFICATIONS</StyledDropHeader>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/profile-view">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/profile-view">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/profile-view">
                     <Notification />
                 </StyledDropItem>
-                <StyledDropItem path="/">
+                <StyledDropItem path="/profile-view">
                     <Notification />
                 </StyledDropItem>
                 <StyledDropFooter>
-                    <Link to="/">View all Notifications</Link>
+                    <Link to="/profile-view">View all Notifications</Link>
                 </StyledDropFooter>
             </StyledDropMenu>
         </Dropdown>

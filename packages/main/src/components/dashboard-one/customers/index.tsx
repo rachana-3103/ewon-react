@@ -43,7 +43,7 @@ const Customers: FC = () => {
                 ))}
             </ListGroup>
             <StyledFooter>
-                <StyledFooterLink href="#">
+                <StyledFooterLink href="/profile-view">
                     View More Customers{" "}
                     <i className="icon ion-md-arrow-down mg-l-5" />
                 </StyledFooterLink>

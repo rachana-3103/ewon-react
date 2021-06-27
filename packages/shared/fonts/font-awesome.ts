@@ -5690,7 +5690,7 @@ readers do not read off random characters that represent icons */
         font-family: "Font Awesome 5 Brands";
         font-style: normal;
         font-weight: normal;
-        font-display: auto;
+        font-display: swap;
         src: url(${FaBrands400Eot});
         src: url(${FaBrands400Eot}) format("embedded-opentype"),
             url(${FaBrands400Woff2}) format("woff2"),
@@ -5706,7 +5706,7 @@ readers do not read off random characters that represent icons */
         font-family: "Font Awesome 5 Free";
         font-style: normal;
         font-weight: 400;
-        font-display: auto;
+        font-display: swap;
         src: url(${FaRegular400Eot});
         src: url(${FaRegular400Eot}) format("embedded-opentype"),
             url(${FaRegular400Woff2}) format("woff2"),
@@ -5723,7 +5723,7 @@ readers do not read off random characters that represent icons */
         font-family: "Font Awesome 5 Free";
         font-style: normal;
         font-weight: 900;
-        font-display: auto;
+        font-display: swap;
         src: url(${FaSolid900Eot});
         src: url(${FaSolid900Eot}) format("embedded-opentype"),
             url(${FaSolid900Woff2}) format("woff2"),

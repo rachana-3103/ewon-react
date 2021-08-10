@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Preloader from "./components/preloader";
-import SettingsCard from "./components/settings";
 
 const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
@@ -108,7 +107,7 @@ const App: React.FC = () => {
                 </Suspense>
             </Router>
 
-            <SettingsCard />
+            {/* <SettingsCard /> */}
         </>
     );
 };

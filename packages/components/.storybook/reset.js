@@ -1,4 +1,4 @@
-import { createGlobalStyle } from '@doar/shared/styled';
+import { createGlobalStyle, themeGet, device } from '@doar/shared/styled';
 // import {IbmFontSans, IonIcons} from "@doar/shared/fonts"
 
 export const ResetCSS = createGlobalStyle`
@@ -20,15 +20,18 @@ export const ResetCSS = createGlobalStyle`
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 400;
-        color: #001737;
-        font-size: 0.875rem;
-        background: #fff;
+        font-family: ${themeGet("fonts.heading")};
+        font-weight: ${themeGet("fontWeights.body")};
+        color: ${themeGet("colors.text")};
+        font-size: ${themeGet("fontSize.body")};
+        background: ${themeGet("colors.background")};
+        .docs-story{
+            background: ${themeGet("colors.background")};
+        }
     }
     a {
-        transition: all 0.4s ease 0s;
-        color: #001737;
+        transition: ${themeGet("transitions")};
+        color: ${themeGet("colors.text")};
         text-decoration: none;
     }
     a:hover{
@@ -46,41 +49,68 @@ export const ResetCSS = createGlobalStyle`
     .h4,
     .h5,
     .h6 {
-        font-family: 'IBM Plex Sans', sans-serif;
-        line-height: 1.25;
-        color: #001737;
-        font-weight: 500;
+        font-family: ${themeGet("fonts.heading")};
+        line-height: ${themeGet("lineHeights.heading")};
+        color: ${themeGet("colors.text")};
+        font-weight: ${themeGet("fontWeights.heading")};
         margin: 0;
         margin-bottom: 8px;
     }
     h1,
     .h1 {
-        font-size: 2.1875rem;
+        font-size: ${themeGet("fontSize.h1.0")};
+        ${device.small} {
+            font-size: ${themeGet("fontSize.h1.1")};
+        }
+        ${device.medium} {
+            font-size: ${themeGet("fontSize.h1.2")};
+        }
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h1.3")};
+        }
     }
     h2,
     .h2 {
-        font-size: 1.75rem;
+        font-size: ${themeGet("fontSize.h2.0")};
+        ${device.medium} {
+            font-size: ${themeGet("fontSize.h2.1")};
+        }
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h2.2")};
+        }
     }
     h3,
     .h3 {
-        font-size: 1.53125rem;
+        font-size: ${themeGet("fontSize.h3.0")};
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h3.1")};
+        }
     }
     h4,
     .h4 {
-        font-size: 1.3125rem;
+        font-size: ${themeGet("fontSize.h4.0")};
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h4.1")};
+        }
     }
     h5,
     .h5 {
-        font-size: 1.09375rem;
+        font-size: ${themeGet("fontSize.h5.0")};
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h5.1")};
+        }
     }
     h6,
     .h6 {
-        font-size: 0.875rem;
+        font-size: ${themeGet("fontSize.h6.0")};
+        ${device.large} {
+            font-size: ${themeGet("fontSize.h6.1")};
+        }
     }
     p {
         margin: 0 0 15px;
-        font-family: 'IBM Plex Sans', sans-serif;
-        color: #001737;
+        font-family: ${themeGet("fonts.heading")};
+        color: ${themeGet("colors.text")};
     }
     p:last-child, p:only-child {
         margin-bottom: 0;

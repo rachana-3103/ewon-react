@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Check } from "react-feather";
-import { TMode } from "./types";
+import { TTheme } from "@doar/shared/types";
 import { StyledMode, StyledSkinName } from "./style";
 
 interface IProps {
-    mode: TMode;
+    mode: TTheme;
     onClick: () => void;
     active?: boolean;
 }

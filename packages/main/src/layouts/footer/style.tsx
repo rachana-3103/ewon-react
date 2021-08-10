@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import styled, { themeGet, device } from "@doar/shared";
+import styled, { themeGet, device, tinycolor, css } from "@doar/shared";
 import { Anchor } from "@doar/components";
 
 export const StyledFooter = styled.footer`
@@ -17,6 +17,15 @@ export const StyledFooter = styled.footer`
         justify-content: space-between;
         flex-direction: row-reverse;
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-top-color: transparent;
+            box-shadow: 0 0 25px
+                ${tinycolor(themeGet("colors.skinUi01")(props))
+                    .setAlpha(0.1)
+                    .toRgbString()};
+        `}
 `;
 
 export const StyledFooterLeft = styled.div`

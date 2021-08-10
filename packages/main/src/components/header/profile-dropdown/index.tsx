@@ -23,7 +23,7 @@ import {
 
 const ProfileDropdown: React.FC = () => {
     return (
-        <Dropdown direction="down">
+        <Dropdown direction="down" className="dropdown-profile">
             <DropdownToggle variant="texted">
                 <Avatar size="sm" shape="circle">
                     <AvatarInitial>df</AvatarInitial>

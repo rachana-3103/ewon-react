@@ -137,6 +137,23 @@ export const StyledSubmenu = styled.ul`
             transform: rotate(-135deg);
             background: #fff;
         }
+        ${(props) =>
+            props.theme.name === "cool" &&
+            css`
+                padding-top: 10px;
+                margin-top: 0;
+                border-color: ${tinycolor2(props.theme.colors.skinUi01)
+                    .lighten(45)
+                    .toString()};
+                border-top-color: transparent;
+                box-shadow: 0 15px 15px
+                    ${tinycolor2(props.theme.colors.skinUi01)
+                        .setAlpha(0.1)
+                        .toRgbString()};
+                &:before {
+                    opacity: 0;
+                }
+            `}
     }
 `;
 

@@ -1,6 +1,6 @@
 import styled, { css, themeGet } from "@doar/shared/styled";
 import { Rotating } from "@doar/shared/animations";
-import { TMode } from "./types";
+import { TTheme } from "@doar/shared/types";
 
 interface IProps {
     $show: boolean;
@@ -132,7 +132,7 @@ export const StyledLabel = styled.h4`
 `;
 
 interface IModeProps {
-    $mode: TMode;
+    $mode: TTheme;
     $active?: boolean;
 }
 

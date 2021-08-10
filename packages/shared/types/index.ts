@@ -123,3 +123,5 @@ export interface IRecentEarning {
         status: "up" | "down";
     };
 }
+
+export type TTheme = "classic" | "light" | "cool" | "dark";

@@ -751,4 +751,14 @@ export const StyledTable = styled(
                 border: 0;
             }
         `}
+    
+    tr th, tr td {
+        ${(props) =>
+            props.theme.name === "cool" &&
+            css`
+                border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+                    .lighten(46)
+                    .toString()};
+            `}
+    }
 `;

@@ -15,6 +15,7 @@ import styled, {
     border as borderStyles,
     BorderProps,
 } from "@doar/shared/styled";
+import tinycolor2 from "tinycolor2";
 import { Anchor } from "../anchor";
 
 const colorCSS = css`
@@ -92,6 +93,24 @@ export const StyledCard = styled(
         css`
             background-color: ${themeGet("colors.info")};
             ${colorCSS};
+        `}
+    ${(props) =>
+        props.theme.name === "light" &&
+        css`
+            box-shadow: 0 0 10px
+                ${tinycolor2(themeGet("colors.gray900")(props))
+                    .setAlpha(0.05)
+                    .toRgbString()};
+        `}
+
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-color: transparent;
+            box-shadow: 0 0 25px
+                ${tinycolor2(themeGet("colors.skinUi01")(props))
+                    .setAlpha(0.1)
+                    .toRgbString()};
         `}
     ${layout};
     ${space};
@@ -314,6 +333,13 @@ export const StyledCardHeader = styled(
             align-items: center;
             justify-content: space-between;
         `}
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+                .lighten(46)
+                .toString()};
+        `}
     ${space};
     ${typography};
     ${colorStyles};
@@ -348,6 +374,13 @@ export const StyledCardFooter = styled(
     &:last-of-type {
         border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+                .lighten(46)
+                .toString()};
+        `}
     ${space};
     ${borderStyles};
 `;

@@ -1,21 +1,42 @@
 import * as React from 'react';
 import { addDecorator } from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, theme } from '@doar/shared/styled';
-import {ResetCSS} from "./reset"
+import { ThemeProvider, themes } from '@doar/shared/styled';
+import {ResetCSS} from "./reset";
 
 addDecorator(StoryRouter());
 
-export const decorators = [
-  (Story) => (
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'classic',
+    toolbar: {
+      icon: 'box',
+      // Array of plain string values or MenuItem shape (see below)
+      items: ["classic", "light", "cool", "dark"],
+      // Property that specifies if the name of the item will be displayed
+      showName: true,
+    },
+  },
+};
+
+const getTheme = (themeName) => {
+  return themes[themeName]
+}
+
+const withThemeProvider=(Story,context)=>{
+  const theme = getTheme(context.globals.theme);
+  return (
     <ThemeProvider theme={theme}>
       <ResetCSS/>
       <div className="story-wrap">
-        <Story />
+        <Story {...context} />
       </div>
     </ThemeProvider>
   )
-];
+}
+export const decorators = [withThemeProvider];
 
 const customViewports = {
   extraLargeDevices: {

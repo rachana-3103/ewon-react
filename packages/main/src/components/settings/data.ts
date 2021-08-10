@@ -1,3 +1,3 @@
-import { TMode } from "./types";
+import { TTheme } from "@doar/shared/types";
 
-export const SkinModes: TMode[] = ["classic", "light", "cool", "dark"];
+export const SkinModes: TTheme[] = ["classic", "light", "cool", "dark"];

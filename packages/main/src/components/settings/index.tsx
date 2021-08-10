@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { Settings } from "react-feather";
 import { Row, Col } from "@doar/components";
+import { TTheme } from "@doar/shared/types";
 import { SkinModes } from "./data";
 import Mode from "./mode";
 import {
@@ -13,9 +14,13 @@ import {
     StyledLabel,
 } from "./style";
 
-const SettingsCard: FC = () => {
+interface IProps {
+    themeHandler: (el: TTheme) => void;
+    curTheme: TTheme;
+}
+
+const SettingsCard: FC<IProps> = ({ themeHandler, curTheme }) => {
     const [show, setShow] = useState(true);
-    const [skinModeActive, setSkinModeActive] = useState(SkinModes[0]);
 
     return (
         <StyledSettings $show={show}>
@@ -45,8 +50,8 @@ const SettingsCard: FC = () => {
                             >
                                 <Mode
                                     mode={el}
-                                    onClick={() => setSkinModeActive(el)}
-                                    active={skinModeActive === el}
+                                    onClick={() => themeHandler(el)}
+                                    active={curTheme === el}
                                 />
                             </Col>
                         ))}

@@ -8,6 +8,7 @@ import styled, {
     LayoutProps,
     layout,
 } from "@doar/shared/styled";
+import tinycolor2 from "tinycolor2";
 
 interface IListGroup extends SpaceProps {
     $horizontal?: boolean;
@@ -118,6 +119,13 @@ export const StyledListGroupItem = styled(
                 border-top-right-radius: 0.25rem;
                 border-bottom-left-radius: 0;
             }
+        `}
+        ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+                .lighten(46)
+                .toString()};
         `}
     ${space};
     ${flexbox};

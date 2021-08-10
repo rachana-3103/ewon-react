@@ -4,6 +4,7 @@ import styled, {
     layout,
     space,
     css,
+    tinycolor,
 } from "@doar/shared/styled";
 import { Button } from "@doar/components";
 
@@ -28,6 +29,19 @@ export const StyledHeader = styled.header`
         right: 0;
         z-index: 1000;
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+        border-bottom-color: ${tinycolor(themeGet("colors.skinUi01")(props))
+            .lighten(45)
+            .toString()};
+        box-shadow: 0 0 25px
+                    ${tinycolor(themeGet("colors.skinUi01")(props))
+                        .setAlpha(0.1)
+                        .toRgbString()};
+    }
+
+    `};
 `;
 
 export const StyledLogo = styled.div`
@@ -172,6 +186,29 @@ export const StyleNavbarRight = styled.div`
         order: 3;
         padding: 0 20px 0 0;
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            .dropdown-menu {
+                border-color: ${tinycolor(themeGet("colors.skinUi01")(props))
+                    .lighten(45)
+                    .toString()};
+                border-top-color: transparent;
+                box-shadow: 0 15px 15px
+                    ${tinycolor(themeGet("colors.skinUi01")(props))
+                        .setAlpha(0.1)
+                        .toRgbString()};
+                margin-top: 18.5px;
+                &:before {
+                    opacity: 0;
+                }
+            }
+            .dropdown-profile {
+                .dropdown-menu {
+                    margin-top: 13.5px;
+                }
+            }
+        `}
 `;
 
 export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (

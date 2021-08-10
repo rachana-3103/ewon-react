@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { device, theme } from "../styled";
+import { device, themeGet } from "../styled";
 
 import { IbmFontSans, InterUi, Rubik, FontAwesome } from "../fonts";
 
@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     input,
     select,
     textarea {
-        font-family: ${theme.fonts.body};
+        font-family: ${themeGet("fonts.body")};
     }
     a:focus {
         outline: thin dotted;
@@ -175,18 +175,18 @@ const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         margin: 0;
         padding: 0;
-        line-height: ${theme.lineHeights.body};
+        line-height: ${themeGet("lineHeights.body")};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-family: ${theme.fonts.body};
-        font-weight: ${theme.fontWeights.body};
-        color: ${theme.colors.text};
-        font-size: ${theme.fontSize.body};
-        background: ${theme.colors.background};
+        font-family: ${themeGet("fonts.body")};
+        font-weight: ${themeGet("fontWeights.body")};
+        color: ${themeGet("colors.text")};
+        font-size: ${themeGet("fontSize.body")};
+        background: ${themeGet("colors.background")};
     }
     a {
-        transition: ${theme.transition};
-        color: ${theme.colors.primary};
+        transition: ${themeGet("transition")};
+        color: ${themeGet("colors.primary")};
         text-decoration: none;
         &:hover {
             text-decoration: none;
@@ -209,69 +209,69 @@ const GlobalStyle = createGlobalStyle`
     .h4,
     .h5,
     .h6 {
-        font-family: ${theme.fonts.heading};
-        line-height: ${theme.lineHeights.heading};
-        color: ${theme.colors.heading};
-        font-weight: ${theme.fontWeights.heading};
+        font-family: ${themeGet("fonts.heading")};
+        line-height: ${themeGet("lineHeights.heading")};
+        color: ${themeGet("colors.heading")};
+        font-weight: ${themeGet("fontWeights.heading")};
         margin: 0;
         margin-bottom: 8px;
     }
     h1,
     .h1 {
-        font-size: ${theme.fontSize.h1[0]};
+        font-size: ${themeGet("fontSize.h1.0")};
         ${device.small} {
-            font-size: ${theme.fontSize.h1[1]};
+            font-size: ${themeGet("fontSize.h1.1")};
         }
         ${device.medium} {
-            font-size: ${theme.fontSize.h1[2]};
+            font-size: ${themeGet("fontSize.h1.2")};
         }
         ${device.large} {
-            font-size: ${theme.fontSize.h1[3]};
+            font-size: ${themeGet("fontSize.h1.3")};
         }
     }
     h2,
     .h2 {
-        font-size: ${theme.fontSize.h2[0]};
+        font-size: ${themeGet("fontSize.h2.0")};
         ${device.medium} {
-            font-size: ${theme.fontSize.h2[1]};
+            font-size: ${themeGet("fontSize.h2.1")};
         }
         ${device.large} {
-            font-size: ${theme.fontSize.h2[2]};
+            font-size: ${themeGet("fontSize.h2.2")};
         }
     }
     h3,
     .h3 {
-        font-size: ${theme.fontSize.h3[0]};
+        font-size: ${themeGet("fontSize.h3.0")};
         ${device.large} {
-            font-size: ${theme.fontSize.h3[1]};
+            font-size: ${themeGet("fontSize.h3.1")};
         }
     }
     h4,
     .h4 {
-        font-size: ${theme.fontSize.h4[0]};
+        font-size: ${themeGet("fontSize.h4.0")};
         ${device.large} {
-            font-size: ${theme.fontSize.h4[1]};
+            font-size: ${themeGet("fontSize.h4.1")};
         }
     }
     h5,
     .h5 {
-        font-size: ${theme.fontSize.h5[0]};
+        font-size: ${themeGet("fontSize.h5.0")};
         ${device.large} {
-            font-size: ${theme.fontSize.h5[1]};
+            font-size: ${themeGet("fontSize.h5.1")};
         }
     }
     h6,
     .h6 {
-        font-size: ${theme.fontSize.h6[0]};
+        font-size: ${themeGet("fontSize.h6.0")};
         ${device.large} {
-            font-size: ${theme.fontSize.h6[1]};
+            font-size: ${themeGet("fontSize.h6.1")};
         }
     }
     p {
         margin: 0 0 15px;
-        font-family: ${theme.fonts.body};
-        color: ${theme.colors.text};
-		font-weight: 400;
+        font-family: ${themeGet("fonts.body")};
+        color: ${themeGet("colors.text")};
+		font-weight:  ${themeGet("fontWeight.body")};
         &:last-child {
             margin-bottom: 0;
         }
@@ -283,13 +283,13 @@ const GlobalStyle = createGlobalStyle`
     select,
     textarea {
         background: transparent;
-        border: 1px solid ${theme.colors.border};
-        transition: ${theme.transition};
-        color: ${theme.colors.text};
+        border: 1px solid ${themeGet("colors.border")};
+        transition: ${themeGet("transition")};
+        color: ${themeGet("colors.text")};
         &:focus,
         &:active {
             outline: none;
-            border-color: ${theme.colors.primary};
+            border-color: ${themeGet("colors.primary")};
         }
     }
     input,
@@ -339,7 +339,7 @@ const GlobalStyle = createGlobalStyle`
         margin-top: 1rem;
         margin-bottom: 1rem;
         border: 0;
-        border-top: 1px solid ${theme.colors.border};
+        border-top: 1px solid ${themeGet("colors.border")};
     }
 	
 `;

@@ -1,4 +1,4 @@
-import styled, { themeGet, device } from "@doar/shared/styled";
+import styled, { themeGet, device, css, tinycolor } from "@doar/shared/styled";
 
 export const StyledCard = styled.div`
     border: 1px solid ${themeGet("colors.border")};
@@ -9,6 +9,16 @@ export const StyledCard = styled.div`
     ${device.large} {
         height: 100px;
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            background-color: #fff;
+            border-color: transparent;
+            box-shadow: 0 0 25px
+                ${tinycolor(themeGet("colors.skinUi01")(props))
+                    .setAlpha(0.1)
+                    .toRgbString()};
+        `}
 `;
 
 export const StyledIcon = styled.span`

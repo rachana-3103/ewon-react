@@ -14,7 +14,8 @@ export const globalTypes = {
     toolbar: {
       icon: 'box',
       // Array of plain string values or MenuItem shape (see below)
-      items: ["classic", "light", "cool", "dark"],
+      // items: ["classic", "light", "cool", "dark"],
+      items: ["classic", "light", "cool"],
       // Property that specifies if the name of the item will be displayed
       showName: true,
     },

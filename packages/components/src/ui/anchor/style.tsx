@@ -10,6 +10,7 @@ import styled, {
     LayoutProps,
     css,
     themeGet,
+    tinycolor,
 } from "@doar/shared/styled";
 import { Link } from "react-router-dom";
 
@@ -22,7 +23,8 @@ const anchorStyle = css<IProps>`
         $variant === "link1" &&
         css`
             color: ${themeGet("colors.text")};
-            &:hover {
+            &:hover,
+            &:focus {
                 color: ${themeGet("colors.primary")};
             }
         `}
@@ -30,7 +32,8 @@ const anchorStyle = css<IProps>`
         $variant === "link2" &&
         css`
             color: ${themeGet("colors.text2")};
-            &:hover {
+            &:hover,
+            &:focus {
                 color: ${themeGet("colors.primary")};
             }
         `}
@@ -38,11 +41,41 @@ const anchorStyle = css<IProps>`
         $variant === "link3" &&
         css`
             color: ${themeGet("colors.text3")};
-            &:hover {
+            &:hover,
+            &:focus {
                 color: ${themeGet("colors.text2")};
             }
         `}
-
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            ${props.$variant === "link1" &&
+            css`
+                color: ${tinycolor(themeGet("colors.white")(props))
+                    .setAlpha(0.85)
+                    .toRgbString()};
+                &:hover,
+                &:focus {
+                    color: ${themeGet("colors.white")};
+                }
+            `}
+            ${props.$variant === "link2" &&
+            css`
+                color: ${themeGet("colors.gray300")};
+                &:hover,
+                &:focus {
+                    color: ${themeGet("colors.white")};
+                }
+            `}
+            ${props.$variant === "link3" &&
+            css`
+                &:hover,
+                &:focus {
+                    color: ${themeGet("colors.white")};
+                }
+            `}
+        `}
+    
     ${space};
     ${colorStyles};
     ${typography};

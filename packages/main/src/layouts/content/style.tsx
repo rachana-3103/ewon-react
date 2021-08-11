@@ -45,6 +45,11 @@ const conentCSS = css<IProps>`
             border-bottom-style: solid;
             border-bottom-color: ${themeGet("colors.border")};
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+        `}
     ${space};
     ${borderStyle};
 `;

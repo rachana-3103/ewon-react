@@ -2,6 +2,17 @@ import tinycolor from "tinycolor2";
 
 const primary = "#0168fa";
 const secondary = "#5f6d88";
+const gray50 = "#fafbfc";
+const gray100 = "#f4f5f8";
+const gray200 = "#e3e7ed";
+const gray300 = "#cdd4e0";
+const gray400 = "#b4bdce";
+const gray500 = "#97a3b9";
+const gray600 = "#7987a1";
+const gray700 = "#596882";
+const gray800 = "#3b4863";
+const gray900 = "#1c273c";
+const gray950 = "#637388";
 
 export const classic = {
     primary,
@@ -24,17 +35,17 @@ export const classic = {
     black: "#000000",
     close: "#1b2e4b",
     border: "#485e9029",
-    gray50: "#fafbfc",
-    gray100: "#f4f5f8",
-    gray200: "#e3e7ed",
-    gray300: "#cdd4e0",
-    gray400: "#b4bdce",
-    gray500: "#97a3b9",
-    gray600: "#7987a1",
-    gray700: "#596882",
-    gray800: "#3b4863",
-    gray900: "#1c273c",
-    gray950: "#637388",
+    gray50,
+    gray100,
+    gray200,
+    gray300,
+    gray400,
+    gray500,
+    gray600,
+    gray700,
+    gray800,
+    gray900,
+    gray950,
     whisper: "#f5f6fa",
     malibu: "#69b2f8",
     tropical: "#d1e6fa",
@@ -117,6 +128,7 @@ export const light = {
 
 const skinUi01 = tinycolor(primary).desaturate(20).toHexString();
 const coolBg = tinycolor(skinUi01).setAlpha(0.03).toRgbString();
+const coolBorder = tinycolor(skinUi01).lighten(46).toRgbString();
 
 export const cool = {
     primary,
@@ -138,18 +150,18 @@ export const cool = {
     white: "#ffffff",
     black: "#000000",
     close: "#1b2e4b",
-    border: "#485e9029",
-    gray50: "#fafbfc",
-    gray100: "#f4f5f8",
-    gray200: "#e3e7ed",
-    gray300: "#cdd4e0",
-    gray400: "#b4bdce",
-    gray500: "#97a3b9",
-    gray600: "#7987a1",
-    gray700: "#596882",
-    gray800: "#3b4863",
-    gray900: "#1c273c",
-    gray950: "#637388",
+    border: coolBorder,
+    gray50,
+    gray100,
+    gray200,
+    gray300,
+    gray400,
+    gray500,
+    gray600,
+    gray700,
+    gray800,
+    gray900,
+    gray950,
     whisper: "#f5f6fa",
     malibu: "#69b2f8",
     tropical: "#d1e6fa",
@@ -175,6 +187,9 @@ export const cool = {
     skinUi01,
 };
 
+const darkBg = tinycolor(gray900).darken(5).toString();
+// const darkBorder = tinycolor(gray900).lighten(5).toString();
+
 export const dark = {
     primary,
     secondary,
@@ -184,29 +199,29 @@ export const dark = {
     danger: "#dc3545",
     light: "#e5e9f2",
     dark: "#3b4863",
-    text: "#001737",
-    text2: "#1b2e4b",
+    text: "#ffffff",
+    text2: gray300,
     text3: "#8392a5",
-    text4: "#c0ccda",
-    heading: "#001737",
+    text4: tinycolor(gray700).setAlpha(0.7).toRgbString(),
+    heading: "#ffffff",
     link: "#001737",
-    background: "#000000",
+    background: darkBg,
     hover: primary,
     white: "#ffffff",
     black: "#000000",
-    close: "#1b2e4b",
+    close: gray300,
     border: "#485e9029",
-    gray50: "#fafbfc",
-    gray100: "#f4f5f8",
-    gray200: "#e3e7ed",
-    gray300: "#cdd4e0",
-    gray400: "#b4bdce",
-    gray500: "#97a3b9",
-    gray600: "#7987a1",
-    gray700: "#596882",
-    gray800: "#3b4863",
-    gray900: "#1c273c",
-    gray950: "#637388",
+    gray50,
+    gray100,
+    gray200,
+    gray300,
+    gray400,
+    gray500,
+    gray600,
+    gray700,
+    gray800,
+    gray900,
+    gray950,
     whisper: "#f5f6fa",
     malibu: "#69b2f8",
     tropical: "#d1e6fa",

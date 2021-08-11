@@ -19,15 +19,16 @@ import {
     StyledAuthorRole,
     StyledDropItem,
     StyledDivider,
+    StyledAvatar,
 } from "./style";
 
 const ProfileDropdown: React.FC = () => {
     return (
         <Dropdown direction="down" className="dropdown-profile">
             <DropdownToggle variant="texted">
-                <Avatar size="sm" shape="circle">
+                <StyledAvatar size="sm" shape="circle">
                     <AvatarInitial>df</AvatarInitial>
-                </Avatar>
+                </StyledAvatar>
             </DropdownToggle>
             <StyledDropMenu>
                 <Avatar size="lg" shape="circle">

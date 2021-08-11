@@ -1,4 +1,4 @@
-import styled, { css, device, themeGet } from "@doar/shared/styled";
+import styled, { css, device, themeGet, tinycolor } from "@doar/shared/styled";
 import { Button, Input } from "@doar/components";
 import { hexTorgb } from "@doar/shared/methods";
 
@@ -40,6 +40,12 @@ export const StyledSearchHeader = styled.div`
     ${device.large} {
         padding: 0 25px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-bottom-width: 0;
+        `}
 `;
 
 export const StyledSearchInput = styled(({ ...rest }) => <Input {...rest} />)`
@@ -74,6 +80,14 @@ export const StyledSearchInput = styled(({ ...rest }) => <Input {...rest} />)`
         box-shadow: none;
         color: ${themeGet("colors.text")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        `}
 `;
 
 export const StyledSearchBtn = styled(({ ...rest }) => <Button {...rest} />)`
@@ -83,6 +97,15 @@ export const StyledSearchBtn = styled(({ ...rest }) => <Button {...rest} />)`
         stroke-width: 2.8px;
         margin-top: -2px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        `}
 `;
 
 export const StyledSearchClose = styled(({ ...rest }) => <Button {...rest} />)`
@@ -103,6 +126,23 @@ export const StyledSearchBody = styled.div`
     ${device.large} {
         padding: 25px 25px 30px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(2)
+                .toString()};
+            a {
+                color: ${themeGet("colors.gray500")};
+                border-color: ${themeGet("colors.gray700")};
+                &:hover,
+                &:focus {
+                    background-color: ${themeGet("colors.primary")};
+                    color: #fff;
+                    border-color: transparent;
+                }
+            }
+        `}
 `;
 
 export const StyledSearchTitle = styled.h6`

@@ -20,7 +20,7 @@ interface IProps {
 }
 
 const SettingsCard: FC<IProps> = ({ themeHandler, curTheme }) => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
 
     return (
         <StyledSettings $show={show}>
@@ -42,12 +42,7 @@ const SettingsCard: FC<IProps> = ({ themeHandler, curTheme }) => {
                     <StyledLabel>Skin Mode</StyledLabel>
                     <Row gutters={10}>
                         {SkinModes.map((el, i) => (
-                            <Col
-                                xs={4}
-                                sm={4}
-                                key={el}
-                                mt={i === SkinModes.length - 1 ? "10px" : 0}
-                            >
+                            <Col xs={4} sm={4} key={el} mt={i > 2 ? "10px" : 0}>
                                 <Mode
                                     mode={el}
                                     onClick={() => themeHandler(el)}

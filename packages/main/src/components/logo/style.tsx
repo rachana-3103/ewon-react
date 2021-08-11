@@ -1,4 +1,4 @@
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledLogo = styled(({ ...rest }) => <Anchor {...rest} />)`
@@ -22,4 +22,9 @@ export const StyledLogo = styled(({ ...rest }) => <Anchor {...rest} />)`
     ${device.large} {
         font-size: 24px;
     }
+    ${({ theme }) =>
+        theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.white")};
+        `}
 `;

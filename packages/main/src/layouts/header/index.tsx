@@ -146,7 +146,11 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                 </StyledNavbarWrap>
                 <StyleNavbarRight>
                     <StyledNavbarElement>
-                        <Button variant="texted" onClick={searchHandler}>
+                        <Button
+                            variant="texted"
+                            onClick={searchHandler}
+                            className="search-btn"
+                        >
                             <Search className="header-icon" />
                         </Button>
                     </StyledNavbarElement>

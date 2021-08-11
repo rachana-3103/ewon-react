@@ -1,4 +1,4 @@
-import styled, { themeGet, device, css } from "@doar/shared/styled";
+import styled, { themeGet, device, css, tinycolor } from "@doar/shared/styled";
 import { CardHeader, Anchor } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
@@ -42,6 +42,13 @@ export const StyledListIitem = styled.li`
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid ${themeGet("colors.light")};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .lighten(5)
+                .toString()};
+        `}
 `;
 
 export const StyledListLabel = styled.li`
@@ -57,6 +64,16 @@ export const StyledListLabel = styled.li`
     &:first-of-type {
         border-top-width: 0;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(2)
+                .toString()};
+            border-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .lighten(5)
+                .toString()};
+        `}
 `;
 
 interface IStatus {

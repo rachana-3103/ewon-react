@@ -89,6 +89,11 @@ export const StyledNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     &:focus {
         outline: none;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+        `}
 `;
 
 export const StyledSubmenu = styled.ul`
@@ -154,6 +159,36 @@ export const StyledSubmenu = styled.ul`
                     opacity: 0;
                 }
             `}
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                border-width: 0;
+                ${device.large} {
+                    background-color: ${tinycolor2(props.theme.colors.gray900)
+                        .lighten(5)
+                        .toString()};
+                }
+                &::before {
+                    border-bottom-color: ${tinycolor2(
+                        props.theme.colors.gray900
+                    )
+                        .lighten(5)
+                        .toString()};
+                    border-right-color: ${tinycolor2(props.theme.colors.gray900)
+                        .lighten(5)
+                        .toString()};
+                    background: ${tinycolor2(props.theme.colors.gray900)
+                        .lighten(5)
+                        .toString()};
+                }
+                &::after {
+                    border-bottom-color: ${tinycolor2(
+                        props.theme.colors.gray900
+                    )
+                        .lighten(5)
+                        .toString()};
+                }
+            `}
     }
 `;
 
@@ -183,6 +218,11 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
             display: block;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+        `}
 `;
 
 export const StyledMegaMenu = styled.div`
@@ -232,6 +272,32 @@ export const StyledMegaMenu = styled.div`
             background: #fff;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            ${device.large} {
+                background-color: ${tinycolor2(props.theme.colors.gray900)
+                    .lighten(5)
+                    .toString()};
+                border-width: 0;
+            }
+            &::before {
+                border-bottom-color: ${tinycolor2(props.theme.colors.gray900)
+                    .lighten(5)
+                    .toString()};
+                border-right-color: ${tinycolor2(props.theme.colors.gray900)
+                    .lighten(5)
+                    .toString()};
+                background: ${tinycolor2(props.theme.colors.gray900)
+                    .lighten(5)
+                    .toString()};
+            }
+            &::after {
+                border-bottom-color: ${tinycolor2(props.theme.colors.gray900)
+                    .lighten(5)
+                    .toString()};
+            }
+        `}
 `;
 
 export const StyledMegaMenuInner = styled.div`
@@ -251,7 +317,7 @@ export const StyledMegamenuList = styled.ul`
     padding: 0;
     list-style: none;
     &:not(:first-of-type) {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     ${device.large} {
         flex-basis: 47%;
@@ -262,7 +328,7 @@ export const StyledMegamenuList = styled.ul`
             border-left: 1px solid ${themeGet("colors.border")};
         }
         &:not(:nth-of-type(-n + 2)) {
-            padding-top: 20px;
+            padding-top: 10px;
         }
     }
 `;
@@ -276,4 +342,9 @@ export const StyledMegamenuLabel = styled.li`
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray700")};
+        `}
 `;

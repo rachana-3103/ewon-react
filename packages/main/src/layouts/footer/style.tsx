@@ -26,6 +26,20 @@ export const StyledFooter = styled.footer`
                     .setAlpha(0.1)
                     .toRgbString()};
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-top-width: 0;
+
+            a {
+                color: ${themeGet("colors.gray500")};
+                &:hover,
+                &:focus {
+                    color: #fff;
+                }
+            }
+        `}
 `;
 
 export const StyledFooterLeft = styled.div`

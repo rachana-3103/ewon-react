@@ -761,4 +761,9 @@ export const StyledTable = styled(
                     .toString()};
             `}
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: inherit;
+        `}
 `;

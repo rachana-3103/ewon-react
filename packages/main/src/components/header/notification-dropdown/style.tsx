@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 import { hexTorgb } from "@doar/shared/methods";
 import { DropdownMenu, Anchor } from "@doar/components";
 
@@ -66,6 +66,11 @@ export const StyledDropHeader = styled.div`
     color: ${themeGet("colors.text2")};
     border-bottom: 1px solid ${themeGet("colors.border")};
     margin-bottom: 5px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.white")};
+        `}
 `;
 
 export const StyledDropItem = styled((props) => <Anchor {...props} />)`
@@ -79,6 +84,26 @@ export const StyledDropItem = styled((props) => <Anchor {...props} />)`
     &:hover {
         background-color: ${(props) => hexTorgb(props.theme.colors.light, 0.5)};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .avatar:after {
+                box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+            }
+            &:hover,
+            &:focus {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(5)
+                    .toString()};
+
+                .avatar::after {
+                    box-shadow: 0 0 0 2px
+                        ${tinycolor(themeGet("colors.gray900")(props))
+                            .lighten(5)
+                            .toString()};
+                }
+            }
+        `}
 `;
 
 export const StyledDropFooter = styled.div`
@@ -93,6 +118,19 @@ export const StyledDropFooter = styled.div`
     a {
         color: ${themeGet("colors.text3")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: ${tinycolor(themeGet("colors.gray100")(props))
+                .darken(70)
+                .toString()};
+            &:hover,
+            &:focus {
+                a {
+                    color: ${themeGet("colors.primary")};
+                }
+            }
+        `}
 `;
 
 export const StyledBadge = styled.span`

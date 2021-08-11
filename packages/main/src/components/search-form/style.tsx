@@ -1,4 +1,4 @@
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 
 export const StyledForm = styled.form`
     display: flex;
@@ -30,5 +30,10 @@ export const StyledForm = styled.form`
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         color: ${themeGet("colors.text3")};
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                background-color: ${themeGet("colors.gray800")};
+            `}
     }
 `;

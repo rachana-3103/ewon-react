@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledNav, StyledBreadcrumb, StyledBreadcrumbItem } from "./style";
 
@@ -19,16 +20,16 @@ export const Breadcrumb: React.FC<IBreadcrumb> = ({
     className,
     as,
     ...restProps
-}) => {
-    const classes = className || "";
-    return (
-        <StyledNav aria-label="breadcrumb" as={as}>
-            <StyledBreadcrumb className={classes} {...restProps}>
-                {children}
-            </StyledBreadcrumb>
-        </StyledNav>
-    );
-};
+}) => (
+    <StyledNav aria-label="breadcrumb" as={as}>
+        <StyledBreadcrumb
+            className={classnames(className, "breadcrumb")}
+            {...restProps}
+        >
+            {children}
+        </StyledBreadcrumb>
+    </StyledNav>
+);
 
 interface IBreadcrumbItem {
     path?: string;
@@ -41,16 +42,13 @@ export const BreadcrumbItem: React.FC<IBreadcrumbItem> = ({
     path,
     active,
     className,
-}) => {
-    const classes = className || "";
-    return (
-        <StyledBreadcrumbItem
-            className={classes}
-            $active={active}
-            aria-current={active && "page"}
-        >
-            {active && children}
-            {!active && path && <Link to={path}>{children}</Link>}
-        </StyledBreadcrumbItem>
-    );
-};
+}) => (
+    <StyledBreadcrumbItem
+        className={classnames(className, "breadcrumb-item", active && "active")}
+        $active={active}
+        aria-current={active && "page"}
+    >
+        {active && children}
+        {!active && path && <Link to={path}>{children}</Link>}
+    </StyledBreadcrumbItem>
+);

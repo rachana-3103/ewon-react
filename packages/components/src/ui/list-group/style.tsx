@@ -127,6 +127,12 @@ export const StyledListGroupItem = styled(
                 .lighten(46)
                 .toString()};
         `}
+        ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: inherit;
+            border-color: rgba(255, 255, 255, 0.025);
+        `}
     ${space};
     ${flexbox};
     ${layout}

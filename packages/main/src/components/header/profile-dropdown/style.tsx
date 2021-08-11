@@ -1,5 +1,11 @@
-import styled, { device, themeGet, space } from "@doar/shared/styled";
-import { DropdownMenu, Anchor } from "@doar/components";
+import styled, {
+    device,
+    themeGet,
+    css,
+    space,
+    tinycolor,
+} from "@doar/shared/styled";
+import { DropdownMenu, Anchor, Avatar } from "@doar/components";
 
 export const StyledDropMenu = styled(({ ...rest }) => (
     <DropdownMenu {...rest} />
@@ -50,6 +56,18 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     }
 `;
 
+export const StyledAvatar = styled(({ ...rest }) => <Avatar {...rest} />)`
+    transition: all 0.3s;
+    &:hover {
+        border: 2px solid ${themeGet("colors.gray300")};
+        ${({ theme }) =>
+            theme.name === "dark" &&
+            css`
+                border-color: ${themeGet("colors.gray800")};
+            `}
+    }
+`;
+
 StyledDropMenu.displayName = "DropdownMenu";
 
 export const StyledAuthorName = styled.h6`
@@ -77,11 +95,17 @@ export const StyledDropItem = styled(({ mt, ...rest }) => <Anchor {...rest} />)`
     clear: both;
     font-weight: 400;
     width: 100%;
+    font-size: 13px;
     svg {
         width: 16px;
         height: 16px;
         margin-right: 15px;
     }
+    ${({ theme }) =>
+        theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+        `}
     ${space}
 `;
 
@@ -90,4 +114,11 @@ export const StyledDivider = styled.div`
     overflow: hidden;
     border-top: 1px solid ${themeGet("colors.gray200")};
     margin: 15px 0;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: ${tinycolor(themeGet("colors.white")(props))
+                .setAlpha(0.06)
+                .toRgbString()};
+        `}
 `;

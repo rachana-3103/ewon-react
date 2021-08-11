@@ -193,6 +193,11 @@ export const StyledNavLink = styled(
                 font-weight: 400;
                 font-size: 11px;
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    color: ${themeGet("colors.gray500")};
+                `}
         `}
 	${({ $active, $customStyle }) =>
         !!$active &&

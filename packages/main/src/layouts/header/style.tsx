@@ -32,16 +32,20 @@ export const StyledHeader = styled.header`
     ${(props) =>
         props.theme.name === "cool" &&
         css`
-        border-bottom-color: ${tinycolor(themeGet("colors.skinUi01")(props))
-            .lighten(45)
-            .toString()};
-        box-shadow: 0 0 25px
-                    ${tinycolor(themeGet("colors.skinUi01")(props))
-                        .setAlpha(0.1)
-                        .toRgbString()};
-    }
-
-    `};
+            border-bottom-color: ${tinycolor(themeGet("colors.skinUi01")(props))
+                .lighten(45)
+                .toString()};
+            box-shadow: 0 0 25px
+                ${tinycolor(themeGet("colors.skinUi01")(props))
+                    .setAlpha(0.1)
+                    .toRgbString()};
+        `};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-bottom-width: 0;
+        `};
 `;
 
 export const StyledLogo = styled.div`
@@ -135,6 +139,16 @@ export const StyledNavbarMenu = styled.nav<INavbar>`
         flex-direction: row;
         transform: translateX(0);
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .lighten(5)
+                .toString()};
+            ${device.large} {
+                background-color: transparent;
+            }
+        `}
 `;
 
 export const StyledNavbarHeader = styled.div`
@@ -147,6 +161,19 @@ export const StyledNavbarHeader = styled.div`
     ${device.large} {
         display: none;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-bottom-width: 0;
+
+            a:last-child {
+                &:hover,
+                &:focus {
+                    color: ${themeGet("colors.white")};
+                }
+            }
+        `}
 `;
 
 export const StyledNavbarBody = styled.div`
@@ -209,6 +236,37 @@ export const StyleNavbarRight = styled.div`
                 }
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .dropdown-menu {
+                border-width: 0;
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(5)
+                    .toString()};
+                &::before {
+                    opacity: 0;
+                }
+                &::after {
+                    border-bottom-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .lighten(5)
+                        .toString()};
+                }
+                margin-top: 16.5px;
+                ${device.large} {
+                    margin-top: 19px;
+                }
+            }
+            .dropdown-profile {
+                .dropdown-menu {
+                    ${device.large} {
+                        margin-top: 14px;
+                    }
+                }
+            }
+        `}
 `;
 
 export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
@@ -226,6 +284,15 @@ export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
             height: 20px;
             stroke-width: 2.25px;
         }
+        ${({ theme }) =>
+            theme.name === "dark" &&
+            css`
+                color: ${themeGet("colors.gray300")};
+                &:hover,
+                &:focus {
+                    color: ${themeGet("colors.white")};
+                }
+            `}
     }
 `;
 
@@ -262,6 +329,13 @@ export const StyledMenuBtn = styled(({ ...rest }) => (
 	${device.large} {
         display: none;
     }
+    ${({ theme }) =>
+        theme.name === "dark" &&
+        css`
+            &:hover {
+                color: ${themeGet("colors.white")};
+            }
+        `}
 `;
 
 export const StyledSidebarBtn = styled(({ ...rest }) => (
@@ -288,5 +362,12 @@ export const StyledSidebarBtn = styled(({ ...rest }) => (
         $sidebarOpen === true &&
         css`
             display: block;
+        `}
+    ${({ theme }) =>
+        theme.name === "dark" &&
+        css`
+            &:hover {
+                color: ${themeGet("colors.white")};
+            }
         `}
 `;

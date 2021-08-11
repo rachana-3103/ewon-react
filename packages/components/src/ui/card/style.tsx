@@ -112,6 +112,13 @@ export const StyledCard = styled(
                     .setAlpha(0.1)
                     .toRgbString()};
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-width: 0;
+            background-color: ${themeGet("colors.gray900")};
+            color: ${themeGet("colors.gray500")};
+        `}
     ${layout};
     ${space};
 `;

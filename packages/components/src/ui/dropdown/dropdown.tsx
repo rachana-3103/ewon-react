@@ -91,6 +91,7 @@ export const DropdownToggle: FC<ButtonProps> = (props) => {
 
 DropdownToggle.defaultProps = {
     label: "DropdownToggle",
+    className: "dropdown-toggle",
 };
 DropdownToggle.displayName = "DropdownToggle";
 

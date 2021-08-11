@@ -25,6 +25,11 @@ export const StyledProgress = styled(({ m, mb, mt, ml, mr, ...rest }) => (
     background-color: #e3e7ed;
     border-radius: ${themeGet("radii.rounded")};
     opacity: ${(props) => props.$opacity};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray700")};
+        `}
     ${space};
 `;
 

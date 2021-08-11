@@ -5,6 +5,7 @@ import styled, {
     typography,
     TypographyProps,
     themeGet,
+    css,
 } from "@doar/shared/styled";
 import { CardHeader, Table } from "@doar/components";
 
@@ -77,6 +78,11 @@ export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
     thead th,
     tbody td {
         border-color: ${themeGet("colors.light")};
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                border-color: rgba(255, 255, 255, 0.06);
+            `}
     }
 `;
 

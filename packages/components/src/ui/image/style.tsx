@@ -131,6 +131,13 @@ const groupCss = css<IGroup>`
                 }
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            img {
+                background-color: ${themeGet("gray900")};
+            }
+        `}
     ${flexbox};
     ${space};
 `;

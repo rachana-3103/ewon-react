@@ -146,6 +146,11 @@ export const StyledModal = styled.div<IModal>`
         border: 1px solid ${themeGet("colors.border")};
         outline: 0;
         border-radius: ${themeGet("radii.rounded")};
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                background-color: ${themeGet("colors.gray900")};
+            `}
     }
 `;
 

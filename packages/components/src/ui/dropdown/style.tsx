@@ -110,4 +110,9 @@ export const StyledDropDivider = styled.div`
     margin: 0.5rem 0;
     overflow: hidden;
     border-top: 1px solid #e3e7ed;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: rgba(#fff, 0.06);
+        `}
 `;

@@ -133,6 +133,24 @@ export const InputStyles = css<IInput>`
                 box-shadow: none;
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: transparent;
+            border-color: ${themeGet("colors.gray800")};
+            &::placeholder {
+                color: ${themeGet("colors.gray700")};
+            }
+            &:-ms-input-placeholder {
+                color: ${themeGet("colors.gray700")};
+            }
+            &::-ms-input-placeholder {
+                color: ${themeGet("colors.gray700")};
+            }
+            &:focus {
+                background-color: transparent;
+            }
+        `}
 
     ${space};
     ${borderStyles};

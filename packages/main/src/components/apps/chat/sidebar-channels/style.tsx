@@ -1,4 +1,4 @@
-import styled, { css, device } from "@doar/shared/styled";
+import styled, { css, device, themeGet, tinycolor } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-left: 10px;
@@ -58,8 +58,26 @@ export const StyledLink = styled(({ ...rest }) => (
         ${({ $active }) =>
             !!$active &&
             css`
-                color: #0168fa;
-                background-color: #eef0f7;
+                color: ${themeGet("colors.primary")};
+                background-color: ${themeGet("colors.catskill")};
+            `}
+        ${(props) =>
+            props.theme.name === "dark" &&
+            !!props.$active &&
+            css`
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(2)
+                    .toString()};
             `}
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                background-color: ${themeGet("colors.gray900")};
+                color: #fff;
+            }
+        `}
 `;

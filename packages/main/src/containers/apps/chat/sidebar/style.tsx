@@ -1,4 +1,4 @@
-import styled, { css } from "@doar/shared/styled";
+import styled, { css, tinycolor, themeGet } from "@doar/shared/styled";
 
 export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     background-color: #fff;
@@ -10,7 +10,7 @@ export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     transition: all 0.3s;
     @media (min-width: 480px) {
         width: 250px;
-        border-right: 1px solid rgba(72, 94, 144, 0.16);
+        border-right: 1px solid ${themeGet("colors.border")};
     }
     ${({ $sidebar }) =>
         $sidebar &&
@@ -19,11 +19,25 @@ export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
                 transform: translateX(-100vw);
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledHeader = styled.div`
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid ${themeGet("colors.border")};
     height: 60px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+        `}
 `;
 export const StyledBody = styled.div`
     display: flex;
@@ -40,7 +54,14 @@ export const StyledFooter = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    border-top: 1px solid rgba(72, 94, 144, 0.16);
+    border-top: 1px solid ${themeGet("colors.border")};
     padding-left: 20px;
     padding-right: 15px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+        `}
 `;

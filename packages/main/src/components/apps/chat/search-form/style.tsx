@@ -1,4 +1,4 @@
-import styled, { themeGet, device } from "@doar/shared/styled";
+import styled, { themeGet, device, css } from "@doar/shared/styled";
 import { Input, Button } from "@doar/components";
 
 export const StyledForm = styled.form`
@@ -20,6 +20,14 @@ export const StyledForm = styled.form`
             & + button {
                 border-color: ${themeGet("colors.primary")};
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    border-color: ${themeGet("colors.gray800")};
+                    & + button {
+                        border-color: ${themeGet("colors.gray800")};
+                    }
+                `}
         }
     }
 `;
@@ -33,6 +41,11 @@ export const StyledInput = styled(({ ...rest }) => <Input {...rest} />)`
     height: 100%;
     min-height: 0;
     background-color: transparent;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: rgba(255, 255, 255, 0.08);
+        `}
 `;
 
 export const StyledButton = styled(({ ...rest }) => <Button {...rest} />)`
@@ -51,4 +64,13 @@ export const StyledButton = styled(({ ...rest }) => <Button {...rest} />)`
         height: 18px;
         stroke-width: 2.5px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: rgba(255, 255, 255, 0.08);
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        `}
 `;

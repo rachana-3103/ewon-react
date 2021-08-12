@@ -1,4 +1,4 @@
-import styled, { device, css } from "@doar/shared/styled";
+import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
 export const StyledMain = styled.div<{ $sidebar?: boolean }>`
     position: absolute;
@@ -28,6 +28,13 @@ export const StyledMain = styled.div<{ $sidebar?: boolean }>`
                 transform: translateX(0);
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledHeader = styled.div`
@@ -36,12 +43,19 @@ export const StyledHeader = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid ${themeGet("colors.border")};
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px 10px 20px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+        `}
 `;
 
 export const StyledHeaderRight = styled.div`
@@ -61,6 +75,14 @@ export const StyledBody = styled.div<{ $showSidebar?: boolean }>`
                 margin-right: 230px;
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            .avatar:after {
+                box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+            }
+        `}
 `;
 
 export const StyledBodyInner = styled.div`
@@ -74,8 +96,15 @@ export const StyledFooter = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid rgba(72, 94, 144, 0.16);
+    border-top: 1px solid ${themeGet("colors.border")};
     height: 60px;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+        `}
 `;
 
 export const StyledSidebar = styled.div<{ $showSidebar?: boolean }>`
@@ -86,10 +115,20 @@ export const StyledSidebar = styled.div<{ $showSidebar?: boolean }>`
     bottom: 60px;
     right: 0;
     display: none;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     ${({ $showSidebar }) =>
         !!$showSidebar &&
         css`
             display: block;
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+            .avatar:after {
+                box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+            }
         `}
 `;

@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 export const StyledWrap = styled.div`
@@ -17,7 +17,7 @@ export const StyledList = styled.div`
 export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)`
     padding: 6px 10px;
     align-items: center;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     border-radius: 0.25rem;
     cursor: pointer;
     &:not(:first-of-type) {
@@ -25,6 +25,13 @@ export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)`
     }
     &:focus,
     &:hover {
-        background-color: #f5f6fa;
+        background-color: ${themeGet("colors.whisper")};
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(5)
+                    .toString()};
+            `}
     }
 `;

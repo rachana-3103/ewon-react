@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { css, themeGet, tinycolor } from "@doar/shared/styled";
 import { Dropdown } from "@doar/components";
 
 export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
@@ -63,6 +63,53 @@ export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
             margin: 5px 10px;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .dropdown {
+                &-toggle {
+                    & > span {
+                        color: ${themeGet("colors.gray800")};
+                    }
+                    &:hover,
+                    &:focus {
+                        > span {
+                            color: ${themeGet("colors.gray300")};
+                        }
+                    }
+                }
+                &-menu {
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .darken(2)
+                        .toString()};
+
+                    &::before {
+                        border-bottom-color: rgba(255, 255, 255, 0.08);
+                    }
+                    &::after {
+                        border-bottom-color: ${tinycolor(
+                            themeGet("colors.gray900")(props)
+                        )
+                            .darken(2)
+                            .toString()};
+                    }
+                }
+                &-item {
+                    color: ${themeGet("colors.gray500")};
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        background-color: ${tinycolor(
+                            themeGet("colors.gray900")(props)
+                        )
+                            .lighten(2)
+                            .toString()};
+                    }
+                }
+            }
+        `}
 `;
 
 StyledWrap.displayName = "Dropdown";

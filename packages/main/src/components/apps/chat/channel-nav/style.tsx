@@ -1,4 +1,4 @@
-import styled, { css, device } from "@doar/shared/styled";
+import styled, { css, device, themeGet } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledNav = styled.nav`
@@ -11,7 +11,7 @@ interface ILinkProps {
 }
 
 const linkCss = css<ILinkProps>`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     padding: 2px;
     border-radius: 0.25rem;
     display: flex;
@@ -25,7 +25,7 @@ const linkCss = css<ILinkProps>`
     ${({ $active }) =>
         !!$active &&
         css`
-            color: #1b2e4b;
+            color: ${themeGet("colors.text2")};
         `}
     span {
         margin-left: 5px;
@@ -34,6 +34,12 @@ const linkCss = css<ILinkProps>`
     svg {
         width: 20px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        !!props.$active &&
+        css`
+            color: ${themeGet("colors.primary")};
+        `}
 `;
 
 export const StyledLink = styled(({ ...rest }) => (

@@ -123,6 +123,11 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         css`
             &:after {
                 background-color: ${themeGet("colors.text4")};
+                ${(props) =>
+                    props.theme.name === "dark" &&
+                    css`
+                        background-color: ${themeGet("colors.gray500")};
+                    `}
             }
         `}
     

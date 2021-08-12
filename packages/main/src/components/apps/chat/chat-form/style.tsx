@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Input } from "@doar/components";
 
 export const StyledForm = styled.form`
@@ -12,13 +12,22 @@ export const StyldFile = styled.label`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8392a5;
-    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    color: ${themeGet("colors.text3")};
+    border-right: 1px solid ${themeGet("colors.border")};
     cursor: pointer;
     &:hover,
     &:focus {
-        color: #1b2e4b;
+        color: ${themeGet("colors.text2")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        `}
 `;
 
 export const StyledInput = styled(({ ...rest }) => <Input {...rest} />)`
@@ -27,6 +36,14 @@ export const StyledInput = styled(({ ...rest }) => <Input {...rest} />)`
     box-shadow: none !important;
     background-color: transparent;
     align-self: center;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+            &:placeholder {
+                color: ${themeGet("colors.gray800")};
+            }
+        `}
 `;
 
 export const StyledNav = styled.nav`
@@ -36,9 +53,9 @@ export const StyledNav = styled.nav`
     padding: 10px 20px;
     svg {
         width: 20px;
-        color: #8392a5;
+        color: ${themeGet("colors.text3")};
         &:hover {
-            color: #525f70;
+            color: ${themeGet("colors.cornflower")};
         }
     }
 `;
@@ -58,4 +75,13 @@ export const StyledBtn = styled.button`
     border: none;
     margin-left: 2px;
     line-height: 1;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        `}
 `;

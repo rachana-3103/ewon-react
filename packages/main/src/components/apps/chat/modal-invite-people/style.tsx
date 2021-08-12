@@ -1,5 +1,16 @@
-import styled, { device } from "@doar/shared/styled";
-import { ModalClose, ModalFooter } from "@doar/components";
+import styled, { device, themeGet } from "@doar/shared/styled";
+import { ModalClose, ModalFooter, Modal } from "@doar/components";
+
+export const StyledModal = styled(({ ...rest }) => <Modal {...rest} />)`
+    .form-control {
+        background-color: transparent;
+        color: ${themeGet("colors.gray300")};
+        border-color: ${themeGet("colors.gray700")};
+    }
+    .input-group .btn {
+        border-color: ${themeGet("colors.gray700")};
+    }
+`;
 
 export const StyledClose = styled(({ ...rest }) => <ModalClose {...rest} />)`
     position: absolute;
@@ -24,6 +35,6 @@ export const StyledFooter = styled(({ ...rest }) => <ModalFooter {...rest} />)`
 `;
 
 export const StyledText = styled.p`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 20px;
 `;

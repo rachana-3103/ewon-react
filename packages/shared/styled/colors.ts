@@ -124,6 +124,7 @@ export const light = {
     lilac: "#f8f9fc",
     catskill: "#eef0f7",
     gulf: "#031a61",
+    cornflower: "#525f70",
 };
 
 const skinUi01 = tinycolor(primary).desaturate(20).toHexString();
@@ -184,6 +185,7 @@ export const cool = {
     lilac: "#f8f9fc",
     catskill: "#eef0f7",
     gulf: "#031a61",
+    cornflower: "#525f70",
     skinUi01,
 };
 
@@ -244,4 +246,5 @@ export const dark = {
     lilac: "#f8f9fc",
     catskill: "#eef0f7",
     gulf: "#031a61",
+    cornflower: "#525f70",
 };

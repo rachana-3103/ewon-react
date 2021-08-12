@@ -1,14 +1,13 @@
 import { FC } from "react";
 import { X } from "react-feather";
 import {
-    Modal,
     ModalBody,
     Input,
     InputGroup,
     InputGroupAddon,
     Button,
 } from "@doar/components";
-import { StyledClose, StyledTitle, StyledText } from "./style";
+import { StyledModal, StyledClose, StyledTitle, StyledText } from "./style";
 
 interface IProps {
     show: boolean;
@@ -17,7 +16,7 @@ interface IProps {
 
 const ModalInvitePeople: FC<IProps> = ({ show, onClose }) => {
     return (
-        <Modal show={show} onClose={onClose}>
+        <StyledModal show={show} onClose={onClose}>
             <ModalBody p={["20px", "30px"]}>
                 <StyledClose onClose={onClose}>
                     <X size={20} />
@@ -42,7 +41,7 @@ const ModalInvitePeople: FC<IProps> = ({ show, onClose }) => {
                     </InputGroupAddon>
                 </InputGroup>
             </ModalBody>
-        </Modal>
+        </StyledModal>
     );
 };
 

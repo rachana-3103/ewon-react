@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { MediaBody } from "@doar/components";
 
 export const StyledGroup = styled.div`
@@ -19,7 +19,7 @@ export const StyledDivider = styled.div`
     display: flex;
     align-items: center;
     margin: 20px 0;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     font-size: 10px;
     font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
         sans-serif;
@@ -35,7 +35,7 @@ export const StyledDivider = styled.div`
         display: block;
         flex: 1;
         height: 1px;
-        background-color: #e5e9f2;
+        background-color: ${themeGet("colors.light")};
     }
     &:before {
         margin-right: 10px;
@@ -43,6 +43,14 @@ export const StyledDivider = styled.div`
     &:after {
         margin-left: 10px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            &::before,
+            &::after {
+                background-color: rgba(255, 255, 255, 0.06);
+            }
+        `}
 `;
 
 export const StyledItemBody = styled(({ ...rest }) => <MediaBody {...rest} />)`
@@ -51,10 +59,15 @@ export const StyledItemBody = styled(({ ...rest }) => <MediaBody {...rest} />)`
         font-size: 14px;
         font-weight: 600;
         small {
-            color: #8392a5;
+            color: ${themeGet("colors.text3")};
         }
     }
     p {
         margin-bottom: 5px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray700")};
+        `}
 `;

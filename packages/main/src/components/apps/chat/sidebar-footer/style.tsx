@@ -1,9 +1,16 @@
-import styled from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledWrap = styled.div`
     display: flex;
     align-items: center;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .avatar:after {
+                box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+            }
+        `}
 `;
 
 export const StyledLinks = styled.div`
@@ -13,7 +20,16 @@ export const StyledLinks = styled.div`
 
 export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
     padding: 3px 6px;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     border-radius: 0.25rem;
     line-height: 1;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        `}
 `;

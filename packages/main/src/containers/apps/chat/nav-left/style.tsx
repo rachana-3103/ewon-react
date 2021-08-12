@@ -1,4 +1,4 @@
-import styled, { css } from "@doar/shared/styled";
+import styled, { css, tinycolor, themeGet } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
@@ -16,6 +16,13 @@ export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
             @media (max-width: 479px) {
                 transform: translateX(-100vw);
             }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
         `}
 `;
 
@@ -54,6 +61,16 @@ export const StyledNavLink = styled(({ ...rest }) => (
             color: #0168fa;
             svg {
                 fill: rgba(1, 104, 250, 0.2);
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        !props.$active &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                color: #fff;
             }
         `}
 `;

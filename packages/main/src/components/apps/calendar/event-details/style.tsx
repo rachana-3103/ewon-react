@@ -3,6 +3,7 @@ import styled, {
     color,
     ColorProps,
     themeGet,
+    css,
 } from "@doar/shared/styled";
 import { ModalHeader } from "@doar/components";
 
@@ -89,11 +90,21 @@ export const StyledLabel = styled.h6`
 export const StyledDate = styled.p`
     color: ${themeGet("colors.gray900")};
     font-weight: 500;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+        `}
 `;
 
 export const StyledDesc = styled.p`
     margin-top: 5px;
     color: ${themeGet("colors.gray900")};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+        `}
 `;
 
 export const StyledDescWrap = styled.div`

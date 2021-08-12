@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import styled, { SpaceProps, BorderProps } from "@doar/shared/styled";
+import styled, { SpaceProps, BorderProps, device } from "@doar/shared/styled";
 import {
     InputStyles,
     SuccessInputStyles,
@@ -20,7 +20,10 @@ export const StyledTextarea = styled("textarea").withConfig({
         ![...allowedProps].includes(prop) && defaultValidatorFn(prop),
 })<IInput>`
     height: auto;
-    min-height: 38px;
+    min-height: 80px;
+    ${device.large} {
+        min-height: 100px;
+    }
     ${InputStyles};
     ${({ $state, $showState, $showErrorOnly }) =>
         $state === "success" &&

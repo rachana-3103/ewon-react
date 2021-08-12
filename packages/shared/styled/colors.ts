@@ -204,7 +204,7 @@ export const dark = {
     text3: "#8392a5",
     text4: tinycolor(gray700).setAlpha(0.7).toRgbString(),
     heading: "#ffffff",
-    link: "#001737",
+    link: "#ffffff",
     background: darkBg,
     hover: primary,
     white: "#ffffff",

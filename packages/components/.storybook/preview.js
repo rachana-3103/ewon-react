@@ -1,8 +1,15 @@
 import * as React from 'react';
-import { addDecorator } from '@storybook/react';
+import {
+  addDecorator
+} from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, themes } from '@doar/shared/styled';
-import {ResetCSS} from "./reset";
+import {
+  ThemeProvider,
+  themes
+} from '@doar/shared/styled';
+import {
+  ResetCSS
+} from "./reset";
 
 addDecorator(StoryRouter());
 
@@ -14,8 +21,7 @@ export const globalTypes = {
     toolbar: {
       icon: 'box',
       // Array of plain string values or MenuItem shape (see below)
-      // items: ["classic", "light", "cool", "dark"],
-      items: ["classic", "light", "cool"],
+      items: ["classic", "light", "cool", "dark"],
       // Property that specifies if the name of the item will be displayed
       showName: true,
     },
@@ -26,15 +32,23 @@ const getTheme = (themeName) => {
   return themes[themeName]
 }
 
-const withThemeProvider=(Story,context)=>{
+const withThemeProvider = (Story, context) => {
   const theme = getTheme(context.globals.theme);
-  return (
-    <ThemeProvider theme={theme}>
-      <ResetCSS/>
-      <div className="story-wrap">
-        <Story {...context} />
-      </div>
-    </ThemeProvider>
+  return ( <
+    ThemeProvider theme = {
+      theme
+    } >
+    <
+    ResetCSS / >
+    <
+    div className = "story-wrap" >
+    <
+    Story {
+      ...context
+    }
+    /> <
+    /div> <
+    /ThemeProvider>
   )
 }
 export const decorators = [withThemeProvider];
@@ -78,8 +92,12 @@ const customViewports = {
 };
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  viewport: { viewports: customViewports },
+  actions: {
+    argTypesRegex: "^on[A-Z].*"
+  },
+  viewport: {
+    viewports: customViewports
+  },
   // Storybook a11y addon configuration
   a11y: {
     // the target DOM element

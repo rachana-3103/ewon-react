@@ -23,6 +23,11 @@ export const StyledWrap = styled.div<IProps>`
                 transform: translateX(280px);
             `}
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: transparent;
+        `}
     .fc {
         height: 100%;
         .fc {
@@ -69,6 +74,26 @@ export const StyledWrap = styled.div<IProps>`
                             color: ${themeGet("colors.text2")};
                         }
                     }
+                    ${(props) =>
+                        props.theme.name === "dark" &&
+                        css`
+                            border-width: 0;
+                            background-color: ${themeGet("colors.gray800")};
+                            color: ${themeGet("colors.gray500")};
+                            &:hover,
+                            &:focus {
+                                background-color: ${themeGet("colors.gray700")};
+                                color: #fff;
+                            }
+                            &:not(:disabled) {
+                                &.fc-button-active {
+                                    background-color: ${themeGet(
+                                        "colors.gray700"
+                                    )};
+                                    color: #fff;
+                                }
+                            }
+                        `}
                 }
                 .fc {
                     &-toolbar-chunk {
@@ -173,6 +198,26 @@ export const StyledWrap = styled.div<IProps>`
                             font-weight: 400;
                             cursor: default;
                         }
+                        ${(props) =>
+                            props.theme.name === "dark" &&
+                            css`
+                                background-color: ${themeGet("colors.gray800")};
+                                color: ${themeGet("colors.gray500")};
+                                &:hover,
+                                &:focus {
+                                    background-color: ${themeGet(
+                                        "colors.gray700"
+                                    )};
+                                    color: #fff;
+                                }
+
+                                &:disabled {
+                                    background-color: ${themeGet(
+                                        "colors.gray900"
+                                    )};
+                                    color: ${themeGet("colors.gray700")};
+                                }
+                            `}
                     }
                     &-toolbar-title {
                         font-size: 16px;
@@ -237,6 +282,15 @@ export const StyledWrap = styled.div<IProps>`
                         &-other,
                         &-today {
                             background-color: ${themeGet("colors.lilac")};
+                            ${(props) =>
+                                props.theme.name === "dark" &&
+                                css`
+                                    background-color: ${tinycolor(
+                                        themeGet("colors.gray900")(props)
+                                    )
+                                        .darken(2)
+                                        .toString()};
+                                `}
                         }
                         &-other {
                             .fc-daygrid-day-top {
@@ -291,9 +345,21 @@ export const StyledWrap = styled.div<IProps>`
                                 display: block;
                             }
                         }
+                        &-title {
+                            ${(props) =>
+                                props.theme.name === "dark" &&
+                                css`
+                                    color: ${themeGet("colors.gray700")};
+                                `}
+                        }
                         &-time {
                             font-weight: 500;
                             overflow: visible;
+                            ${(props) =>
+                                props.theme.name === "dark" &&
+                                css`
+                                    color: ${themeGet("colors.gray700")};
+                                `}
                         }
                         &-desc {
                             display: none;
@@ -304,6 +370,22 @@ export const StyledWrap = styled.div<IProps>`
             &-timegrid {
                 &-body {
                     overflow: hidden;
+                }
+                &-divider {
+                    ${(props) =>
+                        props.theme.name === "dark" &&
+                        css`
+                            background-color: ${tinycolor(
+                                themeGet("colors.gray900")(props)
+                            )
+                                .darken(2)
+                                .toString()};
+                            border-color: ${tinycolor(
+                                themeGet("colors.gray900")(props)
+                            )
+                                .lighten(2)
+                                .toString()};
+                        `}
                 }
                 .fc {
                     &-col-header {
@@ -364,10 +446,20 @@ export const StyledWrap = styled.div<IProps>`
                                 &-container {
                                     flex-grow: 0;
                                 }
+                                ${(props) =>
+                                    props.theme.name === "dark" &&
+                                    css`
+                                        color: ${themeGet("colors.gray300")};
+                                    `}
                             }
                             &-time {
                                 font-size: 11px;
                                 color: ${themeGet("colors.gray900")};
+                                ${(props) =>
+                                    props.theme.name === "dark" &&
+                                    css`
+                                        color: ${themeGet("colors.gray300")};
+                                    `}
                             }
                             &-desc {
                                 display: none;
@@ -388,6 +480,16 @@ export const StyledWrap = styled.div<IProps>`
                                 tinycolor(themeGet("colors.gray100")(props))
                                     .setAlpha(0.7)
                                     .toRgbString()};
+
+                            ${(props) =>
+                                props.theme.name === "dark" &&
+                                css`
+                                    background-color: ${tinycolor(
+                                        themeGet("colors.gray900")(props)
+                                    )
+                                        .darken(2)
+                                        .toString()};
+                                `}
                         }
                     }
                 }
@@ -426,6 +528,10 @@ export const StyledWrap = styled.div<IProps>`
                                 flex: 0 0 10%;
                                 max-width: 10%;
                             }
+                            ${device.large} {
+                                flex: 0 0 8%;
+                                max-width: 8%;
+                            }
                             &:first-of-type {
                                 margin-top: 0;
                                 & + .fc-list-event {
@@ -434,6 +540,7 @@ export const StyledWrap = styled.div<IProps>`
                             }
                             & > th {
                                 border: none;
+                                background: transparent;
                             }
                             .fc-list-day {
                                 &-cushion {
@@ -486,6 +593,7 @@ export const StyledWrap = styled.div<IProps>`
                             border-left-style: solid;
                             background-color: #fff;
                             margin-top: 15px;
+                            cursor: pointer;
                             & + .fc-list-event {
                                 margin-left: 20%;
                                 ${device.small} {
@@ -498,7 +606,7 @@ export const StyledWrap = styled.div<IProps>`
                                     margin-left: 10%;
                                 }
                                 ${device.xlarge} {
-                                    margin-left: 10%;
+                                    margin-left: 8%;
                                 }
                             }
                             &:hover {
@@ -517,8 +625,8 @@ export const StyledWrap = styled.div<IProps>`
                                 max-width: calc(90% - 5px);
                             }
                             ${device.xlarge} {
-                                flex: 0 0 calc(90% - 5px);
-                                max-width: calc(90% - 5px);
+                                flex: 0 0 calc(92% - 5px);
+                                max-width: calc(92% - 5px);
                             }
                             &:first-child {
                             }
@@ -572,6 +680,24 @@ export const StyledWrap = styled.div<IProps>`
                                     }
                                 }
                             }
+                            ${(props) =>
+                                props.theme.name === "dark" &&
+                                css`
+                                    background-color: ${themeGet(
+                                        "colors.gray900"
+                                    )};
+                                    &:hover,
+                                    &:focus {
+                                        background-color: ${themeGet(
+                                            "colors.gray900"
+                                        )};
+                                        td {
+                                            background-color: ${themeGet(
+                                                "colors.gray900"
+                                            )};
+                                        }
+                                    }
+                                `}
                         }
                     }
                 }

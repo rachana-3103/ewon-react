@@ -32,6 +32,11 @@ export const StyledListItem = styled.li`
         bottom: 0;
         left: 20px;
         border-left: 2px dotted ${themeGet("colors.text4")};
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                border-color: rgba(255, 255, 255, 0.6);
+            `}
     }
 `;
 
@@ -67,6 +72,14 @@ export const StyledBody = styled.div`
         color: ${themeGet("colors.text2")};
         font-weight: 500;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: rgba(255, 255, 255, 0.5);
+            strong {
+                color: #fff;
+            }
+        `}
 `;
 
 export const StyledDate = styled.small`

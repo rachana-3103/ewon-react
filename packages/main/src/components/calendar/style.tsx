@@ -1,4 +1,4 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding: 20px 12px;
@@ -101,6 +101,20 @@ export const StyledWrap = styled.div`
                     &--neighboringMonth {
                         color: ${themeGet("colors.text4")};
                     }
+                    ${(props) =>
+                        props.theme.name === "dark" &&
+                        css`
+                            color: ${themeGet("colors.gray600")};
+                            &:hover,
+                            &:focus {
+                                background-color: ${tinycolor(
+                                    themeGet("colors.gray900")(props)
+                                )
+                                    .lighten(5)
+                                    .toString()};
+                                color: #fff;
+                            }
+                        `}
                 }
             }
         }

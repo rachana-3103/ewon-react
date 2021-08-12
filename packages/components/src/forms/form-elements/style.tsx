@@ -138,14 +138,15 @@ export const InputStyles = css<IInput>`
         css`
             background-color: transparent;
             border-color: ${themeGet("colors.gray800")};
+            color: ${themeGet("colors.gray300")};
             &::placeholder {
-                color: ${themeGet("colors.gray700")};
+                color: ${themeGet("colors.gray300")};
             }
             &:-ms-input-placeholder {
-                color: ${themeGet("colors.gray700")};
+                color: ${themeGet("colors.gray300")};
             }
             &::-ms-input-placeholder {
-                color: ${themeGet("colors.gray700")};
+                color: ${themeGet("colors.gray300")};
             }
             &:focus {
                 background-color: transparent;

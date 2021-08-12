@@ -1,4 +1,4 @@
-import styled, { device, themeGet, css } from "@doar/shared/styled";
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 
 interface ISidebar {
     $show: boolean;
@@ -31,6 +31,15 @@ export const StyledWrap = styled.div<ISidebar>`
         left: 0;
         visibility: visible;
     }
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
+
     .scrollbar-container {
         position: absolute;
         top: 55px;
@@ -107,6 +116,11 @@ export const StyledHeader = styled.div`
     .plus {
         margin-top: 0;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: transparent;
+        `}
 `;
 
 export const StyledBody = styled.div``;

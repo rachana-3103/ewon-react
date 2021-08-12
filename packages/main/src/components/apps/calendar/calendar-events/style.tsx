@@ -1,4 +1,4 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-left: 15px;
@@ -45,6 +45,18 @@ export const StyledItem = styled.button<IItemProps>`
             background-color: ${(props) => props.$color};
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            &:hover,
+            &:focus {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(5)
+                    .toString()};
+                color: #fff;
+            }
+        `}
 `;
 
 export const StyledBullet = styled.span`

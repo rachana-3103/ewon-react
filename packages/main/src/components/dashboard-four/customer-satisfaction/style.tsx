@@ -7,6 +7,7 @@ import styled, {
     border,
     BorderProps,
     themeGet,
+    css,
 } from "@doar/shared/styled";
 import { CardHeader, Table } from "@doar/components";
 
@@ -94,6 +95,11 @@ export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)`
             }
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-top-color: rgba(255, 255, 255, 0.06);
+        `}
 `;
 
 interface ITD extends ColorProps, TypographyProps {}

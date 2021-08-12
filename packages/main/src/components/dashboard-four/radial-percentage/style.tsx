@@ -8,11 +8,13 @@ export const StyledChart = styled.div`
         letter-spacing: -0.5px;
         font-weight: 400;
         line-height: 1.25;
+        fill: ${themeGet("colors.heading")};
     }
     .apexcharts-datalabel-label {
         font-family: ${themeGet("fonts.interUi")} !important;
         font-weight: 500;
         text-transform: uppercase;
+        fill: ${themeGet("colors.text3")};
     }
     ${device.small} {
         margin-right: -75px;

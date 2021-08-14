@@ -1,18 +1,9 @@
 import { FC } from "react";
 import { X } from "react-feather";
-import {
-    Modal,
-    ModalBody,
-    Row,
-    Col,
-    Input,
-    HRLine,
-    Nav,
-    NavLink,
-} from "@doar/components";
+import { Modal, Row, Col, Input, HRLine, Nav, NavLink } from "@doar/components";
 import Editor from "./editor";
 import "react-quill/dist/quill.snow.css";
-import { StyledHeader, StyledTitle } from "./style";
+import { StyledHeader, StyledTitle, StyledBody } from "./style";
 
 interface IProps {
     show: boolean;
@@ -30,7 +21,7 @@ const ComposeMail: FC<IProps> = ({ show, onClose }) => {
                     </NavLink>
                 </Nav>
             </StyledHeader>
-            <ModalBody>
+            <StyledBody>
                 <form>
                     <Row alignItems="center">
                         <Col sm>Recipient:</Col>
@@ -59,7 +50,7 @@ const ComposeMail: FC<IProps> = ({ show, onClose }) => {
                     </Row>
                     <Editor placeholder="Write your message here" />
                 </form>
-            </ModalBody>
+            </StyledBody>
         </Modal>
     );
 };

@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css, themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding: 20px;
@@ -10,4 +10,12 @@ export const StyledWrap = styled.div`
     }
 `;
 
-export const StyledContent = styled.div``;
+export const StyledContent = styled.div`
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            p {
+                color: ${themeGet("colors.gray500")};
+            }
+        `}
+`;

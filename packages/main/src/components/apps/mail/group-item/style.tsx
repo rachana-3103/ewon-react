@@ -1,26 +1,47 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)`
     padding: 15px 20px;
-    background-color: #f8f9fc;
+    background-color: ${themeGet("colors.lilac")};
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     &:not(:first-of-type) {
         margin-top: -1px;
-        border-top: 1px solid #e5e9f2;
+        border-top: 1px solid ${themeGet("colors.light")};
     }
     &.unread {
         background-color: #fff;
     }
     &:hover,
     &:focus {
-        background-color: #f3f8ff;
+        background-color: ${themeGet("colors.zircon")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: transparent;
+            &:hover,
+            &:focus {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .darken(2)
+                    .toString()};
+            }
+            + .media {
+                border-top-color: ${themeGet("colors.gray900")};
+            }
+            &.unread {
+                background-color: ${themeGet("colors.gray900")};
+                &:hover,
+                &:focus {
+                    background-color: ${themeGet("colors.gray900")};
+                }
+            }
+        `}
 `;
 
 export const StyledTop = styled.div`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 2px;
     align-items: center;
     justify-content: space-between;

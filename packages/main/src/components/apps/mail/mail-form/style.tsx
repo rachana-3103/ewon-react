@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     background-color: #fff;
@@ -14,7 +14,7 @@ export const StyledWrap = styled.div`
         &-container {
             border-bottom-right-radius: 0.25rem;
             border-bottom-left-radius: 0.25rem;
-            border-color: rgba(72, 94, 144, 0.16) !important;
+            border-color: ${themeGet("colors.border")} !important;
             height: 100px;
             font-size: 13px;
             ${device.large} {
@@ -23,9 +23,32 @@ export const StyledWrap = styled.div`
         }
         &-editor {
             padding: 20px;
-            color: #001737;
+            color: ${themeGet("colors.text")};
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+            .ql-editor {
+                color: ${themeGet("colors.gray500")};
+            }
+            .ql-snow.ql-toolbar button {
+                .ql-stroke {
+                    stroke: ${themeGet("colors.gray700")};
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: ${themeGet("colors.gray900")};
+                    .ql-stroke {
+                        stroke: #fff;
+                    }
+                }
+            }
+        `}
 `;
 
 export const StyledToolbarWrap = styled.div`

@@ -1,8 +1,8 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 import { ModalHeader, ModalBody } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <ModalHeader {...rest} />)`
-    background-color: #1c273c;
+    background-color: ${themeGet("colors.gray900")};
     padding: 20px;
     color: #fff;
     border-top-left-radius: 0.25rem;
@@ -25,6 +25,31 @@ export const StyledBody = styled(({ ...rest }) => <ModalBody {...rest} />)`
     ${device.large} {
         padding: 30px;
     }
+    .form-control {
+        &:hover,
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-width: 0;
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+            box-shadow: none;
+            color: ${themeGet("colors.gray500")};
+            .form-control {
+                background-color: transparent;
+                color: ${themeGet("colors.gray300")};
+                &:placeholder {
+                    color: ${themeGet("colors.gray700")};
+                }
+            }
+        `}
 `;
 
 export const StyledWrap = styled.div`
@@ -34,7 +59,7 @@ export const StyledWrap = styled.div`
         &-container {
             border-bottom-right-radius: 0.25rem;
             border-bottom-left-radius: 0.25rem;
-            border-color: rgba(72, 94, 144, 0.16) !important;
+            border-color: ${themeGet("colors.border")} !important;
             height: 80px;
             ${device.small} {
                 height: 150px;
@@ -42,9 +67,37 @@ export const StyledWrap = styled.div`
         }
         &-editor {
             padding: 20px;
-            color: #001737;
+            color: ${themeGet("colors.text")};
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: transparent;
+            .ql-editor {
+                color: ${themeGet("colors.gray500")};
+                &.ql-blank {
+                    &:before {
+                        color: ${themeGet("colors.gray500")};
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .ql-snow.ql-toolbar button {
+                .ql-stroke {
+                    stroke: ${themeGet("colors.gray700")};
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: ${themeGet("colors.gray900")};
+                    .ql-stroke {
+                        stroke: #fff;
+                    }
+                }
+            }
+        `}
 `;
 
 export const StyledToolbarWrap = styled.div`

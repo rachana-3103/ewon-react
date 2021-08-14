@@ -1,4 +1,4 @@
-import styled, { device, css, themeGet } from "@doar/shared/styled";
+import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
 interface IProps {
     $showSidebar: boolean;
@@ -36,6 +36,13 @@ export const StyledMain = styled.div<IProps>`
                 transform: translateX(-260px);
             }
         `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledBody = styled.div`
@@ -44,19 +51,35 @@ export const StyledBody = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #f8f9fc;
+    background-color: ${themeGet("colors.lilac")};
     ${device.xlarge} {
         width: calc(100% - 290px);
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
     .react-tabs {
         height: 100%;
         &__tab-list {
             padding: 0 25px;
             border-bottom-width: 1px;
             background-color: #fff;
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .darken(3)
+                        .toString()};
+                `}
         }
         &__tab {
-            color: #8392a5;
+            color: ${themeGet("colors.text3")};
             font-size: 11px;
             font-weight: 500;
             text-transform: uppercase;
@@ -74,6 +97,11 @@ export const StyledBody = styled.div`
             &:not(:first-of-type) {
                 margin-left: 30px;
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    background-color: transparent;
+                `}
         }
         &__tab-panel {
             padding: 20px;
@@ -95,6 +123,20 @@ export const StyledBody = styled.div`
                     max-width: 800px;
                 }
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    color: rgba(255, 255, 255, 0.8);
+                    .nav-social {
+                        a {
+                            color: ${themeGet("colors.gray300")};
+                            &:hover,
+                            &:focus {
+                                color: ${themeGet("colors.primary")};
+                            }
+                        }
+                    }
+                `}
         }
     }
 `;
@@ -105,13 +147,21 @@ export const StyledSidebar = styled.div`
     top: 0;
     right: -260px;
     bottom: 0;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     width: 260px;
     height: 100%;
     ${device.xlarge} {
         width: 290px;
         right: 0;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+            color: ${themeGet("colors.gray300")};
+        `}
 `;
 
 export const StyledOptionsBtn = styled.button`
@@ -119,12 +169,12 @@ export const StyledOptionsBtn = styled.button`
     background-color: transparent;
     padding: 0;
     margin-left: auto;
-    color: #7987a1;
+    color: ${themeGet("colors.gray600")};
     ${device.xlarge} {
         display: none;
     }
     &:hover,
     &:focus {
-        color: #556179;
+        color: ${themeGet("colors.cornflower")};
     }
 `;

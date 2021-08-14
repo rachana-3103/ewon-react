@@ -130,7 +130,7 @@ const PersonalDetails: FC = () => {
                 </Col>
                 <Col sm={6} mt={["20px", "30px"]}>
                     <Label>Social Profiles</Label>
-                    <Nav customStyle="social">
+                    <Nav customStyle="social" className="nav-social">
                         <NavLink
                             path="https://facebook.com"
                             rel="noopener"

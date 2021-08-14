@@ -1,4 +1,4 @@
-import styled, { device, css, themeGet } from "@doar/shared/styled";
+import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
 interface ISidebar {
     $show: boolean;
@@ -15,7 +15,7 @@ export const StyledSidebar = styled.div<ISidebar>`
     @media (min-width: 480px) {
         right: auto;
         width: 304px;
-        border-right: 1px solid rgba(72, 94, 144, 0.16);
+        border-right: 1px solid ${themeGet("colors.border")};
     }
 
     ${device.large} {
@@ -40,10 +40,19 @@ export const StyledSidebar = styled.div<ISidebar>`
             width: 54px;
             height: 100%;
             padding: 15px 10px;
-            border-right: 1px solid rgba(72, 94, 144, 0.16);
+            border-right: 1px solid ${themeGet("colors.border")};
             ${device.large} {
                 width: 60px;
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .darken(3)
+                        .toString()};
+                `}
         }
         &__tab {
             padding: 0;
@@ -51,7 +60,7 @@ export const StyledSidebar = styled.div<ISidebar>`
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1b2e4b;
+            color: ${themeGet("colors.text2")};
             border-radius: 0;
             transition: all 0.2s ease-in-out;
             background-color: transparent;
@@ -66,8 +75,22 @@ export const StyledSidebar = styled.div<ISidebar>`
             svg {
                 width: 20px;
                 stroke-width: 2.2px;
-                fill: rgba(27, 46, 75, 0.1);
+                fill: ${(props) =>
+                    !!props.theme &&
+                    css`
+                        ${tinycolor(themeGet("colors.text2")(props))
+                            .setAlpha(0.1)
+                            .toRgbString()}
+                    `};
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    color: rgba(255, 255, 255, 0.5);
+                    &:hover {
+                        color: #fff;
+                    }
+                `}
         }
         &__content {
             border: none;
@@ -80,6 +103,15 @@ export const StyledSidebar = styled.div<ISidebar>`
             ${device.xlarge} {
                 width: 280px;
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .darken(5)
+                        .toString()};
+                `}
         }
     }
 `;

@@ -1,4 +1,4 @@
-import styled, { css } from "@doar/shared/styled";
+import styled, { css, themeGet, tinycolor } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 interface IProps {
@@ -6,7 +6,7 @@ interface IProps {
 }
 
 export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     padding: 10px;
     align-items: flex-end;
     border-radius: 0.25rem;
@@ -15,7 +15,7 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
     }
     &:hover,
     &:focus {
-        background-color: #f5f6fa;
+        background-color: ${themeGet("colors.whisper")};
         cursor: default;
         nav {
             display: flex;
@@ -25,7 +25,47 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
         $active === true &&
         css`
             @media (min-width: 480px) {
-                background-color: #eef0f7;
+                background-color: ${themeGet("colors.catskill")};
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .avatar::after {
+                box-shadow: 0 0 0 2px
+                    ${tinycolor(themeGet("colors.gray900")(props))
+                        .darken(5)
+                        .toString()};
+            }
+
+            &:hover,
+            &:focus {
+                background-color: ${themeGet("colors.gray900")};
+                color: #fff;
+
+                .avatar::after {
+                    box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+                }
+            }
+        `}
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        !!props.$active &&
+        css`
+            @media (min-width: 480px) {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(2)
+                    .toString()};
+            }
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .lighten(2)
+                .toString()};
+            .avatar::after {
+                box-shadow: 0 0 0 2px
+                    ${tinycolor(themeGet("colors.gray900")(props))
+                        .lighten(2)
+                        .toString()};
             }
         `}
 `;
@@ -36,7 +76,7 @@ export const StyledName = styled.h6`
 `;
 
 export const StyledSpan = styled.span`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     display: block;
     line-height: 1.02;
     font-size: 12px;
@@ -50,7 +90,7 @@ export const StyledNav = styled.nav`
 
 export const StyledNavBtn = styled.button`
     display: block;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     padding: 0;
     background-color: transparent;
     border: none;
@@ -59,7 +99,7 @@ export const StyledNavBtn = styled.button`
     }
     &:hover,
     &:focus {
-        color: #1b2e4b;
+        color: ${themeGet("colors.text2")};
     }
     svg {
         width: 16px;

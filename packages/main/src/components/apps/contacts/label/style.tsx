@@ -1,4 +1,4 @@
-import styled, { css } from "@doar/shared/styled";
+import styled, { css, themeGet, tinycolor } from "@doar/shared/styled";
 
 interface IProps {
     $size?: "lg";
@@ -7,11 +7,10 @@ interface IProps {
 export const StyledLabel = styled.h6<IProps>`
     display: flex;
     align-items: center;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     font-size: 10px;
     font-weight: 500;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
-        sans-serif;
+    font-family: ${themeGet("fonts.interUi")};
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin: 15px -10px 10px;
@@ -23,7 +22,13 @@ export const StyledLabel = styled.h6<IProps>`
         content: "";
         display: block;
         height: 1px;
-        background-color: rgba(229, 233, 242, 0.7);
+        background-color: ${(props) =>
+            !!props.theme &&
+            css`
+                ${tinycolor(themeGet("colors.light")(props))
+                    .setAlpha(0.7)
+                    .toRgbString()}
+            `};
     }
     &:before {
         width: 15px;
@@ -38,4 +43,14 @@ export const StyledLabel = styled.h6<IProps>`
         margin-left: 5px;
         flex: 1;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            &::before,
+            &::after {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(2)
+                    .toRgbString()};
+            }
+        `}
 `;

@@ -3,6 +3,7 @@ import styled, {
     device,
     color as colorStyles,
     ColorProps,
+    themeGet,
 } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
@@ -37,7 +38,7 @@ export const StyledName = styled.h5`
 
 export const StyledRole = styled.p`
     margin-bottom: 20px;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     font-size: 13px;
     ${device.large} {
         font-size: 12px;
@@ -87,7 +88,7 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     display: flex;
     align-items: center;
     padding: 0;

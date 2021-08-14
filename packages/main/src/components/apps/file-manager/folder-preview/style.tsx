@@ -1,9 +1,9 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { Media, MediaBody } from "@doar/components";
 
 export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)`
     position: relative;
-    border: 1px solid rgba(72, 94, 144, 0.16);
+    border: 1px solid ${themeGet("colors.border")};
     padding: 10px 12px;
     background-color: #fff;
     border-radius: 0.25rem;
@@ -12,9 +12,15 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)`
         width: 42px;
         height: 42px;
         stroke-width: 1.5px;
-        color: #0168fa;
+        color: ${themeGet("colors.primary")};
         opacity: 0.7;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-width: 0;
+            background-color: ${themeGet("colors.gray900")};
+        `}
 `;
 
 export const StyledMediaBody = styled(({ ...rest }) => <MediaBody {...rest} />)`
@@ -25,7 +31,7 @@ export const StyledMediaBody = styled(({ ...rest }) => <MediaBody {...rest} />)`
     }
     span {
         font-size: 12px;
-        color: #8392a5;
+        color: ${themeGet("colors.text3")};
         display: block;
     }
 `;

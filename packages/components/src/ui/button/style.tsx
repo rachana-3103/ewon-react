@@ -280,6 +280,8 @@ const buttonStyles = css<IProps>`
             }
         `}
 
+    
+
     ${(props) =>
         props.$variant === "contained" &&
         props.$color === "dark" &&
@@ -314,24 +316,59 @@ const buttonStyles = css<IProps>`
         props.$variant === "contained" &&
         props.$color === "white" &&
         css`
-            color: ${tinycolor2(themeGet("colors.text2")(props))
-                .setAlpha(0.7)
-                .toRgbString()};
-            background-color: ${themeGet("colors.white")};
-            border-color: ${themeGet("colors.text4")};
+            ${props.theme.name !== "dark" &&
+            css`
+                color: ${tinycolor2(themeGet("colors.text2")(props))
+                    .setAlpha(0.7)
+                    .toRgbString()};
+                background-color: ${themeGet("colors.white")};
+                border-color: ${themeGet("colors.text4")};
 
-            &:hover {
-                border-color: ${themeGet("colors.text3")};
-                color: ${themeGet("colors.text2")};
-            }
+                &:hover {
+                    border-color: ${themeGet("colors.text3")};
+                    color: ${themeGet("colors.text2")};
+                }
 
-            &:active,
-            &:focus {
-                background-color: ${themeGet("colors.whisper")};
-                border-color: ${themeGet("colors.text3")};
-                color: ${themeGet("colors.text2")};
-                box-shadow: none;
-            }
+                &:active,
+                &:focus {
+                    background-color: ${themeGet("colors.whisper")};
+                    border-color: ${themeGet("colors.text3")};
+                    color: ${themeGet("colors.text2")};
+                    box-shadow: none;
+                }
+            `}
+
+            ${props.theme.name === "dark" &&
+            css`
+                color: ${themeGet("colors.white")};
+                background-color: ${themeGet("colors.dark")};
+                border-color: ${themeGet("colors.dark")};
+                &:hover {
+                    background-color: ${tinycolor2(
+                        themeGet("colors.dark")(props)
+                    )
+                        .darken(10)
+                        .toString()};
+                    border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                        .darken(14)
+                        .toString()};
+                }
+                &:active,
+                &:focus {
+                    background-color: ${tinycolor2(
+                        themeGet("colors.dark")(props)
+                    )
+                        .darken(10)
+                        .toString()};
+                    border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                        .darken(14)
+                        .toString()};
+                    box-shadow: 0 0 0 0.2rem
+                        ${tinycolor2(themeGet("colors.dark")(props))
+                            .setAlpha(0.5)
+                            .toRgbString()};
+                }
+            `}
         `}
 
 	${(props) =>

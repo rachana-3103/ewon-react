@@ -1,4 +1,4 @@
-import styled, { device, css } from "@doar/shared/styled";
+import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
 interface IProps {
     $showSidebar: boolean;
@@ -21,6 +21,13 @@ export const StyledMain = styled.div<IProps>`
                 transform: translateX(240px);
             `}
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledHeader = styled.div`
@@ -29,13 +36,13 @@ export const StyledHeader = styled.div`
     left: 0;
     right: 0;
     height: 55px;
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid ${themeGet("colors.border")};
     display: flex;
     align-items: center;
     padding: 0 20px;
     z-index: 99;
     .search {
-        color: #8392a5;
+        color: ${themeGet("colors.text3")};
         align-self: center;
         width: 18px;
         stroke-width: 2.8px;
@@ -45,9 +52,16 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledBody = styled.div`
-    background-color: #f8f9fc;
+    background-color: ${themeGet("colors.lilac")};
     width: 100%;
     height: 100%;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledBodyInner = styled.div`

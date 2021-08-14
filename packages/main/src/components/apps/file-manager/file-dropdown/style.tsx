@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { tinycolor, css, themeGet } from "@doar/shared/styled";
 import { Dropdown } from "@doar/components";
 
 export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
@@ -7,7 +7,13 @@ export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
     right: 4px;
     .btn {
         svg {
-            color: rgba(131, 146, 165, 0.5);
+            color: ${(props) =>
+                !!props.theme &&
+                css`
+                    ${tinycolor(themeGet("colors.text3")(props))
+                        .setAlpha(0.5)
+                        .toRgbString()}
+                `};
             width: 18px;
             height: 18px;
         }
@@ -18,18 +24,32 @@ export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
             right: 0;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .dropdown {
+                &-menu {
+                    border-width: 0;
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .lighten(8)
+                        .toString()};
+                }
+            }
+        `}
 `;
 
 export const StyledItem = styled.button`
     font-size: 12px;
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 6px 10px;
     border-radius: 0.25rem;
     transition: all 0.2s ease-in-out;
     clear: both;
     font-weight: 400;
-    color: #1c273c;
+    color: ${themeGet("colors.gray900")};
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
@@ -42,11 +62,23 @@ export const StyledItem = styled.button`
         height: 14px;
         stroke-width: 2.5px;
         margin-right: 10px;
-        color: #8392a5;
+        color: ${themeGet("colors.text3")};
     }
     &:hover {
-        background-color: #e5e9f2;
+        background-color: ${themeGet("colors.light")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray300")};
+            &:hover,
+            &:focus {
+                background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                    .lighten(3)
+                    .toString()};
+                color: #fff;
+            }
+        `}
 `;
 
 StyledDropdown.displayName = "Dropdwon";

@@ -1,4 +1,4 @@
-import styled, { device, css } from "@doar/shared/styled";
+import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
 interface ISidebar {
     $show: boolean;
@@ -11,7 +11,7 @@ export const StyledSidebar = styled.div<ISidebar>`
     bottom: 0;
     left: -240px;
     width: 240px;
-    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    border-right: 1px solid ${themeGet("colors.border")};
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
@@ -29,6 +29,13 @@ export const StyledSidebar = styled.div<ISidebar>`
                 opacity: 1;
             `}
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(5)
+                .toString()};
+        `}
 `;
 
 export const StyledHeader = styled.div`
@@ -37,7 +44,7 @@ export const StyledHeader = styled.div`
     left: 0;
     right: 0;
     height: 55px;
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid ${themeGet("colors.border")};
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -81,6 +88,36 @@ export const StyledHeader = styled.div`
             margin: 10px 15px;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .darken(3)
+                .toString()};
+            .dropdown {
+                &-menu {
+                    border-width: 0;
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .lighten(8)
+                        .toString()};
+                }
+                &-item {
+                    color: ${themeGet("colors.gray300")};
+
+                    &:hover,
+                    &:focus {
+                        background-color: ${tinycolor(
+                            themeGet("colors.gray900")(props)
+                        )
+                            .lighten(3)
+                            .toString()};
+                        color: #fff;
+                    }
+                }
+            }
+        `}
 `;
 
 export const StyledBody = styled.div`
@@ -89,4 +126,25 @@ export const StyledBody = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+
+            .nav-link {
+                color: ${themeGet("colors.gray500")};
+                &:hover,
+                &:focus {
+                    background-color: ${themeGet("colors.gray900")};
+                    color: #fff;
+                }
+                &.active {
+                    background-color: ${tinycolor(
+                        themeGet("colors.gray900")(props)
+                    )
+                        .lighten(2)
+                        .toString()};
+                }
+            }
+        `}
 `;

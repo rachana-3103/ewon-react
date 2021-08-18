@@ -3,6 +3,7 @@ import styled, {
     ColorProps,
     color as colorStyle,
     themeGet,
+    css,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
 
@@ -88,6 +89,13 @@ export const StyledChart = styled.div`
             display: none;
         }
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-xaxis-label {
+                fill: rgba(255, 255, 255, 0.5);
+            }
+        `}
 `;
 
 export const StyledNumb = styled.h4`

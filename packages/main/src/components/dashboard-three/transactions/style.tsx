@@ -45,9 +45,7 @@ export const StyledListIitem = styled.li`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            border-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .lighten(5)
-                .toString()};
+            border-color: ${themeGet("colors.darklighten5")};
         `}
 `;
 

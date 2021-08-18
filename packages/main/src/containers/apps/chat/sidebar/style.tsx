@@ -1,4 +1,4 @@
-import styled, { css, tinycolor, themeGet } from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 
 export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     background-color: #fff;
@@ -22,9 +22,7 @@ export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
         `}
 `;
 
@@ -34,9 +32,7 @@ export const StyledHeader = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
         `}
 `;
 export const StyledBody = styled.div`
@@ -60,8 +56,6 @@ export const StyledFooter = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
         `}
 `;

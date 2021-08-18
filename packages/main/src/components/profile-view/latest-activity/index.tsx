@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { MoreHorizontal, ThumbsUp, MessageSquare, Share } from "react-feather";
 import {
-    Card,
     CardBody,
     Heading,
     Anchor,
@@ -15,11 +14,11 @@ import {
 import image from "@doar/shared/images/img15.jpg";
 import Header from "../header";
 import Footer from "../footer";
-import { StyledRole, StyledTime, StyledGrayBox } from "./style";
+import { StyledCard, StyledRole, StyledTime, StyledGrayBox } from "./style";
 
 const LatestActivity: FC = () => {
     return (
-        <Card mb={["20px", null, null, "25px"]}>
+        <StyledCard mb={["20px", null, null, "25px"]}>
             <Header>
                 <Heading tt="uppercase" fontWeight="600" mb="0px">
                     Latest Activity
@@ -72,7 +71,7 @@ const LatestActivity: FC = () => {
                     </NavLink>
                 </Nav>
             </Footer>
-        </Card>
+        </StyledCard>
     );
 };
 

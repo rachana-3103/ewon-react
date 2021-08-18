@@ -1,16 +1,18 @@
-import { FC, useState, useCallback } from "react";
+import { FC } from "react";
 import { ThemeProvider, themes } from "@doar/shared/styled";
 import { GlobalStyle } from "@doar/shared/css";
 import { TTheme } from "@doar/shared/types";
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import { toggleTheme } from "./redux/slices/ui";
 import SettingsCard from "./components/settings";
-// import { useAppSelector } from "./redux/hooks";
 
 const Theme: FC = ({ children }) => {
-    // const { theme } = useAppSelector((state) => state.ui);
-    const [theme, setTheme] = useState<TTheme>("classic");
-    const themeHandler = useCallback((el) => {
-        setTheme(el);
-    }, []);
+    const dispatch = useAppDispatch();
+    const { theme } = useAppSelector((state) => state.ui);
+
+    const themeHandler = (curTheme: TTheme) => {
+        dispatch(toggleTheme({ theme: curTheme }));
+    };
     return (
         <ThemeProvider theme={themes[theme]}>
             <GlobalStyle />

@@ -38,6 +38,7 @@ const SalesRevenue: FC = () => {
                         width="100%"
                         color="#d1e6fa"
                         selectedColor="#69b2f8"
+                        backgroundColor="transparent"
                         checkedLayers={[
                             "us-ca",
                             "us-wy",

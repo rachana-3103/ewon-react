@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledEditPhoto = styled.button`
     background-color: transparent;
@@ -10,8 +10,8 @@ export const StyledEditPhoto = styled.button`
     flex-shrink: 0;
     width: 24px;
     height: 24px;
-    background-color: #e5e9f2;
-    color: #8392a5;
+    background-color: ${themeGet("colors.light")};
+    color: ${themeGet("colors.text3")};
     border-radius: 100%;
     position: absolute;
     bottom: 0;

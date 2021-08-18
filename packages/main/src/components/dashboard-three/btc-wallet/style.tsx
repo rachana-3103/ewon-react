@@ -28,7 +28,7 @@ export const StyledText = styled(({ mb, ...rest }) => (
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 500;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     ${space}
 `;
 
@@ -40,7 +40,7 @@ export const StyledH3 = styled.h3`
     margin-bottom: 5px;
     small {
         font-weight: 300;
-        color: #7987a1;
+        color: ${themeGet("colors.gray600")};
     }
 `;
 
@@ -51,7 +51,7 @@ export const StyledDiv = styled.div`
 
 export const StyledDivText = styled.p`
     font-size: 12px;
-    font-family: "Rubik", sans-serif;
+    font-family: ${themeGet("fonts.rubik")};
     margin-bottom: 0px;
     &:last-of-type {
         margin-left: 10px;

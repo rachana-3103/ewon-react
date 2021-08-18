@@ -8,6 +8,10 @@ export const RetentionChart = {
             zoom: {
                 enabled: false,
             },
+            stackType: "100%",
+        },
+        tooltip: {
+            enabled: false,
         },
         dataLabels: {
             enabled: false,
@@ -47,6 +51,13 @@ export const RetentionChart = {
             },
             axisBorder: {
                 show: false,
+            },
+            labels: {
+                style: {
+                    fontSize: "9px",
+                    fontFamily:
+                        "-apple-system, BlinkMacSystemFont, 'Inter UI', Roboto, sans-serif",
+                },
             },
         },
         yaxis: {

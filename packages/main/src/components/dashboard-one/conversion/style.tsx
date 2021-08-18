@@ -34,7 +34,7 @@ export const StyledCardText = styled.p`
     font-size: 11px;
 `;
 
-export const StyledCardChangePercent = styled.span<{ $growth: string }>`
+export const StyledChangePercent = styled.span<{ $growth: string }>`
     font-weight: 500;
     ${({ $growth }) =>
         $growth === "up" &&

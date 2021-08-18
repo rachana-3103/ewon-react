@@ -1,4 +1,4 @@
-import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     background-color: #fff;
@@ -29,9 +29,7 @@ export const StyledWrap = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
             .ql-editor {
                 color: ${themeGet("colors.gray500")};
             }

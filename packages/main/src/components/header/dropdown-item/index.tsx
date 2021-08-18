@@ -2,7 +2,7 @@ import React from "react";
 import { Media, MediaLeft, Avatar, AvatarInitial } from "@doar/components";
 import { StyledMediaBody, StyledStrong, StyledText, StyledSpan } from "./style";
 
-const Notification: React.FC = () => {
+const DropdownItem: React.FC = () => {
     return (
         <Media>
             <MediaLeft>
@@ -19,4 +19,4 @@ const Notification: React.FC = () => {
     );
 };
 
-export default Notification;
+export default DropdownItem;

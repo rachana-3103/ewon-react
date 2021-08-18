@@ -47,6 +47,9 @@ const data = {
             colors: ["#f5f6fa", "#d1e6fa"],
         },
         colors: ["#c0ccda", "#0168fa"],
+        tooltip: {
+            enabled: false,
+        },
     },
     series: [
         {

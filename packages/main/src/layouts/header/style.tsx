@@ -142,9 +142,7 @@ export const StyledNavbarMenu = styled.nav<INavbar>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .lighten(5)
-                .toString()};
+            background-color: ${themeGet("colors.darklighten5")};
             ${device.large} {
                 background-color: transparent;
             }
@@ -213,60 +211,6 @@ export const StyleNavbarRight = styled.div`
         order: 3;
         padding: 0 20px 0 0;
     }
-    ${(props) =>
-        props.theme.name === "cool" &&
-        css`
-            .dropdown-menu {
-                border-color: ${tinycolor(themeGet("colors.skinUi01")(props))
-                    .lighten(45)
-                    .toString()};
-                border-top-color: transparent;
-                box-shadow: 0 15px 15px
-                    ${tinycolor(themeGet("colors.skinUi01")(props))
-                        .setAlpha(0.1)
-                        .toRgbString()};
-                margin-top: 18.5px;
-                &:before {
-                    opacity: 0;
-                }
-            }
-            .dropdown-profile {
-                .dropdown-menu {
-                    margin-top: 13.5px;
-                }
-            }
-        `}
-    ${(props) =>
-        props.theme.name === "dark" &&
-        css`
-            .dropdown-menu {
-                border-width: 0;
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .lighten(5)
-                    .toString()};
-                &::before {
-                    opacity: 0;
-                }
-                &::after {
-                    border-bottom-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .lighten(5)
-                        .toString()};
-                }
-                margin-top: 16.5px;
-                ${device.large} {
-                    margin-top: 19px;
-                }
-            }
-            .dropdown-profile {
-                .dropdown-menu {
-                    ${device.large} {
-                        margin-top: 14px;
-                    }
-                }
-            }
-        `}
 `;
 
 export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Card, Row, Col, ApexBarChart, SectionTitle } from "@doar/components";
 import { RetentionChart } from "@doar/shared/data/dashboard-one";
+import { useAppSelector } from "../../../redux/hooks";
 import {
     StyledCardHeader,
     StyledCardBody,
@@ -11,6 +12,12 @@ import {
 } from "./style";
 
 const AccountRetention: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
+    const chartOptions = RetentionChart.options;
+    const darkChartOptions = {
+        ...chartOptions,
+        colors: [chartOptions.colors[0], "#141c2b"],
+    };
     return (
         <Card>
             <StyledCardHeader>
@@ -24,7 +31,9 @@ const AccountRetention: FC = () => {
                 <StyledChart>
                     <ApexBarChart
                         series={RetentionChart.series}
-                        options={RetentionChart.options}
+                        options={
+                            theme !== "dark" ? chartOptions : darkChartOptions
+                        }
                         width="100%"
                         height={282}
                     />

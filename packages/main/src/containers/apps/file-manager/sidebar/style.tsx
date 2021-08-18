@@ -1,4 +1,4 @@
-import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { device, css, themeGet } from "@doar/shared/styled";
 
 interface ISidebar {
     $show: boolean;
@@ -32,9 +32,7 @@ export const StyledSidebar = styled.div<ISidebar>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
         `}
 `;
 
@@ -54,8 +52,7 @@ export const StyledHeader = styled.div`
         text-transform: uppercase;
         font-weight: 500;
         font-size: 10px;
-        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
-            sans-serif;
+        font-family: ${themeGet("fonts.interUi")};
         letter-spacing: 0.5px;
     }
     .btn-white {
@@ -91,28 +88,18 @@ export const StyledHeader = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
             .dropdown {
                 &-menu {
                     border-width: 0;
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .lighten(8)
-                        .toString()};
+                    background-color: ${themeGet("colors.darklighten8")};
                 }
                 &-item {
                     color: ${themeGet("colors.gray300")};
 
                     &:hover,
                     &:focus {
-                        background-color: ${tinycolor(
-                            themeGet("colors.gray900")(props)
-                        )
-                            .lighten(3)
-                            .toString()};
+                        background-color: ${themeGet("colors.darklighten3")};
                         color: #fff;
                     }
                 }
@@ -139,11 +126,7 @@ export const StyledBody = styled.div`
                     color: #fff;
                 }
                 &.active {
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .lighten(2)
-                        .toString()};
+                    background-color: ${themeGet("colors.darklighten2")};
                 }
             }
         `}

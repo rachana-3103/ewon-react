@@ -115,7 +115,7 @@ const data = {
             },
         },
         tooltip: {
-            fillSeriesColor: "#ffffff",
+            enabled: false,
         },
         responsive: [
             {

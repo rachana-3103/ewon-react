@@ -1,4 +1,4 @@
-import styled, { css, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Dropdown } from "@doar/components";
 
 export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
@@ -19,7 +19,7 @@ export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
             width: 100%;
             max-width: 255px;
             border-width: 0 0 1px 1px;
-            border-color: rgba(72, 94, 144, 0.16);
+            border-color: ${themeGet("colors.border")};
             padding: 10px;
             margin: 60px -5px 0 -1px;
             border-radius: 0;
@@ -79,21 +79,13 @@ export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
                     }
                 }
                 &-menu {
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .darken(2)
-                        .toString()};
+                    background-color: ${themeGet("colors.darkdarken2")};
 
                     &::before {
                         border-bottom-color: rgba(255, 255, 255, 0.08);
                     }
                     &::after {
-                        border-bottom-color: ${tinycolor(
-                            themeGet("colors.gray900")(props)
-                        )
-                            .darken(2)
-                            .toString()};
+                        border-bottom-color: ${themeGet("colors.darkdarken2")};
                     }
                 }
                 &-item {
@@ -101,11 +93,7 @@ export const StyledWrap = styled(({ ...rest }) => <Dropdown {...rest} />)`
                     &:hover,
                     &:focus {
                         color: #fff;
-                        background-color: ${tinycolor(
-                            themeGet("colors.gray900")(props)
-                        )
-                            .lighten(2)
-                            .toString()};
+                        background-color: ${themeGet("colors.darklighten2")};
                     }
                 }
             }

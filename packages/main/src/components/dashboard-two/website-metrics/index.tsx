@@ -8,10 +8,20 @@ import {
     SectionTitle,
 } from "@doar/components";
 import { webMetricsChart } from "@doar/shared/data/dashboard-two";
+import { useAppSelector } from "../../../redux/hooks";
 import { StyledHeader, StyledBody, StyledButton, StyledChart } from "./style";
 import MetricsProgress from "./metrics-progress";
 
 const WebsiteMetrics: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
+    const chartOptions = webMetricsChart.options;
+    const darkChartOptions = {
+        ...chartOptions,
+        grid: {
+            ...chartOptions.grid,
+            borderColor: "rgba(255, 255, 255, 0.06)",
+        },
+    };
     return (
         <Card>
             <StyledHeader>
@@ -40,7 +50,11 @@ const WebsiteMetrics: FC = () => {
                     <Col lg={7} xl={8}>
                         <StyledChart>
                             <ApexBarChart
-                                options={webMetricsChart.options}
+                                options={
+                                    theme !== "dark"
+                                        ? chartOptions
+                                        : darkChartOptions
+                                }
                                 series={webMetricsChart.series}
                                 width="100%"
                                 height="100%"

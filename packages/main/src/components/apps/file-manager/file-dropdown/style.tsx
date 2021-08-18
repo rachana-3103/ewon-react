@@ -30,11 +30,7 @@ export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
             .dropdown {
                 &-menu {
                     border-width: 0;
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .lighten(8)
-                        .toString()};
+                    background-color: ${themeGet("colors.darklighten8")};
                 }
             }
         `}

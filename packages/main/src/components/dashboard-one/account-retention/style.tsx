@@ -1,4 +1,8 @@
-import styled, { themeGet, color as colorProps } from "@doar/shared/styled";
+import styled, {
+    themeGet,
+    color as colorProps,
+    css,
+} from "@doar/shared/styled";
 import { CardHeader, CardBody } from "@doar/components";
 
 export const StyledCardHeader = styled(({ ...props }) => (
@@ -42,4 +46,14 @@ export const StyledCardBodyText = styled.p`
 export const StyledChart = styled.div`
     margin-left: -17px;
     margin-right: -17px;
+    .apexcharts-xaxis-label {
+        text-transform: uppercase;
+    }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-xaxis-label {
+                fill: rgba(255, 255, 255, 0.4);
+            }
+        `}
 `;

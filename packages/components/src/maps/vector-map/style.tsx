@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import styled, { layout, LayoutProps } from "@doar/shared/styled";
+import styled, {
+    layout,
+    LayoutProps,
+    themeGet,
+    css,
+    tinycolor,
+} from "@doar/shared/styled";
 
 interface IProps extends LayoutProps {
     $bg?: string;
@@ -17,13 +23,19 @@ export const StyledMap = styled(({ width, height, ...props }) => (
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
-        background: #292929;
+        background: ${themeGet("colors.shaft")};
         color: #fff;
         font-family: sans-serif, Verdana;
         font-size: smaller;
         padding: 3px;
         padding: 2px 8px;
-        background-color: rgba(17, 17, 17, 0.9);
+        background-color: ${(props) =>
+            !!props.theme &&
+            css`
+                ${tinycolor(themeGet("colors.shaft")(props))
+                    .setAlpha(0.9)
+                    .toRgbString()}
+            `};
         border-radius: 2px;
         pointer-events: none;
     }
@@ -57,9 +69,9 @@ export const StyledMap = styled(({ width, height, ...props }) => (
     .jvectormap-tip {
         position: absolute;
         display: none;
-        border: solid 1px #cdcdcd;
+        border: solid 1px ${themeGet("colors.silver")};
         border-radius: 3px;
-        background: #292929;
+        background: ${themeGet("colors.shaft")};
         color: white;
         font-family: sans-serif, Verdana;
         font-size: smaller;
@@ -72,7 +84,7 @@ export const StyledMap = styled(({ width, height, ...props }) => (
         position: absolute;
         left: 10px;
         border-radius: 3px;
-        background: #292929;
+        background: ${themeGet("colors.shaft")};
         padding: 3px;
         color: white;
         cursor: pointer;

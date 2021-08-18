@@ -50,6 +50,20 @@ const data = {
             opacity: 1,
         },
         colors: ["#66a4fb", "#65e0e0"],
+        grid: {
+            show: true,
+            borderColor: "#ebeef3",
+            xaxis: {
+                lines: {
+                    show: false,
+                },
+            },
+            yaxis: {
+                lines: {
+                    show: true,
+                },
+            },
+        },
         responsive: [
             {
                 breakpoint: 1199,

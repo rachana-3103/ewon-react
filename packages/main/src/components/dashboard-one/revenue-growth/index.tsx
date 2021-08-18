@@ -9,6 +9,7 @@ import {
     SectionTitle,
 } from "@doar/components";
 import { RevenueChart } from "@doar/shared/data/dashboard-one";
+import { useAppSelector } from "../../../redux/hooks";
 import {
     StyledHeader,
     StyledList,
@@ -24,6 +25,13 @@ import {
 
 const RevenueGrowth: FC = () => {
     const { series, options } = RevenueChart;
+    const { theme } = useAppSelector((state) => state.ui);
+    const chartOptions = options;
+    const darkChartOptions = {
+        ...options,
+        grid: { ...options.grid, borderColor: "rgba(255,255,255,.05)" },
+        colors: [options.colors[0], options.colors[1], "#b4bdce"],
+    };
     const chartToggle = (e: MouseEvent<HTMLButtonElement>) => {
         const target = e.currentTarget;
         target.classList.toggle("hidden");
@@ -74,7 +82,9 @@ const RevenueGrowth: FC = () => {
                 </StyledCardBodyWrap>
                 <StyledChart>
                     <ApexAreaChart
-                        options={options}
+                        options={
+                            theme !== "dark" ? chartOptions : darkChartOptions
+                        }
                         series={series}
                         width="100%"
                         height={280}

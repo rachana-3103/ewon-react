@@ -4,7 +4,6 @@ import styled, {
     ColorProps,
     themeGet,
     css,
-    tinycolor,
 } from "@doar/shared/styled";
 import { Card, CardBody, CardFooter } from "@doar/components";
 
@@ -47,9 +46,7 @@ export const StyledThumb = styled(({ color, ...rest }) => (
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(2)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken2")};
         `}
     ${colorStyles};
 `;

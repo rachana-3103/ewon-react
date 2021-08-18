@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-top: 25px;
@@ -16,7 +16,7 @@ export const StyledTitle = styled.h6`
 
 export const StyledDesc = styled.p`
     font-size: 13px;
-    color: #8392a5;
+    color: ${themeGet("colros.text3")};
     margin-bottom: 20px;
 `;
 

@@ -1,4 +1,13 @@
-import styled, { themeGet, device } from "@doar/shared/styled";
+import styled, { themeGet, device, css } from "@doar/shared/styled";
+import { Card } from "@doar/components";
+
+export const StyledCard = styled(({ ...rest }) => <Card {...rest} />)`
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+        `}
+`;
 
 export const StyledRole = styled.span`
     display: block;
@@ -27,4 +36,9 @@ export const StyledGrayBox = styled.div`
         padding-left: 20px;
         padding-right: 20px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.dark")};
+        `}
 `;

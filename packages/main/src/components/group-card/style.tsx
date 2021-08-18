@@ -39,6 +39,6 @@ export const StyledName = styled.h5`
 
 export const StyledConnections = styled.p`
     font-size: 12px;
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 25px;
 `;

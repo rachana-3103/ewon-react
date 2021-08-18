@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "react-feather";
 import { DropdownToggle, Dropdown } from "@doar/components";
-import Notification from "../notification";
+import Notification from "../dropdown-item";
 import {
     StyledDropMenu,
     StyledDropHeader,
     StyledDropItem,
     StyledDropFooter,
     StyledBadge,
-} from "./style";
+} from "../header-dropdown-elements";
 
 const MessageDropdown: React.FC = () => {
     return (

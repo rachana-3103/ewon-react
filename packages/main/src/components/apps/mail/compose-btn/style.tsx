@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding: 20px;
@@ -6,8 +6,7 @@ export const StyledWrap = styled.div`
         font-size: 10px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
-            sans-serif;
+        font-family: ${themeGet("fonts.interUi")};
         font-weight: 500;
     }
 `;

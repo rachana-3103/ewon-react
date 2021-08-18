@@ -52,7 +52,6 @@ const data = {
             tickAmount: 6,
             labels: {
                 style: {
-                    colors: ["#67788e"],
                     fontSize: "9px",
                     fontFamily: "Inter UI",
                     fontWeight: 500,

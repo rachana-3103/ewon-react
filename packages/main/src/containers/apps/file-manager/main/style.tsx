@@ -1,4 +1,4 @@
-import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { device, css, themeGet } from "@doar/shared/styled";
 
 interface IProps {
     $showSidebar: boolean;
@@ -24,9 +24,7 @@ export const StyledMain = styled.div<IProps>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
         `}
 `;
 
@@ -58,9 +56,7 @@ export const StyledBody = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
         `}
 `;
 

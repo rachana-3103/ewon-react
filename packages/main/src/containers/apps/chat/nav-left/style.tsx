@@ -1,4 +1,4 @@
-import styled, { css, tinycolor, themeGet } from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
@@ -6,7 +6,7 @@ export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
     position: absolute;
     top: 0;
     bottom: 0;
-    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    border-right: 1px solid ${themeGet("colors.border")};
     width: 60px;
     padding: 15px 10px;
     transition: all 0.3s;
@@ -20,9 +20,7 @@ export const StyledNavLeft = styled.div<{ $sidebar?: boolean }>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
         `}
 `;
 
@@ -44,7 +42,7 @@ export const StyledNavLink = styled(({ ...rest }) => (
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     border-radius: 0.25rem;
     transition: all 0.2s ease-in-out;
     &:not(:first-of-type) {
@@ -58,7 +56,7 @@ export const StyledNavLink = styled(({ ...rest }) => (
     ${({ $active }) =>
         !!$active &&
         css`
-            color: #0168fa;
+            color: ${themeGet("colors.primary")};
             svg {
                 fill: rgba(1, 104, 250, 0.2);
             }

@@ -26,6 +26,13 @@ export const StyledBreadItem = styled((props) => <BreadcrumbItem {...props} />)`
     &:before {
         color: ${themeGet("colors.gray500")};
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            a {
+                color: ${themeGet("colors.gray600")};
+            }
+        `}
 `;
 
 export const PageHeading = styled.h4`

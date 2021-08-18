@@ -1,4 +1,4 @@
-import styled, { css, device, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { css, device, themeGet } from "@doar/shared/styled";
 import { Button, Input } from "@doar/components";
 import { hexTorgb } from "@doar/shared/methods";
 
@@ -129,9 +129,7 @@ export const StyledSearchBody = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(2)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken2")};
             a {
                 color: ${themeGet("colors.gray500")};
                 border-color: ${themeGet("colors.gray700")};

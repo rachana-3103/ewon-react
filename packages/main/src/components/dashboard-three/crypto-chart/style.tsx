@@ -1,4 +1,4 @@
-import styled, { device, themeGet } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 import { CardHeader, Nav, NavLink, Dropdown } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
@@ -78,6 +78,16 @@ export const StyledDropdown = styled(({ ...rest }) => <Dropdown {...rest} />)`
         background: transparent;
         border: none;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .dropdown {
+                &-menu {
+                    border-width: 0;
+                    background-color: ${themeGet("colors.darklighten5")};
+                }
+            }
+        `}
 `;
 
 export const StyledText = styled.span`
@@ -96,6 +106,13 @@ export const StyledChart = styled.div`
         margin-left: -20px;
         margin-right: -10px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-xaxis-label {
+                fill: rgba(255, 255, 255, 0.5);
+            }
+        `}
 `;
 
 export const StyledFooterTitle = styled.h6`
@@ -103,7 +120,7 @@ export const StyledFooterTitle = styled.h6`
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: ${themeGet("colors.text3")};
-    margin-bottom: 10px;
+    margin-bottom: 19px;
     ${device.small} {
         font-size: 11px;
     }

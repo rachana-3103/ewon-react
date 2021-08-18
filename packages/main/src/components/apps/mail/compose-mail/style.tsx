@@ -1,4 +1,4 @@
-import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
+import styled, { device, themeGet, css } from "@doar/shared/styled";
 import { ModalHeader, ModalBody } from "@doar/components";
 
 export const StyledHeader = styled(({ ...rest }) => <ModalHeader {...rest} />)`
@@ -37,9 +37,7 @@ export const StyledBody = styled(({ ...rest }) => <ModalBody {...rest} />)`
         props.theme.name === "dark" &&
         css`
             border-width: 0;
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
             box-shadow: none;
             color: ${themeGet("colors.gray500")};
             .form-control {

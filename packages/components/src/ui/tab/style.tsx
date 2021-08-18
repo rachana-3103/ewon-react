@@ -1,4 +1,4 @@
-import styled, { css } from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Tabs } from "react-tabs";
 
 interface ITab {
@@ -18,7 +18,7 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
         &__tab-list {
             display: flex;
             flex-wrap: wrap;
-            border-color: rgba(72, 94, 144, 0.16);
+            border-color: ${themeGet("colors.border")};
             ${({ $vertical }) =>
                 $vertical === true &&
                 css`
@@ -31,14 +31,14 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
             ${({ $variation }) =>
                 $variation === "line" &&
                 css`
-                    border-bottom: 2px solid rgba(72, 94, 144, 0.16);
+                    border-bottom: 2px solid ${themeGet("colors.border")};
                 `}
         }
         &__tab {
             margin-bottom: 0;
-            background-color: rgba(72, 94, 144, 0.16);
-            border-color: rgba(72, 94, 144, 0.16);
-            color: #596882;
+            background-color: ${themeGet("colors.border")};
+            border-color: ${themeGet("colors.border")};
+            color: ${themeGet("colors.gray700")};
             border-bottom-width: 0;
             position: relative;
             margin-bottom: -1px;
@@ -58,12 +58,13 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
             &--selected {
                 background-color: #fff;
                 z-index: 5;
-                color: #0168fa;
-                border-color: #cdd4e0 #cdd4e0 #fff;
+                color: ${themeGet("colors.primary")};
+                border-color: ${themeGet("colors.gray300")}
+                    ${themeGet("colors.gray300")} #fff;
             }
             &--disabled {
                 background-color: transparent;
-                color: #b4bdce;
+                color: ${themeGet("colors.gray400")};
                 border-color: transparent;
                 pointer-events: none;
                 cursor: default;
@@ -78,7 +79,7 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
             ${({ $vertical }) =>
                 $vertical === true &&
                 css`
-                    border-color: rgba(72, 94, 144, 0.16);
+                    border-color: ${themeGet("colors.border")};
                     border-right-width: 0;
                     margin-bottom: 0;
                     margin-right: -1px;
@@ -91,7 +92,7 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
                         margin-top: 5px;
                     }
                     &--selected {
-                        border-color: rgba(72, 94, 144, 0.16);
+                        border-color: ${themeGet("colors.border")};
                     }
                 `}
 			${({ $variation }) =>
@@ -100,11 +101,13 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
                     padding: 8px 0;
                     background-color: transparent;
                     border: none;
+                    border-radius: 0;
                     &:not(:first-of-type) {
                         margin-left: 25px;
                     }
                     &--selected {
                         border: none;
+                        background-color: transparent;
                         &:after {
                             content: "";
                             position: absolute;
@@ -112,9 +115,14 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
                             left: 0;
                             right: 0;
                             height: 2px;
-                            background-color: #0168fa;
+                            background-color: ${themeGet("colors.primary")};
                         }
                     }
+                `}
+                ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    color: ${themeGet("colors.gray300")};
                 `}
         }
         &__tab-panel {
@@ -153,5 +161,10 @@ export const StyledTabs = styled(({ ...rest }) => <Tabs {...rest} />)<ITab>`
 export const StyledTabContent = styled.div`
     padding: 20px;
     border-top: 0;
-    border: 1px solid #cdd4e0;
+    border: 1px solid ${themeGet("colors.gray300")};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: ${themeGet("colors.gray500")};
+        `}
 `;

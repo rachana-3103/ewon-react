@@ -68,7 +68,6 @@ const imageCss = css<ImageProps>`
             height: 100%;
             object-fit: contain;
         `}
-
     ${space};
     ${layout};
 `;
@@ -107,6 +106,11 @@ const groupCss = css<IGroup>`
         ${device.small} {
             padding: 3px;
         }
+        ${(props) =>
+            props.theme.name === "dark" &&
+            css`
+                background-color: ${themeGet("colors.gray900")};
+            `}
     }
     ${({ $size }) =>
         (!$size || $size !== "sm") &&

@@ -1,4 +1,4 @@
-import styled, { space, SpaceProps, css } from "@doar/shared/styled";
+import styled, { space, SpaceProps, css, themeGet } from "@doar/shared/styled";
 
 export const StyledInputGroup = styled(({ mb, ...rest }) => (
     <div {...rest} />
@@ -90,11 +90,11 @@ export const StyledInputGroupText = styled.div`
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #596882;
+    color: ${themeGet("colors.gray700")};
     text-align: center;
     white-space: nowrap;
-    background-color: #f5f6fa;
-    border: 1px solid #c0ccda;
+    background-color: ${themeGet("colors.whisper")};
+    border: 1px solid ${themeGet("colors.text4")};
     border-radius: 0.25rem;
     font-size: inherit;
 `;

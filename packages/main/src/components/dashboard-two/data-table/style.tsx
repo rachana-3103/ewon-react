@@ -1,4 +1,4 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { Table } from "@doar/components";
 
 export const StyledTable = styled(({ ...rest }) => <Table {...rest} />)``;
@@ -10,6 +10,11 @@ export const StyledTheadTR = styled.tr`
             font-size: 13px;
             background-color: #f5f6fa;
             text-align: left;
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    background-color: rgba(255, 255, 255, 0.05);
+                `}
         }
     }
     th:first-child {
@@ -25,7 +30,10 @@ export const StyledTheadTR = styled.tr`
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding: 8px 15px;
-            color: #8392a5;
+            color: ${themeGet("colors.text3")};
+            &:not(:first-child) {
+                text-align: right;
+            }
         }
     }
 `;

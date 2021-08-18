@@ -83,6 +83,11 @@ export const StyledListIitem = styled.li`
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid ${themeGet("colors.light")};
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-color: ${themeGet("colors.darklighten5")};
+        `}
 `;
 
 export const StyledIcon = styled(({ bg, opacity, ...rest }) => (

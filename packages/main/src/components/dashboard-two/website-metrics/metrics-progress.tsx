@@ -38,7 +38,7 @@ const MetricsProgress: FC<IProps> = ({
                     <small>{goal}</small>
                 </StyledProgressGoal>
             </StyledProgressDiv>
-            <Progress bg={bg} now={now} height="4px" opacity={0.5} />
+            <Progress bg={bg} now={now} height="4px" />
         </>
     );
 };

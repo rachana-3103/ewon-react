@@ -9,6 +9,7 @@ import {
     SectionTitle,
 } from "@doar/components";
 import { RealTimeSalesData } from "@doar/shared/data/dashboard-one";
+import { useAppSelector } from "../../../redux/hooks";
 import {
     StyledBodyTitle,
     StyledBullet,
@@ -22,10 +23,27 @@ import {
 } from "./style";
 
 const RealTimeSales: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
     const inputEl: any = useRef(null);
     const [legendRendered, setLegendRendered] = useState(false);
     const [, forceUpdate] = useState();
     const { datasets } = RealTimeSalesData.data;
+    const chartOptions = RealTimeSalesData.options;
+    const darkChartOptions = {
+        ...chartOptions,
+        scales: {
+            ...chartOptions.scales,
+            xAxes: [
+                {
+                    ...chartOptions.scales.xAxes[0],
+                    gridLines: {
+                        ...chartOptions.scales.xAxes[0].gridLines,
+                        color: "rgba(255, 255, 255, 0.06)",
+                    },
+                },
+            ],
+        },
+    };
 
     const handleLegendClick = (datasetIndex: number) => {
         const chart = inputEl.current.chartInstance;
@@ -109,7 +127,9 @@ const RealTimeSales: FC = () => {
                 <StyledChart>
                     <HorizontalBarChart
                         data={RealTimeSalesData.data}
-                        options={RealTimeSalesData.options}
+                        options={
+                            theme !== "dark" ? chartOptions : darkChartOptions
+                        }
                         width={341}
                         height={225}
                         ref={inputEl}

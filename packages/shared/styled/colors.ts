@@ -52,6 +52,8 @@ export const classic = {
     pink: "#f10075",
     bayoux: "#49597b",
     athens: "#e9ecf1",
+    athens2: "#eeeff4",
+    athens3: "#f3f4f7",
     orange: "#fd7e14",
     cyan: "#17a2b8",
     teal: "#00cccc",
@@ -70,6 +72,11 @@ export const classic = {
     gulf: "#031a61",
     river: "#475362",
     zircon: "#f3f8ff",
+    clay: "#283143",
+    clay2: "#232b3b",
+    shaft: "#292929",
+    cod: "#111111",
+    silver: "#cdcdcd",
 };
 
 export const light = {
@@ -110,6 +117,8 @@ export const light = {
     pink: "#f10075",
     bayoux: "#49597b",
     athens: "#e9ecf1",
+    athens2: "#eeeff4",
+    athens3: "#f3f4f7",
     orange: "#fd7e14",
     cyan: "#17a2b8",
     teal: "#00cccc",
@@ -129,6 +138,11 @@ export const light = {
     cornflower: "#525f70",
     river: "#475362",
     zircon: "#f3f8ff",
+    clay: "#283143",
+    clay2: "#232b3b",
+    shaft: "#292929",
+    cod: "#111111",
+    silver: "#cdcdcd",
 };
 
 const skinUi01 = tinycolor(primary).desaturate(20).toHexString();
@@ -173,6 +187,8 @@ export const cool = {
     pink: "#f10075",
     bayoux: "#49597b",
     athens: "#e9ecf1",
+    athens2: "#eeeff4",
+    athens3: "#f3f4f7",
     orange: "#fd7e14",
     cyan: "#17a2b8",
     teal: "#00cccc",
@@ -192,11 +208,22 @@ export const cool = {
     cornflower: "#525f70",
     river: "#475362",
     zircon: "#f3f8ff",
+    clay: "#283143",
+    clay2: "#232b3b",
+    shaft: "#292929",
+    cod: "#111111",
+    silver: "#cdcdcd",
     skinUi01,
 };
 
 const darkBg = tinycolor(gray900).darken(5).toString();
-// const darkBorder = tinycolor(gray900).lighten(5).toString();
+const darklighten5 = tinycolor(gray900).lighten(5).toString();
+const darklighten2 = tinycolor(gray900).lighten(2).toString();
+const darklighten8 = tinycolor(gray900).lighten(8).toString();
+const darklighten3 = tinycolor(gray900).lighten(3).toString();
+const darkdarken2 = tinycolor(gray900).darken(2).toString();
+const darkdarken3 = tinycolor(gray900).darken(3).toString();
+const darkdarken5 = tinycolor(gray900).darken(5).toString();
 
 export const dark = {
     primary,
@@ -236,6 +263,8 @@ export const dark = {
     pink: "#f10075",
     bayoux: "#49597b",
     athens: "#e9ecf1",
+    athens2: "#eeeff4",
+    athens3: "#f3f4f7",
     orange: "#fd7e14",
     cyan: "#17a2b8",
     teal: "#00cccc",
@@ -255,4 +284,16 @@ export const dark = {
     cornflower: "#525f70",
     river: "#475362",
     zircon: "#f3f8ff",
+    clay: "#283143",
+    clay2: "#232b3b",
+    shaft: "#292929",
+    cod: "#111111",
+    silver: "#cdcdcd",
+    darklighten5,
+    darklighten2,
+    darklighten8,
+    darklighten3,
+    darkdarken2,
+    darkdarken3,
+    darkdarken5,
 };

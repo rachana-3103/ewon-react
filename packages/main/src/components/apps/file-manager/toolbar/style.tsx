@@ -1,4 +1,4 @@
-import styled from "@doar/shared/styled";
+import styled, { themeGet } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledNav = styled.nav`
@@ -10,7 +10,7 @@ export const StyledNav = styled.nav`
 export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
     display: block;
     padding: 0;
-    color: #596882;
+    color: ${themeGet("colors.gray700")};
     &:not(:first-of-type) {
         margin-left: 10px;
     }

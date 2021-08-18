@@ -280,6 +280,16 @@ const buttonStyles = css<IProps>`
             }
         `}
 
+
+        ${(props) =>
+        props.theme.name === "dark" &&
+        props.$variant === "contained" &&
+        props.$color === "light" &&
+        css`
+            color: ${themeGet("colors.gray700")};
+        `}
+
+
     
 
     ${(props) =>
@@ -650,6 +660,15 @@ const buttonStyles = css<IProps>`
             }
         `}
 
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$variant === "outlined" &&
+        props.$color === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            border-color: ${themeGet("colors.gray500")};
+        `}
+
 	${(props) =>
         props.$variant === "outlined" &&
         props.$color === "brand2" &&
@@ -870,6 +889,16 @@ const buttonStyles = css<IProps>`
         css`
             background-color: ${themeGet("colors.whisper")};
         `}
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$active &&
+        props.$color === "white" &&
+        css`
+            color: #fff;
+            background-color: ${themeGet("colors.clay")};
+            border-color: ${themeGet("colors.clay2")};
+        `}
     ${({ disabled }) =>
         disabled &&
         css`
@@ -931,6 +960,13 @@ const buttonStyles = css<IProps>`
         $color === "dark" &&
         css`
             color: ${themeGet("colors.dark")};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$variant === "texted" &&
+        props.$color === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
         `}
     ${({ $iconButton }) =>
         $iconButton &&

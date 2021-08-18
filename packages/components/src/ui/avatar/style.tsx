@@ -9,6 +9,7 @@ import styled, {
     typography,
     TypographyProps,
     SpaceProps,
+    tinycolor,
 } from "@doar/shared/styled";
 
 interface IProps extends LayoutProps, SpaceProps {
@@ -242,6 +243,32 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         height: 100%;
         object-fit: cover;
     }
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        (props.$status === "online" || props.$status === "offline") &&
+        css`
+            &:after {
+                box-shadow: 0 0 0 1.5px
+                    ${tinycolor(themeGet("colors.gray900")(props))
+                        .darken(5)
+                        .toString()};
+            }
+        `}
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        (props.$size === "xxl" || props.$size === "xl") &&
+        Boolean(props.$status) &&
+        css`
+            &:after {
+                box-shadow: 0 0 0 2.5px
+                    ${tinycolor(themeGet("colors.gray900")(props))
+                        .darken(5)
+                        .toString()};
+            }
+        `}
+
     ${layout};
     ${space};
 `;
@@ -315,6 +342,6 @@ export const StyledInitialText = styled(
         css`
             border-radius: ${themeGet("radii.rounded")};
         `}
-        ${colorStyles};
+    ${colorStyles};
     ${typography};
 `;

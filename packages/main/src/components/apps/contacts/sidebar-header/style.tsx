@@ -1,4 +1,4 @@
-import styled, { themeGet, device, css, tinycolor } from "@doar/shared/styled";
+import styled, { themeGet, device, css } from "@doar/shared/styled";
 
 export const StyledHeader = styled.div`
     position: absolute;
@@ -30,8 +30,6 @@ export const StyledHeader = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
         `}
 `;

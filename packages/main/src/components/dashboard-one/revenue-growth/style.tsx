@@ -3,6 +3,7 @@ import styled, {
     themeGet,
     color,
     ColorProps,
+    css,
 } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
 
@@ -96,4 +97,14 @@ export const StyledChart = styled.div`
     position: relative;
     overflow: hidden;
     margin: 0 10px 0;
+    .apexcharts-xaxis-label {
+        text-transform: uppercase;
+    }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-xaxis-label {
+                fill: rgba(255, 255, 255, 0.4);
+            }
+        `}
 `;

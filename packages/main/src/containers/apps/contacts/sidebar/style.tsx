@@ -47,11 +47,7 @@ export const StyledSidebar = styled.div<ISidebar>`
             ${(props) =>
                 props.theme.name === "dark" &&
                 css`
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .darken(3)
-                        .toString()};
+                    background-color: ${themeGet("colors.darkdarken3")};
                 `}
         }
         &__tab {
@@ -106,11 +102,7 @@ export const StyledSidebar = styled.div<ISidebar>`
             ${(props) =>
                 props.theme.name === "dark" &&
                 css`
-                    background-color: ${tinycolor(
-                        themeGet("colors.gray900")(props)
-                    )
-                        .darken(5)
-                        .toString()};
+                    background-color: ${themeGet("colors.darkdarken5")};
                 `}
         }
     }

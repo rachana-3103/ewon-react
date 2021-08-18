@@ -8,6 +8,7 @@ import styled, {
     device,
     typography,
     TypographyProps,
+    tinycolor,
 } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
@@ -55,13 +56,13 @@ export const StyledNav = styled(
                 &:not(.active) {
                     &:hover,
                     &:focus {
-                        background-color: #eeeff4;
-                        color: #001737;
+                        background-color: ${themeGet("colors.anthens2")};
+                        color: ${themeGet("colors.text")};
                     }
                 }
                 &.active {
                     color: #fff;
-                    background-color: #0168fa;
+                    background-color: ${themeGet("colors.primary")};
                 }
             }
         `}
@@ -197,6 +198,9 @@ export const StyledNavLink = styled(
                 props.theme.name === "dark" &&
                 css`
                     color: ${themeGet("colors.gray500")};
+                    .badge {
+                        color: ${themeGet("colors.gray300")};
+                    }
                 `}
         `}
 	${({ $active, $customStyle }) =>
@@ -259,8 +263,8 @@ export const StyledNavLink = styled(
             }
         `}
 	
-	${({ $customStyle }) =>
-        $customStyle === "sidebar" &&
+	${(props) =>
+        props.$customStyle === "sidebar" &&
         css`
             padding: 6px 10px;
             display: flex;
@@ -279,21 +283,45 @@ export const StyledNavLink = styled(
                 height: 18px;
                 stroke-width: 2.3px;
                 margin-right: 12px;
-                color: #566476;
-                fill: rgba(27, 46, 75, 0.06);
+                color: ${themeGet("colors.shuttle2")};
+                fill: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.06)
+                    .toRgbString()};
             }
         `}
 
-	${({ $active, $customStyle }) =>
-        !!$active &&
-        $customStyle === "sidebar" &&
+	${(props) =>
+        !!props.$active &&
+        props.$customStyle === "sidebar" &&
         css`
             color: ${themeGet("colors.primary")};
             font-weight: 500;
             background-color: ${themeGet("colors.catskill")};
             svg {
                 color: ${themeGet("colors.primary")};
-                fill: rgba(1, 104, 250, 0.2);
+                fill: ${tinycolor(themeGet("colors.primary")(props))
+                    .setAlpha(0.2)
+                    .toRgbString()};
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$customStyle === "sidebar" &&
+        css`
+            &:hover,
+            &:focus {
+                background-color: ${themeGet("colors.gray900")};
+            }
+        `}
+    ${(props) =>
+        !!props.$active &&
+        props.theme.name === "dark" &&
+        props.$customStyle === "sidebar" &&
+        css`
+            background-color: ${themeGet("colors.darklighten2")};
+            color: ${themeGet("colors.gray400")};
+            .badge {
+                color: ${themeGet("colors.gray50")};
             }
         `}
 
@@ -301,7 +329,7 @@ export const StyledNavLink = styled(
         $customStyle === "social" &&
         css`
             padding: 0;
-            color: #1b2e4b;
+            color: ${themeGet("colors.text2")};
             &:not(:first-of-type) {
                 margin-left: 8px;
             }

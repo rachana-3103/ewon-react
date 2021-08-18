@@ -1,7 +1,7 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 
 export const StyledWrapper = styled.div`
-    background-color: #f8f9fc;
+    background-color: ${themeGet("colors.lilac")};
     position: fixed;
     top: 55px;
     bottom: 0;

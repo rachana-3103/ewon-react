@@ -1,4 +1,4 @@
-import styled, { color, ColorProps, themeGet } from "@doar/shared/styled";
+import styled, { color, ColorProps, themeGet, css } from "@doar/shared/styled";
 
 export const StyledDiv = styled.div`
     display: flex;
@@ -40,4 +40,11 @@ export const StyledChart = styled.div`
         margin-left: -17px;
         margin-right: 0px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-xaxis-label {
+                fill: rgba(255, 255, 255, 0.4);
+            }
+        `}
 `;

@@ -38,6 +38,11 @@ const data = {
             tickPlacement: "between",
             min: 40,
             max: 80,
+            labels: {
+                style: {
+                    fontSize: "10px",
+                },
+            },
         },
         yaxis: {
             labels: {

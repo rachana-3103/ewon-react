@@ -1,4 +1,4 @@
-import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 export const StyledWrap = styled.div`
@@ -29,9 +29,7 @@ export const StyledItem = styled(({ ...rest }) => <Media {...rest} />)`
         ${(props) =>
             props.theme.name === "dark" &&
             css`
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .lighten(5)
-                    .toString()};
+                background-color: ${themeGet("colors.darklighten5")};
             `}
     }
 `;

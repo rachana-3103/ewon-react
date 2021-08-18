@@ -1,54 +1,61 @@
 import { df3data1, df3data2, df3data3, df3data4 } from "../chart";
 
-export const conversionChart1 = {
-    options: {
-        chart: {
-            toolbar: {
-                show: false,
-            },
-            stacked: true,
-            offsetX: 0,
-            offsetY: 0,
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: "60%",
-                endingShape: "rounded",
-            },
-        },
-        legend: {
+const commonOptions = {
+    chart: {
+        toolbar: {
             show: false,
         },
-        xaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
+        stacked: true,
+        offsetX: 0,
+        offsetY: 0,
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: "60%",
+            endingShape: "rounded",
         },
-        yaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
+    },
+    legend: {
+        show: false,
+    },
+    xaxis: {
+        labels: {
+            show: false,
         },
-        grid: { show: false },
-        fill: {
-            opacity: 1,
+        axisBorder: {
+            show: false,
         },
+        axisTicks: {
+            show: false,
+        },
+    },
+    yaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+    },
+    grid: { show: false },
+    fill: {
+        opacity: 1,
+    },
+    tooltip: {
+        enabled: false,
+    },
+};
+
+export const conversionChart1 = {
+    options: {
+        ...commonOptions,
         colors: ["#66a4fb", "#e5e9f2"],
     },
     series: [
@@ -63,53 +70,7 @@ export const conversionChart1 = {
 
 export const conversionChart2 = {
     options: {
-        chart: {
-            toolbar: {
-                show: false,
-            },
-            stacked: true,
-            offsetX: 0,
-            offsetY: 0,
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: "60%",
-                endingShape: "rounded",
-            },
-        },
-        legend: {
-            show: false,
-        },
-        xaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
-        },
-        yaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
-        },
-        grid: { show: false },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         colors: ["#7ee5e5", "#e5e9f2"],
     },
     series: [
@@ -124,53 +85,7 @@ export const conversionChart2 = {
 
 export const conversionChart3 = {
     options: {
-        chart: {
-            toolbar: {
-                show: false,
-            },
-            stacked: true,
-            offsetX: 0,
-            offsetY: 0,
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: "60%",
-                endingShape: "rounded",
-            },
-        },
-        legend: {
-            show: false,
-        },
-        xaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
-        },
-        yaxis: {
-            labels: {
-                show: false,
-            },
-            axisBorder: {
-                show: false,
-            },
-            axisTicks: {
-                show: false,
-            },
-        },
-        grid: { show: false },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         colors: ["#f77eb9", "#e5e9f2"],
     },
     series: [

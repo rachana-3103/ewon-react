@@ -1,4 +1,4 @@
-import styled, { css, device, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { css, device, themeGet } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     padding-left: 10px;
@@ -18,7 +18,7 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledBtn = styled.button`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     background: transparent;
     padding: 0;
     border: none;
@@ -43,7 +43,7 @@ export const StyledLink = styled(({ ...rest }) => (
     position: relative;
     padding: 5px 10px;
     font-weight: 500;
-    color: #1b2e4b;
+    color: ${themeGet("colors.text2")};
     border-radius: 0.25rem;
     background-color: transparent;
     border: none;
@@ -52,7 +52,7 @@ export const StyledLink = styled(({ ...rest }) => (
     }
     &:hover,
     &:focus {
-        background-color: #f5f6fa;
+        background-color: ${themeGet("colors.whisper")};
     }
     ${device.large} {
         ${({ $active }) =>
@@ -65,9 +65,7 @@ export const StyledLink = styled(({ ...rest }) => (
             props.theme.name === "dark" &&
             !!props.$active &&
             css`
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .lighten(2)
-                    .toString()};
+                background-color: ${themeGet("colors.darklighten2")};
             `}
     }
     ${(props) =>

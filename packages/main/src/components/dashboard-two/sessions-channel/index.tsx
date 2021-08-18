@@ -10,6 +10,7 @@ import {
     SectionTitle,
 } from "@doar/components";
 import { sessionsChart } from "@doar/shared/data/dashboard-two";
+import { useAppSelector } from "../../../redux/hooks";
 import {
     StyledChart,
     StyledFooterText,
@@ -19,6 +20,14 @@ import {
 } from "./style";
 
 const SessoionsChannel: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
+    const chartOptions = sessionsChart.options;
+    const darkChartOptions = {
+        ...chartOptions,
+        stroke: {
+            colors: ["#1c273c"],
+        },
+    };
     return (
         <Card>
             <CardHeader>
@@ -27,7 +36,9 @@ const SessoionsChannel: FC = () => {
             <CardBody p={[null, null, null, "25px"]}>
                 <StyledChart>
                     <ApexDonutChart
-                        options={sessionsChart.options}
+                        options={
+                            theme !== "dark" ? chartOptions : darkChartOptions
+                        }
                         series={sessionsChart.series}
                         width="100%"
                         height="100%"

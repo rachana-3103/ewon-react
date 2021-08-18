@@ -1,4 +1,4 @@
-import styled, { css, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { css, themeGet } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 interface IProps {
@@ -31,13 +31,6 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            .avatar::after {
-                box-shadow: 0 0 0 2px
-                    ${tinycolor(themeGet("colors.gray900")(props))
-                        .darken(5)
-                        .toString()};
-            }
-
             &:hover,
             &:focus {
                 background-color: ${themeGet("colors.gray900")};
@@ -54,18 +47,9 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)<IProps>`
         !!props.$active &&
         css`
             @media (min-width: 480px) {
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .lighten(2)
-                    .toString()};
+                background-color: ${themeGet("colors.darklighten2")};
             }
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .lighten(2)
-                .toString()};
-            .avatar::after {
-                box-shadow: 0 0 0 2px
-                    ${tinycolor(themeGet("colors.gray900")(props))
-                        .lighten(2)
-                        .toString()};
+            background-color: ${themeGet("colors.darklighten2")};
             }
         `}
 `;

@@ -9,9 +9,18 @@ import {
     ApexDonutChart,
 } from "@doar/components";
 import Item from "./item";
+import { useAppSelector } from "../../../redux/hooks";
 import { StyledHeader, StyledChart, StyledBottom } from "./style";
 
 const BTCVolume: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
+    const chartOptions = volumeChart.options;
+    const darkChartOptions = {
+        ...chartOptions,
+        stroke: {
+            colors: ["#1c273c"],
+        },
+    };
     return (
         <Card>
             <StyledHeader>
@@ -23,7 +32,9 @@ const BTCVolume: FC = () => {
             <CardBody py={["25px", "25px"]}>
                 <StyledChart>
                     <ApexDonutChart
-                        options={volumeChart.options}
+                        options={
+                            theme !== "dark" ? chartOptions : darkChartOptions
+                        }
                         series={volumeChart.series}
                         width="100%"
                         height="100%"

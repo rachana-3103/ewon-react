@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 import { ModalClose } from "@doar/components";
 
 export const StyledClose = styled(({ ...rest }) => <ModalClose {...rest} />)`
@@ -17,7 +17,7 @@ export const StyledTitle = styled.h5`
 
 export const StyledDesc = styled.p`
     font-size: 13px;
-    color: #8392a5;
+    color: ${themeGet("colros.text3")};
     margin-bottom: 30px;
 `;
 

@@ -1,4 +1,4 @@
-import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { Media } from "@doar/components";
 
 export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)`
@@ -23,9 +23,7 @@ export const StyledMedia = styled(({ ...rest }) => <Media {...rest} />)`
             background-color: transparent;
             &:hover,
             &:focus {
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .darken(2)
-                    .toString()};
+                background-color: ${themeGet("colors.darkdarken2")};
             }
             + .media {
                 border-top-color: ${themeGet("colors.gray900")};

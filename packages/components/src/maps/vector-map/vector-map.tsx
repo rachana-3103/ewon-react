@@ -38,7 +38,7 @@ interface IProps extends LayoutProps {
      */
     backgroundColor?: string;
     /**
-     * Map's Border Color. Default color is `#fff`
+     * Map's Border Color. Default color is `transparent`
      */
     borderColor?: string;
     /**
@@ -140,7 +140,7 @@ export const VectorMap: FC<IProps> = ({
 };
 
 VectorMap.defaultProps = {
-    backgroundColor: "#fff",
+    backgroundColor: "transparent",
     borderColor: "#fff",
     color: "#8392a5",
     selectedColor: "rgba(56, 43, 168, 1)",

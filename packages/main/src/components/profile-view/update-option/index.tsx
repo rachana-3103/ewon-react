@@ -4,7 +4,7 @@ import ReactTooltip from "react-tooltip";
 import {
     StyledWrap,
     StyledShare,
-    StyledAnchor,
+    StyledStatusInput,
     RightBtn,
     RightBtnLink,
 } from "./style";
@@ -14,9 +14,7 @@ const UpdateOption: FC = () => {
         <StyledWrap>
             <StyledShare>
                 <Edit3 width={18} height={18} />
-                <StyledAnchor href="#!">
-                    <span>Share an</span> Update
-                </StyledAnchor>
+                <StyledStatusInput>Share an Update</StyledStatusInput>
             </StyledShare>
             <RightBtn>
                 <RightBtnLink

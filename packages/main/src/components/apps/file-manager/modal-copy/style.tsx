@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, themeGet } from "@doar/shared/styled";
 import { ModalClose } from "@doar/components";
 
 export const StyledClose = styled(({ ...rest }) => <ModalClose {...rest} />)`
@@ -16,14 +16,14 @@ export const StyledTitle = styled.h5`
 `;
 
 export const StyledText = styled.p`
-    color: #8392a5;
+    color: ${themeGet("colors.text3")};
     margin-bottom: 25px;
 `;
 
 export const StyledWrap = styled.div`
     padding: 10px;
-    border: 1px solid rgba(72, 94, 144, 0.16);
-    background-color: #f5f6fa;
+    border: 1px solid ${themeGet("colors.border")};
+    background-color: ${themeGet("colors.whisper")};
 `;
 
 export const StyledLabel = styled.label`

@@ -45,6 +45,31 @@ const sparklineData = [
     46,
 ];
 
+const commonOptions = {
+    tooltip: {
+        enabled: false,
+    },
+    stroke: {
+        curve: "straight",
+    },
+    fill: {
+        opacity: 1,
+    },
+    yaxis: {
+        show: false,
+    },
+    xaxis: {
+        show: false,
+    },
+    colors: ["#DCE6EC"],
+    title: {
+        text: undefined,
+    },
+    subtitle: {
+        text: undefined,
+    },
+};
+
 export const conversionChart1 = {
     options: {
         chart: {
@@ -53,26 +78,8 @@ export const conversionChart1 = {
                 enabled: true,
             },
         },
-        stroke: {
-            curve: "straight",
-        },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         labels: [...Array(24).keys()].map((n) => `2018-09-0${n + 1}`),
-        yaxis: {
-            show: false,
-        },
-        xaxis: {
-            show: false,
-        },
-        colors: ["#DCE6EC"],
-        title: {
-            text: undefined,
-        },
-        subtitle: {
-            text: undefined,
-        },
     },
     series: [
         {
@@ -90,26 +97,8 @@ export const conversionChart2 = {
                 enabled: true,
             },
         },
-        stroke: {
-            curve: "straight",
-        },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         labels: [...Array(24).keys()].map((n) => `2018-09-0${n + 1}`),
-        yaxis: {
-            show: false,
-        },
-        xaxis: {
-            show: false,
-        },
-        colors: ["#DCE6EC"],
-        title: {
-            text: undefined,
-        },
-        subtitle: {
-            text: undefined,
-        },
     },
     series: [
         {
@@ -127,26 +116,8 @@ export const conversionChart3 = {
                 enabled: true,
             },
         },
-        stroke: {
-            curve: "straight",
-        },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         labels: [...Array(24).keys()].map((n) => `2018-09-0${n + 1}`),
-        yaxis: {
-            show: false,
-        },
-        xaxis: {
-            show: false,
-        },
-        colors: ["#DCE6EC"],
-        title: {
-            text: undefined,
-        },
-        subtitle: {
-            text: undefined,
-        },
     },
     series: [
         {
@@ -164,26 +135,8 @@ export const conversionChart4 = {
                 enabled: true,
             },
         },
-        stroke: {
-            curve: "straight",
-        },
-        fill: {
-            opacity: 1,
-        },
+        ...commonOptions,
         labels: [...Array(24).keys()].map((n) => `2018-09-0${n + 1}`),
-        yaxis: {
-            show: false,
-        },
-        xaxis: {
-            show: false,
-        },
-        colors: ["#DCE6EC"],
-        title: {
-            text: undefined,
-        },
-        subtitle: {
-            text: undefined,
-        },
     },
     series: [
         {

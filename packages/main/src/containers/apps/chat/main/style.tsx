@@ -31,9 +31,7 @@ export const StyledMain = styled.div<{ $sidebar?: boolean }>`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(5)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken5")};
         `}
 `;
 
@@ -52,9 +50,7 @@ export const StyledHeader = styled.div`
     ${(props) =>
         props.theme.name === "dark" &&
         css`
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                .darken(3)
-                .toString()};
+            background-color: ${themeGet("colors.darkdarken3")};
         `}
 `;
 

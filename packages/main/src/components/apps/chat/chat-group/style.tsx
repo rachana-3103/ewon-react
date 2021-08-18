@@ -21,8 +21,7 @@ export const StyledDivider = styled.div`
     margin: 20px 0;
     color: ${themeGet("colors.text3")};
     font-size: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto,
-        sans-serif;
+    font-family: ${themeGet("fonts.interUi")};
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;

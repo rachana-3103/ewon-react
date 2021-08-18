@@ -163,7 +163,21 @@ export const StyledTable = styled(
         css`
             tbody {
                 tr:nth-of-type(2n + 1) {
-                    background-color: #f3f4f7;
+                    background-color: ${themeGet("colors.athens3")};
+                }
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$striped === true &&
+        css`
+            tbody {
+                tr:nth-of-type(2n + 1) {
+                    background-color: ${themeGet("colors.darklighten5")};
+                }
+                th,
+                td {
+                    border-top: 0;
                 }
             }
         `}
@@ -263,8 +277,8 @@ export const StyledTable = styled(
         `}
 
 
-    ${(props) =>
-        props.$color === "secondary" &&
+    ${({ $color }) =>
+        $color === "secondary" &&
         css`
             thead {
                 color: #fff;
@@ -290,6 +304,15 @@ export const StyledTable = styled(
                     }
                 }
             }
+            ${(props) =>
+                props.theme.name === "dark" &&
+                css`
+                    tbody {
+                        tr {
+                            background-color: ${themeGet("colors.gray900")};
+                        }
+                    }
+                `}
         `}
     ${(props) =>
         props.$color === "secondary" &&
@@ -303,6 +326,19 @@ export const StyledTable = styled(
                         )
                             .darken(3)
                             .toString()};
+                    }
+                }
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$color === "secondary" &&
+        props.$striped === true &&
+        css`
+            tbody {
+                tr {
+                    &:nth-of-type(2n + 1) {
+                        background-color: ${themeGet("colors.gray700")};
                     }
                 }
             }
@@ -327,7 +363,19 @@ export const StyledTable = styled(
                 }
             }
         `}
-
+    ${(props) =>
+        props.theme.name === "dark" &&
+        props.$color === "secondary" &&
+        props.$hover === true &&
+        css`
+            tbody {
+                tr {
+                    &:hover {
+                        background-color: ${themeGet("colors.darklighten8")};
+                    }
+                }
+            }
+        `}
 
     ${(props) =>
         props.$color === "success" &&

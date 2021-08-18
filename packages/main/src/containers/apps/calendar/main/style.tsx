@@ -285,11 +285,9 @@ export const StyledWrap = styled.div<IProps>`
                             ${(props) =>
                                 props.theme.name === "dark" &&
                                 css`
-                                    background-color: ${tinycolor(
-                                        themeGet("colors.gray900")(props)
-                                    )
-                                        .darken(2)
-                                        .toString()};
+                                    background-color: ${themeGet(
+                                        "colors.darkdarken2"
+                                    )};
                                 `}
                         }
                         &-other {
@@ -375,11 +373,7 @@ export const StyledWrap = styled.div<IProps>`
                     ${(props) =>
                         props.theme.name === "dark" &&
                         css`
-                            background-color: ${tinycolor(
-                                themeGet("colors.gray900")(props)
-                            )
-                                .darken(2)
-                                .toString()};
+                            background-color: ${themeGet("colors.darkdarken2")};
                             border-color: ${tinycolor(
                                 themeGet("colors.gray900")(props)
                             )
@@ -449,7 +443,7 @@ export const StyledWrap = styled.div<IProps>`
                                 ${(props) =>
                                     props.theme.name === "dark" &&
                                     css`
-                                        color: ${themeGet("colors.gray300")};
+                                        color: ${themeGet("colors.gray700")};
                                     `}
                             }
                             &-time {
@@ -458,7 +452,7 @@ export const StyledWrap = styled.div<IProps>`
                                 ${(props) =>
                                     props.theme.name === "dark" &&
                                     css`
-                                        color: ${themeGet("colors.gray300")};
+                                        color: ${themeGet("colors.gray700")};
                                     `}
                             }
                             &-desc {
@@ -484,11 +478,9 @@ export const StyledWrap = styled.div<IProps>`
                             ${(props) =>
                                 props.theme.name === "dark" &&
                                 css`
-                                    background-color: ${tinycolor(
-                                        themeGet("colors.gray900")(props)
-                                    )
-                                        .darken(2)
-                                        .toString()};
+                                    background-color: ${themeGet(
+                                        "colors.darkdarken2"
+                                    )};
                                 `}
                         }
                     }

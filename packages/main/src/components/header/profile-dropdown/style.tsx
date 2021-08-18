@@ -13,7 +13,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-color: rgba(72, 94, 144, 0.16);
+    border-color: ${themeGet("colors.border")};
     width: 230px;
     padding: 25px;
     margin-top: 11.5px;
@@ -31,7 +31,7 @@ export const StyledDropMenu = styled(({ ...rest }) => (
         position: absolute;
         top: -10px;
         left: 25px;
-        border-bottom: 10px solid rgba(72, 94, 144, 0.16);
+        border-bottom: 10px solid ${themeGet("colors.border")};
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         left: auto;
@@ -54,6 +54,22 @@ export const StyledDropMenu = styled(({ ...rest }) => (
             right: 21px;
         }
     }
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            margin-top: 13.5px;
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                border-bottom-color: ${themeGet("colors.darklighten5")};
+            }
+            margin-top: 14px;
+        `}
 `;
 
 export const StyledAvatar = styled(({ ...rest }) => <Avatar {...rest} />)`

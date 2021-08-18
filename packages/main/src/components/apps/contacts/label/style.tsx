@@ -48,9 +48,7 @@ export const StyledLabel = styled.h6<IProps>`
         css`
             &::before,
             &::after {
-                background-color: ${tinycolor(themeGet("colors.gray900")(props))
-                    .lighten(2)
-                    .toRgbString()};
+                background-color: ${themeGet("colors.darklighten2")};
             }
         `}
 `;

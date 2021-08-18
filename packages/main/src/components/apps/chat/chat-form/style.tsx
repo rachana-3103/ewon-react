@@ -49,7 +49,7 @@ export const StyledInput = styled(({ ...rest }) => <Input {...rest} />)`
 export const StyledNav = styled.nav`
     display: flex;
     align-items: center;
-    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid ${themeGet("colors.border")};
     padding: 10px 20px;
     svg {
         width: 20px;

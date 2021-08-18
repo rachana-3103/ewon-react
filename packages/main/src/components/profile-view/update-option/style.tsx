@@ -7,7 +7,7 @@ const link3 = css`
     }
 `;
 
-export const StyledWrap = styled.div`
+export const StyledWrap = styled.form`
     background-color: #fff;
     border-radius: ${themeGet("radii.rounded")};
     display: flex;
@@ -18,6 +18,11 @@ export const StyledWrap = styled.div`
     ${device.large} {
         margin-bottom: 25px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+        `}
 `;
 
 export const StyledShare = styled.div`
@@ -26,21 +31,21 @@ export const StyledShare = styled.div`
     margin-right: auto;
     align-items: center;
     display: flex;
+    max-width: calc(100% - 150px);
+    flex-basis: calc(100% - 150px);
 `;
 
-export const StyledAnchor = styled.a`
+export const StyledStatusInput = styled.textarea`
     margin-left: 10px;
-    ${link3};
-    span {
-        display: none;
-        ${device.small} {
-            display: inline;
-        }
-    }
+    background: transparent;
+    padding: 0;
+    border: none;
+    padding-top: 11px;
 `;
 
 export const RightBtn = styled.div`
-    width: 50px;
+    max-width: 50px;
+    flex-basis: 50px;
     border-left: 1px solid ${themeGet("colors.border")};
     align-items: center;
     justify-content: center;

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import styled, { css, themeGet } from "@doar/shared";
-import tinycolor2 from "tinycolor2";
+import styled, { css, themeGet, tinycolor } from "@doar/shared";
 import { Anchor } from "../anchor";
 
 interface IProps {
@@ -27,7 +26,7 @@ export const StyledDropMenu = styled.div<IProps>`
     background-clip: padding-box;
     border: 1px solid
         ${(props) =>
-            tinycolor2(props.theme.colors.text3).setAlpha(0.27).toString()};
+            tinycolor(props.theme.colors.text3).setAlpha(0.27).toString()};
     border-radius: 0.25rem;
     box-shadow: 0 0 8px 2px rgb(28 39 60 / 4%);
     padding: 5px;
@@ -70,6 +69,26 @@ export const StyledDropMenu = styled.div<IProps>`
             right: 0px;
             margin-left: 0.125rem;
         `}
+    ${(props) =>
+        props.theme.name === "cool" &&
+        css`
+            border-color: ${tinycolor(themeGet("colors.skinUi01")(props))
+                .lighten(45)
+                .toString()};
+            border-top-color: transparent;
+            box-shadow: 0 15px 15px
+                ${tinycolor(themeGet("colors.skinUi01")(props))
+                    .setAlpha(0.1)
+                    .toRgbString()};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            border-width: 0;
+            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+                .lighten(5)
+                .toString()};
+        `}
 `;
 
 export const StyledDropItem = styled(({ active, ...rest }) => (
@@ -102,6 +121,17 @@ export const StyledDropItem = styled(({ active, ...rest }) => (
                 color: #fff;
                 background-color: ${themeGet("colors.primary")};
             }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        !!props.active &&
+        css`
+            color: #fff;
         `}
 `;
 

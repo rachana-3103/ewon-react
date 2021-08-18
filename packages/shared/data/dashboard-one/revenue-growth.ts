@@ -74,6 +74,13 @@ export const RevenueChart = {
             axisTicks: {
                 show: false,
             },
+            labels: {
+                style: {
+                    fontSize: "9px",
+                    fontFamily:
+                        "-apple-system, BlinkMacSystemFont, 'Inter UI', Roboto, sans-serif",
+                },
+            },
         },
         yaxis: {
             show: false,
@@ -96,7 +103,7 @@ export const RevenueChart = {
             },
         },
         tooltip: {
-            fillSeriesColor: "#ffffff",
+            enabled: false,
         },
         responsive: [
             {

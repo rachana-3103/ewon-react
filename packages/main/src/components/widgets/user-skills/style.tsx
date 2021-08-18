@@ -1,4 +1,4 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, css } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledList = styled.ul`
@@ -25,4 +25,12 @@ export const StyledSkill = styled(({ ...rest }) => <Anchor {...rest} />)`
     padding-right: 8px;
     color: ${themeGet("colors.text2")};
     border-radius: 0.25rem;
+
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-color: ${themeGet("colors.darklighten3")};
+            color: ${themeGet("colors.gray500")};
+        `}
 `;

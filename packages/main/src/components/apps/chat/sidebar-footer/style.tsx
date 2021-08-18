@@ -4,13 +4,6 @@ import { Anchor } from "@doar/components";
 export const StyledWrap = styled.div`
     display: flex;
     align-items: center;
-    ${(props) =>
-        props.theme.name === "dark" &&
-        css`
-            .avatar:after {
-                box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
-            }
-        `}
 `;
 
 export const StyledLinks = styled.div`

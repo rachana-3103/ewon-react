@@ -2,9 +2,9 @@ import { FC } from "react";
 import { ThemeProvider, themes } from "@doar/shared/styled";
 import { GlobalStyle } from "@doar/shared/css";
 import { TTheme } from "@doar/shared/types";
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
-import { toggleTheme } from "./redux/slices/ui";
-import SettingsCard from "./components/settings";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { toggleTheme } from "../slices/ui";
+import SettingsCard from "../../components/settings";
 
 const Theme: FC = ({ children }) => {
     const dispatch = useAppDispatch();

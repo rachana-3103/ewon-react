@@ -12,28 +12,11 @@
     "editor.rulers": [100],
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "javascriptreact",
-            "autoFix": true
-        },
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "typescriptreact",
-            "autoFix": true
-        }
-    ],
-    "tslint.enable": false,
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "debug.node.autoAttach": "on",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     }

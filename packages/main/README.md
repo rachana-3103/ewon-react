@@ -4,11 +4,11 @@ Call a function when script is invoked directly (e.g. cli or
 subprocess).
 
 ```javascript
-require('main')(module, () => {
-  /*
+require("main")(module, () => {
+    /*
         [ code to run here ]
   */
-})
+});
 ```
 
 The callback will NOT run if imported into another module.
@@ -17,9 +17,7 @@ The callback will NOT run if imported into another module.
 
 [vm]: https://nodejs.org/api/modules.html#modules_the_module_object
 
-
-Install
-------------------------------------------------------------------------
+## Install
 
 ```
 npm i main --save

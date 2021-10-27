@@ -1,4 +1,4 @@
-import { createGlobalStyle, themeGet, device } from '@doar/shared/styled';
+import { createGlobalStyle, themeGet, device } from "@doar/shared/styled";
 // import {IbmFontSans, IonIcons} from "@doar/shared/fonts"
 
 export const ResetCSS = createGlobalStyle`
@@ -225,4 +225,3 @@ export const ResetCSS = createGlobalStyle`
 		text-align: right;
 	}
 `;
-

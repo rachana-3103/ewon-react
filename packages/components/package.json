@@ -44,9 +44,10 @@
         "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
         "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
         "typecheck": "tsc -p tsconfig.json",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
         "clean": "rimraf dist *.tsbuildinfo node_modules public storybook-static",
         "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-        "lint:fix": "yarn lint --fix",
+        "lint:fix": "yarn format & yarn lint --fix",
         "storybook": "start-storybook -c .storybook -p 9001",
         "build-storybook": "build-storybook -o public",
         "serve-storybook": "npx http-server public"

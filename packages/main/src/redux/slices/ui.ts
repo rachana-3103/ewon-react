@@ -36,6 +36,7 @@ const uiSlice = createSlice({
             const {
                 payload: { theme },
             } = action;
+
             state.theme = theme;
         },
     },

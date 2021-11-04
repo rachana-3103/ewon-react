@@ -15,7 +15,7 @@ export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
     ${({ $sidebar }) =>
         $sidebar &&
         css`
-            @media (max-width: 479px) {
+            @media (max-width: 991px) {
                 transform: translateX(-100vw);
             }
         `}

@@ -3,8 +3,8 @@ import { NavbarAside } from "@doar/components";
 import { asideMenuData } from "@doar/shared/data";
 import Header from "../header";
 import Scrollbar from "../../../components/scrollbar";
-import AsideUser from "../../../components/aside/user";
-import { StyledAside, StyledBody } from "./style";
+import AsideUser from "../../../components/aside-layout/user";
+import { StyledAside, StyledBody, StyledBodyInner } from "./style";
 
 type TMaxText = "enter" | "leave";
 
@@ -30,18 +30,20 @@ const Aisde: React.FC = () => {
     return (
         <StyledAside $minimize={minimize} $maximize={maximize}>
             <Header minimizeHandler={minimizeHandler} minimize={minimize} />
-            <Scrollbar>
-                <StyledBody
-                    $minimize={minimize}
-                    $maximize={maximize}
-                    className="aside-body"
-                    onMouseEnter={(e) => maximizeHandler(e, "enter")}
-                    onMouseLeave={(e) => maximizeHandler(e, "leave")}
-                >
-                    <AsideUser />
-                    <NavbarAside menus={asideMenuData} />
-                </StyledBody>
-            </Scrollbar>
+            <StyledBody
+                $minimize={minimize}
+                $maximize={maximize}
+                className="aside-body"
+                onMouseEnter={(e) => maximizeHandler(e, "enter")}
+                onMouseLeave={(e) => maximizeHandler(e, "leave")}
+            >
+                <Scrollbar>
+                    <StyledBodyInner className="aside-body-inner">
+                        <AsideUser />
+                        <NavbarAside menus={asideMenuData} />
+                    </StyledBodyInner>
+                </Scrollbar>
+            </StyledBody>
         </StyledAside>
     );
 };

@@ -18,6 +18,9 @@ export const StyledAside = styled.aside<IProps>`
         $minimize &&
         css`
             width: auto;
+            & + .content {
+                margin-left: 60px;
+            }
             .aside-user {
                 margin-bottom: 5px;
                 .avatar {
@@ -102,12 +105,17 @@ export const StyledAside = styled.aside<IProps>`
         css`
             .scrollbar {
                 width: 240px;
+                .ps__thumb-x {
+                    display: none;
+                }
             }
             .aside {
                 &-body {
                     width: 100%;
-                    padding: 20px;
                     display: block;
+                    &-inner {
+                        padding: 20px;
+                    }
                 }
                 &-user {
                     .aside-alerts {
@@ -154,14 +162,9 @@ export const StyledAside = styled.aside<IProps>`
 `;
 
 export const StyledBody = styled.div<IProps>`
+    height: 100%;
+    padding-bottom: 70px;
     background-color: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px;
-    padding-bottom: 60px;
     transition: all 0.3s;
     border-top: 1px solid rgba(72, 94, 144, 0.16);
     border-right: 1px solid rgba(72, 94, 144, 0.16);
@@ -169,7 +172,15 @@ export const StyledBody = styled.div<IProps>`
         $minimize &&
         css`
             width: 60px;
-            padding: 20px;
             transition: none;
+            .aside-body-inner {
+                padding: 20px;
+            }
         `}
+`;
+
+export const StyledBodyInner = styled.div`
+    padding: 25px;
+    position: absolute;
+    inset: 0;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, X } from "react-feather";
-import AsideLogo from "../../../components/aside/logo";
+import AsideLogo from "../../../components/aside-layout/logo";
 import { StyledHeader, StyledMenuBtn } from "./style";
 
 interface IProps {

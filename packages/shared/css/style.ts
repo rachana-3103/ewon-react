@@ -341,6 +341,15 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
         border-top: 1px solid ${themeGet("colors.border")};
     }
+    .__react_component_tooltip {
+        font-size: 11px !important;
+        padding: 3px 13px !important;
+        width: max-content !important;
+        background-color: ${themeGet("colors.black")} !important;
+        &.place-top::after{
+            border-top-color: ${themeGet("colors.black")} !important;
+        }
+    }
 	
 `;
 

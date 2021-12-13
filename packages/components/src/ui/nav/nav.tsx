@@ -17,6 +17,7 @@ type CustomStyle =
     | "icon"
     | "line"
     | "sidebar"
+    | "aside"
     | "social"
     | "with-icon";
 

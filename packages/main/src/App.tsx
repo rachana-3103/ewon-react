@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Preloader from "./components/preloader";
 
+// Classic Pages
+
 const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
@@ -28,12 +30,20 @@ const Contacts = lazy(() => import("./pages/apps/contacts"));
 const FileManager = lazy(() => import("./pages/apps/file-manager"));
 const Mail = lazy(() => import("./pages/apps/mail"));
 
+// Classic Plus Pages
+
+const ClassicPlusDashboardOne = lazy(
+    () => import("./pages/classic-plus/dashboard-one")
+);
+
 const App: React.FC = () => {
     return (
         <>
             <Router>
                 <Suspense fallback={<Preloader />}>
                     <Routes>
+                        {/* Classic Routes */}
+
                         <Route path="/" element={<DashboardOne />} />
                         <Route
                             path="/dashboard-two"
@@ -77,11 +87,16 @@ const App: React.FC = () => {
                         />
                         <Route path="/apps/mail" element={<Mail />} />
                         <Route path="*" element={<ErrorNotFound />} />
+
+                        {/* Classic Plus Routes */}
+
+                        <Route
+                            path="/classic-plus/dashboard-one"
+                            element={<ClassicPlusDashboardOne />}
+                        />
                     </Routes>
                 </Suspense>
             </Router>
-
-            {/* <SettingsCard /> */}
         </>
     );
 };

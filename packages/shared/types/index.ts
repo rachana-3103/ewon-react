@@ -15,6 +15,7 @@ export interface ISubmenu {
 export interface IMegamenu {
     id: number;
     title: string;
+    Icon?: FC<IconProps> | undefined;
     submenu: ISubmenu[];
 }
 

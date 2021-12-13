@@ -91,6 +91,8 @@ import { TabWrap, TabContent, Tab, TabPanel, TabList } from "./src/ui/tab/tab";
 import { Spinner } from "./src/ui/spinner/spinner";
 import { Nav, NavLink, NavDivider } from "./src/ui/nav/nav";
 
+export { default as NavbarAside } from "./src/ui/navbar-aside";
+
 export {
     Button,
     Alert,

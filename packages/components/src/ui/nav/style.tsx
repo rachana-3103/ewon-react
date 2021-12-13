@@ -17,6 +17,7 @@ type CustomStyle =
     | "icon"
     | "line"
     | "sidebar"
+    | "aside"
     | "social"
     | "with-icon";
 
@@ -136,6 +137,42 @@ export const StyledNav = styled(
             }
         `}
 
+    ${({ $customStyle }) =>
+        $customStyle === "aside" &&
+        css`
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: nowrap;
+            .nav-link {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 0;
+                height: 30px;
+                color: rgba(27, 46, 75, 0.9);
+                transition: all 0.25s;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: -25px;
+                    bottom: 2px;
+                    right: -25px;
+                    border-left: 3px solid #8392a5;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+                stroke-width: 2.3px;
+                margin-right: 15px;
+                color: rgba(27, 46, 75, 0.65);
+                fill: rgba(27, 46, 75, 0.06);
+            }
+        `}
+
 	${({ $customStyle }) =>
         $customStyle === "social" &&
         css`
@@ -149,6 +186,7 @@ export const StyledNav = styled(
             flex-wrap: wrap;
             font-size: 13px;
         `}
+        
 
     ${flexbox};
     ${space};

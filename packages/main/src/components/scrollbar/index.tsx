@@ -6,7 +6,7 @@ import { StyledWrap } from "./style";
 
 const ScrollBar: FC<PositionProps> = ({ children, ...rest }) => {
     return (
-        <StyledWrap {...rest}>
+        <StyledWrap {...rest} className="scrollbar">
             <PerfectScrollbar>{children}</PerfectScrollbar>
         </StyledWrap>
     );

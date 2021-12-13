@@ -1,5 +1,4 @@
 import {
-    BarChart2,
     Calendar,
     MessageSquare,
     Users,
@@ -17,9 +16,12 @@ import {
     Box,
     Archive,
     AlertCircle,
+    ShoppingBag,
+    Globe,
+    LifeBuoy,
 } from "react-feather";
 
-const menus = [
+const asideMenus = [
     {
         id: 1,
         label: "Dashboard",
@@ -29,26 +31,26 @@ const menus = [
             {
                 id: 11,
                 label: "Sales Monitoring",
-                url: "/",
-                Icon: BarChart2,
+                url: "/classic-plus/dashboard-one",
+                Icon: ShoppingBag,
             },
             {
                 id: 12,
                 label: "Website Analytics",
                 url: "/dashboard-two",
-                Icon: BarChart2,
+                Icon: Globe,
             },
             {
                 id: 13,
                 label: "Cryptocurrency",
                 url: "/dashboard-three",
-                Icon: BarChart2,
+                Icon: PieChart,
             },
             {
                 id: 14,
                 label: "Helpdesk Management",
                 url: "/dashboard-four",
-                Icon: BarChart2,
+                Icon: LifeBuoy,
             },
         ],
     },
@@ -224,17 +226,25 @@ const menus = [
     },
     {
         id: 4,
-        label: "Components",
-        url:
-            "https://doar-react-components.netlify.app/?path=/docs/introduction--page",
-        Icon: Box,
-    },
-    {
-        id: 5,
-        label: "Collections",
-        url: "#!",
-        Icon: Archive,
+        label: "User Interface",
+        url: "/",
+        Icon: Package,
+        submenu: [
+            {
+                id: 41,
+                label: "Components",
+                url:
+                    "https://doar-react-components.netlify.app/?path=/docs/introduction--page",
+                Icon: Box,
+            },
+            {
+                id: 42,
+                label: "Collections",
+                url: "#!",
+                Icon: Archive,
+            },
+        ],
     },
 ];
 
-export default menus;
+export default asideMenus;

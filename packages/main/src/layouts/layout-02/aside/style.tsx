@@ -1,4 +1,4 @@
-import styled, { device, css } from "@doar/shared/styled";
+import styled, { device, css, themeGet } from "@doar/shared/styled";
 
 interface IProps {
     $minimize: boolean;
@@ -93,7 +93,7 @@ export const StyledAside = styled.aside<IProps>`
                     &:before {
                         content: "";
                         display: block;
-                        border-top: 1px solid rgba(72, 94, 144, 0.16);
+                        border-top: 1px solid ${themeGet("colors.border")};
                         margin: 8px 0;
                     }
                 }
@@ -166,8 +166,8 @@ export const StyledBody = styled.div<IProps>`
     padding-bottom: 70px;
     background-color: #fff;
     transition: all 0.3s;
-    border-top: 1px solid rgba(72, 94, 144, 0.16);
-    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    border-top: 1px solid ${themeGet("colors.border")};
+    border-right: 1px solid ${themeGet("colors.border")};
     ${({ $minimize }) =>
         $minimize &&
         css`

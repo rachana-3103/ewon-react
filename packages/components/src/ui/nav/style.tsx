@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import styled, {
     themeGet,
     css,
@@ -137,8 +138,8 @@ export const StyledNav = styled(
             }
         `}
 
-    ${({ $customStyle }) =>
-        $customStyle === "aside" &&
+    ${(props) =>
+        props.$customStyle === "aside" &&
         css`
             font-size: 13px;
             line-height: 1.6;
@@ -149,7 +150,9 @@ export const StyledNav = styled(
                 align-items: center;
                 padding: 0;
                 height: 30px;
-                color: rgba(27, 46, 75, 0.9);
+                color: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.9)
+                    .toRgbString()};
                 transition: all 0.25s;
                 &:before {
                     content: "";
@@ -158,7 +161,7 @@ export const StyledNav = styled(
                     left: -25px;
                     bottom: 2px;
                     right: -25px;
-                    border-left: 3px solid #8392a5;
+                    border-left: 3px solid ${themeGet("colors.text3")};
                     opacity: 0;
                     visibility: hidden;
                 }
@@ -168,8 +171,12 @@ export const StyledNav = styled(
                 height: 18px;
                 stroke-width: 2.3px;
                 margin-right: 15px;
-                color: rgba(27, 46, 75, 0.65);
-                fill: rgba(27, 46, 75, 0.06);
+                color: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.65)
+                    .toRgbString()};
+                fill: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.06)
+                    .toRgbString()};
             }
         `}
 

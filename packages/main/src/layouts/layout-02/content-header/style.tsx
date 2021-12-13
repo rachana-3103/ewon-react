@@ -1,4 +1,5 @@
-import styled, { device } from "@doar/shared/styled";
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+import styled, { device, themeGet, tinycolor } from "@doar/shared/styled";
 
 export const StyledHeader = styled.div`
     background-color: #fff;
@@ -7,7 +8,7 @@ export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid ${themeGet("colors.border")};
     padding-left: 65px;
     ${device.large} {
         height: 60px;
@@ -20,7 +21,8 @@ export const StyledHeader = styled.div`
             }
             line-height: 1;
             padding: 0;
-            color: rgba(27, 46, 75, 0.75);
+            color: ${(props) =>
+                tinycolor(props.theme.colors.text2).setAlpha(0.75).toString()};
             svg {
                 width: 18px;
                 height: 18px;

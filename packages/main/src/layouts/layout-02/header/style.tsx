@@ -10,7 +10,7 @@ export const StyledHeader = styled.header<IProps>`
     justify-content: space-between;
     height: 54px;
     padding: 0 18px;
-    border-right: 1px solid rgba(72, 94, 144, 0.16);
+    border-right: 1px solid ${themeGet("colors.border")};
     background-color: #fff;
     transform: translateX(54px);
 

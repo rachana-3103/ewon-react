@@ -1,9 +1,12 @@
-import styled, { themeGet } from "@doar/shared/styled";
+import styled, { themeGet, device } from "@doar/shared/styled";
 
 export const StyledForm = styled.form`
-    width: 250px;
+    width: 205px;
     display: flex;
     align-items: center;
+    ${device.small} {
+        width: 250px;
+    }
     svg {
         color: ${themeGet("colors.text3")};
         margin-right: 10px;
@@ -11,6 +14,7 @@ export const StyledForm = styled.form`
     input {
         border-radius: 0;
         border-width: 0;
+        padding: 0;
         &:hover,
         &:focus,
         &:active {

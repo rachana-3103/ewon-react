@@ -3,7 +3,7 @@ import { StyledLogo } from "./style";
 
 const AsideLogo: FC = () => {
     return (
-        <StyledLogo path="/">
+        <StyledLogo className="aside-logo" path="/">
             do<span>ar</span>
         </StyledLogo>
     );

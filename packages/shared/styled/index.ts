@@ -17,6 +17,7 @@ export const device = {
     large: `@media screen and (min-width: ${breakpoints[2]})`,
     xlarge: `@media screen and (min-width: ${breakpoints[3]})`,
     xxlarge: `@media screen and (min-width: ${breakpoints[4]})`,
+    lgToXl: `@media (min-width: 992px) and (max-width: 1199px)`,
 };
 
 const themes = {

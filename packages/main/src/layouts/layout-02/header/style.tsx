@@ -2,7 +2,17 @@ import styled, { device, themeGet, css } from "@doar/shared/styled";
 
 interface IProps {
     $minimize: boolean;
+    $mdMinimize: boolean;
+    $show: boolean;
 }
+
+const minimizeCSS = css`
+    width: 60px;
+    justify-content: center;
+    .aside-logo {
+        display: none;
+    }
+`;
 
 export const StyledHeader = styled.header<IProps>`
     display: flex;
@@ -19,13 +29,46 @@ export const StyledHeader = styled.header<IProps>`
         transform: none;
         height: 59px;
     }
+    ${({ $show }) =>
+        $show &&
+        css`
+            transform: none;
+            border-right-color: transparent;
+            .display-btn {
+                svg {
+                    &:first-of-type {
+                        display: none !important;
+                    }
+                    &:last-of-type {
+                        display: block !important;
+                    }
+                }
+            }
+        `}
     ${({ $minimize }) =>
         $minimize &&
         css`
-            width: 60px;
-            justify-content: center;
+            ${minimizeCSS}
             ${device.large} {
                 padding: 0;
+            }
+        `}
+    
+    ${({ $mdMinimize, $show }) =>
+        $mdMinimize &&
+        !$show &&
+        css`
+            ${device.lgToXl} {
+                padding: 0;
+                ${minimizeCSS}
+            }
+        `}
+    ${({ $mdMinimize, $show }) =>
+        $mdMinimize &&
+        $show &&
+        css`
+            ${device.lgToXl} {
+                border-right-color: ${themeGet("colors.border")};
             }
         `}
 `;
@@ -38,15 +81,29 @@ export const StyledMenuBtn = styled.button`
     svg {
         color: ${themeGet("colors.text3")};
         margin-top: -3px;
-        &:last-of-type {
-            margin-top: 0;
-            display: none;
-        }
     }
     &:hover,
     &:focus {
         svg {
             color: ${themeGet("colors.text2")};
+        }
+    }
+    &.minimize-btn {
+        display: none;
+        ${device.xlarge} {
+            display: block;
+        }
+    }
+    &.display-btn {
+        display: block;
+        ${device.xlarge} {
+            display: none;
+        }
+        svg {
+            &:last-of-type {
+                margin-top: 0;
+                display: none;
+            }
         }
     }
     ${({ theme }) =>

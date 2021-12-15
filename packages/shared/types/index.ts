@@ -126,3 +126,8 @@ export interface IRecentEarning {
 }
 
 export type TTheme = "classic" | "light" | "cool" | "dark";
+
+export interface ISize {
+    width: number | undefined;
+    height: number | undefined;
+}

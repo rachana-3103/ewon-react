@@ -64,10 +64,15 @@ export const StyledMediaSub = styled.h4`
     font-family: ${themeGet("fonts.rubik")};
     font-weight: 400;
     margin-bottom: 0px;
+    word-break: break-word;
+
     ${device.small} {
         font-size: 18px;
     }
     ${device.medium} {
+        font-size: 20px;
+    }
+    ${device.xxlarge} {
         font-size: 24px;
     }
 `;

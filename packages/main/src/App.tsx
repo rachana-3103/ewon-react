@@ -74,6 +74,11 @@ const ClassicPlusConnections = lazy(
 const ClassicPlusGroups = lazy(() => import("./pages/classic-plus/groups"));
 const ClassicPlusEvents = lazy(() => import("./pages/classic-plus/events"));
 const ClassicPlusTimeline = lazy(() => import("./pages/classic-plus/timeline"));
+const ClassicPlusPricing = lazy(() => import("./pages/classic-plus/pricing"));
+const ClassicPlusHelpCenter = lazy(
+    () => import("./pages/classic-plus/help-center")
+);
+const ClassicPlusInvoice = lazy(() => import("./pages/classic-plus/invoice"));
 
 const App: React.FC = () => {
     return (
@@ -82,6 +87,7 @@ const App: React.FC = () => {
                 <Suspense fallback={<Preloader />}>
                     <Routes>
                         {/* Classic Routes */}
+                        {/* Dashboard Routes */}
                         <Route path="/" element={<DashboardOne />} />
                         <Route
                             path="/dashboard-two"
@@ -95,6 +101,7 @@ const App: React.FC = () => {
                             path="/dashboard-four"
                             element={<DashboardFour />}
                         />
+                        {/* Authentication Routes */}
                         <Route path="/signin" element={<SignIn />} />
                         <Route path="/signup" element={<SignUp />} />
                         <Route
@@ -105,17 +112,21 @@ const App: React.FC = () => {
                             path="/forgot-password"
                             element={<ForgotPassword />}
                         />
+                        {/* Error Routes */}
                         <Route path="/error-500" element={<Error500 />} />
                         <Route path="/error-503" element={<Error503 />} />
                         <Route path="/error-505" element={<Error505 />} />
+                        {/* User Routes */}
                         <Route path="/profile-view" element={<ProfileView />} />
                         <Route path="/connections" element={<Connections />} />
                         <Route path="/groups" element={<Groups />} />
                         <Route path="/events" element={<Events />} />
+                        {/* Other Routes */}
                         <Route path="/timeline" element={<Timeline />} />
                         <Route path="/pricing" element={<Pricing />} />
                         <Route path="/help-center" element={<HelpCenter />} />
                         <Route path="/invoice" element={<Invoice />} />
+                        {/* Apps Routes */}
                         <Route path="/apps/calendar" element={<Calendar />} />
                         <Route path="/apps/chat" element={<Chat />} />
                         <Route path="/apps/contacts" element={<Contacts />} />
@@ -125,6 +136,7 @@ const App: React.FC = () => {
                         />
                         <Route path="/apps/mail" element={<Mail />} />
                         {/* Classic Plus Routes */}
+                        {/* Dashboard Routes */}
                         <Route
                             path="/classic-plus/dashboard-one"
                             element={<ClassicPlusDashboardOne />}
@@ -141,6 +153,7 @@ const App: React.FC = () => {
                             path="/classic-plus/dashboard-four"
                             element={<ClassicPlusDashboardFour />}
                         />
+                        {/* Authentication Routes */}
                         <Route
                             path="/classic-plus/signin"
                             element={<ClassicPlusSignIn />}
@@ -157,7 +170,7 @@ const App: React.FC = () => {
                             path="/classic-plus/forgot-password"
                             element={<ClassicPlusForgotPassword />}
                         />
-
+                        {/* Error Routes */}
                         <Route
                             path="/classic-plus/error-500"
                             element={<ClassicPlusError500 />}
@@ -166,12 +179,11 @@ const App: React.FC = () => {
                             path="/classic-plus/error-503"
                             element={<ClassicPlusError503 />}
                         />
-
                         <Route
                             path="/classic-plus/error-505"
                             element={<ClassicPlusError505 />}
                         />
-
+                        {/* User Routes */}
                         <Route
                             path="/classic-plus/profile-view"
                             element={<ClassicPlusProfileView />}
@@ -188,11 +200,33 @@ const App: React.FC = () => {
                             path="/classic-plus/events"
                             element={<ClassicPlusEvents />}
                         />
+                        {/* Other Routes */}
                         <Route
                             path="/classic-plus/timeline"
                             element={<ClassicPlusTimeline />}
                         />
+                        <Route
+                            path="/classic-plus/pricing"
+                            element={<ClassicPlusPricing />}
+                        />
+                        <Route
+                            path="/classic-plus/help-center"
+                            element={<ClassicPlusHelpCenter />}
+                        />
+                        <Route
+                            path="/classic-plus/invoice"
+                            element={<ClassicPlusInvoice />}
+                        />
 
+                        {/* Apps Routes */}
+                        {/* <Route path="/apps/calendar" element={<Calendar />} />
+                        <Route path="/apps/chat" element={<Chat />} />
+                        <Route path="/apps/contacts" element={<Contacts />} />
+                        <Route
+                            path="/apps/file-manager"
+                            element={<FileManager />}
+                        />
+                        <Route path="/apps/mail" element={<Mail />} /> */}
                         {/* 404 Page Route */}
                         <Route path="*" element={<ErrorNotFound />} />
                         <Route

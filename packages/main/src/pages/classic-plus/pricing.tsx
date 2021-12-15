@@ -1,6 +1,8 @@
 import React from "react";
-import Layout from "../../layouts";
-import Content from "../../layouts/content";
+import Layout from "../../layouts/layout-02";
+import Content from "../../layouts/layout-02/content";
+import ContentHeader from "../../layouts/layout-02/content-header";
+import ContentBody from "../../layouts/layout-02/content-body";
 import PricingContainer from "../../containers/pricing";
 import SEO from "../../components/seo";
 
@@ -9,7 +11,10 @@ const Pricing: React.FC = () => {
         <Layout>
             <SEO />
             <Content fullHeight align="center">
-                <PricingContainer />
+                <ContentHeader />
+                <ContentBody>
+                    <PricingContainer />
+                </ContentBody>
             </Content>
         </Layout>
     );

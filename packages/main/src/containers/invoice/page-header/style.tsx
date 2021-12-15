@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, space } from "@doar/shared/styled";
 
 export const StyledWrap = styled.div`
     ${device.small} {
@@ -6,6 +6,7 @@ export const StyledWrap = styled.div`
         align-items: center;
         justify-content: space-between;
     }
+    ${space}
 `;
 
 export const StyledBtnWrap = styled.div`

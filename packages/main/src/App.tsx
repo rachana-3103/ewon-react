@@ -35,6 +35,45 @@ const Mail = lazy(() => import("./pages/apps/mail"));
 const ClassicPlusDashboardOne = lazy(
     () => import("./pages/classic-plus/dashboard-one")
 );
+const ClassicPlusDashboardTwo = lazy(
+    () => import("./pages/classic-plus/dashboard-two")
+);
+const ClassicPlusDashboardThree = lazy(
+    () => import("./pages/classic-plus/dashboard-three")
+);
+const ClassicPlusDashboardFour = lazy(
+    () => import("./pages/classic-plus/dashboard-four")
+);
+const ClassicPlusSignIn = lazy(() => import("./pages/classic-plus/signin"));
+const ClassicPlusSignUp = lazy(() => import("./pages/classic-plus/signup"));
+const ClassicPlusVerifyAccount = lazy(
+    () => import("./pages/classic-plus/verify-account")
+);
+const ClassicPlusForgotPassword = lazy(
+    () => import("./pages/classic-plus/forgot-password")
+);
+const ClassicPlusErrorNotFound = lazy(
+    () => import("./pages/classic-plus/error-404")
+);
+const ClassicPlusError500 = lazy(
+    () => import("./pages/classic-plus/error-500")
+);
+const ClassicPlusError503 = lazy(
+    () => import("./pages/classic-plus/error-503")
+);
+const ClassicPlusError505 = lazy(
+    () => import("./pages/classic-plus/error-505")
+);
+
+const ClassicPlusProfileView = lazy(
+    () => import("./pages/classic-plus/profile-view")
+);
+const ClassicPlusConnections = lazy(
+    () => import("./pages/classic-plus/connections")
+);
+const ClassicPlusGroups = lazy(() => import("./pages/classic-plus/groups"));
+const ClassicPlusEvents = lazy(() => import("./pages/classic-plus/events"));
+const ClassicPlusTimeline = lazy(() => import("./pages/classic-plus/timeline"));
 
 const App: React.FC = () => {
     return (
@@ -43,7 +82,6 @@ const App: React.FC = () => {
                 <Suspense fallback={<Preloader />}>
                     <Routes>
                         {/* Classic Routes */}
-
                         <Route path="/" element={<DashboardOne />} />
                         <Route
                             path="/dashboard-two"
@@ -86,13 +124,80 @@ const App: React.FC = () => {
                             element={<FileManager />}
                         />
                         <Route path="/apps/mail" element={<Mail />} />
-                        <Route path="*" element={<ErrorNotFound />} />
-
                         {/* Classic Plus Routes */}
-
                         <Route
                             path="/classic-plus/dashboard-one"
                             element={<ClassicPlusDashboardOne />}
+                        />
+                        <Route
+                            path="/classic-plus/dashboard-two"
+                            element={<ClassicPlusDashboardTwo />}
+                        />
+                        <Route
+                            path="/classic-plus/dashboard-three"
+                            element={<ClassicPlusDashboardThree />}
+                        />
+                        <Route
+                            path="/classic-plus/dashboard-four"
+                            element={<ClassicPlusDashboardFour />}
+                        />
+                        <Route
+                            path="/classic-plus/signin"
+                            element={<ClassicPlusSignIn />}
+                        />
+                        <Route
+                            path="/classic-plus/signup"
+                            element={<ClassicPlusSignUp />}
+                        />
+                        <Route
+                            path="/classic-plus/verify-account"
+                            element={<ClassicPlusVerifyAccount />}
+                        />
+                        <Route
+                            path="/classic-plus/forgot-password"
+                            element={<ClassicPlusForgotPassword />}
+                        />
+
+                        <Route
+                            path="/classic-plus/error-500"
+                            element={<ClassicPlusError500 />}
+                        />
+                        <Route
+                            path="/classic-plus/error-503"
+                            element={<ClassicPlusError503 />}
+                        />
+
+                        <Route
+                            path="/classic-plus/error-505"
+                            element={<ClassicPlusError505 />}
+                        />
+
+                        <Route
+                            path="/classic-plus/profile-view"
+                            element={<ClassicPlusProfileView />}
+                        />
+                        <Route
+                            path="/classic-plus/connections"
+                            element={<ClassicPlusConnections />}
+                        />
+                        <Route
+                            path="/classic-plus/groups"
+                            element={<ClassicPlusGroups />}
+                        />
+                        <Route
+                            path="/classic-plus/events"
+                            element={<ClassicPlusEvents />}
+                        />
+                        <Route
+                            path="/classic-plus/timeline"
+                            element={<ClassicPlusTimeline />}
+                        />
+
+                        {/* 404 Page Route */}
+                        <Route path="*" element={<ErrorNotFound />} />
+                        <Route
+                            path="*"
+                            element={<ClassicPlusErrorNotFound />}
                         />
                     </Routes>
                 </Suspense>

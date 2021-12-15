@@ -6,7 +6,7 @@ import { StyledContent } from "./style";
 interface IProps extends SpaceProps, BorderProps {
     className?: string;
     fullHeight?: boolean;
-    align?: "top" | "center" | "bootom";
+    align?: "top" | "center" | "bottom";
 }
 
 const Content: React.FC<IProps> = ({

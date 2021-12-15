@@ -14,7 +14,10 @@ const UpdateOption: FC = () => {
         <StyledWrap>
             <StyledShare>
                 <Edit3 width={18} height={18} />
-                <StyledStatusInput>Share an Update</StyledStatusInput>
+                <StyledStatusInput
+                    onChange={() => {}}
+                    value="Share an Update"
+                />
             </StyledShare>
             <RightBtn>
                 <RightBtnLink

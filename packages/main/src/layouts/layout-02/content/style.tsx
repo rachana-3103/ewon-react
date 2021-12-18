@@ -9,6 +9,7 @@ import styled, {
 interface IProps extends SpaceProps {
     $fullHeight?: boolean;
     $align?: "top" | "center" | "bottom";
+    $aside?: "minimize";
 }
 
 const conentCSS = css<IProps>`
@@ -16,9 +17,14 @@ const conentCSS = css<IProps>`
     ${device.large} {
         margin-left: 60px;
     }
-    ${device.xlarge} {
-        margin-left: 240px;
-    }
+
+    ${({ $aside }) =>
+        $aside !== "minimize" &&
+        css`
+            ${device.xlarge} {
+                margin-left: 240px;
+            }
+        `}
     ${({ $fullHeight }) =>
         $fullHeight &&
         css`

@@ -1,10 +1,14 @@
 import React from "react";
 import Aisde from "./aside";
 
-const Layout: React.FC = ({ children }) => {
+interface IProps {
+    aside?: "minimize";
+}
+
+const Layout: React.FC<IProps> = ({ children, aside }) => {
     return (
         <>
-            <Aisde />
+            <Aisde layout={aside} />
             {children}
         </>
     );

@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { Menu, X, ArrowLeft } from "react-feather";
 import AsideLogo from "../../../components/aside-layout/logo";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { toggleSidebar } from "../../../redux/slices/ui";
+import { toggleSidebar, toggleBody } from "../../../redux/slices/ui";
 import { StyledHeader, StyledMenuBtn, StyledSidebarBtn } from "./style";
 
 interface IProps {
@@ -29,6 +29,12 @@ const Header: React.FC<IProps> = ({
         [dispatch]
     );
 
+    const displayCloseHandler = () => {
+        displayHandler();
+        dispatch(toggleBody());
+        dispatch(toggleSidebar({ isOpen: "open" }));
+    };
+
     return (
         <StyledHeader
             $minimize={minimize}
@@ -41,11 +47,14 @@ const Header: React.FC<IProps> = ({
             <StyledMenuBtn className="minimize-btn" onClick={minimizeHandler}>
                 <Menu size={18} strokeWidth="2.5px" />
             </StyledMenuBtn>
-            <StyledMenuBtn className="display-btn" onClick={displayHandler}>
+            <StyledMenuBtn
+                className="display-btn"
+                onClick={show ? displayCloseHandler : displayHandler}
+            >
                 <Menu size={18} strokeWidth="2.5px" />
                 <X size={18} strokeWidth="2.5px" />
             </StyledMenuBtn>
-            <StyledSidebarBtn onClick={sidebarHandler} $sidebarOpen={!sidebar}>
+            <StyledSidebarBtn onClick={sidebarHandler} $sidebarOpen={sidebar}>
                 <ArrowLeft size={20} strokeWidth="2.5px" />
             </StyledSidebarBtn>
         </StyledHeader>

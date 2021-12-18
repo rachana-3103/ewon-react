@@ -16,8 +16,12 @@ import {
 
 type TMaxText = "enter" | "leave";
 
-const Aisde: React.FC = () => {
-    const [minimize, setMinimize] = useState(false);
+interface IProps {
+    layout?: "minimize";
+}
+
+const Aisde: React.FC<IProps> = ({ layout }) => {
+    const [minimize, setMinimize] = useState(layout === "minimize");
     const [maximize, setMaximize] = useState(false);
     const [show, setShow] = useState(false);
     const size: ISize = useWindowSize();
@@ -35,10 +39,19 @@ const Aisde: React.FC = () => {
 
     useEffect(() => {
         if (!size.width) return;
-        if (size.width > 991 && size.width < 1200 && !show) {
+        if (
+            size.width > 991 &&
+            size.width < 1200 &&
+            !show &&
+            layout !== "minimize"
+        ) {
             setMinimize(true);
         }
-        if (size.width >= 1200 && maximized.current === false) {
+        if (
+            size.width >= 1200 &&
+            maximized.current === false &&
+            layout !== "minimize"
+        ) {
             setMinimize(false);
             maximized.current = true;
         }
@@ -48,7 +61,7 @@ const Aisde: React.FC = () => {
         if (size.width <= 991) {
             setMinimize(false);
         }
-    }, [size.width, show]);
+    }, [size.width, show, layout]);
 
     const maximizeHandler = (e: React.MouseEvent, text: TMaxText) => {
         e.preventDefault();

@@ -7,6 +7,7 @@ interface IProps extends SpaceProps {
     className?: string;
     fullHeight?: boolean;
     align?: "top" | "center" | "bottom";
+    aside?: "minimize";
 }
 
 const Content: React.FC<IProps> = ({
@@ -14,12 +15,14 @@ const Content: React.FC<IProps> = ({
     className,
     fullHeight,
     align,
+    aside,
     ...restProps
 }) => {
     return (
         <StyledContent
             $fullHeight={fullHeight}
             $align={align}
+            $aside={aside}
             className={cn(className, "content")}
             {...restProps}
         >

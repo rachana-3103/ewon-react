@@ -83,7 +83,7 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                             onClick={!isBody ? sidebarHandler : bodyHandler}
                             $sidebarOpen={sidebar}
                             $bodyOpen={isBody}
-                            className="sidebar-btn"
+                            className="sidebar-btn dsaf"
                         >
                             <ArrowLeft size={20} strokeWidth="2.5px" />
                         </StyledSidebarBtn>

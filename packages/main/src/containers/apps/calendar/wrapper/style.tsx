@@ -1,7 +1,10 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css } from "@doar/shared/styled";
 
-export const StyledWrap = styled.div`
-    position: fixed;
+interface IProps {
+    $layout?: 1 | 2;
+}
+
+export const StyledWrap = styled.div<IProps>`
     top: 55px;
     bottom: 0;
     left: 0;
@@ -10,4 +13,19 @@ export const StyledWrap = styled.div`
     ${device.large} {
         top: 60px;
     }
+    ${({ $layout }) =>
+        $layout === 1 &&
+        css`
+            position: fixed;
+        `}
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            position: fixed;
+            ${device.large} {
+                position: relative;
+                height: 100%;
+                top: auto;
+            }
+        `}
 `;

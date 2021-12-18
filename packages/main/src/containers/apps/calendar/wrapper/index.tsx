@@ -1,8 +1,20 @@
 import { FC } from "react";
 import { StyledWrap } from "./style";
 
-const Wrapper: FC = ({ children }) => {
-    return <StyledWrap>{children}</StyledWrap>;
+interface IProps {
+    layout?: 1 | 2;
+}
+
+const Wrapper: FC<IProps> = ({ children, layout }) => {
+    return (
+        <StyledWrap $layout={layout} className="wrapper">
+            {children}
+        </StyledWrap>
+    );
+};
+
+Wrapper.defaultProps = {
+    layout: 1,
 };
 
 export default Wrapper;

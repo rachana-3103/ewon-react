@@ -135,15 +135,16 @@ export const StyledSidebarBtn = styled.button<IMenuBtn>`
     ${device.large} {
         display: none;
     }
+
     ${({ $sidebarOpen, $bodyOpen }) =>
-        $sidebarOpen === true &&
+        $sidebarOpen &&
         !$bodyOpen &&
         css`
             display: none;
         `}
     ${({ $bodyOpen, $sidebarOpen }) =>
-        $bodyOpen === true &&
-        $sidebarOpen === true &&
+        $bodyOpen &&
+        $sidebarOpen &&
         css`
             display: block;
         `}

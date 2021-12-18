@@ -18,9 +18,10 @@ type TMaxText = "enter" | "leave";
 
 interface IProps {
     layout?: "minimize";
+    sidebarLayout?: 1 | 2;
 }
 
-const Aisde: React.FC<IProps> = ({ layout }) => {
+const Aisde: React.FC<IProps> = ({ layout, sidebarLayout }) => {
     const [minimize, setMinimize] = useState(layout === "minimize");
     const [maximize, setMaximize] = useState(false);
     const [show, setShow] = useState(false);
@@ -93,6 +94,7 @@ const Aisde: React.FC<IProps> = ({ layout }) => {
                     minimize={minimize}
                     mdMinimize={mdMinimize.current}
                     show={show}
+                    sidebarLayout={sidebarLayout}
                 />
                 <StyledBody
                     $minimize={minimize}

@@ -11,7 +11,7 @@ import SEO from "../../../components/seo";
 
 const Chat: FC = () => {
     return (
-        <Layout>
+        <Layout sidebarLayout={2}>
             <SEO />
             <Content>
                 <ContentHeader />

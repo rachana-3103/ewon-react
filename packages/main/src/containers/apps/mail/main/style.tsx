@@ -5,7 +5,7 @@ export const StyledMain = styled.div`
     top: 0;
     left: 200vw;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     background-color: ${themeGet("colors.whisper")};
     ${device.xlarge} {
         left: 540px;

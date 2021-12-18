@@ -258,6 +258,16 @@ export const StyledMenuBtn = styled(({ ...rest }) => (
         css`
             display: none;
         `}
+
+    ${({ $sidebarOpen, $bodyOpen }) =>
+        !$sidebarOpen &&
+        !$bodyOpen &&
+        css`
+            ${device.mdToLg} {
+                display: block;
+            }
+        `}
+
     ${({ $sidebarOpen, $bodyOpen }) =>
         $sidebarOpen === true &&
         !$bodyOpen &&
@@ -295,6 +305,15 @@ export const StyledSidebarBtn = styled(({ ...rest }) => (
     ${device.large} {
         display: none;
     }
+    ${({ $sidebarOpen, $bodyOpen }) =>
+        !$sidebarOpen &&
+        !$bodyOpen &&
+        css`
+            ${device.mdToLg} {
+                display: none;
+            }
+        `}
+
     ${({ $sidebarOpen, $bodyOpen }) =>
         $sidebarOpen === true &&
         !$bodyOpen &&

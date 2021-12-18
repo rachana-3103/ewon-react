@@ -16,6 +16,7 @@ export const StyledWrap = styled.div`
 
 export const StyledTopDiv = styled.div`
     margin-bottom: 25px;
+    position: relative;
     &:after {
         display: block;
         clear: both;
@@ -101,4 +102,14 @@ export const StyledLink = styled(({ ...rest }) => <Anchor {...rest} />)`
         width: 18px;
         margin-right: 12px;
     }
+`;
+
+export const StyledClose = styled.button`
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 0;
 `;

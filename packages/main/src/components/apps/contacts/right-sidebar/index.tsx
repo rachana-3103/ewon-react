@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Phone, Video, MessageSquare, Share, Star, Slash } from "react-feather";
+import {
+    Phone,
+    Video,
+    MessageSquare,
+    Share,
+    Star,
+    Slash,
+    X,
+} from "react-feather";
 import ReactTooltip from "react-tooltip";
 import { Avatar, AvatarInitial, HRLine } from "@doar/components";
 import EditPhotoButton from "../edit-photo-button";
@@ -15,9 +23,14 @@ import {
     StyledBio,
     StyledNav,
     StyledLink,
+    StyledClose,
 } from "./style";
 
-const RightSidebar: FC = () => {
+interface IProps {
+    onClose: () => void;
+}
+
+const RightSidebar: FC<IProps> = ({ onClose }) => {
     return (
         <StyledWrap>
             <StyledTopDiv>
@@ -29,6 +42,13 @@ const RightSidebar: FC = () => {
                     </Avatar>
                     <EditPhotoButton />
                 </StyledAvatar>
+                <StyledClose
+                    className="sidebar-close"
+                    type="button"
+                    onClick={onClose}
+                >
+                    <X />
+                </StyledClose>
             </StyledTopDiv>
             <StyledName>Abigail Johnson</StyledName>
             <StyledRole>President &amp; CEO - ThemePixels, Inc.</StyledRole>

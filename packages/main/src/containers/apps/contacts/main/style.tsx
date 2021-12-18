@@ -43,16 +43,32 @@ export const StyledMain = styled.div<IProps>`
         `}
 `;
 
-export const StyledBody = styled.div`
+interface IBodyProps {
+    $layout?: 1 | 2;
+}
+
+export const StyledBody = styled.div<IBodyProps>`
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: ${themeGet("colors.lilac")};
-    ${device.xlarge} {
-        width: calc(100% - 290px);
-    }
+
+    ${({ $layout }) =>
+        $layout === 1 &&
+        css`
+            ${device.xlarge} {
+                width: calc(100% - 290px);
+            }
+        `}
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            ${device.xlarge} {
+                width: 100%;
+            }
+        `}
     ${(props) =>
         props.theme.name === "dark" &&
         css`
@@ -133,7 +149,11 @@ export const StyledBody = styled.div`
     }
 `;
 
-export const StyledSidebar = styled.div`
+interface ISidebarProps extends IBodyProps {
+    $show?: boolean;
+}
+
+export const StyledSidebar = styled.div<ISidebarProps>`
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -146,6 +166,29 @@ export const StyledSidebar = styled.div`
         width: 290px;
         right: 0;
     }
+    .sidebar-close {
+        display: none;
+    }
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            ${device.xlarge} {
+                opacity: 0;
+                visibility: hidden;
+                .sidebar-close {
+                    display: block;
+                }
+            }
+        `}
+    ${({ $layout, $show }) =>
+        $layout === 2 &&
+        $show &&
+        css`
+            ${device.xlarge} {
+                opacity: 1;
+                visibility: visible;
+            }
+        `}
     ${(props) =>
         props.theme.name === "dark" &&
         css`
@@ -154,15 +197,25 @@ export const StyledSidebar = styled.div`
         `}
 `;
 
-export const StyledOptionsBtn = styled.button`
+export const StyledOptionsBtn = styled.button<IBodyProps>`
     border: none;
     background-color: transparent;
     padding: 0;
     margin-left: auto;
     color: ${themeGet("colors.gray600")};
-    ${device.xlarge} {
-        display: none;
-    }
+
+    ${({ $layout }) =>
+        $layout === 1 &&
+        css`
+            ${device.xlarge} {
+                display: none;
+            }
+        `}
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            display: block;
+        `}
     &:hover,
     &:focus {
         color: ${themeGet("colors.cornflower")};

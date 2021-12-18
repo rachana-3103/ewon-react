@@ -22,7 +22,7 @@ export const StyledSettings = styled.div<IProps>`
 `;
 
 export const StyledSettingsBtn = styled.button<IProps>`
-    top: 98px;
+    top: 150px;
     right: 0;
     width: 45px;
     height: 45px;

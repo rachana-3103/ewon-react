@@ -22,7 +22,11 @@ import {
     StyledOptionsBtn,
 } from "./style";
 
-const Wrapper: FC = () => {
+interface IProps {
+    layout?: 1 | 2;
+}
+
+const Wrapper: FC<IProps> = ({ layout }) => {
     const { sidebar } = useAppSelector((state) => state.ui);
     const dispatch = useAppDispatch();
     const { width } = useWindowSize();
@@ -38,13 +42,14 @@ const Wrapper: FC = () => {
             setSidebarOpen(false);
         }
     }, [sidebar]);
+
     return (
         <StyledMain
             className="main-content"
             $showSidebar={!sidebar}
             $rightSidebar={sidebarOpen}
         >
-            <StyledBody>
+            <StyledBody $layout={layout}>
                 <TabWrap variation="line">
                     <TabList>
                         <Tab>
@@ -63,7 +68,10 @@ const Wrapper: FC = () => {
                             </Text>
                             Logs
                         </Tab>
-                        <StyledOptionsBtn onClick={sidebarHandler}>
+                        <StyledOptionsBtn
+                            onClick={sidebarHandler}
+                            $layout={layout}
+                        >
                             <MoreHorizontal />
                         </StyledOptionsBtn>
                     </TabList>
@@ -79,13 +87,17 @@ const Wrapper: FC = () => {
                     </TabContent>
                 </TabWrap>
             </StyledBody>
-            <StyledSidebar>
+            <StyledSidebar $layout={layout} $show={sidebarOpen}>
                 <Scrollbar top="0">
-                    <RightSidebar />
+                    <RightSidebar onClose={sidebarHandler} />
                 </Scrollbar>
             </StyledSidebar>
         </StyledMain>
     );
+};
+
+Wrapper.defaultProps = {
+    layout: 1,
 };
 
 export default Wrapper;

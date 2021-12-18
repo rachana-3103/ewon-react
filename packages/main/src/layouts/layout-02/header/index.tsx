@@ -1,7 +1,9 @@
-import React from "react";
-import { Menu, X } from "react-feather";
+import React, { useCallback } from "react";
+import { Menu, X, ArrowLeft } from "react-feather";
 import AsideLogo from "../../../components/aside-layout/logo";
-import { StyledHeader, StyledMenuBtn } from "./style";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { toggleSidebar } from "../../../redux/slices/ui";
+import { StyledHeader, StyledMenuBtn, StyledSidebarBtn } from "./style";
 
 interface IProps {
     minimizeHandler: () => void;
@@ -18,6 +20,15 @@ const Header: React.FC<IProps> = ({
     mdMinimize,
     show,
 }) => {
+    const dispatch = useAppDispatch();
+    const { sidebar } = useAppSelector((state) => state.ui);
+    const sidebarHandler = useCallback(
+        (_, isOpen?: "open") => {
+            dispatch(toggleSidebar({ isOpen }));
+        },
+        [dispatch]
+    );
+
     return (
         <StyledHeader
             $minimize={minimize}
@@ -34,6 +45,9 @@ const Header: React.FC<IProps> = ({
                 <Menu size={18} strokeWidth="2.5px" />
                 <X size={18} strokeWidth="2.5px" />
             </StyledMenuBtn>
+            <StyledSidebarBtn onClick={sidebarHandler} $sidebarOpen={!sidebar}>
+                <ArrowLeft size={20} strokeWidth="2.5px" />
+            </StyledSidebarBtn>
         </StyledHeader>
     );
 };

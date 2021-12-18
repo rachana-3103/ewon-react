@@ -79,6 +79,17 @@ const ClassicPlusHelpCenter = lazy(
     () => import("./pages/classic-plus/help-center")
 );
 const ClassicPlusInvoice = lazy(() => import("./pages/classic-plus/invoice"));
+const ClassicPlusCalendar = lazy(
+    () => import("./pages/classic-plus/apps/calendar")
+);
+const ClassicPlusChat = lazy(() => import("./pages/classic-plus/apps/chat"));
+const ClassicPlusContacts = lazy(
+    () => import("./pages/classic-plus/apps/contacts")
+);
+const ClassicPlusFileManager = lazy(
+    () => import("./pages/classic-plus/apps/file-manager")
+);
+const ClassicPlusMail = lazy(() => import("./pages/classic-plus/apps/mail"));
 
 const App: React.FC = () => {
     return (
@@ -87,6 +98,7 @@ const App: React.FC = () => {
                 <Suspense fallback={<Preloader />}>
                     <Routes>
                         {/* Classic Routes */}
+
                         {/* Dashboard Routes */}
                         <Route path="/" element={<DashboardOne />} />
                         <Route
@@ -101,6 +113,7 @@ const App: React.FC = () => {
                             path="/dashboard-four"
                             element={<DashboardFour />}
                         />
+
                         {/* Authentication Routes */}
                         <Route path="/signin" element={<SignIn />} />
                         <Route path="/signup" element={<SignUp />} />
@@ -112,20 +125,24 @@ const App: React.FC = () => {
                             path="/forgot-password"
                             element={<ForgotPassword />}
                         />
+
                         {/* Error Routes */}
                         <Route path="/error-500" element={<Error500 />} />
                         <Route path="/error-503" element={<Error503 />} />
                         <Route path="/error-505" element={<Error505 />} />
+
                         {/* User Routes */}
                         <Route path="/profile-view" element={<ProfileView />} />
                         <Route path="/connections" element={<Connections />} />
                         <Route path="/groups" element={<Groups />} />
                         <Route path="/events" element={<Events />} />
+
                         {/* Other Routes */}
                         <Route path="/timeline" element={<Timeline />} />
                         <Route path="/pricing" element={<Pricing />} />
                         <Route path="/help-center" element={<HelpCenter />} />
                         <Route path="/invoice" element={<Invoice />} />
+
                         {/* Apps Routes */}
                         <Route path="/apps/calendar" element={<Calendar />} />
                         <Route path="/apps/chat" element={<Chat />} />
@@ -135,7 +152,9 @@ const App: React.FC = () => {
                             element={<FileManager />}
                         />
                         <Route path="/apps/mail" element={<Mail />} />
+
                         {/* Classic Plus Routes */}
+
                         {/* Dashboard Routes */}
                         <Route
                             path="/classic-plus/dashboard-one"
@@ -153,6 +172,7 @@ const App: React.FC = () => {
                             path="/classic-plus/dashboard-four"
                             element={<ClassicPlusDashboardFour />}
                         />
+
                         {/* Authentication Routes */}
                         <Route
                             path="/classic-plus/signin"
@@ -170,6 +190,7 @@ const App: React.FC = () => {
                             path="/classic-plus/forgot-password"
                             element={<ClassicPlusForgotPassword />}
                         />
+
                         {/* Error Routes */}
                         <Route
                             path="/classic-plus/error-500"
@@ -183,6 +204,7 @@ const App: React.FC = () => {
                             path="/classic-plus/error-505"
                             element={<ClassicPlusError505 />}
                         />
+
                         {/* User Routes */}
                         <Route
                             path="/classic-plus/profile-view"
@@ -200,6 +222,7 @@ const App: React.FC = () => {
                             path="/classic-plus/events"
                             element={<ClassicPlusEvents />}
                         />
+
                         {/* Other Routes */}
                         <Route
                             path="/classic-plus/timeline"
@@ -219,14 +242,28 @@ const App: React.FC = () => {
                         />
 
                         {/* Apps Routes */}
-                        {/* <Route path="/apps/calendar" element={<Calendar />} />
-                        <Route path="/apps/chat" element={<Chat />} />
-                        <Route path="/apps/contacts" element={<Contacts />} />
+
                         <Route
-                            path="/apps/file-manager"
-                            element={<FileManager />}
+                            path="/classic-plus/apps/calendar"
+                            element={<ClassicPlusCalendar />}
                         />
-                        <Route path="/apps/mail" element={<Mail />} /> */}
+                        <Route
+                            path="/classic-plus/apps/chat"
+                            element={<ClassicPlusChat />}
+                        />
+                        <Route
+                            path="/classic-plus/apps/contacts"
+                            element={<ClassicPlusContacts />}
+                        />
+                        <Route
+                            path="/classic-plus/apps/file-manager"
+                            element={<ClassicPlusFileManager />}
+                        />
+                        <Route
+                            path="/classic-plus/apps/mail"
+                            element={<ClassicPlusMail />}
+                        />
+
                         {/* 404 Page Route */}
                         <Route path="*" element={<ErrorNotFound />} />
                         <Route

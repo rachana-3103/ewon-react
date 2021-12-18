@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, space } from "@doar/shared/styled";
 
 export const StyledBody = styled.div`
     position: relative;
@@ -12,4 +12,5 @@ export const StyledBody = styled.div`
         padding: 25px;
         height: calc(100% - 60px);
     }
+    ${space}
 `;

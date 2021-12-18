@@ -1,21 +1,40 @@
 import styled, { device, css, themeGet, tinycolor } from "@doar/shared/styled";
 
-export const StyledMain = styled.div<{ $sidebar?: boolean }>`
+interface IMainProps {
+    $sidebar?: boolean;
+    $layout?: 1 | 2;
+}
+
+export const StyledMain = styled.div<IMainProps>`
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     visibility: hidden;
     opacity: 0;
     transform: translateX(100vw);
     transition: all 0.3s;
-    ${device.small} {
-        transform: translateX(310px);
-    }
+    ${({ $layout }) =>
+        $layout === 1 &&
+        css`
+            ${device.small} {
+                transform: translateX(310px);
+            }
+            ${device.large} {
+                left: 310px;
+            }
+        `}
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            ${device.small} {
+                transform: translateX(304px);
+            }
+            ${device.large} {
+                left: 304px;
+            }
+        `}
+
     ${device.large} {
         opacity: 1;
-        left: 310px;
         transform: none;
         visibility: visible;
     }

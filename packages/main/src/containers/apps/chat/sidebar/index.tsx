@@ -7,10 +7,14 @@ import SidebarMessages from "../../../../components/apps/chat/sidebar-messages";
 import SidebarFooter from "../../../../components/apps/chat/sidebar-footer";
 import { useAppSelector } from "../../../../redux/hooks";
 
-const Sidebar: FC = () => {
+interface IProps {
+    layout?: 1 | 2;
+}
+
+const Sidebar: FC<IProps> = ({ layout }) => {
     const { sidebar } = useAppSelector((state) => state.ui);
     return (
-        <StyledSidebar className="sidebar" $sidebar={sidebar}>
+        <StyledSidebar className="sidebar" $layout={layout} $sidebar={sidebar}>
             <StyledHeader>
                 <SidebarHeader />
             </StyledHeader>
@@ -25,6 +29,10 @@ const Sidebar: FC = () => {
             </StyledFooter>
         </StyledSidebar>
     );
+};
+
+Sidebar.defaultProps = {
+    layout: 1,
 };
 
 export default Sidebar;

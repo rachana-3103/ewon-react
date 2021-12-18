@@ -1,13 +1,27 @@
 import styled, { css, themeGet } from "@doar/shared/styled";
 
-export const StyledSidebar = styled.div<{ $sidebar?: boolean }>`
+interface INavProps {
+    $sidebar?: boolean;
+    $layout?: 1 | 2;
+}
+
+export const StyledSidebar = styled.div<INavProps>`
     background-color: #fff;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 60px;
     right: 0;
     transition: all 0.3s;
+    ${({ $layout }) =>
+        $layout === 1 &&
+        css`
+            left: 60px;
+        `}
+    ${({ $layout }) =>
+        $layout === 2 &&
+        css`
+            left: 54px;
+        `}
     @media (min-width: 480px) {
         width: 250px;
         border-right: 1px solid ${themeGet("colors.border")};

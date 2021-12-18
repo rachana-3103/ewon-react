@@ -114,3 +114,44 @@ export const StyledMenuBtn = styled.button`
             }
         `}
 `;
+
+interface IMenuBtn {
+    $hasSidebar?: boolean;
+    $sidebarOpen?: boolean;
+    $bodyOpen?: boolean;
+}
+
+export const StyledSidebarBtn = styled.button<IMenuBtn>`
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    line-height: 0.5;
+    svg {
+        color: ${themeGet("colors.text3")};
+    }
+    ${device.small} {
+        margin-left: 20px;
+    }
+    ${device.large} {
+        display: none;
+    }
+    ${({ $sidebarOpen, $bodyOpen }) =>
+        $sidebarOpen === true &&
+        !$bodyOpen &&
+        css`
+            display: none;
+        `}
+    ${({ $bodyOpen, $sidebarOpen }) =>
+        $bodyOpen === true &&
+        $sidebarOpen === true &&
+        css`
+            display: block;
+        `}
+    ${({ theme }) =>
+        theme.name === "dark" &&
+        css`
+            &:hover {
+                color: ${themeGet("colors.white")};
+            }
+        `}
+`;

@@ -4,10 +4,14 @@ import ReactTooltip from "react-tooltip";
 import { useAppSelector } from "../../../../redux/hooks";
 import { StyledNavLeft, StyledNav, StyledNavLink } from "./style";
 
-const NavLeft: FC = () => {
+interface IProps {
+    layout?: 1 | 2;
+}
+
+const NavLeft: FC<IProps> = ({ layout }) => {
     const { sidebar } = useAppSelector((state) => state.ui);
     return (
-        <StyledNavLeft className="nav-left" $sidebar={sidebar}>
+        <StyledNavLeft className="nav-left" $layout={layout} $sidebar={sidebar}>
             <StyledNav>
                 <StyledNavLink path="#!" data-tip="Contacts">
                     <Users />
@@ -32,6 +36,10 @@ const NavLeft: FC = () => {
             </StyledNav>
         </StyledNavLeft>
     );
+};
+
+NavLeft.defaultProps = {
+    layout: 1,
 };
 
 export default NavLeft;

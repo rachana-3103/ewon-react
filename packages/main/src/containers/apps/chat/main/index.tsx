@@ -21,7 +21,11 @@ import {
     StyledSidebar,
 } from "./style";
 
-const Main: FC = () => {
+interface IProps {
+    layout?: 1 | 2;
+}
+
+const Main: FC<IProps> = ({ layout }) => {
     const dispatch = useAppDispatch();
     const { channel, chatType, rightSidebar } = useAppSelector(
         (state) => state.chatUI
@@ -36,7 +40,7 @@ const Main: FC = () => {
     }, []);
 
     return (
-        <StyledMain className="content" $sidebar={sidebar}>
+        <StyledMain className="content" $layout={layout} $sidebar={sidebar}>
             <StyledHeader>
                 {chatType === "channel" && (
                     <Heading mb="0px">#{channel}</Heading>
@@ -66,6 +70,10 @@ const Main: FC = () => {
             </StyledSidebar>
         </StyledMain>
     );
+};
+
+Main.defaultProps = {
+    layout: 1,
 };
 
 export default Main;

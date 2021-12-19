@@ -1,10 +1,9 @@
 import * as React from "react";
-import { addDecorator } from "@storybook/react";
-import StoryRouter from "storybook-react-router";
+import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider, themes } from "@doar/shared/styled";
 import { ResetCSS } from "./reset";
 
-addDecorator(StoryRouter());
+
 
 export const globalTypes = {
     theme: {
@@ -31,8 +30,10 @@ const withThemeProvider = (Story, context) => {
         <ThemeProvider theme={theme}>
             <ResetCSS />
             <div className="story-wrap">
-                <Story {...context} />{" "}
-            </div>{" "}
+                <MemoryRouter>
+                    <Story {...context} />
+                </MemoryRouter>
+            </div>
         </ThemeProvider>
     );
 };

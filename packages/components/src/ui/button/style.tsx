@@ -40,6 +40,7 @@ interface IProps extends SpaceProps, LayoutProps, BorderProps, TypographyProps {
     $iconPosition?: "left" | "right";
     $iconSize?: "xs" | "sm" | "md";
     $iconSpace?: string;
+    $uppercase?: boolean;
 }
 
 const buttonStyles = css<IProps>`
@@ -1081,6 +1082,22 @@ const buttonStyles = css<IProps>`
             .spinner {
                 margin-left: ${$iconSpace};
             }
+        `}
+    ${({ $uppercase, $size }) =>
+        $uppercase &&
+        css`
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            ${$size === "xs" &&
+            css`
+                font-size: 10px;
+                line-height: 1.8;
+            `}
+            ${$size === "md" &&
+            css`
+                line-height: 1.75;
+            `}
         `}
 	${space};
     ${layout};

@@ -225,3 +225,34 @@ export const StyledSkinName = styled.span`
     text-align: center;
     color: #8392a5;
 `;
+
+export const StyledNavLink = styled.a`
+    display: block;
+    width: 100%;
+    color: #7987a1;
+    border: 1px solid #7987a1;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    padding: 0.46875rem 0.9375rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 1.8;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover {
+        color: #fff;
+        background-color: #7987a1;
+        border-color: #7987a1;
+    }
+    &:active {
+        box-shadow: 0 0 0 0.2rem rgb(121 135 161 / 50%);
+    }
+`;

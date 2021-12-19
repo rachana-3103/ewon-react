@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { Settings } from "react-feather";
 import { Row, Col } from "@doar/components";
 import { TTheme } from "@doar/shared/types";
@@ -12,6 +12,7 @@ import {
     StyledLogo,
     StyledNote,
     StyledLabel,
+    StyledNavLink,
 } from "./style";
 
 interface IProps {
@@ -21,6 +22,10 @@ interface IProps {
 
 const SettingsCard: FC<IProps> = ({ themeHandler, curTheme }) => {
     const [show, setShow] = useState(false);
+    const [location, setLocation] = useState("");
+    useEffect(() => {
+        setLocation(window.location.origin);
+    }, []);
 
     return (
         <StyledSettings $show={show}>
@@ -104,29 +109,23 @@ const SettingsCard: FC<IProps> = ({ themeHandler, curTheme }) => {
                     </div>
                 </div>
 
-                <div className="pd-y-20 bd-t" style={{ display: "none" }}>
-                    <h4 className="tx-sans tx-10 tx-uppercase tx-bold tx-spacing-1 tx-color-02 mg-b-15">
-                        Navigation Layout
-                    </h4>
-                    <div className="row row-xs">
-                        <div className="col">
-                            <a
-                                href="../classic/dashboard-one.html"
-                                className="btn btn-xs btn-outline-secondary btn-uppercase btn-block"
-                            >
+                <StyledCard $hasBorder>
+                    <StyledLabel>Navigation Layout</StyledLabel>
+                    <Row gutters={10}>
+                        <Col xs={6} sm={6}>
+                            <StyledNavLink href={`${location}/`}>
                                 Horizontal
-                            </a>
-                        </div>
-                        <div className="col">
-                            <a
-                                href="../classic-plus/dashboard-one.html"
-                                className="btn btn-xs btn-outline-secondary btn-uppercase btn-block"
+                            </StyledNavLink>
+                        </Col>
+                        <Col xs={6} sm={6}>
+                            <StyledNavLink
+                                href={`${location}/classic-plus/dashboard-one`}
                             >
                                 Vertical
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                            </StyledNavLink>
+                        </Col>
+                    </Row>
+                </StyledCard>
 
                 <div className="pd-y-20 bd-t" style={{ display: "none" }}>
                     <h4 className="tx-sans tx-10 tx-uppercase tx-bold tx-spacing-1 tx-color-02 mg-b-15">

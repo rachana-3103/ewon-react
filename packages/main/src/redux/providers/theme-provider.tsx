@@ -13,6 +13,7 @@ const Theme: FC = ({ children }) => {
     const themeHandler = (curTheme: TTheme) => {
         dispatch(toggleTheme({ theme: curTheme }));
     };
+
     return (
         <ThemeProvider theme={themes[theme]}>
             <GlobalStyle />

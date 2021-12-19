@@ -126,6 +126,7 @@ export interface IRecentEarning {
 }
 
 export type TTheme = "classic" | "light" | "cool" | "dark";
+export type TNavigation = "horizontal" | "vertical";
 
 export interface ISize {
     width: number | undefined;

@@ -98,6 +98,10 @@ export interface ButtonProps
      * Set distance between icon and text
      */
     iconSpace?: string;
+    /**
+     * Set Uppercase Button
+     */
+    uppercase?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -119,6 +123,7 @@ export const Button: FC<ButtonProps> = ({
     iconPosition,
     iconSize,
     iconSpace,
+    uppercase,
     ...restProps
 }) => {
     if (path) {
@@ -140,6 +145,7 @@ export const Button: FC<ButtonProps> = ({
                     $iconPosition={iconPosition}
                     $iconSize={iconSize}
                     $iconSpace={iconSpace}
+                    $uppercase={uppercase}
                     aria-label={label}
                     onClick={onClick}
                     className={classnames(className, "btn")}
@@ -165,6 +171,7 @@ export const Button: FC<ButtonProps> = ({
                     $iconPosition={iconPosition}
                     $iconSize={iconSize}
                     $iconSpace={iconSpace}
+                    $uppercase={uppercase}
                     aria-label={label}
                     onClick={onClick}
                     className={classnames(className, "btn")}
@@ -189,6 +196,7 @@ export const Button: FC<ButtonProps> = ({
                 $iconPosition={iconPosition}
                 $iconSize={iconSize}
                 $iconSpace={iconSpace}
+                $uppercase={uppercase}
                 aria-label={label}
                 onClick={onClick}
                 className={classnames(className, "btn")}
@@ -215,6 +223,7 @@ export const Button: FC<ButtonProps> = ({
             $iconPosition={iconPosition}
             $iconSize={iconSize}
             $iconSpace={iconSpace}
+            $uppercase={uppercase}
             aria-label={label}
             onClick={onClick}
             className={classnames(className, "btn")}

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import styled, { device, themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { device, themeGet, tinycolor, css } from "@doar/shared/styled";
 
 export const StyledHeader = styled.div`
     background-color: #fff;
@@ -33,4 +33,14 @@ export const StyledHeader = styled.div`
             }
         }
     }
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            background-color: #fff;
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+        `}
 `;

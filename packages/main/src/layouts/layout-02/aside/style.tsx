@@ -212,10 +212,9 @@ export const StyledAside = styled.aside<IAsideProps>`
 export const StyledBody = styled.div<IAsideProps>`
     height: 100%;
     padding-bottom: 70px;
-    background-color: #fff;
     transition: all 0.3s;
     border-top: 1px solid ${themeGet("colors.border")};
-    border-right: 1px solid ${themeGet("colors.border")};
+
     ${({ $minimize }) =>
         $minimize &&
         css`
@@ -230,6 +229,18 @@ export const StyledBody = styled.div<IAsideProps>`
                 width: 60px;
                 transition: none;
             }
+        `}
+    
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            background-color: #fff;
+            border-right: 1px solid ${themeGet("colors.border")};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
         `}
 `;
 

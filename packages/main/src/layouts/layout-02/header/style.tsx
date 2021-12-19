@@ -1,4 +1,4 @@
-import styled, { device, themeGet, css } from "@doar/shared/styled";
+import styled, { device, themeGet, css, tinycolor } from "@doar/shared/styled";
 
 interface IProps {
     $minimize: boolean;
@@ -20,8 +20,6 @@ export const StyledHeader = styled.header<IProps>`
     justify-content: space-between;
     height: 54px;
     padding: 0 18px;
-    border-right: 1px solid ${themeGet("colors.border")};
-    background-color: #fff;
     transform: translateX(54px);
 
     ${device.large} {
@@ -29,6 +27,12 @@ export const StyledHeader = styled.header<IProps>`
         transform: none;
         height: 59px;
     }
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            border-right: 1px solid ${themeGet("colors.border")};
+            background-color: #fff;
+        `}
     ${({ $show }) =>
         $show &&
         css`
@@ -70,6 +74,15 @@ export const StyledHeader = styled.header<IProps>`
             ${device.lgToXl} {
                 border-right-color: ${themeGet("colors.border")};
             }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            background-color: ${themeGet("colors.gray900")};
+            border-right: 1px solid
+                ${tinycolor(themeGet("colors.white")(props))
+                    .setAlpha(0.06)
+                    .toRgbString()};
         `}
 `;
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import styled, { themeGet, tinycolor } from "@doar/shared/styled";
+import styled, { themeGet, tinycolor, css } from "@doar/shared/styled";
 import { Anchor } from "../anchor";
 
 export const StyledNavbar = styled.ul`
@@ -24,10 +24,22 @@ export const StyledNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     font-family: ${themeGet("fonts.interUi")};
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: ${themeGet("colors.text")};
     margin-bottom: 5px;
     display: block;
     transition: all 0.25s;
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            color: ${themeGet("colors.text")};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: #fff;
+        `}
+    .aside-navbar-label {
+        pointer-events: none;
+    }
 `;
 
 export const StyledSubmenu = styled.ul`
@@ -98,8 +110,7 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     font-size: 13px;
     padding: 0;
     height: 30px;
-    color: ${(props) =>
-        tinycolor(props.theme.colors.text2).setAlpha(0.9).toString()};
+
     transition: all 0.25s;
     &:before {
         content: "";
@@ -120,11 +131,40 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
         height: 18px;
         stroke-width: 2.3px;
         margin-right: 15px;
-        color: ${(props) =>
-            tinycolor(props.theme.colors.text2).setAlpha(0.65).toString()};
-        fill: ${(props) =>
-            tinycolor(props.theme.colors.text2).setAlpha(0.06).toString()};
     }
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            color: ${tinycolor(themeGet("colors.text2")(props))
+                .setAlpha(0.9)
+                .toString()};
+            svg {
+                color: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.65)
+                    .toString()};
+                fill: ${tinycolor(themeGet("colors.text2")(props))
+                    .setAlpha(0.06)
+                    .toString()};
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.gray500")};
+            svg {
+                color: ${themeGet("colors.gray500")};
+                fill: ${tinycolor(themeGet("colors.white")(props))
+                    .setAlpha(0.06)
+                    .toString()};
+            }
+            &:hover,
+            &:focus {
+                color: #fff;
+                svg {
+                    color: #fff;
+                }
+            }
+        `}
     &.active {
         opacity: 1;
         color: ${themeGet("colors.primary")};
@@ -138,7 +178,6 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
             color: ${themeGet("colors.primary")};
             fill: ${(props) =>
                 tinycolor(props.theme.colors.primary).setAlpha(0.2).toString()};
-    }
         }
     }
 `;

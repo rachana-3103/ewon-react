@@ -246,6 +246,7 @@ export const dark = {
     black: "#000000",
     close: gray300,
     border: "#485e9029",
+    heather: "#c0ccda",
     gray50,
     gray100,
     gray200,

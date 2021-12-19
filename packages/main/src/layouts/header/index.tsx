@@ -83,7 +83,7 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                             onClick={!isBody ? sidebarHandler : bodyHandler}
                             $sidebarOpen={sidebar}
                             $bodyOpen={isBody}
-                            className="sidebar-btn dsaf"
+                            className="sidebar-btn"
                         >
                             <ArrowLeft size={20} strokeWidth="2.5px" />
                         </StyledSidebarBtn>
@@ -121,7 +121,11 @@ const Header: FC<IProps> = ({ hasSidebar, sidebarLayout }) => {
                 <StyledLogo>
                     <Logo />
                 </StyledLogo>
-                <StyledNavbarWrap $isOpen={menuOpen} onClick={menuHandler}>
+                <StyledNavbarWrap
+                    $isOpen={menuOpen}
+                    onClick={menuHandler}
+                    className="navbar-wrap"
+                >
                     <StyledNavbarMenu
                         $isOpen={menuOpen}
                         onClick={(e) => e.stopPropagation()}

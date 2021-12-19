@@ -78,13 +78,20 @@ export const StyledNavbarWrap = styled.div<INavbar>`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 21, 32, 0.7);
     overflow: hidden;
     z-index: 1060;
     visibility: hidden;
     opacity: 0;
     transition: all 0.4s;
     will-change: visibility, opacity;
+    background-color: ${(props) =>
+        props &&
+        css`
+            ${tinycolor(themeGet("colors.vulcan")(props))
+                .setAlpha(0.7)
+                .toRgbString()}
+        `};
+
     ${({ $isOpen }) =>
         $isOpen === true &&
         css`
@@ -117,7 +124,6 @@ export const StyledNavbarWrap = styled.div<INavbar>`
 export const StyledNavbarMenu = styled.nav<INavbar>`
     width: 260px;
     height: 100%;
-    background-color: #fff;
     transition: all 0.4s;
     will-change: transform;
     transform: translateX(-260px);
@@ -140,6 +146,11 @@ export const StyledNavbarMenu = styled.nav<INavbar>`
         transform: translateX(0);
     }
     ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            background-color: #fff;
+        `}
+    ${(props) =>
         props.theme.name === "dark" &&
         css`
             background-color: ${themeGet("colors.darklighten5")};
@@ -155,15 +166,18 @@ export const StyledNavbarHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${themeGet("colors.border")};
     ${device.large} {
         display: none;
     }
     ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            border-bottom: 1px solid ${themeGet("colors.border")};
+        `}
+    ${(props) =>
         props.theme.name === "dark" &&
         css`
             background-color: ${themeGet("colors.gray900")};
-            border-bottom-width: 0;
 
             a:last-child {
                 &:hover,
@@ -222,12 +236,17 @@ export const StyledNavbarElement = styled(({ mt, mb, ml, mr, ...props }) => (
         width: 16px;
         height: 16px;
         stroke-width: 3px;
-        color: ${themeGet("colors.text")};
+
         ${device.small} {
             width: 20px;
             height: 20px;
             stroke-width: 2.25px;
         }
+        ${({ theme }) =>
+            theme.name !== "dark" &&
+            css`
+                color: ${themeGet("colors.text")};
+            `}
         ${({ theme }) =>
             theme.name === "dark" &&
             css`

@@ -4,6 +4,7 @@ import styled, {
     color as colorStyles,
     ColorProps,
     themeGet,
+    css,
 } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
@@ -112,4 +113,9 @@ export const StyledClose = styled.button`
     background: transparent;
     border: none;
     padding: 0;
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: #fff;
+        `}
 `;

@@ -150,9 +150,6 @@ export const StyledNav = styled(
                 align-items: center;
                 padding: 0;
                 height: 30px;
-                color: ${tinycolor(themeGet("colors.text2")(props))
-                    .setAlpha(0.9)
-                    .toRgbString()};
                 transition: all 0.25s;
                 &:before {
                     content: "";
@@ -171,13 +168,39 @@ export const StyledNav = styled(
                 height: 18px;
                 stroke-width: 2.3px;
                 margin-right: 15px;
-                color: ${tinycolor(themeGet("colors.text2")(props))
-                    .setAlpha(0.65)
-                    .toRgbString()};
                 fill: ${tinycolor(themeGet("colors.text2")(props))
                     .setAlpha(0.06)
                     .toRgbString()};
             }
+            ${props.theme.name !== "dark" &&
+            css`
+                .nav-link {
+                    color: ${tinycolor(themeGet("colors.text2")(props))
+                        .setAlpha(0.9)
+                        .toRgbString()};
+                }
+                svg {
+                    color: ${tinycolor(themeGet("colors.text2")(props))
+                        .setAlpha(0.65)
+                        .toRgbString()};
+                }
+            `}
+            ${props.theme.name === "dark" &&
+            css`
+                .nav-link {
+                    color: ${themeGet("colors.gray500")};
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        svg {
+                            color: #fff;
+                        }
+                    }
+                }
+                svg {
+                    color: ${themeGet("colors.gray500")};
+                }
+            `}
         `}
 
 	${({ $customStyle }) =>

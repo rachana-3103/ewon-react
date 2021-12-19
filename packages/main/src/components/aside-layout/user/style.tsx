@@ -1,4 +1,4 @@
-import styled, { themeGet, css } from "@doar/shared/styled";
+import styled, { themeGet, css, tinycolor } from "@doar/shared/styled";
 import { Anchor } from "@doar/components";
 
 export const StyledUser = styled.div`
@@ -18,7 +18,6 @@ export const StyledAlerts = styled.div`
 `;
 
 export const StyledAlert = styled(({ ...rest }) => <Anchor {...rest} />)`
-    color: ${themeGet("colors.text3")};
     display: block;
     line-height: 1.215;
     &.new {
@@ -31,14 +30,34 @@ export const StyledAlert = styled(({ ...rest }) => <Anchor {...rest} />)`
             width: 7px;
             height: 7px;
             background-color: ${themeGet("colors.danger")};
-            box-shadow: 0 0 0 2px #fff;
             border-radius: 100%;
         }
     }
-
     &:not(:first-of-type) {
         margin-left: 10px;
     }
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            color: ${themeGet("colors.text3")};
+            &.new {
+                &:before {
+                    box-shadow: 0 0 0 2px #fff;
+                }
+            }
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${tinycolor(themeGet("colors.white")(props))
+                .setAlpha(0.5)
+                .toRgbString()};
+            &.new {
+                &:before {
+                    box-shadow: 0 0 0 2px ${themeGet("colors.gray900")};
+                }
+            }
+        `}
 `;
 
 export const StyledLoggedInUser = styled.div`
@@ -49,12 +68,21 @@ export const StyledUserBtn = styled.button`
     background-color: transparent;
     padding: 0;
     border: none;
-    color: ${themeGet("colors.text4")};
     margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    ${(props) =>
+        props.theme.name !== "dark" &&
+        css`
+            color: ${themeGet("colors.text4")};
+        `}
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            color: ${themeGet("colors.heather")};
+        `}
 `;
 
 export const StyledUserData = styled.div`

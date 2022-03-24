@@ -1,9 +1,7 @@
 import * as React from "react";
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from "react-router-dom";
 import { ThemeProvider, themes } from "@doar/shared/styled";
 import { ResetCSS } from "./reset";
-
-
 
 export const globalTypes = {
     theme: {

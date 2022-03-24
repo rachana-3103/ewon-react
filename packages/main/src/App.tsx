@@ -8,6 +8,7 @@ const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
 const DashboardFour = lazy(() => import("./pages/dashboard-four"));
+const DashboardFive = lazy(() => import("./pages/dashboard-five"));
 const SignIn = lazy(() => import("./pages/signin"));
 const SignUp = lazy(() => import("./pages/signup"));
 const VerifyAccount = lazy(() => import("./pages/verify-account"));
@@ -112,6 +113,10 @@ const App: React.FC = () => {
                         <Route
                             path="/dashboard-four"
                             element={<DashboardFour />}
+                        />
+                        <Route
+                            path="/dashboard-five"
+                            element={<DashboardFive />}
                         />
 
                         {/* Authentication Routes */}

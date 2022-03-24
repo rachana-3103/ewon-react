@@ -48,6 +48,18 @@ export interface IConversion {
     chart?: IChart;
 }
 
+export interface IEcomConversion {
+    id: number | string;
+    title: string;
+    rate: string;
+    change: {
+        percentage: string;
+        growth: "up" | "down";
+    };
+    icon: string;
+    color: string;
+}
+
 export interface IWatchlist {
     id: number;
     icon: string;

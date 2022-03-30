@@ -117,3 +117,46 @@ export const ApexRadialChart: FC<IProps> = ({
         />
     );
 };
+
+type TType =
+    | "bar"
+    | "line"
+    | "column"
+    | "area"
+    | "histogram"
+    | "pie"
+    | "donut"
+    | "rangeBar"
+    | "radialBar"
+    | "scatter"
+    | "bubble"
+    | "heatmap"
+    | "candlestick"
+    | "radar"
+    | "polarArea";
+
+interface IMixChart extends IProps {
+    type?: TType;
+    series: Array<{
+        name?: string;
+        data: any[];
+        type: TType;
+    }>;
+}
+
+export const ApexMixChart: FC<IMixChart> = ({
+    options,
+    series,
+    width,
+    height,
+}) => {
+    return (
+        <ApexChart
+            type="line"
+            options={options}
+            series={series}
+            height={height}
+            width={width}
+        />
+    );
+};

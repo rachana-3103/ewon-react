@@ -12,6 +12,7 @@
 /build
 /storybook-static
 /public
+/dist
 
 # misc
 .DS_Store

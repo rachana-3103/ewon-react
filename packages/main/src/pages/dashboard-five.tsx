@@ -1,10 +1,10 @@
 import React from "react";
-import { Row } from "@doar/components";
 import SEO from "../components/seo";
 import Layout from "../layouts";
 import Content from "../layouts/content";
 import WelcomeArea from "../containers/dashboard-five/welcome-area";
 import RowOne from "../containers/dashboard-five/row-one";
+import RowTwo from "../containers/dashboard-five/row-two";
 
 const DashboardFive: React.FC = () => {
     return (
@@ -12,9 +12,8 @@ const DashboardFive: React.FC = () => {
             <SEO />
             <Content>
                 <WelcomeArea />
-                <Row gutters={10}>
-                    <RowOne />
-                </Row>
+                <RowOne />
+                <RowTwo />
             </Content>
         </Layout>
     );

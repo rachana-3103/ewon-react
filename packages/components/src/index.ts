@@ -35,6 +35,7 @@ import {
     ApexPieChart,
     ApexDonutChart,
     ApexRadialChart,
+    ApexMixChart,
 } from "./charts/apexchart/apexchart";
 import {
     BarChart,
@@ -121,6 +122,7 @@ export {
     ApexPieChart,
     ApexDonutChart,
     ApexRadialChart,
+    ApexMixChart,
     BarChart,
     HorizontalBarChart,
     LineChart,

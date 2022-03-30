@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { Col } from "@doar/components";
+import { Row, Col } from "@doar/components";
 import { conversions } from "@doar/shared/data/dashboard-five";
 import Conversion from "../../../components/dashboard-five/conversion";
 
 const RowOne: FC = () => {
     return (
-        <>
+        <Row mb={20} gutters={10}>
             {conversions.map((data) => (
                 <Col
                     sm={6}
@@ -22,7 +22,7 @@ const RowOne: FC = () => {
                     />
                 </Col>
             ))}
-        </>
+        </Row>
     );
 };
 

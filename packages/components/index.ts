@@ -36,6 +36,7 @@ import {
     ApexPieChart,
     ApexDonutChart,
     ApexRadialChart,
+    ApexMixChart,
 } from "./src/charts/apexchart/apexchart";
 import {
     SparklinesBar,
@@ -133,6 +134,7 @@ export {
     ApexPieChart,
     ApexDonutChart,
     ApexRadialChart,
+    ApexMixChart,
     SparklinesBar,
     SparklinesLines,
     BarChart,

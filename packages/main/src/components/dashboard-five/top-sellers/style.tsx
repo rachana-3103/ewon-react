@@ -1,4 +1,9 @@
 export const tableStyles = {
+    headRow: {
+        style: {
+            paddingLeft: "20px",
+        },
+    },
     headCells: {
         style: {
             paddingLeft: "8px",
@@ -24,6 +29,7 @@ export const tableStyles = {
     rows: {
         style: {
             paddingBlock: "25px",
+            paddingLeft: "20px",
         },
     },
     cells: {

@@ -1,13 +1,10 @@
 import { FC } from "react";
 import { Card, CardBody, VectorMap, SectionTitle } from "@doar/components";
-import usajson from "@doar/shared/data/maps/usa.json";
+import worldLowRes from "@doar/shared/data/maps/world-low-res.json";
 import { salesRevenues } from "@doar/shared/data/dashboard-one";
 import { flatDeep } from "@doar/shared/methods";
 import {
     StyledHeader,
-    StyledHeaderRight,
-    StyledHeaderRightText,
-    StyledHeaderRightIcon,
     StyeldMap,
     StyledTable,
     StyledTH,
@@ -23,27 +20,17 @@ const SalesRevenue: FC = () => {
         <Card height={[null, null, null, "100%"]}>
             <StyledHeader>
                 <SectionTitle title="Sales Revenue" />
-                <StyledHeaderRight>
-                    <StyledHeaderRightText>Country:</StyledHeaderRightText>
-                    <StyledHeaderRightIcon>USA</StyledHeaderRightIcon>
-                </StyledHeaderRight>
             </StyledHeader>
             <CardBody p={["0px", "0px"]}>
                 <StyeldMap>
                     <VectorMap
-                        data={usajson}
+                        data={worldLowRes}
                         height="200px"
                         width="100%"
                         color="#d1e6fa"
                         selectedColor="#69b2f8"
                         backgroundColor="transparent"
-                        checkedLayers={[
-                            "us-ca",
-                            "us-wy",
-                            "us-tx",
-                            "us-ny",
-                            "us-fl",
-                        ]}
+                        checkedLayers={["us", "ru", "in"]}
                         tooltip
                     />
                 </StyeldMap>

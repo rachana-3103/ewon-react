@@ -1,8 +1,9 @@
 import { FC } from "react";
-import { Card, CardHeader, SectionTitle } from "@doar/components";
-import DataTable, { TableColumn } from "react-data-table-component";
+import { Card, CardHeader, SectionTitle, DataTable } from "@doar/components";
+import { TableColumn } from "react-data-table-component";
 import { bestSellingProducts } from "@doar/shared/data/dashboard-five";
 import { tableStyles } from "./style";
+import { useAppSelector } from "../../../redux/hooks";
 
 interface DataRow {
     image: string;
@@ -51,12 +52,14 @@ const columns: TableColumn<DataRow>[] = [
 ];
 
 const BestSellingProducts: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
     return (
         <Card>
             <CardHeader py={["20px", "20px"]}>
                 <SectionTitle title="Best Selling Products" />
             </CardHeader>
             <DataTable
+                theme={theme}
                 columns={columns}
                 data={bestSellingProducts}
                 customStyles={tableStyles}

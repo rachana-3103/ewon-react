@@ -8,27 +8,6 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     padding: 19px 20px;
 `;
 
-export const StyledHeaderRight = styled.div`
-    font-size: 13px;
-    align-items: center;
-    display: flex;
-`;
-
-export const StyledHeaderRightText = styled.span`
-    margin-right: 5px;
-`;
-
-export const StyledHeaderRightIcon = styled.span`
-    cursor: pointer;
-    line-height: 0;
-    color: ${themeGet("colors.text3")};
-    display: flex;
-    align-items: center;
-    i {
-        margin-left: 5px;
-    }
-`;
-
 export const StyeldMap = styled.div`
     padding: 25px 20px;
 `;

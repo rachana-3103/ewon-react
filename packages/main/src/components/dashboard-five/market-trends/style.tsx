@@ -1,4 +1,4 @@
-import styled, { device } from "@doar/shared/styled";
+import styled, { device, css } from "@doar/shared/styled";
 import { CardHeader } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
@@ -20,4 +20,11 @@ export const StyledChart = styled.div`
     ${device.xlarge} {
         height: 390px;
     }
+    ${(props) =>
+        props.theme.name === "dark" &&
+        css`
+            .apexcharts-legend-text {
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+        `}
 `;

@@ -13,6 +13,9 @@ const data = {
             },
         },
         colors: ["#69b2f8", "#00E396", "#00b8d4"],
+        grid: {
+            borderColor: "#90A4AE",
+        },
         stroke: {
             width: [0, 2, 3],
             curve: "smooth",
@@ -54,6 +57,11 @@ const data = {
         },
         yaxis: {
             min: 0,
+            labels: {
+                style: {
+                    colors: ["#ffffff"],
+                },
+            },
         },
         tooltip: {
             shared: true,

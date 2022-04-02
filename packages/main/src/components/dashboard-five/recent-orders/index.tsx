@@ -1,8 +1,9 @@
 import { FC } from "react";
-import { Card, CardHeader, SectionTitle } from "@doar/components";
-import DataTable, { TableColumn } from "react-data-table-component";
+import { Card, CardHeader, SectionTitle, DataTable } from "@doar/components";
+import { TableColumn } from "react-data-table-component";
 import { recentOrders } from "@doar/shared/data/dashboard-five";
 import { tableStyles, StyledCustomer } from "./style";
+import { useAppSelector } from "../../../redux/hooks";
 
 interface DataRow {
     orderId: string;
@@ -98,12 +99,14 @@ const columns: TableColumn<DataRow>[] = [
 ];
 
 const RecentOrders: FC = () => {
+    const { theme } = useAppSelector((state) => state.ui);
     return (
         <Card>
             <CardHeader py={["20px", "20px"]}>
                 <SectionTitle title="Recent Orders" />
             </CardHeader>
             <DataTable
+                theme={theme}
                 columns={columns}
                 data={recentOrders}
                 customStyles={tableStyles}

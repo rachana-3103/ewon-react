@@ -16,6 +16,11 @@ export const StyledCustomer = styled.div`
 `;
 
 export const tableStyles = {
+    headRow: {
+        style: {
+            paddingLeft: "20px",
+        },
+    },
     headCells: {
         style: {
             paddingLeft: "8px",
@@ -39,11 +44,15 @@ export const tableStyles = {
             "&[data-column-id='6']": {
                 minWidth: "60px",
             },
+            "&[data-column-id='7']": {
+                minWidth: "60px",
+            },
         },
     },
     rows: {
         style: {
             paddingBlock: "20px",
+            paddingLeft: "20px",
         },
     },
     cells: {
@@ -85,6 +94,9 @@ export const tableStyles = {
                         background: "#ffc107",
                     },
                 },
+            },
+            "&[data-column-id='7']": {
+                minWidth: "60px",
             },
         },
     },

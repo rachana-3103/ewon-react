@@ -95,6 +95,9 @@ export const StyledChart = styled.div`
             .apexcharts-xaxis-label {
                 fill: rgba(255, 255, 255, 0.5);
             }
+            .apexcharts-yaxis-label {
+                fill: rgba(255, 255, 255, 0.4);
+            }
         `}
 `;
 

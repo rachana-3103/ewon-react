@@ -17,7 +17,7 @@ const data = {
         },
         colors: ["#00cccc", "#7ebcff", "#7ee5e5", "#fdbd88"],
         stroke: {
-            colors: ["#fff"],
+            colors: ["#ffffff"],
         },
     },
     series: [20, 20, 30, 25],

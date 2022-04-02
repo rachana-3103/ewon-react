@@ -84,6 +84,7 @@ import { Spinner } from "./ui/spinner/spinner";
 import { Nav, NavLink, NavDivider } from "./ui/nav/nav";
 
 export { default as NavbarAside } from "./ui/navbar-aside";
+export { default as DataTable } from "./ui/data-table";
 
 export {
     Button,

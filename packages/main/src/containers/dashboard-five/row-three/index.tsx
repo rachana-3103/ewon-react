@@ -5,11 +5,11 @@ import TopSellers from "../../../components/dashboard-five/top-sellers";
 
 const RowThree: FC = () => {
     return (
-        <Row mb={20} gutters={10}>
-            <Col lg={6}>
+        <Row gutters={10}>
+            <Col lg={6} mb={10}>
                 <BestSellingProducts />
             </Col>
-            <Col lg={6}>
+            <Col lg={6} mb={10}>
                 <TopSellers />
             </Col>
         </Row>

@@ -5,11 +5,11 @@ import RecentOrders from "../../../components/dashboard-five/recent-orders";
 
 const RowFour: FC = () => {
     return (
-        <Row mb={20} gutters={10}>
-            <Col lg={7}>
+        <Row gutters={10}>
+            <Col lg={7} mb={10}>
                 <RecentOrders />
             </Col>
-            <Col lg={5}>
+            <Col lg={5} mb={10}>
                 <SalesRevenue />
             </Col>
         </Row>

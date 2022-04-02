@@ -5,11 +5,11 @@ import MarketTrends from "../../../components/dashboard-five/market-trends";
 
 const RowTwo: FC = () => {
     return (
-        <Row mb={20} gutters={10}>
-            <Col lg={8}>
+        <Row gutters={10}>
+            <Col lg={8} mb={10}>
                 <RevenueGrowth />
             </Col>
-            <Col lg={4}>
+            <Col lg={4} mb={10}>
                 <MarketTrends />
             </Col>
         </Row>

@@ -12,12 +12,12 @@ export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
 `;
 
 export const StyledChart = styled.div`
-    height: 180px;
+    height: 250px;
     margin-bottom: -33px;
-    ${device.large} {
-        height: 205px;
+    ${device.medium} {
+        height: 300px;
     }
-    ${device.xlarge} {
+    ${device.large} {
         height: 390px;
     }
     ${(props) =>

@@ -115,12 +115,18 @@ export const StyledItemTitle = styled.h3`
     font-family: ${themeGet("fonts.interUi")};
     color: ${themeGet("colors.text3")};
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
+    ${device.medium} {
+        font-size: 14px;
+    }
 `;
 
 export const StyledItemSub = styled.h5`
     font-family: ${themeGet("fonts.interUi")};
     color: ${themeGet("colors.text2")};
-    font-size: 13px;
+    font-size: 10px;
     margin-bottom: 0;
+    ${device.medium} {
+        font-size: 13px;
+    }
 `;

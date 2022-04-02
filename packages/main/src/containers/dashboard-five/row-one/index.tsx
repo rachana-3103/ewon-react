@@ -5,14 +5,9 @@ import Conversion from "../../../components/dashboard-five/conversion";
 
 const RowOne: FC = () => {
     return (
-        <Row mb={20} gutters={10}>
+        <Row gutters={10}>
             {conversions.map((data) => (
-                <Col
-                    sm={6}
-                    lg={3}
-                    mt={["10px", null, null, "0px"]}
-                    key={data.id}
-                >
+                <Col sm={6} lg={3} mb={10} key={data.id}>
                     <Conversion
                         title={data.title}
                         rate={data.rate}

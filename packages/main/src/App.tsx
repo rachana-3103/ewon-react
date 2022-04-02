@@ -45,6 +45,9 @@ const ClassicPlusDashboardThree = lazy(
 const ClassicPlusDashboardFour = lazy(
     () => import("./pages/classic-plus/dashboard-four")
 );
+const ClassicPlusDashboardFive = lazy(
+    () => import("./pages/classic-plus/dashboard-five")
+);
 const ClassicPlusSignIn = lazy(() => import("./pages/classic-plus/signin"));
 const ClassicPlusSignUp = lazy(() => import("./pages/classic-plus/signup"));
 const ClassicPlusVerifyAccount = lazy(
@@ -176,6 +179,10 @@ const App: React.FC = () => {
                         <Route
                             path="/classic-plus/dashboard-four"
                             element={<ClassicPlusDashboardFour />}
+                        />
+                        <Route
+                            path="/classic-plus/dashboard-five"
+                            element={<ClassicPlusDashboardFive />}
                         />
 
                         {/* Authentication Routes */}

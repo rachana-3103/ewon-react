@@ -50,6 +50,12 @@ const menus = [
                 url: "/dashboard-four",
                 Icon: BarChart2,
             },
+            {
+                id: 15,
+                label: "Ecommerce Dashboard",
+                url: "/dashboard-five",
+                Icon: BarChart2,
+            },
         ],
     },
     {

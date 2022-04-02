@@ -19,6 +19,7 @@ import {
     ShoppingBag,
     Globe,
     LifeBuoy,
+    ShoppingCart,
 } from "react-feather";
 
 const asideMenus = [
@@ -51,6 +52,12 @@ const asideMenus = [
                 label: "Helpdesk Management",
                 url: "/classic-plus/dashboard-four",
                 Icon: LifeBuoy,
+            },
+            {
+                id: 15,
+                label: "Ecommerce Dashboard",
+                url: "/classic-plus/dashboard-five",
+                Icon: ShoppingCart,
             },
         ],
     },

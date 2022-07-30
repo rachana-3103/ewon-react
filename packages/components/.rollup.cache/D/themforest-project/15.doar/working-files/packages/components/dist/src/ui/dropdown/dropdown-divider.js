@@ -1,0 +1,8 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import classnames from "classnames";
+import { StyledDropDivider } from "./style";
+var DropdownDivider = function (_a) {
+    var className = _a.className;
+    return (_jsx(StyledDropDivider, { className: classnames(className, "dropdown-divider") }, void 0));
+};
+export default DropdownDivider;

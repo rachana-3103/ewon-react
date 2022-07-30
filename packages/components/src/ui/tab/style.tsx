@@ -1,7 +1,8 @@
 import styled, { css, themeGet } from "@doar/shared/styled";
 import { Tabs } from "react-tabs";
+import type { TabsProps } from "react-tabs";
 
-interface ITab {
+interface ITab extends Omit<TabsProps, "className"> {
     $justified?: boolean;
     $vertical?: boolean;
     $variation?: "line";

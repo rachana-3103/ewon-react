@@ -1,13 +1,14 @@
 import { FC } from "react";
 import classnames from "classnames";
 import { Tab, TabPanel, TabList } from "react-tabs";
+import type { TabsProps } from "react-tabs";
 import { StyledTabs, StyledTabContent } from "./style";
 
 interface IProps {
     className?: string;
 }
 
-interface ITab extends IProps {
+interface ITab extends TabsProps {
     justified?: boolean;
     vertical?: boolean;
     variation?: "line";
@@ -19,6 +20,15 @@ export const TabWrap: FC<ITab> = ({
     justified,
     vertical,
     variation,
+    defaultFocus,
+    defaultIndex,
+    disabledTabClassName,
+    domRef,
+    forceRenderTabPanel,
+    onSelect,
+    selectedIndex,
+    selectedTabClassName,
+    selectedTabPanelClassName,
 }) => {
     return (
         <StyledTabs
@@ -26,6 +36,15 @@ export const TabWrap: FC<ITab> = ({
             $justified={justified}
             $vertical={vertical}
             $variation={variation}
+            defaultFocus={defaultFocus}
+            defaultIndex={defaultIndex}
+            disabledTabClassName={disabledTabClassName}
+            domRef={domRef}
+            forceRenderTabPanel={forceRenderTabPanel}
+            onSelect={onSelect}
+            selectedIndex={selectedIndex}
+            selectedTabClassName={selectedTabClassName}
+            selectedTabPanelClassName={selectedTabPanelClassName}
         >
             {children}
         </StyledTabs>

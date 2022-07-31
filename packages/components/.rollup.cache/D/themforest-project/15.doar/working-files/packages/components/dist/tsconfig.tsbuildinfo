@@ -1057,9 +1057,109 @@
         "signature": "ead9d0d233430253c0afa505b8f9288429a26772b2ae6b6620dfdb702475e16d",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts": {
+        "version": "10819945ad31b102074bbb02252fc6de7efb71a397234e4bf42220b5df968fab",
+        "signature": "10819945ad31b102074bbb02252fc6de7efb71a397234e4bf42220b5df968fab",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/types.ts": {
+        "version": "84a48d20c99893de13d163e8e6eb8ac653946d166c778dddc5e2ba20ed25f1bc",
+        "signature": "508a6cc982fc2f3d863c40564b44bc551346e7392cbd30948d909a0784e132b9",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/area-chart.tsx": {
+        "version": "2b68d222dcdea795d123f012011d8545bdedbce5cf5b626f7f01c67e04348d82",
+        "signature": "50ce2504307f5cf027fd76fbe61fb5d5756c945aa9a426fda14041d87ddf8d6a",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/bar-chart.tsx": {
+        "version": "392a28b1920ea03763e127c3d6c28e3651de6871970e9cc9c526ee4dd3ecfe49",
+        "signature": "4ae863dc082241c64a0841f6cac2248e76fd317b9539409d842ba11c89b4d58b",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/donut-chart.tsx": {
+        "version": "ac19d606f6916435e4cad3ed1509ed76ea03c563206a6e5d7fda79045d8e2355",
+        "signature": "7430586a9e40a751d1dcf145c62324a1a59cd284ba01cddf320089f3521346b5",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/line-chart.tsx": {
+        "version": "de57f85ee3e52fcaa7e01454a1037e9d25ea39b8cc30cdde45d43ba13b4d1b39",
+        "signature": "11fbd156b16dd37dd66b8397765960a8bfe8ac9b603b748232ce5020401e51cb",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/mix-chart.tsx": {
+        "version": "14a6712d09be08c77f6e81a5e3d685a5ae9acf954c6bbc68a760acc88e993097",
+        "signature": "b2368ea2c3729407cb652c8eafbe35a8d52eefee322dea592820c9a6fcd47544",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/pie-chart.tsx": {
+        "version": "7b87daad7933035850f06b7cb397cab992648889b1f9835e757d340d4598c770",
+        "signature": "aadc72d81d0faaf0039022e14579e3f21a34094ec85efba5f22bda4ec42e8b4c",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/apexchart/radial-chart.tsx": {
+        "version": "8a7db7437f2d3964b3ec148b622cfe9f95e21515ad267c7d0017ce4b88b60db8",
+        "signature": "9bafec789a5cacdfd421a07d8c47f50f01d6f0460b75f1cdd0d0dd1ba2d5a6ae",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-chartjs-2/index.d.ts": {
+        "version": "a781ba222a737288ebd5c6003bcc70377f1b6b54db89b3c9c9de64f661c9d5d0",
+        "signature": "a781ba222a737288ebd5c6003bcc70377f1b6b54db89b3c9c9de64f661c9d5d0",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/types.ts": {
+        "version": "9971c5d9484cd998810b0cb06af846fb884849207b34f78e2e0eb9744cd9248d",
+        "signature": "8c9d4d3408a147c6d8f0a7906d869965be11c6d9611e419b06dc47da9fc3885b",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/bar-chart.tsx": {
+        "version": "91e88e8c1aacab4d823095d974597999d3cc5b14d26d890d9706a546745985d4",
+        "signature": "4ae863dc082241c64a0841f6cac2248e76fd317b9539409d842ba11c89b4d58b",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/donut-chart.tsx": {
+        "version": "7361c6760b3284e711f85f3cbd4fcee98167631af82efd1f258dd9cd7ae16a56",
+        "signature": "7430586a9e40a751d1dcf145c62324a1a59cd284ba01cddf320089f3521346b5",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/horizontal-bar-chart.tsx": {
+        "version": "e5c81f97ea4294a49acc2c96cd5adcb01f017dcf6b817c9f33967496688e9ad6",
+        "signature": "11e7dd60ef1407934eaead46b0eba8a50db23d2600b2bf4c9a899f631141e8f7",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/line-chart.tsx": {
+        "version": "6d742dba0bfdec96a34fc0448337f8c9a4dba65da4a52e7beb1963eff300c685",
+        "signature": "11fbd156b16dd37dd66b8397765960a8bfe8ac9b603b748232ce5020401e51cb",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/chart-js/pie-chart.tsx": {
+        "version": "c1daaca5dba0bdcf1af8b08ac22834c2dcb72f6a594860a5afc7dfef25cdc4e1",
+        "signature": "aadc72d81d0faaf0039022e14579e3f21a34094ec85efba5f22bda4ec42e8b4c",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/react-sparklines/index.d.ts": {
+        "version": "2f554b68a9d0d681249660c849168448f603a3e999282d97a5280fce2c906210",
+        "signature": "2f554b68a9d0d681249660c849168448f603a3e999282d97a5280fce2c906210",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/sparkline/types.ts": {
+        "version": "d60ec97b3e767313a978e522028f2ddfaaba4c4ccac2adcf4a8c49b320b8a8d1",
+        "signature": "ad484827e24333ef4b2a6d2d4eec7781dcb45e33880f2ada8461ab47dab1e1bc",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/sparkline/bar.tsx": {
+        "version": "acab043b24227c9c355b510b48dead772d92817bddc627361f61d390f71a5545",
+        "signature": "fc7ca957609d73016db1ff20adfd156c30eb7361d7bd0bf0ee3afcf296234cea",
+        "affectsGlobalScope": false
+      },
+      "../src/charts/sparkline/line.tsx": {
+        "version": "c6269f1dc7b7137c3f57accd275e9232a43d7689aa43bebfbabc616243d96221",
+        "signature": "aa24a7ac00cf221cec70ba4a3e70545dadfff3e629785a41a9ae68acd61bd845",
+        "affectsGlobalScope": false
+      },
       "../index.ts": {
-        "version": "a7c01828d8272b8de4b8d490e645c11fb7a556fe22652566c809062ddf3ddd11",
-        "signature": "d17b47e124b7ecd5dcb3e985117432fb2543ebb3660cb649239f4b6209e41df5",
+        "version": "6d28a335fe1f92fe64054b7e49f92d8add4b15433f166cc4d7358cbe6d03d038",
+        "signature": "7589d9c164b2ee43e656074cb65bf21a8a85c916f260b0fb27351a4134748bb7",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/node/globals.d.ts": {
@@ -1735,11 +1835,6 @@
       "../../../node_modules/@types/react-router-dom/index.d.ts": {
         "version": "b89701b714364b5bcb0b58e83725aa02a4f41df8357000b4e8fe60566bf805ac",
         "signature": "b89701b714364b5bcb0b58e83725aa02a4f41df8357000b4e8fe60566bf805ac",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/@types/react-sparklines/index.d.ts": {
-        "version": "2f554b68a9d0d681249660c849168448f603a3e999282d97a5280fce2c906210",
-        "signature": "2f554b68a9d0d681249660c849168448f603a3e999282d97a5280fce2c906210",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/react-syntax-highlighter/index.d.ts": {
@@ -2924,6 +3019,16 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
+      "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-chartjs-2/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../../node_modules/react-data-table-component/dist/src/datatable/constants.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
@@ -3290,6 +3395,20 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../../../node_modules/tslib/tslib.d.ts",
         "../src/@types/index.d.ts",
+        "../src/charts/apexchart/area-chart.tsx",
+        "../src/charts/apexchart/bar-chart.tsx",
+        "../src/charts/apexchart/donut-chart.tsx",
+        "../src/charts/apexchart/line-chart.tsx",
+        "../src/charts/apexchart/mix-chart.tsx",
+        "../src/charts/apexchart/pie-chart.tsx",
+        "../src/charts/apexchart/radial-chart.tsx",
+        "../src/charts/chart-js/bar-chart.tsx",
+        "../src/charts/chart-js/donut-chart.tsx",
+        "../src/charts/chart-js/horizontal-bar-chart.tsx",
+        "../src/charts/chart-js/line-chart.tsx",
+        "../src/charts/chart-js/pie-chart.tsx",
+        "../src/charts/sparkline/bar.tsx",
+        "../src/charts/sparkline/line.tsx",
         "../src/forms/form-elements/checkbox/index.tsx",
         "../src/forms/form-elements/feedback/index.tsx",
         "../src/forms/form-elements/form-group/index.tsx",
@@ -3362,6 +3481,150 @@
       ],
       "../src/@types/index.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts"
+      ],
+      "../src/charts/apexchart/area-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/donut-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/line-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/mix-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/pie-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/radial-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/types.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/charts/chart-js/bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-chartjs-2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/donut-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-chartjs-2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/horizontal-bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-chartjs-2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/line-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-chartjs-2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/pie-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-chartjs-2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/types.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/charts/sparkline/bar.tsx": [
+        "../../../node_modules/@types/react-sparklines/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/sparkline/types.ts"
+      ],
+      "../src/charts/sparkline/line.tsx": [
+        "../../../node_modules/@types/react-sparklines/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/charts/sparkline/types.ts"
+      ],
+      "../src/charts/sparkline/types.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
       ],
       "../src/forms/form-elements/checkbox/index.tsx": [
         "../../../node_modules/@types/react/index.d.ts",
@@ -5492,6 +5755,16 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
+      "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-chartjs-2/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../../node_modules/react-data-table-component/dist/src/datatable/constants.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
@@ -5854,6 +6127,20 @@
         "../src/@types/index.d.ts"
       ],
       "../index.ts": [
+        "../src/charts/apexchart/area-chart.tsx",
+        "../src/charts/apexchart/bar-chart.tsx",
+        "../src/charts/apexchart/donut-chart.tsx",
+        "../src/charts/apexchart/line-chart.tsx",
+        "../src/charts/apexchart/mix-chart.tsx",
+        "../src/charts/apexchart/pie-chart.tsx",
+        "../src/charts/apexchart/radial-chart.tsx",
+        "../src/charts/chart-js/bar-chart.tsx",
+        "../src/charts/chart-js/donut-chart.tsx",
+        "../src/charts/chart-js/horizontal-bar-chart.tsx",
+        "../src/charts/chart-js/line-chart.tsx",
+        "../src/charts/chart-js/pie-chart.tsx",
+        "../src/charts/sparkline/bar.tsx",
+        "../src/charts/sparkline/line.tsx",
         "../src/forms/form-elements/checkbox/index.tsx",
         "../src/forms/form-elements/feedback/index.tsx",
         "../src/forms/form-elements/form-group/index.tsx",
@@ -5926,6 +6213,62 @@
       ],
       "../src/@types/index.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts"
+      ],
+      "../src/charts/apexchart/area-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/donut-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/line-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/mix-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/pie-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/apexchart/radial-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/apexchart/types.ts"
+      ],
+      "../src/charts/chart-js/bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/donut-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/horizontal-bar-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/line-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/chart-js/pie-chart.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/chart-js/types.ts"
+      ],
+      "../src/charts/sparkline/bar.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/sparkline/types.ts"
+      ],
+      "../src/charts/sparkline/line.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/charts/sparkline/types.ts"
       ],
       "../src/forms/form-elements/checkbox/index.tsx": [
         "../../../node_modules/@types/react/index.d.ts",
@@ -6555,6 +6898,8 @@
       "../../../node_modules/parchment/dist/src/blot/abstract/blot.d.ts",
       "../../../node_modules/parchment/dist/src/collection/linked-list.d.ts",
       "../../../node_modules/parchment/dist/src/collection/linked-node.d.ts",
+      "../../../node_modules/react-apexcharts/types/react-apexcharts.d.ts",
+      "../../../node_modules/react-chartjs-2/index.d.ts",
       "../../../node_modules/react-data-table-component/dist/src/datatable/constants.d.ts",
       "../../../node_modules/react-data-table-component/dist/src/datatable/datatable.d.ts",
       "../../../node_modules/react-data-table-component/dist/src/datatable/themes.d.ts",
@@ -6633,6 +6978,23 @@
       "../../../node_modules/typescript/lib/lib.esnext.weakref.d.ts",
       "../index.ts",
       "../src/@types/index.d.ts",
+      "../src/charts/apexchart/area-chart.tsx",
+      "../src/charts/apexchart/bar-chart.tsx",
+      "../src/charts/apexchart/donut-chart.tsx",
+      "../src/charts/apexchart/line-chart.tsx",
+      "../src/charts/apexchart/mix-chart.tsx",
+      "../src/charts/apexchart/pie-chart.tsx",
+      "../src/charts/apexchart/radial-chart.tsx",
+      "../src/charts/apexchart/types.ts",
+      "../src/charts/chart-js/bar-chart.tsx",
+      "../src/charts/chart-js/donut-chart.tsx",
+      "../src/charts/chart-js/horizontal-bar-chart.tsx",
+      "../src/charts/chart-js/line-chart.tsx",
+      "../src/charts/chart-js/pie-chart.tsx",
+      "../src/charts/chart-js/types.ts",
+      "../src/charts/sparkline/bar.tsx",
+      "../src/charts/sparkline/line.tsx",
+      "../src/charts/sparkline/types.ts",
       "../src/forms/form-elements/checkbox/index.tsx",
       "../src/forms/form-elements/checkbox/style.tsx",
       "../src/forms/form-elements/feedback/index.tsx",

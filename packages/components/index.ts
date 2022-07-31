@@ -66,6 +66,8 @@ export { default as Table } from "./src/ui/table/table";
 export { default as Text } from "./src/ui/text";
 
 // Forms
+
+// Form Elements
 export { default as Checkbox } from "./src/forms/form-elements/checkbox";
 export { default as Feedback } from "./src/forms/form-elements/feedback";
 export { default as FormGroup } from "./src/forms/form-elements/form-group";
@@ -74,9 +76,33 @@ export { default as Label } from "./src/forms/form-elements/label";
 export { default as Radio } from "./src/forms/form-elements/radio";
 export { default as Select } from "./src/forms/form-elements/select";
 export { default as Textarea } from "./src/forms/form-elements/textarea";
+
+// Input Group
 export { default as InputGroup } from "./src/forms/input-group/input-group";
 export { default as InputGroupAddon } from "./src/forms/input-group/input-group-addon";
 export { default as InputGroupText } from "./src/forms/input-group/input-group-text";
+
+// Charts
+
+// Apex Charts
+export { default as ApexAreaChart } from "./src/charts/apexchart/area-chart";
+export { default as ApexBarChart } from "./src/charts/apexchart/bar-chart";
+export { default as ApexDonutChart } from "./src/charts/apexchart/donut-chart";
+export { default as ApexLineChart } from "./src/charts/apexchart/line-chart";
+export { default as ApexMixChart } from "./src/charts/apexchart/mix-chart";
+export { default as ApexPieChart } from "./src/charts/apexchart/pie-chart";
+export { default as ApexRadialChart } from "./src/charts/apexchart/radial-chart";
+
+// Chart.js
+export { default as BarChart } from "./src/charts/chart-js/bar-chart";
+export { default as DonutChart } from "./src/charts/chart-js/donut-chart";
+export { default as HorizontalBarChart } from "./src/charts/chart-js/horizontal-bar-chart";
+export { default as LineChart } from "./src/charts/chart-js/line-chart";
+export { default as PieChart } from "./src/charts/chart-js/pie-chart";
+
+// Sparkline Charts
+export { default as SparklinesBar } from "./src/charts/sparkline/bar";
+export { default as SparklinesLines } from "./src/charts/sparkline/line";
 
 // import ApexCharts from "apexcharts";
 // import { Button } from "./src/ui/button/button";

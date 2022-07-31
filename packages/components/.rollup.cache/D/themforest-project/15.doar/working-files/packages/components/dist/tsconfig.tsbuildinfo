@@ -251,6 +251,16 @@
         "signature": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/classnames/index.d.ts": {
+        "version": "d153cbce75b7e1621eda0a4148748f44edd71ff44cc5351bac1c7787da4d5b05",
+        "signature": "d153cbce75b7e1621eda0a4148748f44edd71ff44cc5351bac1c7787da4d5b05",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/react-tabs/index.d.ts": {
+        "version": "125d09dde1ecb2e72534977216153e9416481601299175c82cceca6776f814b9",
+        "signature": "125d09dde1ecb2e72534977216153e9416481601299175c82cceca6776f814b9",
+        "affectsGlobalScope": false
+      },
       "../../../node_modules/@types/hoist-non-react-statics/index.d.ts": {
         "version": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
         "signature": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
@@ -383,6 +393,16 @@
         "version": "440e231c7174a955a00294dbba558a51f54e8967de1608d421365cb04959f273",
         "affectsGlobalScope": false
       },
+      "../src/ui/tab/style.tsx": {
+        "version": "6e676abcf0cc5ac5c9e2269e301347a9a866edff299f439a98d1ef71473313ab",
+        "signature": "155632636a8231495da257ccca7c31ca716eff7a776d92abe5b26f8e3e6940e9",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/tab/tab.tsx": {
+        "version": "eb2c191f2d060e6b52cf618bd5dc4eebfc15f8c40bd9487a5e800fb63eff5597",
+        "signature": "cd172673f262d6e2ba927edaaf135d6b5028c64f0803764a6b287bef0b79993f",
+        "affectsGlobalScope": false
+      },
       "../src/grid/style.tsx": {
         "version": "51c74a3a1f6d8b6e6769070fc375aa1a3f7ed7111ebd5606b5ca56d9ad529c88",
         "signature": "6dc9e7548dbbaf3b529c6ca2d3c89f5f44542daf720207c37bdaf4a4a77b21ec",
@@ -401,11 +421,6 @@
       "../src/grid/row.tsx": {
         "version": "7ddbb32115f7a9beb8854349df8f584ed862f834c31907a32e211e48b6e5a63f",
         "signature": "55ea0f352d0c50eb47e6b502448c7b525c3aa684c5ad983b9ff3143e30b808d4",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/classnames/index.d.ts": {
-        "version": "d153cbce75b7e1621eda0a4148748f44edd71ff44cc5351bac1c7787da4d5b05",
-        "signature": "d153cbce75b7e1621eda0a4148748f44edd71ff44cc5351bac1c7787da4d5b05",
         "affectsGlobalScope": false
       },
       "../src/grid/col.tsx": {
@@ -818,9 +833,123 @@
         "signature": "7d64022b4a4561300beab0c76ddbf3e6b61c1fdbd0caf7d438b15d997574031a",
         "affectsGlobalScope": false
       },
+      "../src/ui/nav/style.tsx": {
+        "version": "358d8ca32c8a5b87eb2c8dfb062eae1135d892edfbecbe285607ae53243fe5cf",
+        "signature": "5f283e1caa56f873d451219938548d887edeb721ca1d96fe76fb7ad1f11a79f3",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/nav/nav.tsx": {
+        "version": "4de0b2a9d4d59a730f8a88c459445d2ceb81eeab73f9fef5b5c2cf681e8d7731",
+        "signature": "bea0dff25e1a3c6b7e60ce5e676d6112d54f2c953211ace167312ece3a013d46",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/nav/nav-divider.tsx": {
+        "version": "8f769bb41465cb6491cee09f82f4a274c1b885b258320777e09e68c7be65aa20",
+        "signature": "117e2f658ef956cb01935a751dca7ce09bfb66686991883349e2953f44e3de28",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/nav/nav-link.tsx": {
+        "version": "9091f9e4e728c980ac6ec05f480f39c9ac87404d964276e3a45b8d38563e523b",
+        "signature": "e1a05c2a4c456902f19e343cf2b34f7ff10e15c728d64c9ede7beb560e09c510",
+        "affectsGlobalScope": false
+      },
+      "../../shared/methods/index.ts": {
+        "version": "3b8874e85346d986448bb2f7aff3899ec99289687afec2e0cd2e2fe243fcc128",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar/style.tsx": {
+        "version": "35cd228136ec13bb931f88646deed3ef3718f11ca6ed9b9c8bebd4dfa468a2a2",
+        "signature": "1ae3b18792e638769f1516e609b86e36084e954d8fded96828957cdf38beded3",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar/submenu.tsx": {
+        "version": "36d383935c78260636cb2fc8bf28252abfbd072f301766e562f946c3a9ae05ab",
+        "signature": "752623093651720885833bd48c655a86985465914022f18dd4a110279803f0f0",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar/megamenu.tsx": {
+        "version": "76c45fdfbcd716fef8d008c8da3c0854b44708c329a15899a4e3897223600466",
+        "signature": "ca7caf6b9115bf7d5aa90419544376d9009aaffc73140278e8c751b974706ace",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar/index.tsx": {
+        "version": "79ae5d4c9f9551cd32b204c9be40bd8852793b99a3544f8295a10fd483de4627",
+        "signature": "3a3f916dcdd638c4c357d2d97f46ba1a342c9049ef0482722d79736bb63e1747",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar-aside/style.tsx": {
+        "version": "89e9592fd47d95bf080e0516bf69f0b0e1339e60c7acad7c3a2b0a398b98d41f",
+        "signature": "9470864a32aa5505aceaa967dd45818562eaaac66b97e5cbfe642837b4265a65",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar-aside/submenu.tsx": {
+        "version": "ae0760e4dc27e29bd2cc9485d118f18e984e6fae4d4dff4d8f50b470fba73e84",
+        "signature": "681255419eb4af101ea135709d309d7bf71f192a71795002b7165991c75700c3",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar-aside/megamenu.tsx": {
+        "version": "151efc3916547878fc92ce4f2f05895855d0384e115bc0e722cd26a78014ceb0",
+        "signature": "94772f1d866eda1e23b0d568ee87768eb736a27c3db0892a7f2e3187c0320f6b",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/navbar-aside/index.tsx": {
+        "version": "e230011d180681a324743e70eea07e91b8930f8af4bb165422e3d05ee3f5b86f",
+        "signature": "654ae3a48b71e4d4f2a4a5a52e79f4df7c9a3ef2d4a5176c9575cfc78e0d97aa",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/progress/style.tsx": {
+        "version": "a5605d8ee18a6ea1da0106e6f9510b99269b23a68fe3bc6d583169b48b80bab1",
+        "signature": "767b195a8b80d902317e67b3a79573d1a782764f3e69e51f547c8a08f208ab44",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/progress/progress.tsx": {
+        "version": "a0def8d5689cc845493d546d43f471d7424b42c6e2505a8987b2ac10b1f87ae8",
+        "signature": "44fe985fd4b3eb5055b694fbc50ad9dca6c78357a661e954d891c1c76f7073e7",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/section-title/style.tsx": {
+        "version": "146f501c87a7cb7d2d2826980b214121368fcf738e5d94c1c81015339e874e42",
+        "signature": "5e2effbd2579a897f73113ba034ecb2040be64792bb782055b8b2f6b63a120cb",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/section-title/index.tsx": {
+        "version": "be59e0a3efa70263de7f14f00466bb69768b516f6038f857307e7b5f166e6545",
+        "signature": "04f0ac40b1b5005074046638696293713fa523cbcc80834c31ea6dc571d0c38b",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/spinner/style.tsx": {
+        "version": "6ea512c74c70622728297eba1e674f6449e0f7f19099dfd25c7b349595885374",
+        "signature": "6f445e4f6efa04b4939c91b9b1dbc169475bf90ad4b1d6f93b087a46f0bf1d70",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/spinner/spinner.tsx": {
+        "version": "4b5c689a5bc509e4066817d51ab4d539be0e2a865c1ba24e42aa339faba3e4bf",
+        "signature": "6b1e1c717371b1156164f540e55c2a54912b99aa08e5c44b71d77091a00482a6",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/table/style.tsx": {
+        "version": "7566642022cad75c62303ff695f8f8bd57df8cf4af7466c103df1e3fd7a2147e",
+        "signature": "8679ecb9ab8d081a6f12c3920ed72951635ccf783321ab50d0ec814f46226e54",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/table/table.tsx": {
+        "version": "e57790005b81058803785c6e81306a5af3d2182f212911c1be10519b1a79bb88",
+        "signature": "57f254c64387d4844a2c6f3907d258d8666579220dc75f8674afa1024aee8dac",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/text/style.tsx": {
+        "version": "aadd2d49684215ac013938524cac9bffdd6fcda1a4a6fd1b08645294c1c9eee3",
+        "signature": "1256e9f4a1d17eb71cb33e999e87fddd6037ef2b158ebe581a840a2c7d789bb8",
+        "affectsGlobalScope": false
+      },
+      "../src/ui/text/index.tsx": {
+        "version": "0c89ae4e65981137e092e45e562778f3909c8b5bde3157fb96a90c525a761ea5",
+        "signature": "c341255f97245ef4031d8bcc0fb04cdc1c9bd64ab69e958705b08f8a64fb2508",
+        "affectsGlobalScope": false
+      },
       "../index.ts": {
-        "version": "ab15fc4dbeab33b85da925fa4951772a419c3c438b032b99d179582b0b042ea0",
-        "signature": "e41ad1d275cbf26e0be52306fdb2ef3d105a70268448919b38f9d9da5a4edf04",
+        "version": "d581342d68db41e66c1ae059e056b23f1b87c7ecbd01a983e85a90267f68f48d",
+        "signature": "56d0bbe73a83f1c80cb598ff72c0a844000aeedba8cb379231ee25299877123f",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/node/globals.d.ts": {
@@ -1507,11 +1636,6 @@
         "version": "cffd3848b7af4922d70028c805b7df5e8f0eac4a8d2410b0f55b47ca62c6c3a8",
         "signature": "cffd3848b7af4922d70028c805b7df5e8f0eac4a8d2410b0f55b47ca62c6c3a8",
         "affectsGlobalScope": true
-      },
-      "../../../node_modules/@types/react-tabs/index.d.ts": {
-        "version": "125d09dde1ecb2e72534977216153e9416481601299175c82cceca6776f814b9",
-        "signature": "125d09dde1ecb2e72534977216153e9416481601299175c82cceca6776f814b9",
-        "affectsGlobalScope": false
       },
       "../../../node_modules/@types/resolve/index.d.ts": {
         "version": "8a19491eba2108d5c333c249699f40aff05ad312c04a17504573b27d91f0aede",
@@ -3102,7 +3226,18 @@
         "../src/ui/modal/modal-footer.tsx",
         "../src/ui/modal/modal-header.tsx",
         "../src/ui/modal/modal-title.tsx",
-        "../src/ui/modal/modal.tsx"
+        "../src/ui/modal/modal.tsx",
+        "../src/ui/nav/nav-divider.tsx",
+        "../src/ui/nav/nav-link.tsx",
+        "../src/ui/nav/nav.tsx",
+        "../src/ui/navbar-aside/index.tsx",
+        "../src/ui/navbar/index.tsx",
+        "../src/ui/progress/progress.tsx",
+        "../src/ui/section-title/index.tsx",
+        "../src/ui/spinner/spinner.tsx",
+        "../src/ui/tab/tab.tsx",
+        "../src/ui/table/table.tsx",
+        "../src/ui/text/index.tsx"
       ],
       "../src/@types/index.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts"
@@ -3725,6 +3860,222 @@
         "../../shared/styled/index.ts",
         "../src/@types/index.d.ts"
       ],
+      "../src/ui/nav/nav-divider.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/nav/style.tsx"
+      ],
+      "../src/ui/nav/nav-link.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/nav/style.tsx"
+      ],
+      "../src/ui/nav/nav.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/nav/style.tsx"
+      ],
+      "../src/ui/nav/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/anchor/index.tsx"
+      ],
+      "../src/ui/navbar-aside/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/methods/index.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar-aside/megamenu.tsx",
+        "../src/ui/navbar-aside/style.tsx",
+        "../src/ui/navbar-aside/submenu.tsx"
+      ],
+      "../src/ui/navbar-aside/megamenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-router-dom/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar-aside/style.tsx"
+      ],
+      "../src/ui/navbar-aside/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/anchor/index.tsx"
+      ],
+      "../src/ui/navbar-aside/submenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar-aside/style.tsx"
+      ],
+      "../src/ui/navbar/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/hooks/index.ts",
+        "../../shared/methods/index.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar/megamenu.tsx",
+        "../src/ui/navbar/style.tsx",
+        "../src/ui/navbar/submenu.tsx"
+      ],
+      "../src/ui/navbar/megamenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar/style.tsx"
+      ],
+      "../src/ui/navbar/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/@types/tinycolor2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/anchor/index.tsx"
+      ],
+      "../src/ui/navbar/submenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/types/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/navbar/style.tsx"
+      ],
+      "../src/ui/progress/progress.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/progress/style.tsx"
+      ],
+      "../src/ui/progress/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/ui/section-title/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/section-title/style.tsx"
+      ],
+      "../src/ui/section-title/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/ui/spinner/spinner.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/spinner/style.tsx"
+      ],
+      "../src/ui/spinner/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/ui/tab/style.tsx": [
+        "../../../node_modules/@types/react-tabs/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/ui/tab/tab.tsx": [
+        "../../../node_modules/@types/react-tabs/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/tab/style.tsx"
+      ],
+      "../src/ui/table/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/@types/tinycolor2/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/ui/table/table.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/classnames/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/table/style.tsx"
+      ],
+      "../src/ui/text/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/ui/text/style.tsx"
+      ],
+      "../src/ui/text/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../shared/hooks/index.ts": [
         "../../../node_modules/@types/react/jsx-runtime.d.ts",
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
@@ -3757,6 +4108,12 @@
         "../../../node_modules/styled-bootstrap-grid/dist/index.d.ts",
         "../../../node_modules/tslib/tslib.d.ts",
         "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../shared/methods/index.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
         "../src/@types/index.d.ts"
       ],
       "../../shared/styled/colors.ts": [
@@ -5220,7 +5577,18 @@
         "../src/ui/modal/modal-footer.tsx",
         "../src/ui/modal/modal-header.tsx",
         "../src/ui/modal/modal-title.tsx",
-        "../src/ui/modal/modal.tsx"
+        "../src/ui/modal/modal.tsx",
+        "../src/ui/nav/nav-divider.tsx",
+        "../src/ui/nav/nav-link.tsx",
+        "../src/ui/nav/nav.tsx",
+        "../src/ui/navbar-aside/index.tsx",
+        "../src/ui/navbar/index.tsx",
+        "../src/ui/progress/progress.tsx",
+        "../src/ui/section-title/index.tsx",
+        "../src/ui/spinner/spinner.tsx",
+        "../src/ui/tab/tab.tsx",
+        "../src/ui/table/table.tsx",
+        "../src/ui/text/index.tsx"
       ],
       "../src/@types/index.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts"
@@ -5489,6 +5857,98 @@
         "../../shared/styled/index.ts"
       ],
       "../src/ui/modal/types.ts": [
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/nav/nav-divider.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/ui/nav/nav-link.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/ui/nav/nav.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/nav/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/navbar-aside/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/navbar-aside/megamenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/navbar-aside/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/ui/navbar-aside/submenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/navbar/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/navbar/megamenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/navbar/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/ui/navbar/submenu.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/types/index.ts"
+      ],
+      "../src/ui/progress/progress.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/progress/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/section-title/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/section-title/style.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../../node_modules/@types/styled-system/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/spinner/spinner.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/ui/spinner/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/ui/tab/style.tsx": [
+        "../../../node_modules/@types/react-tabs/index.d.ts",
+        "../../../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/ui/tab/tab.tsx": [
+        "../../../node_modules/@types/react-tabs/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/ui/table/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/table/table.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/text/index.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/ui/text/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts",
         "../../shared/styled/index.ts"
       ]
     },
@@ -5814,10 +6274,35 @@
       "../src/ui/modal/modal.tsx",
       "../src/ui/modal/style.tsx",
       "../src/ui/modal/types.ts",
+      "../src/ui/nav/nav-divider.tsx",
+      "../src/ui/nav/nav-link.tsx",
+      "../src/ui/nav/nav.tsx",
+      "../src/ui/nav/style.tsx",
+      "../src/ui/navbar-aside/index.tsx",
+      "../src/ui/navbar-aside/megamenu.tsx",
+      "../src/ui/navbar-aside/style.tsx",
+      "../src/ui/navbar-aside/submenu.tsx",
+      "../src/ui/navbar/index.tsx",
+      "../src/ui/navbar/megamenu.tsx",
+      "../src/ui/navbar/style.tsx",
+      "../src/ui/navbar/submenu.tsx",
+      "../src/ui/progress/progress.tsx",
+      "../src/ui/progress/style.tsx",
+      "../src/ui/section-title/index.tsx",
+      "../src/ui/section-title/style.tsx",
+      "../src/ui/spinner/spinner.tsx",
+      "../src/ui/spinner/style.tsx",
+      "../src/ui/tab/style.tsx",
+      "../src/ui/tab/tab.tsx",
+      "../src/ui/table/style.tsx",
+      "../src/ui/table/table.tsx",
+      "../src/ui/text/index.tsx",
+      "../src/ui/text/style.tsx",
       "../../shared/hooks/index.ts",
       "../../shared/hooks/use-click-outside.ts",
       "../../shared/hooks/use-window-size.ts",
       "../../shared/index.ts",
+      "../../shared/methods/index.ts",
       "../../shared/styled/colors.ts",
       "../../shared/styled/index.ts",
       "../../shared/styled/theme.ts",

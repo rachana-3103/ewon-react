@@ -104,6 +104,15 @@ export { default as PieChart } from "./src/charts/chart-js/pie-chart";
 export { default as SparklinesBar } from "./src/charts/sparkline/bar";
 export { default as SparklinesLines } from "./src/charts/sparkline/line";
 
+// Maps
+export { default as GoogleMap } from "./src/maps/google-map/google-map";
+export { default as GoogleMapMarker } from "./src/maps/google-map/marker";
+export { default as LeafletMap } from "./src/maps/leaflet-map/leaflet-map";
+export { default as LeafletCircle } from "./src/maps/leaflet-map/circle";
+export { default as LeafletMarker } from "./src/maps/leaflet-map/marker";
+export { default as LeafletPopup } from "./src/maps/leaflet-map/popup";
+export { default as VectorMap } from "./src/maps/vector-map/vector-map";
+
 // import ApexCharts from "apexcharts";
 // import { Button } from "./src/ui/button/button";
 // import { Alert } from "./src/ui/alert/alert";

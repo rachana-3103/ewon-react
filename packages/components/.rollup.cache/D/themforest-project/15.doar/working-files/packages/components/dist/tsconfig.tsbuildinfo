@@ -1157,9 +1157,519 @@
         "signature": "aa24a7ac00cf221cec70ba4a3e70545dadfff3e629785a41a9ae68acd61bd845",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts": {
+        "version": "c6f02373ad0767916f6675ae235fd63790cec5ec60ed86e143789264d13f82c1",
+        "signature": "c6f02373ad0767916f6675ae235fd63790cec5ec60ed86e143789264d13f82c1",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts": {
+        "version": "515ff8f90744788e883e0d2d334a26eac78b609a15e180b1fb2622aca5ecc3a2",
+        "signature": "515ff8f90744788e883e0d2d334a26eac78b609a15e180b1fb2622aca5ecc3a2",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts": {
+        "version": "32ebfed56ba0a61d6519477e92c069bbaf79b14282b604eb1cf1af778d41b40b",
+        "signature": "32ebfed56ba0a61d6519477e92c069bbaf79b14282b604eb1cf1af778d41b40b",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts": {
+        "version": "766c8b94cabf1321fdb95043555030b0f3e83f8a58e384cd0191e6dbb81278c0",
+        "signature": "766c8b94cabf1321fdb95043555030b0f3e83f8a58e384cd0191e6dbb81278c0",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts": {
+        "version": "cbdfcf42eca8c5c0a6043336d96243bba62b82834c8376ab3a84272cc9c91da9",
+        "signature": "cbdfcf42eca8c5c0a6043336d96243bba62b82834c8376ab3a84272cc9c91da9",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts": {
+        "version": "05cd18dec5303f74231fea8b63baa254c7cd8a0632aa4f03fa5b46e78bb57d71",
+        "signature": "05cd18dec5303f74231fea8b63baa254c7cd8a0632aa4f03fa5b46e78bb57d71",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts": {
+        "version": "8253e386f5756776a1266ffdb1177dcc8af884e88d63c5cdb898b0b54c3882a4",
+        "signature": "8253e386f5756776a1266ffdb1177dcc8af884e88d63c5cdb898b0b54c3882a4",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts": {
+        "version": "2dea6ce2154e24bc45ac9105ed3c010c3184a09e2612784976a797b48a219c75",
+        "signature": "2dea6ce2154e24bc45ac9105ed3c010c3184a09e2612784976a797b48a219c75",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts": {
+        "version": "5b66c9c5bfd10de4eb8d73a516d003a15a9c64d3b70dcdf13a6ad340cff43465",
+        "signature": "5b66c9c5bfd10de4eb8d73a516d003a15a9c64d3b70dcdf13a6ad340cff43465",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts": {
+        "version": "5b813646b3ab641c9b00dd8723c52a6c7e49145a43829f0578483c2d8a6a675c",
+        "signature": "5b813646b3ab641c9b00dd8723c52a6c7e49145a43829f0578483c2d8a6a675c",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts": {
+        "version": "3c01df5a3961eb59b16270e3c50b19330933cb66b4fb3f61495e92c4dc268d68",
+        "signature": "3c01df5a3961eb59b16270e3c50b19330933cb66b4fb3f61495e92c4dc268d68",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts": {
+        "version": "fb3600961f918e9ed6381dc6d2d55ca53ad272deae91fc10d7b5d4b877e20a97",
+        "signature": "fb3600961f918e9ed6381dc6d2d55ca53ad272deae91fc10d7b5d4b877e20a97",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts": {
+        "version": "81253be27c78abea953264990ae9d18e1e7418efb8c32d952447867515e34c62",
+        "signature": "81253be27c78abea953264990ae9d18e1e7418efb8c32d952447867515e34c62",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts": {
+        "version": "b57290100cde54431b9f80bc62e2d0f4cc3ee399c4cd17e803fbda46993d5a12",
+        "signature": "b57290100cde54431b9f80bc62e2d0f4cc3ee399c4cd17e803fbda46993d5a12",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts": {
+        "version": "ae21c111ab322fee52706efcc0aeba3c2f992b6106f5e8a262dca7ce61dd758e",
+        "signature": "ae21c111ab322fee52706efcc0aeba3c2f992b6106f5e8a262dca7ce61dd758e",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts": {
+        "version": "66b913c6463c98cf2cc68ce0b57c964ab5735cb46566ebec2c7fdb5a50062978",
+        "signature": "66b913c6463c98cf2cc68ce0b57c964ab5735cb46566ebec2c7fdb5a50062978",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts": {
+        "version": "81843b8689522588c9a3d6d4690e33a5dbd6ae8183791de5d408970153770e30",
+        "signature": "81843b8689522588c9a3d6d4690e33a5dbd6ae8183791de5d408970153770e30",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts": {
+        "version": "66bcbe59b87e5b3f35a75ff81186f4082ad3164442bf3767d100957da75d6a56",
+        "signature": "66bcbe59b87e5b3f35a75ff81186f4082ad3164442bf3767d100957da75d6a56",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts": {
+        "version": "e61b93bfc795a135c00c4d5bf4b57745c47e1ad03a74a16e3f613be78cc35ba0",
+        "signature": "e61b93bfc795a135c00c4d5bf4b57745c47e1ad03a74a16e3f613be78cc35ba0",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts": {
+        "version": "f9c97d457152fbf26c8ac624695a0f8c146e715410e0acb85d621dd99e440e06",
+        "signature": "f9c97d457152fbf26c8ac624695a0f8c146e715410e0acb85d621dd99e440e06",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts": {
+        "version": "e6325e5870594f9ff8c6ec11b8e99b250a127a68a93c2325b87af4191e8bc547",
+        "signature": "e6325e5870594f9ff8c6ec11b8e99b250a127a68a93c2325b87af4191e8bc547",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts": {
+        "version": "1a2f23ce4ea3ecc658439211e9557220e780eaa4bb6a5521b4c3d7c7bac4243d",
+        "signature": "1a2f23ce4ea3ecc658439211e9557220e780eaa4bb6a5521b4c3d7c7bac4243d",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts": {
+        "version": "ac090a0d0903977063ca0ccfe07f176e225dc6d6d16303318eae1face61c2be4",
+        "signature": "ac090a0d0903977063ca0ccfe07f176e225dc6d6d16303318eae1face61c2be4",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts": {
+        "version": "ec72f568b521c669729d640ac9fd5550dd493d058eae9c1a13d471b4e75be79e",
+        "signature": "ec72f568b521c669729d640ac9fd5550dd493d058eae9c1a13d471b4e75be79e",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts": {
+        "version": "d34f3e2b047b939248d4ccf82f82d558e661680deeb20c16201acba635578a16",
+        "signature": "d34f3e2b047b939248d4ccf82f82d558e661680deeb20c16201acba635578a16",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts": {
+        "version": "620443f821c2a226a681e94339e97ab621a9ac4087438b3d3d702a88063932f3",
+        "signature": "620443f821c2a226a681e94339e97ab621a9ac4087438b3d3d702a88063932f3",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts": {
+        "version": "ba1213b4148c7ca67214414853e36897bb651e19eb0fb2a7c20b13e94a5011e0",
+        "signature": "ba1213b4148c7ca67214414853e36897bb651e19eb0fb2a7c20b13e94a5011e0",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts": {
+        "version": "37c3ff6d3caa799c62dffb07dacee1270f1132d041dc9b0258fc220cba08a7a0",
+        "signature": "37c3ff6d3caa799c62dffb07dacee1270f1132d041dc9b0258fc220cba08a7a0",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts": {
+        "version": "15fc25ac4e96d17ff66c1bb2dca26fe12c9a3702b911fbeac7c267d0349b7007",
+        "signature": "15fc25ac4e96d17ff66c1bb2dca26fe12c9a3702b911fbeac7c267d0349b7007",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts": {
+        "version": "4938db21214f998f41dd8d87982520f2155d803118bdca866e12785727507a73",
+        "signature": "4938db21214f998f41dd8d87982520f2155d803118bdca866e12785727507a73",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts": {
+        "version": "3b5cb41f68874bb3a80a1ddd25e0fe6d5939836773b9c12636d07d498c18b576",
+        "signature": "3b5cb41f68874bb3a80a1ddd25e0fe6d5939836773b9c12636d07d498c18b576",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts": {
+        "version": "23a75ec97794b4f4672508ffaccdde9ad2b0adbb7b08228f0113723dd87b09f0",
+        "signature": "23a75ec97794b4f4672508ffaccdde9ad2b0adbb7b08228f0113723dd87b09f0",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts": {
+        "version": "28fcceff8dc790f5910d82c5309aa5980592bcdfae0e053cd27e269abbb17a4e",
+        "signature": "28fcceff8dc790f5910d82c5309aa5980592bcdfae0e053cd27e269abbb17a4e",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts": {
+        "version": "483f92ab6421c91c2dcd66973ce7269d0e4958c3ffaca1c0bfdd1a3a4d4a642f",
+        "signature": "483f92ab6421c91c2dcd66973ce7269d0e4958c3ffaca1c0bfdd1a3a4d4a642f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts": {
+        "version": "85e3a26ffab6bd4587c399458414d5bb49da18601ce507d9b7372d00968f6802",
+        "signature": "85e3a26ffab6bd4587c399458414d5bb49da18601ce507d9b7372d00968f6802",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts": {
+        "version": "112c1baed607aafcf25be461ba718370ade023e3d18fbfad69bb926e63bc52d1",
+        "signature": "112c1baed607aafcf25be461ba718370ade023e3d18fbfad69bb926e63bc52d1",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts": {
+        "version": "6a34012e74494b6ca61928ea1de874a5579b68b2ff0ea1b8e5b8b25dd4f3a13d",
+        "signature": "6a34012e74494b6ca61928ea1de874a5579b68b2ff0ea1b8e5b8b25dd4f3a13d",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts": {
+        "version": "b08351b80c40793916d24aac1a129ea3843720347415c5a22933d43fe25aeefe",
+        "signature": "b08351b80c40793916d24aac1a129ea3843720347415c5a22933d43fe25aeefe",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts": {
+        "version": "fa690ffdc1a8eb7896069e4ae24649e4e3c696db6fc47a38c36866f173dca27b",
+        "signature": "fa690ffdc1a8eb7896069e4ae24649e4e3c696db6fc47a38c36866f173dca27b",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts": {
+        "version": "df81f9eea879c0f628e208a89e3b17e8596292e9d927be920f19ad3a1b641c3c",
+        "signature": "df81f9eea879c0f628e208a89e3b17e8596292e9d927be920f19ad3a1b641c3c",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-google-maps/api/dist/index.d.ts": {
+        "version": "e2bcc165a02af1a7bf3a862c42be8356eafe96a51a672bbf408a53d7a55c9886",
+        "signature": "e2bcc165a02af1a7bf3a862c42be8356eafe96a51a672bbf408a53d7a55c9886",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-feather/dist/index.d.ts": {
+        "version": "e04fa69162c151d74acfa57c802b4a99cb219d6cbe12efeeebc1d31f8e0fe342",
+        "signature": "e04fa69162c151d74acfa57c802b4a99cb219d6cbe12efeeebc1d31f8e0fe342",
+        "affectsGlobalScope": false
+      },
+      "../../shared/data/menu.ts": {
+        "version": "a61467935572e8db11ded64a1c892fea85d7e422b52dba52f5869c1ab51de9cf",
+        "affectsGlobalScope": false
+      },
+      "../../shared/data/menu-aside.ts": {
+        "version": "37bdc7adff8ec9785754d462d207882b590d409d3699767947db5285a82f4fd1",
+        "affectsGlobalScope": false
+      },
+      "../../shared/data/api-keys.ts": {
+        "version": "89d68dea99880ad4cca6b646ef37ca639bcb9c20f6af96c0d1d09009dad9ab52",
+        "affectsGlobalScope": false
+      },
+      "../../shared/data/index.ts": {
+        "version": "00984e6ece317f5777f66f79959c0b79168692ce60769f201542f7c3f938d16b",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/google-map/style.tsx": {
+        "version": "20c31f52db69afef76c4a6d40ab157bb35bbadfac70e5d809cd30712df2f6ee1",
+        "signature": "beddea226cb07f2d7bf6696d755e07f39b35d72ae4706911d906e3ac1e984e72",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/google-map/google-map.tsx": {
+        "version": "dd3e94871de4e245b5072bdf6ca7a68550b04c9942b212e51b7d6685bee8a103",
+        "signature": "64be2cb2c21e897ca08ca77b4d7b7bae29d4fe978369837731c8c89708673aac",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/google-map/marker.tsx": {
+        "version": "5f03d1de2f20a86516155b0b135d3ffdf4af7c24d4525432c2faef8ad8ce1eed",
+        "signature": "279ab658b723c7c96e3c87229a54e85465d3e5562befd8cd5a4b9b4daa660d15",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/geojson/index.d.ts": {
+        "version": "3a68b9e1129584f9e42f615b56926b0d2c1d22746e9c4689faf48d0e9749536a",
+        "signature": "3a68b9e1129584f9e42f615b56926b0d2c1d22746e9c4689faf48d0e9749536a",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/leaflet/index.d.ts": {
+        "version": "f1661733cf79125da094e7fbfdb72585bb536706a07b4bba4760e2ab92699550",
+        "signature": "f1661733cf79125da094e7fbfdb72585bb536706a07b4bba4760e2ab92699550",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/hooks.d.ts": {
+        "version": "0ffd9ad11737f8076c7fd0c1d32a0f15eca1b3ad404d43919068604c15e2e694",
+        "signature": "0ffd9ad11737f8076c7fd0c1d32a0f15eca1b3ad404d43919068604c15e2e694",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts": {
+        "version": "c3aa38efa9ef5c1051f556c02b75a3ce478df01a8f931d278d73c6eb20035415",
+        "signature": "c3aa38efa9ef5c1051f556c02b75a3ce478df01a8f931d278d73c6eb20035415",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/attribution.d.ts": {
+        "version": "45bf5affc79fd7e2c511a2d7c495fb61b9bdb35e8da3962240e0b134716decb6",
+        "signature": "45bf5affc79fd7e2c511a2d7c495fb61b9bdb35e8da3962240e0b134716decb6",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/context.d.ts": {
+        "version": "0edf2723604521ee4017c917434bb6656738c428cbae7a2f4998dbc48f743191",
+        "signature": "0edf2723604521ee4017c917434bb6656738c428cbae7a2f4998dbc48f743191",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/element.d.ts": {
+        "version": "1f6c6fa603a203ba48b5c497594bbaafb905ecba3344ef870a5bae8bc949dd1b",
+        "signature": "1f6c6fa603a203ba48b5c497594bbaafb905ecba3344ef870a5bae8bc949dd1b",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/events.d.ts": {
+        "version": "9e0856a412d0dd26e88fd99f56c0c210f6a55e8b15b29a88ac51d7f8a6d19b8d",
+        "signature": "9e0856a412d0dd26e88fd99f56c0c210f6a55e8b15b29a88ac51d7f8a6d19b8d",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/layer.d.ts": {
+        "version": "b31a26b1eda5aaf35710ace1fb54c8472dff42d2b59581cc2d9cf5fa70d3401b",
+        "signature": "b31a26b1eda5aaf35710ace1fb54c8472dff42d2b59581cc2d9cf5fa70d3401b",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/path.d.ts": {
+        "version": "c6f8cfb2dfd764ca408c4a0b38ebe7baee8d2731b3ef9cd0661f984f133bb5b9",
+        "signature": "c6f8cfb2dfd764ca408c4a0b38ebe7baee8d2731b3ef9cd0661f984f133bb5b9",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/circle.d.ts": {
+        "version": "562109823ae3dbe0ce26f917a867511c7b798f29c15ce9cbcdd88b6b9ace2d84",
+        "signature": "562109823ae3dbe0ce26f917a867511c7b798f29c15ce9cbcdd88b6b9ace2d84",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts": {
+        "version": "730267563c19acfa885669f6a320f365c11cd757c8fee8e6678baf9e9cb55cf5",
+        "signature": "730267563c19acfa885669f6a320f365c11cd757c8fee8e6678baf9e9cb55cf5",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/component.d.ts": {
+        "version": "afd3069e975b8506f581362fc53104f8bcb64032a001cdf04149714c93987e2f",
+        "signature": "afd3069e975b8506f581362fc53104f8bcb64032a001cdf04149714c93987e2f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/control.d.ts": {
+        "version": "9f02f640f44fde556a11da10a6c345af396be21593058541289ca54fa1a45c7e",
+        "signature": "9f02f640f44fde556a11da10a6c345af396be21593058541289ca54fa1a45c7e",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/dom.d.ts": {
+        "version": "113aef5576cd65f310927b17ae5f6ac8745c542a660bace5f019034d536fbd04",
+        "signature": "113aef5576cd65f310927b17ae5f6ac8745c542a660bace5f019034d536fbd04",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/generic.d.ts": {
+        "version": "e307ff1aa8c488705f9c05ef99df43397821ac9d449f1b71453499bde8a71418",
+        "signature": "e307ff1aa8c488705f9c05ef99df43397821ac9d449f1b71453499bde8a71418",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts": {
+        "version": "baeb625ae6bca5302a89bf54ba349c67979ec3d707b6c040bb773c8f106a1ddf",
+        "signature": "baeb625ae6bca5302a89bf54ba349c67979ec3d707b6c040bb773c8f106a1ddf",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts": {
+        "version": "e47b849beb9a525597f923c0f655e348258db72a6142c3e722fa54e7b8c47065",
+        "signature": "e47b849beb9a525597f923c0f655e348258db72a6142c3e722fa54e7b8c47065",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/pane.d.ts": {
+        "version": "e3908d0d54051977a54d91ac736e82f0e3a95abea82c2480124b4227a50b3b56",
+        "signature": "e3908d0d54051977a54d91ac736e82f0e3a95abea82c2480124b4227a50b3b56",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@react-leaflet/core/types/index.d.ts": {
+        "version": "ed4d766672ebd7bb0bdc9514032ef97bcd0974f02594303087cdc57361f750d8",
+        "signature": "ed4d766672ebd7bb0bdc9514032ef97bcd0974f02594303087cdc57361f750d8",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/circle.d.ts": {
+        "version": "8c330b927aceaa8c166ee97a141bd101eaeebb8cdfd75feae997b34f6ffe73f8",
+        "signature": "8c330b927aceaa8c166ee97a141bd101eaeebb8cdfd75feae997b34f6ffe73f8",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/circlemarker.d.ts": {
+        "version": "588178d593d9f023a4f8d4ed5926edf16e68335e6e40ec6f61ce270bfc8f99ec",
+        "signature": "588178d593d9f023a4f8d4ed5926edf16e68335e6e40ec6f61ce270bfc8f99ec",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/layergroup.d.ts": {
+        "version": "7dc048569d33bd1ecfd5cde3afaebb22873663ace06dfdb15032205b0b055862",
+        "signature": "7dc048569d33bd1ecfd5cde3afaebb22873663ace06dfdb15032205b0b055862",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/featuregroup.d.ts": {
+        "version": "2e7a17091b5a0cbcbf49188a2f28d5427d990f9a32da339b208ac38c317ab4ea",
+        "signature": "2e7a17091b5a0cbcbf49188a2f28d5427d990f9a32da339b208ac38c317ab4ea",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/geojson.d.ts": {
+        "version": "f79313a473a40263303f36e2d197056d10f3d4052e169d6f8798a6c5df704c8f",
+        "signature": "f79313a473a40263303f36e2d197056d10f3d4052e169d6f8798a6c5df704c8f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/imageoverlay.d.ts": {
+        "version": "b5dc98a4b099046ea0ecd9d495ea8014fd7cded3f7646253a518f39e02212165",
+        "signature": "b5dc98a4b099046ea0ecd9d495ea8014fd7cded3f7646253a518f39e02212165",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/layerscontrol.d.ts": {
+        "version": "79c4f74eb27deb4a65777d7732440060611d55a2a78bc8aa754099dbcb2266df",
+        "signature": "79c4f74eb27deb4a65777d7732440060611d55a2a78bc8aa754099dbcb2266df",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/mapconsumer.d.ts": {
+        "version": "5027d61d2e92bd0a994a468d99dd497f5b8be00a7e346beaf60e652459f2c329",
+        "signature": "5027d61d2e92bd0a994a468d99dd497f5b8be00a7e346beaf60e652459f2c329",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/mapcontainer.d.ts": {
+        "version": "9d65ec5152e22199f0a0c0df3ad1cb048102f571f01eb47c9ce2789b425c429f",
+        "signature": "9d65ec5152e22199f0a0c0df3ad1cb048102f571f01eb47c9ce2789b425c429f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/marker.d.ts": {
+        "version": "93faf0b82b91285f5b5788ea7daa222006b06e14cd42c63c5bc3f14ba09cf406",
+        "signature": "93faf0b82b91285f5b5788ea7daa222006b06e14cd42c63c5bc3f14ba09cf406",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/pane.d.ts": {
+        "version": "b88b79c619ae78222b5aa90318101ea887cf0d2d4b3e7ed2ff3a6d95d554fcf2",
+        "signature": "b88b79c619ae78222b5aa90318101ea887cf0d2d4b3e7ed2ff3a6d95d554fcf2",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/polygon.d.ts": {
+        "version": "bfab705cc818128da811b2c77856ea8ba33289525981396f2ea9a308e577bd76",
+        "signature": "bfab705cc818128da811b2c77856ea8ba33289525981396f2ea9a308e577bd76",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/polyline.d.ts": {
+        "version": "f238ea2bf88abc6d03d2e9a3af6dd3894ea5548fc14e41dc127d5e7feecb6c5f",
+        "signature": "f238ea2bf88abc6d03d2e9a3af6dd3894ea5548fc14e41dc127d5e7feecb6c5f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/popup.d.ts": {
+        "version": "9aadc290fd3ef8788749c91d53d9aca5981f38cf0b0fe4c37fde199b3771c46f",
+        "signature": "9aadc290fd3ef8788749c91d53d9aca5981f38cf0b0fe4c37fde199b3771c46f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/rectangle.d.ts": {
+        "version": "defa45c208d1ab3898ad187817738da6eff0b96c9664e9c0ff285968e5d3818d",
+        "signature": "defa45c208d1ab3898ad187817738da6eff0b96c9664e9c0ff285968e5d3818d",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/scalecontrol.d.ts": {
+        "version": "78f4ccd17ffbb283f2a035b632105657d2dbc6be04f08f0eb8d4bc3e0960f240",
+        "signature": "78f4ccd17ffbb283f2a035b632105657d2dbc6be04f08f0eb8d4bc3e0960f240",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/svgoverlay.d.ts": {
+        "version": "91946fd89dc01a2746c55edd08497eb58e3eee799a70356d64e3f79f5ec62ab8",
+        "signature": "91946fd89dc01a2746c55edd08497eb58e3eee799a70356d64e3f79f5ec62ab8",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/tilelayer.d.ts": {
+        "version": "2f018d672c59218a242e1b40fb2146b2595a6d57e6f960d5142243df3d1caa7a",
+        "signature": "2f018d672c59218a242e1b40fb2146b2595a6d57e6f960d5142243df3d1caa7a",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/tooltip.d.ts": {
+        "version": "b98e9928f6c869efbed789650b2dfa7ef21d15e47f29d8bfcf5b345cfa67a109",
+        "signature": "b98e9928f6c869efbed789650b2dfa7ef21d15e47f29d8bfcf5b345cfa67a109",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/videooverlay.d.ts": {
+        "version": "cde1c7f4dc56ba459833805a11a440de827ca05a84ef63577eb15570fc90aa75",
+        "signature": "cde1c7f4dc56ba459833805a11a440de827ca05a84ef63577eb15570fc90aa75",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts": {
+        "version": "24635101115b4cac752eb18f690e6260fdbc1a9d9e5d642795554a86aa57b0f6",
+        "signature": "24635101115b4cac752eb18f690e6260fdbc1a9d9e5d642795554a86aa57b0f6",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts": {
+        "version": "bd32c592b0aef06e9aa6877f8bfd4f3b94bbbe55f57ab0cea87d1c31785e668f",
+        "signature": "bd32c592b0aef06e9aa6877f8bfd4f3b94bbbe55f57ab0cea87d1c31785e668f",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/react-leaflet/types/index.d.ts": {
+        "version": "a706c547453b4ce0fbfb65707593497c411062e461aacb2206be7e8d9dd5b09a",
+        "signature": "a706c547453b4ce0fbfb65707593497c411062e461aacb2206be7e8d9dd5b09a",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/style.tsx": {
+        "version": "a6c9cfe323ef807f912b4df24a23fd45946a88d08099e37326ba88203d91b10f",
+        "signature": "beddea226cb07f2d7bf6696d755e07f39b35d72ae4706911d906e3ac1e984e72",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/types.ts": {
+        "version": "94414f075968d36a1340905d81b6c79fce4fcd5a7f799b1fc828010d3ad8661e",
+        "signature": "344d5a9a4677be0bba863eba305d093efab80d6514b89fa29132e47b7c6c7083",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/leaflet-map.tsx": {
+        "version": "ea85486802474d6832ef7e626237da2cdbbced79da409882fc362c7d225681e3",
+        "signature": "69b01b6347977e0e6a758b3caf09021f0f160cdcfb7adb00f7a9c18d70b64a8d",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/circle.tsx": {
+        "version": "6320ffd22c9ce8c1c6b3ef7a5be5ce3b1ffbc30b90ed9dfadea8d3340f42dfbb",
+        "signature": "0fb784081e47be6cdd69044d55c25d7f008b70fe0563c8692d637f065c9f7350",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/marker.tsx": {
+        "version": "5893c6497bbf8993f062da154c409a024b225c264bd05ef1f2ade05847683ae7",
+        "signature": "f190130a0e1e8a4a500919ae716434afa2b46da2eeb47677be4b93001c8aef48",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/leaflet-map/popup.tsx": {
+        "version": "00dc7986ddf2ad4d833bfb5c8789fcb30ce786de289cf2cbb0f3cdcecd7c79e9",
+        "signature": "5f3a0c3c959d319ade8c75ed6e7755ffbc918e93bf5f6deeb83121bba8cb5f52",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts": {
+        "version": "52deee045ad05dc9fbe0a9df696702101e5e3cf66bcfe8556a92bad576850d01",
+        "signature": "52deee045ad05dc9fbe0a9df696702101e5e3cf66bcfe8556a92bad576850d01",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@south-paw/react-vector-maps/dist/index.d.ts": {
+        "version": "9634ae54c7ff6382bce44ea25a8889cb739c1864fd530041c6583eed0b497d3f",
+        "signature": "9634ae54c7ff6382bce44ea25a8889cb739c1864fd530041c6583eed0b497d3f",
+        "affectsGlobalScope": false
+      },
+      "../../shared/data/maps/world-low-res.json": {
+        "version": "13863d342873331fb2999b427692f948236a901b4ccc59df1e0d54d5c4d64ec9",
+        "affectsGlobalScope": true
+      },
+      "../src/maps/vector-map/style.tsx": {
+        "version": "66ff402553bebaa35289854ce68fd650ca7e2eba0fc65ba3042ba1538b0e31e7",
+        "signature": "fc6dd355bf8f510445fa1d815f84d9b9de85b751e0b29966f21891474ee753b9",
+        "affectsGlobalScope": false
+      },
+      "../src/maps/vector-map/vector-map.tsx": {
+        "version": "dd753fbc453f9e91951abb014b12bdd23766b442956f5a20a8bd071221ecf299",
+        "signature": "fadeed31e8d4cdce3fe469a1a2123f556455da88035b929f84e4df7a6d768805",
+        "affectsGlobalScope": false
+      },
       "../index.ts": {
-        "version": "6d28a335fe1f92fe64054b7e49f92d8add4b15433f166cc4d7358cbe6d03d038",
-        "signature": "7589d9c164b2ee43e656074cb65bf21a8a85c916f260b0fb27351a4134748bb7",
+        "version": "56c19b00037f5472ce29e8353dbf47a9c40f35565d42467333328bb1afe8c588",
+        "signature": "0fabea09bd5d69577354655d9c3a8693deb557823914b5f71b8e5479b6ab69e3",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/node/globals.d.ts": {
@@ -1512,11 +2022,6 @@
         "signature": "edb3e2f61a2a6e29a5f9043f73adf65951d52b4c1f22e84050381f7ef0d77318",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/@types/geojson/index.d.ts": {
-        "version": "3a68b9e1129584f9e42f615b56926b0d2c1d22746e9c4689faf48d0e9749536a",
-        "signature": "3a68b9e1129584f9e42f615b56926b0d2c1d22746e9c4689faf48d0e9749536a",
-        "affectsGlobalScope": false
-      },
       "../../../node_modules/@types/minimatch/index.d.ts": {
         "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
         "signature": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
@@ -1610,11 +2115,6 @@
       "../../../node_modules/@types/json5/index.d.ts": {
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
-        "affectsGlobalScope": false
-      },
-      "../../../node_modules/@types/leaflet/index.d.ts": {
-        "version": "f1661733cf79125da094e7fbfdb72585bb536706a07b4bba4760e2ab92699550",
-        "signature": "f1661733cf79125da094e7fbfdb72585bb536706a07b4bba4760e2ab92699550",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/markdown-to-jsx/index.d.ts": {
@@ -2007,6 +2507,378 @@
         "../src/@types/index.d.ts"
       ],
       "../../../node_modules/@babel/types/lib/index.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts",
+        "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/attribution.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/circle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/component.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/context.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/control.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/dom.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/element.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/events.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/generic.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/component.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/index.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/attribution.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/circle.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/component.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/control.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/dom.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/events.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/generic.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/pane.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/layer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/events.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/pane.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/path.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@south-paw/react-vector-maps/dist/index.d.ts": [
+        "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
@@ -3059,6 +3931,202 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
+      "../../../node_modules/react-feather/dist/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/circle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/circlemarker.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/featuregroup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/geojson.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/geojson/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/hooks.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/imageoverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/index.d.ts": [
+        "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/circle.d.ts",
+        "../../../node_modules/react-leaflet/types/circlemarker.d.ts",
+        "../../../node_modules/react-leaflet/types/featuregroup.d.ts",
+        "../../../node_modules/react-leaflet/types/geojson.d.ts",
+        "../../../node_modules/react-leaflet/types/hooks.d.ts",
+        "../../../node_modules/react-leaflet/types/imageoverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-leaflet/types/layerscontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/mapconsumer.d.ts",
+        "../../../node_modules/react-leaflet/types/mapcontainer.d.ts",
+        "../../../node_modules/react-leaflet/types/marker.d.ts",
+        "../../../node_modules/react-leaflet/types/pane.d.ts",
+        "../../../node_modules/react-leaflet/types/polygon.d.ts",
+        "../../../node_modules/react-leaflet/types/polyline.d.ts",
+        "../../../node_modules/react-leaflet/types/popup.d.ts",
+        "../../../node_modules/react-leaflet/types/rectangle.d.ts",
+        "../../../node_modules/react-leaflet/types/scalecontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/svgoverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/tilelayer.d.ts",
+        "../../../node_modules/react-leaflet/types/tooltip.d.ts",
+        "../../../node_modules/react-leaflet/types/videooverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts",
+        "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/layergroup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/layerscontrol.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/mapconsumer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/mapcontainer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/marker.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/pane.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/polygon.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/polyline.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/geojson/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/popup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/rectangle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/scalecontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/svgoverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/tilelayer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/tooltip.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/videooverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../../node_modules/react-router-dom/index.d.ts": [
         "../../../node_modules/@types/react/index.d.ts",
         "../../../node_modules/react-router-dom/node_modules/history/index.d.ts",
@@ -3423,6 +4491,13 @@
         "../src/grid/col.tsx",
         "../src/grid/container.tsx",
         "../src/grid/row.tsx",
+        "../src/maps/google-map/google-map.tsx",
+        "../src/maps/google-map/marker.tsx",
+        "../src/maps/leaflet-map/circle.tsx",
+        "../src/maps/leaflet-map/leaflet-map.tsx",
+        "../src/maps/leaflet-map/marker.tsx",
+        "../src/maps/leaflet-map/popup.tsx",
+        "../src/maps/vector-map/vector-map.tsx",
         "../src/ui/alert/alert.tsx",
         "../src/ui/anchor/index.tsx",
         "../src/ui/avatar/avatar-initial.tsx",
@@ -3871,6 +4946,102 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../../../node_modules/tslib/tslib.d.ts",
         "../src/@types/index.d.ts"
+      ],
+      "../src/maps/google-map/google-map.tsx": [
+        "../../../node_modules/@react-google-maps/api/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/data/index.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/maps/google-map/style.tsx"
+      ],
+      "../src/maps/google-map/marker.tsx": [
+        "../../../node_modules/@react-google-maps/api/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/google-map/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/leaflet-map/circle.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-leaflet/types/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/leaflet-map.tsx": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-leaflet/types/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/data/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/maps/leaflet-map/style.tsx",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/marker.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-leaflet/types/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/popup.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-leaflet/types/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/leaflet-map/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/leaflet-map/types.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/vector-map/style.tsx": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../src/maps/vector-map/vector-map.tsx": [
+        "../../../node_modules/@south-paw/react-vector-maps/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/data/maps/world-low-res.json",
+        "../../shared/styled/index.ts",
+        "../src/@types/index.d.ts",
+        "../src/maps/vector-map/style.tsx"
       ],
       "../src/react-app-env.d.ts": [
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
@@ -4662,6 +5833,41 @@
         "../../shared/styled/index.ts",
         "../src/@types/index.d.ts"
       ],
+      "../../shared/data/api-keys.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../shared/data/index.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../../shared/data/api-keys.ts",
+        "../../shared/data/menu-aside.ts",
+        "../../shared/data/menu.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../shared/data/maps/world-low-res.json": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../shared/data/menu-aside.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-feather/dist/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../shared/data/menu.ts": [
+        "../../../node_modules/@types/react/jsx-runtime.d.ts",
+        "../../../node_modules/react-feather/dist/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../../../node_modules/tslib/tslib.d.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../shared/hooks/index.ts": [
         "../../../node_modules/@types/react/jsx-runtime.d.ts",
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
@@ -4743,6 +5949,378 @@
         "../src/@types/index.d.ts"
       ],
       "../../../node_modules/@babel/types/lib/index.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts",
+        "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts": [
+        "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts",
+        "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts": [
+        "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts": [
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts",
+        "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/attribution.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/circle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/component.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/context.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/control.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/dom.d.ts": [
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/element.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/events.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/generic.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/component.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/index.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/attribution.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/circle.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/component.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/control.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/dom.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/events.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/generic.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/pane.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/layer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/events.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/pane.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@react-leaflet/core/types/path.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+        "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@south-paw/react-vector-maps/dist/index.d.ts": [
+        "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
@@ -5795,6 +7373,202 @@
         "../../../node_modules/react-scripts/lib/react-app.d.ts",
         "../src/@types/index.d.ts"
       ],
+      "../../../node_modules/react-feather/dist/index.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/circle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/circlemarker.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/featuregroup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/geojson.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/geojson/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/hooks.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/imageoverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/index.d.ts": [
+        "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/circle.d.ts",
+        "../../../node_modules/react-leaflet/types/circlemarker.d.ts",
+        "../../../node_modules/react-leaflet/types/featuregroup.d.ts",
+        "../../../node_modules/react-leaflet/types/geojson.d.ts",
+        "../../../node_modules/react-leaflet/types/hooks.d.ts",
+        "../../../node_modules/react-leaflet/types/imageoverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+        "../../../node_modules/react-leaflet/types/layerscontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/mapconsumer.d.ts",
+        "../../../node_modules/react-leaflet/types/mapcontainer.d.ts",
+        "../../../node_modules/react-leaflet/types/marker.d.ts",
+        "../../../node_modules/react-leaflet/types/pane.d.ts",
+        "../../../node_modules/react-leaflet/types/polygon.d.ts",
+        "../../../node_modules/react-leaflet/types/polyline.d.ts",
+        "../../../node_modules/react-leaflet/types/popup.d.ts",
+        "../../../node_modules/react-leaflet/types/rectangle.d.ts",
+        "../../../node_modules/react-leaflet/types/scalecontrol.d.ts",
+        "../../../node_modules/react-leaflet/types/svgoverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/tilelayer.d.ts",
+        "../../../node_modules/react-leaflet/types/tooltip.d.ts",
+        "../../../node_modules/react-leaflet/types/videooverlay.d.ts",
+        "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts",
+        "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/layergroup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/layerscontrol.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/mapconsumer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/mapcontainer.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/marker.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/pane.d.ts": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/polygon.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/polyline.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/geojson/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/popup.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/rectangle.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/scalecontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/svgoverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/tilelayer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/tooltip.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/videooverlay.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts": [
+        "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
+      "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts": [
+        "../../../node_modules/@types/leaflet/index.d.ts",
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/react-scripts/lib/react-app.d.ts",
+        "../src/@types/index.d.ts"
+      ],
       "../../../node_modules/react-router-dom/index.d.ts": [
         "../../../node_modules/@types/react/index.d.ts",
         "../../../node_modules/react-router-dom/node_modules/history/index.d.ts",
@@ -6155,6 +7929,13 @@
         "../src/grid/col.tsx",
         "../src/grid/container.tsx",
         "../src/grid/row.tsx",
+        "../src/maps/google-map/google-map.tsx",
+        "../src/maps/google-map/marker.tsx",
+        "../src/maps/leaflet-map/circle.tsx",
+        "../src/maps/leaflet-map/leaflet-map.tsx",
+        "../src/maps/leaflet-map/marker.tsx",
+        "../src/maps/leaflet-map/popup.tsx",
+        "../src/maps/vector-map/vector-map.tsx",
         "../src/ui/alert/alert.tsx",
         "../src/ui/anchor/index.tsx",
         "../src/ui/avatar/avatar-initial.tsx",
@@ -6379,6 +8160,51 @@
       ],
       "../src/grid/style.tsx": [
         "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/google-map/google-map.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/google-map/marker.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/maps/google-map/style.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../../node_modules/@types/styled-system/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/leaflet-map/circle.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/leaflet-map.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/marker.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../src/maps/leaflet-map/types.ts"
+      ],
+      "../src/maps/leaflet-map/popup.tsx": [
+        "../../../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/maps/leaflet-map/style.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../../node_modules/@types/styled-system/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/leaflet-map/types.ts": [
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/vector-map/style.tsx": [
+        "../../../node_modules/@types/styled-components/index.d.ts",
+        "../../shared/styled/index.ts"
+      ],
+      "../src/maps/vector-map/vector-map.tsx": [
+        "../../../node_modules/@types/react/index.d.ts",
         "../../shared/styled/index.ts"
       ],
       "../src/react-app-env.d.ts": [
@@ -6725,6 +8551,65 @@
     "semanticDiagnosticsPerFile": [
       "../../../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../../../node_modules/@babel/types/lib/index.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/infobox.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/addons/markerclusterer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsrenderer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/directions/directionsservice.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/distance-matrix/distancematrixservice.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/dom/overlayview.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/circle.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/data.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/drawingmanager.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/infowindow.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/marker.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polygon.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/polyline.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/drawing/rectangle.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/heatmap/heatmaplayer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/kml/kmllayer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/bicyclinglayer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/trafficlayer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/maps/transitlayer.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/overlays/groundoverlay.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/places/autocomplete.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/places/standalonesearchbox.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewpanorama.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/components/streetview/streetviewservice.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/googlemap.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/index.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/loadscript.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/loadscriptnext.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/map-context.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/usejsapiloader.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/useloadscript.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/utils/make-load-script-url.d.ts",
+      "../../../node_modules/@react-google-maps/api/dist/utils/noop.d.ts",
+      "../../../node_modules/@react-google-maps/infobox/dist/index.d.ts",
+      "../../../node_modules/@react-google-maps/infobox/dist/infobox.d.ts",
+      "../../../node_modules/@react-google-maps/infobox/dist/types.d.ts",
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/cluster.d.ts",
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clusterer.d.ts",
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/clustericon.d.ts",
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/index.d.ts",
+      "../../../node_modules/@react-google-maps/marker-clusterer/dist/types.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/attribution.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/circle.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/component.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/context.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/control.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/div-overlay.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/dom.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/element.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/events.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/generic.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/grid-layer.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/index.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/layer.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/media-overlay.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/pane.d.ts",
+      "../../../node_modules/@react-leaflet/core/types/path.d.ts",
+      "../../../node_modules/@south-paw/react-vector-maps/dist/index.d.ts",
+      "../../../node_modules/@south-paw/react-vector-maps/dist/vectormap.d.ts",
       "../../../node_modules/@types/anymatch/index.d.ts",
       "../../../node_modules/@types/babel__core/index.d.ts",
       "../../../node_modules/@types/babel__generator/index.d.ts",
@@ -6905,6 +8790,32 @@
       "../../../node_modules/react-data-table-component/dist/src/datatable/themes.d.ts",
       "../../../node_modules/react-data-table-component/dist/src/datatable/types.d.ts",
       "../../../node_modules/react-data-table-component/dist/src/index.d.ts",
+      "../../../node_modules/react-feather/dist/index.d.ts",
+      "../../../node_modules/react-leaflet/types/attributioncontrol.d.ts",
+      "../../../node_modules/react-leaflet/types/circle.d.ts",
+      "../../../node_modules/react-leaflet/types/circlemarker.d.ts",
+      "../../../node_modules/react-leaflet/types/featuregroup.d.ts",
+      "../../../node_modules/react-leaflet/types/geojson.d.ts",
+      "../../../node_modules/react-leaflet/types/hooks.d.ts",
+      "../../../node_modules/react-leaflet/types/imageoverlay.d.ts",
+      "../../../node_modules/react-leaflet/types/index.d.ts",
+      "../../../node_modules/react-leaflet/types/layergroup.d.ts",
+      "../../../node_modules/react-leaflet/types/layerscontrol.d.ts",
+      "../../../node_modules/react-leaflet/types/mapconsumer.d.ts",
+      "../../../node_modules/react-leaflet/types/mapcontainer.d.ts",
+      "../../../node_modules/react-leaflet/types/marker.d.ts",
+      "../../../node_modules/react-leaflet/types/pane.d.ts",
+      "../../../node_modules/react-leaflet/types/polygon.d.ts",
+      "../../../node_modules/react-leaflet/types/polyline.d.ts",
+      "../../../node_modules/react-leaflet/types/popup.d.ts",
+      "../../../node_modules/react-leaflet/types/rectangle.d.ts",
+      "../../../node_modules/react-leaflet/types/scalecontrol.d.ts",
+      "../../../node_modules/react-leaflet/types/svgoverlay.d.ts",
+      "../../../node_modules/react-leaflet/types/tilelayer.d.ts",
+      "../../../node_modules/react-leaflet/types/tooltip.d.ts",
+      "../../../node_modules/react-leaflet/types/videooverlay.d.ts",
+      "../../../node_modules/react-leaflet/types/wmstilelayer.d.ts",
+      "../../../node_modules/react-leaflet/types/zoomcontrol.d.ts",
       "../../../node_modules/react-router-dom/index.d.ts",
       "../../../node_modules/react-router-dom/node_modules/history/index.d.ts",
       "../../../node_modules/react-router/index.d.ts",
@@ -7022,6 +8933,17 @@
       "../src/grid/row.tsx",
       "../src/grid/style.tsx",
       "../src/grid/types.ts",
+      "../src/maps/google-map/google-map.tsx",
+      "../src/maps/google-map/marker.tsx",
+      "../src/maps/google-map/style.tsx",
+      "../src/maps/leaflet-map/circle.tsx",
+      "../src/maps/leaflet-map/leaflet-map.tsx",
+      "../src/maps/leaflet-map/marker.tsx",
+      "../src/maps/leaflet-map/popup.tsx",
+      "../src/maps/leaflet-map/style.tsx",
+      "../src/maps/leaflet-map/types.ts",
+      "../src/maps/vector-map/style.tsx",
+      "../src/maps/vector-map/vector-map.tsx",
       "../src/react-app-env.d.ts",
       "../src/ui/alert/alert.tsx",
       "../src/ui/alert/style.tsx",
@@ -7109,6 +9031,11 @@
       "../src/ui/table/table.tsx",
       "../src/ui/text/index.tsx",
       "../src/ui/text/style.tsx",
+      "../../shared/data/api-keys.ts",
+      "../../shared/data/index.ts",
+      "../../shared/data/maps/world-low-res.json",
+      "../../shared/data/menu-aside.ts",
+      "../../shared/data/menu.ts",
       "../../shared/hooks/index.ts",
       "../../shared/hooks/use-click-outside.ts",
       "../../shared/hooks/use-window-size.ts",

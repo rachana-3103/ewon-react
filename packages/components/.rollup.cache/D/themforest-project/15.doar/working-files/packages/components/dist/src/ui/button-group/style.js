@@ -3,14 +3,8 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import styled, { css, space } from "@doar/shared/styled";
 export var StyledGroup = styled(function (_a) {
     var m = _a.m, ml = _a.ml, mr = _a.mr, mt = _a.mt, mb = _a.mb, rest = __rest(_a, ["m", "ml", "mr", "mt", "mb"]);
-    return (_jsx("div", __assign({}, rest), void 0));
-})(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n    ", ";\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n"], ["\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n    ", ";\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n"])), space, function (_a) {
+    return (_jsx("div", __assign({}, rest)));
+})(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n    ", ";\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n"], ["\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n    ", ";\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n"])), space, function (_a) {
     var $vertical = _a.$vertical;
     return ($vertical === false || !$vertical) && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            & > .btn {\n                position: relative;\n                flex: 1 1 auto;\n                &:not(:last-of-type) {\n                    border-top-right-radius: 0;\n                    border-bottom-right-radius: 0;\n                }\n                &:not(:first-of-type) {\n                    border-top-left-radius: 0;\n                    border-bottom-left-radius: 0;\n                    margin-left: -1px;\n                }\n            }\n        "], ["\n            & > .btn {\n                position: relative;\n                flex: 1 1 auto;\n                &:not(:last-of-type) {\n                    border-top-right-radius: 0;\n                    border-bottom-right-radius: 0;\n                }\n                &:not(:first-of-type) {\n                    border-top-left-radius: 0;\n                    border-bottom-left-radius: 0;\n                    margin-left: -1px;\n                }\n            }\n        "])));
 }, function (_a) {
@@ -31,6 +25,6 @@ export var StyledGroup = styled(function (_a) {
 });
 export var StyledButtonToolbar = styled(function (_a) {
     var m = _a.m, ml = _a.ml, mr = _a.mr, mt = _a.mt, mb = _a.mb, rest = __rest(_a, ["m", "ml", "mr", "mt", "mb"]);
-    return (_jsx("div", __assign({}, rest), void 0));
+    return (_jsx("div", __assign({}, rest)));
 })(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    ", "\n"], ["\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    ", "\n"])), space);
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;

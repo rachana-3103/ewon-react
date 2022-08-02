@@ -1,4 +1,3 @@
-import React from "react";
 import classnames from "classnames";
 import { SpaceProps, FlexboxProps, LayoutProps } from "@doar/shared/styled";
 import { StyledMedia } from "./style";
@@ -6,14 +5,10 @@ import { StyledMedia } from "./style";
 interface IMediaProps extends SpaceProps, FlexboxProps, LayoutProps {
     as?: React.ElementType;
     className?: string;
+    children: React.ReactNode;
 }
 
-const Media: React.FC<IMediaProps> = ({
-    children,
-    as,
-    className,
-    ...restProps
-}) => {
+const Media = ({ children, as, className, ...restProps }: IMediaProps) => {
     return (
         <StyledMedia
             className={classnames(className, "media")}

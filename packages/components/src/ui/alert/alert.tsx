@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { StyledAlert } from "./style";
 
 export interface AlertProps {
+    children: React.ReactNode;
     /**
      * Required. Default is `contained`.
      */
@@ -36,7 +37,7 @@ export interface AlertProps {
     hasIcon: boolean;
 }
 
-const Alert: React.FC<AlertProps> = ({
+const Alert = ({
     children,
     variant,
     color,
@@ -44,7 +45,7 @@ const Alert: React.FC<AlertProps> = ({
     hasLink,
     isDismissible,
     hasIcon,
-}) => {
+}: AlertProps) => {
     const [show, setShow] = useState(false);
     const dismissHandler = () => {
         setShow(true);

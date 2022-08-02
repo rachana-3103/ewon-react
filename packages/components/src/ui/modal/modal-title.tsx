@@ -1,9 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledTitle } from "./style";
 import { IProps } from "./types";
 
-const ModalTitle: FC<IProps> = ({ className, children, ...restProps }) => {
+const ModalTitle = ({ className, children, ...restProps }: IProps) => {
     return (
         <StyledTitle
             className={classnames(className, "modal-title")}

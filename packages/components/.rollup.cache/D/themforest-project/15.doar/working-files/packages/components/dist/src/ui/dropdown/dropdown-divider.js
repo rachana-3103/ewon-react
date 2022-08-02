@@ -3,6 +3,6 @@ import classnames from "classnames";
 import { StyledDropDivider } from "./style";
 var DropdownDivider = function (_a) {
     var className = _a.className;
-    return (_jsx(StyledDropDivider, { className: classnames(className, "dropdown-divider") }, void 0));
+    return (_jsx(StyledDropDivider, { className: classnames(className, "dropdown-divider") }));
 };
 export default DropdownDivider;

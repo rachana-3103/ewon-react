@@ -1,13 +1,12 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardSubtitle } from "./style";
 import { ICardCommonProps } from "./types";
 
-const CardSubtitle: FC<ICardCommonProps> = ({
+const CardSubtitle = ({
     children,
     className,
     ...restProps
-}) => {
+}: ICardCommonProps) => {
     return (
         <StyledCardSubtitle
             className={classnames(className, "card-subtitle")}

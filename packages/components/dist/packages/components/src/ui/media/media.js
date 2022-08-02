@@ -1,0 +1,2 @@
+import{__rest as s,__assign as e}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as r}from"react/jsx-runtime";import a from"classnames";import{StyledMedia as m}from"./style.js";var l=function(l){var t=l.children,i=l.as,o=l.className,c=s(l,["children","as","className"]);return r(m,e({className:a(o,"media"),as:i,$el:i},c,{children:t}))};export{l as default};
+//# sourceMappingURL=media.js.map

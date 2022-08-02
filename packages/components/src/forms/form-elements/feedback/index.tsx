@@ -1,18 +1,13 @@
-import { FC } from "react";
 import { StyledFeedback } from "./style";
 
 export interface IFeedback {
+    children: React.ReactNode;
     state?: "success" | "warning" | "error";
     showState?: boolean;
     showErrorOnly?: boolean;
 }
 
-const Feedback: FC<IFeedback> = ({
-    state,
-    showState,
-    showErrorOnly,
-    children,
-}) => {
+const Feedback = ({ state, showState, showErrorOnly, children }: IFeedback) => {
     return (
         <StyledFeedback
             $state={state}

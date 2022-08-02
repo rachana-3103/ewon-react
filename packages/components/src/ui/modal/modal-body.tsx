@@ -1,9 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledBody } from "./style";
 import { IBody } from "./types";
 
-const ModalBody: FC<IBody> = ({ className, children, ...restProps }) => {
+const ModalBody = ({ className, children, ...restProps }: IBody) => {
     return (
         <StyledBody
             className={classnames(className, "modal-body")}

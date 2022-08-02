@@ -39,10 +39,8 @@ var Navbar = function (_a) {
                 var hasSubmenu = !!(submenu === null || submenu === void 0 ? void 0 : submenu.length);
                 var hasMegamenu = !!(megamenu === null || megamenu === void 0 ? void 0 : megamenu.length);
                 var hasChildren = hasSubmenu || hasMegamenu;
-                return (_jsxs(StyledNavitem, __assign({ "$hasSubmenu": hasChildren, onClick: function (e) { return clickHandler(e, hasChildren); } }, { children: [_jsxs(StyledNavlink, __assign({ path: hasChildren ? "#!" : nav.url }, { children: [NavIcon && _jsx(NavIcon, {}, void 0), navLabel] }), void 0),
-                        submenu && _jsx(Submenu, { menu: submenu }, void 0),
-                        megamenu && _jsx(Megamenu, { menu: megamenu }, void 0)] }), navId));
-            }) }), void 0));
+                return (_jsxs(StyledNavitem, __assign({ "$hasSubmenu": hasChildren, onClick: function (e) { return clickHandler(e, hasChildren); } }, { children: [_jsxs(StyledNavlink, __assign({ path: hasChildren ? "#!" : nav.url }, { children: [NavIcon && _jsx(NavIcon, {}), navLabel] })), submenu && _jsx(Submenu, { menu: submenu }), megamenu && _jsx(Megamenu, { menu: megamenu })] }), navId));
+            }) })));
 };
 Navbar.defaultProps = {
     menus: [],

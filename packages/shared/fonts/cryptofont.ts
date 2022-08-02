@@ -1,18 +1,13 @@
 import { css } from "styled-components";
-import CryptofontEot from "./cryptofont/cryptofont-webfont.eot";
 import CryptofontWoff from "./cryptofont/cryptofont-webfont.woff";
-import CryptofontTtf from "./cryptofont/cryptofont-webfont.ttf";
-import CryptofontSvg from "./cryptofont/cryptofont-webfont.svg";
+import CryptofontWoff2 from "./cryptofont/cryptofont-webfont.woff2";
 
 export const CryptoFont = css`
     @font-face {
         font-family: CryptoFont;
-        src: url(${CryptofontEot});
-        src: url(${CryptofontEot}) format("embedded-opentype"),
-            url(${CryptofontWoff}) format("woff2"),
-            url(${CryptofontWoff}) format("woff"),
-            url(${CryptofontTtf}) format("truetype"),
-            url(${CryptofontSvg}) format("svg");
+        src: url(${CryptofontWoff2});
+        src: url(${CryptofontWoff2}) format("woff2"),
+            url(${CryptofontWoff}) format("woff");
         font-weight: 400;
         font-style: normal;
     }

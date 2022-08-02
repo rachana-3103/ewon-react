@@ -222,7 +222,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.primary")(props)
+                        themeGet("colors.primary")(props) as string
                     )
                         .lighten(48)
                         .toString()};
@@ -249,7 +249,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.primary")(props)
+                            themeGet("colors.primary")(props) as string
                         )
                             .lighten(48)
                             .darken(3)
@@ -266,7 +266,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.primary")(props)
+                            themeGet("colors.primary")(props) as string
                         )
                             .lighten(48)
                             .darken(6)
@@ -322,7 +322,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .darken(3)
                             .toString()};
@@ -351,7 +351,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .darken(6)
                             .toString()};
@@ -390,7 +390,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.success")(props)
+                        themeGet("colors.success")(props) as string
                     )
                         .lighten(56)
                         .toString()};
@@ -418,7 +418,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.success")(props)
+                            themeGet("colors.success")(props) as string
                         )
                             .lighten(56)
                             .darken(3)
@@ -435,7 +435,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.success")(props)
+                            themeGet("colors.success")(props) as string
                         )
                             .lighten(56)
                             .darken(6)
@@ -460,7 +460,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.danger")(props)
+                        themeGet("colors.danger")(props) as string
                     )
                         .lighten(45)
                         .toString()};
@@ -488,7 +488,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.danger")(props)
+                            themeGet("colors.danger")(props) as string
                         )
                             .lighten(45)
                             .darken(3)
@@ -505,7 +505,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.danger")(props)
+                            themeGet("colors.danger")(props) as string
                         )
                             .lighten(45)
                             .darken(6)
@@ -529,7 +529,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.orange")(props)
+                        themeGet("colors.orange")(props) as string
                     )
                         .lighten(45)
                         .toString()};
@@ -557,7 +557,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.orange")(props)
+                            themeGet("colors.orange")(props) as string
                         )
                             .lighten(45)
                             .darken(3)
@@ -574,7 +574,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.orange")(props)
+                            themeGet("colors.orange")(props) as string
                         )
                             .lighten(45)
                             .darken(6)
@@ -600,7 +600,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.cyan")(props)
+                        themeGet("colors.cyan")(props) as string
                     )
                         .lighten(55)
                         .toString()};
@@ -628,7 +628,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.cyan")(props)
+                            themeGet("colors.cyan")(props) as string
                         )
                             .lighten(55)
                             .darken(3)
@@ -645,7 +645,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.cyan")(props)
+                            themeGet("colors.cyan")(props) as string
                         )
                             .lighten(55)
                             .darken(6)
@@ -671,7 +671,7 @@ export const StyledTable = styled(
             tbody {
                 tr {
                     background-color: ${tinycolor2(
-                        themeGet("colors.gray200")(props)
+                        themeGet("colors.gray200")(props) as string
                     )
                         .lighten(7)
                         .toString()};
@@ -699,7 +699,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .lighten(7)
                             .darken(3)
@@ -716,7 +716,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .lighten(7)
                             .darken(6)
@@ -764,7 +764,7 @@ export const StyledTable = styled(
                 tr {
                     &:nth-of-type(2n + 1) {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .darken(3)
                             .toString()};
@@ -780,7 +780,7 @@ export const StyledTable = styled(
                 tr {
                     &:hover {
                         background-color: ${tinycolor2(
-                            themeGet("colors.gray200")(props)
+                            themeGet("colors.gray200")(props) as string
                         )
                             .darken(6)
                             .toString()};
@@ -804,7 +804,9 @@ export const StyledTable = styled(
         ${(props) =>
             props.theme.name === "cool" &&
             css`
-                border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.skinUi01")(props) as string
+                )
                     .lighten(46)
                     .toString()};
             `}

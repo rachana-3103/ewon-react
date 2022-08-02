@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import { IMegamenu } from "@doar/shared/types";
 import { StyledSubmenu, StyledSubNavItem, StyledSubNavlink } from "./style";
@@ -9,7 +8,7 @@ interface IProps {
     hasChildren: boolean;
 }
 
-const Megamenu: React.FC<IProps> = ({ menu, onClick, hasChildren }) => {
+const Megamenu = ({ menu, onClick, hasChildren }: IProps) => {
     const location = useLocation();
     return (
         <StyledSubmenu className="submenu">

@@ -4,6 +4,6 @@ import classnames from "classnames";
 import { StyledHr } from "./style";
 var HRLine = function (_a) {
     var className = _a.className, restProps = __rest(_a, ["className"]);
-    return _jsx(StyledHr, __assign({ className: classnames(className) }, restProps), void 0);
+    return _jsx(StyledHr, __assign({ className: classnames(className) }, restProps));
 };
 export default HRLine;

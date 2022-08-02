@@ -1,13 +1,12 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardColumns } from "./style";
 import { ICardCommonProps } from "./types";
 
-const CardColumns: FC<ICardCommonProps> = ({
+const CardColumns = ({
     children,
     className,
     ...restProps
-}) => {
+}: ICardCommonProps) => {
     return (
         <StyledCardColumns
             className={classnames(className, "card-columns")}

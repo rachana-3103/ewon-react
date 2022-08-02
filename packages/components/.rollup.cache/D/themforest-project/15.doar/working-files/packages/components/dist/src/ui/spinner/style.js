@@ -1,16 +1,8 @@
 import { __makeTemplateObject } from "tslib";
 import styled, { css, themeGet } from "@doar/shared/styled";
-export var StyledSpinner = styled.div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n    ", "\n\t", "\n"], ["\n    ",
-    "\n    ",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n    ",
-    "\n\t",
-    "\n"])), function (_a) {
+export var StyledSpinner = styled.div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n    ", "\n\t", "\n"], ["\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n    ", "\n\t", "\n"])), function (_a) {
     var $color = _a.$color;
-    return !!$color && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n        "], ["\n            color: ", ";\n        "])), themeGet("colors." + $color));
+    return !!$color && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n        "], ["\n            color: ", ";\n        "])), themeGet("colors.".concat($color)));
 }, function (_a) {
     var $size = _a.$size;
     return $size === "xs" && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n            width: 1rem;\n            height: 1rem;\n            border-width: 0.2em;\n        "], ["\n            width: 1rem;\n            height: 1rem;\n            border-width: 0.2em;\n        "])));

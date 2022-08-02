@@ -1,6 +1,7 @@
 import { SpaceProps } from "@doar/shared/styled";
 
 export interface IProps {
+    children: React.ReactNode;
     /**
      * Pass extra classes
      */

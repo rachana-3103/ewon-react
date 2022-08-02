@@ -75,7 +75,9 @@ export const StyledNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
         height: 18px;
         stroke-width: 2.2px;
         fill: ${(props) =>
-            tinycolor2(props.theme.colors.text2).setAlpha(0.1).toString()};
+            tinycolor2(props.theme.colors.text2 as string)
+                .setAlpha(0.1)
+                .toString()};
         margin-right: 15px;
         color: ${themeGet("colors.gray600")};
         transition: all 0.2s ease-in-out;
@@ -117,7 +119,9 @@ export const StyledSubmenu = styled.ul`
         padding: 20px 25px;
         border: 1px solid
             ${(props) =>
-                tinycolor2(props.theme.colors.text4).setAlpha(0.53).toString()};
+                tinycolor2(props.theme.colors.text4 as string)
+                    .setAlpha(0.53)
+                    .toString()};
         margin-top: 0;
         margin-left: 0;
         border-bottom-right-radius: 0.25rem;
@@ -131,12 +135,12 @@ export const StyledSubmenu = styled.ul`
             left: 25px;
             border-bottom: 1.5px solid
                 ${(props) =>
-                    tinycolor2(props.theme.colors.text4)
+                    tinycolor2(props.theme.colors.text4 as string)
                         .setAlpha(0.53)
                         .toString()};
             border-right: 1.5px solid
                 ${(props) =>
-                    tinycolor2(props.theme.colors.text4)
+                    tinycolor2(props.theme.colors.text4 as string)
                         .setAlpha(0.53)
                         .toString()};
             transform: rotate(-135deg);
@@ -147,12 +151,14 @@ export const StyledSubmenu = styled.ul`
             css`
                 padding-top: 10px;
                 margin-top: 0;
-                border-color: ${tinycolor2(props.theme.colors.skinUi01)
+                border-color: ${tinycolor2(
+                    props.theme.colors.skinUi01 as string
+                )
                     .lighten(45)
                     .toString()};
                 border-top-color: transparent;
                 box-shadow: 0 15px 15px
-                    ${tinycolor2(props.theme.colors.skinUi01)
+                    ${tinycolor2(props.theme.colors.skinUi01 as string)
                         .setAlpha(0.1)
                         .toRgbString()};
                 &:before {
@@ -164,26 +170,32 @@ export const StyledSubmenu = styled.ul`
             css`
                 border-width: 0;
                 ${device.large} {
-                    background-color: ${tinycolor2(props.theme.colors.gray900)
+                    background-color: ${tinycolor2(
+                        props.theme.colors.gray900 as string
+                    )
                         .lighten(5)
                         .toString()};
                 }
                 &::before {
                     border-bottom-color: ${tinycolor2(
-                        props.theme.colors.gray900
+                        props.theme.colors.gray900 as string
                     )
                         .lighten(5)
                         .toString()};
-                    border-right-color: ${tinycolor2(props.theme.colors.gray900)
+                    border-right-color: ${tinycolor2(
+                        props.theme.colors.gray900 as string
+                    )
                         .lighten(5)
                         .toString()};
-                    background: ${tinycolor2(props.theme.colors.gray900)
+                    background: ${tinycolor2(
+                        props.theme.colors.gray900 as string
+                    )
                         .lighten(5)
                         .toString()};
                 }
                 &::after {
                     border-bottom-color: ${tinycolor2(
-                        props.theme.colors.gray900
+                        props.theme.colors.gray900 as string
                     )
                         .lighten(5)
                         .toString()};
@@ -246,7 +258,9 @@ export const StyledMegaMenu = styled.div`
         padding: 20px 25px;
         border: 1px solid
             ${(props) =>
-                tinycolor2(props.theme.colors.text4).setAlpha(0.53).toString()};
+                tinycolor2(props.theme.colors.text4 as string)
+                    .setAlpha(0.53)
+                    .toString()};
         margin-top: 0;
         margin-left: 0;
         border-bottom-right-radius: 0.25rem;
@@ -260,12 +274,12 @@ export const StyledMegaMenu = styled.div`
             left: 25px;
             border-bottom: 1.5px solid
                 ${(props) =>
-                    tinycolor2(props.theme.colors.text4)
+                    tinycolor2(props.theme.colors.text4 as string)
                         .setAlpha(0.53)
                         .toString()};
             border-right: 1.5px solid
                 ${(props) =>
-                    tinycolor2(props.theme.colors.text4)
+                    tinycolor2(props.theme.colors.text4 as string)
                         .setAlpha(0.53)
                         .toString()};
             transform: rotate(-135deg);
@@ -276,24 +290,32 @@ export const StyledMegaMenu = styled.div`
         props.theme.name === "dark" &&
         css`
             ${device.large} {
-                background-color: ${tinycolor2(props.theme.colors.gray900)
+                background-color: ${tinycolor2(
+                    props.theme.colors.gray900 as string
+                )
                     .lighten(5)
                     .toString()};
                 border-width: 0;
             }
             &::before {
-                border-bottom-color: ${tinycolor2(props.theme.colors.gray900)
+                border-bottom-color: ${tinycolor2(
+                    props.theme.colors.gray900 as string
+                )
                     .lighten(5)
                     .toString()};
-                border-right-color: ${tinycolor2(props.theme.colors.gray900)
+                border-right-color: ${tinycolor2(
+                    props.theme.colors.gray900 as string
+                )
                     .lighten(5)
                     .toString()};
-                background: ${tinycolor2(props.theme.colors.gray900)
+                background: ${tinycolor2(props.theme.colors.gray900 as string)
                     .lighten(5)
                     .toString()};
             }
             &::after {
-                border-bottom-color: ${tinycolor2(props.theme.colors.gray900)
+                border-bottom-color: ${tinycolor2(
+                    props.theme.colors.gray900 as string
+                )
                     .lighten(5)
                     .toString()};
             }

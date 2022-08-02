@@ -1,0 +1,2 @@
+import{__rest as r,__assign as s}from"../../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import l from"classnames";import{StyledLabel as m}from"./style.js";var t=function(t){var o=t.children,a=t.htmlFor,i=t.className,c=r(t,["children","htmlFor","className"]);return e(m,s({htmlFor:a,className:l(i,"label")},c,{children:o}))};export{t as default};
+//# sourceMappingURL=index.js.map

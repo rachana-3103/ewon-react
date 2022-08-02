@@ -1,11 +1,10 @@
-import { FC } from "react";
 import { Portal } from "react-portal";
 import classnames from "classnames";
 import { CSSTransition } from "react-transition-group";
 import { StyledBackdrop, StyledModal } from "./style";
 import { IModal } from "./types";
 
-const Modal: FC<IModal> = ({
+const Modal = ({
     className,
     show,
     size,
@@ -13,7 +12,7 @@ const Modal: FC<IModal> = ({
     children,
     onClose,
     ...restProps
-}) => {
+}: IModal) => {
     return (
         <Portal>
             <>
@@ -37,6 +36,7 @@ const Modal: FC<IModal> = ({
                                 <div
                                     className="modal-content"
                                     onClick={(e) => e.stopPropagation()}
+                                    onKeyPress={() => {}}
                                     role="button"
                                     tabIndex={0}
                                 >

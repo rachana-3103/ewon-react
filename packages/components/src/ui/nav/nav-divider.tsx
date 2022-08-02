@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { StyledDivider } from "./style";
 
-const NavDivider: FC = () => {
+const NavDivider = () => {
     return <StyledDivider />;
 };
 

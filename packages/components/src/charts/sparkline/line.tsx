@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { Sparklines, SparklinesLine, SparklinesSpots } from "react-sparklines";
 import { ISparklineLineProps } from "./types";
 
-const SparklinesLines: FC<ISparklineLineProps> = ({
+const SparklinesLines = ({
     data,
     limit,
     width,
@@ -21,7 +20,7 @@ const SparklinesLines: FC<ISparklineLineProps> = ({
     spotSize,
     spotStyle,
     spotColors,
-}) => {
+}: ISparklineLineProps) => {
     return (
         <Sparklines
             data={data}

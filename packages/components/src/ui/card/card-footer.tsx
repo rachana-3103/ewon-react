@@ -1,13 +1,12 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardFooter } from "./style";
 import { ICardFooterProps } from "./types";
 
-const CardFooter: FC<ICardFooterProps> = ({
+const CardFooter = ({
     children,
     className,
     ...restProps
-}) => {
+}: ICardFooterProps) => {
     return (
         <StyledCardFooter
             className={classnames(className, "card-footer")}

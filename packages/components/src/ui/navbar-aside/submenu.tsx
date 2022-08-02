@@ -1,4 +1,3 @@
-import React from "react";
 import cn from "classnames";
 import { ISubmenu } from "@doar/shared/types";
 import { StyledSubmenu, StyledSubNavItem, StyledSubNavlink } from "./style";
@@ -8,7 +7,7 @@ interface IProps {
     className?: string;
 }
 
-const Submenu: React.FC<IProps> = ({ menu, className }) => {
+const Submenu = ({ menu, className }: IProps) => {
     return (
         <StyledSubmenu className={className}>
             {menu.map(({ id, label, url, Icon }) => (

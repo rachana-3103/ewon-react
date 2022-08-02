@@ -2,7 +2,7 @@
     "compilerOptions": {
       "baseUrl": "./packages",
       "paths": {
-        "@doar/*": ["./*/src/"]
+        "@ht/*": ["./*/src/"]
       },
       "jsx": "react",
       "module": "CommonJS",
@@ -17,5 +17,5 @@
       "allowJs": false,
       "checkJs": false,
     },
-    "exclude": ["node_modules", "docs", "stories", "__tests__"]
+    "exclude": ["node_modules", "docs", "stories", "__tests__", "dist"]
 }

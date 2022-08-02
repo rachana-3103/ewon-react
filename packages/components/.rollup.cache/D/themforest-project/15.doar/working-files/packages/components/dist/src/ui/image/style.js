@@ -2,15 +2,7 @@ import { __assign, __makeTemplateObject, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 /* eslint-disable jsx-a11y/alt-text */
 import styled, { space, layout, flexbox, device, css, themeGet, } from "@doar/shared/styled";
-var imageCss = css(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n    max-width: 100%;\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t\n\t", "\n\t", "\n    ", ";\n    ", ";\n"], ["\n    max-width: 100%;\n    ",
-    "\n    ",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t\n\t",
-    "\n\t",
-    "\n    ", ";\n    ", ";\n"])), function (_a) {
+var imageCss = css(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n    max-width: 100%;\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t\n\t", "\n\t", "\n    ", ";\n    ", ";\n"], ["\n    max-width: 100%;\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t\n\t", "\n\t", "\n    ", ";\n    ", ";\n"])), function (_a) {
     var $shape = _a.$shape;
     return $shape === "rounded" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            border-radius: ", ";\n        "], ["\n            border-radius: ", ";\n        "])), themeGet("radii.rounded"));
 }, function (_a) {
@@ -37,13 +29,9 @@ var imageCss = css(templateObject_9 || (templateObject_9 = __makeTemplateObject(
 }, space, layout);
 export var StyledImage = styled(function (_a) {
     var m = _a.m, mx = _a.mx, my = _a.my, ml = _a.ml, mr = _a.mr, mt = _a.mt, mb = _a.mb, maxWidth = _a.maxWidth, maxHeight = _a.maxHeight, width = _a.width, height = _a.height, display = _a.display, rest = __rest(_a, ["m", "mx", "my", "ml", "mr", "mt", "mb", "maxWidth", "maxHeight", "width", "height", "display"]);
-    return _jsx("img", __assign({}, rest), void 0);
+    return _jsx("img", __assign({}, rest));
 })(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n    ", "\n"], ["\n    ", "\n"])), imageCss);
-var groupCss = css(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    img {\n        position: relative;\n        background-color: #fff;\n        ", " {\n            padding: 3px;\n        }\n        ", "\n    }\n    ", "\n    ", "\n    ", "\n    ", ";\n    ", ";\n"], ["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    img {\n        position: relative;\n        background-color: #fff;\n        ", " {\n            padding: 3px;\n        }\n        ",
-    "\n    }\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ", ";\n    ", ";\n"])), device.small, function (props) {
+var groupCss = css(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    img {\n        position: relative;\n        background-color: #fff;\n        ", " {\n            padding: 3px;\n        }\n        ", "\n    }\n    ", "\n    ", "\n    ", "\n    ", ";\n    ", ";\n"], ["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    img {\n        position: relative;\n        background-color: #fff;\n        ", " {\n            padding: 3px;\n        }\n        ", "\n    }\n    ", "\n    ", "\n    ", "\n    ", ";\n    ", ";\n"])), device.small, function (props) {
     return props.theme.name === "dark" && css(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n                background-color: ", ";\n            "], ["\n                background-color: ", ";\n            "])), themeGet("colors.gray900"));
 }, function (_a) {
     var $size = _a.$size;
@@ -56,6 +44,6 @@ var groupCss = css(templateObject_15 || (templateObject_15 = __makeTemplateObjec
 }, flexbox, space);
 export var StyledGroup = styled(function (_a) {
     var mb = _a.mb, alignItems = _a.alignItems, justifyContent = _a.justifyContent, rest = __rest(_a, ["mb", "alignItems", "justifyContent"]);
-    return _jsx("div", __assign({}, rest), void 0);
+    return _jsx("div", __assign({}, rest));
 })(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n    ", ";\n"], ["\n    ", ";\n"])), groupCss);
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16;

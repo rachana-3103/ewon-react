@@ -1,0 +1,2 @@
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as a}from"react/jsx-runtime";import o from"classnames";import{StyledSpinner as e}from"./style.js";var i=function(i){var t=i.className,m=i.variant,n=void 0===m?"border":m,l=i.color,c=i.size,d=r(i,["className","variant","color","size"]);return a(e,s({className:o(t,"spinner","spinner-".concat(n)),$variant:n,$color:l,$size:c},d))};i.defaultProps={variant:"border",size:"md"};export{i as default};
+//# sourceMappingURL=spinner.js.map

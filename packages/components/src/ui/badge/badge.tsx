@@ -1,9 +1,9 @@
-import React from "react";
 import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledBadge } from "./style";
 
 export interface BadgeProps extends SpaceProps {
+    children: React.ReactNode;
     /**
      * The visual style of the badge
      */
@@ -34,7 +34,7 @@ export interface BadgeProps extends SpaceProps {
     className?: string;
 }
 
-const Badge: React.FC<BadgeProps> = ({
+const Badge = ({
     color,
     variant,
     shape,
@@ -42,7 +42,7 @@ const Badge: React.FC<BadgeProps> = ({
     children,
     className,
     ...restProps
-}) => {
+}: BadgeProps) => {
     return (
         <StyledBadge
             $color={color}

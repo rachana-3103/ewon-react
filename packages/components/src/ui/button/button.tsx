@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import { FC } from "react";
+
 import classnames from "classnames";
 import {
     SpaceProps,
@@ -104,7 +104,7 @@ export interface ButtonProps
     uppercase?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({
+const Button = ({
     children,
     type,
     variant,
@@ -125,7 +125,7 @@ const Button: FC<ButtonProps> = ({
     iconSpace,
     uppercase,
     ...restProps
-}) => {
+}: ButtonProps) => {
     if (path) {
         const internal: boolean = /^\/(?!\/)/.test(path);
         const isHash: boolean = path?.startsWith("#");

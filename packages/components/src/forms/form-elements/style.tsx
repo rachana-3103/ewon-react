@@ -108,7 +108,9 @@ export const InputStyles = css<IInput>`
         color: ${themeGet("colors.gray700")};
         background-color: #fff;
         border-color: ${(props) =>
-            tinycolor2(props.theme.colors.primary).lighten(25).toString()};
+            tinycolor2(props.theme.colors.primary as string)
+                .lighten(25)
+                .toString()};
         outline: 0;
         box-shadow: ${themeGet("shadows.input")};
     }

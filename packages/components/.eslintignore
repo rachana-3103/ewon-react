@@ -6,7 +6,6 @@
 .pnp.js
 .cache
 .eslintcache
-.rollup.cache
 
 # testing
 /coverage

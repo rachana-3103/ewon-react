@@ -51,7 +51,7 @@ const anchorStyle = css<IProps>`
         css`
             ${props.$variant === "link1" &&
             css`
-                color: ${tinycolor(themeGet("colors.white")(props))
+                color: ${tinycolor(themeGet("colors.white")(props) as string)
                     .setAlpha(0.85)
                     .toRgbString()};
                 &:hover,

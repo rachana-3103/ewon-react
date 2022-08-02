@@ -1,4 +1,4 @@
-import { Children, FC, FunctionComponent, ReactChild, ReactText } from "react";
+import { Children, FunctionComponent, isValidElement } from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
 import icon from "leaflet/dist/images/marker-icon.png";
@@ -14,9 +14,7 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-type IChild = Exclude<ReactChild, ReactText>;
-
-const LeafletMap: FC<IProps> = ({
+const LeafletMap = ({
     width,
     height,
     lat,
@@ -24,9 +22,10 @@ const LeafletMap: FC<IProps> = ({
     zoom,
     scrollWheelZoom,
     children,
-}) => {
+}: IProps) => {
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

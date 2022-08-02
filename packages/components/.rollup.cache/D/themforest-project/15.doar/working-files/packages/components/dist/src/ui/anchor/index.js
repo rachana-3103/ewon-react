@@ -7,11 +7,11 @@ var Anchor = function (_a) {
     if (!internal) {
         var isHash = path.startsWith("#");
         if (isHash) {
-            return (_jsx(StyledAnchor, __assign({ "aria-label": label, rel: rel, className: className, href: path, onClick: onClick, "$variant": variant }, rest, { children: children }), void 0));
+            return (_jsx(StyledAnchor, __assign({ "aria-label": label, rel: rel, className: className, href: path, onClick: onClick, "$variant": variant }, rest, { children: children })));
         }
-        return (_jsx(StyledAnchor, __assign({ "aria-label": label, rel: rel, className: className, href: path, target: target, onClick: onClick, "$variant": variant }, rest, { children: children }), void 0));
+        return (_jsx(StyledAnchor, __assign({ "aria-label": label, rel: rel, className: className, href: path, target: target, onClick: onClick, "$variant": variant }, rest, { children: children })));
     }
-    return (_jsx(StyledLink, __assign({ "aria-label": label, rel: "preload", className: className, to: path, onClick: onClick, "$variant": variant }, rest, { children: children }), void 0));
+    return (_jsx(StyledLink, __assign({ "aria-label": label, rel: "preload", className: className, to: path, onClick: onClick, "$variant": variant }, rest, { children: children })));
 };
 Anchor.defaultProps = {
     target: "_blank",

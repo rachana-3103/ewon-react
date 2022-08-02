@@ -1,8 +1,9 @@
-import { FC, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import { StyledDropMenu } from "./style";
 
 interface IDropMenu {
+    children: React.ReactNode;
     show?: boolean;
     direction?: "up" | "down" | "left" | "right";
     className?: string;
@@ -19,13 +20,13 @@ interface IMenuMeasure {
     offsetTop: number;
 }
 
-const DropdownMenu: FC<IDropMenu> = ({
+const DropdownMenu = ({
     children,
     show,
     direction,
     className,
     ...restProps
-}) => {
+}: IDropMenu) => {
     const [menuMeasure, setMenuMeasure] = useState<IMenuMeasure>({
         clientWidth: 0,
         clientHeight: 0,

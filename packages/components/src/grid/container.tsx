@@ -1,12 +1,12 @@
-import { FC } from "react";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledContainer } from "./style";
 
 interface IProps extends SpaceProps {
+    children: React.ReactNode;
     className?: string;
 }
 
-const Container: FC<IProps> = ({ className, ...props }) => {
+const Container = ({ className, ...props }: IProps) => {
     return <StyledContainer className={className} {...props} />;
 };
 

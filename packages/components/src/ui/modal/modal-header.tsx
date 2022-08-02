@@ -1,9 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledFooter } from "./style";
 import { IProps } from "./types";
 
-const ModalFooter: FC<IProps> = ({ className, children, ...restProps }) => {
+const ModalFooter = ({ className, children, ...restProps }: IProps) => {
     return (
         <StyledFooter
             className={classnames(className, "modal-body")}

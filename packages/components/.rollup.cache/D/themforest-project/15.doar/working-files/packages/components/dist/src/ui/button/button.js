@@ -1,5 +1,6 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
+/* eslint-disable react/button-has-type */
 import classnames from "classnames";
 import { StyledButton, StyledAnchor, StyledLink } from "./style";
 var Button = function (_a) {
@@ -8,14 +9,14 @@ var Button = function (_a) {
         var internal = /^\/(?!\/)/.test(path);
         var isHash = path === null || path === void 0 ? void 0 : path.startsWith("#");
         if (internal) {
-            return (_jsx(StyledLink, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), to: path }, restProps, { children: children }), void 0));
+            return (_jsx(StyledLink, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), to: path }, restProps, { children: children })));
         }
         if (isHash) {
-            return (_jsx(StyledAnchor, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), href: path }, restProps, { children: children }), void 0));
+            return (_jsx(StyledAnchor, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), href: path }, restProps, { children: children })));
         }
-        return (_jsx(StyledAnchor, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), href: path }, restProps, { children: children }), void 0));
+        return (_jsx(StyledAnchor, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn"), href: path }, restProps, { children: children })));
     }
-    return (_jsx(StyledButton, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, type: type, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn") }, restProps, { children: children }), void 0));
+    return (_jsx(StyledButton, __assign({ "$color": color, "$variant": variant, "$size": size, "$shape": shape, "$fullwidth": fullwidth, type: type, "$active": active, disabled: disabled, "$iconButton": iconButton, "$hasIcon": hasIcon, "$iconPosition": iconPosition, "$iconSize": iconSize, "$iconSpace": iconSpace, "$uppercase": uppercase, "aria-label": label, onClick: onClick, className: classnames(className, "btn") }, restProps, { children: children })));
 };
 Button.defaultProps = {
     type: "button",

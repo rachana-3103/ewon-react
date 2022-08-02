@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { Tab, TabPanel, TabList } from "react-tabs";
 import type { TabsProps } from "react-tabs";
@@ -6,6 +5,7 @@ import { StyledTabs, StyledTabContent } from "./style";
 
 interface IProps {
     className?: string;
+    children: React.ReactNode;
 }
 
 interface ITab extends TabsProps {
@@ -14,7 +14,7 @@ interface ITab extends TabsProps {
     variation?: "line";
 }
 
-export const TabWrap: FC<ITab> = ({
+export const TabWrap = ({
     className,
     children,
     justified,
@@ -29,7 +29,7 @@ export const TabWrap: FC<ITab> = ({
     selectedIndex,
     selectedTabClassName,
     selectedTabPanelClassName,
-}) => {
+}: ITab) => {
     return (
         <StyledTabs
             className={classnames(className, "react-tabs")}
@@ -51,7 +51,7 @@ export const TabWrap: FC<ITab> = ({
     );
 };
 
-export const TabContent: FC<IProps> = ({ className, children }) => {
+export const TabContent = ({ className, children }: IProps) => {
     return (
         <StyledTabContent
             className={classnames(className, "react-tabs__content")}

@@ -1,16 +1,15 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardImage } from "./style";
 import { ICardImageProps } from "./types";
 
-const CardImage: FC<ICardImageProps> = ({
+const CardImage = ({
     src,
     alt,
     className,
     isTop,
     isBottom,
     ...restProps
-}) => {
+}: ICardImageProps) => {
     const topClass = isTop ? "card-img-top" : "";
     const bottomClass = isBottom ? "card-img-bottom" : "";
     return (

@@ -98,7 +98,7 @@ export const StyledCard = styled(
         props.theme.name === "light" &&
         css`
             box-shadow: 0 0 10px
-                ${tinycolor2(themeGet("colors.gray900")(props))
+                ${tinycolor2(themeGet("colors.gray900")(props) as string)
                     .setAlpha(0.05)
                     .toRgbString()};
         `}
@@ -108,7 +108,7 @@ export const StyledCard = styled(
         css`
             border-color: transparent;
             box-shadow: 0 0 25px
-                ${tinycolor2(themeGet("colors.skinUi01")(props))
+                ${tinycolor2(themeGet("colors.skinUi01")(props) as string)
                     .setAlpha(0.1)
                     .toRgbString()};
         `}
@@ -343,7 +343,9 @@ export const StyledCardHeader = styled(
     ${(props) =>
         props.theme.name === "cool" &&
         css`
-            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.skinUi01")(props) as string
+            )
                 .lighten(46)
                 .toString()};
         `}
@@ -384,7 +386,9 @@ export const StyledCardFooter = styled(
     ${(props) =>
         props.theme.name === "cool" &&
         css`
-            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.skinUi01")(props) as string
+            )
                 .lighten(46)
                 .toString()};
         `}

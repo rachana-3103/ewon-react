@@ -1,10 +1,6 @@
 import { __makeTemplateObject } from "tslib";
 import styled, { themeGet, css } from "@doar/shared/styled";
-export var StyledFeedback = styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    width: 100%;\n    margin-top: 0.25rem;\n    font-size: 80%;\n    ", "\n    ", ";\n    ", ";\n\n    ", ";\n"], ["\n    width: 100%;\n    margin-top: 0.25rem;\n    font-size: 80%;\n    ",
-    "\n    ",
-    ";\n    ",
-    ";\n\n    ",
-    ";\n"])), function (_a) {
+export var StyledFeedback = styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    width: 100%;\n    margin-top: 0.25rem;\n    font-size: 80%;\n    ", "\n    ", ";\n    ", ";\n\n    ", ";\n"], ["\n    width: 100%;\n    margin-top: 0.25rem;\n    font-size: 80%;\n    ", "\n    ", ";\n    ", ";\n\n    ", ";\n"])), function (_a) {
     var $state = _a.$state, $showErrorOnly = _a.$showErrorOnly;
     return $state !== "error" &&
         $showErrorOnly && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            display: none;\n        "], ["\n            display: none;\n        "])));

@@ -123,7 +123,9 @@ export const StyledListGroupItem = styled(
         ${(props) =>
         props.theme.name === "cool" &&
         css`
-            border-color: ${tinycolor2(themeGet("colors.skinUi01")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.skinUi01")(props) as string
+            )
                 .lighten(46)
                 .toString()};
         `}

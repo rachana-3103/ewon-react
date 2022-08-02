@@ -70,26 +70,30 @@ const buttonStyles = css<IProps>`
             border-color: ${themeGet("colors.primary")};
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.primary")(props)
+                    themeGet("colors.primary")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.primary")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.primary")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
                 background-color: ${tinycolor2(
-                    themeGet("colors.primary")(props)
+                    themeGet("colors.primary")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.primary")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.primary")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.primary")(props))
+                    ${tinycolor2(themeGet("colors.primary")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -104,18 +108,20 @@ const buttonStyles = css<IProps>`
             border-color: ${themeGet("colors.secondary")};
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.secondary")(props)
+                    themeGet("colors.secondary")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.secondary")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.secondary")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.secondary")(props))
+                    ${tinycolor2(themeGet("colors.secondary")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -130,26 +136,30 @@ const buttonStyles = css<IProps>`
             border-color: ${themeGet("colors.success")};
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.success")(props)
+                    themeGet("colors.success")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.success")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.success")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
                 background-color: ${tinycolor2(
-                    themeGet("colors.success")(props)
+                    themeGet("colors.success")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.success")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.success")(props) as string
+                )
                     .darken(10)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.success")(props))
+                    ${tinycolor2(themeGet("colors.success")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -163,23 +173,31 @@ const buttonStyles = css<IProps>`
             background-color: ${themeGet("colors.danger")};
             border-color: ${themeGet("colors.danger")};
             &:hover {
-                background-color: ${tinycolor2(themeGet("colors.danger")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.danger")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.danger")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.danger")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
-                background-color: ${tinycolor2(themeGet("colors.danger")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.danger")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.danger")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.danger")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.danger")(props))
+                    ${tinycolor2(themeGet("colors.danger")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -194,26 +212,30 @@ const buttonStyles = css<IProps>`
             border-color: ${themeGet("colors.warning")};
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.warning")(props)
+                    themeGet("colors.warning")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.warning")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.warning")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
                 background-color: ${tinycolor2(
-                    themeGet("colors.warning")(props)
+                    themeGet("colors.warning")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.warning")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.warning")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.warning")(props))
+                    ${tinycolor2(themeGet("colors.warning")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -227,23 +249,31 @@ const buttonStyles = css<IProps>`
             background-color: ${themeGet("colors.info")};
             border-color: ${themeGet("colors.info")};
             &:hover {
-                background-color: ${tinycolor2(themeGet("colors.info")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.info")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.info")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.info")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
-                background-color: ${tinycolor2(themeGet("colors.info")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.info")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.info")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.info")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.info")(props))
+                    ${tinycolor2(themeGet("colors.info")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -258,24 +288,32 @@ const buttonStyles = css<IProps>`
             border-color: ${themeGet("colors.light")};
             &:hover {
                 color: ${themeGet("colors.gray900")};
-                background-color: ${tinycolor2(themeGet("colors.light")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.light")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.light")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.light")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
                 color: ${themeGet("colors.gray900")};
-                background-color: ${tinycolor2(themeGet("colors.light")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.light")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.light")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.light")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.light")(props))
+                    ${tinycolor2(themeGet("colors.light")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -301,23 +339,31 @@ const buttonStyles = css<IProps>`
             background-color: ${themeGet("colors.dark")};
             border-color: ${themeGet("colors.dark")};
             &:hover {
-                background-color: ${tinycolor2(themeGet("colors.dark")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.dark")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.dark")(props) as string
+                )
                     .darken(14)
                     .toString()};
             }
             &:active,
             &:focus {
-                background-color: ${tinycolor2(themeGet("colors.dark")(props))
+                background-color: ${tinycolor2(
+                    themeGet("colors.dark")(props) as string
+                )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.dark")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.dark")(props))
+                    ${tinycolor2(themeGet("colors.dark")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -329,7 +375,7 @@ const buttonStyles = css<IProps>`
         css`
             ${props.theme.name !== "dark" &&
             css`
-                color: ${tinycolor2(themeGet("colors.text2")(props))
+                color: ${tinycolor2(themeGet("colors.text2")(props) as string)
                     .setAlpha(0.7)
                     .toRgbString()};
                 background-color: ${themeGet("colors.white")};
@@ -356,26 +402,30 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.dark")};
                 &:hover {
                     background-color: ${tinycolor2(
-                        themeGet("colors.dark")(props)
+                        themeGet("colors.dark")(props) as string
                     )
                         .darken(10)
                         .toString()};
-                    border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                    border-color: ${tinycolor2(
+                        themeGet("colors.dark")(props) as string
+                    )
                         .darken(14)
                         .toString()};
                 }
                 &:active,
                 &:focus {
                     background-color: ${tinycolor2(
-                        themeGet("colors.dark")(props)
+                        themeGet("colors.dark")(props) as string
                     )
                         .darken(10)
                         .toString()};
-                    border-color: ${tinycolor2(themeGet("colors.dark")(props))
+                    border-color: ${tinycolor2(
+                        themeGet("colors.dark")(props) as string
+                    )
                         .darken(14)
                         .toString()};
                     box-shadow: 0 0 0 0.2rem
-                        ${tinycolor2(themeGet("colors.dark")(props))
+                        ${tinycolor2(themeGet("colors.dark")(props) as string)
                             .setAlpha(0.5)
                             .toRgbString()};
                 }
@@ -408,11 +458,13 @@ const buttonStyles = css<IProps>`
             color: #fff;
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.facebook")(props)
+                    themeGet("colors.facebook")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.facebook")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.facebook")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 color: #fff;
@@ -421,15 +473,17 @@ const buttonStyles = css<IProps>`
             &:focus {
                 color: #fff;
                 background-color: ${tinycolor2(
-                    themeGet("colors.facebook")(props)
+                    themeGet("colors.facebook")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.facebook")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.facebook")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.facebook")(props))
+                    ${tinycolor2(themeGet("colors.facebook")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -443,11 +497,13 @@ const buttonStyles = css<IProps>`
             color: #fff;
             &:hover {
                 background-color: ${tinycolor2(
-                    themeGet("colors.twitter")(props)
+                    themeGet("colors.twitter")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.twitter")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.twitter")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 color: #fff;
@@ -456,15 +512,17 @@ const buttonStyles = css<IProps>`
             &:focus {
                 color: #fff;
                 background-color: ${tinycolor2(
-                    themeGet("colors.twitter")(props)
+                    themeGet("colors.twitter")(props) as string
                 )
                     .darken(10)
                     .toString()};
-                border-color: ${tinycolor2(themeGet("colors.twitter")(props))
+                border-color: ${tinycolor2(
+                    themeGet("colors.twitter")(props) as string
+                )
                     .darken(14)
                     .toString()};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.twitter")(props))
+                    ${tinycolor2(themeGet("colors.twitter")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -494,7 +552,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.primary")};
                 background-color: ${themeGet("colors.primary")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.primary")(props))
+                    ${tinycolor2(themeGet("colors.primary")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -517,7 +575,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.secondary")};
                 background-color: ${themeGet("colors.secondary")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.secondary")(props))
+                    ${tinycolor2(themeGet("colors.secondary")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -540,7 +598,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.success")};
                 background-color: ${themeGet("colors.success")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.success")(props))
+                    ${tinycolor2(themeGet("colors.success")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -563,7 +621,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.danger")};
                 background-color: ${themeGet("colors.danger")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.danger")(props))
+                    ${tinycolor2(themeGet("colors.danger")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -586,7 +644,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.warning")};
                 background-color: ${themeGet("colors.warning")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.warning")(props))
+                    ${tinycolor2(themeGet("colors.warning")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -609,7 +667,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.info")};
                 background-color: ${themeGet("colors.info")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.info")(props))
+                    ${tinycolor2(themeGet("colors.info")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -632,7 +690,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.light")};
                 background-color: ${themeGet("colors.light")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.light")(props))
+                    ${tinycolor2(themeGet("colors.light")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -655,7 +713,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.dark")};
                 background-color: ${themeGet("colors.dark")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.dark")(props))
+                    ${tinycolor2(themeGet("colors.dark")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -687,7 +745,7 @@ const buttonStyles = css<IProps>`
                 border-color: ${themeGet("colors.brand2")};
                 background-color: ${themeGet("colors.brand2")};
                 box-shadow: 0 0 0 0.2rem
-                    ${tinycolor2(themeGet("colors.brand2")(props))
+                    ${tinycolor2(themeGet("colors.brand2")(props) as string)
                         .setAlpha(0.5)
                         .toRgbString()};
             }
@@ -788,10 +846,14 @@ const buttonStyles = css<IProps>`
         props.$color === "primary" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.primary")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.primary")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.primary")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.primary")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -801,10 +863,14 @@ const buttonStyles = css<IProps>`
         props.$color === "secondary" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.secondary")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.secondary")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.secondary")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.secondary")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -814,10 +880,14 @@ const buttonStyles = css<IProps>`
         props.$color === "success" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.success")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.success")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.success")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.success")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -827,10 +897,14 @@ const buttonStyles = css<IProps>`
         props.$color === "danger" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.danger")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.danger")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.danger")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.danger")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -840,10 +914,14 @@ const buttonStyles = css<IProps>`
         props.$color === "warning" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.warning")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.warning")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.warning")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.warning")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -853,10 +931,12 @@ const buttonStyles = css<IProps>`
         props.$color === "info" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.info")(props))
+            border-color: ${tinycolor2(themeGet("colors.info")(props) as string)
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.info")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.info")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -865,10 +945,14 @@ const buttonStyles = css<IProps>`
         props.$color === "light" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.light")(props))
+            border-color: ${tinycolor2(
+                themeGet("colors.light")(props) as string
+            )
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.light")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.light")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}
@@ -877,10 +961,12 @@ const buttonStyles = css<IProps>`
         props.$color === "dark" &&
         css`
             color: ${themeGet("colors.white")};
-            border-color: ${tinycolor2(themeGet("colors.dark")(props))
+            border-color: ${tinycolor2(themeGet("colors.dark")(props) as string)
                 .darken(10)
                 .toString()};
-            background-color: ${tinycolor2(themeGet("colors.dark")(props))
+            background-color: ${tinycolor2(
+                themeGet("colors.dark")(props) as string
+            )
                 .darken(10)
                 .toString()}; ;
         `}

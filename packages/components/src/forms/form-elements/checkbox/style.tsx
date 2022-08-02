@@ -8,6 +8,7 @@ export const StyledCheckboxLabel = styled.label`
     vertical-align: top;
     display: inline-block;
     height: 20px;
+    padding-left: 10px;
     &:before {
         transition: background-color 0.15s ease-in-out,
             border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -60,32 +61,40 @@ export const StyledCheckbox = styled.input`
         }
         &:checked ~ label:before {
             border-color: ${(props) =>
-                tinycolor(props.theme.colors.primary).setAlpha(0.2).toString()};
+                tinycolor(props.theme.colors.primary as string)
+                    .setAlpha(0.2)
+                    .toString()};
             background-color: ${(props) =>
-                tinycolor(props.theme.colors.primary).setAlpha(0.5).toString()};
+                tinycolor(props.theme.colors.primary as string)
+                    .setAlpha(0.5)
+                    .toString()};
         }
     }
     &:active {
         & ~ label:before {
             color: #fff;
             background-color: ${(props) =>
-                tinycolor(props.theme.colors.primary).lighten(35).toString()};
+                tinycolor(props.theme.colors.primary as string)
+                    .lighten(35)
+                    .toString()};
             border-color: ${(props) =>
-                tinycolor(props.theme.colors.primary).lighten(35).toString()};
+                tinycolor(props.theme.colors.primary as string)
+                    .lighten(35)
+                    .toString()};
         }
     }
     &:focus {
         & ~ label:before {
             box-shadow: 0 0 0 0.2rem
                 ${(props) =>
-                    tinycolor(props.theme.colors.primary)
+                    tinycolor(props.theme.colors.primary as string)
                         .setAlpha(0.25)
                         .toString()};
         }
         &:not(:checked) {
             & ~ label:before {
                 border-color: ${(props) =>
-                    tinycolor(props.theme.colors.primary)
+                    tinycolor(props.theme.colors.primary as string)
                         .lighten(25)
                         .toString()};
             }

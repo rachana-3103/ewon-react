@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { Sparklines, SparklinesBars } from "react-sparklines";
 import { ISparklineProps } from "./types";
 
-const SparklinesBar: FC<ISparklineProps> = ({
+const SparklinesBar = ({
     data,
     limit,
     width,
@@ -19,7 +18,7 @@ const SparklinesBar: FC<ISparklineProps> = ({
     barHeight,
     barWidth,
     onMouseMove,
-}) => {
+}: ISparklineProps) => {
     return (
         <Sparklines
             data={data}

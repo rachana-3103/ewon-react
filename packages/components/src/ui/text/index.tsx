@@ -1,4 +1,4 @@
-import { FC, ElementType } from "react";
+import { ElementType } from "react";
 import {
     SpaceProps,
     ColorProps,
@@ -8,11 +8,12 @@ import {
 import { StyledText } from "./style";
 
 interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
+    children: React.ReactNode;
     as?: ElementType;
     className?: string;
 }
 
-const Text: FC<IProps> = ({ as, className, children, ...restProps }) => {
+const Text = ({ as, className, children, ...restProps }: IProps) => {
     return (
         <StyledText as={as} className={className} {...restProps}>
             {children}

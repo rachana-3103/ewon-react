@@ -1,6 +1,6 @@
 import { __assign } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import { Children } from "react";
+import { Children, isValidElement } from "react";
 import { GoogleMap as GoogleMapComponent, useJsApiLoader, } from "@react-google-maps/api";
 import { MapKey } from "@doar/shared/data";
 import { StyledMap } from "./style";
@@ -11,20 +11,22 @@ var GoogleMap = function (_a) {
         googleMapsApiKey: MapKey,
     }), isLoaded = _b.isLoaded, loadError = _b.loadError;
     if (loadError) {
-        return _jsx("div", { children: "Map cannot be loaded right now, sorry." }, void 0);
+        return _jsx("div", { children: "Map cannot be loaded right now, sorry." });
     }
     var RenderChild = Children.map(children, function (el) {
+        if (!isValidElement(el))
+            return el;
         var child = el;
         if (child !== null) {
             var childType = child.type;
             var name_1 = childType.displayName || childType.name;
             if (name_1 === "GoogleMapMarker") {
-                return _jsx(child.type, __assign({ lat: lat, lng: lng }, child.props), void 0);
+                return _jsx(child.type, __assign({ lat: lat, lng: lng }, child.props));
             }
         }
         return null;
     });
-    return isLoaded ? (_jsx(StyledMap, __assign({ width: width, height: height }, { children: _jsx(GoogleMapComponent, __assign({ mapContainerStyle: { width: "100%", height: "100%" }, center: { lat: lat, lng: lng }, zoom: zoom }, { children: RenderChild }), void 0) }), void 0)) : (_jsx("div", { children: "Map is loading." }, void 0));
+    return isLoaded ? (_jsx(StyledMap, __assign({ width: width, height: height }, { children: _jsx(GoogleMapComponent, __assign({ mapContainerStyle: { width: "100%", height: "100%" }, center: { lat: lat, lng: lng }, zoom: zoom }, { children: RenderChild })) }))) : (_jsx("div", { children: "Map is loading." }));
 };
 GoogleMap.defaultProps = {
     width: "100%",

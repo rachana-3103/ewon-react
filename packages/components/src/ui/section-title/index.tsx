@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { TypographyProps } from "@doar/shared/styled";
 import { StyledTitle, StyledDesc } from "./style";
 
@@ -9,7 +8,7 @@ interface IProps {
     titleProps?: TypographyProps;
 }
 
-const SectionTitle: FC<IProps> = ({ title, desc, descProps, titleProps }) => {
+const SectionTitle = ({ title, desc, descProps, titleProps }: IProps) => {
     return (
         <>
             <StyledTitle $hasDesc={Boolean(desc)} {...titleProps}>

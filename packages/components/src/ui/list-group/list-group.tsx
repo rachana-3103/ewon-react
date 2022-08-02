@@ -1,30 +1,27 @@
-import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
+import { Children, isValidElement, FunctionComponent } from "react";
 import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledListGroup } from "./style";
 
-interface IProps {
+interface IListGroup extends SpaceProps {
+    children: React.ReactNode;
     as?: React.ElementType;
     className?: string;
-}
-
-interface IListGroup extends IProps, SpaceProps {
     flush?: boolean;
     horizontal?: boolean;
 }
 
-type IChild = Exclude<ReactChild, ReactText>;
-
-const ListGroup: FC<IListGroup> = ({
+const ListGroup = ({
     as,
     className,
     children,
     flush,
     horizontal,
     ...restProps
-}) => {
+}: IListGroup) => {
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

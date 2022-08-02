@@ -3,33 +3,8 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import styled, { css, themeGet, layout, space, color as colorStyles, typography, tinycolor, } from "@doar/shared/styled";
 export var StyledAvatar = styled(function (_a) {
     var display = _a.display, mr = _a.mr, rest = __rest(_a, ["display", "mr"]);
-    return (_jsx("div", __assign({}, rest), void 0));
-})(templateObject_27 || (templateObject_27 = __makeTemplateObject(["\n    position: relative;\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    \n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\t\t\n\n    ", "\n\n\t", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t", "\n\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    ", "\n\n    ", "\n\n    ", ";\n    ", ";\n"], ["\n    position: relative;\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n    \n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    \n    ",
-    "\n\n    ",
-    "\n\n\t",
-    "\n\n\t",
-    "\n\t\t\n\n    ",
-    "\n\n\t",
-    "\n\n    ",
-    "\n\n\t",
-    "\n\n\t",
-    "\n\n\t",
-    "\n\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    ",
-    "\n\n    ",
-    "\n\n    ", ";\n    ", ";\n"])), function (_a) {
+    return (_jsx("div", __assign({}, rest)));
+})(templateObject_27 || (templateObject_27 = __makeTemplateObject(["\n    position: relative;\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    \n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\t\t\n\n    ", "\n\n\t", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t", "\n\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    ", "\n\n    ", "\n\n    ", ";\n    ", ";\n"], ["\n    position: relative;\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    \n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\t\t\n\n    ", "\n\n\t", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t", "\n\n    img {\n        width: 100%;\n        height: 100%;\n        object-fit: cover;\n    }\n\n    ", "\n\n    ", "\n\n    ", ";\n    ", ";\n"])), function (_a) {
     var $size = _a.$size;
     return ($size === "default" || !$size) && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            width: 38px;\n            height: 38px;\n        "], ["\n            width: 38px;\n            height: 38px;\n        "])));
 }, function (_a) {
@@ -67,8 +42,7 @@ export var StyledAvatar = styled(function (_a) {
     return $status === "online" && css(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n            &:after {\n                background-color: ", ";\n            }\n        "], ["\n            &:after {\n                background-color: ", ";\n            }\n        "])), themeGet("colors.success"));
 }, function (_a) {
     var $status = _a.$status;
-    return $status === "offline" && css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n            &:after {\n                background-color: ", ";\n                ", "\n            }\n        "], ["\n            &:after {\n                background-color: ", ";\n                ",
-        "\n            }\n        "])), themeGet("colors.text4"), function (props) {
+    return $status === "offline" && css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n            &:after {\n                background-color: ", ";\n                ", "\n            }\n        "], ["\n            &:after {\n                background-color: ", ";\n                ", "\n            }\n        "])), themeGet("colors.text4"), function (props) {
         return props.theme.name === "dark" && css(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n                        background-color: ", ";\n                    "], ["\n                        background-color: ", ";\n                    "])), themeGet("colors.gray500"));
     });
 }, function (_a) {
@@ -116,31 +90,20 @@ export var StyledAvatar = styled(function (_a) {
         $shape === "circle" && css(templateObject_24 || (templateObject_24 = __makeTemplateObject(["\n            &:after {\n                bottom: 6px;\n                right: 7px;\n            }\n        "], ["\n            &:after {\n                bottom: 6px;\n                right: 7px;\n            }\n        "])));
 }, function (props) {
     return props.theme.name === "dark" &&
-        (props.$status === "online" || props.$status === "offline") && css(templateObject_25 || (templateObject_25 = __makeTemplateObject(["\n            &:after {\n                box-shadow: 0 0 0 1.5px\n                    ", ";\n            }\n        "], ["\n            &:after {\n                box-shadow: 0 0 0 1.5px\n                    ",
-        ";\n            }\n        "])), tinycolor(themeGet("colors.gray900")(props))
+        (props.$status === "online" || props.$status === "offline") && css(templateObject_25 || (templateObject_25 = __makeTemplateObject(["\n            &:after {\n                box-shadow: 0 0 0 1.5px\n                    ", ";\n            }\n        "], ["\n            &:after {\n                box-shadow: 0 0 0 1.5px\n                    ", ";\n            }\n        "])), tinycolor(themeGet("colors.gray900")(props))
         .darken(5)
         .toString());
 }, function (props) {
     return props.theme.name === "dark" &&
         (props.$size === "xxl" || props.$size === "xl") &&
-        Boolean(props.$status) && css(templateObject_26 || (templateObject_26 = __makeTemplateObject(["\n            &:after {\n                box-shadow: 0 0 0 2.5px\n                    ", ";\n            }\n        "], ["\n            &:after {\n                box-shadow: 0 0 0 2.5px\n                    ",
-        ";\n            }\n        "])), tinycolor(themeGet("colors.gray900")(props))
+        Boolean(props.$status) && css(templateObject_26 || (templateObject_26 = __makeTemplateObject(["\n            &:after {\n                box-shadow: 0 0 0 2.5px\n                    ", ";\n            }\n        "], ["\n            &:after {\n                box-shadow: 0 0 0 2.5px\n                    ", ";\n            }\n        "])), tinycolor(themeGet("colors.gray900")(props))
         .darken(5)
         .toString());
 }, layout, space);
 export var StyledInitialText = styled(function (_a) {
     var color = _a.color, bg = _a.bg, opacity = _a.opacity, fontWeight = _a.fontWeight, rest = __rest(_a, ["color", "bg", "opacity", "fontWeight"]);
-    return _jsx("span", __assign({}, rest), void 0);
-})(templateObject_37 || (templateObject_37 = __makeTemplateObject(["\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: ", ";\n    color: #fff;\n    font-weight: 700;\n    font-size: 15px;\n    text-transform: uppercase;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100%;\n    line-height: 100%;\n    font-family: ", ";\n    ", "\n    ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    ", ";\n    ", ";\n"], ["\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: ", ";\n    color: #fff;\n    font-weight: 700;\n    font-size: 15px;\n    text-transform: uppercase;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100%;\n    line-height: 100%;\n    font-family: ", ";\n    ",
-    "\n    ",
-    "\n        ",
-    "\n        ",
-    "\n        ",
-    "\n        ",
-    "\n        ",
-    "\n        ",
-    "\n        ",
-    "\n    ", ";\n    ", ";\n"])), themeGet("colors.text3"), themeGet("fonts.interUi"), function (_a) {
+    return _jsx("span", __assign({}, rest));
+})(templateObject_37 || (templateObject_37 = __makeTemplateObject(["\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: ", ";\n    color: #fff;\n    font-weight: 700;\n    font-size: 15px;\n    text-transform: uppercase;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100%;\n    line-height: 100%;\n    font-family: ", ";\n    ", "\n    ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    ", ";\n    ", ";\n"], ["\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: ", ";\n    color: #fff;\n    font-weight: 700;\n    font-size: 15px;\n    text-transform: uppercase;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100%;\n    line-height: 100%;\n    font-family: ", ";\n    ", "\n    ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    ", ";\n    ", ";\n"])), themeGet("colors.text3"), themeGet("fonts.interUi"), function (_a) {
     var $size = _a.$size;
     return $size === "xs" && css(templateObject_28 || (templateObject_28 = __makeTemplateObject(["\n            font-size: 10px;\n        "], ["\n            font-size: 10px;\n        "])));
 }, function (_a) {

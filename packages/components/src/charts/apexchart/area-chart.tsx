@@ -1,8 +1,7 @@
-import { FC } from "react";
 import ApexChart from "react-apexcharts";
 import { IProps } from "./types";
 
-export const AreaChart: FC<IProps> = ({ options, series, width, height }) => {
+export const AreaChart = ({ options, series, width, height }: IProps) => {
     return (
         <ApexChart
             type="area"

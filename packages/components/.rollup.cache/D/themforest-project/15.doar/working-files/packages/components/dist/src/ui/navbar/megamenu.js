@@ -5,10 +5,10 @@ var Megamenu = function (_a) {
     var menu = _a.menu;
     return (_jsx(StyledMegaMenu, __assign({ className: "submenu" }, { children: _jsx(StyledMegaMenuInner, { children: menu === null || menu === void 0 ? void 0 : menu.map(function (megaNav) {
                 var _a;
-                return (_jsx(StyledMegamenuList, { children: _jsxs(_Fragment, { children: [(megaNav === null || megaNav === void 0 ? void 0 : megaNav.title) && (_jsx(StyledMegamenuLabel, { children: megaNav === null || megaNav === void 0 ? void 0 : megaNav.title }, void 0)), (_a = megaNav === null || megaNav === void 0 ? void 0 : megaNav.submenu) === null || _a === void 0 ? void 0 : _a.map(function (_a) {
+                return (_jsx(StyledMegamenuList, { children: _jsxs(_Fragment, { children: [(megaNav === null || megaNav === void 0 ? void 0 : megaNav.title) && (_jsx(StyledMegamenuLabel, { children: megaNav === null || megaNav === void 0 ? void 0 : megaNav.title })), (_a = megaNav === null || megaNav === void 0 ? void 0 : megaNav.submenu) === null || _a === void 0 ? void 0 : _a.map(function (_a) {
                                 var id = _a.id, label = _a.label, url = _a.url, Icon = _a.Icon;
-                                return (_jsx(StyledSubNavItem, { children: _jsxs(StyledSubNavlink, __assign({ path: url }, { children: [Icon && _jsx(Icon, {}, void 0), label] }), void 0) }, id));
-                            })] }, void 0) }, megaNav.id));
-            }) }, void 0) }), void 0));
+                                return (_jsx(StyledSubNavItem, { children: _jsxs(StyledSubNavlink, __assign({ path: url }, { children: [Icon && _jsx(Icon, {}), label] })) }, id));
+                            })] }) }, megaNav.id));
+            }) }) })));
 };
 export default Megamenu;

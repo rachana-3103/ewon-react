@@ -1,4 +1,3 @@
-import React from "react";
 import {
     SpaceProps,
     ColorProps,
@@ -9,6 +8,7 @@ import { StyledLink, StyledAnchor } from "./style";
 
 interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     path: string;
+    children: React.ReactNode;
     className?: string | undefined;
     rel?: string | undefined;
     label?: string | undefined;
@@ -17,7 +17,7 @@ interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     variant?: "link1" | "link2" | "link3";
 }
 
-const Anchor: React.FC<IProps> = ({
+const Anchor = ({
     path,
     children,
     className,
@@ -27,7 +27,7 @@ const Anchor: React.FC<IProps> = ({
     onClick,
     variant,
     ...rest
-}) => {
+}: IProps) => {
     const internal = /^\/(?!\/)/.test(path);
     if (!internal) {
         const isHash = path.startsWith("#");

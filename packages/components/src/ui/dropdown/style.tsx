@@ -26,7 +26,9 @@ export const StyledDropMenu = styled.div<IProps>`
     background-clip: padding-box;
     border: 1px solid
         ${(props) =>
-            tinycolor(props.theme.colors.text3).setAlpha(0.27).toString()};
+            tinycolor(props.theme.colors.text3 as string)
+                .setAlpha(0.27)
+                .toString()};
     border-radius: 0.25rem;
     box-shadow: 0 0 8px 2px rgb(28 39 60 / 4%);
     padding: 5px;
@@ -72,12 +74,14 @@ export const StyledDropMenu = styled.div<IProps>`
     ${(props) =>
         props.theme.name === "cool" &&
         css`
-            border-color: ${tinycolor(themeGet("colors.skinUi01")(props))
+            border-color: ${tinycolor(
+                themeGet("colors.skinUi01")(props) as string
+            )
                 .lighten(45)
                 .toString()};
             border-top-color: transparent;
             box-shadow: 0 15px 15px
-                ${tinycolor(themeGet("colors.skinUi01")(props))
+                ${tinycolor(themeGet("colors.skinUi01")(props) as string)
                     .setAlpha(0.1)
                     .toRgbString()};
         `}
@@ -85,7 +89,9 @@ export const StyledDropMenu = styled.div<IProps>`
         props.theme.name === "dark" &&
         css`
             border-width: 0;
-            background-color: ${tinycolor(themeGet("colors.gray900")(props))
+            background-color: ${tinycolor(
+                themeGet("colors.gray900")(props) as string
+            )
                 .lighten(5)
                 .toString()};
         `}

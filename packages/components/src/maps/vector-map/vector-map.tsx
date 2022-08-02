@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { VectorMap as VectorMapComponent } from "@south-paw/react-vector-maps";
 import worldLowRes from "@doar/shared/data/maps/world-low-res.json";
 import { LayoutProps } from "@doar/shared/styled";
@@ -63,7 +63,7 @@ interface IProps extends LayoutProps {
     data: VectorMapProps;
 }
 
-const VectorMap: FC<IProps> = ({
+const VectorMap = ({
     width,
     height,
     backgroundColor,
@@ -73,7 +73,7 @@ const VectorMap: FC<IProps> = ({
     selectedColor,
     tooltip,
     data = worldLowRes,
-}) => {
+}: IProps) => {
     const [selected, setSelected] = useState<string[]>([]);
     const [tooltipeName, setTooltipeName] = useState<string>();
     const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);

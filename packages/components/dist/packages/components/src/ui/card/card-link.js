@@ -1,0 +1,2 @@
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as a}from"react/jsx-runtime";import e from"classnames";import{StyledCardLink as t}from"./style.js";var m=function(m){var l=m.children,i=m.className,o=m.path,c=r(m,["children","className","path"]);return a(t,s({path:o,className:e(i,"card-link")},c,{children:l}))};export{m as default};
+//# sourceMappingURL=card-link.js.map

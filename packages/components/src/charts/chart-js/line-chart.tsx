@@ -1,20 +1,64 @@
-import { FC } from "react";
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler,
+} from "chart.js";
 import { Line } from "react-chartjs-2";
-import { IProps } from "./types";
 
-const LineChart: FC<IProps> = ({ data, options, width, height }) => {
-    const datasetKeyProvider = () => {
-        return Math.random().toString();
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Filler,
+    Legend
+);
+
+export interface IProps {
+    data: {
+        labels: string[];
+        datasets: Array<{
+            label?: string;
+            data: number[];
+            backgroundColor?: string;
+            borderColor?: string;
+            borderWidth?: number;
+            tension?: number;
+            fill?: boolean;
+            pointRadius?: number;
+        }>;
     };
-    return (
-        <Line
-            data={data}
-            options={options}
-            width={width}
-            height={height}
-            datasetKeyProvider={datasetKeyProvider}
-        />
-    );
+    options: {
+        [x: string]: unknown;
+    };
+    width?: number | string;
+    height?: number | string;
+}
+
+const LineChart = ({ data, options, width, height }: IProps) => (
+    <Line
+        data={data}
+        options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            ...options,
+        }}
+        width={width}
+        height={height}
+    />
+);
+
+LineChart.defaultProps = {
+    width: "100%",
+    height: "100%",
 };
 
 export default LineChart;

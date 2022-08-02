@@ -1,0 +1,2 @@
+import{__rest as s,__assign as e}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as a}from"react/jsx-runtime";import r from"classnames";import{StyledInitialText as i}from"./style.js";var t=function(t){var m=t.children,l=t.size,o=t.shape,n=t.className,c=s(t,["children","size","shape","className"]);return a(i,e({$size:l,$shape:o,className:r(n,"avatar-initial")},c,{children:m}))};export{t as default};
+//# sourceMappingURL=avatar-initial.js.map

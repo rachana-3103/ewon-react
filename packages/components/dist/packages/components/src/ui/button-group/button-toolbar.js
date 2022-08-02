@@ -1,0 +1,2 @@
+import{__assign as r}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as l}from"react/jsx-runtime";import o from"classnames";import{StyledButtonToolbar as a}from"./style.js";var t=function(t){var e=t.children,s=t.className,m=t.label;return l(a,r({role:"toolbar",className:o(s,"btn-toolbar"),"aria-label":m},{children:e}))};t.defaultProps={label:"button toolbar"};export{t as default};
+//# sourceMappingURL=button-toolbar.js.map

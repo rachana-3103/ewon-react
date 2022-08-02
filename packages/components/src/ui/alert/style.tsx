@@ -54,17 +54,25 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.primary")(props), 52)
+                .mix("#000000", themeGet("colors.primary")(props) as string, 52)
                 .toString()};
             background-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.primary")(props), 19.9)
+                .mix(
+                    "#ffffff",
+                    themeGet("colors.primary")(props) as string,
+                    19.9
+                )
                 .toString()};
             border-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.primary")(props), 28)
+                .mix("#ffffff", themeGet("colors.primary")(props) as string, 28)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.primary")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.primary")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -74,13 +82,21 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.secondary")(props), 65)
+                .mix(
+                    "#000000",
+                    themeGet("colors.secondary")(props) as string,
+                    65
+                )
                 .toString()};
             background-color: ${themeGet("colors.gray200")};
             border-color: ${themeGet("colors.gray300")};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.secondary")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.secondary")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -90,17 +106,25 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.success")(props), 52)
+                .mix("#000000", themeGet("colors.success")(props) as string, 52)
                 .toString()};
             background-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.success")(props), 19.9)
+                .mix(
+                    "#ffffff",
+                    themeGet("colors.success")(props) as string,
+                    19.9
+                )
                 .toString()};
             border-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.success")(props), 28)
+                .mix("#ffffff", themeGet("colors.success")(props) as string, 28)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.success")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.success")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -110,17 +134,21 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.danger")(props), 52)
+                .mix("#000000", themeGet("colors.danger")(props) as string, 52)
                 .toString()};
             background-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.danger")(props), 19.9)
+                .mix(
+                    "#ffffff",
+                    themeGet("colors.danger")(props) as string,
+                    19.9
+                )
                 .toString()};
             border-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.danger")(props), 28)
+                .mix("#ffffff", themeGet("colors.danger")(props) as string, 28)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.danger")(props), 50)
+                    .mix("#fff", themeGet("colors.danger")(props) as string, 50)
                     .toString()};
             }
         `}
@@ -130,17 +158,25 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.warning")(props), 52)
+                .mix("#000000", themeGet("colors.warning")(props) as string, 52)
                 .toString()};
             background-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.warning")(props), 19.9)
+                .mix(
+                    "#ffffff",
+                    themeGet("colors.warning")(props) as string,
+                    19.9
+                )
                 .toString()};
             border-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.warning")(props), 28)
+                .mix("#ffffff", themeGet("colors.warning")(props) as string, 28)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.warning")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.warning")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -150,17 +186,17 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.info")(props), 52)
+                .mix("#000000", themeGet("colors.info")(props) as string, 52)
                 .toString()};
             background-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.info")(props), 19.9)
+                .mix("#ffffff", themeGet("colors.info")(props) as string, 19.9)
                 .toString()};
             border-color: ${tinycolor
-                .mix("#ffffff", themeGet("colors.info")(props), 28)
+                .mix("#ffffff", themeGet("colors.info")(props) as string, 28)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.info")(props), 50)
+                    .mix("#fff", themeGet("colors.info")(props) as string, 50)
                     .toString()};
             }
         `}
@@ -170,15 +206,21 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.light")(props), 52)
+                .mix("#000000", themeGet("colors.light")(props) as string, 52)
                 .toString()};
-            background-color: ${tinycolor(themeGet("colors.gray100")(props))
+            background-color: ${tinycolor(
+                themeGet("colors.gray100")(props) as string
+            )
                 .darken(2)
                 .toString()};
             border-color: ${themeGet("colors.gray200")};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.gray100")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.gray100")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -188,15 +230,21 @@ export const StyledAlert = styled.div<AlertProps>`
         !props.$solid &&
         css`
             color: ${tinycolor
-                .mix("#000000", themeGet("colors.dark")(props), 52)
+                .mix("#000000", themeGet("colors.dark")(props) as string, 52)
                 .toString()};
             background-color: ${themeGet("colors.gray500")};
-            border-color: ${tinycolor(themeGet("colors.gray500")(props))
+            border-color: ${tinycolor(
+                themeGet("colors.gray500")(props) as string
+            )
                 .darken(3)
                 .toString()};
             hr {
                 border-top-color: ${tinycolor
-                    .mix("#fff", themeGet("colors.gray500")(props), 50)
+                    .mix(
+                        "#fff",
+                        themeGet("colors.gray500")(props) as string,
+                        50
+                    )
                     .toString()};
             }
         `}
@@ -352,14 +400,18 @@ export const StyledAlert = styled.div<AlertProps>`
         props.$variant === "outlined" &&
         props.$color === "warning" &&
         css`
-            border-color: ${tinycolor(themeGet("colors.warning")(props))
+            border-color: ${tinycolor(
+                themeGet("colors.warning")(props) as string
+            )
                 .darken(5)
                 .toString()};
-            color: ${tinycolor(themeGet("colors.warning")(props))
+            color: ${tinycolor(themeGet("colors.warning")(props) as string)
                 .darken(5)
                 .toString()};
             hr {
-                border-top-color: ${tinycolor(themeGet("colors.warning")(props))
+                border-top-color: ${tinycolor(
+                    themeGet("colors.warning")(props) as string
+                )
                     .darken(5)
                     .toString()};
             }
@@ -411,7 +463,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.primary")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.primary")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -424,7 +480,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.secondary")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.secondary")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -437,7 +497,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.success")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.success")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -450,7 +514,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.danger")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.danger")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -463,7 +531,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.warning")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.warning")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -476,7 +548,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.info")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.info")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -489,7 +565,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.light")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.light")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }
@@ -502,7 +582,11 @@ export const StyledAlert = styled.div<AlertProps>`
         css`
             a {
                 color: ${tinycolor
-                    .mix("#000000", themeGet("colors.dark")(props), 52)
+                    .mix(
+                        "#000000",
+                        themeGet("colors.dark")(props) as string,
+                        52
+                    )
                     .darken(10)
                     .toString()};
             }

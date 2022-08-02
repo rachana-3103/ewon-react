@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Marker as MarkerComponent } from "@react-google-maps/api";
 
 interface IMarkerProps {
@@ -12,7 +11,7 @@ interface IMarkerProps {
     lng: number;
 }
 
-const GoogleMapMarker: FC<IMarkerProps> = ({ lat, lng }) => {
+const GoogleMapMarker = ({ lat, lng }: IMarkerProps) => {
     return <MarkerComponent position={{ lat, lng }} />;
 };
 

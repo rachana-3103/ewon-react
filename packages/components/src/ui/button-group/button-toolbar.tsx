@@ -1,8 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledButtonToolbar } from "./style";
 
 interface IToolbarProps {
+    children: React.ReactNode;
     /**
      * Pass a label to make button group accessible
      */
@@ -13,7 +13,7 @@ interface IToolbarProps {
     className?: string;
 }
 
-const ButtonToolbar: FC<IToolbarProps> = ({ children, className, label }) => {
+const ButtonToolbar = ({ children, className, label }: IToolbarProps) => {
     return (
         <StyledButtonToolbar
             role="toolbar"

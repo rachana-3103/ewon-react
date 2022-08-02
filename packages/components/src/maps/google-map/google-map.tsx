@@ -1,4 +1,4 @@
-import { Children, FC, FunctionComponent, ReactChild, ReactText } from "react";
+import { Children, FunctionComponent, isValidElement } from "react";
 import { LayoutProps } from "@doar/shared/styled";
 import {
     GoogleMap as GoogleMapComponent,
@@ -8,6 +8,7 @@ import { MapKey } from "@doar/shared/data";
 import { StyledMap } from "./style";
 
 interface IProps extends LayoutProps {
+    children: React.ReactNode;
     /**
      * Required. Pass google maps latitude
      */
@@ -22,9 +23,7 @@ interface IProps extends LayoutProps {
     zoom?: number;
 }
 
-type IChild = Exclude<ReactChild, ReactText>;
-
-const GoogleMap: FC<IProps> = ({ width, height, lat, lng, zoom, children }) => {
+const GoogleMap = ({ width, height, lat, lng, zoom, children }: IProps) => {
     const { isLoaded, loadError } = useJsApiLoader({
         id: "google-map-script",
         googleMapsApiKey: MapKey,
@@ -33,7 +32,8 @@ const GoogleMap: FC<IProps> = ({ width, height, lat, lng, zoom, children }) => {
         return <div>Map cannot be loaded right now, sorry.</div>;
     }
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

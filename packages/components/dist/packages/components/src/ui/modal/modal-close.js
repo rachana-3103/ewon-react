@@ -1,0 +1,2 @@
+import{__rest as s,__assign as e}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as a}from"react/jsx-runtime";import l from"classnames";import{StyledClose as o}from"./style.js";var r=function(r){var i=r.className,t=r.children,m=r.onClose,n=s(r,["className","children","onClose"]);return a(o,e({type:"button",className:l(i,"close"),onClick:m},n,{"data-dismiss":"modal","aria-label":"Close"},{children:a("span",e({"aria-hidden":"true"},{children:t}))}))};r.displayName="ModalClose";export{r as default};
+//# sourceMappingURL=modal-close.js.map

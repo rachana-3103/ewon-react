@@ -250,7 +250,7 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         css`
             &:after {
                 box-shadow: 0 0 0 1.5px
-                    ${tinycolor(themeGet("colors.gray900")(props))
+                    ${tinycolor(themeGet("colors.gray900")(props) as string)
                         .darken(5)
                         .toString()};
             }
@@ -263,7 +263,7 @@ export const StyledAvatar = styled(({ display, mr, ...rest }) => (
         css`
             &:after {
                 box-shadow: 0 0 0 2.5px
-                    ${tinycolor(themeGet("colors.gray900")(props))
+                    ${tinycolor(themeGet("colors.gray900")(props) as string)
                         .darken(5)
                         .toString()};
             }

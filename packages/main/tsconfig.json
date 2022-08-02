@@ -3,11 +3,11 @@
     "compilerOptions": {
         "composite": true,
         "noFallthroughCasesInSwitch": true,
-        "jsx": "react-jsx",
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "baseUrl": ".",
-        "downlevelIteration": true
+        "outDir": "dist",
+        "downlevelIteration": true,
     },
-    "include": ["src", "src/*", "src/**/*", "config-overrides.js"]
+    "include": ["src", "src/*", "src/**/*", "craco.config.js"]
 }

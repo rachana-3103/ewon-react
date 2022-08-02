@@ -1,51 +1,10 @@
 import { __makeTemplateObject } from "tslib";
 import styled, { css, themeGet } from "@doar/shared/styled";
 import tinycolor from "tinycolor2";
-export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __makeTemplateObject(["\n    position: relative;\n    padding: 12px 15px;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: 0.25rem;\n    svg {\n        margin-right: 10px;\n    }\n    h1,\n    h2,\n    h3,\n    h4,\n    h5,\n    h6 {\n        color: inherit;\n    }\n    p {\n        color: inherit;\n    }\n    hr {\n        box-sizing: content-box;\n        height: 0;\n        overflow: visible;\n        margin-top: 1rem;\n        margin-bottom: 1rem;\n        border: 0;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n    }\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n"], ["\n    position: relative;\n    padding: 12px 15px;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: 0.25rem;\n    svg {\n        margin-right: 10px;\n    }\n    h1,\n    h2,\n    h3,\n    h4,\n    h5,\n    h6 {\n        color: inherit;\n    }\n    p {\n        color: inherit;\n    }\n    hr {\n        box-sizing: content-box;\n        height: 0;\n        overflow: visible;\n        margin-top: 1rem;\n        margin-bottom: 1rem;\n        border: 0;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n    }\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n"])), function (props) {
+export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __makeTemplateObject(["\n    position: relative;\n    padding: 12px 15px;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: 0.25rem;\n    svg {\n        margin-right: 10px;\n    }\n    h1,\n    h2,\n    h3,\n    h4,\n    h5,\n    h6 {\n        color: inherit;\n    }\n    p {\n        color: inherit;\n    }\n    hr {\n        box-sizing: content-box;\n        height: 0;\n        overflow: visible;\n        margin-top: 1rem;\n        margin-bottom: 1rem;\n        border: 0;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n    }\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n"], ["\n    position: relative;\n    padding: 12px 15px;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: 0.25rem;\n    svg {\n        margin-right: 10px;\n    }\n    h1,\n    h2,\n    h3,\n    h4,\n    h5,\n    h6 {\n        color: inherit;\n    }\n    p {\n        color: inherit;\n    }\n    hr {\n        box-sizing: content-box;\n        height: 0;\n        overflow: visible;\n        margin-top: 1rem;\n        margin-bottom: 1rem;\n        border: 0;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n    }\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n"])), function (props) {
     return props.$variant === "contained" &&
         props.$color === "primary" &&
-        !props.$solid && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.primary")(props), 52)
         .toString(), tinycolor
         .mix("#ffffff", themeGet("colors.primary")(props), 19.9)
@@ -57,9 +16,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "secondary" &&
-        !props.$solid && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.secondary")(props), 65)
         .toString(), themeGet("colors.gray200"), themeGet("colors.gray300"), tinycolor
         .mix("#fff", themeGet("colors.secondary")(props), 50)
@@ -67,11 +24,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "success" &&
-        !props.$solid && css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.success")(props), 52)
         .toString(), tinycolor
         .mix("#ffffff", themeGet("colors.success")(props), 19.9)
@@ -83,11 +36,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "danger" &&
-        !props.$solid && css(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.danger")(props), 52)
         .toString(), tinycolor
         .mix("#ffffff", themeGet("colors.danger")(props), 19.9)
@@ -99,11 +48,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "warning" &&
-        !props.$solid && css(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.warning")(props), 52)
         .toString(), tinycolor
         .mix("#ffffff", themeGet("colors.warning")(props), 19.9)
@@ -115,11 +60,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "info" &&
-        !props.$solid && css(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.info")(props), 52)
         .toString(), tinycolor
         .mix("#ffffff", themeGet("colors.info")(props), 19.9)
@@ -131,10 +72,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "light" &&
-        !props.$solid && css(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ",
-        ";\n            border-color: ", ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.light")(props), 52)
         .toString(), tinycolor(themeGet("colors.gray100")(props))
         .darken(2)
@@ -144,10 +82,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
 }, function (props) {
     return props.$variant === "contained" &&
         props.$color === "dark" &&
-        !props.$solid && css(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ",
-        ";\n            background-color: ", ";\n            border-color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.dark")(props), 52)
         .toString(), themeGet("colors.gray500"), tinycolor(themeGet("colors.gray500")(props))
         .darken(3)
@@ -215,10 +150,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
         $color === "danger" && css(templateObject_21 || (templateObject_21 = __makeTemplateObject(["\n            border-color: ", ";\n            color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            border-color: ", ";\n            color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), themeGet("colors.danger"), themeGet("colors.danger"), themeGet("colors.danger"));
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "warning" && css(templateObject_22 || (templateObject_22 = __makeTemplateObject(["\n            border-color: ", ";\n            color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            border-color: ",
-        ";\n            color: ",
-        ";\n            hr {\n                border-top-color: ",
-        ";\n            }\n        "])), tinycolor(themeGet("colors.warning")(props))
+        props.$color === "warning" && css(templateObject_22 || (templateObject_22 = __makeTemplateObject(["\n            border-color: ", ";\n            color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "], ["\n            border-color: ", ";\n            color: ", ";\n            hr {\n                border-top-color: ", ";\n            }\n        "])), tinycolor(themeGet("colors.warning")(props))
         .darken(5)
         .toString(), tinycolor(themeGet("colors.warning")(props))
         .darken(5)
@@ -244,8 +176,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "primary" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_27 || (templateObject_27 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_27 || (templateObject_27 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.primary")(props), 52)
         .darken(10)
         .toString());
@@ -253,8 +184,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "secondary" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_28 || (templateObject_28 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_28 || (templateObject_28 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.secondary")(props), 52)
         .darken(10)
         .toString());
@@ -262,8 +192,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "success" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_29 || (templateObject_29 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_29 || (templateObject_29 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.success")(props), 52)
         .darken(10)
         .toString());
@@ -271,8 +200,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "danger" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_30 || (templateObject_30 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_30 || (templateObject_30 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.danger")(props), 52)
         .darken(10)
         .toString());
@@ -280,8 +208,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "warning" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_31 || (templateObject_31 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_31 || (templateObject_31 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.warning")(props), 52)
         .darken(10)
         .toString());
@@ -289,8 +216,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "info" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_32 || (templateObject_32 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_32 || (templateObject_32 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.info")(props), 52)
         .darken(10)
         .toString());
@@ -298,8 +224,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "light" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_33 || (templateObject_33 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_33 || (templateObject_33 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.light")(props), 52)
         .darken(10)
         .toString());
@@ -307,8 +232,7 @@ export var StyledAlert = styled.div(templateObject_38 || (templateObject_38 = __
     return props.$variant === "contained" &&
         props.$color === "dark" &&
         props.$hasLink &&
-        !props.$solid && css(templateObject_34 || (templateObject_34 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ",
-        ";\n            }\n        "])), tinycolor
+        !props.$solid && css(templateObject_34 || (templateObject_34 = __makeTemplateObject(["\n            a {\n                color: ", ";\n            }\n        "], ["\n            a {\n                color: ", ";\n            }\n        "])), tinycolor
         .mix("#000000", themeGet("colors.dark")(props), 52)
         .darken(10)
         .toString());

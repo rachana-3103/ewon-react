@@ -1,14 +1,14 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps, TypographyProps, LayoutProps } from "@doar/shared/styled";
 import { StyledLabel } from "./style";
 
 interface IProps extends SpaceProps, TypographyProps, LayoutProps {
+    children: React.ReactNode;
     htmlFor: string;
     className?: string;
 }
 
-const Label: FC<IProps> = ({ children, htmlFor, className, ...rest }) => {
+const Label = ({ children, htmlFor, className, ...rest }: IProps) => {
     return (
         <StyledLabel
             htmlFor={htmlFor}

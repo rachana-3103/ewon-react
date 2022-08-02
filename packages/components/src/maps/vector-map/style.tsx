@@ -32,7 +32,7 @@ export const StyledMap = styled(({ width, height, ...props }) => (
         background-color: ${(props) =>
             !!props.theme &&
             css`
-                ${tinycolor(themeGet("colors.shaft")(props))
+                ${tinycolor(themeGet("colors.shaft")(props) as string)
                     .setAlpha(0.9)
                     .toRgbString()}
             `};

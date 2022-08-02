@@ -6,7 +6,6 @@ import styled, {
 } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import tinycolor from "tinycolor2";
-import { Container, Row, Col } from "styled-bootstrap-grid";
 import { classicTheme, lightTheme, coolTheme, darkTheme } from "./theme";
 
 const breakpoints = ["576px", "768px", "992px", "1200px", "1400px"];
@@ -37,9 +36,6 @@ export {
     classicTheme,
     darkTheme,
     tinycolor,
-    Container,
-    Row,
-    Col,
     themes,
 };
 export * from "styled-system";

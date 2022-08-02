@@ -16,7 +16,7 @@ var LeafletCircle = function (_a) {
         fillOpacity: fillOpacity,
         fillRule: fillRule,
     };
-    return (_jsx(Circle, { center: [lat, lng], radius: radius, pathOptions: fillBlueOptions }, void 0));
+    return (_jsx(Circle, { center: [lat, lng], radius: radius, pathOptions: fillBlueOptions }));
 };
 LeafletCircle.defaultProps = {
     radius: 200,

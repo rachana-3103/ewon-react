@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import Modal from "./modal";
 import ModalHeader from "./modal-header";
 import ModalTitle from "./modal-title";
@@ -12,7 +12,7 @@ interface IProps {
     size?: "xl" | "lg" | "md" | "sm";
 }
 
-const DemoModal: FC<IProps> = ({ size, centered }) => {
+const DemoModal = ({ size, centered }: IProps) => {
     const [show, setShow] = useState(false);
     const clickHandler = () => {
         setShow((prev) => !prev);

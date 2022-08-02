@@ -1,19 +1,19 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps, FlexboxProps } from "@doar/shared/styled";
 import { StyledGroup } from "./style";
 
 interface IGroupProps extends FlexboxProps, SpaceProps {
+    children: React.ReactNode;
     className?: string;
     size?: "sm";
 }
 
-const ImageGroup: FC<IGroupProps> = ({
+const ImageGroup = ({
     children,
     className,
     size,
     ...restProps
-}) => {
+}: IGroupProps) => {
     return (
         <StyledGroup
             className={classnames(className)}

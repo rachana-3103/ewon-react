@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { TTheme } from "@doar/shared/types";
-import { FC } from "react";
 import ReactDataTable, {
     TableColumn,
     createTheme,
@@ -50,7 +49,7 @@ interface IProps {
     };
 }
 
-const DataTable: FC<IProps> = ({
+const DataTable = ({
     data,
     columns,
     theme,
@@ -58,7 +57,7 @@ const DataTable: FC<IProps> = ({
     pagination,
     paginationPerPage,
     paginationRowsPerPageOptions,
-}) => {
+}: IProps) => {
     return (
         <ReactDataTable
             theme={theme === "dark" ? "solarizedDark" : "solarized"}

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps, LayoutProps } from "@doar/shared/styled";
 import { StyledImage } from "./style";
@@ -35,7 +34,7 @@ export interface ImageProps extends SpaceProps, LayoutProps {
     className?: string;
 }
 
-const Image: FC<ImageProps> = ({
+const Image = ({
     src,
     alt,
     size,
@@ -45,7 +44,7 @@ const Image: FC<ImageProps> = ({
     fit,
     className,
     ...restProps
-}) => {
+}: ImageProps) => {
     return (
         <StyledImage
             src={src}

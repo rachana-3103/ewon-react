@@ -1,14 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledClose } from "./style";
 import { IClose } from "./types";
 
-const ModalClose: FC<IClose> = ({
-    className,
-    children,
-    onClose,
-    ...restProps
-}) => {
+const ModalClose = ({ className, children, onClose, ...restProps }: IClose) => {
     return (
         <StyledClose
             type="button"

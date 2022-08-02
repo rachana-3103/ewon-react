@@ -4,6 +4,6 @@ import classnames from "classnames";
 import { StyledBody } from "./style";
 var ModalBody = function (_a) {
     var className = _a.className, children = _a.children, restProps = __rest(_a, ["className", "children"]);
-    return (_jsx(StyledBody, __assign({ className: classnames(className, "modal-body") }, restProps, { children: children }), void 0));
+    return (_jsx(StyledBody, __assign({ className: classnames(className, "modal-body") }, restProps, { children: children })));
 };
 export default ModalBody;

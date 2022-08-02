@@ -1,0 +1,2 @@
+import{__assign as r}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsxs as e,jsx as t}from"react/jsx-runtime";import{Link as a}from"react-router-dom";import m from"classnames";import{StyledBreadcrumbItem as i}from"./style.js";var o=function(o){var s=o.children,c=o.path,l=o.active,n=o.className;return e(i,r({className:m(n,"breadcrumb-item",l&&"active"),$active:l,"aria-current":l&&"page"},{children:[l&&s,!l&&c&&t(a,r({to:c},{children:s}))]}))};export{o as default};
+//# sourceMappingURL=item.js.map

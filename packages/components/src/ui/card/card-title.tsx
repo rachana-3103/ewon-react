@@ -1,14 +1,13 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardHeading } from "./style";
 import { ICardTitleProps } from "./types";
 
-const CardTitle: FC<ICardTitleProps> = ({
+const CardTitle = ({
     children,
     className,
     as,
     ...restProps
-}) => {
+}: ICardTitleProps) => {
     return (
         <StyledCardHeading
             as={as}

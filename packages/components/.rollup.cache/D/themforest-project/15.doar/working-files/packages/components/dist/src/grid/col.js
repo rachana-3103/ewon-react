@@ -12,22 +12,22 @@ var Col = function (_a) {
     var orderXl;
     if (smOrder === 0 || mdOrder === 0 || lgOrder === 0 || xlOrder === 0) {
         if (smOrder === 0) {
-            orderSm = "order-sm-" + smOrder;
+            orderSm = "order-sm-".concat(smOrder);
             delete restProps.smOrder;
         }
         if (mdOrder === 0) {
-            orderMd = "order-md-" + mdOrder;
+            orderMd = "order-md-".concat(mdOrder);
             delete restProps.mdOrder;
         }
         if (lgOrder === 0) {
-            orderlg = "order-lg-" + lgOrder;
+            orderlg = "order-lg-".concat(lgOrder);
             delete restProps.lgOrder;
         }
         if (xlOrder === 0) {
-            orderXl = "order-xl-" + xlOrder;
+            orderXl = "order-xl-".concat(xlOrder);
             delete restProps.xlOrder;
         }
     }
-    return (_jsx(StyledCol, __assign({ className: classNames(className, orderSm, orderMd, orderlg, orderXl) }, restProps), void 0));
+    return (_jsx(StyledCol, __assign({ className: classNames(className, orderSm, orderMd, orderlg, orderXl) }, restProps)));
 };
 export default Col;

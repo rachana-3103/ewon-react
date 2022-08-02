@@ -5,81 +5,9 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import styled, { css, space, layout, border as borderStyle, typography, themeGet, } from "@doar/shared/styled";
 import tinycolor2 from "tinycolor2";
 import { Link } from "react-router-dom";
-var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateObject(["\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    cursor: pointer;\n    line-height: 1.5;\n    user-select: none;\n    border: 1px solid transparent;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    &:hover,\n    &:active,\n    &:focus {\n        outline: none;\n    }\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\n        ", "\n\n\n    \n\n    ", "\n \n    ", "\n\n\t", "\n\t", "\n\t", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t\n\t", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n        \n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\t", "\n    ", "\n\t\n\t", "\n\n\t", "\n\n\t", "\n\t", "\n\t", "\n\n\t", "\n\t", "\n    ", "\n\t", ";\n    ", ";\n    ", ";\n    ", ";\n"], ["\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    cursor: pointer;\n    line-height: 1.5;\n    user-select: none;\n    border: 1px solid transparent;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    &:hover,\n    &:active,\n    &:focus {\n        outline: none;\n    }\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n\n        ",
-    "\n\n\n    \n\n    ",
-    "\n \n    ",
-    "\n\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n\t",
-    "\n\n\t",
-    "\n\n\t\n\t",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n        \n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\n    ",
-    "\n    ",
-    "\n    \n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\t",
-    "\n    ",
-    "\n\t\n\t",
-    "\n\n\t",
-    "\n\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\n\t",
-    "\n\t",
-    "\n    ",
-    "\n\t", ";\n    ", ";\n    ", ";\n    ", ";\n"])), function (props) {
+var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateObject(["\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    cursor: pointer;\n    line-height: 1.5;\n    user-select: none;\n    border: 1px solid transparent;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    &:hover,\n    &:active,\n    &:focus {\n        outline: none;\n    }\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\n        ", "\n\n\n    \n\n    ", "\n \n    ", "\n\n\t", "\n\t", "\n\t", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t\n\t", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n        \n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\t", "\n    ", "\n\t\n\t", "\n\n\t", "\n\n\t", "\n\t", "\n\t", "\n\n\t", "\n\t", "\n    ", "\n\t", ";\n    ", ";\n    ", ";\n    ", ";\n"], ["\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    cursor: pointer;\n    line-height: 1.5;\n    user-select: none;\n    border: 1px solid transparent;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    &:hover,\n    &:active,\n    &:focus {\n        outline: none;\n    }\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\n        ", "\n\n\n    \n\n    ", "\n \n    ", "\n\n\t", "\n\t", "\n\t", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n\t", "\n\n\t", "\n\n\t\n\t", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n        \n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n    ", "\n    \n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n\t", "\n    ", "\n\t\n\t", "\n\n\t", "\n\n\t", "\n\t", "\n\t", "\n\n\t", "\n\t", "\n    ", "\n\t", ";\n    ", ";\n    ", ";\n    ", ";\n"])), function (props) {
     return props.$variant === "contained" &&
-        props.$color === "primary" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), tinycolor2(themeGet("colors.primary")(props))
+        props.$color === "primary" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), tinycolor2(themeGet("colors.primary")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.primary")(props))
         .darken(14)
@@ -92,10 +20,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "secondary" && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), tinycolor2(themeGet("colors.secondary")(props))
+        props.$color === "secondary" && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), tinycolor2(themeGet("colors.secondary")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.secondary")(props))
         .darken(14)
@@ -104,12 +29,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "success" && css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), tinycolor2(themeGet("colors.success")(props))
+        props.$color === "success" && css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), tinycolor2(themeGet("colors.success")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.success")(props))
         .darken(14)
@@ -122,12 +42,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "danger" && css(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), tinycolor2(themeGet("colors.danger")(props))
+        props.$color === "danger" && css(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), tinycolor2(themeGet("colors.danger")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.danger")(props))
         .darken(14)
@@ -140,12 +55,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "warning" && css(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), tinycolor2(themeGet("colors.warning")(props))
+        props.$color === "warning" && css(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), tinycolor2(themeGet("colors.warning")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.warning")(props))
         .darken(14)
@@ -158,12 +68,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "info" && css(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), tinycolor2(themeGet("colors.info")(props))
+        props.$color === "info" && css(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), tinycolor2(themeGet("colors.info")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.info")(props))
         .darken(14)
@@ -176,12 +81,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "light" && css(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.text2"), themeGet("colors.light"), themeGet("colors.light"), themeGet("colors.gray900"), tinycolor2(themeGet("colors.light")(props))
+        props.$color === "light" && css(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.text2"), themeGet("colors.light"), themeGet("colors.light"), themeGet("colors.gray900"), tinycolor2(themeGet("colors.light")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.light")(props))
         .darken(14)
@@ -198,12 +98,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         props.$color === "light" && css(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n            color: ", ";\n        "], ["\n            color: ", ";\n        "])), themeGet("colors.gray700"));
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "dark" && css(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n            }\n            &:active,\n            &:focus {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
+        props.$color === "dark" && css(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            background-color: ", ";\n            border-color: ", ";\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n            }\n            &:active,\n            &:focus {\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.dark")(props))
         .darken(14)
@@ -216,17 +111,9 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "white" && css(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n            ", "\n\n            ", "\n        "], ["\n            ",
-        "\n\n            ",
-        "\n        "])), props.theme.name !== "dark" && css(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n\n                &:hover {\n                    border-color: ", ";\n                    color: ", ";\n                }\n\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    color: ", ";\n                    box-shadow: none;\n                }\n            "], ["\n                color: ",
-        ";\n                background-color: ", ";\n                border-color: ", ";\n\n                &:hover {\n                    border-color: ", ";\n                    color: ", ";\n                }\n\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    color: ", ";\n                    box-shadow: none;\n                }\n            "])), tinycolor2(themeGet("colors.text2")(props))
+        props.$color === "white" && css(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n            ", "\n\n            ", "\n        "], ["\n            ", "\n\n            ", "\n        "])), props.theme.name !== "dark" && css(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n\n                &:hover {\n                    border-color: ", ";\n                    color: ", ";\n                }\n\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    color: ", ";\n                    box-shadow: none;\n                }\n            "], ["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n\n                &:hover {\n                    border-color: ", ";\n                    color: ", ";\n                }\n\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    color: ", ";\n                    box-shadow: none;\n                }\n            "])), tinycolor2(themeGet("colors.text2")(props))
         .setAlpha(0.7)
-        .toRgbString(), themeGet("colors.white"), themeGet("colors.text4"), themeGet("colors.text3"), themeGet("colors.text2"), themeGet("colors.whisper"), themeGet("colors.text3"), themeGet("colors.text2")), props.theme.name === "dark" && css(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                &:hover {\n                    background-color: ", ";\n                    border-color: ", ";\n                }\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    box-shadow: 0 0 0 0.2rem\n                        ", ";\n                }\n            "], ["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                &:hover {\n                    background-color: ",
-        ";\n                    border-color: ",
-        ";\n                }\n                &:active,\n                &:focus {\n                    background-color: ",
-        ";\n                    border-color: ",
-        ";\n                    box-shadow: 0 0 0 0.2rem\n                        ",
-        ";\n                }\n            "])), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
+        .toRgbString(), themeGet("colors.white"), themeGet("colors.text4"), themeGet("colors.text3"), themeGet("colors.text2"), themeGet("colors.whisper"), themeGet("colors.text3"), themeGet("colors.text2")), props.theme.name === "dark" && css(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                &:hover {\n                    background-color: ", ";\n                    border-color: ", ";\n                }\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    box-shadow: 0 0 0 0.2rem\n                        ", ";\n                }\n            "], ["\n                color: ", ";\n                background-color: ", ";\n                border-color: ", ";\n                &:hover {\n                    background-color: ", ";\n                    border-color: ", ";\n                }\n                &:active,\n                &:focus {\n                    background-color: ", ";\n                    border-color: ", ";\n                    box-shadow: 0 0 0 0.2rem\n                        ", ";\n                }\n            "])), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.dark")(props))
         .darken(14)
@@ -242,12 +129,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         props.$color === "brand2" && css(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n            color: #fff;\n            background-color: ", ";\n            border-color: ", ";\n\n            &:hover,\n            &:active,\n            &:focus {\n                border-color: ", ";\n                background-color: ", ";\n                color: #fff;\n                box-shadow: none;\n            }\n        "], ["\n            color: #fff;\n            background-color: ", ";\n            border-color: ", ";\n\n            &:hover,\n            &:active,\n            &:focus {\n                border-color: ", ";\n                background-color: ", ";\n                color: #fff;\n                box-shadow: none;\n            }\n        "])), themeGet("colors.brand2"), themeGet("colors.brand2"), themeGet("colors.science"), themeGet("colors.science"));
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "facebook" && css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.facebook"), themeGet("colors.facebook"), tinycolor2(themeGet("colors.facebook")(props))
+        props.$color === "facebook" && css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.facebook"), themeGet("colors.facebook"), tinycolor2(themeGet("colors.facebook")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.facebook")(props))
         .darken(14)
@@ -260,12 +142,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         .toRgbString());
 }, function (props) {
     return props.$variant === "contained" &&
-        props.$color === "twitter" && css(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ",
-        ";\n                border-color: ",
-        ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.twitter"), themeGet("colors.twitter"), tinycolor2(themeGet("colors.twitter")(props))
+        props.$color === "twitter" && css(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            background-color: ", ";\n            border-color: ", ";\n            color: #fff;\n            &:hover {\n                background-color: ", ";\n                border-color: ", ";\n                color: #fff;\n            }\n            &:active,\n            &:focus {\n                color: #fff;\n                background-color: ", ";\n                border-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.twitter"), themeGet("colors.twitter"), tinycolor2(themeGet("colors.twitter")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.twitter")(props))
         .darken(14)
@@ -281,50 +158,42 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
     return $variant === "outlined" && css(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n            background: transparent;\n            border-width: 1px;\n            border-style: solid;\n        "], ["\n            background: transparent;\n            border-width: 1px;\n            border-style: solid;\n        "])));
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "primary" && css(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.primary"), themeGet("colors.primary"), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), tinycolor2(themeGet("colors.primary")(props))
+        props.$color === "primary" && css(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.primary"), themeGet("colors.primary"), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), themeGet("colors.white"), themeGet("colors.primary"), themeGet("colors.primary"), tinycolor2(themeGet("colors.primary")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "secondary" && css(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.secondary"), themeGet("colors.secondary"), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), tinycolor2(themeGet("colors.secondary")(props))
+        props.$color === "secondary" && css(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.secondary"), themeGet("colors.secondary"), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), themeGet("colors.white"), themeGet("colors.secondary"), themeGet("colors.secondary"), tinycolor2(themeGet("colors.secondary")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "success" && css(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.success"), themeGet("colors.success"), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), tinycolor2(themeGet("colors.success")(props))
+        props.$color === "success" && css(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.success"), themeGet("colors.success"), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), themeGet("colors.white"), themeGet("colors.success"), themeGet("colors.success"), tinycolor2(themeGet("colors.success")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "danger" && css(templateObject_20 || (templateObject_20 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.danger"), themeGet("colors.danger"), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), tinycolor2(themeGet("colors.danger")(props))
+        props.$color === "danger" && css(templateObject_20 || (templateObject_20 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.danger"), themeGet("colors.danger"), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), themeGet("colors.white"), themeGet("colors.danger"), themeGet("colors.danger"), tinycolor2(themeGet("colors.danger")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "warning" && css(templateObject_21 || (templateObject_21 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.warning"), themeGet("colors.warning"), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), tinycolor2(themeGet("colors.warning")(props))
+        props.$color === "warning" && css(templateObject_21 || (templateObject_21 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.warning"), themeGet("colors.warning"), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), themeGet("colors.white"), themeGet("colors.warning"), themeGet("colors.warning"), tinycolor2(themeGet("colors.warning")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "info" && css(templateObject_22 || (templateObject_22 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.info"), themeGet("colors.info"), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), tinycolor2(themeGet("colors.info")(props))
+        props.$color === "info" && css(templateObject_22 || (templateObject_22 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.info"), themeGet("colors.info"), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), themeGet("colors.white"), themeGet("colors.info"), themeGet("colors.info"), tinycolor2(themeGet("colors.info")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "light" && css(templateObject_23 || (templateObject_23 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.gray600"), themeGet("colors.gray400"), themeGet("colors.gray900"), themeGet("colors.light"), themeGet("colors.light"), themeGet("colors.gray900"), themeGet("colors.light"), themeGet("colors.light"), tinycolor2(themeGet("colors.light")(props))
+        props.$color === "light" && css(templateObject_23 || (templateObject_23 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.gray600"), themeGet("colors.gray400"), themeGet("colors.gray900"), themeGet("colors.light"), themeGet("colors.light"), themeGet("colors.gray900"), themeGet("colors.light"), themeGet("colors.light"), tinycolor2(themeGet("colors.light")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "dark" && css(templateObject_24 || (templateObject_24 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.dark"), themeGet("colors.dark"), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
+        props.$color === "dark" && css(templateObject_24 || (templateObject_24 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.dark"), themeGet("colors.dark"), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), themeGet("colors.white"), themeGet("colors.dark"), themeGet("colors.dark"), tinycolor2(themeGet("colors.dark")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
@@ -333,8 +202,7 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         props.$color === "dark" && css(templateObject_25 || (templateObject_25 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n        "], ["\n            color: ", ";\n            border-color: ", ";\n        "])), themeGet("colors.gray500"), themeGet("colors.gray500"));
 }, function (props) {
     return props.$variant === "outlined" &&
-        props.$color === "brand2" && css(templateObject_26 || (templateObject_26 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ",
-        ";\n            }\n        "])), themeGet("colors.brand2"), themeGet("colors.brand2"), themeGet("colors.white"), themeGet("colors.brand2"), themeGet("colors.brand2"), themeGet("colors.white"), themeGet("colors.brand2"), themeGet("colors.brand2"), tinycolor2(themeGet("colors.brand2")(props))
+        props.$color === "brand2" && css(templateObject_26 || (templateObject_26 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            &:hover {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n            }\n            &:active,\n            &:focus {\n                color: ", ";\n                border-color: ", ";\n                background-color: ", ";\n                box-shadow: 0 0 0 0.2rem\n                    ", ";\n            }\n        "])), themeGet("colors.brand2"), themeGet("colors.brand2"), themeGet("colors.white"), themeGet("colors.brand2"), themeGet("colors.brand2"), themeGet("colors.white"), themeGet("colors.brand2"), themeGet("colors.brand2"), tinycolor2(themeGet("colors.brand2")(props))
         .setAlpha(0.5)
         .toRgbString());
 }, function (props) {
@@ -369,72 +237,56 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
     return $shape === "ellipse" && css(templateObject_36 || (templateObject_36 = __makeTemplateObject(["\n            border-radius: 500px;\n        "], ["\n            border-radius: 500px;\n        "])));
 }, function (props) {
     return props.$active &&
-        props.$color === "primary" && css(templateObject_37 || (templateObject_37 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.primary")(props))
+        props.$color === "primary" && css(templateObject_37 || (templateObject_37 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.primary")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.primary")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "secondary" && css(templateObject_38 || (templateObject_38 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.secondary")(props))
+        props.$color === "secondary" && css(templateObject_38 || (templateObject_38 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.secondary")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.secondary")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "success" && css(templateObject_39 || (templateObject_39 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.success")(props))
+        props.$color === "success" && css(templateObject_39 || (templateObject_39 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.success")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.success")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "danger" && css(templateObject_40 || (templateObject_40 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.danger")(props))
+        props.$color === "danger" && css(templateObject_40 || (templateObject_40 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.danger")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.danger")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "warning" && css(templateObject_41 || (templateObject_41 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.warning")(props))
+        props.$color === "warning" && css(templateObject_41 || (templateObject_41 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.warning")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.warning")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "info" && css(templateObject_42 || (templateObject_42 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.info")(props))
+        props.$color === "info" && css(templateObject_42 || (templateObject_42 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.info")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.info")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "light" && css(templateObject_43 || (templateObject_43 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.light")(props))
+        props.$color === "light" && css(templateObject_43 || (templateObject_43 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.light")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.light")(props))
         .darken(10)
         .toString());
 }, function (props) {
     return props.$active &&
-        props.$color === "dark" && css(templateObject_44 || (templateObject_44 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ",
-        ";\n            background-color: ",
-        "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.dark")(props))
+        props.$color === "dark" && css(templateObject_44 || (templateObject_44 = __makeTemplateObject(["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "], ["\n            color: ", ";\n            border-color: ", ";\n            background-color: ", "; ;\n        "])), themeGet("colors.white"), tinycolor2(themeGet("colors.dark")(props))
         .darken(10)
         .toString(), tinycolor2(themeGet("colors.dark")(props))
         .darken(10)
@@ -537,20 +389,18 @@ var buttonStyles = css(templateObject_72 || (templateObject_72 = __makeTemplateO
         $iconSpace && css(templateObject_68 || (templateObject_68 = __makeTemplateObject(["\n            svg,\n            .spinner {\n                margin-left: ", ";\n            }\n        "], ["\n            svg,\n            .spinner {\n                margin-left: ", ";\n            }\n        "])), $iconSpace);
 }, function (_a) {
     var $uppercase = _a.$uppercase, $size = _a.$size;
-    return $uppercase && css(templateObject_71 || (templateObject_71 = __makeTemplateObject(["\n            text-transform: uppercase;\n            font-weight: 600;\n            letter-spacing: 0.5px;\n            ", "\n            ", "\n        "], ["\n            text-transform: uppercase;\n            font-weight: 600;\n            letter-spacing: 0.5px;\n            ",
-        "\n            ",
-        "\n        "])), $size === "xs" && css(templateObject_69 || (templateObject_69 = __makeTemplateObject(["\n                font-size: 10px;\n                line-height: 1.8;\n            "], ["\n                font-size: 10px;\n                line-height: 1.8;\n            "]))), $size === "md" && css(templateObject_70 || (templateObject_70 = __makeTemplateObject(["\n                line-height: 1.75;\n            "], ["\n                line-height: 1.75;\n            "]))));
+    return $uppercase && css(templateObject_71 || (templateObject_71 = __makeTemplateObject(["\n            text-transform: uppercase;\n            font-weight: 600;\n            letter-spacing: 0.5px;\n            ", "\n            ", "\n        "], ["\n            text-transform: uppercase;\n            font-weight: 600;\n            letter-spacing: 0.5px;\n            ", "\n            ", "\n        "])), $size === "xs" && css(templateObject_69 || (templateObject_69 = __makeTemplateObject(["\n                font-size: 10px;\n                line-height: 1.8;\n            "], ["\n                font-size: 10px;\n                line-height: 1.8;\n            "]))), $size === "md" && css(templateObject_70 || (templateObject_70 = __makeTemplateObject(["\n                line-height: 1.75;\n            "], ["\n                line-height: 1.75;\n            "]))));
 }, space, layout, borderStyle, typography);
 export var StyledButton = styled(function (_a) {
     var mt = _a.mt, mb = _a.mb, ml = _a.ml, mr = _a.mr, px = _a.px, py = _a.py, display = _a.display, borderWidth = _a.borderWidth, fontSize = _a.fontSize, props = __rest(_a, ["mt", "mb", "ml", "mr", "px", "py", "display", "borderWidth", "fontSize"]);
-    return (_jsx("button", __assign({ type: "button" }, props), void 0));
+    return (_jsx("button", __assign({ type: "button" }, props)));
 })(templateObject_73 || (templateObject_73 = __makeTemplateObject(["\n    ", "\n"], ["\n    ", "\n"])), buttonStyles);
 export var StyledLink = styled(function (_a) {
     var mt = _a.mt, mb = _a.mb, ml = _a.ml, mr = _a.mr, px = _a.px, py = _a.py, display = _a.display, borderWidth = _a.borderWidth, fontSize = _a.fontSize, props = __rest(_a, ["mt", "mb", "ml", "mr", "px", "py", "display", "borderWidth", "fontSize"]);
-    return (_jsx(Link, __assign({}, props), void 0));
+    return (_jsx(Link, __assign({}, props)));
 })(templateObject_74 || (templateObject_74 = __makeTemplateObject(["\n    ", "\n"], ["\n    ", "\n"])), buttonStyles);
 export var StyledAnchor = styled(function (_a) {
     var mt = _a.mt, mb = _a.mb, ml = _a.ml, mr = _a.mr, px = _a.px, py = _a.py, display = _a.display, borderWidth = _a.borderWidth, fontSize = _a.fontSize, props = __rest(_a, ["mt", "mb", "ml", "mr", "px", "py", "display", "borderWidth", "fontSize"]);
-    return (_jsx("a", __assign({}, props), void 0));
+    return (_jsx("a", __assign({}, props)));
 })(templateObject_75 || (templateObject_75 = __makeTemplateObject(["\n    ", "\n"], ["\n    ", "\n"])), buttonStyles);
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19, templateObject_20, templateObject_21, templateObject_22, templateObject_23, templateObject_24, templateObject_25, templateObject_26, templateObject_27, templateObject_28, templateObject_29, templateObject_30, templateObject_31, templateObject_32, templateObject_33, templateObject_34, templateObject_35, templateObject_36, templateObject_37, templateObject_38, templateObject_39, templateObject_40, templateObject_41, templateObject_42, templateObject_43, templateObject_44, templateObject_45, templateObject_46, templateObject_47, templateObject_48, templateObject_49, templateObject_50, templateObject_51, templateObject_52, templateObject_53, templateObject_54, templateObject_55, templateObject_56, templateObject_57, templateObject_58, templateObject_59, templateObject_60, templateObject_61, templateObject_62, templateObject_63, templateObject_64, templateObject_65, templateObject_66, templateObject_67, templateObject_68, templateObject_69, templateObject_70, templateObject_71, templateObject_72, templateObject_73, templateObject_74, templateObject_75;

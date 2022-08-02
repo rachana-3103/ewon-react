@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledProgress, StyledProgressBar } from "./style";
@@ -46,7 +45,7 @@ export interface IProps extends SpaceProps {
     opacity?: number;
 }
 
-const Progress: FC<IProps> = ({
+const Progress = ({
     className,
     now,
     min,
@@ -58,7 +57,7 @@ const Progress: FC<IProps> = ({
     animated,
     opacity,
     ...restProps
-}) => {
+}: IProps) => {
     return (
         <StyledProgress
             className={classnames(className)}

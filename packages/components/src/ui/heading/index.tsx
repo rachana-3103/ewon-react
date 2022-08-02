@@ -1,14 +1,15 @@
-import { FC, ElementType, forwardRef } from "react";
+import { ElementType, forwardRef } from "react";
 import { SpaceProps, ColorProps, TypographyProps } from "@doar/shared/styled";
 import { StyledHeading } from "./style";
 
 interface IProps extends SpaceProps, ColorProps, TypographyProps {
+    children: React.ReactNode;
     as?: ElementType;
     className?: string;
     tt?: string;
 }
 
-const Heading: FC<IProps> = forwardRef(
+const Heading = forwardRef<HTMLHeadingElement, IProps>(
     ({ as, className, tt, children, ...restProps }, ref) => {
         return (
             <StyledHeading

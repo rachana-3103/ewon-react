@@ -1,13 +1,13 @@
-import { FC } from "react";
 import { SpaceProps } from "@doar/shared/styled";
 import classnames from "classnames";
 import { StyledGroup } from "./style";
 
 interface IProps extends SpaceProps {
     className?: string;
+    children: React.ReactNode;
 }
 
-const FormGroup: FC<IProps> = ({ children, className, ...rest }) => {
+const FormGroup = ({ children, className, ...rest }: IProps) => {
     return (
         <StyledGroup className={classnames(className, "form-group")} {...rest}>
             {children}

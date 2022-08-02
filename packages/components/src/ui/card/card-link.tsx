@@ -1,14 +1,13 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCardLink } from "./style";
 import { ICardLinkProps } from "./types";
 
-const CardLink: FC<ICardLinkProps> = ({
+const CardLink = ({
     children,
     className,
     path,
     ...restProps
-}) => {
+}: ICardLinkProps) => {
     return (
         <StyledCardLink
             path={path}

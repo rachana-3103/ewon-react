@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledDropDivider } from "./style";
 
@@ -6,7 +5,7 @@ interface IDropDivider {
     className?: string;
 }
 
-const DropdownDivider: FC<IDropDivider> = ({ className }) => (
+const DropdownDivider = ({ className }: IDropDivider) => (
     <StyledDropDivider className={classnames(className, "dropdown-divider")} />
 );
 

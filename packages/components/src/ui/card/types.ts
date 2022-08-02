@@ -9,10 +9,10 @@ import {
 
 export interface ICardCommonProps {
     className?: string;
+    children: React.ReactNode;
 }
 
-export interface ICardProps extends LayoutProps, SpaceProps {
-    className?: string;
+export interface ICardProps extends ICardCommonProps, LayoutProps, SpaceProps {
     color?: "primary" | "secondary" | "success" | "warning" | "danger" | "info";
 }
 
@@ -24,8 +24,7 @@ export interface ICardImageProps {
     isBottom?: boolean;
 }
 
-export interface ICardTitleProps {
-    className?: string;
+export interface ICardTitleProps extends ICardCommonProps {
     as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
@@ -48,7 +47,6 @@ export interface ICardFooterProps
         SpaceProps,
         BorderProps {}
 
-export interface ICardLinkProps {
-    className?: string;
+export interface ICardLinkProps extends ICardCommonProps {
     path: string;
 }

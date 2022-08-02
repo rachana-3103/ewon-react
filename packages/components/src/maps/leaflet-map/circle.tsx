@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { Circle } from "react-leaflet";
 import { ICircleProps } from "./types";
 
-const LeafletCircle: FC<ICircleProps> = ({
+const LeafletCircle = ({
     lat,
     lng,
     radius,
@@ -18,7 +17,7 @@ const LeafletCircle: FC<ICircleProps> = ({
     fillColor,
     fillOpacity,
     fillRule,
-}) => {
+}: ICircleProps) => {
     const fillBlueOptions = {
         stroke,
         color,

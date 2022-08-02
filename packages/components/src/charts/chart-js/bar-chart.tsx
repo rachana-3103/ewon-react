@@ -1,20 +1,61 @@
-import { FC } from "react";
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { IProps } from "./types";
 
-const BarChart: FC<IProps> = ({ data, options, width, height }) => {
-    const datasetKeyProvider = () => {
-        return Math.random().toString();
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+export interface IProps {
+    data: {
+        labels: string[];
+        datasets: Array<{
+            label?: string;
+            data: number[];
+            backgroundColor: string | string[];
+            borderColor?: string | string[];
+            borderWidth?: number;
+            barPercentage?: number;
+            barThickness?: number;
+        }>;
     };
+    options: {
+        [x: string]: unknown;
+    };
+    width?: number | string;
+    height?: number | string;
+}
+
+export const BarChart = ({ data, options, width, height }: IProps) => {
     return (
         <Bar
             data={data}
-            options={options}
+            options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                ...options,
+            }}
             width={width}
             height={height}
-            datasetKeyProvider={datasetKeyProvider}
         />
     );
+};
+
+BarChart.defaultProps = {
+    width: "100%",
+    height: "100%",
 };
 
 export default BarChart;

@@ -32,10 +32,8 @@ var NavbarAside = function (_a) {
             var hasSubmenu = !!(submenu === null || submenu === void 0 ? void 0 : submenu.length);
             var hasMegamenu = !!(megamenu === null || megamenu === void 0 ? void 0 : megamenu.length);
             var hasChildren = hasSubmenu || hasMegamenu;
-            return (_jsxs(StyledNavitem, __assign({ "$hasSubmenu": hasChildren }, { children: [_jsx(StyledNavlink, __assign({ path: hasChildren ? "#!" : nav.url, className: "aside-navbar-label" }, { children: navLabel }), void 0),
-                    submenu && (_jsx(Submenu, { menu: submenu, className: "submenu" }, void 0)),
-                    megamenu && (_jsx(Megamenu, { menu: megamenu, hasChildren: hasChildren, onClick: clickHandler }, void 0))] }), navId));
-        }) }), void 0));
+            return (_jsxs(StyledNavitem, __assign({ "$hasSubmenu": hasChildren }, { children: [_jsx(StyledNavlink, __assign({ path: hasChildren ? "#!" : nav.url, className: "aside-navbar-label" }, { children: navLabel })), submenu && (_jsx(Submenu, { menu: submenu, className: "submenu" })), megamenu && (_jsx(Megamenu, { menu: megamenu, hasChildren: hasChildren, onClick: clickHandler }))] }), navId));
+        }) })));
 };
 NavbarAside.defaultProps = {
     menus: [],

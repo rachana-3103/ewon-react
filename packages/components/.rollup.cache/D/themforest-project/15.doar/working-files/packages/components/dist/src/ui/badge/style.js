@@ -1,4 +1,4 @@
-import { __makeTemplateObject, __spreadArrays } from "tslib";
+import { __makeTemplateObject, __read, __spreadArray } from "tslib";
 import styled, { css, themeGet, space } from "@doar/shared/styled";
 var props = [
     "p",
@@ -16,20 +16,7 @@ var props = [
     "ml",
     "mr",
 ];
-var badgeCss = css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n    font-size: 10px;\n    font-weight: 500;\n    font-family: ", ";\n    padding: 3px 5px 4px;\n    display: inline-block;\n    line-height: 1;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: baseline;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    ", "\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n"], ["\n    font-size: 10px;\n    font-weight: 500;\n    font-family: ", ";\n    padding: 3px 5px 4px;\n    display: inline-block;\n    line-height: 1;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: baseline;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    ",
-    "\n    ",
-    "\n    ",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n\t",
-    "\n"])), themeGet("fonts.interUi"), function (_a) {
+var badgeCss = css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n    font-size: 10px;\n    font-weight: 500;\n    font-family: ", ";\n    padding: 3px 5px 4px;\n    display: inline-block;\n    line-height: 1;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: baseline;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    ", "\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n"], ["\n    font-size: 10px;\n    font-weight: 500;\n    font-family: ", ";\n    padding: 3px 5px 4px;\n    display: inline-block;\n    line-height: 1;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: baseline;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\n        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    ", "\n    ", "\n    ", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n\t", "\n"])), themeGet("fonts.interUi"), function (_a) {
     var $color = _a.$color, $variant = _a.$variant;
     return $color === "primary" &&
         $variant === "contained" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            color: #fff;\n            background-color: ", ";\n        "], ["\n            color: #fff;\n            background-color: ", ";\n        "])), themeGet("colors.primary"));
@@ -79,7 +66,7 @@ var badgeCss = css(templateObject_14 || (templateObject_14 = __makeTemplateObjec
 });
 export var StyledBadge = styled("span").withConfig({
     shouldForwardProp: function (prop, defaultValidatorFn) {
-        return !__spreadArrays(props).includes(prop) && defaultValidatorFn(prop);
+        return !__spreadArray([], __read(props), false).includes(prop) && defaultValidatorFn(prop);
     },
 })(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n    ", ";\n    ", ";\n"], ["\n    ", ";\n    ", ";\n"])), badgeCss, space);
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15;

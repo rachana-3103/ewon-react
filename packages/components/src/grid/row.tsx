@@ -1,18 +1,15 @@
-import { FC } from "react";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledRow } from "./style";
 import { RowProps } from "./types";
 
-interface IProps extends SpaceProps {
+interface IRowProps extends SpaceProps, RowProps {
+    children: React.ReactNode;
     className?: string;
-}
-
-interface IRowProps extends IProps, RowProps {
     gutters?: number;
     noGutter?: boolean;
 }
 
-const Row: FC<IRowProps> = ({ className, gutters, noGutter, ...props }) => {
+const Row = ({ className, gutters, noGutter, ...props }: IRowProps) => {
     return (
         <StyledRow
             $gutters={gutters}

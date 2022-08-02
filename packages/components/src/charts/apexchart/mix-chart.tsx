@@ -1,8 +1,7 @@
-import { FC } from "react";
 import ApexChart from "react-apexcharts";
 import { IMixChart } from "./types";
 
-const MixChart: FC<IMixChart> = ({ options, series, width, height }) => {
+const MixChart = ({ options, series, width, height }: IMixChart) => {
     return (
         <ApexChart
             type="line"

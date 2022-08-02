@@ -1,0 +1,2 @@
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import i from"classnames";import{StyledInputGroupWrap as a}from"./style.js";var o=function(o){var t=o.children,m=o.dir,l=void 0===m?"append":m,n=o.className,c=r(o,["children","dir","className"]);return e(a,s({className:i(n,"input-group-".concat(l)),$dir:l},c,{children:t}))};export{o as default};
+//# sourceMappingURL=input-group-addon.js.map

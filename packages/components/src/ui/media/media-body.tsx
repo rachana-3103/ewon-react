@@ -1,17 +1,13 @@
-import React from "react";
 import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledMediaBody } from "./style";
 
 interface IMediaBodyProps extends SpaceProps {
     className?: string;
+    children: React.ReactNode;
 }
 
-const MediaBody: React.FC<IMediaBodyProps> = ({
-    children,
-    className,
-    ...restProps
-}) => {
+const MediaBody = ({ children, className, ...restProps }: IMediaBodyProps) => {
     return (
         <StyledMediaBody
             className={classnames(className, "media-body")}

@@ -1,4 +1,3 @@
-import React from "react";
 import { IMegamenu } from "@doar/shared/types";
 import {
     StyledSubNavItem,
@@ -13,7 +12,7 @@ interface IProps {
     menu: IMegamenu[];
 }
 
-const Megamenu: React.FC<IProps> = ({ menu }) => {
+const Megamenu = ({ menu }: IProps) => {
     return (
         <StyledMegaMenu className="submenu">
             <StyledMegaMenuInner>

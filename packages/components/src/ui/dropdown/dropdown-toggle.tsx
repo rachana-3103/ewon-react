@@ -1,7 +1,6 @@
-import { FC } from "react";
 import Button, { ButtonProps } from "../button/button";
 
-const DropdownToggle: FC<ButtonProps> = (props) => {
+const DropdownToggle = (props: ButtonProps) => {
     const { children, ...restProps } = props;
     return <Button {...restProps}>{children}</Button>;
 };

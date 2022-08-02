@@ -1,0 +1,2 @@
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import m from"classnames";import{StyledCardColumns as a}from"./style.js";var l=function(l){var o=l.children,t=l.className,c=r(l,["children","className"]);return e(a,s({className:m(t,"card-columns")},c,{children:o}))};export{l as default};
+//# sourceMappingURL=card-columns.js.map

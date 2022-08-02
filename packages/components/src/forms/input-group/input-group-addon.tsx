@@ -1,22 +1,19 @@
-import { FC } from "react";
 import classname from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledInputGroupWrap } from "./style";
 
 interface IProps extends SpaceProps {
     className?: string;
-}
-
-interface IWrap extends IProps {
+    children: React.ReactNode;
     dir?: "append" | "prepend";
 }
 
-const InputGroupAddon: FC<IWrap> = ({
+const InputGroupAddon = ({
     children,
     dir = "append",
     className,
     ...rest
-}) => {
+}: IProps) => {
     return (
         <StyledInputGroupWrap
             className={classname(className, `input-group-${dir}`)}

@@ -168,19 +168,23 @@ export const StyledNav = styled(
                 height: 18px;
                 stroke-width: 2.3px;
                 margin-right: 15px;
-                fill: ${tinycolor(themeGet("colors.text2")(props))
+                fill: ${tinycolor(themeGet("colors.text2")(props) as string)
                     .setAlpha(0.06)
                     .toRgbString()};
             }
             ${props.theme.name !== "dark" &&
             css`
                 .nav-link {
-                    color: ${tinycolor(themeGet("colors.text2")(props))
+                    color: ${tinycolor(
+                        themeGet("colors.text2")(props) as string
+                    )
                         .setAlpha(0.9)
                         .toRgbString()};
                 }
                 svg {
-                    color: ${tinycolor(themeGet("colors.text2")(props))
+                    color: ${tinycolor(
+                        themeGet("colors.text2")(props) as string
+                    )
                         .setAlpha(0.65)
                         .toRgbString()};
                 }
@@ -352,7 +356,7 @@ export const StyledNavLink = styled(
                 stroke-width: 2.3px;
                 margin-right: 12px;
                 color: ${themeGet("colors.shuttle2")};
-                fill: ${tinycolor(themeGet("colors.text2")(props))
+                fill: ${tinycolor(themeGet("colors.text2")(props) as string)
                     .setAlpha(0.06)
                     .toRgbString()};
             }
@@ -367,7 +371,7 @@ export const StyledNavLink = styled(
             background-color: ${themeGet("colors.catskill")};
             svg {
                 color: ${themeGet("colors.primary")};
-                fill: ${tinycolor(themeGet("colors.primary")(props))
+                fill: ${tinycolor(themeGet("colors.primary")(props) as string)
                     .setAlpha(0.2)
                     .toRgbString()};
             }

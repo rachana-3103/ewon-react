@@ -1,28 +1,21 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { ColorProps, TypographyProps } from "@doar/shared/styled";
-
 import { StyledInitialText } from "./style";
 
-interface IProps {
-    /**
-     * Pass extra classes
-     */
+interface IAvatarText extends ColorProps, TypographyProps {
+    children: React.ReactNode;
     className?: string;
-}
-
-interface IAvatarText extends IProps, ColorProps, TypographyProps {
     size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     shape?: "circle" | "rounded" | "square";
 }
 
-const AvatarInitial: FC<IAvatarText> = ({
+const AvatarInitial = ({
     children,
     size,
     shape,
     className,
     ...restProps
-}) => {
+}: IAvatarText) => {
     return (
         <StyledInitialText
             $size={size}

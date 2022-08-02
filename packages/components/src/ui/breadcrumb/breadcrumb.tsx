@@ -1,9 +1,9 @@
-import React from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledNav, StyledBreadcrumb } from "./style";
 
 interface IBreadcrumb extends SpaceProps {
+    children: React.ReactNode;
     /**
      * Extra class name
      */
@@ -14,12 +14,12 @@ interface IBreadcrumb extends SpaceProps {
     as?: React.ElementType;
 }
 
-export const Breadcrumb: React.FC<IBreadcrumb> = ({
+export const Breadcrumb = ({
     children,
     className,
     as,
     ...restProps
-}) => (
+}: IBreadcrumb) => (
     <StyledNav aria-label="breadcrumb" as={as}>
         <StyledBreadcrumb
             className={classnames(className, "breadcrumb")}

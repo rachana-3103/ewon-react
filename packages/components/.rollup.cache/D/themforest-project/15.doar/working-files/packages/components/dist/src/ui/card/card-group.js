@@ -4,6 +4,6 @@ import classnames from "classnames";
 import { StyledCardGroup } from "./style";
 var CardGroup = function (_a) {
     var children = _a.children, className = _a.className, restProps = __rest(_a, ["children", "className"]);
-    return (_jsx(StyledCardGroup, __assign({ className: classnames(className, "card-group") }, restProps, { children: children }), void 0));
+    return (_jsx(StyledCardGroup, __assign({ className: classnames(className, "card-group") }, restProps, { children: children })));
 };
 export default CardGroup;

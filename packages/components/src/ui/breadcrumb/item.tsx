@@ -1,20 +1,20 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { StyledBreadcrumbItem } from "./style";
 
 interface IBreadcrumbItem {
+    children: React.ReactNode;
     path?: string;
     active?: boolean;
     className?: string;
 }
 
-const BreadcrumbItem: React.FC<IBreadcrumbItem> = ({
+const BreadcrumbItem = ({
     children,
     path,
     active,
     className,
-}) => (
+}: IBreadcrumbItem) => (
     <StyledBreadcrumbItem
         className={classnames(className, "breadcrumb-item", active && "active")}
         $active={active}

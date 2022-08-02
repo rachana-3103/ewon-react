@@ -1,0 +1,2 @@
+import{__rest as s,__assign as t}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as o}from"react/jsx-runtime";import m from"classnames";import{StyledCardImage as r}from"./style.js";var a=function(a){var i=a.src,e=a.alt,c=a.className,l=a.isTop,p=a.isBottom,d=s(a,["src","alt","className","isTop","isBottom"]);return o(r,t({src:i,alt:e,className:m(c,"card-image",l?"card-img-top":"",p?"card-img-bottom":""),$isTop:l,$isBottom:p},d))};export{a as default};
+//# sourceMappingURL=card-image.js.map

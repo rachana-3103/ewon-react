@@ -1,4 +1,4 @@
-import { __makeTemplateObject, __spreadArrays } from "tslib";
+import { __makeTemplateObject, __read, __spreadArray } from "tslib";
 import styled, { space, color as colorStyles, typography, layout, css, } from "@doar/shared/styled";
 var props = [
     "p",
@@ -26,10 +26,9 @@ var props = [
 ];
 export var StyledText = styled("p").withConfig({
     shouldForwardProp: function (prop, defaultValidatorFn) {
-        return !__spreadArrays(props).includes(prop) && defaultValidatorFn(prop);
+        return !__spreadArray([], __read(props), false).includes(prop) && defaultValidatorFn(prop);
     },
-})(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    ", "\n    ", ";\n    ", ";\n    ", ";\n    ", ";\n"], ["\n    ",
-    "\n    ", ";\n    ", ";\n    ", ";\n    ", ";\n"])), function (_a) {
+})(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    ", "\n    ", ";\n    ", ";\n    ", ";\n    ", ";\n"], ["\n    ", "\n    ", ";\n    ", ";\n    ", ";\n    ", ";\n"])), function (_a) {
     var $tt = _a.$tt;
     return $tt && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n            text-transform: ", ";\n        "], ["\n            text-transform: ", ";\n        "])), $tt);
 }, space, colorStyles, typography, layout);

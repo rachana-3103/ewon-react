@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { IMenu } from "@doar/shared/types";
 import { getSiblings } from "@doar/shared/methods";
 import { useClickOutside } from "@doar/shared/hooks";
@@ -10,7 +10,7 @@ interface IProps {
     menus: IMenu[];
 }
 
-const Navbar: React.FC<IProps> = ({ menus }) => {
+const Navbar = ({ menus }: IProps) => {
     const clickHandler = (e: React.MouseEvent, hasChildren: boolean) => {
         if (hasChildren) {
             e.preventDefault();

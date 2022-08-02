@@ -1,4 +1,3 @@
-import React from "react";
 import { IMenu } from "@doar/shared/types";
 import { getSiblings } from "@doar/shared/methods";
 import { StyledNavbar, StyledNavitem, StyledNavlink } from "./style";
@@ -9,7 +8,7 @@ interface IProps {
     menus: IMenu[];
 }
 
-const NavbarAside: React.FC<IProps> = ({ menus }) => {
+const NavbarAside = ({ menus }: IProps) => {
     const clickHandler = (e: React.MouseEvent, hasChildren: boolean) => {
         if (hasChildren) {
             e.preventDefault();

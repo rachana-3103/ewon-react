@@ -1,14 +1,11 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps, FlexboxProps, LayoutProps } from "@doar/shared/styled";
 import { StyledListGroupItem } from "./style";
 
-interface IProps {
+interface IListGroupItem extends SpaceProps, FlexboxProps, LayoutProps {
     as?: React.ElementType;
     className?: string;
-}
-
-interface IListGroupItem extends IProps, SpaceProps, FlexboxProps, LayoutProps {
+    children: React.ReactNode;
     active?: boolean;
     disabled?: boolean;
     action?: boolean;
@@ -17,7 +14,7 @@ interface IListGroupItem extends IProps, SpaceProps, FlexboxProps, LayoutProps {
     horizontal?: boolean;
 }
 
-const ListGroupItem: FC<IListGroupItem> = ({
+const ListGroupItem = ({
     as,
     className,
     children,
@@ -28,7 +25,7 @@ const ListGroupItem: FC<IListGroupItem> = ({
     flush,
     horizontal,
     ...restProps
-}) => {
+}: IListGroupItem) => {
     return (
         <StyledListGroupItem
             as={as}

@@ -1,9 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledCard } from "./style";
 import { ICardProps } from "./types";
 
-const Card: FC<ICardProps> = ({ children, className, color, ...restProps }) => {
+const Card = ({ children, className, color, ...restProps }: ICardProps) => {
     return (
         <StyledCard
             className={classnames(className, "card")}

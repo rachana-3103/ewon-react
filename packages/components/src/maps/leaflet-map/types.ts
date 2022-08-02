@@ -1,6 +1,7 @@
 import { LayoutProps } from "@doar/shared/styled";
 
 export interface IProps extends LayoutProps {
+    children: React.ReactNode;
     /**
      * Required. Pass google maps latitude
      */
@@ -20,6 +21,7 @@ export interface IProps extends LayoutProps {
 }
 
 export interface IMarkerProps {
+    children: React.ReactNode;
     lat: number;
     lng: number;
 }

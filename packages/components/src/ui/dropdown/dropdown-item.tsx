@@ -1,14 +1,14 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledDropItem } from "./style";
 
 interface IDropItem {
+    children: React.ReactNode;
     path: string;
     className?: string;
     active?: boolean;
 }
 
-const DropdownItem: FC<IDropItem> = ({ children, path, className, active }) => (
+const DropdownItem = ({ children, path, className, active }: IDropItem) => (
     <StyledDropItem
         active={active}
         path={path}

@@ -4,21 +4,12 @@
  */
 
 import { css } from "styled-components";
-import FaBrands400Eot from "./font-awesome/fa-brands-400.eot";
 import FaBrands400Woff2 from "./font-awesome/fa-brands-400.woff2";
 import FaBrands400Woff from "./font-awesome/fa-brands-400.woff";
-import FaBrands400Ttf from "./font-awesome/fa-brands-400.ttf";
-import FaBrands400Svg from "./font-awesome/fa-brands-400.svg";
-import FaRegular400Eot from "./font-awesome/fa-regular-400.eot";
 import FaRegular400Woff2 from "./font-awesome/fa-regular-400.woff2";
 import FaRegular400Woff from "./font-awesome/fa-regular-400.woff";
-import FaRegular400Ttf from "./font-awesome/fa-regular-400.ttf";
-import FaRegular400Svg from "./font-awesome/fa-regular-400.svg";
-import FaSolid900Eot from "./font-awesome/fa-solid-900.eot";
 import FaSolid900Woff2 from "./font-awesome/fa-solid-900.woff2";
 import FaSolid900Woff from "./font-awesome/fa-solid-900.woff";
-import FaSolid900Ttf from "./font-awesome/fa-solid-900.ttf";
-import FaSolid900Svg from "./font-awesome/fa-solid-900.svg";
 
 export const FontAwesome = css`
     .fa,
@@ -5691,12 +5682,9 @@ readers do not read off random characters that represent icons */
         font-style: normal;
         font-weight: normal;
         font-display: swap;
-        src: url(${FaBrands400Eot});
-        src: url(${FaBrands400Eot}) format("embedded-opentype"),
-            url(${FaBrands400Woff2}) format("woff2"),
-            url(${FaBrands400Woff}) format("woff"),
-            url(${FaBrands400Ttf}) format("truetype"),
-            url(${FaBrands400Svg}) format("svg");
+        src: url(${FaBrands400Woff2});
+        src: url(${FaBrands400Woff2}) format("woff2"),
+            url(${FaBrands400Woff}) format("woff");
     }
 
     .fab {
@@ -5707,12 +5695,9 @@ readers do not read off random characters that represent icons */
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(${FaRegular400Eot});
-        src: url(${FaRegular400Eot}) format("embedded-opentype"),
-            url(${FaRegular400Woff2}) format("woff2"),
-            url(${FaRegular400Woff}) format("woff"),
-            url(${FaRegular400Ttf}) format("truetype"),
-            url(${FaRegular400Svg}) format("svg");
+        src: url(${FaRegular400Woff2});
+        src: url(${FaRegular400Woff2}) format("woff2"),
+            url(${FaRegular400Woff}) format("woff");
     }
 
     .far {
@@ -5724,12 +5709,9 @@ readers do not read off random characters that represent icons */
         font-style: normal;
         font-weight: 900;
         font-display: swap;
-        src: url(${FaSolid900Eot});
-        src: url(${FaSolid900Eot}) format("embedded-opentype"),
-            url(${FaSolid900Woff2}) format("woff2"),
-            url(${FaSolid900Woff}) format("woff"),
-            url(${FaSolid900Ttf}) format("truetype"),
-            url(${FaSolid900Svg}) format("svg");
+        src: url(${FaSolid900Woff2});
+        src: url(${FaSolid900Woff2}) format("woff2"),
+            url(${FaSolid900Woff}) format("woff");
     }
 
     .fa,

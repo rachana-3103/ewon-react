@@ -231,8 +231,7 @@ const menus = [
     {
         id: 4,
         label: "Components",
-        url:
-            "https://doar-react-components.netlify.app/?path=/docs/introduction--page",
+        url: "https://doar-react-components.netlify.app/?path=/docs/introduction--page",
         Icon: Box,
     },
     {

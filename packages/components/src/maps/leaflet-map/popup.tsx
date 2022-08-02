@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { Popup } from "react-leaflet";
 
-const LeafletPopup: FC = ({ children }) => {
+const LeafletPopup = ({ children }: { children: React.ReactNode }) => {
     return <Popup>{children}</Popup>;
 };
 

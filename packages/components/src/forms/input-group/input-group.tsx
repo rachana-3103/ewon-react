@@ -1,13 +1,13 @@
-import { FC } from "react";
 import classname from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledInputGroup } from "./style";
 
 interface IProps extends SpaceProps {
     className?: string;
+    children: React.ReactNode;
 }
 
-const InputGroup: FC<IProps> = ({ children, className, ...rest }) => {
+const InputGroup = ({ children, className, ...rest }: IProps) => {
     return (
         <StyledInputGroup
             className={classname(className, "input-group")}

@@ -1,8 +1,7 @@
-import { FC } from "react";
 import ApexChart from "react-apexcharts";
 import { IProps } from "./types";
 
-const BarChart: FC<IProps> = ({ options, series, width, height }) => {
+const BarChart = ({ options, series, width, height }: IProps) => {
     return (
         <ApexChart
             type="bar"

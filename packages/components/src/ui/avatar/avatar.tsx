@@ -1,17 +1,15 @@
-import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
+import { Children, isValidElement, FunctionComponent } from "react";
 import classnames from "classnames";
 import { LayoutProps, SpaceProps } from "@doar/shared/styled";
 
 import { StyledAvatar } from "./style";
 
-interface IProps {
+interface IAvatar extends LayoutProps, SpaceProps {
+    children: React.ReactNode;
     /**
      * Pass extra classes
      */
     className?: string;
-}
-
-interface IAvatar extends LayoutProps, SpaceProps, IProps {
     /**
      * Default size is `38x38`
      */
@@ -26,18 +24,17 @@ interface IAvatar extends LayoutProps, SpaceProps, IProps {
     status?: "online" | "offline";
 }
 
-type IChild = Exclude<ReactChild, ReactText>;
-
-const Avatar: FC<IAvatar> = ({
+const Avatar = ({
     size,
     shape,
     status,
     className,
     children,
     ...restProps
-}) => {
+}: IAvatar) => {
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

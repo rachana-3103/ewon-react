@@ -1,11 +1,10 @@
-import { Children, FC, ReactChild, ReactText, FunctionComponent } from "react";
+import { Children, isValidElement, FunctionComponent } from "react";
 import classnames from "classnames";
 import { FlexboxProps, SpaceProps, TypographyProps } from "@doar/shared/styled";
 import { StyledNav } from "./style";
 
-type IChild = Exclude<ReactChild, ReactText>;
-
 export interface IProps {
+    children: React.ReactNode;
     /**
      * Pass extra classes
      */
@@ -29,7 +28,7 @@ interface INav extends IProps, FlexboxProps, SpaceProps, TypographyProps {
     customStyle?: CustomStyle;
 }
 
-const Nav: FC<INav> = ({
+const Nav = ({
     children,
     className,
     pills,
@@ -38,9 +37,10 @@ const Nav: FC<INav> = ({
     fill,
     customStyle,
     ...rest
-}) => {
+}: INav) => {
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

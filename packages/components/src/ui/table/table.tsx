@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classNames from "classnames";
 import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledTableResponsive, StyledTable } from "./style";
@@ -14,6 +13,7 @@ type TColor =
     | "dark";
 
 interface IProps extends SpaceProps, BorderProps {
+    children: React.ReactNode;
     className?: string;
     theadColor?: TColor;
     striped?: boolean;
@@ -24,7 +24,7 @@ interface IProps extends SpaceProps, BorderProps {
     borderless?: boolean;
 }
 
-const Table: FC<IProps> = ({
+const Table = ({
     children,
     className,
     theadColor,
@@ -35,7 +35,7 @@ const Table: FC<IProps> = ({
     color,
     borderless,
     ...restProps
-}) => {
+}: IProps) => {
     return (
         <StyledTableResponsive>
             <StyledTable

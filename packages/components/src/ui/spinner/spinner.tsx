@@ -1,4 +1,3 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledSpinner } from "./style";
 
@@ -30,13 +29,13 @@ export interface IProps {
     size?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
-const Spinner: FC<IProps> = ({
+const Spinner = ({
     className,
     variant = "border",
     color,
     size,
     ...restProps
-}) => {
+}: IProps) => {
     return (
         <StyledSpinner
             className={classnames(className, "spinner", `spinner-${variant}`)}

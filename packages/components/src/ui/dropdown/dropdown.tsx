@@ -1,8 +1,6 @@
 import {
     Children,
-    FC,
-    ReactChild,
-    ReactText,
+    isValidElement,
     useState,
     useCallback,
     FunctionComponent,
@@ -11,9 +9,8 @@ import classnames from "classnames";
 import { useClickOutside } from "@doar/shared/hooks";
 import { StyledDropdown } from "./style";
 
-type IChild = Exclude<ReactChild, ReactText>;
-
 interface DropdownProps {
+    children: React.ReactNode;
     /**
      * Required. Default is `down`.
      */
@@ -21,12 +18,12 @@ interface DropdownProps {
     className?: string;
 }
 
-const Dropdown: FC<DropdownProps> = ({
+const Dropdown = ({
     children,
     direction,
     className,
     ...restProps
-}) => {
+}: DropdownProps) => {
     const [show, setShow] = useState(false);
 
     const handleClick = () => {
@@ -39,7 +36,8 @@ const Dropdown: FC<DropdownProps> = ({
     const containerRef = useClickOutside<HTMLDivElement>(onClose);
 
     const RenderChild = Children.map(children, (el) => {
-        const child = el as IChild;
+        if (!isValidElement(el)) return el;
+        const child = el;
         if (child !== null) {
             const childType = child.type as FunctionComponent;
             const name = childType.displayName || childType.name;

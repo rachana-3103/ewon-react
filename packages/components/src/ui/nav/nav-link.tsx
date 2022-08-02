@@ -1,8 +1,8 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { StyledNavLink } from "./style";
 
 export interface IProps {
+    children: React.ReactNode;
     /**
      * Pass extra classes
      */
@@ -30,7 +30,7 @@ interface ILink extends IProps {
     target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
-export const NavLink: FC<ILink> = ({
+export const NavLink = ({
     children,
     className,
     path,
@@ -43,7 +43,7 @@ export const NavLink: FC<ILink> = ({
     label,
     target,
     ...rest
-}) => {
+}: ILink) => {
     return (
         <StyledNavLink
             className={classnames(className, "nav-link", active && "active")}

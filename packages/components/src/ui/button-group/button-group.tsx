@@ -1,9 +1,9 @@
-import { FC } from "react";
 import classnames from "classnames";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledGroup } from "./style";
 
 export interface IProps extends SpaceProps {
+    children: React.ReactNode;
     /**
      * Instead of applying button sizing props to every button in a group, just pass `size` to each `BtnGroup`, including each one when nesting multiple groups.
      */
@@ -22,14 +22,14 @@ export interface IProps extends SpaceProps {
     className?: string;
 }
 
-const ButtonGroup: FC<IProps> = ({
+const ButtonGroup = ({
     children,
     size,
     vertical,
     label,
     className,
     ...restProps
-}) => {
+}: IProps) => {
     return (
         <StyledGroup
             role="group"

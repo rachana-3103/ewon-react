@@ -135,14 +135,14 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
     ${(props) =>
         props.theme.name !== "dark" &&
         css`
-            color: ${tinycolor(themeGet("colors.text2")(props))
+            color: ${tinycolor(themeGet("colors.text2")(props) as string)
                 .setAlpha(0.9)
                 .toString()};
             svg {
-                color: ${tinycolor(themeGet("colors.text2")(props))
+                color: ${tinycolor(themeGet("colors.text2")(props) as string)
                     .setAlpha(0.65)
                     .toString()};
-                fill: ${tinycolor(themeGet("colors.text2")(props))
+                fill: ${tinycolor(themeGet("colors.text2")(props) as string)
                     .setAlpha(0.06)
                     .toString()};
             }
@@ -153,7 +153,7 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
             color: ${themeGet("colors.gray500")};
             svg {
                 color: ${themeGet("colors.gray500")};
-                fill: ${tinycolor(themeGet("colors.white")(props))
+                fill: ${tinycolor(themeGet("colors.white")(props) as string)
                     .setAlpha(0.06)
                     .toString()};
             }
@@ -177,7 +177,9 @@ export const StyledSubNavlink = styled(({ ...rest }) => <Anchor {...rest} />)`
         svg {
             color: ${themeGet("colors.primary")};
             fill: ${(props) =>
-                tinycolor(props.theme.colors.primary).setAlpha(0.2).toString()};
+                tinycolor(props.theme.colors.primary as string)
+                    .setAlpha(0.2)
+                    .toString()};
         }
     }
 `;

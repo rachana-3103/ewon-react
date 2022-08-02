@@ -10,11 +10,9 @@ var Megamenu = function (_a) {
             var hasMegaSubmenu = !!(megaSubmenu === null || megaSubmenu === void 0 ? void 0 : megaSubmenu.length);
             return (_jsxs(StyledSubNavItem, __assign({ onClick: function (e) {
                     onClick(e, hasChildren);
-                }, className: hasMegaSubmenu ? "with-sub" : "" }, { children: [_jsxs(StyledSubNavlink, __assign({ path: "#!", className: "aside-navbar-link" }, { children: [Icon && _jsx(Icon, {}, void 0),
-                            _jsx("span", { children: title }, void 0)] }), void 0),
-                    hasMegaSubmenu && (_jsx(StyledSubmenu, __assign({ className: "mega-submenu" }, { children: megaSubmenu === null || megaSubmenu === void 0 ? void 0 : megaSubmenu.map(function (subnav) { return (_jsx(StyledSubNavItem, { children: _jsx(StyledSubNavlink, __assign({ className: location.pathname === subnav.url
+                }, className: hasMegaSubmenu ? "with-sub" : "" }, { children: [_jsxs(StyledSubNavlink, __assign({ path: "#!", className: "aside-navbar-link" }, { children: [Icon && _jsx(Icon, {}), _jsx("span", { children: title })] })), hasMegaSubmenu && (_jsx(StyledSubmenu, __assign({ className: "mega-submenu" }, { children: megaSubmenu === null || megaSubmenu === void 0 ? void 0 : megaSubmenu.map(function (subnav) { return (_jsx(StyledSubNavItem, { children: _jsx(StyledSubNavlink, __assign({ className: location.pathname === subnav.url
                                     ? "active"
-                                    : "", path: subnav.url }, { children: subnav.label }), void 0) }, subnav.id)); }) }), void 0))] }), id));
-        }) }), void 0));
+                                    : "", path: subnav.url }, { children: subnav.label })) }, subnav.id)); }) })))] }), id));
+        }) })));
 };
 export default Megamenu;

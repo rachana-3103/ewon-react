@@ -1,20 +1,14 @@
 import { css } from "styled-components";
-import IoniconsEot from "./ionicons/ionicons.eot";
 import IoniconsWoff2 from "./ionicons/ionicons.woff2";
 import IoniconsWoff from "./ionicons/ionicons.woff";
-import IoniconsTtf from "./ionicons/ionicons.ttf";
-import IoniconsSvg from "./ionicons/ionicons.svg";
 
 export const IonIcons = css`
     @font-face {
         font-family: "Ionicons";
         font-display: swap;
-        src: url(${IoniconsEot});
-        src: url(${IoniconsEot}) format("embedded-opentype"),
-            url(${IoniconsWoff2}) format("woff2"),
-            url(${IoniconsWoff}) format("woff"),
-            url(${IoniconsTtf}) format("truetype"),
-            url(${IoniconsSvg}) format("svg");
+        src: url(${IoniconsWoff2});
+        src: url(${IoniconsWoff2}) format("woff2"),
+            url(${IoniconsWoff}) format("woff");
         font-weight: normal;
         font-style: normal;
     }

@@ -47,8 +47,12 @@ export const StyledCardBodyText = styled.p`
 export const StyledChart = styled.div`
     margin-left: -17px;
     margin-right: -17px;
+    margin-bottom: -15px;
+    height: 240px;
+    ${device.large} {
+        height: 255px;
+    }
     ${device.xlarge} {
-        margin-bottom: -15px;
         height: 312px;
     }
     .apexcharts-xaxis-label {

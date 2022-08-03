@@ -16,24 +16,24 @@ export const RetentionChart = {
         dataLabels: {
             enabled: false,
         },
-        responsive: [
-            {
-                breakpoint: 575,
-                options: {
-                    chart: {
-                        height: 220,
-                    },
-                },
-            },
-            {
-                breakpoint: 1199,
-                options: {
-                    chart: {
-                        height: 228,
-                    },
-                },
-            },
-        ],
+        // responsive: [
+        //     {
+        //         breakpoint: 575,
+        //         options: {
+        //             chart: {
+        //                 height: 220,
+        //             },
+        //         },
+        //     },
+        //     {
+        //         breakpoint: 1199,
+        //         options: {
+        //             chart: {
+        //                 height: 228,
+        //             },
+        //         },
+        //     },
+        // ],
         plotOptions: {
             bar: {
                 horizontal: false,

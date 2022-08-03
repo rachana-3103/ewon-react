@@ -29,45 +29,42 @@ const data = {
     options: {
         maintainAspectRatio: false,
         responsive: true,
-        legend: {
-            display: false,
-            labels: {
-                display: false,
-            },
-        },
         layout: {
             padding: {
                 left: 5,
             },
         },
         scales: {
-            yAxes: [
-                {
-                    gridLines: {
-                        display: false,
-                    },
-                    barPercentage: 0.5,
-                    ticks: {
-                        beginAtZero: true,
-                        fontSize: 13,
-                        fontColor: "#182b49",
-                        fontFamily: "IBM Plex Sans",
-                    },
+            y: {
+                grid: {
+                    display: false,
                 },
-            ],
-            xAxes: [
-                {
-                    gridLines: {
-                        color: "#e5e9f2",
-                    },
-                    ticks: {
-                        beginAtZero: true,
-                        fontSize: 10,
-                        fontColor: "#182b49",
-                        max: 100,
-                    },
+                ticks: {
+                    beginAtZero: true,
+                    fontSize: 13,
+                    fontColor: "#182b49",
+                    fontFamily: "IBM Plex Sans",
                 },
-            ],
+            },
+            x: {
+                grid: {
+                    color: "#e5e9f2",
+                },
+                ticks: {
+                    beginAtZero: true,
+                    fontSize: 10,
+                    fontColor: "#182b49",
+                    max: 100,
+                },
+            },
+        },
+        elements: {
+            bar: { borderWidth: 3, borderColor: "transparent" },
+        },
+        plugins: {
+            legend: {
+                display: false,
+            },
         },
     },
 };

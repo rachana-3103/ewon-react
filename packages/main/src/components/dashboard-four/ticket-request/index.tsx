@@ -14,27 +14,23 @@ const TicketRequest = () => {
     const darkChartOptions = {
         ...chartOptions,
         scales: {
-            xAxes: [
-                {
-                    ...chartOptions.scales.xAxes[0],
-                    gridLines: {
-                        color: "rgba(255,255,255,.04)",
-                    },
-                    ticks: {
-                        ...chartOptions.scales.xAxes[0].ticks,
-                        fontColor: "#97a3b9",
-                    },
+            x: {
+                ...chartOptions.scales.x,
+                grid: {
+                    color: "rgba(255,255,255,.04)",
                 },
-            ],
-            yAxes: [
-                {
-                    ...chartOptions.scales.yAxes[0],
-                    ticks: {
-                        ...chartOptions.scales.yAxes[0].ticks,
-                        fontColor: "#97a3b9",
-                    },
+                ticks: {
+                    ...chartOptions.scales.x.ticks,
+                    color: "#97a3b9",
                 },
-            ],
+            },
+            y: {
+                ...chartOptions.scales.y,
+                ticks: {
+                    ...chartOptions.scales.y.ticks,
+                    color: "#97a3b9",
+                },
+            },
         },
     };
 

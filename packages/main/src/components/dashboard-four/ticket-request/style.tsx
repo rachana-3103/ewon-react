@@ -7,4 +7,6 @@ export const StyledHeader = styled(({ ...rest }) => <CardHeader {...rest} />)`
     padding-top: 20px;
 `;
 
-export const StyledChart = styled.div``;
+export const StyledChart = styled.div`
+    height: 260px;
+`;

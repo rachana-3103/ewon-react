@@ -33,8 +33,7 @@ const AccountRetention = () => {
                         options={
                             theme !== "dark" ? chartOptions : darkChartOptions
                         }
-                        width="100%"
-                        height={282}
+                        height="100%"
                     />
                 </StyledChart>
                 <Row>

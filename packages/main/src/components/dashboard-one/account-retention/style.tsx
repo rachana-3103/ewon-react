@@ -2,6 +2,7 @@ import styled, {
     themeGet,
     color as colorProps,
     css,
+    device,
 } from "@doar/shared/styled";
 import { CardHeader, CardBody } from "@doar/components";
 
@@ -46,8 +47,16 @@ export const StyledCardBodyText = styled.p`
 export const StyledChart = styled.div`
     margin-left: -17px;
     margin-right: -17px;
+    ${device.xlarge} {
+        margin-bottom: -15px;
+        height: 312px;
+    }
     .apexcharts-xaxis-label {
+        display: none;
+    }
+    .apexcharts-xaxis-group-label {
         text-transform: uppercase;
+        transform: translateY(-20px);
     }
     ${(props) =>
         props.theme.name === "dark" &&

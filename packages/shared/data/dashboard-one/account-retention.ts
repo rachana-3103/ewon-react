@@ -42,7 +42,6 @@ export const RetentionChart = {
             },
         },
         xaxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
             tooltip: {
                 enabled: false,
             },
@@ -52,12 +51,21 @@ export const RetentionChart = {
             axisBorder: {
                 show: false,
             },
-            labels: {
+            group: {
+                offsetY: 100,
                 style: {
                     fontSize: "9px",
                     fontFamily:
                         "-apple-system, BlinkMacSystemFont, 'Inter UI', Roboto, sans-serif",
                 },
+                groups: [
+                    { title: "Jan", cols: 3 },
+                    { title: "Feb", cols: 3 },
+                    { title: "Mar", cols: 3 },
+                    { title: "Apr", cols: 3 },
+                    { title: "May", cols: 3 },
+                    { title: "Jun", cols: 3 },
+                ],
             },
         },
         yaxis: {

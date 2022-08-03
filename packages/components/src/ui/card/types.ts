@@ -5,6 +5,7 @@ import {
     TypographyProps,
     BorderProps,
     ColorProps,
+    FlexboxProps,
 } from "@doar/shared/styled";
 
 export interface ICardCommonProps {
@@ -32,6 +33,8 @@ export interface ICardBodyProps
     extends ICardCommonProps,
         SpaceProps,
         PositionProps,
+        LayoutProps,
+        FlexboxProps,
         TypographyProps {}
 
 export interface ICardHeaderProps

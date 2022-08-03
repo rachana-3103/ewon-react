@@ -2,8 +2,9 @@ import styled, {
     color as colorStyles,
     ColorProps,
     themeGet,
+    device,
 } from "@doar/shared/styled";
-import { CardHeader } from "@doar/components";
+import { CardHeader, CardBody } from "@doar/components";
 
 export const StyledHeader = styled(({ ...props }) => <CardHeader {...props} />)`
     display: flex;
@@ -76,6 +77,19 @@ export const StyledBodyText = styled.p`
 
 export const StyledChart = styled.div`
     position: relative;
-    margin-left: -10px;
-    height: 225px;
+    margin-left: -26px;
+    height: 270px;
+    ${device.small} {
+        height: 350px;
+    }
+    ${device.xlarge} {
+        height: 270px;
+    }
+`;
+
+export const StyledBody = styled(({ ...props }) => <CardBody {...props} />)`
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;

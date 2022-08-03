@@ -10,7 +10,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import cn from "classnames";
+import cn from "clsx";
 import { StyledSubmenu, StyledSubNavItem, StyledSubNavlink } from "./style";
 var Submenu = function (_a) {
     var menu = _a.menu, className = _a.className;

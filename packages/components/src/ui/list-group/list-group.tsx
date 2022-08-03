@@ -1,5 +1,5 @@
 import { Children, isValidElement, FunctionComponent } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledListGroup } from "./style";
 

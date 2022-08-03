@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardFooter } from "./style";
 import { ICardFooterProps } from "./types";
 

@@ -1,6 +1,6 @@
 import { __assign } from "tslib";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import cn from "classnames";
+import cn from "clsx";
 import { StyledSubmenu, StyledSubNavItem, StyledSubNavlink } from "./style";
 var Submenu = function (_a) {
     var menu = _a.menu, className = _a.className;

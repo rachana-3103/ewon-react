@@ -1,6 +1,6 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classNames from "classnames";
+import clsx from "clsx";
 import { StyledCol } from "./style";
 var Col = function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
@@ -28,6 +28,6 @@ var Col = function (_a) {
             delete restProps.xlOrder;
         }
     }
-    return (_jsx(StyledCol, __assign({ className: classNames(className, orderSm, orderMd, orderlg, orderXl) }, restProps)));
+    return (_jsx(StyledCol, __assign({ className: clsx(className, orderSm, orderMd, orderlg, orderXl) }, restProps)));
 };
 export default Col;

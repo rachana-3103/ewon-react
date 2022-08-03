@@ -1,5 +1,5 @@
 import { SpaceProps } from "@doar/shared/styled";
-import cn from "classnames";
+import cn from "clsx";
 import { StyledContent } from "./style";
 
 interface IProps extends SpaceProps {

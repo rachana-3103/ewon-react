@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardColumns } from "./style";
 import { ICardCommonProps } from "./types";
 

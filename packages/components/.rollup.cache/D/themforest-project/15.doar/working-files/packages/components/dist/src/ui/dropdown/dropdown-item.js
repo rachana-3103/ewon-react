@@ -1,6 +1,6 @@
 import { __assign } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledDropItem } from "./style";
 var DropdownItem = function (_a) {
     var children = _a.children, path = _a.path, className = _a.className, active = _a.active;

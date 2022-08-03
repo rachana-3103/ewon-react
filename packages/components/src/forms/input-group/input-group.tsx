@@ -1,4 +1,4 @@
-import classname from "classnames";
+import classname from "clsx";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledInputGroup } from "./style";
 

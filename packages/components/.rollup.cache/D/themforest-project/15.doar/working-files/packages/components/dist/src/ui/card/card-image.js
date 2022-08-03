@@ -1,6 +1,6 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardImage } from "./style";
 var CardImage = function (_a) {
     var src = _a.src, alt = _a.alt, className = _a.className, isTop = _a.isTop, isBottom = _a.isBottom, restProps = __rest(_a, ["src", "alt", "className", "isTop", "isBottom"]);

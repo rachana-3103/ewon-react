@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledHr } from "./style";
 

@@ -1,6 +1,6 @@
 import { __assign } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledButtonToolbar } from "./style";
 var ButtonToolbar = function (_a) {
     var children = _a.children, className = _a.className, label = _a.label;

@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { forwardRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCheckbox, StyledCheckboxLabel } from "./style";
 import { StyledBoxWrap } from "../style";
 import Feedback from "../feedback";

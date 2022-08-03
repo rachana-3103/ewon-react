@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardImage } from "./style";
 import { ICardImageProps } from "./types";
 

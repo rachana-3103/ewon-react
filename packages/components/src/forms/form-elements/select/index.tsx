@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledSelect } from "./style";
 import Feedback from "../feedback";
 import { IInputProps } from "../types";

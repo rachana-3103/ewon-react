@@ -1,2 +1,2 @@
-import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import t from"classnames";import{StyledCardSubtitle as a}from"./style.js";var m=function(m){var l=m.children,i=m.className,o=r(m,["children","className"]);return e(a,s({className:t(i,"card-subtitle")},o,{children:l}))};export{m as default};
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import t from"clsx";import{StyledCardSubtitle as l}from"./style.js";var m=function(m){var a=m.children,i=m.className,o=r(m,["children","className"]);return e(l,s({className:t(i,"card-subtitle")},o,{children:a}))};export{m as default};
 //# sourceMappingURL=card-subtitle.js.map

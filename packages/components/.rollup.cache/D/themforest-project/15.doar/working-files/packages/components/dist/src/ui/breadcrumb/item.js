@@ -1,7 +1,7 @@
 import { __assign } from "tslib";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Link } from "react-router-dom";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledBreadcrumbItem } from "./style";
 var BreadcrumbItem = function (_a) {
     var children = _a.children, path = _a.path, active = _a.active, className = _a.className;

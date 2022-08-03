@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledBody } from "./style";
 import { IBody } from "./types";
 

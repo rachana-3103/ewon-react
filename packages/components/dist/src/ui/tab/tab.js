@@ -10,7 +10,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { Tab, TabPanel, TabList } from "react-tabs";
 import { StyledTabs, StyledTabContent } from "./style";
 export var TabWrap = function (_a) {

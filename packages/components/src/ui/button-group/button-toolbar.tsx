@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledButtonToolbar } from "./style";
 
 interface IToolbarProps {

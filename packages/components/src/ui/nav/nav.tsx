@@ -1,5 +1,5 @@
 import { Children, isValidElement, FunctionComponent } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { FlexboxProps, SpaceProps, TypographyProps } from "@doar/shared/styled";
 import { StyledNav } from "./style";
 

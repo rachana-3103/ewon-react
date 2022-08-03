@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { SpaceProps } from "@doar/shared/styled";
 import { StyledBadge } from "./style";
 

@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledSpinner } from "./style";
 var Spinner = function (_a) {
     var className = _a.className, _b = _a.variant, variant = _b === void 0 ? "border" : _b, color = _a.color, size = _a.size, restProps = __rest(_a, ["className", "variant", "color", "size"]);

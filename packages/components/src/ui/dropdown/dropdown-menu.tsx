@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledDropMenu } from "./style";
 
 interface IDropMenu {

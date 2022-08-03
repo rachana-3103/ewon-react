@@ -1,7 +1,7 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Children, isValidElement } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledAvatar } from "./style";
 var Avatar = function (_a) {
     var size = _a.size, shape = _a.shape, status = _a.status, className = _a.className, children = _a.children, restProps = __rest(_a, ["size", "shape", "status", "className", "children"]);

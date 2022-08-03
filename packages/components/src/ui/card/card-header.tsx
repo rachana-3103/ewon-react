@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardHeader } from "./style";
 import { ICardHeaderProps } from "./types";
 

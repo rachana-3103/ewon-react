@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { Tab, TabPanel, TabList } from "react-tabs";
 import type { TabsProps } from "react-tabs";
 import { StyledTabs, StyledTabContent } from "./style";

@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledGroup } from "./style";
 var ImageGroup = function (_a) {
     var children = _a.children, className = _a.className, size = _a.size, restProps = __rest(_a, ["children", "className", "size"]);

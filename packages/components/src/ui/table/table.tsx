@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import clsx from "clsx";
 import { SpaceProps, BorderProps } from "@doar/shared/styled";
 import { StyledTableResponsive, StyledTable } from "./style";
 
@@ -39,7 +39,7 @@ const Table = ({
     return (
         <StyledTableResponsive>
             <StyledTable
-                className={classNames(className)}
+                className={clsx(className)}
                 $theadColor={theadColor}
                 $striped={striped}
                 $bordered={bordered}

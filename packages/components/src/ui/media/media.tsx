@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { SpaceProps, FlexboxProps, LayoutProps } from "@doar/shared/styled";
 import { StyledMedia } from "./style";
 

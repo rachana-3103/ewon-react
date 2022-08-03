@@ -5,7 +5,7 @@ import {
     useCallback,
     FunctionComponent,
 } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { useClickOutside } from "@doar/shared/hooks";
 import { StyledDropdown } from "./style";
 

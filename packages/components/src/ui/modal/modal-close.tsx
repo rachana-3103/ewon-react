@@ -1,4 +1,4 @@
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledClose } from "./style";
 import { IClose } from "./types";
 

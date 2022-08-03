@@ -1,2 +1,2 @@
-import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import a from"classnames";import{StyledCardGroup as m}from"./style.js";var o=function(o){var t=o.children,l=o.className,i=r(o,["children","className"]);return e(m,s({className:a(l,"card-group")},i,{children:t}))};export{o as default};
+import{__rest as r,__assign as s}from"../../../../../node_modules/tslib/tslib.es6.js";import{jsx as e}from"react/jsx-runtime";import m from"clsx";import{StyledCardGroup as o}from"./style.js";var t=function(t){var a=t.children,l=t.className,i=r(t,["children","className"]);return e(o,s({className:m(l,"card-group")},i,{children:a}))};export{t as default};
 //# sourceMappingURL=card-group.js.map

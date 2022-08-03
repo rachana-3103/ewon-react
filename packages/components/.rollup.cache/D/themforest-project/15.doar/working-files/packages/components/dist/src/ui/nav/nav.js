@@ -1,7 +1,7 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Children, isValidElement } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledNav } from "./style";
 var Nav = function (_a) {
     var children = _a.children, className = _a.className, pills = _a.pills, align = _a.align, vertical = _a.vertical, fill = _a.fill, customStyle = _a.customStyle, rest = __rest(_a, ["children", "className", "pills", "align", "vertical", "fill", "customStyle"]);

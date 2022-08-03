@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledRadio, StyledRadioLabel } from "./style";
 import { StyledBoxWrap } from "../style";
 import Feedback from "../feedback";

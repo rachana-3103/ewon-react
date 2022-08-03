@@ -1,7 +1,7 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { forwardRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledRadio, StyledRadioLabel } from "./style";
 import { StyledBoxWrap } from "../style";
 import Feedback from "../feedback";

@@ -1,6 +1,6 @@
 import { __assign } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { Tab, TabPanel, TabList } from "react-tabs";
 import { StyledTabs, StyledTabContent } from "./style";
 export var TabWrap = function (_a) {

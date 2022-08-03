@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledInitialText } from "./style";
 var AvatarInitial = function (_a) {
     var children = _a.children, size = _a.size, shape = _a.shape, className = _a.className, restProps = __rest(_a, ["children", "size", "shape", "className"]);

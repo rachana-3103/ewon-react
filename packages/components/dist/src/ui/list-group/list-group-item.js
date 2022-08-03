@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledListGroupItem } from "./style";
 var ListGroupItem = function (_a) {
     var as = _a.as, className = _a.className, children = _a.children, active = _a.active, disabled = _a.disabled, action = _a.action, href = _a.href, flush = _a.flush, horizontal = _a.horizontal, restProps = __rest(_a, ["as", "className", "children", "active", "disabled", "action", "href", "flush", "horizontal"]);

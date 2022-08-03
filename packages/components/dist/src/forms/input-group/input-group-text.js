@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classname from "classnames";
+import classname from "clsx";
 import { StyledInputGroupText } from "./style";
 export var InputGroupText = function (_a) {
     var children = _a.children, className = _a.className, rest = __rest(_a, ["children", "className"]);

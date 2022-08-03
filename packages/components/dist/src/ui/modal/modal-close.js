@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledClose } from "./style";
 var ModalClose = function (_a) {
     var className = _a.className, children = _a.children, onClose = _a.onClose, restProps = __rest(_a, ["className", "children", "onClose"]);

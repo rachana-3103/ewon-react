@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledCardLink } from "./style";
 var CardLink = function (_a) {
     var children = _a.children, className = _a.className, path = _a.path, restProps = __rest(_a, ["children", "className", "path"]);

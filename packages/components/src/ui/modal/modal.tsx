@@ -1,5 +1,5 @@
 import { Portal } from "react-portal";
-import classnames from "classnames";
+import classnames from "clsx";
 import { CSSTransition } from "react-transition-group";
 import { StyledBackdrop, StyledModal } from "./style";
 import { IModal } from "./types";

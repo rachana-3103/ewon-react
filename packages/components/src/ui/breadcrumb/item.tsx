@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledBreadcrumbItem } from "./style";
 
 interface IBreadcrumbItem {

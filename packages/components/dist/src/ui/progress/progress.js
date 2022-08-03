@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledProgress, StyledProgressBar } from "./style";
 var Progress = function (_a) {
     var className = _a.className, now = _a.now, min = _a.min, max = _a.max, isLabel = _a.isLabel, bg = _a.bg, height = _a.height, striped = _a.striped, animated = _a.animated, opacity = _a.opacity, restProps = __rest(_a, ["className", "now", "min", "max", "isLabel", "bg", "height", "striped", "animated", "opacity"]);

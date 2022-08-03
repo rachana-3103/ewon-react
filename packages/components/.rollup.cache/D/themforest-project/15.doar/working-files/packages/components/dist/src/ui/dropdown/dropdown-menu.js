@@ -1,7 +1,7 @@
 import { __assign, __read, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useState, useEffect, useRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledDropMenu } from "./style";
 var DropdownMenu = function (_a) {
     var children = _a.children, show = _a.show, direction = _a.direction, className = _a.className, restProps = __rest(_a, ["children", "show", "direction", "className"]);

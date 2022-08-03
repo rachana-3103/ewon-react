@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Children, isValidElement } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledListGroup } from "./style";
 var ListGroup = function (_a) {
     var as = _a.as, className = _a.className, children = _a.children, flush = _a.flush, horizontal = _a.horizontal, restProps = __rest(_a, ["as", "className", "children", "flush", "horizontal"]);

@@ -1,7 +1,7 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import { forwardRef } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledTextarea } from "./style";
 import Feedback from "../feedback";
 var Textarea = forwardRef(function (_a, ref) {

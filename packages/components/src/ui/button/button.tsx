@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 
-import classnames from "classnames";
+import classnames from "clsx";
 import {
     SpaceProps,
     LayoutProps,

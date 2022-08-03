@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import clsx from "clsx";
 import { SpaceProps, BorderProps, TypographyProps } from "@doar/shared/styled";
 import { StyledCol } from "./style";
 import { ColProps } from "./types";
@@ -39,13 +39,7 @@ const Col = ({ className, ...props }: IColProps) => {
 
     return (
         <StyledCol
-            className={classNames(
-                className,
-                orderSm,
-                orderMd,
-                orderlg,
-                orderXl
-            )}
+            className={clsx(className, orderSm, orderMd, orderlg, orderXl)}
             {...restProps}
         />
     );

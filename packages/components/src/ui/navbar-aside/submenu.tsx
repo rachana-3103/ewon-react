@@ -1,4 +1,4 @@
-import cn from "classnames";
+import cn from "clsx";
 import { ISubmenu } from "@doar/shared/types";
 import { StyledSubmenu, StyledSubNavItem, StyledSubNavlink } from "./style";
 

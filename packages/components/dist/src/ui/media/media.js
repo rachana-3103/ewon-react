@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledMedia } from "./style";
 var Media = function (_a) {
     var children = _a.children, as = _a.as, className = _a.className, restProps = __rest(_a, ["children", "as", "className"]);

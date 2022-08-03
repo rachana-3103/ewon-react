@@ -1,6 +1,6 @@
 import { __assign, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledTitle } from "./style";
 var ModalTitle = function (_a) {
     var className = _a.className, children = _a.children, restProps = __rest(_a, ["className", "children"]);

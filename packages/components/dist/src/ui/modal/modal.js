@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import { Portal } from "react-portal";
-import classnames from "classnames";
+import classnames from "clsx";
 import { CSSTransition } from "react-transition-group";
 import { StyledBackdrop, StyledModal } from "./style";
 var Modal = function (_a) {

@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import classnames from "classnames";
+import classnames from "clsx";
 import { StyledNavLink } from "./style";
 export var NavLink = function (_a) {
     var children = _a.children, className = _a.className, path = _a.path, active = _a.active, onClick = _a.onClick, customStyle = _a.customStyle, iconPosition = _a.iconPosition, iconDistance = _a.iconDistance, rel = _a.rel, label = _a.label, target = _a.target, rest = __rest(_a, ["children", "className", "path", "active", "onClick", "customStyle", "iconPosition", "iconDistance", "rel", "label", "target"]);

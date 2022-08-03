@@ -1,7 +1,7 @@
 import { __assign, __read, __rest } from "tslib";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Children, isValidElement, useState, useCallback, } from "react";
-import classnames from "classnames";
+import classnames from "clsx";
 import { useClickOutside } from "@doar/shared/hooks";
 import { StyledDropdown } from "./style";
 var Dropdown = function (_a) {

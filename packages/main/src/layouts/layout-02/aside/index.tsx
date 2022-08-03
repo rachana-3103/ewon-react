@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import cn from "classnames";
+import cn from "clsx";
 import { NavbarAside } from "@doar/components";
 import { asideMenuData } from "@doar/shared/data";
 import { ISize } from "@doar/shared/types";

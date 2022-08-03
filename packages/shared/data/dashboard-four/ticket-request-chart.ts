@@ -41,9 +41,11 @@ const data = {
                 },
                 ticks: {
                     beginAtZero: true,
-                    fontSize: 13,
-                    fontColor: "#182b49",
-                    fontFamily: "IBM Plex Sans",
+                    color: "#182b49",
+                    font: {
+                        family: "IBM Plex Sans",
+                        size: 13,
+                    },
                 },
             },
             x: {
@@ -52,9 +54,12 @@ const data = {
                 },
                 ticks: {
                     beginAtZero: true,
-                    fontSize: 10,
-                    fontColor: "#182b49",
+                    color: "#182b49",
                     max: 100,
+                    font: {
+                        family: "IBM Plex Sans",
+                        size: 10,
+                    },
                 },
             },
         },

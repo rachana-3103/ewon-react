@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { useState, useEffect, ChangeEvent } from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import { X } from "react-feather";
 import {
     Modal,
@@ -58,10 +58,10 @@ const CreateEvent = ({ show, onClose, currentDate }: IProps) => {
         setValues((prev) => {
             return {
                 ...prev,
-                createStartDate: moment(currentDate.start.toString()).format(
+                createStartDate: dayjs(currentDate.start.toString()).format(
                     "YYYY-MM-DD"
                 ),
-                createEndDate: moment(currentDate.end.toString()).format(
+                createEndDate: dayjs(currentDate.end.toString()).format(
                     "YYYY-MM-DD"
                 ),
             };

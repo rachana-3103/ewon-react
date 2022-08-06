@@ -6,7 +6,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
-import moment from "moment";
+import dayjs from "dayjs";
 import { IEvent } from "@doar/shared/types";
 import { useAppSelector } from "../../../../redux/hooks";
 import CreateEvent from "../../../../components/apps/calendar/create-event";
@@ -19,6 +19,7 @@ const Main = () => {
     const events: IEvent[] = useAppSelector(
         (state) => state.events.eventSources
     );
+
     const { sidebar } = useAppSelector((state) => state.ui);
 
     const [showCreateModal, setShowCreateModal] = useState(false);
@@ -72,7 +73,7 @@ const Main = () => {
                 const item = date;
                 const text = date.textContent?.split(" ");
                 if (!text) return;
-                const now = moment().format("DD");
+                const now = dayjs().format("DD");
                 if (text.length > 1) {
                     item.innerHTML = `${text[1]}<span>${text[0]}</span>`;
                     if (now === text[0]) {
@@ -90,8 +91,8 @@ const Main = () => {
             view: { type },
         } = info;
         if (type === "timeGridWeek") {
-            const day: string = moment(date as string).format("DDD");
-            const dayDate: string = moment(date as string).format("DD");
+            const day: string = dayjs(date as string).format("DDD");
+            const dayDate: string = dayjs(date as string).format("DD");
             const mainEl = el.querySelector(".fc-col-header-cell-cushion");
             mainEl.innerHTML = `<span>${day}</span><span>${dayDate}</span>`;
         }

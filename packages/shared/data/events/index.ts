@@ -1,9 +1,9 @@
-import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
+import dayjs from "dayjs";
 import { IEvent } from "../../types";
 
-const curYear: string = moment().format("YYYY");
-const curMonth: string = moment().format("MM");
+const curYear: string = dayjs().format("YYYY");
+const curMonth: string = dayjs().format("MM");
 
 export const calendarEvents: IEvent = {
     category: "calendar",

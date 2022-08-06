@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { useState, useEffect, ChangeEvent } from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import { Button, Input, Textarea, Row, Col } from "@doar/components";
 import { StyledGroup, StyledLabel } from "./style";
 import DatePicker from "../../../date-picker";
@@ -50,10 +50,10 @@ const EditEventForm = ({
             return {
                 ...prev,
                 editAddTitle: title,
-                editStartDate: moment(startDate).format("YYYY-MM-DD"),
-                editStartTime: moment(startDate).format("HH:mm"),
-                editEndDate: moment(endDate).format("YYYY-MM-DD"),
-                editEndTime: moment(endDate).format("HH:mm"),
+                editStartDate: dayjs(startDate).format("YYYY-MM-DD"),
+                editStartTime: dayjs(startDate).format("HH:mm"),
+                editEndDate: dayjs(endDate).format("YYYY-MM-DD"),
+                editEndTime: dayjs(endDate).format("HH:mm"),
                 editDescription: description || "",
             };
         });
@@ -82,7 +82,7 @@ const EditEventForm = ({
         setValues((prev) => {
             return {
                 ...prev,
-                [name]: moment(new Date(date)).format("YYYY-MM-DD"),
+                [name]: dayjs(new Date(date)).format("YYYY-MM-DD"),
             };
         });
     };

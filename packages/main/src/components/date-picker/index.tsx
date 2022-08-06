@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import { Input } from "@doar/components";
 import { StyledDatePicker } from "./style";
 import Calendar from "../calendar";
-
-moment.suppressDeprecationWarnings = true;
 
 interface IProps {
     name: string;
@@ -31,8 +29,9 @@ const DatePicker = ({
     }, []);
 
     const dateChangeHandler = (date: Date | Date[]) => {
+        const d: string = dayjs(date.toString()).format("ll");
         setValue(date);
-        getDate(name, moment(date.toString()).format("ll"));
+        getDate(name, d);
     };
 
     const inputChangeHandler = () => {
@@ -52,7 +51,7 @@ const DatePicker = ({
                 name={name}
                 id={id}
                 placeholder={placeholder}
-                value={moment(value.toString()).format("ll")}
+                value={dayjs(value.toString()).format("ll")}
                 onChange={inputChangeHandler}
                 onClick={inputClickHandler}
                 onBlur={inputBlurHandler}

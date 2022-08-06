@@ -77,8 +77,5 @@
         "react-transition-group": "^4.4.4",
         "styled-bootstrap-grid": "^3.1.2",
         "tinycolor2": "^1.4.2"
-    },
-    "dependencies": {
-        "@fullcalendar/daygrid": "5.6.0"
     }
 }

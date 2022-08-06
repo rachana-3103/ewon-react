@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Edit2, Trash2, X } from "react-feather";
-import moment from "moment";
+import dayjs from "dayjs";
 import { Modal, ModalBody, Row, Col, Button } from "@doar/components";
 import {
     StyledHeader,
@@ -92,7 +92,7 @@ const EventDetails = ({ show, onClose, details }: IProps) => {
                                 <Col sm={6} mb={16}>
                                     <StyledLabel>Start Date</StyledLabel>
                                     <StyledDate>
-                                        {moment(details.event?.start).format(
+                                        {dayjs(details.event?.start).format(
                                             "MMMM DD YYYY, h:mm:ss A"
                                         )}
                                     </StyledDate>
@@ -100,7 +100,7 @@ const EventDetails = ({ show, onClose, details }: IProps) => {
                                 <Col sm={6} mb={16}>
                                     <StyledLabel>End Date</StyledLabel>
                                     <StyledDate>
-                                        {moment(details.event?.end).format(
+                                        {dayjs(details.event?.end).format(
                                             "MMMM DD YYYY, h:mm:ss A"
                                         )}
                                     </StyledDate>

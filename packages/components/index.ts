@@ -106,7 +106,6 @@ export { default as SparklinesLines } from "./src/charts/sparkline/line";
 
 // Maps
 export { default as GoogleMap } from "./src/maps/google-map/google-map";
-export { default as GoogleMapMarker } from "./src/maps/google-map/marker";
 export { default as LeafletMap } from "./src/maps/leaflet-map/leaflet-map";
 export { default as LeafletCircle } from "./src/maps/leaflet-map/circle";
 export { default as LeafletMarker } from "./src/maps/leaflet-map/marker";

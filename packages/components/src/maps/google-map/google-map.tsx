@@ -1,69 +1,36 @@
-import { Children, FunctionComponent, isValidElement } from "react";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import { LayoutProps } from "@doar/shared/styled";
-import {
-    GoogleMap as GoogleMapComponent,
-    useJsApiLoader,
-} from "@react-google-maps/api";
 import { MapKey } from "@doar/shared/data";
+import Map from "./map";
+import Marker from "./marker";
 import { StyledMap } from "./style";
 
-interface IProps extends LayoutProps {
-    children: React.ReactNode;
-    /**
-     * Required. Pass google maps latitude
-     */
-    lat: number;
-    /**
-     * Required. Pass google maps longitude
-     */
-    lng: number;
-    /**
-     * 	The initial Map zoom level. Required. Valid values: Integers between zero, and up to the supported maximum zoom level.
-     */
-    zoom?: number;
-}
+const render = (status: Status) => {
+    return <h1>{status}</h1>;
+};
 
-const GoogleMap = ({ width, height, lat, lng, zoom, children }: IProps) => {
-    const { isLoaded, loadError } = useJsApiLoader({
-        id: "google-map-script",
-        googleMapsApiKey: MapKey,
-    });
-    if (loadError) {
-        return <div>Map cannot be loaded right now, sorry.</div>;
-    }
-    const RenderChild = Children.map(children, (el) => {
-        if (!isValidElement(el)) return el;
-        const child = el;
-        if (child !== null) {
-            const childType = child.type as FunctionComponent;
-            const name = childType.displayName || childType.name;
-            if (name === "GoogleMapMarker") {
-                return <child.type lat={lat} lng={lng} {...child.props} />;
-            }
-        }
-        return null;
-    });
-    return isLoaded ? (
+type MapProps = google.maps.MapOptions &
+    LayoutProps & {
+        marker?: boolean;
+    };
+
+const MyMap: React.FC<MapProps> = ({ width, height, marker, ...options }) => {
+    return (
         <StyledMap width={width} height={height}>
-            <GoogleMapComponent
-                mapContainerStyle={{ width: "100%", height: "100%" }}
-                center={{ lat, lng }}
-                zoom={zoom}
-            >
-                {RenderChild}
-            </GoogleMapComponent>
+            <Wrapper apiKey={MapKey} render={render}>
+                <Map {...options}>
+                    {marker && <Marker position={options.center} />}
+                </Map>
+            </Wrapper>
         </StyledMap>
-    ) : (
-        <div>Map is loading.</div>
     );
 };
 
-GoogleMap.defaultProps = {
+MyMap.defaultProps = {
+    center: { lat: -3.745, lng: -38.523 },
     width: "100%",
     height: "400px",
-    lat: -3.745,
-    lng: -38.523,
     zoom: 12,
 };
 
-export default GoogleMap;
+export default MyMap;

@@ -7,7 +7,6 @@ import {
 } from "@storybook/addon-docs/blocks";
 
 import GoogleMap from "./google-map";
-import GoogleMapMarker from "./marker";
 
 <Meta title="Maps/Google Maps" component={GoogleMap} />
 
@@ -31,7 +30,13 @@ import GoogleMapMarker from "./marker";
     <Story name="Map Controls">
         {(args) => {
             const { ...restArgs } = args;
-            return <GoogleMap {...restArgs} />;
+            return (
+                <GoogleMap
+                    height={["300px", "400px"]}
+                    width="100%"
+                    {...restArgs}
+                />
+            );
         }}
     </Story>
 </Canvas>
@@ -44,12 +49,7 @@ A default map style by Google Maps.
 
 <Preview withToolbar>
     <Story name="Basic Map">
-        <GoogleMap
-            height={["300px", "400px"]}
-            width="100%"
-            lat={-12.043333}
-            lng={-77.028333}
-        />
+        <GoogleMap height={["300px", "400px"]} width="100%" />
     </Story>
 </Preview>
 
@@ -62,10 +62,8 @@ A map style with marker.
         <GoogleMap
             height={["300px", "400px"]}
             width="100%"
-            lat={-12.043333}
-            lng={-77.028333}
-        >
-            <GoogleMapMarker />
-        </GoogleMap>
+            center={{ lat: -12.043333, lng: -77.028333 }}
+            marker
+        />
     </Story>
 </Preview>

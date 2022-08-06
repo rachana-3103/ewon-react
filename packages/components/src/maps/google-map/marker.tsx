@@ -1,18 +1,28 @@
-import { Marker as MarkerComponent } from "@react-google-maps/api";
+import { useEffect, useState } from "react";
 
-interface IMarkerProps {
-    /**
-     * Required. Pass google maps latitude
-     */
-    lat: number;
-    /**
-     * Required. Pass google maps longitude
-     */
-    lng: number;
-}
+const Marker: React.FC<google.maps.MarkerOptions> = (options) => {
+    const [marker, setMarker] = useState<google.maps.Marker>();
 
-const GoogleMapMarker = ({ lat, lng }: IMarkerProps) => {
-    return <MarkerComponent position={{ lat, lng }} />;
+    useEffect(() => {
+        if (!marker) {
+            setMarker(new google.maps.Marker());
+        }
+
+        // remove marker from map on unmount
+        return () => {
+            if (marker) {
+                marker.setMap(null);
+            }
+        };
+    }, [marker]);
+
+    useEffect(() => {
+        if (marker) {
+            marker.setOptions(options);
+        }
+    }, [marker, options]);
+
+    return null;
 };
 
-export default GoogleMapMarker;
+export default Marker;

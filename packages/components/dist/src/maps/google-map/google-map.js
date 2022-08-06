@@ -9,41 +9,34 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { jsx as _jsx } from "react/jsx-runtime";
-import { Children, isValidElement } from "react";
-import { GoogleMap as GoogleMapComponent, useJsApiLoader, } from "@react-google-maps/api";
-import { MapKey } from "@doar/shared/data";
-import { StyledMap } from "./style";
-var GoogleMap = function (_a) {
-    var width = _a.width, height = _a.height, lat = _a.lat, lng = _a.lng, zoom = _a.zoom, children = _a.children;
-    var _b = useJsApiLoader({
-        id: "google-map-script",
-        googleMapsApiKey: MapKey,
-    }), isLoaded = _b.isLoaded, loadError = _b.loadError;
-    if (loadError) {
-        return _jsx("div", { children: "Map cannot be loaded right now, sorry." });
-    }
-    var RenderChild = Children.map(children, function (el) {
-        if (!isValidElement(el))
-            return el;
-        var child = el;
-        if (child !== null) {
-            var childType = child.type;
-            var name_1 = childType.displayName || childType.name;
-            if (name_1 === "GoogleMapMarker") {
-                return _jsx(child.type, __assign({ lat: lat, lng: lng }, child.props));
-            }
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
         }
-        return null;
-    });
-    return isLoaded ? (_jsx(StyledMap, __assign({ width: width, height: height }, { children: _jsx(GoogleMapComponent, __assign({ mapContainerStyle: { width: "100%", height: "100%" }, center: { lat: lat, lng: lng }, zoom: zoom }, { children: RenderChild })) }))) : (_jsx("div", { children: "Map is loading." }));
+    return t;
 };
-GoogleMap.defaultProps = {
+import { jsx as _jsx } from "react/jsx-runtime";
+import { Wrapper } from "@googlemaps/react-wrapper";
+import Map from "./map";
+import Marker from "./marker";
+import { StyledMap } from "./style";
+var render = function (status) {
+    return _jsx("h1", { children: status });
+};
+var MyMap = function (_a) {
+    var width = _a.width, height = _a.height, marker = _a.marker, options = __rest(_a, ["width", "height", "marker"]);
+    return (_jsx(StyledMap, __assign({ width: width, height: height }, { children: _jsx(Wrapper, __assign({ apiKey: "AIzaSyB3mMuvl8IUlviRZiizBiX7uhsdIqunx94", render: render }, { children: _jsx(Map, __assign({}, options, { children: marker && _jsx(Marker, { position: options.center }) })) })) })));
+};
+MyMap.defaultProps = {
+    center: { lat: -3.745, lng: -38.523 },
     width: "100%",
     height: "400px",
-    lat: -3.745,
-    lng: -38.523,
     zoom: 12,
 };
-export default GoogleMap;
+export default MyMap;
 //# sourceMappingURL=google-map.js.map

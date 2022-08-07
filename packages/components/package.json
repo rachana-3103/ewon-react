@@ -6,7 +6,7 @@
     "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "typecheck": "tsc -p tsconfig.json",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "clean": "rimraf dist *.tsbuildinfo node_modules public storybook-static",
+    "clean": "rimraf dist *.tsbuildinfo node_modules public storybook-static .rollup.cache",
     "lint": "eslint --ignore-path .eslintignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn format & yarn lint --fix",
     "storybook": "start-storybook -c .storybook -p 9001",

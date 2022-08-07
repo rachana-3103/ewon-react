@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { SpaceProps, TypographyProps, LayoutProps } from "@doar/shared/styled";
 interface IProps extends SpaceProps, TypographyProps, LayoutProps {
 }

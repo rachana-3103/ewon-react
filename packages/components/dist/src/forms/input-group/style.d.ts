@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { SpaceProps } from "@doar/shared/styled";
 export declare const StyledInputGroup: import("styled-components").StyledComponent<({ mb, ...rest }: any) => JSX.Element, any, SpaceProps<Required<import("styled-system").Theme<import("styled-system").TLengthStyledSystem>>, string | number | symbol>, never>;
 interface IWrap extends SpaceProps {

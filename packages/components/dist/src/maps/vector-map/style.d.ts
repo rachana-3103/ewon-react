@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { LayoutProps } from "@doar/shared/styled";
 interface IProps extends LayoutProps {
     $bg?: string;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { SpaceProps } from "@doar/shared/styled";
 interface IProps extends SpaceProps {
     $size?: "xs" | "sm" | "md" | "lg";

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { SpaceProps, BorderProps } from "@doar/shared/styled";
 interface IProps extends SpaceProps, BorderProps {
     className?: string;

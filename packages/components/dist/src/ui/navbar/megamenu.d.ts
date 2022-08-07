@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { IMegamenu } from "@doar/shared/types";
 interface IProps {
     menu: IMegamenu[];

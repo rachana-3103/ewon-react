@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { ColorProps, SpaceProps } from "@doar/shared/styled";
 interface IProgress extends SpaceProps {
     $height?: string;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { SpaceProps, BorderProps, TypographyProps } from "@doar/shared/styled";
 declare type IProps = SpaceProps;
 export declare const StyledContainer: import("styled-components").StyledComponent<({ p, pl, pr, pt, pb, m, ml, mr, mt, mb, ...props }: any) => JSX.Element, any, IProps, never>;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { TypographyProps } from "@doar/shared/styled";
 interface ITitle extends TypographyProps {
     $hasDesc?: boolean;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { TypographyProps } from "@doar/shared/styled";
 interface IProps {
     title: string;

@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
+    "postbootstrap": "yarn build:components",
     "start": "lerna run start --parallel",
     "build": "lerna run build --parallel",
     "test": "CI=true lerna run test --parallel",

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import type { TabsProps } from "react-tabs";
 interface ITab extends Omit<TabsProps, "className"> {
     $justified?: boolean;

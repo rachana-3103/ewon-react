@@ -1,5 +1,5 @@
-/// <reference types="google.maps" />
 /// <reference types="react" />
+/// <reference types="google.maps" />
 declare type MapProps = google.maps.MapOptions & {
     children?: React.ReactNode;
     onClick?: (e: google.maps.MapMouseEvent) => void;

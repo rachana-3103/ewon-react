@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook -o public",
     "serve-storybook": "npx http-server public",
     "type-build": "tsc",
-    "build": "rimraf dist .rollup.cache & yarn type-build & cross-env NODE_ENV=production rollup -c"
+    "build": "rimraf dist .rollup.cache & cross-env NODE_ENV=production rollup -c"
   },
   "browserslist": {
     "production": [

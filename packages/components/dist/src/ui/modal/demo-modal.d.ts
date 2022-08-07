@@ -1,3 +1,4 @@
+/// <reference types="react" />
 interface IProps {
     centered?: boolean;
     size?: "xl" | "lg" | "md" | "sm";

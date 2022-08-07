@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { IProps } from "./types";
 declare const LeafletMap: {
     ({ width, height, lat, lng, zoom, scrollWheelZoom, children, }: IProps): JSX.Element;

@@ -16,7 +16,7 @@ export default [
         output: [
             {
                 format: "esm",
-                sourcemap: true,
+                sourcemap: !production,
                 dir: "dist",
                 preserveModules: true,
             },

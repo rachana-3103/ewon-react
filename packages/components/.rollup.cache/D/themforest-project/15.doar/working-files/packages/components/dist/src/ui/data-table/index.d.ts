@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { TTheme } from "@doar/shared/types";
 import { TableColumn } from "react-data-table-component";
 interface IProps {

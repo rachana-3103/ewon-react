@@ -9,6 +9,7 @@ const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
 const DashboardFour = lazy(() => import("./pages/dashboard-four"));
 const DashboardFive = lazy(() => import("./pages/dashboard-five"));
+const DashboardSix = lazy(() => import("./pages/dashboard-six"));
 const SignIn = lazy(() => import("./pages/signin"));
 const SignUp = lazy(() => import("./pages/signup"));
 const VerifyAccount = lazy(() => import("./pages/verify-account"));
@@ -120,6 +121,10 @@ const App = () => {
                         <Route
                             path="/dashboard-five"
                             element={<DashboardFive />}
+                        />
+                        <Route
+                            path="/dashboard-six"
+                            element={<DashboardSix />}
                         />
 
                         {/* Authentication Routes */}

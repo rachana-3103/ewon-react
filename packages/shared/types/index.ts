@@ -144,3 +144,11 @@ export interface ISize {
     width: number | undefined;
     height: number | undefined;
 }
+
+export interface IJobConversion {
+    id: number;
+    title: string;
+    amount: number | string;
+    icon: string;
+    color: string;
+}

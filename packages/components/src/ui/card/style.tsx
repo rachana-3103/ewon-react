@@ -46,6 +46,7 @@ export const StyledCard = styled(
         height,
         minWidth,
         maxWidth,
+        borderBottomColor,
         ...props
     }) => <div {...props} />
 )`
@@ -94,6 +95,7 @@ export const StyledCard = styled(
             background-color: ${themeGet("colors.info")};
             ${colorCSS};
         `}
+    
     ${(props) =>
         props.theme.name === "light" &&
         css`

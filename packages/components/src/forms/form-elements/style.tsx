@@ -35,6 +35,10 @@ export const InputStyles = css<IInput>`
     border-radius: ${themeGet("radii.rounded")};
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
+    &[hidden] {
+        display: none;
+    }
+
     ${({ $width }) =>
         !!$width &&
         css`

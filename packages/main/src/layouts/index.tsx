@@ -6,6 +6,7 @@ interface IProps {
     hasSidebar?: boolean;
     hideFooter?: boolean;
     sidebarLayout?: 1 | 2;
+    layout?: "app";
 }
 
 const Layout = ({

@@ -8,9 +8,7 @@ const GlobalStyle = createGlobalStyle`
     ${InterUi};
     ${Rubik};
 	${FontAwesome};
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
+    *, *:before, *:after {
         box-sizing: border-box;
     }
     html {
@@ -161,9 +159,6 @@ const GlobalStyle = createGlobalStyle`
         overflow: auto;
         vertical-align: top;
     }
-    * {
-        box-sizing: border-box;
-    }
     img {
         max-width: 100%;
     }
@@ -173,6 +168,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         overflow: hidden;
+        min-height: 100%;
         margin: 0;
         padding: 0;
         line-height: ${themeGet("lineHeights.body")};

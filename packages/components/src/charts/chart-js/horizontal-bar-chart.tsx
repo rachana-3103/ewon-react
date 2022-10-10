@@ -39,10 +39,11 @@ export interface IProps {
 }
 
 const HorizontalBarChart = forwardRef<any, IProps>(
-    ({ data, options, width, height }) => {
+    ({ data, options, width, height }, ref) => {
         return (
             <Bar
                 data={data}
+                ref={ref}
                 options={{
                     indexAxis: "y" as const,
                     responsive: true,

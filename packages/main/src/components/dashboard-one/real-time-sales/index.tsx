@@ -17,7 +17,7 @@ import {
 } from "./style";
 
 const RealTimeSales = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = RealTimeSalesData.options;
     const chartToggle = (e: MouseEvent<HTMLButtonElement>) => {
         const target = e.currentTarget;

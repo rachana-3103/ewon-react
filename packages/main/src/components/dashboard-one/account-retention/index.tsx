@@ -11,7 +11,7 @@ import {
 } from "./style";
 
 const AccountRetention = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = RetentionChart.options;
     const darkChartOptions = {
         ...chartOptions,

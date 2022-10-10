@@ -9,7 +9,7 @@ import { useAppSelector } from "../../../redux/hooks";
 import { StyledHeader, StyledChart } from "./style";
 
 const TicketRequest = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = ticketRequestChart.options;
     const darkChartOptions = {
         ...chartOptions,

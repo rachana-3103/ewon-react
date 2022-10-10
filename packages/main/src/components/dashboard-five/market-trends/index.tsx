@@ -5,7 +5,7 @@ import { useAppSelector } from "../../../redux/hooks";
 
 const MarketTrends = () => {
     const { series, options } = marketTrendsChart;
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = options;
     const darkChartOptions = {
         ...options,

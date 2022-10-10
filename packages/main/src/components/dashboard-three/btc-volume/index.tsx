@@ -12,7 +12,7 @@ import { useAppSelector } from "../../../redux/hooks";
 import { StyledHeader, StyledChart, StyledBottom } from "./style";
 
 const BTCVolume = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = volumeChart.options;
     const darkChartOptions = {
         ...chartOptions,

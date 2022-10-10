@@ -13,7 +13,7 @@ import {
 type IProps = Omit<IConversion, "id">;
 
 const Conversion = ({ title, rate, change, chart }: IProps) => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = chart?.options || {};
     const darkChartOptions = { ...chartOptions, colors: ["#b4bdce"] };
 

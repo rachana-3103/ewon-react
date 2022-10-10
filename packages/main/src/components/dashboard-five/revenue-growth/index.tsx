@@ -19,7 +19,7 @@ import {
 
 const RevenueGrowth = () => {
     const { series, options } = revenueChart;
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = options;
     const darkChartOptions = {
         ...options,

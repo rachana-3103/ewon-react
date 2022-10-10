@@ -13,11 +13,13 @@ import {
 import storage from "redux-persist/lib/storage";
 import eventReducer from "./slices/event";
 import uiReducer from "./slices/ui";
+import themeReducer from "./slices/theme";
 import chatUISlice from "./slices/chat-ui";
 
 const persistConfig = {
     key: "doar",
-    version: 1,
+    version: 1.1,
+    blacklist: ["ui"],
     storage,
 };
 
@@ -25,12 +27,10 @@ export const rootReducer = combineReducers({
     events: eventReducer,
     ui: uiReducer,
     chatUI: chatUISlice,
+    theme: themeReducer,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// export const store = configureStore({
-//     reducer: rootReducer,
-// });
 export const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>

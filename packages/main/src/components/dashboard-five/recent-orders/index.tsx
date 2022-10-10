@@ -98,7 +98,7 @@ const columns: TableColumn<DataRow>[] = [
 ];
 
 const RecentOrders = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     return (
         <Card>
             <CardHeader py={["20px", "20px"]}>

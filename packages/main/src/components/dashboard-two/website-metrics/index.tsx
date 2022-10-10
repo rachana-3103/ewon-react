@@ -12,7 +12,7 @@ import { StyledHeader, StyledBody, StyledButton, StyledChart } from "./style";
 import MetricsProgress from "./metrics-progress";
 
 const WebsiteMetrics = () => {
-    const { theme } = useAppSelector((state) => state.ui);
+    const { theme } = useAppSelector((state) => state.theme);
     const chartOptions = webMetricsChart.options;
     const darkChartOptions = {
         ...chartOptions,

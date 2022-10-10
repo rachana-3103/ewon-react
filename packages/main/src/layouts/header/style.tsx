@@ -274,6 +274,7 @@ export const StyledMenuBtn = styled(({ ...rest }) => (
     svg {
         color: ${themeGet("colors.text3")};
     }
+
     ${({ $hasSidebar }) =>
         $hasSidebar === true &&
         css`
@@ -281,7 +282,7 @@ export const StyledMenuBtn = styled(({ ...rest }) => (
         `}
 
     ${({ $sidebarOpen, $bodyOpen }) =>
-        !$sidebarOpen &&
+        $sidebarOpen === true &&
         !$bodyOpen &&
         css`
             ${device.mdToLg} {
@@ -327,7 +328,7 @@ export const StyledSidebarBtn = styled(({ ...rest }) => (
         display: none;
     }
     ${({ $sidebarOpen, $bodyOpen }) =>
-        !$sidebarOpen &&
+        $sidebarOpen === true &&
         !$bodyOpen &&
         css`
             ${device.mdToLg} {

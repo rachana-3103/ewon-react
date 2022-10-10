@@ -97,6 +97,7 @@ const Header = ({ hasSidebar, sidebarLayout }: IProps) => {
                             onClick={menuHandler}
                             $hasSidebar={hasSidebar}
                             $sidebarOpen={!sidebar}
+                            $bodyOpen={false}
                         >
                             <Menu size={20} strokeWidth="2.5px" />
                         </StyledMenuBtn>
@@ -104,6 +105,7 @@ const Header = ({ hasSidebar, sidebarLayout }: IProps) => {
                             variant="texted"
                             onClick={sidebarHandler}
                             $sidebarOpen={!sidebar}
+                            $bodyOpen={false}
                         >
                             <ArrowLeft size={20} strokeWidth="2.5px" />
                         </StyledSidebarBtn>

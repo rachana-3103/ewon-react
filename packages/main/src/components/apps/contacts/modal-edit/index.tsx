@@ -55,6 +55,7 @@ const ModalEdit = ({ show, onClose }: IProps) => {
                                 id="edit-fname"
                                 placeholder="First Name"
                                 value="Abigal"
+                                onChange={(e) => e}
                             />
                         </StyledGroup>
                         <StyledGroup>
@@ -63,6 +64,7 @@ const ModalEdit = ({ show, onClose }: IProps) => {
                                 id="edit-lname"
                                 placeholder="Last Name"
                                 value="Johnson"
+                                onChange={(e) => e}
                             />
                         </StyledGroup>
                         <Heading mb="10px" mt="20px">
@@ -74,6 +76,7 @@ const ModalEdit = ({ show, onClose }: IProps) => {
                                 id="edit-phone"
                                 placeholder="Phone Number"
                                 value="+1 234 567 8910"
+                                onChange={(e) => e}
                             />
                         </StyledGroup>
                         <StyledGroup>
@@ -82,6 +85,7 @@ const ModalEdit = ({ show, onClose }: IProps) => {
                                 id="edit-email"
                                 placeholder="Email"
                                 value="me@company.me"
+                                onChange={(e) => e}
                             />
                         </StyledGroup>
                         <Heading mb="10px" mt="20px">

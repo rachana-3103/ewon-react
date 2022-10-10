@@ -2,9 +2,9 @@ import { Row, Col } from "@doar/components";
 import { conversions } from "@doar/shared/data/dashboard-six";
 import JobCard from "../../../components/dashboard-six/job-card";
 
-const RowOne = () => {
+const RowTwo = () => {
     return (
-        <Row gutters={30}>
+        <Row gutters={20}>
             {conversions.map((data) => (
                 <Col sm={6} lg={3} mb={30} key={data.id}>
                     <JobCard
@@ -19,4 +19,4 @@ const RowOne = () => {
     );
 };
 
-export default RowOne;
+export default RowTwo;

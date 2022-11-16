@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
     Children,
     cloneElement,
     isValidElement,
+    ReactElement,
     useEffect,
     useRef,
     useState,
@@ -49,7 +51,9 @@ const Map: React.FC<MapProps> = ({ children, onClick, ...options }) => {
             {Children.map(children, (child) => {
                 if (isValidElement(child)) {
                     // set the map prop on the child component
-                    return cloneElement(child, { map });
+                    return cloneElement(child as ReactElement<any>, {
+                        map,
+                    });
                 }
                 return null;
             })}

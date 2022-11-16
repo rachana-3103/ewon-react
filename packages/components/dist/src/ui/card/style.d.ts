@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { PositionProps as IPositionProps, ColorProps, SpaceProps, TypographyProps, BorderProps } from "@doar/shared/styled";
-export declare const StyledCard: import("styled-components").StyledComponent<({ ml, mr, mt, mb, pl, pr, pt, pb, p, width, height, minWidth, maxWidth, ...props }: any) => JSX.Element, any, {}, never>;
+export declare const StyledCard: import("styled-components").StyledComponent<({ ml, mr, mt, mb, pl, pr, pt, pb, p, width, height, minWidth, maxWidth, borderBottomColor, ...props }: any) => JSX.Element, any, {}, never>;
 export declare const StyledCardImage: import("styled-components").StyledComponent<({ ml, mr, mt, mb, pl, pr, pt, pb, ...props }: any) => JSX.Element, any, {}, never>;
 interface IBodyProps extends IPositionProps, SpaceProps, TypographyProps {
 }

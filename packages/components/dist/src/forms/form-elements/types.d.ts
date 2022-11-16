@@ -25,5 +25,6 @@ export interface IInputProps extends SpaceProps, BorderProps, TypographyProps {
     width?: string | any[];
     height?: string | any[];
     customStyle?: TCustomStyle;
+    hidden?: boolean;
 }
 export {};

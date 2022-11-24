@@ -30,7 +30,7 @@ interface ILink extends IProps {
     target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
-export const NavLink = ({
+const NavLink = ({
     children,
     className,
     path,

@@ -2,6 +2,9 @@
   "name": "@doar/components",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.cjs.js",
+  "module": "dist/src/index.js",
+  "sideEffects": false,
   "scripts": {
     "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "typecheck": "tsc -p tsconfig.json",

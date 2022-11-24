@@ -18,7 +18,7 @@ interface ILink extends IProps {
     label?: string | undefined;
     target?: "_blank" | "_self" | "_parent" | "_top";
 }
-export declare const NavLink: {
+declare const NavLink: {
     ({ children, className, path, active, onClick, customStyle, iconPosition, iconDistance, rel, label, target, ...rest }: ILink): JSX.Element;
     defaultProps: {
         iconPosition: string;

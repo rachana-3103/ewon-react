@@ -1,6 +1,13 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Outlet,
+} from "react-router-dom";
 import Preloader from "./components/preloader";
+import Layout from "./layouts";
+import Layout02 from "./layouts/layout-02";
 
 // Classic Pages
 
@@ -104,189 +111,271 @@ const App = () => {
                     <Routes>
                         {/* Classic Routes */}
 
-                        {/* Dashboard Routes */}
-                        <Route path="/" element={<DashboardOne />} />
                         <Route
-                            path="/dashboard-two"
-                            element={<DashboardTwo />}
-                        />
-                        <Route
-                            path="/dashboard-three"
-                            element={<DashboardThree />}
-                        />
-                        <Route
-                            path="/dashboard-four"
-                            element={<DashboardFour />}
-                        />
-                        <Route
-                            path="/dashboard-five"
-                            element={<DashboardFive />}
-                        />
-                        <Route
-                            path="/dashboard-six"
-                            element={<DashboardSix />}
-                        />
+                            element={
+                                <Layout>
+                                    <Outlet />
+                                </Layout>
+                            }
+                        >
+                            {/* Dashboard Routes */}
+                            <Route path="/" element={<DashboardOne />} />
+                            <Route
+                                path="/dashboard-two"
+                                element={<DashboardTwo />}
+                            />
+                            <Route
+                                path="/dashboard-three"
+                                element={<DashboardThree />}
+                            />
+                            <Route
+                                path="/dashboard-four"
+                                element={<DashboardFour />}
+                            />
+                            <Route
+                                path="/dashboard-five"
+                                element={<DashboardFive />}
+                            />
+                            <Route
+                                path="/dashboard-six"
+                                element={<DashboardSix />}
+                            />
 
-                        {/* Authentication Routes */}
-                        <Route path="/signin" element={<SignIn />} />
-                        <Route path="/signup" element={<SignUp />} />
-                        <Route
-                            path="/verify-account"
-                            element={<VerifyAccount />}
-                        />
-                        <Route
-                            path="/forgot-password"
-                            element={<ForgotPassword />}
-                        />
+                            {/* Authentication Routes */}
+                            <Route path="/signin" element={<SignIn />} />
+                            <Route path="/signup" element={<SignUp />} />
+                            <Route
+                                path="/verify-account"
+                                element={<VerifyAccount />}
+                            />
+                            <Route
+                                path="/forgot-password"
+                                element={<ForgotPassword />}
+                            />
 
-                        {/* Error Routes */}
-                        <Route path="/error-500" element={<Error500 />} />
-                        <Route path="/error-503" element={<Error503 />} />
-                        <Route path="/error-505" element={<Error505 />} />
+                            {/* Error Routes */}
+                            <Route path="/error-500" element={<Error500 />} />
+                            <Route path="/error-503" element={<Error503 />} />
+                            <Route path="/error-505" element={<Error505 />} />
+                            <Route
+                                path="/error-404"
+                                element={<ErrorNotFound />}
+                            />
 
-                        {/* User Routes */}
-                        <Route path="/profile-view" element={<ProfileView />} />
-                        <Route path="/connections" element={<Connections />} />
-                        <Route path="/groups" element={<Groups />} />
-                        <Route path="/events" element={<Events />} />
+                            {/* User Routes */}
+                            <Route
+                                path="/profile-view"
+                                element={<ProfileView />}
+                            />
+                            <Route
+                                path="/connections"
+                                element={<Connections />}
+                            />
+                            <Route path="/groups" element={<Groups />} />
+                            <Route path="/events" element={<Events />} />
 
-                        {/* Other Routes */}
-                        <Route path="/timeline" element={<Timeline />} />
-                        <Route path="/pricing" element={<Pricing />} />
-                        <Route path="/help-center" element={<HelpCenter />} />
-                        <Route path="/invoice" element={<Invoice />} />
+                            {/* Other Routes */}
+                            <Route path="/timeline" element={<Timeline />} />
+                            <Route path="/pricing" element={<Pricing />} />
+                            <Route
+                                path="/help-center"
+                                element={<HelpCenter />}
+                            />
+                            <Route path="/invoice" element={<Invoice />} />
+                        </Route>
 
                         {/* Apps Routes */}
-                        <Route path="/apps/calendar" element={<Calendar />} />
-                        <Route path="/apps/chat" element={<Chat />} />
-                        <Route path="/apps/contacts" element={<Contacts />} />
+
+                        {/* App Route With Sidebar Layout 2 */}
                         <Route
-                            path="/apps/file-manager"
-                            element={<FileManager />}
-                        />
-                        <Route path="/apps/mail" element={<Mail />} />
+                            element={
+                                <Layout hasSidebar hideFooter sidebarLayout={2}>
+                                    <Outlet />
+                                </Layout>
+                            }
+                        >
+                            <Route
+                                path="/apps/contacts"
+                                element={<Contacts />}
+                            />
+                            <Route path="/apps/chat" element={<Chat />} />
+                        </Route>
+
+                        {/* App Route With Sidebar*/}
+                        <Route
+                            element={
+                                <Layout hasSidebar hideFooter>
+                                    <Outlet />
+                                </Layout>
+                            }
+                        >
+                            <Route
+                                path="/apps/calendar"
+                                element={<Calendar />}
+                            />
+                            <Route
+                                path="/apps/file-manager"
+                                element={<FileManager />}
+                            />
+                            <Route path="/apps/mail" element={<Mail />} />
+                        </Route>
 
                         {/* Classic Plus Routes */}
 
-                        {/* Dashboard Routes */}
                         <Route
-                            path="/classic-plus/dashboard-one"
-                            element={<ClassicPlusDashboardOne />}
-                        />
-                        <Route
-                            path="/classic-plus/dashboard-two"
-                            element={<ClassicPlusDashboardTwo />}
-                        />
-                        <Route
-                            path="/classic-plus/dashboard-three"
-                            element={<ClassicPlusDashboardThree />}
-                        />
-                        <Route
-                            path="/classic-plus/dashboard-four"
-                            element={<ClassicPlusDashboardFour />}
-                        />
-                        <Route
-                            path="/classic-plus/dashboard-five"
-                            element={<ClassicPlusDashboardFive />}
-                        />
+                            element={
+                                <Layout02>
+                                    <Outlet />
+                                </Layout02>
+                            }
+                        >
+                            {/* Dashboard Routes */}
+                            <Route
+                                path="/classic-plus/dashboard-one"
+                                element={<ClassicPlusDashboardOne />}
+                            />
+                            <Route
+                                path="/classic-plus/dashboard-two"
+                                element={<ClassicPlusDashboardTwo />}
+                            />
+                            <Route
+                                path="/classic-plus/dashboard-three"
+                                element={<ClassicPlusDashboardThree />}
+                            />
+                            <Route
+                                path="/classic-plus/dashboard-four"
+                                element={<ClassicPlusDashboardFour />}
+                            />
+                            <Route
+                                path="/classic-plus/dashboard-five"
+                                element={<ClassicPlusDashboardFive />}
+                            />
 
-                        {/* Authentication Routes */}
-                        <Route
-                            path="/classic-plus/signin"
-                            element={<ClassicPlusSignIn />}
-                        />
-                        <Route
-                            path="/classic-plus/signup"
-                            element={<ClassicPlusSignUp />}
-                        />
-                        <Route
-                            path="/classic-plus/verify-account"
-                            element={<ClassicPlusVerifyAccount />}
-                        />
-                        <Route
-                            path="/classic-plus/forgot-password"
-                            element={<ClassicPlusForgotPassword />}
-                        />
+                            {/* Authentication Routes */}
+                            <Route
+                                path="/classic-plus/signin"
+                                element={<ClassicPlusSignIn />}
+                            />
+                            <Route
+                                path="/classic-plus/signup"
+                                element={<ClassicPlusSignUp />}
+                            />
+                            <Route
+                                path="/classic-plus/verify-account"
+                                element={<ClassicPlusVerifyAccount />}
+                            />
+                            <Route
+                                path="/classic-plus/forgot-password"
+                                element={<ClassicPlusForgotPassword />}
+                            />
 
-                        {/* Error Routes */}
-                        <Route
-                            path="/classic-plus/error-500"
-                            element={<ClassicPlusError500 />}
-                        />
-                        <Route
-                            path="/classic-plus/error-503"
-                            element={<ClassicPlusError503 />}
-                        />
-                        <Route
-                            path="/classic-plus/error-505"
-                            element={<ClassicPlusError505 />}
-                        />
+                            {/* Error Routes */}
+                            <Route
+                                path="/classic-plus/error-500"
+                                element={<ClassicPlusError500 />}
+                            />
+                            <Route
+                                path="/classic-plus/error-503"
+                                element={<ClassicPlusError503 />}
+                            />
+                            <Route
+                                path="/classic-plus/error-505"
+                                element={<ClassicPlusError505 />}
+                            />
+                            <Route
+                                path="/classic-plus/error-404"
+                                element={<ClassicPlusErrorNotFound />}
+                            />
 
-                        {/* User Routes */}
-                        <Route
-                            path="/classic-plus/profile-view"
-                            element={<ClassicPlusProfileView />}
-                        />
-                        <Route
-                            path="/classic-plus/connections"
-                            element={<ClassicPlusConnections />}
-                        />
-                        <Route
-                            path="/classic-plus/groups"
-                            element={<ClassicPlusGroups />}
-                        />
-                        <Route
-                            path="/classic-plus/events"
-                            element={<ClassicPlusEvents />}
-                        />
+                            {/* User Routes */}
+                            <Route
+                                path="/classic-plus/profile-view"
+                                element={<ClassicPlusProfileView />}
+                            />
+                            <Route
+                                path="/classic-plus/connections"
+                                element={<ClassicPlusConnections />}
+                            />
+                            <Route
+                                path="/classic-plus/groups"
+                                element={<ClassicPlusGroups />}
+                            />
+                            <Route
+                                path="/classic-plus/events"
+                                element={<ClassicPlusEvents />}
+                            />
 
-                        {/* Other Routes */}
-                        <Route
-                            path="/classic-plus/timeline"
-                            element={<ClassicPlusTimeline />}
-                        />
-                        <Route
-                            path="/classic-plus/pricing"
-                            element={<ClassicPlusPricing />}
-                        />
-                        <Route
-                            path="/classic-plus/help-center"
-                            element={<ClassicPlusHelpCenter />}
-                        />
-                        <Route
-                            path="/classic-plus/invoice"
-                            element={<ClassicPlusInvoice />}
-                        />
+                            {/* Other Routes */}
+                            <Route
+                                path="/classic-plus/timeline"
+                                element={<ClassicPlusTimeline />}
+                            />
+                            <Route
+                                path="/classic-plus/pricing"
+                                element={<ClassicPlusPricing />}
+                            />
+                            <Route
+                                path="/classic-plus/help-center"
+                                element={<ClassicPlusHelpCenter />}
+                            />
+                            <Route
+                                path="/classic-plus/invoice"
+                                element={<ClassicPlusInvoice />}
+                            />
+                        </Route>
 
                         {/* Apps Routes */}
 
+                        {/* App Route With Minimize Sidebar*/}
                         <Route
-                            path="/classic-plus/apps/calendar"
-                            element={<ClassicPlusCalendar />}
-                        />
+                            element={
+                                <Layout02 aside="minimize">
+                                    <Outlet />
+                                </Layout02>
+                            }
+                        >
+                            <Route
+                                path="/classic-plus/apps/calendar"
+                                element={<ClassicPlusCalendar />}
+                            />
+                            <Route
+                                path="/classic-plus/apps/file-manager"
+                                element={<ClassicPlusFileManager />}
+                            />
+                            <Route
+                                path="/classic-plus/apps/mail"
+                                element={<ClassicPlusMail />}
+                            />
+                        </Route>
+
+                        {/* App Route With Sidebar Layout 2*/}
                         <Route
-                            path="/classic-plus/apps/chat"
-                            element={<ClassicPlusChat />}
-                        />
-                        <Route
-                            path="/classic-plus/apps/contacts"
-                            element={<ClassicPlusContacts />}
-                        />
-                        <Route
-                            path="/classic-plus/apps/file-manager"
-                            element={<ClassicPlusFileManager />}
-                        />
-                        <Route
-                            path="/classic-plus/apps/mail"
-                            element={<ClassicPlusMail />}
-                        />
+                            element={
+                                <Layout02 aside="minimize">
+                                    <Outlet />
+                                </Layout02>
+                            }
+                        >
+                            <Route
+                                path="/classic-plus/apps/chat"
+                                element={<ClassicPlusChat />}
+                            />
+                            <Route
+                                path="/classic-plus/apps/contacts"
+                                element={<ClassicPlusContacts />}
+                            />
+                        </Route>
 
                         {/* 404 Page Route */}
-                        <Route path="*" element={<ErrorNotFound />} />
                         <Route
-                            path="*"
-                            element={<ClassicPlusErrorNotFound />}
-                        />
+                            element={
+                                <Layout>
+                                    <Outlet />
+                                </Layout>
+                            }
+                        >
+                            <Route path="*" element={<ErrorNotFound />} />
+                        </Route>
                     </Routes>
                 </Suspense>
             </Router>

@@ -1,5 +1,4 @@
 import { HRLine } from "@doar/components";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import PageHeader from "../containers/help-center/page-header";
 import RowOne from "../containers/help-center/row-one";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 
 const HelpCenter = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content borderBottomWidth="1px">
                 <PageHeader />
@@ -18,7 +17,7 @@ const HelpCenter = () => {
                 <HRLine mt="60px" mb="30px" />
                 <RowTwo />
             </Content>
-        </Layout>
+        </>
     );
 };
 

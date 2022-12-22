@@ -1,4 +1,3 @@
-import Layout from "../../layouts";
 import Wrapper from "../../containers/apps/mail/wrapper";
 import Sidebar from "../../containers/apps/mail/sidebar";
 import Group from "../../containers/apps/mail/group";
@@ -7,14 +6,14 @@ import SEO from "../../components/seo";
 
 const Mail = () => {
     return (
-        <Layout hasSidebar hideFooter>
+        <>
             <SEO />
             <Wrapper>
                 <Sidebar />
                 <Group />
                 <Main />
             </Wrapper>
-        </Layout>
+        </>
     );
 };
 

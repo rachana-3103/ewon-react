@@ -1,5 +1,4 @@
 import { Row, Col } from "@doar/components";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import WelcomeArea from "../containers/dashboard-four/welcome-area";
 import LeftRowOne from "../containers/dashboard-four/left-row-one";
@@ -13,7 +12,7 @@ import SEO from "../components/seo";
 
 const DashboardFour = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content>
                 <WelcomeArea />
@@ -35,7 +34,7 @@ const DashboardFour = () => {
                     </Col>
                 </Row>
             </Content>
-        </Layout>
+        </>
     );
 };
 

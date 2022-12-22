@@ -1,4 +1,3 @@
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import PageHeader from "../containers/invoice/page-header";
 import RowOne from "../containers/invoice/row-one";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 
 const HelpCenter = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content borderBottomWidth="1px">
                 <PageHeader />
@@ -18,7 +17,7 @@ const HelpCenter = () => {
                 <RowTwo />
                 <RowThree />
             </Content>
-        </Layout>
+        </>
     );
 };
 

@@ -1,5 +1,4 @@
 import { Media, MediaBody } from "@doar/components";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import LeftSidebar from "../containers/profile-view/left-sidebar";
 import MainContent from "../containers/profile-view/main";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 
 const ProfileView = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content p={[null, null, null, "40px 0"]}>
                 <Media display={["block", null, null, "flex"]}>
@@ -22,7 +21,7 @@ const ProfileView = () => {
                     <RightSidebar />
                 </Media>
             </Content>
-        </Layout>
+        </>
     );
 };
 

@@ -1,6 +1,5 @@
 import { Row } from "@doar/components";
 import { CryptoFontCSS } from "@doar/shared/css";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import WelcomeArea from "../containers/dashboard-three/welcome-area";
 import RowOne from "../containers/dashboard-three/row-one";
@@ -12,7 +11,7 @@ import SEO from "../components/seo";
 
 const DashboardThree = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <CryptoFontCSS />
             <Content>
@@ -25,7 +24,7 @@ const DashboardThree = () => {
                     <RowFive />
                 </Row>
             </Content>
-        </Layout>
+        </>
     );
 };
 

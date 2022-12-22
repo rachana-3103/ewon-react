@@ -1,5 +1,4 @@
 import { Row } from "@doar/components";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import PageHeader from "../components/page-header";
 import MainContent from "../containers/connections/main";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 
 const Connections = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content borderBottomWidth="1px">
                 <PageHeader
@@ -23,7 +22,7 @@ const Connections = () => {
                     <Sidebar />
                 </Row>
             </Content>
-        </Layout>
+        </>
     );
 };
 

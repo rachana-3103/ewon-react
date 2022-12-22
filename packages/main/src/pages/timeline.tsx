@@ -1,5 +1,4 @@
 import { Media, MediaBody } from "@doar/components";
-import Layout from "../layouts";
 import Content from "../layouts/content";
 import PageHeader from "../components/page-header";
 import MainContent from "../containers/timeline/main";
@@ -8,7 +7,7 @@ import SEO from "../components/seo";
 
 const Timeline = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content borderBottomWidth="1px">
                 <PageHeader
@@ -25,7 +24,7 @@ const Timeline = () => {
                     <Sidebar />
                 </Media>
             </Content>
-        </Layout>
+        </>
     );
 };
 

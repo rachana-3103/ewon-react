@@ -4,6 +4,7 @@ import Footer from "./footer";
 interface IProps {
     children: React.ReactNode;
     hasSidebar?: boolean;
+    hideHeader?: boolean;
     hideFooter?: boolean;
     sidebarLayout?: 1 | 2;
     layout?: "app";
@@ -12,12 +13,15 @@ interface IProps {
 const Layout = ({
     children,
     hasSidebar,
+    hideHeader,
     hideFooter,
     sidebarLayout,
 }: IProps) => {
     return (
         <>
-            <Header hasSidebar={hasSidebar} sidebarLayout={sidebarLayout} />
+            {!hideHeader && (
+                <Header hasSidebar={hasSidebar} sidebarLayout={sidebarLayout} />
+            )}
             {children}
             {!hideFooter && <Footer />}
         </>
@@ -25,6 +29,7 @@ const Layout = ({
 };
 
 Layout.defaultProps = {
+    hideHeader: false,
     hideFooter: false,
 };
 

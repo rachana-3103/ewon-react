@@ -1,5 +1,4 @@
 import SEO from "../../components/seo";
-import Layout from "../../layouts/layout-02";
 import Content from "../../layouts/content";
 import WelcomeArea from "../../containers/dashboard-five/welcome-area";
 import RowOne from "../../containers/dashboard-five/row-one";
@@ -9,7 +8,7 @@ import RowFour from "../../containers/dashboard-five/row-four";
 
 const DashboardFive = () => {
     return (
-        <Layout>
+        <>
             <SEO />
             <Content>
                 <WelcomeArea />
@@ -18,7 +17,7 @@ const DashboardFive = () => {
                 <RowThree />
                 <RowFour />
             </Content>
-        </Layout>
+        </>
     );
 };
 

@@ -29,7 +29,7 @@ const DatePicker = ({
     }, []);
 
     const dateChangeHandler = (date: Date | Date[]) => {
-        const d: string = dayjs(date.toString()).format("ll");
+        const d: string = dayjs(date.toString()).format("DD/MM/YYYY");
         setValue(date);
         getDate(name, d);
     };
@@ -51,7 +51,7 @@ const DatePicker = ({
                 name={name}
                 id={id}
                 placeholder={placeholder}
-                value={dayjs(value.toString()).format("ll")}
+                value={dayjs(value.toString()).format("DD/MM/YYYY")}
                 onChange={inputChangeHandler}
                 onClick={inputClickHandler}
                 onBlur={inputBlurHandler}

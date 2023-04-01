@@ -32,6 +32,7 @@ const DatePicker = ({
         const d: string = dayjs(date.toString()).format("DD/MM/YYYY");
         setValue(date);
         getDate(name, d);
+        setShow(false);
     };
 
     const inputChangeHandler = () => {
@@ -39,10 +40,7 @@ const DatePicker = ({
     };
 
     const inputClickHandler = () => {
-        setShow(true);
-    };
-    const inputBlurHandler = () => {
-        setShow(false);
+        setShow(!show);
     };
 
     return (
@@ -54,7 +52,6 @@ const DatePicker = ({
                 value={dayjs(value.toString()).format("DD/MM/YYYY")}
                 onChange={inputChangeHandler}
                 onClick={inputClickHandler}
-                onBlur={inputBlurHandler}
             />
             <Calendar value={value} onChange={dateChangeHandler} />
         </StyledDatePicker>

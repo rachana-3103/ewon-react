@@ -33,7 +33,14 @@ Below is the static example of the basic modal.
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>
@@ -77,7 +84,14 @@ Below is the static example of the basic modal. Centered default is `true`. If y
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>
@@ -121,7 +135,14 @@ Extra Large Sized Modal.
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>
@@ -165,7 +186,14 @@ Large Sized Modal.
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>
@@ -209,7 +237,14 @@ Medium (Default) Sized Modal.
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>
@@ -253,7 +288,14 @@ Small Sized Modal.
 ```Javascript
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
     return (
         <>

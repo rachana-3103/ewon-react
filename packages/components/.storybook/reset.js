@@ -224,4 +224,7 @@ export const ResetCSS = createGlobalStyle`
 	.text-right{
 		text-align: right;
 	}
+    .doar-modal-open {
+        overflow: hidden;
+    }
 `;

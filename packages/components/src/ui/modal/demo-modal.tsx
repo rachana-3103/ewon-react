@@ -15,7 +15,14 @@ interface IProps {
 const DemoModal = ({ size, centered }: IProps) => {
     const [show, setShow] = useState(false);
     const clickHandler = () => {
-        setShow((prev) => !prev);
+        setShow((prev) => {
+            if (prev) {
+                document.body.classList.remove("doar-modal-open");
+            } else {
+                document.body.classList.add("doar-modal-open");
+            }
+            return !prev;
+        });
     };
 
     return (

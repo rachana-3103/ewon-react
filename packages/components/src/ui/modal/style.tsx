@@ -190,6 +190,8 @@ export const StyledBody = styled(({ px, py, p, pt, pb, pl, pr, ...rest }) => (
     position: relative;
     flex: 1 1 auto;
     padding: 1rem;
+    overflow-y: auto;
+    max-height: 300px;
     ${space};
 `;
 

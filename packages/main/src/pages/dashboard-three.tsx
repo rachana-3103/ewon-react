@@ -10,6 +10,8 @@ import RowFive from "../containers/dashboard-three/row-five";
 import SEO from "../components/seo";
 
 const DashboardThree = () => {
+console.log("🚀 ~ file: dashboard-three.tsx:16 ~ props:=============")
+
     return (
         <>
             <SEO />

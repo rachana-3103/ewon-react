@@ -3,7 +3,7 @@ import { StyledLogo } from "./style";
 const Logo = () => {
     return (
         <StyledLogo path="/">
-            do<span>ar</span>
+            EW<span>ON</span>
         </StyledLogo>
     );
 };

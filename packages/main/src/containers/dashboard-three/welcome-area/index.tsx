@@ -13,11 +13,11 @@ const WelcomeArea = () => {
             <StyledWelcomeLeft>
                 <Breadcrumb
                     prev={[{ text: "Dashboard", link: "/" }]}
-                    title="Cryptocurrency"
-                    wcText="Welcome To Dashboard"
+                    title="Ewon"
+                    wcText="Welcome To Ewon Historical Data"
                 />
             </StyledWelcomeLeft>
-            <StyledWelcomeRight>
+            {/* <StyledWelcomeRight>
                 <StyledButton size="sm" hasIcon mt="10px">
                     Btc
                 </StyledButton>
@@ -57,7 +57,7 @@ const WelcomeArea = () => {
                 >
                     <MoreVertical size="19" strokeWidth="2.5px" />
                 </StyledButton>
-            </StyledWelcomeRight>
+            </StyledWelcomeRight> */}
         </StyledWelcomeArea>
     );
 };

@@ -15,8 +15,8 @@ import {
 
 const Cryptcurrencies = () => {
     return (
-        <Card>
-            <CardHeader>
+        <>
+            {/* <CardHeader>
                 <SectionTitle title="Cryptocurrencies" />
             </CardHeader>
             <CardBody p={["10px", "10px"]}>
@@ -141,8 +141,8 @@ const Cryptcurrencies = () => {
                         </StyledTR>
                     </tbody>
                 </StyledTable>
-            </CardBody>
-        </Card>
+            </CardBody> */}
+        </>
     );
 };
 

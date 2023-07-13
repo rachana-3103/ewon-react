@@ -16,7 +16,7 @@ import {
 const PriceIndexes = () => {
     return (
         <Card height={[null, null, "100%"]}>
-            <StyledHeader>
+            {/* <StyledHeader>
                 <SectionTitle title="Price Indexes" />
                 <StyledDropdown>
                     <DropdownToggle variant="texted">
@@ -31,8 +31,8 @@ const PriceIndexes = () => {
                         </button>
                     </DropdownMenu>
                 </StyledDropdown>
-            </StyledHeader>
-            <CardBody p={["0px", "0px"]}>
+            </StyledHeader> */}
+            {/* <CardBody p={["0px", "0px"]}>
                 <StyledList>
                     <StyledListIitem>
                         <Item
@@ -113,7 +113,7 @@ const PriceIndexes = () => {
                         />
                     </StyledListIitem>
                 </StyledList>
-            </CardBody>
+            </CardBody> */}
         </Card>
     );
 };

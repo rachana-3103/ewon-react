@@ -8,7 +8,7 @@ const AsideUser = () => {
         <StyledUser className="aside-user">
             <StyledAvatarWrap>
                 <Avatar size="md">
-                    <AvatarInitial>T</AvatarInitial>
+                    <AvatarInitial>H</AvatarInitial>
                 </Avatar>
                 <Alerts />
             </StyledAvatarWrap>

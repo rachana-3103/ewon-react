@@ -6,7 +6,7 @@ import BTCWallet from "../../../components/dashboard-three/btc-wallet";
 const RowFour = () => {
     return (
         <>
-            <Col sm={6} lg={4} mt="10px">
+            {/* <Col sm={6} lg={4} mt="10px">
                 <Transactions />
             </Col>
             <Col sm={6} lg={4} mt="10px">
@@ -14,7 +14,7 @@ const RowFour = () => {
             </Col>
             <Col sm={6} lg={4} mt="10px">
                 <BTCWallet />
-            </Col>
+            </Col> */}
         </>
     );
 };

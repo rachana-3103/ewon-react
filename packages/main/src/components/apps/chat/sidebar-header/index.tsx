@@ -25,7 +25,7 @@ const SidebarHeader = () => {
             <DropdownToggle variant="texted" className="dropdown-toggle">
                 <StyledMedia>
                     <Avatar size="sm" mr="8px">
-                        <AvatarInitial>T</AvatarInitial>
+                        <AvatarInitial>H</AvatarInitial>
                     </Avatar>
                     <Text as="span" color="text" fontWeight={600}>
                         TeamName

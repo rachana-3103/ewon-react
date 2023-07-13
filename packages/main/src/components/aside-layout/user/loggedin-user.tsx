@@ -25,7 +25,7 @@ const LoggedinUser = () => {
                     onClick={() => setShow((prev) => !prev)}
                 >
                     <Heading fontWeight={600} mb="0px">
-                        Katherine Pechon
+                        Hitesh Prajapati
                     </Heading>
                     <ChevronDown size={16} strokeWidth="2.3px" />
                 </StyledUserBtn>

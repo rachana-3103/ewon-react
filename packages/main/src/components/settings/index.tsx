@@ -38,7 +38,7 @@ const SettingsCard = ({ themeHandler, curTheme }: IProps) => {
             <StyledSettingsBody>
                 <StyledCard>
                     <StyledLogo>
-                        do<span>ar</span>
+                        EW<span>ON</span>
                     </StyledLogo>
                     <StyledNote>Template Skin Customizer</StyledNote>
                 </StyledCard>

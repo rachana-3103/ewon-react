@@ -52,4 +52,4 @@ import { Chart1, Chart2, Chart3, Chart4 } from "./watchlist-charts";
 //     },
 // ];
 
-export default data;
+// export default data;

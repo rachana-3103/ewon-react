@@ -26,7 +26,7 @@ const RowOne = () => {
     return (
         <>
             <Col col={12}>
-                <Card>
+                {/* <Card>
                     <StyledBody>
                         <Media>
                             <StyledAvatar>
@@ -37,7 +37,7 @@ const RowOne = () => {
                                     Bitcoin Price <span>(BTC)</span>
                                 </StyledTitle>
                                 <StyledMediaBottom>
-                                    <StyledBTCNumber>$3,972.87</StyledBTCNumber>
+                                    <StyledBTCNumber></StyledBTCNumber>
                                     <StyledBTCRate>
                                         -$7.98(0.2006%)
                                     </StyledBTCRate>
@@ -78,7 +78,7 @@ const RowOne = () => {
                             </StyledButton>
                         </StyledRight>
                     </StyledBody>
-                </Card>
+                </Card> */}
             </Col>
             <ModalExport
                 show={showExportModal}

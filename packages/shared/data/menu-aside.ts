@@ -43,7 +43,7 @@ const asideMenus = [
             },
             {
                 id: 13,
-                label: "Cryptocurrency",
+                label: "Ewon",
                 url: "/classic-plus/dashboard-three",
                 Icon: PieChart,
             },

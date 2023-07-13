@@ -3,25 +3,22 @@ import { Helmet } from "react-helmet";
 interface IProps {
     title?: string;
     titleTemplate?: string;
-    description?: string;
 }
 
-const SEO = ({ title, titleTemplate, description }: IProps) => {
+const SEO = ({ title, titleTemplate }: IProps) => {
     return (
         <Helmet>
             <meta charSet="utf-8" />
             <title>
                 {title} - {titleTemplate}
             </title>
-            <meta name="description" content={description} />
         </Helmet>
     );
 };
 
 SEO.defaultProps = {
-    title: "Doar",
-    titleTemplate: "Responsive React Admin Template",
-    description: "Responsive React Admin Template",
+    title: "EWON",
+    titleTemplate: "Application",
 };
 
 export default SEO;

@@ -57,7 +57,7 @@ const NavSearch = ({ isOpen, onClose }: IProps) => {
                 <StyledSearchTitle>Search Suggestions</StyledSearchTitle>
                 <StyledNavList>
                     <StyledNavListItem>
-                        <StyledNavBtn href="#">cryptocurrency</StyledNavBtn>
+                        <StyledNavBtn href="#">Ewon Real Data</StyledNavBtn>
                     </StyledNavListItem>
                     <StyledNavListItem>
                         <StyledNavBtn href="#">button groups</StyledNavBtn>

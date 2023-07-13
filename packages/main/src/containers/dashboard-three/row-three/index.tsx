@@ -8,8 +8,8 @@ import {
     CardBody,
     SectionTitle,
 } from "@doar/components";
-import { Watchlists } from "@doar/shared/data/dashboard-three";
-import Watchlist from "../../../components/dashboard-three/watchlist";
+// import { Watchlists } from "@doar/shared/data/dashboard-three";
+// import Watchlist from "../../../components/dashboard-three/watchlist";
 
 interface IBorderProps {
     borderStyle?: string | any[];
@@ -20,16 +20,16 @@ interface IBorderProps {
 }
 
 const RowThree = () => {
-    let borderProps: IBorderProps = {
-        borderStyle: "solid",
-        borderWidth: ["0px"],
-        borderColor: "border",
-    };
+    // let borderProps: IBorderProps = {
+    //     borderStyle: "solid",
+    //     borderWidth: ["0px"],
+    //     borderColor: "border",
+    // };
 
     return (
         <Col col={12} mt="10px">
             <Card>
-                <CardHeader>
+                {/* <CardHeader>
                     <SectionTitle title="Cryptocurrency Watchlist" />
                 </CardHeader>
                 <CardBody p={["0px", "0px"]}>
@@ -81,7 +81,7 @@ const RowThree = () => {
                                 );
                             })}
                     </Row>
-                </CardBody>
+                </CardBody> */}
             </Card>
         </Col>
     );

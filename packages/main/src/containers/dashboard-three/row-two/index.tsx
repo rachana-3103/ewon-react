@@ -3,6 +3,7 @@ import CryptoChart from "../../../components/dashboard-three/crypto-chart";
 import Cryptcurrencies from "../../../components/dashboard-three/cryptocurrencies";
 
 const RowTwo = () => {
+    console.log("🚀 ~ file: index.tsx:1077777777777777 ~ props:")
     return (
         <>
             <Col lg={9} mt="10px">
